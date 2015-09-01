@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">rbc Diagnose</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_section1">Machine Data</string>
+    <string name="title_section2">CycleTime</string>
+    <string name="title_section3">Logging</string>
+
+
+    <!--Parameter for settings activity-->
+    <string name="title_save_button_preferences">Save</string>
+    <string name="theme_header">Theme</string>
+    <string name="theme_prompt">Select theme</string>
+    <string name="ip">IP</string>
+    <string name="port">Port</string>
+    <string name="landscape">Landscape</string>
+    <string name="reverseLandscape">Reverse landscape</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_barcodereading">DataGui</string>
+
+</resources>

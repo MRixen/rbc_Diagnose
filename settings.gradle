@@ -1,0 +1,3 @@
+include ':zxing-modified', ':sample', ':library', ':app'
+include ':integration'
+include ':afreechart'

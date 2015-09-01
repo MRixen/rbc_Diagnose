@@ -1,0 +1,32 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cycleTimeHeader"
+            android:textSize="24sp"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="90dp"
+            android:text="Cycle time [s]: "/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cycleTimeTextField"
+            android:textSize="24sp"
+            android:layout_alignBottom="@+id/cycleTimeHeader"
+            android:layout_toRightOf="@+id/cycleTimeHeader"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
