@@ -27,6 +27,7 @@ public class NetClient {
     private int cntr = 0;
     private String msgString = "";
     private String msgString2 = "";
+    private String command = "";
 
 
     /**
@@ -78,29 +79,80 @@ public class NetClient {
     }
 
     public String[] receiveDataFromServer() {
-        int message = 0;
+        String incomingMessage = "";
+        String message = "";
         String[] msgArray = new String[] {"",""};
         boolean bTemp = false;
+        boolean  commandMessage = false;
+        boolean  normalMessage = false;
+        boolean itsACommand = false;
+
         try {
             while(true) {
                     try {
                         // TODO Close application when in read-routine
 
-                        message = in.read();
-                        if (message != -1) {
-                            String msgTemp = String.valueOf(Character.toChars(message));
+                        // Read and convert message
+                        try {
+                            incomingMessage = String.valueOf(Character.toChars(in.read()));
+                        }
+                        catch(NumberFormatException e){
+                            incomingMessage = "";
+                        }
 
-                            if (!msgTemp.equals(";") && !msgTemp.equals(":"))
-                                msgString = msgString + String.valueOf(Character.toChars(message));
-                            else if (msgTemp.equals(";")) {
-                                msgArray[0] = msgString;
-                                msgString = "";
-                                return msgArray;
-                            } else if (msgTemp.equals(":")) {
-                                message = in.read();
-                                // TODO Read number from 9 with two values like 10,11,12, etc.
-                                msgArray[1] = String.valueOf(Character.toChars(message));
+                        if (incomingMessage.length() != 0) {
+
+                            if (!incomingMessage.equals(":") && commandMessage){
+                                itsACommand = true;
+                                msgArray[1] += incomingMessage;
                             }
+
+                            if (!incomingMessage.equals(":") && !commandMessage) normalMessage = true;
+
+                            // Check if msg should be read as command
+                            if (incomingMessage.equals(":") && !commandMessage){
+                                commandMessage = true;
+                            }
+                            else if(incomingMessage.equals(":") && commandMessage)
+                            {
+                                if (itsACommand) normalMessage = false;
+                                if (!itsACommand) normalMessage = true;
+                                commandMessage = false;
+                            }
+
+
+                            // Read message as normal characters
+                            if (!incomingMessage.equals(";") && !commandMessage && normalMessage){
+                                msgArray[0] += incomingMessage;
+                                itsACommand = false;
+                            }
+                            else if (incomingMessage.equals(";") && !commandMessage && normalMessage){
+                                normalMessage = false;
+                                return msgArray;
+                            }
+
+
+
+
+
+
+
+
+
+
+
+
+//                            if (!msgTemp.equals(";") && !msgTemp.equals(":"))
+//                                msgString = msgString + String.valueOf(Character.toChars(incomingMessage));
+//                            else if (msgTemp.equals(";")) {
+//                                msgArray[0] = msgString;
+//                                msgString = "";
+//                                return msgArray;
+//                            } else if (msgTemp.equals(":")) {
+//                                incomingMessage = in.read();
+//                                // TODO Read number from 9 with two values like 10,11,12, etc.
+//                                msgArray[1] = String.valueOf(Character.toChars(incomingMessage));
+//                            }
                         }
                         else return new String[] {" ", " "};
 

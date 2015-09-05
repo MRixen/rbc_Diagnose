@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="PROC" domainNo="11" lang="de" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="4800" max="4814">
+  <Message number="4800" eDefine="SYS_ERR_MISC">
+    <Title>
+      <arg format="%s" ordinal="1" />
+    </Title>
+    <Description>
+      <arg format="%s" ordinal="2" />
+      <p />
+      <arg format="%s" ordinal="3" />
+      <p />
+      <arg format="%s" ordinal="4" />
+      <p />
+      <arg format="%s" ordinal="5" />
+      <p />
+    </Description>
+    <Actions />
+  </Message>
+  <Message number="4801" eDefine="SYS_ERR_MISC1">
+    <Title>
+      <arg format="%s" ordinal="1" />
+    </Title>
+    <Description>
+      <arg format="%s" ordinal="2" />
+      <p />
+      <arg format="%s" ordinal="3" />
+      <p />
+      <arg format="%s" ordinal="4" />
+      <p />
+      <arg format="%s" ordinal="5" />
+      <p />
+    </Description>
+    <Actions />
+  </Message>
+  <Message number="4802" eDefine="SYS_ERR_MISC2">
+    <Title>
+      <arg format="%s" ordinal="1" />
+    </Title>
+    <Description>
+      <arg format="%s" ordinal="2" />
+      <p />
+      <arg format="%s" ordinal="3" />
+      <p />
+      <arg format="%s" ordinal="4" />
+      <p />
+      <arg format="%s" ordinal="5" />
+      <p />
+    </Description>
+    <Actions />
+  </Message>
+  <Message number="4803" eDefine="SYS_ERR_MISC3">
+    <Title>
+      <arg format="%s" ordinal="1" />
+    </Title>
+    <Description>
+      <arg format="%s" ordinal="2" />
+      <p />
+      <arg format="%s" ordinal="3" />
+      <p />
+      <arg format="%s" ordinal="4" />
+      <p />
+      <arg format="%s" ordinal="5" />
+      <p />
+    </Description>
+    <Actions />
+  </Message>
+  <Message number="4804" eDefine="SYS_ERR_MISC4">
+    <Title>
+      <arg format="%s" ordinal="1" />
+    </Title>
+    <Description>
+      <arg format="%s" ordinal="2" />
+      <p />
+      <arg format="%s" ordinal="3" />
+      <p />
+      <arg format="%s" ordinal="4" />
+      <p />
+      <arg format="%s" ordinal="5" />
+      <p />
+    </Description>
+    <Actions />
+  </Message>
+  <Message number="4805" eDefine="SYS_ERR_MISC5">
+    <Title>
+      <arg format="%s" ordinal="1" />
+    </Title>
+    <Description>
+      <arg format="%s" ordinal="2" />
+      <p />
+      <arg format="%s" ordinal="3" />
+      <p />
+      <arg format="%s" ordinal="4" />
+      <p />
+      <arg format="%s" ordinal="5" />
+      <p />
+    </Description>
+    <Actions />
+  </Message>
+  <Message number="4806" eDefine="SYS_ERR_MISC6">
+    <Title>
+      <arg format="%s" ordinal="1" />
+    </Title>
+    <Description>
+      <arg format="%s" ordinal="2" />
+      <p />
+      <arg format="%s" ordinal="3" />
+      <p />
+      <arg format="%s" ordinal="4" />
+      <p />
+      <arg format="%s" ordinal="5" />
+      <p />
+    </Description>
+    <Actions />
+  </Message>
+  <Message number="4807" eDefine="SYS_ERR_MISC7">
+    <Title>
+      <arg format="%s" ordinal="1" />
+    </Title>
+    <Description>
+      <arg format="%s" ordinal="2" />
+      <p />
+      <arg format="%s" ordinal="3" />
+      <p />
+      <arg format="%s" ordinal="4" />
+      <p />
+      <arg format="%s" ordinal="5" />
+      <p />
+    </Description>
+    <Actions />
+  </Message>
+  <Message number="4808" eDefine="SYS_ERR_MISC8">
+    <Title>
+      <arg format="%s" ordinal="1" />
+    </Title>
+    <Description>
+      <arg format="%s" ordinal="2" />
+      <p />
+      <arg format="%s" ordinal="3" />
+      <p />
+      <arg format="%s" ordinal="4" />
+      <p />
+      <arg format="%s" ordinal="5" />
+      <p />
+    </Description>
+    <Actions />
+  </Message>
+  <Message number="4809" eDefine="SYS_ERR_MISC9">
+    <Title>
+      <arg format="%s" ordinal="1" />
+    </Title>
+    <Description>
+      <arg format="%s" ordinal="2" />
+      <p />
+      <arg format="%s" ordinal="3" />
+      <p />
+      <arg format="%s" ordinal="4" />
+      <p />
+      <arg format="%s" ordinal="5" />
+      <p />
+    </Description>
+    <Actions />
+  </Message>
+  <Message number="4810" eDefine="SYS_ERR_MISC10">
+    <Title>
+      <arg format="%s" ordinal="1" />
+    </Title>
+    <Description>
+      <arg format="%s" ordinal="2" />
+      <p />
+      <arg format="%s" ordinal="3" />
+      <p />
+      <arg format="%s" ordinal="4" />
+      <p />
+      <arg format="%s" ordinal="5" />
+      <p />
+    </Description>
+    <Actions />
+  </Message>
+  <Message number="4811" eDefine="SYS_ERR_MISC11">
+    <Title>
+      <arg format="%s" ordinal="1" />
+    </Title>
+    <Description>
+      <arg format="%s" ordinal="2" />
+      <p />
+      <arg format="%s" ordinal="3" />
+      <p />
+      <arg format="%s" ordinal="4" />
+      <p />
+      <arg format="%s" ordinal="5" />
+      <p />
+    </Description>
+    <Actions />
+  </Message>
+  <Message number="4812" eDefine="SYS_ERR_MISC12">
+    <Title>
+      <arg format="%s" ordinal="1" />
+    </Title>
+    <Description>
+      <arg format="%s" ordinal="2" />
+      <p />
+      <arg format="%s" ordinal="3" />
+      <p />
+      <arg format="%s" ordinal="4" />
+      <p />
+      <arg format="%s" ordinal="5" />
+      <p />
+    </Description>
+    <Actions />
+  </Message>
+  <Message number="4813" eDefine="SYS_ERR_MISC13">
+    <Title>
+      <arg format="%s" ordinal="1" />
+    </Title>
+    <Description>
+      <arg format="%s" ordinal="2" />
+      <p />
+      <arg format="%s" ordinal="3" />
+      <p />
+      <arg format="%s" ordinal="4" />
+      <p />
+      <arg format="%s" ordinal="5" />
+      <p />
+    </Description>
+    <Actions />
+  </Message>
+  <Message number="4814" eDefine="SYS_ERR_MISC14">
+    <Title>
+      <arg format="%s" ordinal="1" />
+    </Title>
+    <Description>
+      <arg format="%s" ordinal="2" />
+      <p />
+      <arg format="%s" ordinal="3" />
+      <p />
+      <arg format="%s" ordinal="4" />
+      <p />
+      <arg format="%s" ordinal="5" />
+      <p />
+    </Description>
+  </Message>
+</Domain>

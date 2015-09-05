@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="HW" domainNo="3" lang="de" elogTextVersion="1.0" min="7253" max="9420">
+  <Message number="7253" eDefine="SYS_ERR_HW_AUX_GLITCH_RUN_CH_SIB">
+    <Title>Störimpuls in Betriebskreis auf SIB</Title>
+    <Description>Innerhalb weniger Millisekunden wurden zwei oder mehr Statusänderungen an einem Signal festgestellt. Diese Meldung wird höchstwahrscheinlich durch falsche Anschlüsse in Run_Chain-Kreisen in der Safety Interface Board (SIB) verursacht.</Description>
+    <Consequences>Motoren sind eventuell abgeschaltet. </Consequences>
+    <Actions>1. Kabel und Anschlüsse im Sicherheitssystem prüfen. <p />2. Auf andere Fehlermeldungen für externe Anschlüsse (Verriegelungen) prüfen. </Actions>
+  </Message>
+  <Message number="7254" eDefine="SYS_ERR_HW_AUX_GLITCH_RUN_CH_MIB">
+    <Title>Störimpuls in Betriebskreis auf MIB</Title>
+    <Description>Innerhalb weniger Millisekunden wurden zwei oder mehr Statusänderungen an einem Signal festgestellt. Diese Meldung wird höchstwahrscheinlich durch falsche Anschlüsse in Run_Chain-Kreisen in der Manipulator Interface Board (MIB) verursacht.</Description>
+    <Consequences>Motoren für CBS und CBS-Bewegung sind eventuell abgeschaltet. </Consequences>
+    <Actions>1. Kabel und Anschlüsse im Sicherheitssystem prüfen. <p />2. Auf andere Fehlermeldungen für externe Anschlüsse (Verriegelungen) prüfen. </Actions>
+  </Message>
+  <Message number="7255" eDefine="SYS_ERR_HW_AUX_GLITCH_CAB_ILCK">
+    <Title>Störimpuls in Kabinenverriegelungskreis</Title>
+    <Description>Innerhalb weniger Millisekunden wurden zwei oder mehr Statusänderungen an einem Signal festgestellt. Diese Meldung wird höchstwahrscheinlich durch falsche Anschlüsse in Kabinenverriegelungskreisen verursacht.</Description>
+    <Consequences>Lackiereinheiten sind eventuell abgeschaltet.</Consequences>
+    <Actions>Kabel und Anschlüsse im Sicherheitssystem für Kabinenverriegelung prüfen.</Actions>
+  </Message>
+  <Message number="7256" eDefine="SYS_ERR_HW_AUX_GLITCH_HV_ILCK">
+    <Title>Störimpuls in Hochspannungsverriegelungskreis</Title>
+    <Description>Innerhalb weniger Millisekunden wurden zwei oder mehr Statusänderungen an einem Signal festgestellt. Diese Meldung wird höchstwahrscheinlich durch falsche Anschlüsse in Hochspannungsverriegelungskreisen verursacht.</Description>
+    <Consequences>Hochspannung ist eventuell abgeschaltet. </Consequences>
+    <Actions>Kabel und Anschlüsse im Sicherheitssystem für Hochspannungsverriegelung prüfen.</Actions>
+  </Message>
+  <Message number="7257" eDefine="SYS_ERR_HW_AUX_GLITCH_EXT_SYS2_ILCK_IN">
+    <Title>Störimpuls in Verriegelungskreis System 2</Title>
+    <Description>Innerhalb weniger Millisekunden wurden zwei oder mehr Statusänderungen an einem Signal festgestellt. Diese Meldung wird höchstwahrscheinlich durch falsche Anschlüsse in Verriegelungskreisen System 2 verursacht.</Description>
+    <Consequences>Lackiergeinheiten sind eventuell abgeschaltet. </Consequences>
+    <Actions>Kabel und Anschlüsse im Sicherheitssystem für Verriegelungskreis System 2 prüfen.</Actions>
+  </Message>
+  <Message number="7258" eDefine="SYS_ERR_HW_AUX_GLITCH_EXT_PROCESS_ILCK">
+    <Title>Störimpuls in Prozessverriegelungskreis</Title>
+    <Description>Innerhalb weniger Millisekunden wurden zwei oder mehr Statusänderungen an einem Signal festgestellt. Diese Meldung wird höchstwahrscheinlich durch falsche Anschlüsse in Prozessverriegelungskreisen verursacht.</Description>
+    <Consequences>Lackiergeräte sind eventuell abgeschaltet. </Consequences>
+    <Actions>Kabel und Anschlüsse im Sicherheitssystem für Prozessverriegelung prüfen.</Actions>
+  </Message>
+  <Message number="7259" eDefine="SYS_ERR_HW_AUX_GLITCH_AUX_RUN_CH">
+    <Title>Störimpuls in AUX-Verriegelungskreis</Title>
+    <Description>Innerhalb weniger Millisekunden wurden zwei oder mehr Statusänderungen an einem Signal festgestellt. Diese Meldung wird höchstwahrscheinlich durch falsche Anschlüsse in AUX-Verriegelungskreisen verursacht. Normalerweise für Cartridge Bell System (CBS)-Türen verwendet.</Description>
+    <Consequences>Motoren und Bewegung von System 2 sind eventuell abgeschaltet. </Consequences>
+    <Actions>Kabel und Anschlüsse im Sicherheitssystem für AUX-Betriebskreis prüfen.</Actions>
+  </Message>
+  <Message number="7501" eDefine="SYS_ERR_HW_BSP_FILESYSTEM_UNKNOWN">
+    <Title>Unbekanntes Dateisystem: USB-Gerät</Title>
+    <Description>Der Dateisystemtyp auf dem USB-Gerät mit logischer Einheit <arg format="%d" ordinal="1" /> wird nicht unterstützt.</Description>
+    <Consequences>Kein Zugriff auf das USB-Gerät mit logischer Einheit <arg format="%d" ordinal="1" /> möglich. Das Dateisystem ist vom <arg format="%s" ordinal="2" />. Auf die Dateien auf dem USB-Gerät mit logischer Nummer <arg format="%d" ordinal="1" /> kann nicht zugegriffen werden. </Consequences>
+    <Causes>Das Dateisystem ist mit einem nicht unterstützten Dateisystemtyp formatiert.</Causes>
+    <Actions>USB-Gerät mit FAT32-Dateisystem formatieren.</Actions>
+  </Message>
+  <Message number="7502" eDefine="SYS_ERR_HW_ATA_REMOVED">
+    <Title>Massenspeicher entfernt</Title>
+    <Description>Das Massenspeicher wurde entfernt.</Description>
+    <Consequences>Das System geht in den Zustand SYS_FAIL. Das Dateisystem auf dem Massenspeicher ist möglicherweise beschädigt. Die Dateien auf dem Massenspeicher sind möglicherweise beschädigt. Auf die Dateien auf dem Massenspeicher kann nicht zugegriffen werden.</Consequences>
+    <Causes>Der Massenspeicher wurde entfernt oder am Massenspeicher ist eine Störung aufgetreten.</Causes>
+    <Actions>Prüfen, ob Massenspeicher fest montiert ist. Wenn das Problem weiter besteht, Vorgang mit anderer Einheit wiederholen.</Actions>
+  </Message>
+  <Message number="7503" eDefine="SYS_ERR_HW_CHKDSK_CORRECTED">
+    <Title>Fehler des Dateisystems auf dem Massenspeichergerät</Title>
+    <Description>Fehler des Dateisystems auf dem Massenspeichergerät.</Description>
+    <Consequences>Im Dateisystem wurde ein Fehler festgestellt. Der Fehler wurde korrigiert. Die Korrektur könnte zu fehlenden Dateien führen. </Consequences>
+    <Causes>Das Massenspeichergerät wurde entfernt oder am Massenspeichergerät ist eine Störung aufgetreten.</Causes>
+    <Actions>Wenn das Problem weiter besteht, Vorgang mit anderem Massenspeichergerät wiederholen.</Actions>
+  </Message>
+  <Message number="7504" eDefine="SYS_ERR_HW_CHKDSK_ERROR">
+    <Title>Fehler des Dateisystems auf dem Massenspeichergerät</Title>
+    <Description>Fehler des Dateisystems auf dem Massenspeichergerät.</Description>
+    <Consequences>Das System geht in den Zustand SYS FAIL. Das Dateisystem auf dem Massenspeichergerät ist möglicherweise beschädigt. Die Datei(en) auf dem Massenspeichergerät ist/sind möglicherweise beschädigt.</Consequences>
+    <Causes>Das Massenspeichergerät wurde entfernt oder am Massenspeichergerät ist eine Störung aufgetreten.</Causes>
+    <Actions>Wenn das Problem weiter besteht, Vorgang mit anderem Massenspeichergerät wiederholen.</Actions>
+  </Message>
+  <Message number="7505" eDefine="SYS_ERR_HW_USB_WRITE_PEND">
+    <Title>Schreibvorgang auf USB-Speichers während Ausschalten</Title>
+    <Description>Schreibvorgang auf USB-Massenspeicher während des Ausschaltens.</Description>
+    <Consequences>Die vorherige Ausschaltzeit könnte länger wie üblich gewesen sein.</Consequences>
+    <Causes>Aktiver Schreibvorgang auf USB-Massenspeicher während des Ausschaltens.</Causes>
+    <Actions>Keine. Die vorherige Ausschaltzeit hat möglicherweise die normale Ausschaltzeit überstiegen.</Actions>
+  </Message>
+  <Message number="8100" eDefine="SYS_ERR_HW_SENSOR_SYS_CONFIGURATION_FAULT">
+    <Title>Konfigurationsfehler</Title>
+    <Description>Antriebsmodul hat Konfigurationsfehler bei Messsystemverbindung erkannt. <p />Antriebsmodul: <arg format="%.f" ordinal="1" /><p />Messsystemverbindung: <arg format="%.f" ordinal="2" /><p />Einheitenposition: <arg format="%.f" ordinal="3" /></Description>
+    <Actions>- Konfiguration für Messsystemverbindung prüfen.<p />- Konfiguration für Messbaugruppe prüfen.<p />- Konfiguration für Messsystemknoten prüfen.</Actions>
+  </Message>
+  <Message number="8101" eDefine="SYS_ERR_HW_SENSOR_SYS_TRANSMISSION_FAIL">
+    <Title>SMB-Kommunikationsfehler</Title>
+    <Description>Zwischen Achscomputer und serieller Messbaugruppe wurde ein Fehler an Messsystemverbindung <arg format="%.f" ordinal="2" /> in Antriebsmodul <arg format="%.f" ordinal="1" /> erkannt.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT und verliert seine Kalibrierinformation.</Consequences>
+    <Causes>Dies kann an schlechten Verbindungen oder Kabeln (Abschirmung) liegen, insbesondere wenn Nicht-ABB-Kabel für zusätzliche Achsen benutzt werden. Mögliche Ursachen sind auch fehlerhafte(r) serielle Messbaugruppe oder Achscomputer.</Causes>
+    <Actions>1) Umdrehungszähler des Roboters zurücksetzen wie im Roboter-Produkthandbuch beschrieben. <p />2) Sicherstellen, dass das Kabel zwischen serieller Messbaugruppe und Achscomputer korrekt angeschlossen ist und den ABB-Spezifikationen entspricht. <p />3) Sicherstellen, dass das Kabel an beiden Enden korrekt verbunden ist. <p />4) Sicherstellen, dass keine extremen elektromagnetischen Interferenzen in der Nähe der Roboterkabel erzeugt werden <p />5) Sicherstellen, dass serielle Messbaugruppe und Achscomputer voll funktionsfähig sind. Gegebenenfalls fehlerhafte Einheit austauschen. </Actions>
+  </Message>
+  <Message number="8102" eDefine="SYS_ERR_HW_SENSOR_SYS_FPGA_INTERNAL_ERROR">
+    <Title>Interner Fehler</Title>
+    <Description>Messsystem hat Hardware- oder Softwarefehler an Messsystemverbindung <arg format="%.f" ordinal="2" /> in Antriebsmodul <arg format="%.f" ordinal="1" /> erkannt.</Description>
+    <Consequences>Das System geht in den Zustand SYS FAIL und verliert seine Kalibrierinformation.</Consequences>
+    <Causes>Möglicherweise temporäre Störung in der Roboterzelle oder fehlerhafter Achscomputer.</Causes>
+    <Actions>1) System neu starten. <p />2) Umdrehungszähler des Roboters aktualisieren wie im Roboter-Produkthandbuch beschrieben. <p />3) Sicherstellen, dass keine extremen elektromagnetischen Interferenzen in der Nähe der Roboterkabel erzeugt werden. <p />4) Sicherstellen, dass der Achscomputer voll funktionsfähig ist. Gegebenenfalls fehlerhafte Einheit austauschen. </Actions>
+  </Message>
+  <Message number="8103" eDefine="SYS_ERR_HW_SENSOR_SYS_TRANSMISSION_TIMEOUT">
+    <Title>Kommunikation mit SMB verloren</Title>
+    <Description>Zwischen Achscomputer und serieller Messbaugruppe ging die Kommunikation an Messsystemverbindung <arg format="%.f" ordinal="2" /> in Antriebsmodul <arg format="%.f" ordinal="1" /> verloren.</Description>
+    <Consequences>Das System geht in den Zustand SYS FAIL und verliert seine Kalibrierinformation.</Consequences>
+    <Causes>Dies kann an schlechten Verbindungen oder Kabeln (Abschirmung) liegen, insbesondere wenn Nicht-ABB-Kabel für zusätzliche Achsen benutzt werden. Mögliche Ursachen sind auch fehlerhafte(r) serielle Messbaugruppe oder Achscomputer.</Causes>
+    <Actions>1) Umdrehungszähler des Roboters aktualisieren wie im Roboter-Produkthandbuch beschrieben. <p />2) Sicherstellen, dass das Kabel zwischen serieller Messbaugruppe und Achscomputer korrekt angeschlossen ist und den ABB-Spezifikationen entspricht. <p />3) Sicherstellen, dass das Kabel an beiden Enden korrekt verbunden ist. <p />4) Sicherstellen, dass keine extremen elektromagnetischen Interferenzen in der Nähe der Roboterkabel erzeugt werden. <p />5) Sicherstellen, dass serielle Messbaugruppe und Achscomputer voll funktionsfähig sind. Gegebenenfalls  fehlerhafte Einheit austauschen. </Actions>
+  </Message>
+  <Message number="8104" eDefine="SYS_ERR_HW_SENSOR_SYS_TEACH_MODE_OVER_SPEED">
+    <Title>Überhöhte Geschwindigkeit in Programmiermodus</Title>
+    <Description>Eine oder mehrere Achsen des Roboters, die mit dem Antriebsmodul <arg format="%d" ordinal="1" /> verbunden sind, haben die maximale Geschwindigkeit für den Einrichtbetrieb überschritten.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Der Roboter wurde eventuell während des Zustand Motoren-AUS manuell bewegt. Der Fehler kann auch verursacht sein durch eine Fehleinstellung in der Beziehung, Kommutierung, zwischen Motorwelle und Resolver auf einer zusätzlichen Achse, primär während der Installation.</Causes>
+    <Actions>1) Zustimmungsschalter drücken, um Betrieb wieder aufzunehmen. <p />2) Andere Ereignisprotokollmeldungen von demselben Zeitpunkt überprüfen, um tatsächliche Ursache zu bestimmen. <p />3) Neu-Kommutierung des vorhandenen Motors durchführen. Wird im Handbuch „Zusätzliche Achsen“ beschrieben.</Actions>
+  </Message>
+  <Message number="8105" eDefine="SYS_ERR_HW_MEA_WARNING_CFG_NOT_FOUND">
+    <Title>Daten nicht gefunden</Title>
+    <Description>Konfigurationsdaten für Messbaugruppe nicht gefunden.<p />System verwendet Standarddaten.<p />Antriebsmodul: <arg format="%.f" ordinal="1" /><p />Messsystemverbindung: <arg format="%.f" ordinal="2" /><p />Kartenknoten: <arg format="%.f" ordinal="3" /></Description>
+    <Actions>Konfiguration prüfen.</Actions>
+  </Message>
+  <Message number="8200" eDefine="SYS_ERR_HW_SMB_BATTERY_DEPLETED">
+    <Title>SMB-Pufferbatterie ausgefallen</Title>
+    <Description>Die Batterie für die serielle Messbaugruppe (SMB) <arg format="%.f" ordinal="3" /> in dem an das Antriebsmodul <arg format="%.f" ordinal="1" /> angeschlossenen Roboter für Messsystemverbindung <arg format="%.f" ordinal="2" /> ist entladene.</Description>
+    <Consequences>Wenn die SMB-Batteriestromversorgung unterbrochen ist, verliert der Roboter die Umdrehungszählerdaten. Diese Warnung wird auch mehrfach protokolliert.</Consequences>
+    <Causes>Die Ursache ist möglicherweise eine entladene, nicht angeschlossene SMB-Batterie oder es wurde BattShutdown durchgeführt. Bei einigen Robotermodellen wird die SMB-Batteriespannung über einen Jumper im Robotersignalkabel übertragen (siehe IRC5-Schaltplan) und durch Abziehen des Kabels wird die Batteriestromversorgung unterbrochen. In einigen älteren Roboterversionen wurden wiederaufladbare Akkus verwendet. Für eine ordnungsgemäße Funktion dieser Akkus müssen sie mindestens 18 Stunden lang geladen werden.</Causes>
+    <Actions>1) Sicherstellen, dass eine volle SMB-Batterie an die Einheit angeschlossen ist.<p />2) HINWEIS! Durch Abziehen des Robotersignalkabels kann die SMB-Batteriestromversorgung unterbrochen werden, so dass die zu protokollierende Batteriewarnung ausgelöst wird.<p />3) Batteriestromwarnung durch Aktualisieren der Umdrehungszähler gemäß Kalibrierungs- oder Produkthandbuch zurücksetzen.<p />4) Batterie austauschen, falls sie entladen ist.</Actions>
+  </Message>
+  <Message number="8201" eDefine="SYS_ERR_HW_SMB_NO_SERIAL_BOARD">
+    <Title>SMB nicht gefunden</Title>
+    <Description>Serielle Messbaugruppe in Messsystemverbindung nicht gefunden.<p />Antriebsmodul: <arg format="%.f" ordinal="1" /><p />Messsystemverbindung: <arg format="%.f" ordinal="2" /><p />Messbaugruppe: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Systemkonfigurationsparameter prüfen.<p />- Verbindungen und Kabel zu SMB prüfen.<p />- Serielle Messbaugruppe austauschen.</Actions>
+  </Message>
+  <Message number="8203" eDefine="SYS_ERR_HW_SMB_OFFSET_X">
+    <Title>SMB-Offset-Fehler X</Title>
+    <Description>Offset-Fehler für X-Signal an serieller Messbaugruppe.<p />Antriebsmodul: <arg format="%.f" ordinal="1" /><p />Messsystemverbindung: <arg format="%.f" ordinal="2" /><p />Messbaugruppe: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Serielle Messbaugruppe austauschen.</Actions>
+  </Message>
+  <Message number="8204" eDefine="SYS_ERR_HW_SMB_OFFSET_Y">
+    <Title>SMB-Offset-Fehler Y</Title>
+    <Description>Offset-Fehler für Y-Signal an serieller Messbaugruppe.<p />Antriebsmodul: <arg format="%.f" ordinal="1" /><p />Messsystemverbindung: <arg format="%.f" ordinal="2" /><p />Messbaugruppe: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Serielle Messbaugruppe austauschen.</Actions>
+  </Message>
+  <Message number="8205" eDefine="SYS_ERR_HW_SMB_LINEAR_X_Y">
+    <Title>SMB-Linearitätsfehler</Title>
+    <Description>Linearitätsfehler für X-Y-Signalunterschied an serieller Messbaugruppe.<p />System kann mit Warnung weiter arbeiten.<p />System funktioniert nicht mit Fehler.<p />Antriebsmodul: <arg format="%.f" ordinal="1" /><p />Messsystemverbindung: <arg format="%.f" ordinal="2" /><p />Messbaugruppe: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Serielle Messbaugruppe austauschen.</Actions>
+  </Message>
+  <Message number="8206" eDefine="SYS_ERR_HW_SMB_LINEAR_X">
+    <Title>SMB-Linearitätsfehler X</Title>
+    <Description>Linearitätsfehler für X-Signal an serieller Messbaugruppe.<p />Antriebsmodul: <arg format="%.f" ordinal="1" /><p />Messsystemverbindung: <arg format="%.f" ordinal="2" /><p />Messbaugruppe: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Serielle Messbaugruppe austauschen.</Actions>
+  </Message>
+  <Message number="8207" eDefine="SYS_ERR_HW_SMB_LINEAR_Y">
+    <Title>SMB-Linearitätsfehler Y</Title>
+    <Description>Linearitätsfehler für X-Signal an serieller Messbaugruppe.<p />Antriebsmodul: <arg format="%.f" ordinal="1" /><p />Messsystemverbindung: <arg format="%.f" ordinal="2" /><p />Messbaugruppe: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Serielle Messbaugruppe austauschen.</Actions>
+  </Message>
+  <Message number="8208" eDefine="SYS_ERR_HW_SMB_RESOLVER_HIGH_VOLTAGE">
+    <Title>Resolverfehler</Title>
+    <Description>Zu hohe Spannung von X- oder Y-Resolversignalen.<p />Summe von X und Y im Quadrat überschreitet Max.<p />Achse: <arg format="%s" ordinal="1" /><p />Antriebsmodul: <arg format="%d" ordinal="2" /><p /> Messsystemverbindung: <arg format="%.f" ordinal="3" /><p />Messbaugruppe: <arg format="%.f" ordinal="4" /><p />Kartenknoten: <arg format="%.f" ordinal="5" /><p /></Description>
+    <Actions>- Resolver und Resolververbindungen prüfen.<p />- Serielle Messbaugruppe austauschen.<p />- Resolver austauschen.</Actions>
+  </Message>
+  <Message number="8209" eDefine="SYS_ERR_HW_SMB_RESOLVER_LOW_VOLTAGE">
+    <Title>Resolverfehler</Title>
+    <Description>Zu niedrige Spannung von X- oder Y-Resolversignalen.<p />Summe von X und Y im Quadrat zu niedrig.<p />Achse: <arg format="%s" ordinal="1" /><p />Antriebsmodul: <arg format="%d" ordinal="2" /><p /> Messsystemverbindung: <arg format="%.f" ordinal="3" /><p />Messbaugruppe: <arg format="%.f" ordinal="4" /><p />Kartenknoten: <arg format="%.f" ordinal="5" /><p /></Description>
+    <Actions>- Resolver und Resolververbindungen prüfen.<p />- Serielle Messbaugruppe austauschen.<p />- Resolver austauschen.</Actions>
+  </Message>
+  <Message number="8210" eDefine="SYS_ERR_HW_SMB_SMS_REGISTER_TRANSMISSION_FAULT">
+    <Title>Übertragungsfehler</Title>
+    <Description>SMS-Kommunikation der seriellen Messbaugruppe fehlgeschlagen.<p />Status: <arg format="%d" ordinal="1" /><p />Antriebsmodul: <arg format="%d" ordinal="1" /><p />Messsystemverbindung: <arg format="%.f" ordinal="2" /><p />Messbaugruppe: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- System neu starten.<p />- Kabel und Anschlüsse für SMB-Kommunikation prüfen.<p />- Serielle Messbaugruppe austauschen.</Actions>
+  </Message>
+  <Message number="8211" eDefine="SYS_ERR_HW_SMB_FUNCTIONALLITY_NOT_SUPPORTED">
+    <Title>Funktionsfehler während der Messung</Title>
+    <Description>Die serielle Messbaugruppe unterstützt 7 Achsen nicht. <p />Antriebsmodul: <arg format="%.f" ordinal="1" /><p />Messsystemverbindung: <arg format="%.f" ordinal="2" /><p />Messbaugruppe: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Konfigurationen der 7. Achse prüfen. <p />- Serielle Messbaugruppe durch eine Einheit mit 7-Achsen-Funktion ersetzen.</Actions>
+  </Message>
+  <Message number="8212" eDefine="SYS_ERR_HW_SMB_WARNING_CFG_NOT_FOUND">
+    <Title>Daten nicht gefunden</Title>
+    <Description>Konfigurationsdaten für serielle Messbaugruppe nicht gefunden. System verwendet Standarddaten.<p />Antriebsmodul: <arg format="%.f" ordinal="1" /><p />Messsystemverbindung: <arg format="%.f" ordinal="2" /><p />Messbaugruppe: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Konfiguration prüfen.</Actions>
+  </Message>
+  <Message number="8213" eDefine="SYS_ERR_HW_SMB_WARNING_BATTERY_LOW">
+    <Title>Batterieladung schwach</Title>
+    <Description>Batterie in serieller Messbaugruppe ist bald verbraucht. Batterie bei Gelegenheit austauschen.<p />Antriebsmodul: <arg format="%.f" ordinal="1" /><p />Messsystemverbindung: <arg format="%.f" ordinal="2" /><p />Messbaugruppe: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Schalten Sie die Steuerung erst aus, wenn die Batterie ersetzt ist.<p />- Ersetzen Sie die Batterie der seriellen Messbaugruppe. </Actions>
+  </Message>
+  <Message number="8214" eDefine="SYS_ERR_HW_SMB_BATTERY_SHUT_DOWN_FAIL">
+    <Title>Batteriefehler</Title>
+    <Description>Transportabschaltung der Batterie fehlgeschlagen. Batterie befindet sich immer noch im normalen Modus.<p />Antriebsmodul: <arg format="%.f" ordinal="1" /><p />Messsystemverbindung: <arg format="%.f" ordinal="2" /><p />Messbaugruppe: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Abschalten wiederholen.<p />- Serielle Messbaugruppe austauschen.</Actions>
+  </Message>
+  <Message number="8215" eDefine="SYS_ERR_HW_SMB_BATTERY_FLAG_STUCK">
+    <Title>Fehler der Batterieüberwachung</Title>
+    <Description>Störung trat während des Zurücksetzens des Batterieüberwachungsschaltkreises in der seriellen Messbaugruppe auf. <p />Antriebsmodul: <arg format="%.f" ordinal="1" /><p />Messsystemverbindung: <arg format="%.f" ordinal="2" /><p />Messbaugruppe: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Aktualisierung des Umdrehungszählers für an die SMB angeschlossene Achse wiederholen.<p />- Serielle Messbaugruppe austauschen.</Actions>
+  </Message>
+  <Message number="8216" eDefine="SYS_ERR_HW_SMB_DSQC633C_NOT_SUPPORTED">
+    <Title>SMB-Funktionalitätsfehler</Title>
+    <Description>Die serielle Messbaugruppe unterstützt die erforderliche Funktionalität nicht. Die benötigte Funktionalität ist in DSQC 633C oder besserer SMB verfügbar.<p /><p />Antriebsmodul: <arg format="%.f" ordinal="1" /><p />Messsystemverbindung: <arg format="%.f" ordinal="2" /><p />Messbaugruppe: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Consequences>Die Bewegungsleistung ist geringer als die bei der Verwendung von DSQC 633C oder besserer SMB.</Consequences>
+    <Actions>- Serielle Messbaugruppe gegen eine Baugruppe austauschen die mindestens der Funktionalität der DSQC 633C entspricht.</Actions>
+  </Message>
+  <Message number="8217" eDefine="SYS_ERR_HW_SMB_DSQC633D_NOT_SUPPORTED">
+    <Title>SMB-Funktionalitätsfehler</Title>
+    <Description>Die serielle Messbaugruppe unterstützt die erforderliche Funktionalität nicht. Die benötigte Funktionalität ist in DSQC 633D oder neuerer SMB verfügbar.<p /><p />Antriebsmodul: <arg format="%.f" ordinal="1" /><p />Messsystemverbindung: <arg format="%.f" ordinal="2" /><p />Messbaugruppe: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Consequences>Die Bewegungsleistung ist geringer als die bei der Verwendung von DSQC 633D oder besserer SMB.</Consequences>
+    <Actions>- Serielle Messbaugruppe gegen eine Baugruppe austauschen die mindestens der Funktionalität der DSQC 633D entspricht.</Actions>
+  </Message>
+  <Message number="8218" eDefine="SYS_ERR_HW_EIB_ENCODER_TEMPERATURE_HIGH">
+    <Title>EIB hohe Encoder-Temperatur</Title>
+    <Description>Die Temperatur des Motor-Encoders ist zu hoch.<p /><p />Gelenk: <arg format="%s" ordinal="1" /><p />Antriebsmodul: <arg format="%d" ordinal="2" /><p />Messsystemverbindung: <arg format="%.f" ordinal="3" /><p />Messbaugruppe: <arg format="%.f" ordinal="4" /><p />Einheiten-Knoten: <arg format="%.f" ordinal="5" /><p /></Description>
+    <Consequences>Die Lebensdauer des Encoders kann verringert werden.</Consequences>
+    <Actions>Halten Sie den Roboter an und warten Sie darauf, dass der Motor/Encoder abkühlt.<p />- Verringern Sie die Umgebungstemperatur.<p />- Ändern Sie das Roboterprogramm, um hohe Drehzahlen und Drehmomente zu vermeiden.</Actions>
+  </Message>
+  <Message number="8230" eDefine="SYS_ERR_HW_PMC_CARD_NOT_CONNECTED">
+    <Title>PMC-Karte nicht korrekt angeschlossen</Title>
+    <Description>Die in der Bewegungskonfiguration konfigurierte PMC-Karte ist nicht angeschlossen oder funktioniert nicht korrekt.<p /></Description>
+    <Consequences>Die Anwendung, die diese PMC-Karte benötigt, kann nicht ausgeführt werden.</Consequences>
+    <Causes>PMC-Karte ist nicht angeschlossen oder die Karte ist beschädigt.</Causes>
+    <Actions>Die am Achscomputer im Drive Module <arg format="%d" ordinal="1" /> angeschlossene PMC-Karte prüfen.</Actions>
+  </Message>
+  <Message number="8231" eDefine="SYS_ERR_HW_PMC_NO_CHANNELS_ENABLED">
+    <Title>PMC-Karte kann nicht gestartet werden</Title>
+    <Description>Die in der Bewegungskonfiguration konfigurierte PMC-Karte ist nicht korrekt eingerichtet und kann nicht gestartet werden.</Description>
+    <Consequences>Die Anwendung, die diese PMC-Karte verwendet, kann nicht ausgeführt werden.</Consequences>
+    <Causes>Der Fehler ist möglicherweise auf einen Fehler in der Bewegungskonfiguration zurückzuführen.<p /></Causes>
+    <Actions>Die Begrenzungen für Kanäle für diese Karte in der Bewegungskonfiguration prüfen.</Actions>
+  </Message>
+  <Message number="8232" eDefine="SYS_ERR_HW_PMC_MAX_CHANNELS_REACHED">
+    <Title>Max. Anzahl Kanäle für PMC-Karte erreicht</Title>
+    <Description>Die in der Bewegungskonfiguration konfigurierte PMC-Karte ist nicht korrekt eingerichtet und kann nicht gestartet werden.</Description>
+    <Consequences>Die Anwendung, die diese PMC-Karte verwendet, kann nicht ausgeführt werden.</Consequences>
+    <Causes>Der Fehler ist möglicherweise auf einen Fehler in der Bewegungskonfiguration zurückzuführen.<p /></Causes>
+    <Actions>Die Begrenzungen für Kanäle für diese Karte in der Bewegungskonfiguration prüfen.</Actions>
+  </Message>
+  <Message number="8233" eDefine="SYS_ERR_HW_FT_CABLE_SAFETY_CHECK_FAILED">
+    <Title>Fehler im Kraftsensor-Sicherheitskanal</Title>
+    <Description>Am Sicherheitskanal im Kabel zwischen Kraftsensor und Messbaugruppe liegt eine geringere Spannung als die konfigurierte Sicherheitskanalspannung an. Der Kraftsensor ist mit dem Achscomputer im Antriebsmodul <arg format="%d" ordinal="1" /> verbunden.</Description>
+    <Consequences>Das System schaltet in den Zustand SYS HALT und die Anwendung, die diesen Sensor verwendet, kann erst verwendet werden, wenn das Kabel ersetzt oder repariert wurde. Verbindung der Sicherheitskanalüberwachung kann in Bewegungskonfiguration getrennt werden.</Consequences>
+    <Causes>1. Das Kabel ist nicht ordnungsgemäß angeschlossen. <p />2. Die Kabelanschlüsse oder das Kabel selbst sind beschädigt.<p />3. Das Sensorkabel besitzt keinen Sicherheitskanal.</Causes>
+    <Actions>Sicherstellen, dass das Kabel ordnungsgemäß angeschlossen ist und Anschlüsse an beiden Kabelenden sowie Kabel selbst untersuchen. Bei Beschädigung austauschen.</Actions>
+  </Message>
+  <Message number="8234" eDefine="SYS_ERR_HW_MAX_F_T_REACHED">
+    <Title>Max. Kraft oder Drehmoment erreicht</Title>
+    <Description>Die im Kraftsensor, der mit dem Achscomputer im Antriebsmodul <arg format="%d" ordinal="1" /> verbunden ist, gemessenen Kräfte oder Drehmomente überschreiten den konfigurierten Wert.</Description>
+    <Consequences>Das System hält deswegen nicht an.</Consequences>
+    <Causes>Die auf den Sensor angewendeten Kräfte oder Drehmomente überschreiten den konfigurierten Wert. Die Ursache kann eine zu hoch angeforderte Referenz sein. Auch die Konfiguration könnte fehlerhaft sein.</Causes>
+    <Actions>Die Kraft- und Drehmoment-Referenzen im Programm kontrollieren.<p />Prüfen ob die Umgebung auf den Sensor eine zu hohe Kraft oder ein zu hohes Drehmoment ausübt.</Actions>
+  </Message>
+  <Message number="8235" eDefine="SYS_ERR_HW_FT_INPUT_SATURATION_WARNING">
+    <Title>Sättigungswarnung von Kraftsensoreingang</Title>
+    <Description>Die analogen Eingangswerte der mit dem Kraftsensor verbundenen Messbaugruppe sind gesättigt und Sättigungszeit hat Warnungsstufe erreicht. <p />Die Messbaugruppe ist mit dem Achscomputer im Antriebsmodul <arg format="%d" ordinal="1" /> verbunden.</Description>
+    <Actions>Am Kraft-/Drehmomentsensor angewendete Last prüfen.<p />Kabel, Sensor und Messbaugruppe auf Beschädigung überprüfen.<p />Wert für folgenden Systemparameter erhöhen: time in saturation before warning</Actions>
+  </Message>
+  <Message number="8236" eDefine="SYS_ERR_HW_FT_INPUT_SATURATION_ERROR">
+    <Title>Sättigungsfehler von Kraftsensoreingang</Title>
+    <Description>Die analogen Eingangswerte der mit dem Kraftsensor verbundenen Messbaugruppe sind gesättigt und Sättigungszeit hat Fehlerstufe erreicht. Die Messbaugruppe ist mit dem Achscomputer im Antriebsmodul <arg format="%d " ordinal="1" /> verbunden.</Description>
+    <Consequences>Das System wird gestoppt.</Consequences>
+    <Actions>Last prüfen, die auf Kraft-/Drehmomentsensor angewendet wurde. Kabel, Sensor und Messbaugruppe auf Beschädigung prüfen. Wert für folgenden Systemparameter erhöhen: time in saturation before error </Actions>
+  </Message>
+  <Message number="8237" eDefine="SYS_ERR_HW_SENSOR_SYS_FMB_CONFIGURATION">
+    <Title>Konfigurationsfehler für Kraft-Messbaugruppe</Title>
+    <Description>Die Konfigurationswerte für die Kraft-Messbaugruppe, die am Kraftsensor angeschlossen ist, sind fehlerhaft. Die Gruppe ist an Antriebsmodul <arg format="%d " ordinal="1" /> angeschlossen, Verbindung <arg format="%d " ordinal="2" />. </Description>
+    <Consequences>Das System hat in den Zustand Systemfehler gewechselt.</Consequences>
+    <Actions>Konfiguration prüfen.</Actions>
+  </Message>
+  <Message number="9401" eDefine="SYS_ERR_HW_DM_DELTA_IM">
+    <Title>Drehmoment-Stromreferenzwert-Fehler</Title>
+    <Description>Der Drehmoment-Stromreferenzwert steigt zu schnell für Achse <arg format="%s" ordinal="2" />, die an Antriebsmodul <arg format="%.d" ordinal="1" /> angeschlossen ist. <p /><p /></Description>
+    <Consequences>-</Consequences>
+    <Causes>Resolver-Feedback ist schwach oder Verstärkung der Geschwindigkeitsreglung ist schlecht angepasst.</Causes>
+    <Actions>1) Resolverkabel und Resolvererdung für diese Achse prüfen. Wenn es sich um eine zusätzliche Achse handelt, sicherstellen, dass die Motordaten in der Konfigurationsdatei korrekt sind. Weitere Informationen zur Überprüfung der Konfigurationsdatei finden Sie im Handbuch zur Fehlerbehebung. <p />2) Verstärkung der Geschwindigkeitsregelung verringern.</Actions>
+  </Message>
+  <Message number="9402" eDefine="SYS_ERR_HW_DM_DELTA_RFI">
+    <Title>Motorwinkelreferenz-Warnung</Title>
+    <Description>Der Motorwinkelreferenzwert steigt zu schnell für Achse <arg format="%s" ordinal="2" />, die an Antriebsmodul <arg format="%.d" ordinal="1" /> angeschlossen ist. <p /><p /></Description>
+    <Consequences>-</Consequences>
+    <Causes>Resolver-Feedback ist schwach oder Verstärkung der Geschwindigkeitsregelung ist schlecht angepasst.</Causes>
+    <Actions>1) Resolverkabel und Resolvererdung für diese Achse prüfen. Wenn es sich um eine zusätzliche Achse handelt, sicherstellen, dass die Motordaten in der Konfigurationsdatei korrekt sind. Weitere Informationen zur Überprüfung der Konfigurationsdatei finden Sie im Handbuch zur Fehlerbehebung. <p />2) Verstärkung der Geschwindigkeitsregelung verringern.</Actions>
+  </Message>
+  <Message number="9403" eDefine="SYS_ERR_HW_DM_IQ_UNDERCURR">
+    <Title>Drehmoment-Schleifenunterstrom</Title>
+    <Description>Drehmoment-Stromsteuerung stellt zu niedrigen Strom für Achse <arg format="%.s" ordinal="2" /> fest, die an Antriebsmodul <arg format="%.d" ordinal="1" /> angeschlossen ist. <p /><p /></Description>
+    <Consequences>- </Consequences>
+    <Causes>Die Motordaten in den Konfigurationsdateien sind evtl. falsch oder die Gleichstrombusspannung ist zu niedrig.</Causes>
+    <Actions>1) Sicherstellen, dass die Motordaten in der Konfigurationsdatei für diese Achse korrekt sind. Überprüfung der Konfigurationsdatei siehe Handbuch zur Fehlerbehebung.<p />2) Sicherstellen, dass das Ereignisprotokoll keine Gleichstrombus-Fehler enthält.<p />3) Prüfen, ob eingehende Netzspannung der Spezifikation entspricht.<p />4) Prüfen, ob Motorkabel beschädigt oder nicht richtig angeschlossen sind.</Actions>
+  </Message>
+  <Message number="9404" eDefine="SYS_ERR_HW_DM_IQ_OVERCURR">
+    <Title>Drehmoment-Schleifenüberstrom</Title>
+    <Description>Feldstromsteuerung stellt zu hohen Strom für Achse <arg format="%.s" ordinal="2" /> fest, die an Antriebsmodul <arg format="%.d" ordinal="1" /> angeschlossen ist. </Description>
+    <Consequences>- </Consequences>
+    <Causes>Die Motordaten in den Konfigurationsdateien sind eventuell falsch.</Causes>
+    <Actions>1) Sicherstellen, dass die Motordaten in der Konfigurationsdatei für diese Achse korrekt sind. Überprüfung der Konfigurationsdatei siehe Handbuch zur Fehlerbehebung.<p />2) Sicherstellen, dass das Ereignisprotokoll keine Gleichstrombus-Fehler enthält.<p />3) Prüfen, ob eingehende Netzspannung der Spezifikation entspricht.<p />4) Prüfen, ob Motorkabel beschädigt oder nicht richtig angeschlossen sind.</Actions>
+  </Message>
+  <Message number="9405" eDefine="SYS_ERR_HW_DM_IQ_PWM_MAX">
+    <Title>Maximale PWM in Drehmoment-Steuerung erreicht</Title>
+    <Description>Drehmoment-Steuerungsschleife liegt im Sättigungsbereich für Achse <arg format="%.s" ordinal="2" />, die an Antriebsmodul <arg format="%.d" ordinal="1" /> angeschlossen ist. <p /><p /></Description>
+    <Consequences>- </Consequences>
+    <Causes>Die Netzspannung ist evtl. zu niedrig oder die Motorwicklungen oder -kabel sind unterbrochen.</Causes>
+    <Actions>1) Sicherstellen, dass das Ereignisprotokoll keine Gleichstrombus-Fehler enthält.<p />2) Prüfen, ob eingehende Netzspannung der Spezifikation entspricht.<p />3) Motorkabel und -wicklungen auf offene Schaltungen prüfen.</Actions>
+  </Message>
+  <Message number="9406" eDefine="SYS_ERR_HW_DM_ID_ERRMAX">
+    <Title>Feld-Schleifenüberstrom</Title>
+    <Description>Steuerschleife für Feldstrom generiert zu hohe Stromstärke für Achse <arg format="%s" ordinal="2" />, die an Antriebsmodul <arg format="%d" ordinal="1" /> angeschlossen ist. </Description>
+    <Consequences>- </Consequences>
+    <Causes>Die Motordaten in den Konfigurationsdateien sind eventuell falsch.</Causes>
+    <Actions>1) Sicherstellen, dass das Ereignisprotokoll keine Gleichstrombus-Fehler enthält.<p />2) Prüfen, ob eingehende Netzspannung der Spezifikation entspricht.<p />3) Motorkabel und -wicklungen prüfen.</Actions>
+  </Message>
+  <Message number="9407" eDefine="SYS_ERR_HW_DM_WRONG_TYPE_CODE_DU">
+    <Title>Antriebseinheit hat falschen Typencode</Title>
+    <Description>Typencode für Antriebseinheit für Achse <arg format="%s" ordinal="2" /> in Drive Module <arg format="%d" ordinal="1" /> unterscheidet sich von Angabe in Konfigurationsdatei. Installierter Antriebseinheitentyp ist <arg format="%s" ordinal="3" /> und konfigurierter Typ ist <arg format="%s" ordinal="4" />. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Die Konfigurationsdatei enthält eventuell fehlerhafte Werte, der Konfigurationskey ist eventuell falsch oder die Hardware hat den falschen Typ. Wenn die Antriebseinheit kürzlich ausgetauscht wurde, wurde eventuell eine Einheit mit dem falschen Typencode montiert oder der Key wurde nicht entsprechend der korrekten Hardware-Software-Kombination ausgewechselt.</Causes>
+    <Actions>1) Sicherstellen, dass die Werte in der Konfigurationsdatei der installierten Hardware entsprechen.<p />2) Sicherstellen, dass der Konfigurationskey der installierten Hardware-Software-Kombination entspricht. Weitere Informationen zur Überprüfung der Konfigurationsdatei finden Sie im Handbuch zur Fehlerbehebung. <p />3) Wenn die Antriebseinheit kürzlich ersetzt wurde, sicherstellen, dass der korrekte Typencode benutzt wird.</Actions>
+  </Message>
+  <Message number="9408" eDefine="SYS_ERR_HW_DM_WRONG_TYPE_CODE_RECT">
+    <Title>Gleichrichtereinheit hat falschen Typencode</Title>
+    <Description>Typencode für Gleichrichtereinheit <arg format="%s" ordinal="2" /> in Antriebsmodul <arg format="%d" ordinal="1" /> unterscheidet sich von Angabe in Konfigurationsdatei. Installierter Gleichrichtertyp ist <arg format="%s" ordinal="3" /> und konfigurierter Typ ist <arg format="%s" ordinal="4" />. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Betrieb möglich. Das System geht in den Zustand SYS_FEHLER.</Consequences>
+    <Causes>Die Konfigurationsdatei enthält eventuell fehlerhafte Werte, der Konfigurations-Key ist eventuell falsch oder die Hardware hat den falschen Typ. Wenn der Gleichrichter kürzlich ausgetauscht wurde, wurde eventuell eine Gleichrichtereinheit mit dem falschen Typencode montiert oder der Key wurde nicht entsprechend der korrekten Hardware-Software-Kombination ausgewechselt.</Causes>
+    <Actions>1) Sicherstellen, dass die Werte in der Konfigurationsdatei der installierten Hardware entsprechen.<p />2) Sicherstellen, dass der Konfigurations-Key der installierten Hardware-Software-Kombination entspricht. Weitere Informationen zur Überprüfung der Konfigurationsdatei finden Sie im Handbuch zur Fehlerbehebung. <p />3) Wenn die Antriebseinheit kürzlich ersetzt wurde, sicherstellen, dass der korrekte Typencode benutzt wird.</Actions>
+  </Message>
+  <Message number="9409" eDefine="SYS_ERR_HW_DM_WRONG_TYPE_CODE_CAP">
+    <Title>Kondensatoreinheit hat falschen Typencode</Title>
+    <Description>Typencode für Kondensatoreinheit <arg format="%d" ordinal="2" /> in Antriebsmodul <arg format="%d" ordinal="1" /> unterscheidet sich von Angabe in Konfigurationsdatei. Installierter Kondensatortyp ist <arg format="%s" ordinal="3" /> und konfigurierter Typ ist <arg format="%s" ordinal="4" />. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Die Konfigurationsdatei enthält evtl. fehlerhafte Werte, der Konfigurationsschlüssel ist evtl. falsch oder die Hardware hat den falschen Typ. Wenn die Kondensatoreinheit kürzlich ausgetauscht wurde, wurde evtl. eine Einheit mit dem falschen Typencode montiert oder der Schlüssel wurde nicht entsprechend der korrekten Hardware-Software-Kombination ausgewechselt.</Causes>
+    <Actions>1) Sicherstellen, dass die Werte in der Konfigurationsdatei der installierten Hardware entsprechen.<p />2) Sicherstellen, dass der Konfigurationsschlüssel der installierten Hardware-Software-Kombination entspricht. Informationen zur Prüfung der Konfigurationsdatei siehe im Handbuch zur Fehlerbehebung.<p />3) Wenn die Kondensatoreinheit kürzlich ausgetauscht wurde, sicherstellen, dass der korrekte Typencode verwendet wird.</Actions>
+  </Message>
+  <Message number="9410" eDefine="SYS_ERR_HW_DS_COMM_RATE_WARN">
+    <Title>Antriebseinheit-Kommunikationswarnung </Title>
+    <Description>Viele Kommunikationsfehler zwischen Achscomputer und Antriebseinheit Nummer <arg format="%d" ordinal="3" /> in Antriebsmodul <arg format="%.d" ordinal="1" /> (Fehlerrate pro Zeiteinheit).</Description>
+    <Consequences>Wenn Zahl an Kommunikationsfehlern weiter steigt, besteht die Gefahr, dass die Steuerung zu einem Stopp gezwungen wird. </Consequences>
+    <Causes>Mögliche Ursache: Externes Rauschen stört Kommunikationssignale. </Causes>
+    <Actions>1) Sicherstellen, dass das Kommunikationskabel zwischen Achscomputer und Hauptantriebseinheit korrekt angeschlossen ist.<p />2) Sicherstellen, dass das Modul korrekt geerdet ist.<p />3) Nähere Umgebung des Antriebsmoduls auf Quellen für elektromagnetische Interferenzen prüfen.</Actions>
+  </Message>
+  <Message number="9411" eDefine="SYS_ERR_HW_DS_COMM_ERROR">
+    <Title>Zu viele Kommunikationsfehler</Title>
+    <Description>Vier oder mehr aufeinander folgende Kommunikationspakete zwischen Achscomputer und Antriebseinheit <arg format="%d" ordinal="3" /> in Antriebsmodul <arg format="%.d" ordinal="1" /> sind verloren gegangen.</Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Mögliche Ursachen: Unterbrechung im Kommunikationskabel zwischen Achscomputer und Hauptantriebseinheit, fehlerhafte Erdung des Antriebsmoduls oder Interferenzen von externen Störquellen.</Causes>
+    <Actions>1) Sicherstellen, dass das Kommunikationskabel zwischen Achscomputer und Hauptantriebseinheit korrekt angeschlossen ist. <p />2) Prüfen, ob das Modul korrekt geerdet ist. <p />3) Nähere Umgebung des Antriebsmoduls auf Quellen für elektromagnetische Interferenzen prüfen.</Actions>
+  </Message>
+  <Message number="9412" eDefine="SYS_ERR_HW_DS_NODE_COMM_ERROR">
+    <Title>Zu viele Aktualisierungen wegen verfehlter Referenz</Title>
+    <Description>Zu viele fehlende Kommunikationspakete wurden für Achse <arg format="%.s" ordinal="2" /> in Antriebsmodul <arg format="%.d" ordinal="1" /> festgestellt. <p /><p /></Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Mögliche Ursachen: Unterbrechung im Kommunikationskabel zwischen Achscomputer und Hauptantriebseinheit, fehlerhafte Erdung des Antriebsmoduls oder Interferenzen von externen Störquellen.</Causes>
+    <Actions>1) Sicherstellen, dass das Kommunikationskabel zwischen Achscomputer und Hauptantriebseinheit korrekt angeschlossen ist.<p />2) Sicherstellen, dass das Modul korrekt geerdet ist.<p />3) Nähere Umgebung des Antriebsmoduls auf Quellen für elektromagnetische Interferenzen prüfen.</Actions>
+  </Message>
+  <Message number="9413" eDefine="SYS_ERR_HW_SOFTWARE_NOT_SYNCHRONISED">
+    <Title>Antriebssoftware nicht synchron</Title>
+    <Description>Die Achscomputer-Software in Antriebsmodul <arg format="%d" ordinal="1" /> wurde asynchron mit der Antriebssoftware für Achse <arg format="%s" ordinal="2" />. Dies ist ein instabiler Softwarestatus.</Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Im Systemtakt können Störimpulse vorliegen.</Causes>
+    <Actions>1) Steuerung neu starten.<p />2) Wenn das Problem weiter besteht, Kontakt zur zuständigen ABB-Vertretung aufnehmen.</Actions>
+  </Message>
+  <Message number="9414" eDefine="SYS_ERR_HW_UNKNOWN_TYPE_CODE_CAP">
+    <Title>Unbekannter Kondensator-Typencode</Title>
+    <Description>Typencode für Kondensatoreinheit <arg format="%s" ordinal="2" /> in Antriebsmodul <arg format="%d" ordinal="1" /> wird vom System nicht erkannt.</Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Evtl. wurde die falsche Kondensatoreinheit montiert oder die verwendete Kondensatorversion wird nicht von der Software unterstützt.</Causes>
+    <Actions>1) Typ der montierten Kondensatoreinheit prüfen. Austauschen, falls es der falsche Typ ist.<p />2) Wenn das Problem weiter besteht, Kontakt zur zuständigen ABB-Vertretung aufnehmen.</Actions>
+  </Message>
+  <Message number="9415" eDefine="SYS_ERR_HW_DM_COM_LOST_ERR">
+    <Title>Kommunikation mit Antriebseinheit verloren</Title>
+    <Description>Kommunikation mit Antriebseinheit Nummer <arg format="%d" ordinal="3" /> in Antriebsmodul <arg format="%d" ordinal="1" /> wurde unterbrochen.</Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Mögliche Ursachen: Unterbrechung im Kommunikationskabel zwischen Achscomputer und Hauptantriebseinheit, fehlerhafte Erdung des Antriebsmoduls oder Interferenzen von externen Störquellen.</Causes>
+    <Actions>1) Sicherstellen, dass das Kommunikationskabel zwischen Achscomputer und Hauptantriebseinheit korrekt angeschlossen ist.<p />2) Sicherstellen, dass das Modul korrekt geerdet ist.<p />3) Nähere Umgebung des Antriebsmoduls auf Quellen für elektromagnetische Interferenzen prüfen.</Actions>
+  </Message>
+  <Message number="9416" eDefine="SYS_ERR_HW_DM_DRIVE_NOT_RESPONDING">
+    <Title>Antriebseinheit reagiert nicht</Title>
+    <Description>Hauptantriebseinheit in Antriebsmodul <arg format="%d" ordinal="1" /> reagiert nicht.</Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Mögliche Ursachen: Unterbrechung im Kommunikationskabel zwischen Achscomputer und Hauptantriebseinheit oder Softwaresperre.</Causes>
+    <Actions>1) Prüfen, ob Kommunikationskabel zwischen Achscomputer und Antriebseinheit korrekt verbunden ist.<p />2. Steuerung neu starten.<p />3. Wenn das Problem weiter besteht, Kontakt zur zuständigen ABB-Vertretung aufnehmen.</Actions>
+  </Message>
+  <Message number="9417" eDefine="SYS_ERR_HW_DM_NO_DRIVE_SW_FOUND">
+    <Title>Versionsdatei für Antriebssoftware nicht gefunden</Title>
+    <Description>System findet keine gültige Antriebsversionsdatei auf dem Datenträger.<p /><p />Die Datei wurde evtl. versehentlich gelöscht. Ohne diese Datei kann nicht geprüft werden, ob die Software der Antriebseinheit aktualisiert werden muss.</Description>
+    <Actions>Kontakt zur zuständigen ABB-Vertretung aufnehmen.</Actions>
+  </Message>
+  <Message number="9418" eDefine="SYS_ERR_HW_DM_UNKNOWN_TYPE_CODE_DU">
+    <Title>Unbekannter Antriebseinheit-Typencode</Title>
+    <Description>Typencode für Antriebseinheit <arg format="%s" ordinal="2" /> in Antriebsmodul <arg format="%d" ordinal="1" /> wird vom System nicht erkannt. Installierter Antriebseinheitentyp ist <arg format="%d" ordinal="3" /> und konfigurierter Typ ist <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Evtl. schlechte Verbindung zur Antriebseinheit oder Hardwarefehler.</Causes>
+    <Actions>1) Sicherstellen, dass Kabelverbindungen zur Antriebseinheit korrekt sind.<p />2) Sicherstellen, dass die Antriebseinheit von dieser Steuerung unterstützt wird.<p />3) Wenn die Antriebseinheit kürzlich ersetzt wurde, sicherstellen, dass der korrekte Typencode benutzt wird.</Actions>
+  </Message>
+  <Message number="9419" eDefine="SYS_ERR_HW_DM_UNKNOWN_TYPE_CODE_RECT">
+    <Title>Unbekannter Gleichrichter-Typencode</Title>
+    <Description>Typencode für Gleichrichtereinheit <arg format="%s" ordinal="2" /> in Antriebsmodul <arg format="%d" ordinal="1" /> wird vom System nicht erkannt. Installierter Gleichrichtertyp ist <arg format="%d" ordinal="3" /> und konfigurierter Typ ist <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Evtl. schlechte Verbindung zur Antriebseinheit oder Hardwarefehler.</Causes>
+    <Actions>1) Sicherstellen, dass Kabelverbindungen zur Gleichrichtereinheit korrekt sind.<p />2) Sicherstellen, dass die Gleichrichtereinheit von dieser Steuerung unterstützt wird.<p />3) Wenn die Gleichrichtereinheit kürzlich ersetzt wurde, sicherstellen, dass der korrekte Typencode benutzt wird.</Actions>
+  </Message>
+  <Message number="9420" eDefine="SYS_ERR_HW_DM_DRV_BIT_FAILURE">
+    <Title>Antriebseinheit - Fehler bei integriertem Test</Title>
+    <Description>Antriebseinheit Nummer <arg format="%d" ordinal="3" /> in Antriebsmodul <arg format="%d" ordinal="1" /> hat einen internen Hardwarefehler erkannt.</Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Die Testsoftware arbeitet nicht korrekt oder die Hardware ist fehlerhaft.</Causes>
+    <Actions>1) System abschalten und neu starten.<p />2) Wenn das Problem weiter besteht, fehlerhafte Antriebseinheit ermitteln und austauschen.</Actions>
+  </Message>
+</Domain>

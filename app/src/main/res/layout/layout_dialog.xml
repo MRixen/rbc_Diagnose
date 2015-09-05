@@ -1,0 +1,68 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/icon"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/header"
+            android:textColor="#000000"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/icon"
+            android:textStyle="bold"
+            android:textSize="32sp"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/descriptionHeader"
+                android:textColor="#000000"
+                android:layout_below="@+id/icon"
+                android:text="Description"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/descriptionText"
+                android:textColor="#000000"
+                android:layout_below="@+id/descriptionHeader"
+                android:layout_marginBottom="5dp"
+                android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/actionHeader"
+            android:textColor="#000000"
+            android:text="Actions"
+            android:layout_below="@+id/descriptionText"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/actionText"
+            android:textColor="#000000"
+            android:layout_below="@+id/actionHeader"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

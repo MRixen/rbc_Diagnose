@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="ARL" domainNo="4" lang="de" elogTextVersion="1.0" min="1607" max="1712">
+  <Message number="1607" eDefine="SYS_ERR_ARL_SOCK_ONLY_UDP">
+    <Title>Socket-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Socket-Typ ist vom Typ Übertragungssteuerungsprotokoll (TCP/IP). <p />Die aktuelle Instruktion <arg format="%s" ordinal="2" /> wird nur für das Datagram Protocol UDP/IP unterstützt.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Causes>Der verwendete Socket-Typ ist nicht gültig. </Causes>
+    <Actions>Überprüfen Sie, wie das Socket erstellt wurde. </Actions>
+  </Message>
+  <Message number="1611" eDefine="SYS_ERR_ARL_UI_NOACTION">
+    <Title>UIMsgBox - Kein Benutzer oder keine Programmaktion definiert</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Für Instruktion UIMsgBox oder Funktion UIMessageBox ist kein Benutzer oder<p />keine Programmaktion definiert.<p />Keines der Optionsargumente \Buttons, \BtnArray, \MaxTime, \DIBreak oder<p />\DOBreak wird verwendet.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Das RAPID-Programm wird in einer Schleife ausgeführt.</Consequences>
+    <Actions>Eines oder mehrere der Argumente \Buttons, \BtnArray, \MaxTime,<p />\DIBreak oder \DObreak verwenden.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1612" eDefine="SYS_ERR_ARL_UI_MAXMIN">
+    <Title>Minimaler Wert größer als maximaler Wert</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />In Funktion <arg format="%s" ordinal="4" /> ist das Argument \MinValue größer<p />als das Argument \MaxValue.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Fortsetzen der Programmabarbeitung nicht möglich.</Consequences>
+    <Actions>Das RAPID-Programm so ändern, dass das Argument \MaxValue größer ist als das Argument \MinValue.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1613" eDefine="SYS_ERR_ARL_UI_INITVALUE">
+    <Title>InitValue liegt nicht innerhalb des Wertebereichs</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />In Funktion <arg format="%s" ordinal="4" /> liegt das Argument \InitValue nicht<p />innerhalb des Bereichs \MaxValue ... \MinValue.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Fortsetzen der Programmabarbeitung nicht möglich.</Consequences>
+    <Actions>Das Argument \InitValue so ändern, dass es innerhalb des Wertebereichs liegt.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1614" eDefine="SYS_ERR_ARL_UI_INITNOTINT">
+    <Title>InitValue ist keine Ganzzahl</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />In Funktion <arg format="%s" ordinal="4" /> ist das Argument \InitValue keine Ganzzahl wie<p />in Argument \AsInteger angegeben.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Fortsetzen der Programmabarbeitung nicht möglich.</Consequences>
+    <Actions>Das Argument \InitValue zu einer Ganzzahl ändern.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1615" eDefine="SYS_ERR_ARL_DATAPOS_UNDEF">
+    <Title>Referenzfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Datentyp "datapos" <arg format="%s" ordinal="2" /> ist nicht definiert.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Alle Werte dieses Datentyps werden mit der Funktion GetNextSym abgerufen.</Actions>
+  </Message>
+  <Message number="1616" eDefine="SYS_ERR_ARL_TASKID_UNDEF">
+    <Title>Referenzfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Datentyp "taskid" <arg format="%s" ordinal="2" /> ist im System unbekannt.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Programmtasks müssen in den Systemparametern und nicht im RAPID-Programm definiert werden. ("taskid" kann als Parameter verwendet werden, wenn eine Routine deklariert wird.)</Actions>
+  </Message>
+  <Message number="1617" eDefine="SYS_ERR_ARL_UI_BUFFER_FULL">
+    <Title>Zu hohe Häufigkeit von Schreibinstruktionen</Title>
+    <Description>Die Programmabarbeitung wurde durch die häufige Verwendung von Schreibinstruktionen wie "TPWrite" verlangsamt.</Description>
+    <Actions>Die Häufigkeit von Schreibinstruktionen verringern. Warteinstruktionen wie "WaitTime" hinzufügen, wenn viele Schreibinstruktionen in Folge verwendet werden.</Actions>
+  </Message>
+  <Message number="1618" eDefine="SYS_ERR_ARL_UI_BUTTON">
+    <Title>Argumentfehler in "buttondata"</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Wert des Arguments "Buttons" vom Typ "buttondata" ist nicht zulässig.<p />Nur die vordefinierten Daten vom Typ "buttondata" dürfen verwendet werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Causes>"buttondata" muss:<p />- eine Ganzzahl sein<p />- einen Wert innerhalb des vordefinierten Bereichs haben</Causes>
+    <Actions>Das Programm bearbeiten.</Actions>
+  </Message>
+  <Message number="1619" eDefine="SYS_ERR_ARL_UI_ICON">
+    <Title>Argumentfehler in "icondata"</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Wert des Arguments "Icon" vom Typ "buttondata" ist nicht zulässig.<p />Nur die vordefinierten Daten vom Typ "icondata" dürfen verwendet werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Causes>"icondata" muss:<p />- eine Ganzzahl sein<p />- einen Wert innerhalb des vordefinierten Bereichs haben</Causes>
+    <Actions>Das Programm bearbeiten.</Actions>
+  </Message>
+  <Message number="1620" eDefine="SYS_ERR_ARL_SOCK_OVERLOAD">
+    <Title>Socket-Fehler </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Untersystem zur Socketkommunikation (Socket Messaging) ist überlastet.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Causes>Dies ist möglich, wenn Sockets häufig und sehr schnell erstellt und geschlossen werden. </Causes>
+    <Actions>Programm so umschreiben, dass Sockets erneut verwendet anstatt geschlossen und neu erstellt werden.</Actions>
+  </Message>
+  <Message number="1621" eDefine="SYS_ERR_ARL_STORE_PATH_KEEPSYNCH">
+    <Title>StorePath-Fehler </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> wird mit Switch <arg format="%s" ordinal="3" /> in einer oder mehreren Tasks zusammen mit <arg format="%s" ordinal="2" /> ohne <arg format="%s" ordinal="3" /> verwendet.<p />Programmreferenz: <arg format="%s" ordinal="4" /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten. </Consequences>
+    <Causes>Fehler in den RAPID-Programmen.</Causes>
+    <Actions>Sicherstellen, dass keine Mischung aus StorePath und StorePath \KeepSync verwendet wird.<p />Programm ändern.<p />PZ muss vor dem Fortfahren in allen Tasks versetzt werden.<p /><p /></Actions>
+  </Message>
+  <Message number="1622" eDefine="SYS_ERR_ARL_UNEXP_SYNC_INSTR">
+    <Title>Unerwartete Instruktion </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Instruktion <arg format="%s" ordinal="2" /> kann nur zwischen den Instruktionen <p /><arg format="%s" ordinal="3" /> und <arg format="%s" ordinal="4" /> (auf Bahnaufzeichnungsebene) verwendet werden.<p />Programmreferenz: <arg format="%s" ordinal="5" /><p /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten.<p /></Consequences>
+    <Causes>Fehler im RAPID-Programm.</Causes>
+    <Actions>RAPID-Programm prüfen und ändern.<p />PZ muss vor dem Fortfahren in allen Tasks versetzt werden.<p /><p /></Actions>
+  </Message>
+  <Message number="1623" eDefine="SYS_ERR_ARL_MULTIPLE_SYNC_INSTR">
+    <Title>Fehlerhafte Verwendung von <arg format="%s" ordinal="2" /></Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> wird mehrmals verwendet oder Instruktion wird verwendet, wenn bereits im Synchronbewegungsmodus.<p /><arg format="%s" ordinal="3" /> setzt synchrone, koordinierte Bewegungen aus.<p /><arg format="%s" ordinal="4" /> nimmt synchrone, koordinierte Bewegungen wieder auf.<p />Programmreferenz: <arg format="%s" ordinal="5" /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten.<p /><p /></Consequences>
+    <Causes>Fehler im RAPID-Programm.</Causes>
+    <Actions>RAPID-Programm prüfen und ändern.<p />PZ muss vor dem Fortfahren in allen Tasks versetzt werden.<p /><p /><p /></Actions>
+  </Message>
+  <Message number="1625" eDefine="SYS_ERR_ARL_UNEXP_SUSP_IN_SYNCH_OFF">
+    <Title>Unerwartete <arg format="%s" ordinal="2" /></Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> wird direkt nach Instruktion <arg format="%s" ordinal="3" /> verwendet oder das System befindet sich nicht im synchronisierten Bewegungsmodus. <p />Das Wechseln in den selbstständigen Bewegungsmodus ist nicht möglich.<p />Programmreferenz: <arg format="%s" ordinal="4" /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Causes>Fehler im RAPID-Programm</Causes>
+    <Actions>RAPID-Programm prüfen und ändern.<p />PZ muss vor dem Fortfahren in allen Tasks versetzt werden.<p /><p /></Actions>
+  </Message>
+  <Message number="1626" eDefine="SYS_ERR_ARL_UNEXP_STOREP_KEEPSYNC">
+    <Title>Unerwartet: <arg format="%s" ordinal="1" /> \<arg format="%s" ordinal="2" /></Title>
+    <Description>Task: <arg format="%s" ordinal="3" /><p />Instruktion <arg format="%s" ordinal="1" /><arg format="%s" ordinal="2" /> wird im unabhängigen Bewegungsmodus verwendet.<p />Programmreferenz: <arg format="%s" ordinal="4" /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten. </Consequences>
+    <Causes>Fehler im RAPID-Programm.</Causes>
+    <Actions>RAPID-Programm prüfen und ändern.<p />PZ muss vor dem Fortfahren in allen Tasks versetzt werden.<p /><p /></Actions>
+  </Message>
+  <Message number="1627" eDefine="SYS_ERR_SYNCH_MODE_NEVER_SYNCHED_BEFORE_RESUME">
+    <Title>Fehlerhafte Verwendung von <arg format="%s" ordinal="2" /></Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> wird auf Bahnaufzeichnungsebene benutzt und System war vor <arg format="%s" ordinal="3" /> nicht im Synchronbewegungsmodus.<p />Programmreferenz: <arg format="%s" ordinal="4" /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten. </Consequences>
+    <Causes>Fehler im RAPID-Programm.</Causes>
+    <Actions>RAPID-Programm prüfen und ändern.<p />PZ muss vor dem Fortfahren in allen Tasks versetzt werden. </Actions>
+  </Message>
+  <Message number="1630" eDefine="SYS_ERR_ARL_SAME_SYNCHID_WARN">
+    <Title>Unsichere Synchronisierung</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Für eine sichere Synchronisierungsfunktionalität darf die Variable <arg format="%s" ordinal="2" /> nur einmal und nicht in mehreren <arg format="%s" ordinal="3" /> - oder <arg format="%s" ordinal="4" />-Instruktionen verwendet werden. <p /><p />Programmreferenz: <arg format="%s" ordinal="5" /></Description>
+    <Consequences>Programmtasks/Bewegungen sind eventuell nicht immer synchron.</Consequences>
+    <Causes>Mehrfache Verwendung von <arg format="%s" ordinal="2" /> im selben Programm.</Causes>
+    <Actions>RAPID-Programm prüfen und ändern.</Actions>
+  </Message>
+  <Message number="1631" eDefine="SYS_ERR_ARL_IN_ALL_EVENT_ROUTINES">
+    <Title>Instruktionsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Programm wird in einer EVENT-Routine abgearbeitet. Die Abarbeitung der aktuellen Instruktion ist in einer EVENT-Routine mit <arg format="%s" ordinal="2" /> nicht zulässig.<p />Programmreferenz <arg format="%s" ordinal="3" /></Description>
+    <Actions>Instruktion entfernen.</Actions>
+  </Message>
+  <Message number="1632" eDefine="SYS_ERR_ARL_NO_USE">
+    <Title>Argument existiert nicht</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Argumente TP_SCREENVIEWER und TP_PROGRAM in der Instruktion TPShow wurde entfernt.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>Die Ausführung der Instruktion mit diesen Argumenten hat keine Wirkung.</Consequences>
+    <Actions>Instruktion entfernen.</Actions>
+  </Message>
+  <Message number="1633" eDefine="SYS_ERR_ARL_ONLY_UNDO">
+    <Title>Kann nur in einer UNDO-Routine verwendet werden</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Instruktion <arg format="%s" ordinal="2" /> kann nur in einer UNDO-Routine verwendet werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Programmabarbeitung wird gestoppt.</Consequences>
+    <Actions>Andere Instruktion verwenden und/oder diese Instruktion in die UNDO-Routine verschieben.</Actions>
+  </Message>
+  <Message number="1634" eDefine="SYS_ERR_ARL_ILL_TASKNAME">
+    <Title>Unbekannter Taskname</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Taskname <arg format="%s" ordinal="2" /> ist im System unbekannt.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Diese Instruktion kann nicht mit einem Tasknamen abgearbeitet werden, der im System nicht vorhanden ist.</Consequences>
+    <Causes>1. Die Programmtask ist in den Systemparametern nicht definiert.<p />2. Der Taskname ist falsch geschrieben.<p /></Causes>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1635" eDefine="SYS_ERR_ARL_UNEXP_SYNC_OFF_IN_OFF">
+    <Title>Unerwartetes SyncMoveOff</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unerwartetes SyncMoveOff (SyncID <arg format="%s" ordinal="2" />). System befindet sich bereits im unsynchronisierten Modus.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>Die Verwendung von nicht globalen Tasklisten kann diesen Fehler verursachen.</Causes>
+    <Actions>SyncMoveOff-Instruktion entfernen. Auf jede SyncMoveOn-Instruktion muss eine SyncMoveOff-Instruktion folgen.<p />Die Tasklisten prüfen.<p /><p /><p /></Actions>
+  </Message>
+  <Message number="1636" eDefine="SYS_ERR_ARL_UNEXP_SYNC_OFF_FROM_UNSYNC">
+    <Title>Unerwarteter SyncMoveOff</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unerwartetes SyncMoveOff (SyncId <arg format="%s" ordinal="2" />) aus Task nicht in synchroner Gruppe enthalten.<p />Programmreferenz:<arg format="%s" ordinal="3" /></Description>
+    <Causes>Die Verwendung von nicht globalen Tasklisten kann diesen Fehler verursachen.</Causes>
+    <Actions>SyncMoveOff-Instruktion entfernen. Auf jede SyncMoveOn-Instruktion muss eine SyncMoveOff-Instruktion folgen.<p />Tasklisten prüfen.</Actions>
+  </Message>
+  <Message number="1637" eDefine="SYS_ERR_ARL_TASK_ACTIVATION_MISMATCH">
+    <Title>Task im Taskauswahlfeld nicht mehr aktiv</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Task <arg format="%s" ordinal="2" /> ist im Taskauswahlfeld nicht mehr aktiv. <p />Die Task <arg format="%s" ordinal="2" /> war beim Starten von main im Taskauswahlfeld aktiv. <p />Daher kann diese <arg format="%s" ordinal="4" /> Instruktion nicht übergeben werden. <p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Causes>Die Task <arg format="%s" ordinal="2" /> wurde im Taskauswahlfeld deaktiviert.</Causes>
+    <Actions>1) Task <arg format="%s" ordinal="2" /> im Taskauswahlfeld aktivieren.<p />2) Zum Überspringen der Task <arg format="%s" ordinal="2" /> für den Rest dieses Zyklus die Serviceroutine SkipTaskExec ausführen.<p />Anschließend Instruktion <arg format="%s" ordinal="4" /> neu starten.</Actions>
+  </Message>
+  <Message number="1638" eDefine="SYS_ERR_ARL_TASK_ADDED_ERROR">
+    <Title>Unzulässige Task-Aktivierung</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Task <arg format="%s" ordinal="2" /> ist im Taskauswahlfeld aktiv. Diese Task war beim Start von main nicht im Taskauswahlfeld aktiv. Nach dem Start von main ist das Hinzufügen von Tasks im Taskauswahlfeld nicht zulässig.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Causes>1) Die Task <arg format="%s" ordinal="2" /> war beim Starten von main nicht aktiv.<p />2) Deaktivierung von Task <arg format="%s" ordinal="2" /> mit Serviceroutine <arg format="%s" ordinal="4" />, ohne die Task im Taskauswahlfeld zu deaktivieren. <p />3) Aktivierung von Task <arg format="%s" ordinal="2" />, die zuvor im Taskauswahlfeld und in der Serviceroutine <arg format="%s" ordinal="4" /> deaktiviert wurde.</Causes>
+    <Actions>PZ auf main verschieben, um verwendete Tasks an Anfang von main zurückzusetzen. Dann im Taskauswahlfeld wählen, welche Tasks abgearbeitet werden sollen.</Actions>
+  </Message>
+  <Message number="1640" eDefine="SYS_ERR_ARL_MOVE_PP_PATH_LEVEL">
+    <Title>Warnung zum Verschieben des PZ</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Wenn der Pfad gespeichert wurde und der Programmzeiger nach der Pfadwiederherstellung verschoben wird, können Probleme auftreten.</Description>
+    <Consequences>Der Pfad verbleibt möglicherweise unbeabsichtigt im gespeicherten Zustand.</Consequences>
+    <Causes>Programmhalt, wenn Pfad gespeichert ist. Dann erfolgte eine PZ-Bewegung innerhalb des Programms.</Causes>
+    <Actions>Gegebenenfalls durch Verschieben des PZ auf eine RestoPath-Instruktion sicherstellen, dass Pfadwiederherstellung nicht übersprungen wird.</Actions>
+  </Message>
+  <Message number="1641" eDefine="SYS_ERR_ARL_MOVE_PP_STOP_MOVE">
+    <Title>Warnung zum Verschieben des PZ</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Wenn Anhalten der Bewegung aktiv ist und der Programmzeiger nach der Deaktivierung des Anhaltens der Bewegung verschoben wird, können Probleme auftreten.</Description>
+    <Consequences>Neustart der Bewegung wird evtl. blockiert.<p />Programmabarbeitung wartet eventuell bei Bewegungsinstruktionen.<p /></Consequences>
+    <Causes>Programmhalt, wenn Anhalten der Bewegung aktiv ist. Dann erfolgte eine PZ-Bewegung innerhalb des Programms.</Causes>
+    <Actions>Sicherstellen, dass die Deaktivierung des Anhaltens der Bewegung nicht übersprungen wird.</Actions>
+  </Message>
+  <Message number="1642" eDefine="SYS_ERR_ARL_POW_ARG_RANGE">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> liegt nicht innerhalb des zulässigen Bereichs.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>
+      <arg format="%s" ordinal="4" /> muss &gt; 0 sein, wenn <arg format="%s" ordinal="5" /> = 0.</Actions>
+  </Message>
+  <Message number="1643" eDefine="SYS_ERR_ARL_POW_ARG_RANGE2">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> liegt nicht innerhalb des zulässigen Bereichs.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>
+      <arg format="%s" ordinal="4" /> muss eine Ganzzahl sein, wenn <arg format="%s" ordinal="5" /> &lt; 0</Actions>
+  </Message>
+  <Message number="1644" eDefine="SYS_ERR_ARL_SQRT_ARG_RANGE">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> liegt nicht innerhalb des zulässigen Bereichs.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>
+      <arg format="%s" ordinal="4" /> muss größer oder gleich 0 sein.</Actions>
+  </Message>
+  <Message number="1645" eDefine="SYS_ERR_ARL_PROG_STOP_S">
+    <Title>Programm in RAPID angehalten</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Programm und Bewegung wurden mit "System Stop" in RAPID angehalten.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Wegen eines programmierten "System Stop" in RAPID wurden Programmabarbeitung und Bewegungen angehalten. Das die Unterbrechung verursachende Problem wird wahrscheinlich in einem anderen Protokoll dargestellt.</Consequences>
+    <Actions>Ursache für das Anhalten des Programms ermitteln (eventuell in anderen Protokollen), Problem beheben und Programm neu starten.</Actions>
+  </Message>
+  <Message number="1646" eDefine="SYS_ERR_ARL_PROG_STOP_B">
+    <Title>Programm von RAPID blockiert</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Programm und Bewegung wurden mit "System Stop RAPID Block" von RAPID angehalten.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Wegen eines programmierten "System Stop RAPID Block" in RAPID wurden Programmabarbeitung und Bewegungen angehalten. Das die Unterbrechung verursachende Problem wird wahrscheinlich in einem anderen Protokoll dargestellt.<p /><p />Wenn der Roboter eine kreisförmige Bewegung ausführt, muss der Roboter vor dem Starten des Programms an den Beginn der kreisförmigen Bewegung bewegt werden. </Consequences>
+    <Actions>Ursache für das Blockieren des Programms ermitteln (eventuell in anderen Protokollen), Problem beheben und Programmzeiger vor dem Neustart des Programms in allen Bewegungstasks verschieben.</Actions>
+  </Message>
+  <Message number="1647" eDefine="SYS_ERR_ARL_PROG_STOP_H">
+    <Title>Programm in RAPID angehalten</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Programm und Bewegung wurden mit "System Halt" in RAPID angehalten.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Wegen eines programmierten "System Halt" in RAPID wurden Programmabarbeitung und Bewegungen angehalten. Das die Unterbrechung verursachende Problem wird wahrscheinlich in einem anderen Protokoll dargestellt.</Consequences>
+    <Actions>Ursache für das Anhalten des Programms ermitteln (eventuell in anderen Protokollen), Problem beheben und Motoren einschalten, bevor das Programm neu gestartet wird.</Actions>
+  </Message>
+  <Message number="1648" eDefine="SYS_ERR_ARL_PATH_REC_NEWMOD">
+    <Title>Abarbeitungsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Abarbeitungsmodus darf nicht von vorwärts in rückwärts oder von kontinuierlich in schrittweise oder umgekehrt geändert werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Actions>Ursprünglichen Abarbeitungsmodus auswählen und Programmabarbeitung fortsetzen</Actions>
+  </Message>
+  <Message number="1649" eDefine="SYS_ERR_ARL_INCORRECT_ERRMSG">
+    <Title>Falscher Fehlermeldungsaufbau</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Mindestens ein Argument in der Instruktion <arg format="%s" ordinal="2" /> überschreitet die im Handbuch beschriebenen Grenzen.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Causes>Die Argumente für Instruktion <arg format="%s" ordinal="4" /> enthalten Begrenzungen für die einzelnen Zeichenfolgen und für die Gesamtzahl der in der Instruktion verwendeten Zeichen. Dies wird im Handbuch beschrieben.</Causes>
+    <Actions>Handbuch zu Rate ziehen und Argumente korrigieren.</Actions>
+  </Message>
+  <Message number="1650" eDefine="SYS_ERR_ARL_ALREADY_STOPPED">
+    <Title>Task wurde bereits von anderer Task angehalten</Title>
+    <Description>Die Task ohne Bewegung <arg format="%s" ordinal="1" /> hat eine Instruktion StopMove abgearbeitet. Jedoch wurde keine Stopp-Aktion ausgeführt, weil die Bewegungstask <arg format="%s" ordinal="2" /> bereits von der Task <arg format="%s" ordinal="3" /> gestoppt wurde.<p />Programmreferenz: <arg format="%s" ordinal="4" /></Description>
+    <Consequences>Die Bewegungstask muss mit der Instruktion StartMove von der Task gestartet werden, die sie gestoppt hat, oder der switch \AllMotionTasks muss von dieser Task in der Instruktion StartMove verwendet werden.</Consequences>
+  </Message>
+  <Message number="1651" eDefine="SYS_ERR_ARL_NOT_MOVE_STOPPED">
+    <Title>StartMove-Aktionen für Task ignoriert</Title>
+    <Description>Die Task ohne Bewegung <arg format="%s" ordinal="1" /> hat eine Instruktion StartMove abgearbeitet. Jedoch wurde die Bewegungstask <arg format="%s" ordinal="2" /> nicht gestartet.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Wenn die Bewegungstask von einer Task ohne Bewegung gestoppt wurde, können keine Bewegungen ausgeführt werden.</Consequences>
+    <Causes>1. Die Bewegungstask wurde nicht gestoppt.<p />2. Die Bewegungstask wurde von einer anderen Task ohne Bewegung <arg format="%s" ordinal="4" /> gestoppt.<p />In diesem Fall war die Ursache <arg format="%s" ordinal="5" />.</Causes>
+    <Actions>switch \AllMotionTasks in der Instruktion StartMove verwenden, wenn diese Instruktion eine Bewegung starten soll, die von einer Task ohne Bewegung gestoppt wurde.</Actions>
+  </Message>
+  <Message number="1652" eDefine="SYS_ERR_ARL_FORCED_START_MOVE">
+    <Title>Erzwungene StartMove-Aktion</Title>
+    <Description>Die Task ohne Bewegung <arg format="%s" ordinal="1" /> hat eine Instruktion StartMove abgearbeitet. Die Instruktion hat erkannt, dass die Bewegungstask <arg format="%s" ordinal="2" /> von dieser Task gestoppt wurde. Diese Bewegungstask wird gestartet, um nicht vorhergesehene Stopps von Bewegungen zu verhindern.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Causes>1. Die Bewegungstask wurde mit dem aktivierten switch \AllMotionTasks in der Instruktion StopMove, doch nicht in der Instruktion StartMove gestoppt.<p />2. Die Instruktion StopMove wurde im Synchronmodus und die Instruktion StartMove im unabhängigen Modus ausgeführt.</Causes>
+  </Message>
+  <Message number="1653" eDefine="SYS_ERR_ARL_WOBJ_INTASK">
+    <Title>CalcJointT-Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Funktion CalcJointT kann nicht mit dem Argument \UseCurWObjPos abgearbeitet werden, wenn das von einer mechanischen Einheit bewegte koordinierte Werkobjekt sich in derselben Task wie der TCP-Roboter befindet oder wenn das Werkobjekt nicht von einer mechanischen Einheit bewegt wird.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Actions>Argument \UseCurWObjPos entfernen, so dass die Funktion CalcJointT ausgeführt und die Berechnung ausschließlich mit Daten aus dem RAPID-Programm erfolgen kann.</Actions>
+  </Message>
+  <Message number="1654" eDefine="SYS_ERR_ARL_WOBJ_MOVING">
+    <Title>CalcJointT-Abarbeitungsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Funktion CalcJointT konnte nicht mit dem Argument \UseCurWObjPos abgearbeitet werden, weil die mechanische Einheit <arg format="%s" ordinal="2" /> während der Abarbeitung von CalcJointT bewegt wurde.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Die Funktion CalJointT mit dem Argument \UseCurWObjPos kann nur ohne Fehler abgearbeitet werden, wenn das von einer anderen Task bewegte koordinierte Werkobjekt bewegungslos ist.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1655" eDefine="SYS_ERR_ARL_NOT_IN_NON_MOTION">
+    <Title>Argument ist keine Bewegungstask</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Funktion/Instruktion <arg format="%s" ordinal="5" /> wurde mit einem Argument verwendet, das auf eine Task, <arg format="%s" ordinal="2" />, verweist. Diese Task ist keine Bewegungstask (Steuerung von mechanischen Einheiten) und kann daher nicht verwendet werden.<p />Programmreferenz <arg format="%s" ordinal="3" /></Description>
+    <Causes>
+      <arg format="%s" ordinal="5" /> mit Argument \TaskRef oder \TaskName kann nur ohne Fehler verwendet werden, wenn die Task, auf die diese Argumente verweisen, eine Bewegungstask ist.</Causes>
+    <Actions>Argument \TaskRef oder \TaskName ändern oder entfernen und Programmabarbeitung neu starten.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1656" eDefine="SYS_ERR_ARL_NOT_ALLOW_REAL_ARLNUM_VAL">
+    <Title>Unzulässiger Wert</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unzulässiger Wert in Argument <arg format="%s" ordinal="2" />. <p /><p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Wert prüfen und ändern. Er muss zwischen <arg format="%s" ordinal="4" /> und <arg format="%s" ordinal="5" /> liegen. </Actions>
+  </Message>
+  <Message number="1657" eDefine="SYS_ERR_ARL_FILE_NOACC_ISFILE">
+    <Title>Dateizugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Kein Zugriff auf Datei/Einheit <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Causes>- Falscher Pfad oder Dateiname.<p />- Die maximale Anzahl von gleichzeitig geöffneten Dateien wurde überschritten.<p />- Der Datenträger ist voll.<p />- Die Funktion unterstützt nicht die Aktivierung der ausgewählten Einheit.</Causes>
+    <Actions>- Pfad oder Dateiname prüfen.<p />- Speicherplatz auf Datenträger prüfen.<p />Fehlebehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1658" eDefine="SYS_ERR_ARL_STOPMOVE_STATE">
+    <Title>Programmtask im Zustand StopMove</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />In dieser Bewegungstask wird keine Bewegung ausgeführt, weil sich die Task gegenwärtig im Zustand StopMove befindet, der von einer Task ohne Bewegung angefordert wurde.<p /></Description>
+    <Consequences>Es können keine Bewegungen gestartet werden.</Consequences>
+    <Causes>Eine mit dieser Bewegungstask verbundene Task ohne Bewegung hat die Task in den Zustand StopMove versetzt.</Causes>
+    <Actions>Um in dieser Bewegungstask Bewegungen auszuführen, muss der Zustand StopMove von der entsprechenden Task ohne Bewegung mit einer der folgenden Aktionen zurückgesetzt werden:<p />1) Instruktion StartMove ausführen<p />2) Task ohne Bewegung in main starten<p />a) Ein- und Ausschalten, wenn Task ohne Bewegung semistatisch ist<p />b) Installationsstart ausführen, wenn Bewegungstask statisch ist<p />c) PZ auf main setzen, wenn es sich um eine normale Task ohne Bewegung handelt</Actions>
+  </Message>
+  <Message number="1660" eDefine="SYS_ERR_ARL_UISHOW_FULL">
+    <Title>Kein Platz für die neue Ansicht</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die maximale Anzahl an Ansichten wurde überschritten.<p />Auf dem FlexPendant ist kein Platz für die neue Ansicht. <p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Die Ansicht wird nicht gestartet.</Consequences>
+    <Causes>Zu viele Ansichten geöffnet.</Causes>
+    <Actions>Eine Ansicht schließen und erneut versuchen.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /><p /></Actions>
+  </Message>
+  <Message number="1661" eDefine="SYS_ERR_ARL_UISHOW_FOUND">
+    <Title>Assembly wurde nicht gefunden</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />1) Assembly wurde nicht gefunden oder existiert nicht.<p />2) Die Option FlexPendant Interface ist nicht vorhanden.<p />Status <arg format="%s" ordinal="2" />.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Die Ansicht wird nicht gestartet.<p /><p /></Consequences>
+    <Causes>1) Die Assembly <arg format="%s" ordinal="4" /> wurde nicht gefunden.<p />2) Das System-Image enthält nicht die erforderliche Option FlexPendant Interface.<p /></Causes>
+    <Actions>1) Eingangsparameter prüfen. Sicherstellen, dass die Module ordnungsgemäß<p />in die Robotersteuerung geladen wurden. <p />2) Prüfen, ob die Option FlexPendant Interface verwendet wird.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /><p /><p /><p /></Actions>
+  </Message>
+  <Message number="1662" eDefine="SYS_ERR_ARL_UISHOW_LOAD">
+    <Title>Assembly konnte nicht geladen werden</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Applikation (Assembly) wurde gefunden, konnte jedoch nicht geladen werden.<p />Status <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Die Ansicht wird nicht gestartet.<p /></Consequences>
+    <Actions>Sicherstellen, dass die geladenen Module ausführbare Dateien für das FlexPendant sind.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1663" eDefine="SYS_ERR_ARL_UISHOW_INST">
+    <Title>Instanz konnte nicht erstellt werden</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Applikation (Assembly) ist vorhanden, doch es konnte keine neue Instanz erstellt werden.<p />Status <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Die Ansicht wird nicht gestartet.</Consequences>
+    <Actions>Sicherstellen, dass die geladenen Module ausführbare Dateien für das FlexPendant sind.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1664" eDefine="SYS_ERR_ARL_UISHOW_TYPE">
+    <Title>Der Typname ist für diese Assembly ungültig</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Eingangsparameter <arg format="%s" ordinal="2" /> ist ungültig. Der Typname stimmt nicht mit der Applikation (Assembly) überein.<p />Status <arg format="%s" ordinal="3" />. <p />Programmreferenz: <arg format="%s" ordinal="4" /></Description>
+    <Consequences>Die Ansicht wird nicht gestartet.<p /><p /></Consequences>
+    <Actions>Eingangsparameter prüfen.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="1665" eDefine="SYS_ERR_ARL_UISHOW_ID">
+    <Title>
+      <arg format="%s" ordinal="1" /> stimmt nicht mit Assembly überein</Title>
+    <Description>Task: <arg format="%s" ordinal="2" /><p />Der Typ oder Name der Applikation (Assembly) stimmt nicht mit der verwendeten <arg format="%s" ordinal="1" /> überein. <p />Status <arg format="%s" ordinal="3" />. <p />Programmreferenz: <arg format="%s" ordinal="4" /></Description>
+    <Consequences>Die Ansicht wird nicht gestartet.<p /></Consequences>
+    <Causes>Verwendung von <arg format="%s" ordinal="1" />, ohne den Wert zunächst auf 0 zu setzen.</Causes>
+    <Actions>
+      <arg format="%s" ordinal="1" /> vor der Verwendung auf 0 setzen.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="1666" eDefine="SYS_ERR_ARL_UISHOW_FATAL">
+    <Title>Schwerer UIShow-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unbekannter Fehlercode <arg format="%s" ordinal="2" /> empfangen.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten.<p /></Consequences>
+    <Actions>Senden Sie einen Bericht über diesen Fehler an ABB.</Actions>
+  </Message>
+  <Message number="1667" eDefine="SYS_ERR_ARL_UI_INT_FATAL">
+    <Title>Schwerwiegender UI-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion oder Funktion muss mit einem switch-Argument <arg format="%s" ordinal="2" /> und ohne das optionale Argument <arg format="%s" ordinal="3" /> verwendet werden. <p />Programmreferenz: <arg format="%s" ordinal="4" /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.<p /></Consequences>
+    <Causes>Eine unzulässige Kombination aus optionalen Argumenten und switch-Argumenten wurde verwendet.</Causes>
+    <Actions>RAPID-Programm korrigieren.</Actions>
+  </Message>
+  <Message number="1670" eDefine="SYS_ERR_ARL_ANYTYPE_NO_ARR">
+    <Title>Gesamtes Datenfeld als Argument nicht zulässig</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Argument <arg format="%s" ordinal="2" /> ist vom Datentyp „any type“ und kann daher nur während der Laufzeit geprüft werden.<p />Ein gesamtes Datenfeld kann nicht als Argument verwendet werden, auch wenn das Datenfeld den richtigen Datentyp aufweist.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Actions>Datenfeld durch gültiges Argument ersetzen.</Actions>
+  </Message>
+  <Message number="1671" eDefine="SYS_ERR_ARL_POLLRATE_HIGH">
+    <Title>Zu hohe Abtastrate</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die angegebene Abtastrate ist für das Robotersystem zu hoch.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Das System kann überlastet werden.</Consequences>
+    <Actions>Instruktion WaitUntil, Argument \PollRate in einen Wert größer oder<p />gleich 0,01 s ändern.</Actions>
+  </Message>
+  <Message number="1672" eDefine="SYS_ERR_ARL_NOT_ALLOWED_COMB">
+    <Title>Ungültige Kombination</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Ungültige Parameterkombination in Trigg.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Actions>Trigg ohne optionales Argument \Time ausführen oder TriggRampAO mit optionalem Argument \Time ausführen, um RampLength in Sekunden, statt in Entfernung anzugeben.</Actions>
+  </Message>
+  <Message number="1673" eDefine="SYS_ERR_ARL_INDX_OUTOFBOUNDS">
+    <Title>Index außerhalb des zulässigen Bereichs</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Index für die Konfigurations-Instanz war außerhalb des zulässigen Bereichs.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Actions>RAPID-Programm prüfen und ändern.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1674" eDefine="SYS_ERR_SPEED_REFRESH_LIM">
+    <Title>Wert außerhalb des zulässigen Bereichs</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Parameter <arg format="%s" ordinal="2" /> liegt nicht im Bereich zwischen 0 und 100.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>RAPID-Programm prüfen und ändern.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1675" eDefine="SYS_ERR_ARL_INT_INVALID">
+    <Title>Keine Ganzzahl</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Parameter <arg format="%s" ordinal="2" /> ist keine Ganzzahl.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>RAPID-Programm prüfen oder FEHLER-Behandlung verwenden.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1676" eDefine="SYS_ERR_ARL_IO_NOTFND">
+    <Title>Einheit-Zugriffsfehler</Title>
+    <Description>Task:<arg format="%s" ordinal="1" /><p />Datei oder serieller Kanal kann nicht geöffnet werden, '<arg format="%s" ordinal="2" />' existiert nicht.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Name von Datei oder seriellem Kanal prüfen.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1677" eDefine="SYS_ERR_ARL_IO_FULL">
+    <Title>Einheit-Zugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />In Datei kann nicht geschrieben werden: <arg format="%s" ordinal="2" />, das Speichermedium ist voll.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Sicherstellen, dass genügend freier Speicherplatz auf dem Speichermedium verfügbar ist.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1678" eDefine="SYS_ERR_ARL_IO_WPROT">
+    <Title>Einheit-Zugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Es kann nicht in die Datei geschrieben werden: <arg format="%s" ordinal="2" />, Die Datei ist schreibgeschützt.<p />Programmreferenz:<arg format="%s" ordinal="3" /></Description>
+    <Actions>Schreibschutz der Datei entfernen oder einen anderen Dateinamen auswählen.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1679" eDefine="SYS_ERR_ARL_IO_MAXDESC">
+    <Title>Einheit-Zugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Maximale Anzahl gleichzeitig geöffneter Dateien überschritten.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Eine oder mehr E/A-Einheiten schließen und erneut versuchen.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1680" eDefine="SYS_ERR_ARL_NOTSYMBOL">
+    <Title>Zeichenfolge zu lang</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Zeichenfolge <arg format="%s" ordinal="2" /> überschreitet die maximale Anzahl der für ein Modul zulässigen Zeichen.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Zeichenfolge für Modulnamen ändern.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1682" eDefine="SYS_ERR_ARL_MAXIOEVENTS">
+    <Title>Zu viele überwachte E/A</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Anzahl der gleichzeitig überwachten Signalereignisse wurde überschritten.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Actions>Einige Überwachungen von Signalen entfernen oder die Ereigniszeit ändern.<p />(d. h. alle ISignalXX oder TriggIO)</Actions>
+  </Message>
+  <Message number="1683" eDefine="SYS_ERR_ARL_NOLISTNO">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Argument <arg format="%s" ordinal="2" /> muss für einen nicht genannten Parameter angegeben werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Den Parameter <arg format="%s" ordinal="2" /> zur Instruktion hinzufügen.</Actions>
+  </Message>
+  <Message number="1684" eDefine="SYS_ERR_ARL_MAXULONG">
+    <Title>Wertfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Argument <arg format="%s" ordinal="2" /> ist für den Wertebereichtyp „unsigned long“ zu lang.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Causes>Der Wert ist zu groß.</Causes>
+    <Actions>Kleineren Wert für <arg format="%s" ordinal="2" /> verwenden.</Actions>
+  </Message>
+  <Message number="1685" eDefine="SYS_ERR_ARL_ARG_COMB_NOT_VALID">
+    <Title>Ungültiger Wert</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Falsche Kombination aus Wert (value) und Schalter (switch) verwendet.<p />Die erlaubten Signalwerte liegen zwischen:<p />Min.: <arg format="%s" ordinal="2" /><p />Max.: <arg format="%s" ordinal="3" /><p />Verwendeter Schalter und Wert: <arg format="%s" ordinal="4" /><p />Programmreferenz: <arg format="%s" ordinal="5" /><p /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Causes>Falscher Wert oder falscher Schalter verwendet.</Causes>
+    <Actions>Verwendeten Wert oder Schalterargument ändern.</Actions>
+  </Message>
+  <Message number="1687" eDefine="SYS_ERR_ARL_OPEN_ERR">
+    <Title>Fehler beim Öffnen der Datei</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> kann nicht geöffnet werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p />Unbekannter Fehler beim Öffnen der Datei.</Description>
+    <Causes>- Wenn sich die Datei auf einem USB-Datenträger befand, sicherstellen, dass Datenträger nicht entfernt wurde oder zu viele Dateien im Stammordner enthält.<p />- Sicherstellen, dass angegebene Datei kein Verzeichnis ist.<p /></Causes>
+    <Actions>Auf 'Mögliche Ursachen' überprüfen.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1688" eDefine="SYS_ERR_ARL_USE_OF_PERS">
+    <Title>Ungültiges Argument</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Eingangsparameter <arg format="%s" ordinal="2" /> ist als PERS deklariert. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten.<p /></Consequences>
+    <Causes>Verwendung einer Persistenten in Argument <arg format="%s" ordinal="2" /> für Instruktion <arg format="%s" ordinal="4" />.</Causes>
+    <Actions>Persistente durch gültiges Argument ersetzen.</Actions>
+  </Message>
+  <Message number="1690" eDefine="SYS_ERR_ARL_RLMQ_IMPROPER_TYPE">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Argument <arg format="%s" ordinal="2" /> ist vom Typ <arg format="%s" ordinal="3" /> und nicht zulässig.<p />Programmreferenz: <arg format="%s" ordinal="4" /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.<p /></Consequences>
+    <Actions>Datentyp prüfen. Non-value- und semi-value-Typen oder der Datentyp „motsetdata“ dürfen nicht verwendet werden.</Actions>
+  </Message>
+  <Message number="1691" eDefine="SYS_ERR_ARL_RLMQ_INV_SLOT_NAME">
+    <Title>RMQ-Fehler - Ungültiger Client-Name</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Name <arg format="%s" ordinal="2" /> wurde nicht gefunden. Dies ist kein gültiger RMQ-Client-Name.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>Es wurde ein ungültiger Name verwendet.</Causes>
+    <Actions>Zu suchenden Namen ändern.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /><p /></Actions>
+  </Message>
+  <Message number="1692" eDefine="SYS_ERR_ARL_RLMQ_INV_SLOT">
+    <Title>RMQ-Fehler- Ungültiger Slot</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> ist ungültig.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>Kommunikation mit dem Client mit aktuellem <arg format="%s" ordinal="2" /> ist nicht mehr möglich.</Consequences>
+    <Causes>1) <arg format="%s" ordinal="2" /> wurde nicht initialisiert. <p />2) Der Ziel-Slot ist nicht mehr gültig. Dieser Fall kann eintreten, wenn die Verbindung des Remote-Clients mit der Steuerung getrennt wurde.<p />3) Instruktion RMQSendWait wurde nach Stromausfall neu gestartet. Nach Neustart der Instruktion wird <arg format="%s" ordinal="2" /> auf 0 gesetzt. </Causes>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1693" eDefine="SYS_ERR_ARL_RLMQ_IPC_MSGSIZE">
+    <Title>RMQ-Fehler - Max. Meldungsgröße überschritten</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Größe der Daten in <arg format="%s" ordinal="2" /> überschreitet die maximale Größe. <p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Die Meldung wird nicht gesendet.</Consequences>
+    <Causes>Versuch, Meldungen größer als <arg format="%s" ordinal="4" /> zu senden. Aufgrund der Beschränkungen für RMQ können Meldungen dieser Größe nicht gesendet werden.<p /></Causes>
+    <Actions>Kleinere Meldungen senden.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1694" eDefine="SYS_ERR_ARL_RLMQ_INV_TYPE">
+    <Title>RMQ-Fehler - Ungleiche Datentypen</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Datentyp in der rmqmessage ist vom Typ <arg format="%s" ordinal="2" /> und der Datentyp in Argument Data ist vom Typ <arg format="%s" ordinal="3" />.<p />Programmreferenz: <arg format="%s" ordinal="4" />.</Description>
+    <Consequences>Es können keine Daten abgerufen werden.</Consequences>
+    <Causes>1) Der Datentyp in der rmqmessage ist vom Typ <arg format="%s" ordinal="2" /> und der Datentyp in Argument Data ist vom Typ <arg format="%s" ordinal="3" />. <p />2) Wenn die Namen der Datentypen gleich sind, kann die Struktur der Daten unterschiedlich sein.</Causes>
+    <Actions>1) Datentyp <arg format="%s" ordinal="2" /> in Argument Data verwenden. <p />2) Überprüfen, ob in Absender- und Empfängercode gleiche Datentypen definiert sind.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1695" eDefine="SYS_ERR_ARL_RLMQ_INV_DIM">
+    <Title>RMQ-Fehler - Ungleiche Dimensionen von Daten</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Datentypen sind gleich, doch die Dimensionen in den Daten der Meldung und des Parameters im Argument <arg format="%s" ordinal="2" /> sind unterschiedlich.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Die Daten konnten nicht kopiert werden.</Consequences>
+    <Actions>In Argument <arg format="%s" ordinal="2" /> Parameter mit gleichen Dimensionen wie in den Daten der Meldung verwenden.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1696" eDefine="SYS_ERR_ARL_RLMQ_ERR_EXEC_LEV">
+    <Title>RMQ-Fehler - Unzul. Verwendung der Instruktion</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Instruktion <arg format="%s" ordinal="2" /> wird nur auf TRAP-Ebene unterstützt.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Causes>Instruktion <arg format="%s" ordinal="2" /> wird auf Benutzer-Abarbeitungsebene oder normaler Abarbeitungsebene verwendet.</Causes>
+    <Actions>Instruktion entfernen oder in eine TRAP-Routine verschieben.</Actions>
+  </Message>
+  <Message number="1697" eDefine="SYS_ERR_ARL_RLMQ_NO_RMQ">
+    <Title>RMQ-Fehler - Keine RMQ konfiguriert</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Keine RMQ für Task <arg format="%s" ordinal="1" /> konfiguriert.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Causes>Für RAPID Message Queue wurde keine Konfiguration hinzugefügt.</Causes>
+    <Actions>Konfiguration für RAPID Message Queue hinzufügen.</Actions>
+  </Message>
+  <Message number="1698" eDefine="SYS_ERR_ARL_RLMQ_SENDWAIT_ERR">
+    <Title>RMQ-Fehler - Falsche Verwendung von Instruktion</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> kann nur auf normaler Abarbeitungsebene, nicht in einer TRAP- oder Serviceroutine verwendet werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Causes>Instruktion <arg format="%s" ordinal="2" /> auf falscher Ebene verwendet.</Causes>
+    <Actions>Instruktion auf normaler Ebene verwenden.</Actions>
+  </Message>
+  <Message number="1699" eDefine="SYS_ERR_ARL_RLMQ_MSGSIZE">
+    <Title>RMQ-Fehler - Max. Größe Meldung überschritten</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Größe der Daten in <arg format="%s" ordinal="2" /> überschreitet maximale Größe. <p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Die Meldung wird nicht gesendet.</Consequences>
+    <Causes>Das Senden größerer Meldungen ist nicht zulässig. Der empfangende Client ist nicht für den Empfang von Meldungen der gesendeten Größe konfiguriert.</Causes>
+    <Actions>Größe der RMQ für den Empfänger ändern oder kleinere Meldungen senden.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1700" eDefine="SYS_ERR_ARL_RLMQ_INOINUSE">
+    <Title>RMQ-Fehler – Interrupt-Setup fehlgeschlagen</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />In einer Instruktion <arg format="%s" ordinal="2" /> können für den gleichen Datentyp nicht zwei verschiedene Interrupt-Identitäten verwendet werden. Jeder Datentyp benötigt eine eindeutige Interrupt-Identität und eine eindeutige Interrupt-Routine.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten.<p /></Consequences>
+    <Causes>Der gleiche Datentyp wird in zwei <arg format="%s" ordinal="2" /> Instruktionen mit zwei verschiedenen Interrupt-Identitäten verwendet.<p /></Causes>
+    <Actions>Bei einer Anweisung und Aktivierung eines Interrupts für einen spezifischen Datentyp wird für jeden Datentyp eine eindeutige Interrupt-Identität benötigt.<p /><p /></Actions>
+  </Message>
+  <Message number="1701" eDefine="SYS_ERR_ARL_RLMQ_NOMSG">
+    <Title>RMQ-Fehler - Keine erfassbare Meldung vorhanden</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> fehlgeschlagen. Es war keine erfassbare Meldung vorhanden.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Es wurde keine Meldung erfasst.</Consequences>
+    <Causes>1) Dieser Fall kann eintreten, wenn zwischen dem Anfordern der TRAP-Routine und dem Ausführen der Instruktion <arg format="%s" ordinal="2" /> ein Stromausfall aufgetreten ist.<p />2) Bei mehrmaliger Verwendung von <arg format="%s" ordinal="2" /> in einer TRAP-Routine.<p />3) Bei Verwendung von <arg format="%s" ordinal="2" /> in einer TRAP-Routine, die ohne eine neue Meldung in der RMQ ausgeführt wird.<p /><p /></Causes>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1702" eDefine="SYS_ERR_ARL_RLMQ_MSG_NOT_VALID">
+    <Title>RMQ-Fehler - <arg format="%s" ordinal="2" /> ungültig</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Verwendung ungültiger Daten in Argument <arg format="%s" ordinal="2" />.<p />Programmreferenz:<arg format="%s" ordinal="3" /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten.<p /></Consequences>
+    <Causes>Verwendung der Variablen <arg format="%s" ordinal="2" /> ohne gültige Daten. Die Variable wurde lediglich initialisiert. In die Variable wurden keine gültigen Daten kopiert.</Causes>
+    <Actions>RAPID-Programm prüfen. </Actions>
+  </Message>
+  <Message number="1703" eDefine="SYS_ERR_ARL_RLMQ_DATA_NOT_FIT">
+    <Title>RMQ-Fehler - Daten konnten nicht kopiert werden</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Datentyp <arg format="%s" ordinal="2" /> überschreitet die maximale Länge der für Task <arg format="%s" ordinal="3" /> konfigurierten RMQ.<p />Programmreferenz: <arg format="%s" ordinal="4" /></Description>
+    <Consequences>Keine Meldung empfangen.<p /></Consequences>
+    <Causes>Die RMQ der empfangenden Task ist nicht für die Größe der gesendeten Daten konfiguriert. Der sendende Client hat Daten gesendet, deren Größe die Größe der Daten überschreitet, die die für Task <arg format="%s" ordinal="3" /> konfigurierte RMQ empfangen kann. </Causes>
+    <Actions>Größe der RMQ für Task <arg format="%s" ordinal="3" /> erhöhen.<p />Oder weniger Daten senden.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1704" eDefine="SYS_ERR_ARL_RLMQ_FULL_QUEUE">
+    <Title>RMQ-Fehler - Warteschlange voll</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Client <arg format="%s" ordinal="2" /> kann keine weiteren Meldungen empfangen.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Die gesendete Meldung wird verworfen.<p /></Consequences>
+    <Causes>Meldungen werden vom Client in geringerem Tempo empfangen als Meldungen vom Absender gesendet werden. Bei Verwendung von Instruktion <arg format="%s" ordinal="4" />, ist möglicherweise zwischen jeder <arg format="%s" ordinal="4" />-Instruktion eine Wartezeit erforderlich. </Causes>
+    <Actions>Der Client sollte Meldungen empfangen, um Platz für neue Meldungen zu schaffen.<p />Oder der Absender sollte die Anzahl gesendeter Meldungen begrenzen. <p />Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1705" eDefine="SYS_ERR_ARL_RLMQ_TOUT">
+    <Title>RMQ-Fehler - Höchstdauer überschritten</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Programmierte Wartezeit ist abgelaufen.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Es ist nicht gewährleistet, dass Meldung beim Client angekommen ist.<p /></Consequences>
+    <Causes>1) Der Client, der die Meldung empfangen soll, ist nicht für den Empfang von Daten des angegebenen Datentyps konfiguriert. Die Meldung wurde verworfen.<p />2) Der Client hat die Meldung empfangen und in der Antwort einen Datentyp gesendet, der mit dem angegebenen Datentyp in <arg format="%s" ordinal="3" /> von Instruktion <arg format="%s" ordinal="4" /> nicht übereinstimmt.<p />3) Der Client hat die Meldung empfangen. Die Antwort wird verzögert, so dass der Timeout für Instruktion <arg format="%s" ordinal="4" /> abgelaufen ist.</Causes>
+    <Actions>1) Clientprogramm prüfen.<p />2) Wartezeit für Instruktion <arg format="%s" ordinal="4" /> erhöhen.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1706" eDefine="SYS_ERR_ARL_RLMQ_TOUT2">
+    <Title>RMQ-Fehler - Höchstdauer überschritten</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Programmierte Wartezeit ist abgelaufen.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Keine Meldung empfangen.</Consequences>
+    <Causes>Der Timeout für die Instruktion <arg format="%s" ordinal="3" /> ist abgelaufen.</Causes>
+    <Actions>Wartezeit für Instruktion erhöhen <arg format="%s" ordinal="3" />.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1707" eDefine="SYS_ERR_ARL_RLMQ_ILLMODE">
+    <Title>RMQ-Fehler – Instruktion in aktuellem Modus ungültig</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> ist nur zulässig, wenn RMQ im Modus <arg format="%s" ordinal="3" /> konfiguriert ist.<p />Programmreferenz: <arg format="%s" ordinal="4" /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten</Consequences>
+    <Causes>RMQ ist im Modus <arg format="%s" ordinal="5" /> konfiguriert.</Causes>
+    <Actions>Konfiguration der RAPID Message Queue in <arg format="%s" ordinal="1" /> in Modus <arg format="%s" ordinal="3" /> ändern oder eine Instruktion wählen, die für den aktuellen Modus zulässig ist.</Actions>
+  </Message>
+  <Message number="1708" eDefine="SYS_ERR_ARL_RLMQ_INV_MSG">
+    <Title>RMQ-Fehler – ungültige Meldung</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die empfangene RMQ-Meldung war ungültig.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Die empfangene RMQ-Meldung wurde verworfen.</Consequences>
+    <Causes>Eine empfangene RMQ-Meldung besaß beschädigten Header oder Datenteil.</Causes>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1711" eDefine="SYS_ERR_ARL_NOT_PERCENTAGE">
+    <Title>Kein Prozentwert</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Wert von Argument <arg format="%s" ordinal="2" /> ist kein gültiger Prozentwert.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Sicherstellen, dass der Wert zwischen 0 und 100 liegt.</Actions>
+  </Message>
+  <Message number="1712" eDefine="SYS_ERR_ARL_UNEXIST_TOOL">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />toolata <arg format="%s" ordinal="2" /> wurde definiert, ist jedoch nicht mehr im System verfügbar.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Causes>tooldata wurde eventuell in einem Modul definiert, das nicht mehr im System verfügbar ist.</Causes>
+  </Message>
+</Domain>

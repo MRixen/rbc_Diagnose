@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="ARL" domainNo="4" lang="de" elogTextVersion="1.0" min="1713" max="1807">
+  <Message number="1713" eDefine="SYS_ERR_ARL_UNEXIST_WOBJ">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />wobjdata <arg format="%s" ordinal="2" /> wurde definiert, ist jedoch nicht mehr im System verfügbar.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>wobjdata wurde eventuell in einem Modul definiert, das nicht mehr im System verfügbar ist.</Consequences>
+  </Message>
+  <Message number="1714" eDefine="SYS_ERR_ARL_ERREVFULL">
+    <Title>Zu viele Fehlerereignisse</Title>
+    <Description>Abarbeitung von Task <arg format="%s" ordinal="1" /> wurde gestoppt. Es sind zu viele unbehandelte Fehlerereignisse in der Warteschlange. Das System kann immer nur ein Fehlerereignis behandeln. </Description>
+    <Consequences>Das System blockiert und kann nicht neu gestartet werden, bevor der Programmzeiger an eine beliebige Position bewegt wurde.</Consequences>
+    <Causes>Während der Behandlung eines Prozessfehlers wurde ein Neustart nach Stromausfall (Warmstart) ausgeführt.</Causes>
+    <Actions>Niemals während der Behandlung eines Prozessfehlers einen Warmstart des Systems ausführen. Wenn ein Warmstart erforderlich ist, zunächst in allen Tasks den PZ auf main verschieben, um den Prozessfehler zurückzusetzen.</Actions>
+  </Message>
+  <Message number="1715" eDefine="SYS_ERR_ARL_CSS_SOFTDIR">
+    <Title>Ungültige Richtung</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Argument <arg format="%s" ordinal="2" /> muss entweder CSS_X, CSS_Y, CSS_Z, CSS_XY, CSS_XZ, CSS_YZ, CSS_XYZ, CSS_XYRZ lauten<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Den Wert von <arg format="%s" ordinal="2" /> prüfen.</Actions>
+  </Message>
+  <Message number="1716" eDefine="SYS_ERR_ARL_CSS_OFFSETDIR">
+    <Title>Ungültige Offsetrichtung</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Argument <arg format="%s" ordinal="2" /> muss <p />CSS_POSX, CSS_NEGX, CSS_POSY, CSS_NEGY, CSS_POSZ oder CSS_NEGZ lauten.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Den Wert von <arg format="%s" ordinal="2" /> prüfen.</Actions>
+  </Message>
+  <Message number="1717" eDefine="SYS_ERR_ARL_LOW_VALUE">
+    <Title>Zu niedriger Wert</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Wert des Arguments <arg format="%s" ordinal="2" /> ist zu niedrig.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Den Wert von <arg format="%s" ordinal="2" /> erhöhen.</Actions>
+  </Message>
+  <Message number="1718" eDefine="SYS_ERR_ARL_INVDIM">
+    <Title>Ungültige Dimensionen</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Dimension <arg format="%s" ordinal="2" /> für gesuchtes Symbol ist nicht mit Dimension <arg format="%s" ordinal="3" /> im Argument kompatibel.<p />Programmreferenz: <arg format="%s" ordinal="4" />.<p /><p />Die Dimension '{0}' bedeutet, dass das angegebene Symbol kein Datenfeldtyp ist.</Description>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1719" eDefine="SYS_ERR_ARL_DIMPAR">
+    <Title>Unzulässiger Parameter</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Symbol im Argument <arg format="%s" ordinal="2" /> ist ein Datenfeld aus einem Parameter. Datenfelder aus Parametern dürfen in SetDataVal/GetDataVal nicht verwendet werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+  </Message>
+  <Message number="1720" eDefine="SYS_ERR_ARL_WSIP_REC">
+    <Title>Bahn nicht in Stoppunkt</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Bahn hat die folgenden Tasks nicht abgeschlossen: <arg format="%s" ordinal="2" />. Prüfen Sie, ob die Task ausgeführt wird.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>Die Task wird nicht ausgeführt oder die Bewegung wurde angehalten.</Causes>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1721" eDefine="SYS_ERR_ARL_INVTYPE">
+    <Title>Ungültiges Argument</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Typ <arg format="%s" ordinal="2" /> im Argument <arg format="%s" ordinal="3" /> ist ungültig.<p />Programmreferenz: <arg format="%s" ordinal="4" /></Description>
+    <Actions>Den Typ in einen gültigen Typ ändern (<arg format="%s" ordinal="5" />).<p /></Actions>
+  </Message>
+  <Message number="1722" eDefine="SYS_ERR_ARL_HIGH_VALUE">
+    <Title>Zu hoher Wert</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Wert des Arguments <arg format="%s" ordinal="2" /> ist zu hoch. Der Wert muss zwischen <arg format="%s" ordinal="4" /> und <arg format="%s" ordinal="5" /> liegen.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+  </Message>
+  <Message number="1723" eDefine="SYS_ERR_ARL_BUS_STATE_ERR">
+    <Title>Bus im Fehlerzustand</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die E/A-Einheit <arg format="%s" ordinal="2" /> kann nicht aktiviert werden. Der Bus <arg format="%s" ordinal="3" /> weist einen Fehlerzustand auf.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>Einheit <arg format="%s" ordinal="2" /> konnte nicht aktiviert werden.</Consequences>
+    <Causes>Bus in Fehlerzustand.</Causes>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1724" eDefine="SYS_ERR_ARL_MOVING_WOBJ">
+    <Title>Aktuelles Werkobjekt ist ungültig</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Aktivierung der kartesischen Soft Servo ist für ein Werkobjekt in Bewegung nicht zulässig. Es ist nur ein programmiertes Anwender-Koordinatensystem zulässig.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+  </Message>
+  <Message number="1725" eDefine="SYS_ERR_ARL_INVCFG">
+    <Title>Ungültige Konfigurationseinstellungen</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Konfigurationsparameter für Cartesian Soft Servo sind ungültig.<p />Die aktuelle Kombination kann zu instabilem Verhalten führen.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Actions>Konfiguration für Cartesian Soft Servo ändern.</Actions>
+  </Message>
+  <Message number="1726" eDefine="SYS_ERR_ARL_NO_RESET">
+    <Title>StopMoveReset-Aktionen für Task ignoriert</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Instruktion StopMoveReset hat sich nicht auf das System ausgewirkt.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>StopMove wurde nicht zurückgesetzt.</Consequences>
+    <Causes>1. Die Bewegungstask wurde nicht gestoppt.<p />2. Die Bewegungstask wurde von der Task ohne Bewegung: <arg format="%s" ordinal="3" /> gestoppt.<p />In diesem Fall war die Ursache <arg format="%s" ordinal="4" />.</Causes>
+    <Actions>switch \AllMotionTasks in der Instruktion StopMoveReset verwenden, wenn diese Instruktion eine StopMove-Bewegung von einer anderen Task ohne Bewegung zurücksetzen soll. <p /></Actions>
+  </Message>
+  <Message number="1727" eDefine="SYS_ERR_ARL_FSIZE">
+    <Title>Die Größe kann nicht in einer num dargestellt werden </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Bei Verwendung einer Instruktion <arg format="%s" ordinal="2" /> für das Lesen der Größe des Dateisystems wurde erkannt, dass der Wert zum Setzen in einer num zu groß ist.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Die Größe kann nicht gelesen werden.</Consequences>
+    <Causes>Der Wert kann nicht in einer num dargestellt werden.</Causes>
+    <Actions>Verwenden Sie einen Schalter (switch), um eine andere Einheit für das Anzeigen der Größe anzugeben. <p />Fehlerbehandlung: <arg format="%s" ordinal="4" /><p /></Actions>
+  </Message>
+  <Message number="1730" eDefine="SYS_ERR_ARL_TRIGGIOS_SIG_BITS">
+    <Title>Signal überschreitet max. Anzahl zulässiger Bits</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Signal <arg format="%s" ordinal="2" /> ist zu umfangreich. Für Signale mit mehr als 23 Bit den Datentyp triggiosdnum verwenden, welcher Signale mit bis zu 32 Bit akzeptiert. <p /><p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Gruppensignale dürfen bis zu 23 Bit aufweisen, wenn in der <arg format="%s" ordinal="4" />-Instruktion der Datentyp triggios verwendet wird.</Actions>
+  </Message>
+  <Message number="1731" eDefine="SYS_ERR_ARL_TRIGGIOS_SIGNAME_ERR">
+    <Title>Signalname nicht definiert</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Signal <arg format="%s" ordinal="2" /> ist im System unbekannt. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Causes>Das Signal muss in den Systemparametern definiert sein.</Causes>
+    <Actions>Das Signal in den Systemparametern definieren.</Actions>
+  </Message>
+  <Message number="1732" eDefine="SYS_ERR_ARL_TRIGGIOS_MAX">
+    <Title>Zu viele Trigger verwendet</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Für die Instruktion <arg format="%s" ordinal="2" /> wurden zu viele Trigger festgelegt. Der Grenzwert ist <arg format="%s" ordinal="3" />.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Actions>Einige Triggeraktionen aus der <arg format="%s" ordinal="2" />-Instruktion entfernen.</Actions>
+  </Message>
+  <Message number="1737" eDefine="SYS_ERR_ARL_INDCNV_ORDER">
+    <Title>Instruktions-Reihenfolgefehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Instruktion <arg format="%s" ordinal="2" /> muss vor der Instruktion <arg format="%s" ordinal="3" /> ausgeführt werden.<p />Programmreferenz: <arg format="%s" ordinal="4" />. </Description>
+    <Causes>Instruktion <arg format="%s" ordinal="2" /> wurde vor Instruktion <arg format="%s" ordinal="3" /> ausgeführt. </Causes>
+    <Actions>Instruktionen in der richtigen Reihenfolge ausführen.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1738" eDefine="SYS_ERR_ARL_WRISTIP_REQUIRED">
+    <Title>Option Wrist Interpolation notwendig</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> wird mit einem Schalter verwendet, der die Option Wrist Interpolation erfordert.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten</Consequences>
+    <Causes>Eine Robotware-Option fehlt.</Causes>
+    <Actions>Keine der folgenden Schalter verwenden: <arg format="%s" ordinal="4" />.</Actions>
+  </Message>
+  <Message number="1739" eDefine="SYS_ERR_ARL_STOREPATH_REQUIRED">
+    <Title>StorePath notwendig</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> wird in einer Fehlerbehandlung oder Interrupt-Routine ausgeführt. Vor Verwendung einer Bewegungsinstruktion auf einer anderen Ebene als der Basisebene <arg format="%s" ordinal="3" /> verwenden. <p />Programmreferenz: <arg format="%s" ordinal="4" /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Causes>Eine Bewegungsinstruktion ausgeführt ohne Speicherung des Pfades.</Causes>
+    <Actions>Ausführen von <arg format="%s" ordinal="3" /> vor Verwendung der Bewegungsinstruktion <arg format="%s" ordinal="2" />.<p />Lesen der Programmbeispiele im RAPID-Referenzhandbuch, um die Bewegungsinstruktionen in Interrupt-Routinen und Fehlerbehandlungen herauszufinden.</Actions>
+  </Message>
+  <Message number="1740" eDefine="SYS_ERR_ARL_MASS_IDENTIFY_ERR">
+    <Title>Lastidentifikation fehlgeschlagen</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />WARNUNG!<p />Die Masse für <arg format="%s" ordinal="2" /> kann nicht identifiziert werden, weil das Gewicht für automatische Lastidentifikation zu gering ist. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>Die Last manuell schätzen oder wiegen und das RAPID-Programm manuell bearbeiten.<p /></Actions>
+  </Message>
+  <Message number="1741" eDefine="SYS_ERR_ARL_CALC_OVERFLOW">
+    <Title>Berechnungsüberlauf</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Berechnungsergebnis liegt nicht im Bereich 0 - 4294967295.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Die Berechnung gibt einen Fehler zurück.</Consequences>
+    <Causes>Die Werte in der Operation sind wahrscheinlich zu hoch.</Causes>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1742" eDefine="SYS_ERR_ARL_CALC_NEG">
+    <Title>Negative Subtraktion</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Subtraktionsergebnis ist negativ.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Die Berechnung gibt einen Fehler zurück.</Consequences>
+    <Causes>Der erste Wert in der Subtraktion ist kleiner als der zweite Wert.</Causes>
+    <Actions>Sicherstellen, dass bei einer Subtraktion der erste Wert größer als der zweite Wert ist.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1743" eDefine="SYS_ERR_ARL_CALC_DIVZERO">
+    <Title>Division durch Null</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Division durch Null<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Die Berechnung gibt einen Fehler zurück.</Consequences>
+    <Causes>Division durch Null.</Causes>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1744" eDefine="SYS_ERR_ARL_IN_ERROR_HANDLER">
+    <Title>Instruktionsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Programm wird in einer Fehlerbehandlung ausgeführt. Ausführung der Instruktion <arg format="%s" ordinal="2" /> in einer Fehlerbehandlung ist nicht zulässig.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Instruktion entfernen.</Actions>
+  </Message>
+  <Message number="1745" eDefine="SYS_ERR_ARL_IN_BWD_HANDLER">
+    <Title>Instruktionsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Programm wird in einer Rückwärtsbehandlung ausgeführt. Ausführung der Instruktion <arg format="%s" ordinal="2" /> in einer Rückwärtsbehandlung ist nicht zulässig.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Instruktion entfernen.</Actions>
+  </Message>
+  <Message number="1746" eDefine="SYS_ERR_ARL_AT_USER_LEVEL">
+    <Title>Instruktionsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Programm wird auf Benutzerebene ausgeführt, d. h. in einer Ereignisroutine oder in einer Serviceroutine. Ausführung der Instruktion <arg format="%s" ordinal="2" /> auf Benutzerebene ist nicht zulässig.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Instruktion entfernen.</Actions>
+  </Message>
+  <Message number="1747" eDefine="SYS_ERR_ARL_PROCSIGNAL_OFF">
+    <Title>Prozesssignal aus</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Prozesssignal <arg format="%s" ordinal="2" /> ist auf AUS (0) eingestellt. <p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Ein wiederherstellbarer Fehler ERR_PROCSIGNAL_OFF wird verworfen.</Consequences>
+    <Causes>Das optionale Argument \ProcSignal wurde für die ProcerrRecovery verwendet. Das Signal ermöglicht dem Benutzer das Ein-/Ausschalten der Instruktion ProcerrRecovery.</Causes>
+    <Actions>Eine Fehlerbehandlung für den Fehler ERR_PROCSIGNAL_OFF hinzufügen oder das optionale Argument \ProcSignal vom Instruktionsaufruf entfernen.</Actions>
+  </Message>
+  <Message number="1748" eDefine="SYS_ERR_ARL_ILLEGVAL_REC">
+    <Title>Wertfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unzulässiger Wert in Argument <arg format="%s" ordinal="2" />.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>RAPID-Programm prüfen.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1749" eDefine="SYS_ERR_ARL_MAXULONG_REC">
+    <Title>Wertfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Parameterwert <arg format="%s" ordinal="2" /> liegt außerhalb des Grenzwertes. <p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Causes>Der Wert ist zu groß.</Causes>
+    <Actions>Kleineren Wert für <arg format="%s" ordinal="2" /> verwenden.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1750" eDefine="SYS_ERR_ARL_NOT_ALLOW_SIGNAL_VAL">
+    <Title>Unzulässiger Wert</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unzulässiger Wert in Argument <arg format="%s" ordinal="2" />.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Causes>1) Das System hat den Ausdruck als einen num-Datentyp interpretiert und der Wert liegt über dem maximalen Integerwert für num (Wert 8388608).<p />2) Das System hat den Ausdruck als dnum-Datentyp interpretiert und der Wert liegt über dem maximalen Integerwert für dnum (Wert 4503599627370496).</Causes>
+    <Actions>Wert prüfen und ändern.<p />Der Parametername <arg format="%s" ordinal="2" /> kann Ihnen Informationen darüber liefern, wie das System die Daten interpretiert.</Actions>
+  </Message>
+  <Message number="1751" eDefine="SYS_ERR_ARL_ARRAY_TO_SMALL">
+    <Title>Datenfeldgrößenfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Datenfeld <arg format="%s" ordinal="2" /> ist nicht ausreichend für die <arg format="%s" ordinal="3" /> Anzahl an Elementen.<p />Programmreferenz: <arg format="%s" ordinal="4" /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Actions>Änderung der Datenfeldgröße, damit alle Elemente Platz finden.</Actions>
+  </Message>
+  <Message number="1752" eDefine="SYS_ERR_ARL_NUM_LIMIT">
+    <Title>Num Begrenzungsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Parameterwert <arg format="%s" ordinal="2" /> liegt außerhalb des Grenzwertes. <p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1753" eDefine="SYS_ERR_ARL_FRIC_INV_PATH_LEV">
+    <Title>Ungültige Bahnebene</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Programmreferenz: <arg format="%s" ordinal="2" /><p /><arg format="%s" ordinal="3" /> erfordert ein Betreiben des Roboters auf der ersten Bahnebene.</Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten.<p /></Consequences>
+    <Causes>Ausführung <arg format="%s" ordinal="3" /> auf falscher Bahnebene.<p /></Causes>
+    <Actions>RAPID-Programm prüfen.</Actions>
+  </Message>
+  <Message number="1754" eDefine="SYS_ERR_ARL_FRIC_PATH_REC_CLEAR">
+    <Title>Path Recorder gelöscht</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />WARNUNG!<p />Der Path Recorder wurde gelöscht. Die gespeicherte Bahn wurde gelöscht, bevor eine Reibungsidentifizierung durchgeführt wurde.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+  </Message>
+  <Message number="1755" eDefine="SYS_ERR_ARL_FRIC_PATH_TIME">
+    <Title>Abarbeitungszeit zu lang</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Abarbeitungszeit für Reibungseinstellungen zu lang. <arg format="%s" ordinal="2" /> &gt; <arg format="%s" ordinal="3" /> ist die maximale Zeit in Sekunden.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten.<p /></Consequences>
+    <Actions>Geschwindigkeit erhöhen oder Bahnlänge kürzen.</Actions>
+  </Message>
+  <Message number="1756" eDefine="SYS_ERR_ARL_FRIC_NO_INIT">
+    <Title>Fehlendes FricIdInit</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> muss ausgeführt werden vor <arg format="%s" ordinal="3" />.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+  </Message>
+  <Message number="1757" eDefine="SYS_ERR_ARL_FRIC_MECHUNIT">
+    <Title>Mechanische Einheit nicht gefunden</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Mechanische Einheit <arg format="%s" ordinal="2" /> nicht gefunden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Actions>Andere mechanische Einheit angeben.</Actions>
+  </Message>
+  <Message number="1758" eDefine="SYS_ERR_ARL_FRIC_FRICLEV_ARR">
+    <Title>Datenfeld zu klein</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Verwendetes Datenfeld ist zu klein. <p />Die Datenfeldgröße <arg format="%s" ordinal="2" /> muss gleich <arg format="%s" ordinal="3" />, der Anzahl der Roboterachsen entsprechen.<p />Programmreferenz: <arg format="%s" ordinal="4" /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Actions>Größe des Datenfeldes <arg format="%s" ordinal="2" /> erhöhen .</Actions>
+  </Message>
+  <Message number="1759" eDefine="SYS_ERR_ALLOWED_BITS">
+    <Title>Signal überschreitet max. Anzahl zulässiger Bits</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Signal <arg format="%s" ordinal="2" /> ist zu lang.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Gruppensignale mit 23 oder weniger Bit können in Interface Statements verwendet und dem Datentyp num zugewiesen werden. <p />Gruppensignale mit 24 - 32 Bit sind in Interface Statements nicht verwendbar. Stattdessen die Funktionen <arg format="%s" ordinal="4" /> oder <arg format="%s" ordinal="5" /> verwenden.</Actions>
+  </Message>
+  <Message number="1760" eDefine="SYS_ERR_ARL_FRIC_IN_SYNC">
+    <Title>
+      <arg format="%s" ordinal="1" /> wenn im synchronisierten Modus</Title>
+    <Description>Task: <arg format="%s" ordinal="2" /><p /><arg format="%s" ordinal="1" /> kann nicht zusammen mit synchronisierter Bewegung verwendet werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Actions>Alle SyncMoveOn zwischen <arg format="%s" ordinal="4" /> und <arg format="%s" ordinal="5" /> entfernen.</Actions>
+  </Message>
+  <Message number="1761" eDefine="SYS_ERR_ARL_PACK_UNPACK_LIM">
+    <Title>Wert nicht im Sollbereich</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Ganzzahlenwert <arg format="%s" ordinal="2" /> konnte nicht in einen <arg format="%s" ordinal="3" /> Datentyp kopiert werden. Der Wert befindet sich außerhalb des Grenzwertes des Datentyps <arg format="%s" ordinal="3" />.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /><p /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Actions>Eine Variable vom Typ <arg format="%s" ordinal="5" /> anstelle einer Variable vom Typ <arg format="%s" ordinal="3" /> verwenden.</Actions>
+  </Message>
+  <Message number="1762" eDefine="SYS_ERR_ARL_INVALID_VALUE">
+    <Title>Der Zeichenfolgewert des Arguments ist ungültig</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Zeichenfolge des Arguments <arg format="%s" ordinal="2" /> ist ungültig und kann nicht umgewandelt werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Causes>1) Die einzigen gültigen Buchstaben sind a-f und A-F und nur für HexToDec zulässig.<p />2) Die Zeichen ., - und + sind für HexToDec nicht zulässig.<p />3) Das Zeichen - ist für DecToHex nicht zulässig.<p />4) Der Wert ist keine zulässige Ganzzahl.</Causes>
+    <Actions>Zeichenfolge des Arguments bearbeiten, damit es gültig wird und umgewandelt werden kann.</Actions>
+  </Message>
+  <Message number="1763" eDefine="SYS_ERR_ARL_VALUE_TOO_HIGH">
+    <Title>Zeichenfolgenwert des Arguments ist zu hoch</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Zeichenfolge des Arguments <arg format="%s" ordinal="2" /> überschreitet den höchsten vom System unterstützten Wert.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Die Zeichenfolge des Arguments wird umgewandelt, wird aber auf den höchsten unterstützten Wert gesetzt (9223372036854775807).</Consequences>
+    <Causes>Zeichenfolgenwert des Arguments überschreitet den höchsten unterstützten Wert.</Causes>
+    <Actions>Zeichenfolgenwert des Arguments bearbeiten, damit es den höchsten unterstützten Wert nicht überschreitet.</Actions>
+  </Message>
+  <Message number="1764" eDefine="SYS_ERR_ARL_ADD_ILLEGCOMB">
+    <Title>Falsche Kombination in <arg format="%s" ordinal="2" /></Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Bei Verwendung von Instruktion <arg format="%s" ordinal="2" /> kann der num-Variablen/Persistenten keine dnum-Variable/Persistente hinzugefügt werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Causes>Der hinzuzufügende Wert ist vom Typ dnum, und die zu ändernde Variable/Persistente ist vom Typ num.</Causes>
+    <Actions>Weitere Informationen über <arg format="%s" ordinal="2" /> im RAPID-Referenzhandbuch</Actions>
+  </Message>
+  <Message number="1765" eDefine="SYS_ERR_ARL_VAL_TOO_HIGH">
+    <Title>Argumentwert ist zu hoch</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Zu hoher Wert in Argument <arg format="%s" ordinal="2" />.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Causes>Argumentwert überschreitet den höchsten unterstützten Wert (<arg format="%s" ordinal="4" />).</Causes>
+    <Actions>Kleineren Wert für Argument <arg format="%s" ordinal="2" /> verwenden.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1766" eDefine="SYS_ERR_ARL_ILLEGCOMB">
+    <Title>Die Präzision geht dabei verloren</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Optionales Argument <arg format="%s" ordinal="2" /> wird verwendet, und das Gruppensignal hat <arg format="%s" ordinal="3" /> Bits. Dies kann zum Präzisionsverlust in der Variable führen, die im optionalen Argument <arg format="%s" ordinal="2" /> verwendet wird.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten.<p /></Consequences>
+    <Causes>Argument <arg format="%s" ordinal="2" /> wird verwendet, und es besteht das Risiko, dass die Präzision des Werts verloren geht.<p />Gruppensignale, bestehend aus 23 Bits oder weniger, können durch den Datentyp „num“ und Gruppensignale mit 32 Bits oder weniger durch den Datentyp „dnum“ dargestellt werden, falls diese in einem RAPID-Programm verwendet werden.<p /><p /></Causes>
+    <Actions>Zur Verhinderung des Präzisionsverlusts in der verwendeten Variable <arg format="%s" ordinal="2" />, verwenden Sie stattdessen das optionale Argument <arg format="%s" ordinal="5" />.<p /></Actions>
+  </Message>
+  <Message number="1767" eDefine="SYS_ERR_ARL_TCPROB_NOTDEF2">
+    <Title>Instruktionsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Instruktion <arg format="%s" ordinal="2" /> wird von einer Task ohne Bewegung verwendet, und die Bewegungstask, mit der Task <arg format="%s" ordinal="1" /> verbunden ist, steuert keinen TCP-Roboter.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten.<p /><p /></Consequences>
+    <Causes>
+      <arg format="%s" ordinal="2" /> wird in einer Task ohne Bewegung verwendet, die mit einer Bewegungstask verbunden ist, die keinen TCP-Roboter steuert.</Causes>
+    <Actions>- Konfiguration prüfen.<p />- Die Instruktion muss entfernt werden. Die Task ohne Bewegung <arg format="%s" ordinal="1" /> ist mit einer Bewegungstask verbunden, die keinen TCP-Roboter steuert. </Actions>
+  </Message>
+  <Message number="1768" eDefine="SYS_ERR_ARL_SWITCH_MISSING">
+    <Title>switch fehlt</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der switch <arg format="%s" ordinal="2" /> ist erforderlich, wenn die Instruktion/Funktion abgearbeitet wird.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Actions>switch hinzufügen, wenn Instruktion/Funktion verwendet wird.</Actions>
+  </Message>
+  <Message number="1769" eDefine="SYS_ERR_ARL_NODE_NOT_FOUND">
+    <Title>Servicedaten nicht gefunden</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Servicedaten für die mechanische Einheit <arg format="%s" ordinal="2" /> wurden nicht gefunden.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Es werden keine Servicedaten gelesen.</Consequences>
+    <Causes>Für diese mechanische Einheit sind keine solchen Servicedaten vorhanden.</Causes>
+    <Actions>Prüfen, ob für die mechanische Einheit die angegebenen Servicedaten definiert wurden.</Actions>
+  </Message>
+  <Message number="1770" eDefine="SYS_ERR_ARL_CAM_UNDEF">
+    <Title>Systemzugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unbekannte Kameraeinheit <arg format="%s" ordinal="2" />.<p />Die Daten vom Typ cameradev werden vom System nicht erkannt.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Causes>Daten vom Typ cameradev wurden im Programm deklariert.</Causes>
+    <Actions>Deklaration der cameradev-Daten im Programm entfernen und vordefinierte Daten vom Typ cameradev verwenden (automatisch vom System definiert).</Actions>
+  </Message>
+  <Message number="1771" eDefine="SYS_ERR_ARL_CAM_LOAD_INTERRUPTED">
+    <Title>Laden des Auftrags abbrechen</Title>
+    <Description>Das Laden des Auftrags <arg format="%s" ordinal="1" /> für Kamera <arg format="%s" ordinal="2" /> wurde abgebrochen.</Description>
+    <Consequences>Der Auftrag wurde möglicherweise erfolgreich in die Kamera geladen.</Consequences>
+    <Causes>Der PZ wurde im RAPID-Programm bewegt, bevor der Auftrag vollständig in die Kamera geladen wurde. Ein Auftrag ist erst vollständig geladen, wenn die Instruktion <arg format="%s" ordinal="3" /> ausgeführt wurde.</Causes>
+    <Actions>Neuen Auftrag mit dem Namen <arg format="%s" ordinal="2" /> in die Kamera laden.</Actions>
+  </Message>
+  <Message number="1772" eDefine="SYS_ERR_ARL_CAM_OPT_ARGUMENT">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Keines der unten aufgeführten optionalen Argumente ist in der Instruktion angegeben.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p />Eines der folgenden optionalen Argumente fehlt:<p /><arg format="%s" ordinal="3" /><p /><arg format="%s" ordinal="4" /><p /><arg format="%s" ordinal="5" /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Actions>Mindestens eines der Argumente angeben.</Actions>
+  </Message>
+  <Message number="1773" eDefine="SYS_ERR_ARL_VIS_MAN_INSTR_TIMEOUT">
+    <Title>Timeout</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Ein Timeout hat die Ausführung der Instruktion mit Kamera <arg format="%s" ordinal="2" /> unterbrochen. <p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Höheren Timeout-Wert eingeben oder Fehlerbehandlung verwenden, um das Ausführen der Instruktion erneut zu versuchen.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1774" eDefine="SYS_ERR_ARL_CAM_TYPE_MISMATCH">
+    <Title>Typenfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Wert <arg format="%s" ordinal="2" /> kann nicht in einer Variablen vom aktuellen Typ (<arg format="%s" ordinal="3" />) festgelegt werden. Das verwendete optionale Argument prüfen und ein Argument mit ordnungsgemäßem Typ verwenden.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Causes>Falscher Argumenttyp verwendet</Causes>
+    <Actions>Das RAPID-Programm prüfen und anderen Variablentyp zum Speichern der Daten verwenden.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1775" eDefine="SYS_ERR_ARL_VIS_MAN_ERR_BUSY">
+    <Title>Gleichzeitige Anforderung an Kamera</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Mehrere gleichzeitige Anforderungen an eine Kamera sind nicht zulässig.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>Die Anforderung wurde nicht ausgeführt.</Consequences>
+    <Causes>Es sind mehrere Anforderungen an die Kamera mit dem Namen <arg format="%s" ordinal="3" /> vorhanden.</Causes>
+    <Actions>Kurz warten und dann einen neuen Versuch starten.<p />Wenn versucht wird von verschiedenen Tasks auf dieselbe Kamera zuzugreifen, kann die Instruktion WaitTestAndSet dazu verwendet werden, den Zugriff auf die Kamera zur selben Zeit zu verhindern.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1776" eDefine="SYS_ERR_ARL_VIS_MAN_NO_MORE_DATA">
+    <Title>Keine weiteren Daten verfügbar</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Für Kamera <arg format="%s" ordinal="2" /> sind keine Daten mehr verfügbar. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>Es konnten keine Daten gelesen werden.</Consequences>
+    <Causes>Mögliche Gründe:<p />1) Keine weiteren Daten verfügbar<p />2) Kein Ergebnis stimmt mit dem verwendeten <arg format="%s" ordinal="4" /> überein.</Causes>
+    <Actions>1) Sicherstellen, dass die Kamera ein Bild angefordert hat.<p />2) Sicherstellen, dass die von „output to RAPID“ konfigurierte Ergebniskarte vollständig ist.<p /><p />Sicherstellen, dass die richtige Variable verwendet wurde, wenn <arg format="%s" ordinal="4" /> verwendet wird.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1777" eDefine="SYS_ERR_ARL_VIS_MAN_CAM_NOT_ON_NETWORK">
+    <Title>Die Kamera ist nicht verbunden</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Kamera <arg format="%s" ordinal="2" /> ist nicht verbunden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.<p /></Consequences>
+    <Causes>Mögliche Fehlergründe:<p />1) Die Kamera ist nicht mit der Steuerung verbunden.<p />2) Die Kamera ist nicht an das Stromnetz angeschlossen.<p />3) Die IP-Adresse der Kamera ist ungültig.<p />4) Die Kamera hat keinen Namen.<p />5) Die Kamera ist nicht mit der richtigen Netzwerkschnittstelle verbunden. Normalerweise wird nur der Serviceport unterstützt.<p /></Causes>
+    <Actions>1) Verkabelung zwischen Robotersteuerung und Kamera überprüfen.<p />2) Sicherstellen, dass die LED-Betriebs- und Verbindungsanzeigen der Kamera aktiv sind. <p />3) RobotStudio verwenden, um zu überprüfen, ob die IP-Adresse richtig konfiguriert wurde.<p />4) Gültigen Kameranamen festlegen. <p /></Actions>
+  </Message>
+  <Message number="1778" eDefine="SYS_ERR_ARL_VIS_MAN_ERR_FAILED_TO_LOAD">
+    <Title>Laden des Jobs fehlgeschlagen</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Job mit dem Namen <arg format="%s" ordinal="2" /> für die Kamera <arg format="%s" ordinal="3" /> konnte nicht geladen werden.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.<p /></Consequences>
+    <Causes>1) Der Job <arg format="%s" ordinal="2" /> ist ungültig oder nicht verfügbar.<p />2) Die Kamera <arg format="%s" ordinal="2" /> hat keinen freien Speicher mehr verfügbar.</Causes>
+    <Actions>Überprüfen, ob der Job mit dem Namen <arg format="%s" ordinal="2" /> auf der Kamera vorhanden ist.<p /></Actions>
+  </Message>
+  <Message number="1779" eDefine="SYS_ERR_ARL_CAM_SETPARAM_TYPE_MISMATCH">
+    <Title>Parameter kann nicht geändert werden</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Parameter, der mit Instruktion <arg format="%s" ordinal="3" /> in die Kamera <arg format="%s" ordinal="2" /> geschrieben wurde, kann nicht geändert werden, der Parameter kann nicht erkannt werden oder RAPID-Daten vom falschen Datentyp werden verwendet.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>Parameter nicht geändert.</Consequences>
+    <Causes>Gründe hierfür:<p />1) Falsches optionales RAPID-Argument verwendet.<p />2) Wert liegt außerhalb des Bereichs.<p />3) Eine Zelle mit dem angegebenen Namen existiert nicht.<p />4) Die Zellen müssen vom Typ EditInt, EditFloat oder EditString sein.<p />5) Es wird versucht, einen falschen Typ für die Zelle festzulegen, z. B. einen Zeichenfolgenwert auf einen Parameter, der keine Zeichenfolge ist.<p /></Causes>
+    <Actions>Überprüfen Sie das RAPID-Programm, und verwenden Sie ein optionales Argument vom richtigen Datentyp und einen Wert im unterstützten Bereich.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1780" eDefine="SYS_ERR_ARL_VIS_MAN_CAM_NOT_RUNNING">
+    <Title>Kamera ist im Programmmodus</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Vorgang ist fehlgeschlagen, da die Kamera <arg format="%s" ordinal="2" /> im Programmmodus ist.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>Die Funktion oder Instruktion kann nur verwendet werden, wenn die Kamera im Abarbeitungsmodus ist.</Causes>
+    <Actions>Um in den Abarbeitungsmodus zu wechseln, Instruktion <arg format="%s" ordinal="4" /> verwenden.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1781" eDefine="SYS_ERR_ARL_VIS_MAN_CAM_RUNNING">
+    <Title>Kamera ist im Abarbeitungsmodus</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Vorgang ist fehlgeschlagen, da die Kamera <arg format="%s" ordinal="2" /> im Ausführungsmodus ist.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>Die Funktion oder Instruktion kann nur verwendet werden, wenn die Kamera im Programmmodus ist.</Causes>
+    <Actions>Um in den Programmmodus zu wechseln, Instruktion <arg format="%s" ordinal="4" /> verwenden.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1782" eDefine="SYS_ERR_ARL_VIS_MAN_NOTSUPPORTED">
+    <Title>Dies wird von der Kamera nicht unterstützt</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Vorgang ist fehlgeschlagen, da die Kamera die aktuelle Aktion nicht unterstützt<p />(switch <arg format="%s" ordinal="2" /> verwendet).<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Causes>Die verwendete Funktionalität wird von diesem Kameratyp nicht unterstützt.</Causes>
+    <Actions>Überprüfen, welche Funktionalität von der Kamera unterstützt wird.</Actions>
+  </Message>
+  <Message number="1783" eDefine="SYS_ERR_ARL_VIS_MAN_COM_TIMEOUT">
+    <Title>Kommunikations-Timeout</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Bei der Kommunikation mit der Kamera <arg format="%s" ordinal="2" /> ist ein Timeout aufgetreten. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>Die Kamera weist einen nicht definierten Zustand auf. Der Auftrag an die Kamera wurde möglicherweise nicht ausgeführt.</Consequences>
+    <Causes>Die Kamera reagiert nicht.</Causes>
+    <Actions>Verbindung zwischen Kamera und Steuerung überprüfen.<p />Kamera neu starten und einen neuen Versuch starten.<p />Wiederherstellung: <arg format="%s" ordinal="4" /><p /></Actions>
+  </Message>
+  <Message number="1784" eDefine="SYS_ERR_ARL_VIS_MAN_COM_ERR">
+    <Title>Kommunikationsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Fehler bei Kommunikation mit Kamera <arg format="%s" ordinal="2" />. Wahrscheinlich ist die Kamera nicht verbunden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1786" eDefine="SYS_ERR_ARL_VIS_MAN_PARAM_OUT_OF_RANGE">
+    <Title>Parameter außerhalb Bereich</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der verwendete Wert des Parameters <arg format="%s" ordinal="2" /> für die Kamera <arg format="%s" ordinal="3" /> ist außerhalb des zulässigen Bereichs.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Causes>Der Parameterwert kann nicht festgelegt werden.</Causes>
+    <Actions>Den verwendeten Wert prüfen.</Actions>
+  </Message>
+  <Message number="1787" eDefine="SYS_ERR_ARL_VIS_MAN_INV_PARAM_NAME_GET">
+    <Title>Parameter kann nicht gelesen werden</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Parameter <arg format="%s" ordinal="2" /> kann nicht gelesen oder erkannt werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>Auf den Parameter kann nicht zugegriffen werden. Es existiert kein Parameter mit dem spezifizierten Namen. </Causes>
+    <Actions>Stellen Sie sicher, dass der Name <arg format="%s" ordinal="2" /> ein richtiger Name ist.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1788" eDefine="SYS_ERR_ARL_CAM_NO_JOB_LOADING">
+    <Title>Kameratask wird nicht geladen</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Es wird zurzeit keine Task auf Kamera <arg format="%s" ordinal="2" /> geladen.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Causes>Für Kamera <arg format="%s" ordinal="2" /> wurde kein Ladeauftrag angefordert.</Causes>
+    <Actions>Überprüfen, ob <arg format="%s" ordinal="4" /> vor der aktuellen Instruktion verwendet wurde.</Actions>
+  </Message>
+  <Message number="1789" eDefine="SYS_ERR_ARL_VIS_MAN_GETRES_WITH_TOUT_NO_DATA">
+    <Title>Keine weiteren Daten verfügbar</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Für Kamera <arg format="%s" ordinal="2" /> sind keine Daten mehr verfügbar.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>Es konnten keine Daten gelesen werden.</Consequences>
+    <Causes>Kein Ergebnis stimmt mit verwendetem <arg format="%s" ordinal="4" /> überein.</Causes>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1791" eDefine="SYS_ERR_ARL_CSS_ZERO_MASS_NOT_ALLOWED">
+    <Title>SoftMove mit einer Masse von null nicht zulässig</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die aktuellen Lastdaten, die verwendet werden, wenn CSSAct aufgerufen wird, haben eine Masse von <arg format="%f" ordinal="2" /> kg. SoftMove muss eine genaue Lastdefinition besitzen. Diese wird normalerweise durch die Lastdefinition festgelegt, die Bestandteil der Werkzeugdefinition ist. <p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Wenn SoftMove eine Masse von 0,001 kg oder weniger erkennt, wird keine Aktivierung erlaubt.<p />Daher kann eine Instruktion CSSAct mit tool0 nicht ausgeführt werden.<p /></Consequences>
+    <Causes>Aktuelles Werkzeug bei der Ausführung der Instruktion CSSAct war tool0 oder ein anderes Werkzeug mit zu kleiner Masse. Das aktuelle Werkzeug wird durch eine Bewegungsinstruktion oder durch Bewegen vor der Instruktion CSSAct festgelegt.<p /></Causes>
+    <Actions>Eine so genaue Werkzeugdefinition wie möglich verwenden. Lastidentifikation verwenden.<p />Falls einfache Tests von SoftMove ohne Werkzeug am Montageflansch erfolgen, muss eine ähnliche Werkzeugdefinition wie tool0 erstellt werden, jedoch mit einer Masse größer als 0,002 kg.<p /></Actions>
+  </Message>
+  <Message number="1792" eDefine="SYS_ERR_ARL_NOT_ALLOWED_ON_THIS_LEVEL">
+    <Title>Instruktion nicht zulässig</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Instruktion <arg format="%s" ordinal="2" /> kann in einer Bewegungstask nur auf normaler Ebene abgearbeitet werden. </Description>
+    <Consequences>Programmausführung wird beendet.</Consequences>
+    <Causes>Instruktion <arg format="%s" ordinal="2" /> wird aus einer Interrupt- oder Hintergrundtask verwendet.</Causes>
+  </Message>
+  <Message number="1793" eDefine="SYS_ERR_ARL_RESTART_PROC_ARR_FULL">
+    <Title>TriggInt Stopp-Fehler</Title>
+    <Description>Es können keine Trigger-Neustartaktionen mehr gespeichert werden.<p />Folgende Instruktionen können dieses Problem verursachen:<p /><arg format="%s" ordinal="1" /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Causes>Bei Verwendung von Bewegungsinstruktionen, die Interrupts an einer bestimmten Position verwenden, und wenn die nach einem Stopp empfangenen Ereignisse mehr sind, als das System verarbeiten kann, beendet dieser Fehler die Abarbeitung.<p /></Causes>
+    <Actions>Versuchen Sie die Länge der Bewegungen zu erhöhen, anderenfalls kann die Reduzierung der Bewegungsgeschwindigkeit dieses Problem lösen. <p />Senden Sie gegebenenfalls einen Bericht über dieses Problem an ABB.</Actions>
+  </Message>
+  <Message number="1794" eDefine="SYS_ERR_ARL_CLEARPATH_SEARCH">
+    <Title>Suchfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Durch die Suchinstruktion <arg format="%s" ordinal="2" /> wurde erkannt, dass die Bahn und das Suchobjekt entfernt wurden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>Die Position kann von der Instruktion <arg format="%s" ordinal="2" /> nicht gelesen werden. Programmabarbeitung wird sofort angehalten.<p /></Consequences>
+    <Causes>1) Eine Interrupt-Routine führt direkt vor der Signaländerung eine <arg format="%s" ordinal="4" />-Instruktion aus.<p />2) Eine Interrupt-Routine führt eine <arg format="%s" ordinal="4" />-Instruktion aus und wenn die Instruktion <arg format="%s" ordinal="2" /> fertig ist (keine Signalerkennung erfolgt), erkennt <arg format="%s" ordinal="2" />, dass das Suchobjekt entfernt wurde.</Causes>
+    <Actions>Fehlerbehandlung mit long jump in der Interrupt-Routine verwenden, um die <arg format="%s" ordinal="2" />-Instruktion abzubrechen, oder das RAPID-Programm umschreiben. Zum Implementieren der Fehlerbehandlung mit long jump siehe <arg format="%s" ordinal="4" />.</Actions>
+  </Message>
+  <Message number="1795" eDefine="SYS_ERR_ARL_PAYLOAD_MODE">
+    <Title>Falscher Nutzlastmodus</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Falscher Nutzlastmodus.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Causes>1) Bei Verwendung des optionalen Arguments \TLoad in einer Bewegungsinstruktion sollte der Konfigurationsparameter ModalPayloadMode auf „NO“ gesetzt werden.<p />2) Bei Verwendung der Instruktion GripLoad sollte der Konfigurationsparameter ModalPayloadMode auf 1 gesetzt werden.<p />3) Wenn LoadId verwendet wird und der Konfigurationsparameter ModalPayloadMode auf „NO“ gesetzt ist, kann keine Lastidentifikation erfolgen.<p /></Causes>
+    <Actions>Den Wert des Konfigurationsparameters ModalPayLoadMode für Domäne SYS, Typ SYS_MISC prüfen.</Actions>
+  </Message>
+  <Message number="1796" eDefine="SYS_ERR_ARL_LOAD_MASS_NEG">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Masse in den verwendeten Lastdaten ist negativ.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Korrekte Last definieren, bevor die Last für manualles Bewegung oder im Programm benutzt wird. Die Last kann auch mit der Serviceroutine<p />LoadIdentify ermittelt werden. </Actions>
+  </Message>
+  <Message number="1797" eDefine="SYS_ERR_ARL_SIGNAL_NOT_VALID">
+    <Title>Signal nicht erreichbar </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das E/A-Signal <arg format="%s" ordinal="2" /> ist nicht erreichbar. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>Der Grund für diesen Fehler ist einer der folgenden:<p />- Der echte Eingang oder Ausgang an der E/A-Einheit für das E/A-Signale ist nicht gültig. <p />- E/A-Einheit ist nicht in Betrieb<p />- Fehler in der Konfiguration des E/A-Signales<p /></Causes>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1798" eDefine="SYS_ERR_ARL_SPEEDLIM_NO_TCP_ROB">
+    <Title>Kein Roboter mit TCP gefunden</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Diese Task steuert keine mechanische Einheit, die ein Roboter mit einem TCP ist.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Causes>Für diese Task wurde kein Roboter mit einem TCP gefunden.</Causes>
+    <Actions>RAPID-Programm prüfen. Die Instruktion <arg format="%s" ordinal="3" /> kann nur in einer RAPID-Task verwendet werden, die einen Roboter mit TCP steuert.</Actions>
+  </Message>
+  <Message number="1799" eDefine="SYS_ERR_ARL_SPEEDLIM_VALUE">
+    <Title>Geschwindigkeitswert zu niedrig</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der im Argument <arg format="%s" ordinal="3" /> verwendete Geschwindigkeitswert (<arg format="%s" ordinal="2" />) ist zu gering.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>Der aktuelle Geschwindigkeitswert kann nicht verwendet werden.</Consequences>
+    <Causes>Es wurde ein Wert verwendet, der unter dem Mindestwert für die Geschwindigkeit liegt.</Causes>
+    <Actions>Den Geschwindigkeitswert im Argument <arg format="%s" ordinal="3" /> erhöhen.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="1800" eDefine="SYS_ERR_ARL_SETNONMOTEXEC_NO_AUTO">
+    <Title>Manuelle Aktion erforderlich</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Von Task <arg format="%s" ordinal="1" /> wurde Start der Roboterbewegungen angefordert.<p />Im Einrichtbetrieb mit reduzierter Geschwindigkeit und im Einrichtbetrieb 100% muss der Zustimmungsschalter erneut betätigt werden.<p /><p /></Description>
+    <Causes>Ein Befehl zum Aktivieren der Roboterbewegungen wurde im Einrichtbetrieb mit reduzierter Geschwindigkeit oder im Einrichtbetrieb 100% ausgeführt.</Causes>
+    <Actions>Zustimmungsschalter loslassen und erneut betätigen. Ausführung des RAPID-Programms erneut starten.<p />HINWEIS: Bei Verwendung eines MultiMove-Sytems werden die Bewegungen aller Roboter und externen Achsen nach dem nächsten Programmstart gestartet.</Actions>
+  </Message>
+  <Message number="1801" eDefine="SYS_ERR_ARL_NOT_IN_SYNC_MODE">
+    <Title>Im synchronisierten Modus</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> kann im synchronisierten Modus nicht ausgeführt werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>Programmabarbeitung wird sofort angehalten.<p /></Consequences>
+    <Causes>Das System ist im synchronisierten Modus auf Bahnbasisebene oder auf Bahnaufzeichnungsebene.</Causes>
+    <Actions>Synchronisierung vor Ausführung der aktuellen Instruktion entfernen.</Actions>
+  </Message>
+  <Message number="1802" eDefine="SYS_ERR_ARL_NOT_SUPPORTED_IN_RW">
+    <Title>Nicht unterstützte Instruktion oder Funktion </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die RAPID-Instruktion oder Funktion <arg format="%s" ordinal="2" /> wird in dieser Version von RobotWare nicht unterstützt.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>Programmausführung wird sofort angehalten.<p /></Consequences>
+    <Causes>Verwendung einer Funktion oder Instruktion, die in der aktuellen Version von RobotWare nicht unterstützt wird. </Causes>
+    <Actions>Entfernen Sie die RAPID-Instruktion oder Funktion <arg format="%s" ordinal="2" /> aus Ihrem RAPID-Programm. </Actions>
+  </Message>
+  <Message number="1803" eDefine="SYS_ERR_ARL_SCALE_VALUE_OUTPUT">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der logische Ausgangswert, der vom Argument ScaleValue in der Instruktion TriggSpeed errechnet wurde, und die in der aktuellen Instruktion programmierte Geschwindigkeit überschreiten den maximalen physikalischen Ausgangswert für das im AOp-Argument in der Instruktion TriggSpeed verwendete Analogsignal.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Causes>Der logische Analogausgang überschreitet den physikalischen Ausgangswert.<p />- Logischer Ausgangswert = Skalierung * programmierte TCP-Geschwindigkeit in mm/s.<p />- Physikalischer Ausgangswert für ein Analogsignal = Gemäß Definition in der Konfiguration für ein echtes analoges Ausgangssignal.<p />Das Analogsignal kann nur zwischen <arg format="%s" ordinal="3" /> und <arg format="%s" ordinal="4" /> gesetzt werden, gemäß der Parameterkonfiguration des E/A-Systems.<p /></Causes>
+    <Actions>Senken Sie den in ScaleValue verwendeten Wert oder senken Sie die in der aktuellen Instruktion programmierte Geschwindigkeit.<p />Eine weitere Lösung besteht darin, den für das analoge Ausgangssignal konfigurierten Wert zu ändern. <p />Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1804" eDefine="SYS_ERR_ARL_REJ_OPMODE_MANFS">
+    <Title>Befehl nicht zulässig</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Ändern von Einstellungen des Nicht-Bewegungsmodus im Manual Fullspeed-Modus ist nicht zulässig.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Das System bleibt im gleichen Zustand und die angeforderte Aktion wird nicht ausgeführt.<p /></Consequences>
+    <Actions>Sicherstellen, dass die Einstellungen des Nicht-Bewegungsmodus nicht im Manual Fullspeed-Modus geändert werden. </Actions>
+  </Message>
+  <Message number="1805" eDefine="SYS_ERR_ARL_ILL_DIMENSION">
+    <Title>Ungültige Abmessung</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Abmessung <arg format="%s" ordinal="2" /> für das Argument <arg format="%s" ordinal="3" /> ist ungültig.<p />Benötigte Abmessung: <arg format="%s" ordinal="4" /><p />Programmreferenz:<arg format="%s" ordinal="5" /></Description>
+    <Causes>Es werden falsche Abmessungen oder falsche Werte im optionalen Argument verwendet.</Causes>
+    <Actions>RAPID-Programm prüfen und ändern.<p />Fehlerbehebung: ERR_ARRAY_SIZE<p /></Actions>
+  </Message>
+  <Message number="1806" eDefine="SYS_ERR_ARL_ILL_MATRIX_SINGULAR">
+    <Title>Die Matrix A ist singulär</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die in Argument A verwendete Matrix ist singulär und das lineare Gleichungssystem kann nicht gelöst werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>Matrix A ändern.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /><p /></Actions>
+  </Message>
+  <Message number="1807" eDefine="SYS_ERR_ARL_NOT_ENOUGH_MEM">
+    <Title>Nicht genügend Speicher</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der zugewiesene Speicher ist nicht ausreichend für die aktuelle Berechnung.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
+    <Causes>Der beim Starten zugewiesene Speicher ist zu klein, um die Berechnung durchführen zu können.</Causes>
+    <Actions>In der Instruktion eine kleinere Matrix verwenden. <p />Wenn dies nicht möglich ist, Problem ABB Robotics melden.</Actions>
+  </Message>
+</Domain>

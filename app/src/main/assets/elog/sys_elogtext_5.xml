@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="SYS" domainNo="2" lang="de" elogTextVersion="1.0" min="490" max="636">
+  <Message number="490" eDefine="SYS_ERR_SYS_PSC_40">
+    <Title>OVR-Geschwindigkeit von SC <arg format="%d" ordinal="1" /> überschritten </Title>
+    <Description>Override (OVR)-Geschwindigkeitslimit wurde für mechanische Einheit <arg format="%s" ordinal="2" /> überschritten. </Description>
+    <Causes>Wenn Override (OVR) aktiv ist, sind OVR-Geschwindigkeitsbegrenzungen aktiv.</Causes>
+    <Actions>- Geschwindigkeit verringern.<p />- OVR deaktivieren.<p /></Actions>
+  </Message>
+  <Message number="491" eDefine="SYS_ERR_SYS_PSC_41">
+    <Title>SC <arg format="%d" ordinal="1" /> - Override während Start aktiv </Title>
+    <Description>Digitaler Override-Eingang war während Start der Sicherheitssteuerung <arg format="%d" ordinal="1" /> aktiv.</Description>
+  </Message>
+  <Message number="492" eDefine="SYS_ERR_SYS_PSC_42">
+    <Title>SC <arg format="%d" ordinal="1" /> SST-Überschreitung bei Bremsentest</Title>
+    <Description>Bewegung erkannt während Bremsentest für Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" />, mechanische Einheit <arg format="%s" ordinal="2" />, Achse <arg format="%d" ordinal="3" />. </Description>
+    <Causes>- Unterbrochener Bremsentest.<p />- Bremsenverschleiß.<p /></Causes>
+    <Actions>- CDB neu starten.<p />- Bremse austauschen.<p /></Actions>
+  </Message>
+  <Message number="493" eDefine="SYS_ERR_SYS_PSC_43">
+    <Title>SC <arg format="%d" ordinal="1" /> - SBR ausgelöst </Title>
+    <Description>Safe Brake Ramp (SBR) für Sicherheitssteuerung (SC) wurde aufgrund langsamer Abbremsung von mechanischer Einheit <arg format="%s" ordinal="2" /> durch Stopp der Kategorie 0 unterbrochen. Dies ist normal und erfolgt, wenn ein Stopp der Kategorie 1 zu langsam ist. Anderes Safety Controller-ELOG überprüfen. </Description>
+    <Actions>- Parameterwert für SBR in Bewegungskonfiguration ändern.<p />- Neuen Stopp auslösen, um Safe Brake Ramp zu überprüfen.<p />- Wenn dies häufig geschieht, im Anwendungshandbuch über Konfiguration der mechanischen Einheit informieren. </Actions>
+  </Message>
+  <Message number="494" eDefine="SYS_ERR_SYS_PSC_44">
+    <Title>SC <arg format="%d" ordinal="1" /> - fehlerhafter Werkzeugwechsel </Title>
+    <Description>Fehlerhafter Werkzeugwechsel mit Werkzeug <arg format="%d" ordinal="3" /> an Mechanischer Einheit <arg format="%s" ordinal="2" />.</Description>
+    <Actions>- Auf korrektes Werkzeug prüfen.<p />- Gegebenenfalls Geschwindigkeit verringern.<p />- Neuen Werkzeugwechsel durchführen. <p /></Actions>
+  </Message>
+  <Message number="501" eDefine="SYS_ERR_SYS_OPEN_ES_PANL">
+    <Title>Not-Aus-Kreis Bedienfeld offen</Title>
+    <Description>Der Not-Aus-Kreis am Bedienfeld wurde zuvor unterbrochen und während der Unterbrechung wurde versucht, den Roboter zu betreiben.</Description>
+    <Consequences>Das System bleibt im Zustand Not-Aus.</Consequences>
+    <Causes>Es wurde versucht, eine Steuerung zu betätigen, z. B. den Zustimmungsschalter.</Causes>
+    <Actions>1. Zur Wiederaufnahme die Not-Aus-Taste am Bedienfeld zurücksetzen. <p />2. Dann das System in den Zustand MOTOREN EIN schalten, indem die MOTOREN EIN-Taste am Steuerungsmodul gedrückt wird.</Actions>
+  </Message>
+  <Message number="502" eDefine="SYS_ERR_SYS_OPEN_ES_PEND">
+    <Title>Not-Aus-Kreis FlexPendant offen</Title>
+    <Description>Der Not-Aus-Kreis am FlexPendant wurde zuvor unterbrochen und während der Unterbrechung wurde versucht, den Roboter zu betreiben.</Description>
+    <Consequences>Das System bleibt im Zustand Not-Aus.</Consequences>
+    <Causes>Es wurde versucht, eine Steuerung zu betätigen, z. B. den Zustimmungsschalter.</Causes>
+    <Actions>1. Zur Wiederaufnahme die Not-Aus-Taste am FlexPendant zurücksetzen. <p />2. Dann das System in den Zustand MOTOREN EIN schalten, indem die MOTOREN EIN-Taste am Steuerungsmodul gedrückt wird.</Actions>
+  </Message>
+  <Message number="503" eDefine="SYS_ERR_SYS_OPEN_ES_EXT">
+    <Title>Not-Aus ext. Kat. 0 offen</Title>
+    <Description>Der externe Not-Aus-Kreis wurde zuvor unterbrochen und während der Unterbrechung wurde versucht, den Roboter zu betreiben.</Description>
+    <Consequences>Das System bleibt im Not-Aus-Zustand.</Consequences>
+    <Causes>Es wurde versucht, eine Steuerung zu betätigen, z. B. den Zustimmungsschalter.</Causes>
+    <Actions>1. Zur Wiederaufnahme die Taste für externes Not-Aus zurücksetzen. <p />2. Dann das System in den Zustand MOTOREN EIN schalten, indem die MOTOREN EIN-Taste am Steuerungsmodul gedrückt wird.</Actions>
+  </Message>
+  <Message number="505" eDefine="SYS_ERR_SYS_OPEN_DEL_STP">
+    <Title>Verzögerter Sicherheitshalt offen</Title>
+    <Description>Verzögerter Sicherheitshalt offen.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Actions>1) Zur Wiederaufnahme die Taste für verzögerten Stopp zurücksetzen. <p />2) Dann das System in den Zustand MOTOREN EIN schalten, indem die Taste MOTOREN EIN am Steuerungsmodul gedrückt wird.</Actions>
+  </Message>
+  <Message number="506" eDefine="SYS_ERR_SYS_OPEN_TS">
+    <Title>Test-Halt offen</Title>
+    <Description>Der Schaltkreis für Testmodus-Sicherheitshalt wurde unterbrochen.</Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Causes>Einer oder mehrere Schalter, die in Serie mit dem Schaltkreis für Testmodus-Sicherheitshalt verbunden sind, wurden geöffnet, was eine Vielzahl von Fehlern verursachen kann. Dies ist nur im Einrichtbetrieb möglich.</Causes>
+    <Actions>1. Schalter suchen, zurücksetzen und System neu starten. <p />2. Kabel und Anschlüsse prüfen.</Actions>
+  </Message>
+  <Message number="507" eDefine="SYS_ERR_SYS_OPEN_HW">
+    <Title>Hardwarekreis offen</Title>
+    <Description>Relais (KA16 und KA17) auf Safety Interface Board (SIB) nicht aktiviert.</Description>
+    <Consequences>MOTOREN-EIN-Befehl zurückgewiesen.</Consequences>
+    <Actions>MOTOREN-EIN-Taste drücken, um Schaltkreis zu schließen.</Actions>
+  </Message>
+  <Message number="521" eDefine="SYS_ERR_SYS_CONFLICT_TS">
+    <Title>Konflikt - Test-Halt</Title>
+    <Description>Statuskonflikt für den Test-Halt-Kreis.<p /></Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Actions>Zweikanal-Schutzeinrichtung prüfen, die den Statuskonflikt verursacht hat.</Actions>
+  </Message>
+  <Message number="525" eDefine="SYS_ERR_SYS_CONFLICT_ES_PANL">
+    <Title>Konflikt Not-Aus am Bedienfeld</Title>
+    <Description>Statuskonflikt für den Not-Aus-Kreis am Bedienfeld.<p /></Description>
+    <Consequences>Das System wechselt in den Zustand Not-Aus.</Consequences>
+    <Actions>Zweikanal-Schutzeinrichtung prüfen, die den Statuskonflikt verursacht hat.</Actions>
+  </Message>
+  <Message number="526" eDefine="SYS_ERR_SYS_CONFLICT_ES_PEND">
+    <Title>Konflikt Not-Aus am FlexPendant</Title>
+    <Description>Statuskonflikt für den Not-Aus-Kreis am FlexPendant<p /></Description>
+    <Consequences>Das System wechselt in den Zustand Not-Aus.</Consequences>
+    <Actions>Zweikanal-Schutzeinrichtung prüfen, die den Statuskonflikt verursacht hat.</Actions>
+  </Message>
+  <Message number="527" eDefine="SYS_ERR_SYS_CONFLICT_ES_EXT">
+    <Title>Not-Aus ext. Kat. 0-Konflikt</Title>
+    <Description>Statuskonflikt für den Not-Aus-Kreis ext. Kategorie 0.<p /></Description>
+    <Consequences>Das System wechselt in den Zustand Not-Aus.</Consequences>
+    <Actions>Zweikanal-Schutzeinrichtung prüfen, die den Statuskonflikt verursacht hat.</Actions>
+  </Message>
+  <Message number="528" eDefine="SYS_ERR_SYS_CONFLICT_PNT_SW_HV">
+    <Title>Konflikt - HS-Eingangssignal-Verriegelung</Title>
+    <Description>Nur eines der beiden Eingangssignale in den Hochspannungskreisen wurde geöffnet.</Description>
+    <Consequences>Lackier-Sicherheitskreis wird geöffnet.</Consequences>
+    <Actions>Zweikanal-Schutzeinrichtung prüfen, die den Statuskonflikt verursacht hat.</Actions>
+  </Message>
+  <Message number="529" eDefine="SYS_ERR_SYS_CONFLICT_PNT_INT">
+    <Title>Konflikt - Kabinenverriegelungs-Eingangssignal</Title>
+    <Description>Nur eines der beiden Eingangssignale in Kabinenverriegelungskreis wurde geöffnet.</Description>
+    <Consequences>Lackier-Sicherheitskreis wird geöffnet.</Consequences>
+    <Actions>Kabel und Anschlüsse prüfen.</Actions>
+  </Message>
+  <Message number="531" eDefine="SYS_ERR_SYS_CONFLICT_DEL_STP">
+    <Title>Konflikt - Verzögerter-Halt</Title>
+    <Description>Statuskonflikt im Schaltkreis des verzögerten Halts.<p /></Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Actions>Kabel und Anschlüsse prüfen.</Actions>
+  </Message>
+  <Message number="534" eDefine="SYS_ERR_SYS_CONFLICT_MODE_SEL">
+    <Title>Konflikt - Betriebsartenwahlschalter</Title>
+    <Description>Ein Anschluss am Betriebsartenwahlschalter ist fehlerhaft.<p /></Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Actions>Kabel und Anschlüsse prüfen.</Actions>
+  </Message>
+  <Message number="535" eDefine="SYS_ERR_SYS_CONFLICT_AUX_RUN_CH">
+    <Title>Konflikt - AUX-Verriegelung</Title>
+    <Description>Nur einer der beiden AUX-Verriegelungskreise wurde geöffnet. Normalerweise für CBS-Türverriegelung verwendet.</Description>
+    <Consequences>Lackier-Sicherheitskreis wird geöffnet.</Consequences>
+    <Actions>Kabel und Anschlüsse prüfen.</Actions>
+  </Message>
+  <Message number="536" eDefine="SYS_ERR_SYS_CONFLICT_MON">
+    <Title>Konflikt - MOTOREN-EIN-Betriebskreis</Title>
+    <Description>Nur eines der beiden MOTOREN EIN-Betriebskreissignale im Betriebskreis wurde geöffnet.</Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Actions>Kabel und Anschlüsse prüfen.</Actions>
+  </Message>
+  <Message number="556" eDefine="SYS_ERR_SYS_ACTIVE_AXC1_ENABLE2">
+    <Title>Sicherheitskreis 2 AXC 1 offen</Title>
+    <Description>Status aktiv, wenn Sicherheitskreis von Achscomputer 1 offen ist.<p /></Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Actions>1. Andere Fehlermeldungen auf primäre Fehlerursache prüfen.<p />2. Wenn keine weiteren Fehlermeldungen vorhanden sind, prüfen, ob bei der Netzspannung eine Phase fehlt.</Actions>
+  </Message>
+  <Message number="557" eDefine="SYS_ERR_SYS_ACTIVE_AXC2_ENABLE2">
+    <Title>Sicherheitskreis 2 AXC 2 offen</Title>
+    <Description>Status aktiv, wenn Sicherheitskreis von Achscomputer 2 offen ist.<p /></Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Actions>1. Andere Fehlermeldungen auf primäre Fehlerursache prüfen.<p />2. Wenn keine weiteren Fehlermeldungen vorhanden sind, prüfen, ob bei der Netzspannung eine Phase fehlt.</Actions>
+  </Message>
+  <Message number="558" eDefine="SYS_ERR_SYS_ACTIVE_MAN_ENA">
+    <Title>Manipulatorfehler</Title>
+    <Description>Status aktiv, wenn Stromzufuhr zum Manipulator <arg format="%i" ordinal="1" />, der mit dem Manipulator Interface Board (MIB) <arg format="%i" ordinal="2" /> verbunden ist, unterbrochen oder Sicherheitskreiszustand des Manipulators nicht OK ist.<p /></Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Actions>1. Stromzufuhr zum Manipulator prüfen.<p />2. Sicherheitskreis auf Manipulator Controller Board (MCOB) prüfen.  <p /></Actions>
+  </Message>
+  <Message number="559" eDefine="SYS_ERR_SYS_ACTIVE_MCOB_COLL_OK">
+    <Title>Kollisionssensor aktiv</Title>
+    <Description>Status aktiv, wenn der digitale Kollisionssensor auf Manipulator Controller Board (MCOB) aktiv ist.<p /></Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Actions>Kollisionssensoren prüfen, die an MCOB angeschlossen sind.</Actions>
+  </Message>
+  <Message number="560" eDefine="SYS_ERR_SYS_ACTIVE_MCOB_LIMITS">
+    <Title>Endlagenschalter an MCOB</Title>
+    <Description>Status aktiv, wenn Endlagenschalter auf Manipulator Controller Board (MCOB) aktiv ist.<p /></Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Actions>Endlagenschalter prüfen, die am MCOB angeschlossen sind.</Actions>
+  </Message>
+  <Message number="561" eDefine="SYS_ERR_SYS_ACTIVE_AMA_SW_OK">
+    <Title>MCOB-Software hat Sicherheitskreis geöffnet</Title>
+    <Description>Status aktiv, wenn Manipulator Controller Board (MCOB)-Software den Sicherheitskreis am MCOB geöffnet hat.<p /></Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Actions>MCOB-Software prüfen.</Actions>
+  </Message>
+  <Message number="562" eDefine="SYS_ERR_SYS_ACTIVE_ES_RES_FLT">
+    <Title>Not-Aus-Fehler rücksetzen</Title>
+    <Description>Status aktiv, wenn Eingang zum Rücksetzen des Not-Aus länger als 3 Sekunden aktiviert ist.<p /></Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Actions>1. Anschluss für externes Reset von Not-Aus prüfen.<p />2. MOTOREN-EIN-Taste prüfen.</Actions>
+  </Message>
+  <Message number="563" eDefine="SYS_ERR_SYS_ACTIVE_SVO_DISC_FB">
+    <Title>Servo-Trennschalter offen</Title>
+    <Description>Status aktiv, wenn Servo-Trennschalter für System <arg format="%i" ordinal="1" /> ausgeschaltet ist.</Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Actions>Wenn kein Servo-Trennschalter installiert ist, Sicherheitskreisverbindung für Manipulator Interface Board (MIB) prüfen.</Actions>
+  </Message>
+  <Message number="564" eDefine="SYS_ERR_SYS_ACTIVE_BRK_REL_1_7">
+    <Title>Lösen von Bremsen für Achse 1 und 7</Title>
+    <Description>Status aktiv, wenn manuelles Lösen der Bremsen für Achse 1 und 7 aktiviert ist.</Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Actions>Schalter für manuelles Lösen der Bremsen von Achse 1 und 7 prüfen.</Actions>
+  </Message>
+  <Message number="565" eDefine="SYS_ERR_SYS_ACTIVE_EXT1_OK">
+    <Title>Externer Sicherheitskreis 1 geöffnet</Title>
+    <Description>Status aktiv, wenn externer Sicherheitskreis 1 von Manipulator Controller Board (MCOB) offen ist.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Actions>Anschluss an MCCB X25 prüfen.</Actions>
+  </Message>
+  <Message number="566" eDefine="SYS_ERR_SYS_ACTIVE_EXT2_OK">
+    <Title>Externer Sicherheitskreis 2 geöffnet</Title>
+    <Description>Status aktiv, wenn externer Sicherheitskreis 2 von Manipulator Controller Board (MCOB) offen ist.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Actions>Anschluss an MCCB X43 prüfen.</Actions>
+  </Message>
+  <Message number="567" eDefine="SYS_ERR_SYS_ACTIVE_PWR_OK">
+    <Title>Zu niedrige Spannung an MCOB</Title>
+    <Description>Status aktiv, wenn Spannung an Manipulator Controller Board (MCOB) niedriger als 16V ist.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Actions>Spannung an MCOB prüfen.</Actions>
+  </Message>
+  <Message number="568" eDefine="SYS_ERR_SYS_ACTIVE_HW_OK">
+    <Title>Hardwaresicherheitskreis von MCOB offen</Title>
+    <Description>Status aktiv, wenn Firmware von Manipulator Controller Board (MCOB) den Sicherheitskreis geöffnet hat.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+  </Message>
+  <Message number="569" eDefine="SYS_ERR_SYS_ACTIVE_WD_OK">
+    <Title>Überwachungsfehler für MCOB</Title>
+    <Description>Status aktiv, wenn Überwachung für Manipulator Controller Board (MCOB) fehlschlägt.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+  </Message>
+  <Message number="570" eDefine="SYS_ERR_SYS_ACTIVE_TPU_ERROR">
+    <Title>PG-Verdrahtungsfehler</Title>
+    <Description>Status aktiv, wenn Process Interface Board (PIB) Fehler in Not-Aus-PG- und Zustimmungsschalter-Signalen erkennt (Störimpulstest).</Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Actions>1. Kabel und Anschlüsse an Programmiergerät (PG) prüfen.<p />2. Pendant Interface Board (TIB) und Manipulator Interface Board (MIB) überprüfen.</Actions>
+  </Message>
+  <Message number="571" eDefine="SYS_ERR_SYS_OPEN_SAF_SW_HV">
+    <Title>HS-Verriegelung offen</Title>
+    <Description>Hochspannungsverriegelung des Lackiersystems wurde von externer Verriegelungsverbindung geöffnet.<p /></Description>
+    <Consequences>Lackier-Sicherheitskreis wird geöffnet.</Consequences>
+    <Actions>Manuellen Schalter zum Trennen des HS-Systems prüfen.</Actions>
+  </Message>
+  <Message number="572" eDefine="SYS_ERR_SYS_OPEN_CAB_ILCK">
+    <Title>Kabinenverriegelung offen</Title>
+    <Description>Kabinenverriegelung wurde durch externe Verriegelungsverbindung geöffnet.</Description>
+    <Consequences>Lackier-Sicherheitskreis wird geöffnet.</Consequences>
+    <Actions>Kabinenbelüftung und andere Sicherheitsfunktionen der Kabine prüfen.</Actions>
+  </Message>
+  <Message number="573" eDefine="SYS_ERR_SYS_CTRLID_MISSING_WARNING">
+    <Title>Steuerungs-ID fehlt</Title>
+    <Description>Die Steuerungs-ID ist die eindeutige Kennung der Steuerung. Standardmäßig ist sie mit der Seriennummer des Steuerschranks identisch. Die Softwarekonfiguration der Steuerung fehlt in diesen Kenndaten.</Description>
+    <Causes>Dies kann eintreten, wenn das Speichermedium der Steuerung ausgetauscht oder neu formatiert wurde.</Causes>
+    <Actions>Seriennummer der Steuerung am Steuerschrank ablesen, um die korrekte Steuerungs-ID zu ermitteln. Mithilfe von RobotStudio-Tools diesen Wert für die Steuerung einstellen.</Actions>
+  </Message>
+  <Message number="574" eDefine="SYS_ERR_SYS_OPEN_PROCESS">
+    <Title>Prozessverriegelung offen</Title>
+    <Description>Prozessverriegelung wurde durch externe Verriegelungsverbindung geöffnet.</Description>
+    <Consequences>Lackier-Sicherheitskreis wird geöffnet.</Consequences>
+    <Actions>Manuellen Schalter zum Trennen des Prozesssystems prüfen.</Actions>
+  </Message>
+  <Message number="575" eDefine="SYS_ERR_SYS_OPEN_AUX">
+    <Title>AUX-Verriegelung offen</Title>
+    <Description>AUS-Verriegelung wurde durch externe Verriegelungsverbindung geöffnet. Normalerweise für Cartridge Bell System (CBS) verwendet.</Description>
+    <Consequences>Lackier-Sicherheitskreis wird geöffnet.</Consequences>
+    <Actions>Mit AUX-Eingängen verbundene Kabel und Geräte prüfen. </Actions>
+  </Message>
+  <Message number="576" eDefine="SYS_ERR_SYS_OPEN_SYS2">
+    <Title>Verriegelungskreis System 2 offen</Title>
+    <Description>Verriegelungskreis System 2 ist geöffnet. Normalerweise für Cartridge Bell System (CBS) oder Lackierpumpen verwendet.</Description>
+    <Consequences>Lackier-Sicherheitskreis wird geöffnet.</Consequences>
+    <Actions>Mit System 2 verbundene Kabel und Geräte prüfen.</Actions>
+  </Message>
+  <Message number="577" eDefine="SYS_ERR_SYS_OPEN_HV_ON">
+    <Title>HV ON offen</Title>
+    <Description>Hochspannungsschalter auf Bedienfeld ist geöffnet.</Description>
+    <Consequences>Lackier-Sicherheitskreis wird geöffnet.</Consequences>
+    <Actions>MOTOREN-EIN bestätigen und HS-Schalter einschalten, um den HS-Verriegelungskreis zu schließen.</Actions>
+  </Message>
+  <Message number="581" eDefine="SYS_ERR_SYS_ACTIVE_SIB_COM">
+    <Title>Keine SPI-Verbindung zu SIB</Title>
+    <Description>Status aktiv, wenn zyklischer Sicherheitskreis 1-Test von Safety Interface Board (SIB) fehlschlägt.<p /><p /></Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Actions>1. Status für Serial Peripheral Interface (SPI) prüfen.<p />2. Kabel zwischen Process Interface Board (PIB) und SIB prüfen.</Actions>
+  </Message>
+  <Message number="582" eDefine="SYS_ERR_SYS_ACTIVE_MIB_COM">
+    <Title>Keine SPI-Verbindung zu MIB</Title>
+    <Description>Status aktiv, wenn zyklischer Sicherheitskreis 1-Test von Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> fehlschlägt.</Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Actions>1. Kabel und Status für Serial Peripheral Interface (SPI) prüfen.<p />2. Kabel zwischen SIB und Manipulator Interface Board (MIB) prüfen.</Actions>
+  </Message>
+  <Message number="583" eDefine="SYS_ERR_SYS_ACTIVE_SCMC_SW_WD">
+    <Title>Überwachung von PIB-Software schlägt fehl</Title>
+    <Description>Status aktiv, wenn Firmware von Process Interface Board (PIB) Überwachungsfehler zwischen PIB-Firmware und PIB-Software erkennt.</Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Causes>Prozessorlast für PIB-Software zu hoch.</Causes>
+  </Message>
+  <Message number="584" eDefine="SYS_ERR_SYS_ACTIVE_PIB_SIB_WD">
+    <Title>Fehler in interner SPI</Title>
+    <Description>Status aktiv, wenn Firmware von Process Interface Board (PIB) Überwachungsfehler zwischen Safety Interface Board (SIB) und Manipulator Interface Board (MIB) erkennt.</Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Causes>Verbindung von Serial Peripheral Interface (SPI) auf SPI 1 ist getrennt.</Causes>
+    <Actions>Kabel zwischen PIB, SIB und MIB prüfen.</Actions>
+  </Message>
+  <Message number="585" eDefine="SYS_ERR_SYS_ACTIVE_PIB_SW_ENA_EXT">
+    <Title>Sicherheitskreis von IPS geöffnet</Title>
+    <Description>Status aktiv, wenn Sicherheitskreis von Signal Safety/PibSw/Enable geöffnet ist.</Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Actions>Mit Signal Safety/PibSw/Enable verbundenen Aktor prüfen.</Actions>
+  </Message>
+  <Message number="586" eDefine="SYS_ERR_SYS_ACTIVE_PIB_SW_FPGA_WD">
+    <Title>Überwachungsfehler für PIB-Firmware</Title>
+    <Description>Status aktiv, wenn Software von Process Interface Board (PIB) Überwachungsfehler für PIB-Firmware erkennt, der durch Fehler in FPGA verursacht wird.</Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+  </Message>
+  <Message number="587" eDefine="SYS_ERR_SYS_ACTIVE_PIB_SW_SCMC_WD">
+    <Title>Überwachungsfehler für PIB-Firmware</Title>
+    <Description>Status aktiv, wenn Software von Process Interface Board (PIB) Überwachungsfehler für PIB-Firmware erkennt, der durch Fehler in Eingangssystem-Mikrocontroller verursacht wird.</Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Causes>Firmware wird nicht ausgeführt.</Causes>
+  </Message>
+  <Message number="588" eDefine="SYS_ERR_SYS_ACTIVE_PIB_EIO_SOCKET">
+    <Title>Überwachungsfehler zwischen PIB und MC</Title>
+    <Description>Status aktiv, wenn Software auf Process Interface Board (PIB) Überwachungsfehler für Hauptcomputer (MC) erkennt.</Description>
+    <Consequences>Das System geht in den Zustand SYS FAIL.</Consequences>
+    <Actions>Ethernet-Kabel zwischen PIB und MC prüfen.</Actions>
+  </Message>
+  <Message number="589" eDefine="SYS_ERR_SYS_ACTIVE_PIB_MCOB_AGENT">
+    <Title>Überwachungsfehler zwischen PIB und MCOB</Title>
+    <Description>Status aktiv, wenn Agent-Verbindung von CAN zwischen Process Interface Board (PIB) und Manipulator Controller Board (MCOB) unterbrochen ist.</Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Actions>1. CAN-Kabel prüfen.<p />2. MCOB-Status prüfen.</Actions>
+  </Message>
+  <Message number="590" eDefine="SYS_ERR_SYS_OPEN_CIR_MASK">
+    <Title>Maske für offenen Schaltkreis nicht gesetzt</Title>
+    <Description>Die Maske für offenen Schaltkreis von Bremsen auf Manipulator Controller Board (MCOB/MCB) ist nicht gesetzt. Die Maske muss während des Startens vom Process Interface Board (PIB) gesetzt werden.</Description>
+    <Consequences>Diese Meldung wird immer ausgegeben, wenn die Bremsen gelöst werden, bis die Maske für offenen Schaltkreis an MCOB gesetzt ist.</Consequences>
+    <Causes>IPS-Konfiguration für PIB ist nicht geladen oder Konfigurationsdatei für Bremseneinstellungen ist nicht vorhanden.</Causes>
+    <Actions>1. Prüfen, ob IPS-Konfiguration während des Startens geladen wird.<p />2. Prüfen, ob IPS-Konfigurationsdatei für Bremseneinstellungen für PIB installiert ist.</Actions>
+  </Message>
+  <Message number="591" eDefine="SYS_ERR_SYS_ACTIVE_TPU_HOT_PLUG">
+    <Title>Hot-Plug Timeout</Title>
+    <Description>Die Hot-Plug-Taste  wurde zu lange gedrückt.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Actions>MOTOREN EIN-Taste drücken, um Schaltkreis zu schließen.</Actions>
+  </Message>
+  <Message number="592" eDefine="SYS_ERR_SYS_ACTIVE_EXT_OK">
+    <Title>Externer Sicherheitskreis offen</Title>
+    <Description>Status aktiv, wenn externer Sicherheitskreis von Manipulator Controller Board (MCB) offen ist.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Actions>Anschluss an MCB X2 prüfen.</Actions>
+  </Message>
+  <Message number="593" eDefine="SYS_ERR_SYS_ACTIVE_IO_PWR_OK">
+    <Title>Zu niedrige E/A-Spannung an MCB</Title>
+    <Description>Status aktiv, wenn E/A-Spannung an Manipulator Controller Board (MCB) niedriger als 16 V ist.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Actions>Spannung an MCB prüfen.</Actions>
+  </Message>
+  <Message number="600" eDefine="SYS_ERR_SYS_UNOFFICIAL_RW_RELEASE">
+    <Title>Keine offizielle RobotWare-Release</Title>
+    <Description>Die aktuelle RobotWare ist keine offiziell unterstützte Release. <p />Nicht-offizielle RobotWare-Releases können nur für einen begrenzten Zeitraum für Tests und zur Validierung verwendet werden.</Description>
+    <Consequences>ABB bietet keine langfristige Unterstützung für nicht-offizielle Releases.</Consequences>
+    <Actions>Wenn es sich um ein Produktionssystem handelt, installieren Sie so bald wie möglich eine offizielle RobotWare-Release.</Actions>
+  </Message>
+  <Message number="601" eDefine="SYS_ERR_SYS_INBOX_ERROR_NAMES_TOO_LONG">
+    <Title>Zu lange Pfade beim Entpacken der RobotWare-Dateien</Title>
+    <Description>Das RobotWare-Installationspaket wurde nicht korrekt auf die Steuerung entpackt. Der Pfad einiger Dateien des Pakets ist zu lang und konnte nicht von der Steuerungssoftware verarbeitet werden.<p />Während des Installationsvorgangs wurde die Steuerungssoftware aktualisiert, um längere Pfade zu verarbeiten, daher sollte eine Neuinstallation des Systems das Problem lösen.</Description>
+    <Consequences>Einige RobotWare-Dateien fehlen in der Steuerung und Ihr System arbeitet daher eventuell nicht ordnungsgemäß.</Consequences>
+    <Actions>Führen Sie mit SystemBuilder eine Neuinstallation des Systems durch. Wenn der Fehler nach der Neuinstallation weiterhin auftritt, wenden Sie sich an den Service von ABB. </Actions>
+  </Message>
+  <Message number="602" eDefine="SYS_ERR_SYS_UNOFFICIAL_RW_IMAGE">
+    <Title>Kein offizielles RobotWare-Image</Title>
+    <Description>Das aktuelle RobotWare-Image des Hauptcomputer ist nicht das Original und wird daher nicht offiziell unterstützt.</Description>
+    <Consequences>ABB bietet keine langfristige Unterstützung für nicht-offizielle RobotWare-Releases.</Consequences>
+    <Causes>Das offizielle RobotWare-Image des Hauptcomputers wurde ersetzt, z.B. um für ein spezielles Problem Diagnosedaten zu sammeln.</Causes>
+    <Actions>Wenn es sich um ein Produktionssystem handelt, installieren Sie so bald wie möglich eine offizielle RobotWare-Release.</Actions>
+  </Message>
+  <Message number="610" eDefine="SYS_ERR_SYS_INV_SHORT_CIRCUIT_ERROR">
+    <Title>Kurzschluss in Motorphase</Title>
+    <Description>Die Antriebseinheit für Achse <arg format="%s" ordinal="2" /> meldet einen Kurzschluss. Die Achse ist verbunden mit Antriebsmodul <arg format="%d" ordinal="1" /> bei Einheiten-Position <arg format="%d" ordinal="3" /> und Knoten <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand Motoren-AUS.</Consequences>
+    <Causes>1. Kurzschluss in Kabeln oder Steckverbindern zwischen den Phasen oder zur Masse.<p />2. Kurzschluss im Motor zwischen den Phasen oder zur Masse. </Causes>
+    <Actions>1. Kabel oder Steckverbinder prüfen/austauschen.<p />2. Motor prüfen/austauschen. </Actions>
+  </Message>
+  <Message number="620" eDefine="SYS_ERR_SYS_INTERNAL_TEST_MODE_ENABLED">
+    <Title>The system has entered an internal test mode</Title>
+    <Description>
+         A feature to perform ABB Robotics internal tests has been enabled in <arg format="%s" ordinal="1" />.
+   </Description>
+    <Consequences>The system may not behave as expected.</Consequences>
+    <Actions>
+         Restart the system when the test has been performed. If this was an unexpected message, please contact your contact your local ABB representative for assistance.
+      </Actions>
+  </Message>
+  <Message number="630" eDefine="SYS_ERR_SYS_IV_NO_VALID_JOB_LOADED">
+    <Title>Der Kameraauftrag ist ungültig</Title>
+    <Description>Die Kamera <arg format="%s" ordinal="1" /> ist im Abarbeitungsmodus, der in sie geladene Auftrag ist jedoch kein gültiger ABB-Auftrag.</Description>
+    <Consequences>Alle Kameraergebnisse gehen verloren.</Consequences>
+    <Causes>Der Kameraauftrag ist kein gültiger ABB-Auftrag oder die vom Kameraauftrag für jede Aufnahme erzeugten Parameter wurden nicht in RAPID-Variablen konvertiert. </Causes>
+    <Actions>- Kamera in den Programmmodus bringen. Einen gültigen ABB-Auftrag in die  <p />  Kamera laden oder mit RobotStudio einen gültigen Auftrag erstellen. <p />- Wählen Sie "Ausgabe in RAPID“ auf der Ansicht „Vision“  in RobotStudio, <p />  um die Parameter in RAPID-Variablen zu konvertieren. </Actions>
+  </Message>
+  <Message number="631" eDefine="SYS_ERR_SYS_IV_COMMUNICATION_ERROR">
+    <Title>Fehler bei Kommunikation mit Kamera</Title>
+    <Description>Die Robotersteuerung konnte nicht mit der Kamera <arg format="%s" ordinal="1" /> kommunizieren.</Description>
+    <Consequences>Kameraergebnisse gehen eventuell verloren.</Consequences>
+    <Actions>- Kamerastatus überprüfen <p />- Verkabelung zwischen der Robotersteuerung und der Kamera überprüfen.</Actions>
+  </Message>
+  <Message number="632" eDefine="SYS_ERR_SYS_IV_RESTART_CONTROLLER">
+    <Title>Die IP-Adresse der Kamera hat sich geändert</Title>
+    <Description>Die IP-Adresse der Kamera hat sich geändert. Es ist erforderlich, einen Warmstart der Steuerung durchzuführen, um die Funktion „Integrated Vision“ zu verwenden. </Description>
+    <Actions>Führen Sie einen Warmstart der Steuerung durch.</Actions>
+  </Message>
+  <Message number="633" eDefine="SYS_ERR_SYS_IV_OPTION_NOT_INSTALLED">
+    <Title>Integrated Vision nicht installiert</Title>
+    <Description>Die Option Integrated Vision ist für dieses System nicht installiert.</Description>
+    <Consequences>Es ist keine Kommunikation mit der Kamera möglich.</Consequences>
+    <Causes>Die Funktion Integrated Vision wurde verwendet oder konfiguriert, ohne die Option Integrated Vision zu installieren.</Causes>
+    <Actions>1) Wenn die Option Integrated Vision benötigt wird: Neues System mit dieser Option konfigurieren und das System installieren.<p />2) Wenn die Option Integrated Vision nicht benötigt wird: Funktion Integrated Vision entfernen, d. h. RAPID- oder Konfigurationsdaten. </Actions>
+  </Message>
+  <Message number="634" eDefine="SYS_ERR_SYS_IV_NO_RESULT">
+    <Title>Kein Ergebnis für aktuellen Kamera-Job</Title>
+    <Description>Die Robotersteuerung hat kein Ergebnis für Kamera <arg format="%s" ordinal="1" /> empfangen.</Description>
+    <Consequences>Die Robotersteuerung erkennt keine Positionsdaten im Bild.</Consequences>
+    <Causes>Es wurden keine Objektwerkzeuge für den in Kamera <arg format="%s" ordinal="1" /> geladenen aktuellen Job definiert.</Causes>
+    <Actions>Fügen Sie dem Job mit RobotStudio ein Objektsuchwerkzeug oder ein Objektüberprüfungswerkzeug hinzu. Folgen Sie den Anweisungen im RobotStudio-Kontextmenü und speichern Sie den Job.</Actions>
+  </Message>
+  <Message number="635" eDefine="SYS_ERR_SYS_IV_TOO_MANY_CAMERAS">
+    <Title>Zu viele Kameras verbunden</Title>
+    <Description>Die Anzahl der mit der Robotersteuerung verbundenen Kameras ist <arg format="%d" ordinal="1" />. Die maximale Anzahl von Kameras für eine Robotersteuerung ist <arg format="%d" ordinal="1" />.
+  </Description>
+    <Consequences>Die Robotersteuerung kommuniziert nicht mit allen Kameras.</Consequences>
+    <Causes>Die maximale Anzahl von Kameras für eine Robotersteuerung wurde überschritten.</Causes>
+    <Actions>Verringern Sie die Anzahl der mit der Robotersteuerung verbundenen Kameras.</Actions>
+  </Message>
+  <Message number="636" eDefine="SYS_ERR_SYS_IV_CAMERA_ALREADY_EXISTS">
+    <Title>Doppelter Kameraname</Title>
+    <Description>Die Kamerakonfiguration ist ungültig. Der Kameraname <arg format="%s" ordinal="1" /> wurde für mehr als eine Kamera verwendet. </Description>
+    <Consequences>Die Robotersteuerung kommuniziert nicht mit Kameras, die denselben Namen haben.</Consequences>
+    <Causes>Zwei oder mehr Kameras mit demselben Namen wurden konfiguriert.</Causes>
+    <Actions>Benennen Sie die Kameras um, damit sie keine doppelten Namen haben, und führen Sie einen Warmstart der Steuerung durch.</Actions>
+  </Message>
+</Domain>

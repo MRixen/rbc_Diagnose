@@ -10,7 +10,6 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.v4.app.Fragment;
-import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -90,7 +89,7 @@ public class CycleTime extends Fragment implements Receiver.FirstEventListener, 
 
     private void setDialog(Context context){
             final Dialog dialog = new Dialog(getActivity());
-            dialog.setContentView(R.layout.customdialog);
+            dialog.setContentView(R.layout.dialog_cycletimegraph);
             dialog.setTitle("Cycle time graph");
             dialog.setCancelable(true);
 

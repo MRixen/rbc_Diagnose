@@ -1,10 +1,15 @@
 package com.example.manuelrixen.abbtestapp;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * Created by Manuel.Rixen on 27.08.2015.

@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="SYS" domainNo="2" lang="de" elogTextVersion="1.0" min="153" max="248">
+  <Message number="153" eDefine="SYS_ERR_SYS_REJ_MOTONSTART">
+    <Title>Motoren Ein und Start unzulässig</Title>
+    <Description>Motoren Ein und Start/Neustart des Programms über System-E/A nicht zulässig.</Description>
+    <Consequences>Programm kann nicht gestartet werden.</Consequences>
+    <Causes>- Roboter befindet sich außerhalb des Wiederanfahrbereichs.<p />- Das Programm wurde gerade abgearbeitet.<p />- Ein in Ausführung befindlicher Backup-Vorgang.</Causes>
+    <Actions>- Roboter manuell in Wiederanfahrbereich bewegen oder Programmzeiger verschieben.<p />- Programm vor Aktivierung der Systemeingänge "Motors On" und "Start" stoppen.</Actions>
+  </Message>
+  <Message number="154" eDefine="SYS_ERR_SYS_REJ_STOP_INSTR">
+    <Title>Stopp-Instruktion unzulässig</Title>
+    <Description>Stopp des Programms nach Instruktion über System-E/A nicht zulässig.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="156" eDefine="SYS_ERR_SYS_NO_ARG_ROUTINE_NAME">
+    <Title>Undefiniertes Argument</Title>
+    <Description>Name der Interrupt-Routine für System-E/A<p />Manuelle Unterbrechung ist nicht definiert.<p /></Description>
+    <Actions>Den Namen der Interrupt-Routine konfigurieren.<p /></Actions>
+  </Message>
+  <Message number="157" eDefine="SYS_ERR_SYS_NO_ARG_PROGRAM_NAME">
+    <Title>Undefiniertes Argument</Title>
+    <Description>Programmname für System-E/A<p />LoadStart ist nicht definiert.<p /></Description>
+    <Actions>Den Programmnamen konfigurieren.<p /></Actions>
+  </Message>
+  <Message number="158" eDefine="SYS_ERR_SYS_NO_ACTION_SIGNAL">
+    <Title>Kein System Input Signal</Title>
+    <Description>Ein System Input wurde für ein nicht vorhandenes E/A-Signal definiert.<p />System Input: <arg format="%s" ordinal="1" /><p />Signalname: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Das System geht in den Zustand SYS FAIL.</Consequences>
+    <Actions>eio.cfg Signal <arg format="%s" ordinal="2" /> hinzufügen oder System Input <arg format="%s" ordinal="1" /> aus eio.cfg entfernen.<p /><p />Für jedes System Input muss ein Signal konfiguriert sein.</Actions>
+  </Message>
+  <Message number="159" eDefine="SYS_ERR_SYS_NO_STATUS_SIGNAL">
+    <Title>Kein System Output Signal</Title>
+    <Description>Ein System Input wurde für ein nicht vorhandenes E/A-Signal definiert.<p />System Output: <arg format="%s" ordinal="1" /><p />Signalname: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Das System geht in den Zustand SYS FAIL.</Consequences>
+    <Actions>eio.cfg Signal <arg format="%s" ordinal="2" /> hinzufügen oder System Output <arg format="%s" ordinal="1" /> aus eio.cfg entfernen.<p /><p />Für jedes System Output muss ein Signal konfiguriert sein.</Actions>
+  </Message>
+  <Message number="161" eDefine="SYS_ERR_SYS_SYSMOD_NOT_FIND">
+    <Title>Bahn nicht gefunden</Title>
+    <Description>Das Systemmodul <arg format="%s" ordinal="2" /> in Task <arg format="%s" ordinal="3" /> hat eine entsprechende Spezifikation in der Konfiguration für "Taskmodule", die auf einen nicht vorhandenen Dateipfad hinweisen<p /></Description>
+    <Actions>"Taskmodule" im Menü "System Parameter" anzeigen und den Pfad in dem Element für dieses Systemmodul ändern</Actions>
+  </Message>
+  <Message number="162" eDefine="SYS_ERR_SYS_SYSMOD_WRITE">
+    <Title>Schreibfehler</Title>
+    <Description>Ein Schreibfehler ist aufgetreten, als das System <p />versuchte, das Systemmodul <arg format="%.14s" ordinal="2" /><p />bei <arg format="%.37s" ordinal="3" /><p />in Task <arg format="%.16s" ordinal="4" /> zu speichern. Oder das Datei-<p />system war voll.<p /></Description>
+    <Actions>Ansicht 'Taskmodule' im Menü 'System-<p />parameter' wählen und den Pfad <p />im Eintrag für dieses Systemmodul ändern.</Actions>
+  </Message>
+  <Message number="164" eDefine="SYS_ERR_SYS_SYSMOD">
+    <Title>Reconfig fehlgeschlagen</Title>
+    <Description>Es sind noch ungespeicherte Systemmodule vorhanden.<p /></Description>
+    <Actions>Fehlerbeschreibungen in früheren Meldungen lesen.<p />Erneuten Systemstart versuchen</Actions>
+  </Message>
+  <Message number="165" eDefine="SYS_ERR_SYS_FORCED_READY">
+    <Title>Programmzeiger verloren</Title>
+    <Description>Neustart ab aktueller Position nicht <p />mehr möglich.<p /></Description>
+    <Actions>Das Programm muss <p />vom Anfang gestartet werden.</Actions>
+  </Message>
+  <Message number="166" eDefine="SYS_ERR_SYS_SYSMOD_OLDER">
+    <Title>Speichern des Moduls abgelehnt</Title>
+    <Description>Das Modul <arg format="%.14s" ordinal="2" /><p />ist älter als die Quelle <p />in <arg format="%.37s" ordinal="3" /><p />in Task <arg format="%.16s" ordinal="4" />. <p /></Description>
+  </Message>
+  <Message number="167" eDefine="SYS_ERR_SYS_USRMOD_NSAVED">
+    <Title>Ungespeichertes Modul</Title>
+    <Description>Das Modul <arg format="%.14s" ordinal="2" /><p />wurde geändert, aber nicht <p />in Task <arg format="%.16s" ordinal="3" /> gespeichert. <p /></Description>
+    <Actions />
+  </Message>
+  <Message number="170" eDefine="SYS_ERR_SYS_STOP">
+    <Title>Das System wurde gestoppt</Title>
+    <Description>Ein Fehler wurde erkannt und das System gestoppt.</Description>
+    <Consequences>Das System geht in den Zustand SYS STOP und der Roboter wird auf der Bahn angehalten. Die Bedeutung dieses Zustands wird vollständig im Handbuch zur Fehlerbehebung, IRC5, beschrieben.</Consequences>
+    <Causes>Verschiedene Fehler können die Ursache für diesen Zustandsübergang sein.</Causes>
+    <Actions>1) Gleichzeitig aufgezeichnete Meldungen in Ereignisprotokoll prüfen, um Ursache zu ermitteln.<p /> 2) Fehlerursache beseitigen.</Actions>
+  </Message>
+  <Message number="171" eDefine="SYS_ERR_SYS_HALT">
+    <Title>Das System wurde angehalten</Title>
+    <Description>Ein Fehler wurde erkannt und das System angehalten.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT, das Programm und die Roboterbewegung werden gestoppt und die Motoren ausgeschaltet. Die Bedeutung dieses Zustands wird vollständig im Handbuch zur Fehlerbehebung, IRC5, beschrieben.</Consequences>
+    <Causes>Verschiedene Fehler können die Ursache für diesen Zustandsübergang sein.</Causes>
+    <Actions>1) Gleichzeitig aufgezeichnete Meldungen in Ereignisprotokoll prüfen, um Ursache zu ermitteln.<p /> 2) Fehlerursache beseitigen.<p />3) Programm neu starten.</Actions>
+  </Message>
+  <Message number="172" eDefine="SYS_ERR_SYS_FAIL">
+    <Title>Systemausfall</Title>
+    <Description>Ein Fehler wurde erkannt, der einen Systemausfall verursachte.</Description>
+    <Consequences>Das System geht in den Zustand SYS_FEHLER. Das Programm und die Roboterbewegung werden gestoppt und die Motoren ausgeschaltet. Die Bedeutung dieses Zustands wird vollständig im Handbuch zur Fehlerbehebung, IRC5, beschrieben.</Consequences>
+    <Causes>Verschiedene Fehler können die Ursache für diesen Zustandsübergang sein.</Causes>
+    <Actions>1) Gleichzeitig aufgezeichnete Meldungen in Ereignisprotokoll prüfen, um Ursache zu ermitteln.<p /> 2) Fehlerursache beseitigen.<p />3) System neu starten (siehe Bedienerhandbuch, IRC5). </Actions>
+  </Message>
+  <Message number="176" eDefine="SYS_ERR_SYS_AO_OUTSIDE_LIMITS">
+    <Title>Analoger Systemausgang außerhalb von Gültigkeitsbereich</Title>
+    <Description>Der Wert <arg format="%f" ordinal="1" /> für den Systemausgang <arg format="%s" ordinal="2" />, Signal <arg format="%s" ordinal="3" />, ist außerhalb des gültigen Bereichs (logisches Min.: <arg format="%f" ordinal="4" /> m/s, logisches Max.: <arg format="%f" ordinal="5" /> m/s).</Description>
+    <Consequences>Der neue Wert wird nicht gesetzt, der vorherige Wert des analogen Signals wird beibehalten.</Consequences>
+    <Causes>Die logische Ober- und/oder Untergrenze des Signals ist evtl. falsch definiert.</Causes>
+    <Actions>Werte für logische Ober- und/oder Untergrenze des Signals anpassen und Steuerung neu starten.</Actions>
+  </Message>
+  <Message number="177" eDefine="SYS_ERR_DM_SHC_ERROR">
+    <Title>Kurzschluss in Motorphasenkreis</Title>
+    <Description>Motor oder Motorkabel für Achse <arg format="%s" ordinal="2" /> im Antriebsmodul <arg format="%d" ordinal="1" />, Antriebseinheit Nummer <arg format="%d" ordinal="3" />, hat einen Kurzschluss. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Mögliche Ursache: Fehlerhafter Motor oder fehlerhaftes Motorkabel. Kann auch durch Verunreinigung in den Schützen für die Kabel oder einen Fehler der Motorwicklungen verursacht werden.</Causes>
+    <Actions> 1) Sicherstellen, dass das Motorkabel korrekt an die Antriebseinheit angeschlossen ist. <p />2) Kabel und Motor durch Messen ihres Widerstands prüfen. Verbindung vor dem Messen trennen. <p />3) Gegebenenfalls fehlerhafte Komponenten austauschen. </Actions>
+  </Message>
+  <Message number="178" eDefine="SYS_ERR_SYS_WRONG_TASK_NAME">
+    <Title> Falscher Taskname konfiguriert</Title>
+    <Description>Falscher Taskname <arg format="%s" ordinal="1" /> für Systemeingang <arg format="%s" ordinal="2" /> konfiguriert. </Description>
+    <Consequences>Das digitale Eingangssignal wird nicht mit dem angegebenen Ereignis verbunden.</Consequences>
+    <Actions>Konfiguration ändern und das System neu starten.</Actions>
+  </Message>
+  <Message number="179" eDefine="SYS_ERR_SYS_MEMORY_USAGE_ERROR">
+    <Title>Kritischer Speichermangel</Title>
+    <Description>Die freie Speicherkapazität auf dem Datenträger hat eine kritische Stufe erreicht. Sie liegt unter 10 MB. Abarbeitung von RAPID-Programmen wird angehalten.</Description>
+    <Consequences>Speicher des Datenträgers ist beinahe voll. Das System kann nicht mehr korrekt arbeiten.</Consequences>
+    <Causes>Der Datenträger enthält zu viele Daten.</Causes>
+    <Actions>1) Die Dateien auf einem anderen Datenträger im Netzwerk speichern.<p />2) Daten vom Datenträger löschen.<p />3) Programm neu starten, nachdem Dateien vom Laufwerk gelöscht wurden.</Actions>
+  </Message>
+  <Message number="181" eDefine="SYS_ERR_SYS_REJ_SYS_RESET">
+    <Title>Rücksetzen von System abgelehnt</Title>
+    <Description>Rücksetzen des Systems über System-E/A <p />nicht zulässig.<p /></Description>
+  </Message>
+  <Message number="184" eDefine="SYS_ERR_SYS_ERR_ARG_MODE">
+    <Title>Falsches Argument für Systemeingänge</Title>
+    <Description>Ein undefinierter Startmodus wurde <p />für System-EA deklariert.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="185" eDefine="SYS_ERR_SYS_ERR_CONF_NAME">
+    <Title>Falscher Name</Title>
+    <Description>Ein undefinierter Name wurde in der aktuellen <p />runchn_bool-Konfiguration deklariert.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="187" eDefine="SYS_ERR_SYS_DUMP_CREATED">
+    <Title>Diagnose-Aufzeichnungsdatei erstellt</Title>
+    <Description>Wegen eines Fehlers wurde eine Systemdiagnosedatei unter <arg format="%s" ordinal="1" /> angelegt. Diese Datei enthält interne Debug-Informationen und ist für Fehlerbehebung und Debugging vorgesehen.</Description>
+    <Consequences>Das System reagiert auf den Fehler, der den Stopp verursacht hat, wie in seinem eigenen Ereignisprotokoll angegeben.</Consequences>
+    <Causes>Verschiedene Fehler können die Ursache sein. Fehler, die das System in den Zustand SYS FAIL bringen, erzeugen normalerweise eine Diagnose-Aufzeichnungsdatei.</Causes>
+    <Actions>Bei Bedarf kann die Datei an einen Fehlerbericht für die zuständige ABB-Vertretung angehängt werden.</Actions>
+  </Message>
+  <Message number="188" eDefine="SYS_ERR_SYS_IMAGE_FILE_CORRUPT">
+    <Title>Systemdaten ungültig</Title>
+    <Description>Der Inhalt der Datei <arg format="%s" ordinal="1" />, der persistente Systemdaten enthält, ist ungültig. Interner Fehlercode: <arg format="%d" ordinal="2" />. Das System wurde mit den letzten korrekten Systemdaten neu gestartet, die früher unter <arg format="%s" ordinal="3" /> gespeichert wurden. <p /></Description>
+    <Consequences>Änderungen an der Systemkonfiguration oder an RAPID-Programmen seit <arg format="%s" ordinal="4" /> stehen nach dem Neustart NICHT zur Verfügung. Diese Änderungen müssen neu implementiert werden.</Consequences>
+    <Actions>1) Gleichzeitig aufgezeichnete Meldungen in Ereignisprotokoll prüfen, um Ursache zu ermitteln.<p /> 2) Falls akzeptabel, B-Neustart ausführen, um Start mit den geladenen vorherigen Systemdaten zu erlauben.<p />3) System neu installieren.<p />4) Verfügbare Speicherkapazität prüfen. Falls erforderlich, Daten löschen, um Speicher freizugeben.</Actions>
+  </Message>
+  <Message number="189" eDefine="SYS_ERR_SYS_CTRL_FILE_CORRUPT">
+    <Title>Roboterdaten ungültig</Title>
+    <Description>Die systemunabhängigen Roboterdaten <p />können nicht aus der Datei <arg format="%s" ordinal="1" /> geladen werden. <p />Die Datei existiert, aber der Inhalt ist <p />ungültig. Interner Code: <arg format="%d" ordinal="2" /><p /></Description>
+    <Actions>Andere protokollierte Meldungen für erforderliche <p />Aktionen prüfen.<p />Dafür sorgen, dass genügend freier <p />Speicherplatz auf dem Datenträger ist.</Actions>
+  </Message>
+  <Message number="192" eDefine="SYS_ERR_SYS_MEMORY_USAGE_WARNING">
+    <Title>Speichermangel</Title>
+    <Description>Die freie Speicherkapazität auf dem Datenträger liegt unter 25 MB. Bei Erreichen von 10 MB wird die Abarbeitung von RAPID-Programmen gestoppt.</Description>
+    <Consequences>Speicher des Datenträgers ist beinahe voll. Das System kann nicht mehr korrekt arbeiten.</Consequences>
+    <Causes>Der Datenträger enthält zu viele Daten.</Causes>
+    <Actions>1) Die Dateien auf einem anderen Datenträger im Netzwerk speichern.<p />2) Daten vom Datenträger löschen.</Actions>
+  </Message>
+  <Message number="193" eDefine="SYS_ERR_SYS_CTRL_FILE_NOT_SAVED">
+    <Title>Warnung - Aktualisierung der Roboterdaten</Title>
+    <Description>Achssynchronisationswerte und Daten der Service <p />Information (SIS) wurden aus dem Backup hergestellt.<p />Systemunabhängige Roboterdaten wurden beim Abschalten nicht gespeichert. Die<p />Daten wurden aus dem neuesten Backup wiederhergestellt.<p /></Description>
+    <Actions>Sicherstellen, dass genügend Speicherplatz <p />frei bleibt.<p />Evtl. ist der Backup-Batterie leer. Protokollierte Fehlermeldungen <p />zur Hardware prüfen.</Actions>
+  </Message>
+  <Message number="194" eDefine="SYS_ERR_SYS_SYSTEM_DATA_BACKUP_WARNING">
+    <Title>Systemdaten nicht gesichert</Title>
+    <Description>Das System wurde erfolgreich wiederhergestellt, <p />aber ein Backup der aktuellen Systemdaten <p />konnte nicht angelegt werden.<p /></Description>
+    <Actions>Sicherstellen, dass genügend Speicherplatz <p />auf <arg format="%s" ordinal="1" /> frei bleibt. </Actions>
+  </Message>
+  <Message number="195" eDefine="SYS_ERR_SYS_IMAGE_FILE_NOT_SAVED">
+    <Title>Systemdaten beim Abschalten verloren gegangen</Title>
+    <Description>Normalerweise werden alle Systemdaten beim Abschalten gespeichert. Beim letzten Abschalten konnten Daten nicht gespeichert werden. Das System wurde mit den letzten korrekten Systemdaten neu gestartet, die früher unter <arg format="%s" ordinal="1" /> gespeichert wurden. </Description>
+    <Consequences>
+      <arg format="%s" ordinal="2" /> Änderungen an der Systemkonfiguration oder an RAPID-Programmen seit <arg format="%s" ordinal="2" /> stehen nach dem Neustart NICHT zur Verfügung. Diese Änderungen müssen neu implementiert werden.</Consequences>
+    <Causes>Evtl. war die Backup-Batterie beim Abschalten leer. Evtl. ist das Speichermedium voll.</Causes>
+    <Actions>1) Gleichzeitig aufgezeichnete Meldungen in Ereignisprotokoll prüfen, um Ursache zu ermitteln.<p /> 2) Falls akzeptabel, B-Neustart ausführen, um Start mit den geladenen Systemdaten zu erlauben.<p />3) System neu installieren.<p />4) Verfügbare Speicherkapazität prüfen. Ggf. Daten löschen, um Speicher freizugeben.</Actions>
+  </Message>
+  <Message number="196" eDefine="SYS_ERR_SYS_MOD_SAVED_TO_RECOVERY">
+    <Title>Modul gespeichert</Title>
+    <Description>Bei Neukonfiguration des Systems wurde ein geändertes und ungespeichertes Modul gefunden.<p />Modul wurde gespeichert in <p /><arg format="%s" ordinal="2" />. <p /></Description>
+  </Message>
+  <Message number="197" eDefine="SYS_ERR_SYS_IMAGE_FILE_REMOVED">
+    <Title>Systemdatennicht gefunden</Title>
+    <Description>Normalerweise werden alle Systemdaten beim Abschalten gespeichert. Die Datei mit persistenten Systemdaten kann nicht gefunden werden. Das System wurde mit den letzten korrekten Systemdaten neu gestartet, die früher unter <arg format="%s" ordinal="1" /> gespeichert wurden. </Description>
+    <Consequences>
+      <arg format="%s" ordinal="2" /> Änderungen an der Systemkonfiguration oder an RAPID-Programmen seit <arg format="%s" ordinal="2" /> stehen nach dem Neustart NICHT zur Verfügung. Diese Änderungen müssen neu implementiert werden.</Consequences>
+    <Causes>Die Datei mit den gespeicherten Systemdaten wurde evtl. manuell verschoben oder gelöscht.</Causes>
+    <Actions>1) Speicherort und Verfügbarkeit der gespeicherten Systemdatendatei prüfen.<p />2) Falls akzeptabel, B-Neustart ausführen, um Start mit den geladenen vorherigen Systemdaten zu erlauben.<p />3) Das System neu installieren.</Actions>
+  </Message>
+  <Message number="199" eDefine="SYS_ERR_SYS_REJ_SOFTSTOP">
+    <Title>Softstopp des Systems abgelehnt</Title>
+    <Description>Systemeingang-Softstopp ist nicht zulässig.</Description>
+  </Message>
+  <Message number="200" eDefine="SYS_ERR_SYS_OPEN_LIM_PSC">
+    <Title>Endlagenschalter von SC geöffnet</Title>
+    <Description>Der Endlagenschalter am Roboter wurde vom Safety Controller (SC) geöffnet.</Description>
+    <Consequences>Das System wechselt in den Zustand Sicherheitsstopp.</Consequences>
+    <Causes>Der Safety Controller hat den Endlagenschalter wegen einer Sicherheitsverletzung geöffnet.</Causes>
+    <Actions>1) Ereignisprotokoll nach Ursache durchsuchen.<p />2) Kabel zwischen Schützkarte und Safety Controller überprüfen.<p />3) Bestätigung durch Drücken der Taste MOTOREN EIN durchführen oder entsprechenden Systemeingang aktivieren. </Actions>
+  </Message>
+  <Message number="201" eDefine="SYS_ERR_SYS_OPEN_LIM">
+    <Title>Endlagenschalter offen</Title>
+    <Description>Endlagenschalter am Roboter geöffnet.</Description>
+    <Consequences>Das System wechselt in MOTOREN-AUS-Zustand.</Consequences>
+    <Causes>Der Roboter wurde außerhalb des Arbeitsbereichs betrieben, den die Endlagenschalter am Roboter definieren.</Causes>
+    <Actions>1) Gegebenenfalls extern vorhandene Override-Taste drücken und Roboter manuell zurück in den Arbeitsbereich verschieben.<p />2) Betrieb fortsetzen.</Actions>
+  </Message>
+  <Message number="202" eDefine="SYS_ERR_SYS_OPEN_ES">
+    <Title>Not-Aus offen </Title>
+    <Description>Der Not-Aus-Schaltkreis wurde zuvor unterbrochen und während der Unterbrechung wurde versucht, den Roboter zu betreiben.</Description>
+    <Consequences>Das System bleibt im Zustand Not-Aus.</Consequences>
+    <Causes>Es wurde versucht, eine Steuerung zu betätigen, z. B. den Zustimmungsschalter.</Causes>
+    <Actions>1. Zur Wiederaufnahme die Not-Aus-Taste, die den Stopp auslöst, zurücksetzen. <p />2. Dann das System in den Zustand MOTOREN EIN schalten, indem die MOTOREN EIN-Taste am Steuerungsmodul gedrückt wird.</Actions>
+  </Message>
+  <Message number="203" eDefine="SYS_ERR_SYS_OPEN_EN">
+    <Title>Zustimmungsschalter offen</Title>
+    <Description>Nur einer der beiden Zustimmungsschalter-Kreise wurde geöffnet.</Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Causes>Der Zustimmungsschalter des Programmiergeräts ist eventuell fehlerhaft oder falsch angeschlossen. Das Programmiergerät und sein Zustimmungsschalter werden im Handbuch zur Fehlerbehebung - IRC5 beschrieben.</Causes>
+    <Actions>1. Programmiergerät-Kabel und seinen Anschluss prüfen. <p />2. Gegebenenfalls fehlerhaftes Programmiergerät oder sein Kabel austauschen.</Actions>
+  </Message>
+  <Message number="204" eDefine="SYS_ERR_SYS_OPEN_OPKEY">
+    <Title>Ungleichgewicht Schlüsselschalterkreise</Title>
+    <Description>Das System hat ein Ungleichgewicht in den beiden parallelen Kreisen für den EINRICHTBETRIEB-/AUTOMATIKBETRIEB-Schlüsselschalter festgestellt. </Description>
+    <Causes>Das Kontaktpaar in einem der Kabel, die mit dem Schlüsselschalterkreis verbunden sind, arbeitet nicht korrekt. </Causes>
+    <Actions>1. Kabelanschluss isolieren, der den Konflikt verursacht. <p />2. Kabel ordnungsgemäß anschließen.</Actions>
+  </Message>
+  <Message number="205" eDefine="SYS_ERR_SYS_OPEN_AS">
+    <Title>Automatik-Sicherheitshalt offen</Title>
+    <Description>AS-Schaltkreis (Sicherheitshalt im Automatikbetrieb) wurde unterbrochen.</Description>
+    <Consequences>Das System geht in den Auto-Stop-Zustand.</Consequences>
+    <Causes>Einer oder mehrere Schalter, die in Serie mit dem AS-Schaltkreis verbunden sind, wurden geöffnet, was eine Vielzahl von Fehlern verursachen kann. Dies ist nur im Automatikbetrieb möglich. Die Bedeutung des AS-Schaltkreises wird im Handbuch zur Fehlerbehebung beschrieben.</Causes>
+    <Actions>1) Schalter suchen, zurücksetzen und System neu starten.<p />2) Kabel und Verbindungen prüfen.</Actions>
+  </Message>
+  <Message number="206" eDefine="SYS_ERR_SYS_OPEN_GS">
+    <Title>Allgemeiner Sicherheitshalt offen</Title>
+    <Description>GS-Schaltkreis (Allgemeiner Sicherheitshalt) wurde unterbrochen.</Description>
+    <Consequences>Das System geht in den Zustand des allgemeinen Sicherheitshalts.</Consequences>
+    <Causes>Einer oder mehrere Schalter, die in Serie mit dem AS-Schaltkreis verbunden sind, wurden geöffnet, was eine Vielzahl von Fehlern verursachen kann. Dies ist in jedem Betriebsmodus möglich. Die Bedeutung des GS-Schaltkreises wird im Handbuch zur Fehlerbehebung beschrieben.</Causes>
+    <Actions>1) Schalter suchen, zurücksetzen und System neu starten.<p />2) Kabel und Verbindungen prüfen.</Actions>
+  </Message>
+  <Message number="208" eDefine="SYS_ERR_SYS_OPEN_CH">
+    <Title>Schalter im Sicherheitskreis offen </Title>
+    <Description>Ein Sicherheitskreis (nicht Automatik- oder allgemeiner Sicherheitshalt) wurde unterbrochen. </Description>
+    <Consequences>Das System wechselt in den Zustand Sicherheitshalt.</Consequences>
+    <Causes>Einer oder mehrere Schalter, die in Serie mit dem Betriebskreis verbunden sind, wurden geöffnet, was eine Vielzahl von Fehlern verursachen kann. Eine Beschreibung des Betriebskreises finden Sie im Handbuch zur Fehlerbehebung und im Schaltplan.</Causes>
+    <Actions>1. Andere Fehlermeldungen auf primäre Fehlerursache prüfen.<p />2. Schalter suchen, zurücksetzen und System neu starten. <p />3. Kabel und Anschlüsse prüfen. </Actions>
+  </Message>
+  <Message number="209" eDefine="SYS_ERR_SYS_OPEN_EXTCONT">
+    <Title>Externes Schütz offen</Title>
+    <Description>Ein externes Schütz wurde geöffnet.</Description>
+    <Consequences>Das System wechselt bei einem Startversuch vom Motoren-AUS-Zustand in SYS HALT.</Consequences>
+    <Causes>Der Betriebskreis der externen Ausrüstung wurde unterbrochen. Ursache sind evtl. das externe Schütz, Hilfskontakte oder ggf. eine SPS. Das externe Schütz versorgt ein externes Ausrüstungsteil mit Strom, ähnlich wie das Betriebsschütz einen Roboter versorgt. Dieser Fehler kann nur beim Versuch auftreten, in den Motoren-EIN-Modus zu wechseln. Eine Beschreibung des Betriebskreises siehe im Handbuch zur Fehlerbehebung und im Schaltplan.</Causes>
+    <Actions>1) Schalter suchen, zurücksetzen und System neu starten.<p />2) Kabel und Verbindungen prüfen.<p /> 3) Hilfskontakte des externen Schützes prüfen.<p />4) Ggf. SPS-Ausrüstung prüfen, die das externe Schütz steuert.</Actions>
+  </Message>
+  <Message number="211" eDefine="SYS_ERR_SYS_FORBID_CLOSE_ENABLE">
+    <Title>Zweikanal-Fehler Sicherheitskreis</Title>
+    <Description>Ein Schalter in nur einem der beiden Sicherheitskreise wurde kurz beeinflusst, wodurch der Kreis geöffnet und wieder geschlossen wurde, ohne den anderen Kreis zu beeinflussen.<p /></Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Am Achscomputer oder im Sicherheitssystem kann eine lockere Signalverbindung vorliegen. Eine Beschreibung des Sicherheitskreises finden Sie im Handbuch zur Fehlerbehebung und im Schaltplan.</Causes>
+    <Actions>1) Kabel und Anschlüsse prüfen. <p />2) Sicherstellen, dass alle Signalanschlüsse am Achscomputer und der Sicherheitskarte korrekt verbunden sind. <p />3) Wenn keine Verbindung locker ist, die fehlerhafte Karte austauschen.</Actions>
+  </Message>
+  <Message number="212" eDefine="SYS_ERR_SYS_FORBID_CLOSE_CH">
+    <Title>Zwei-Kanal-Fehler, Betriebskreis</Title>
+    <Description>Nur einer der beiden Betriebskreise wurde geschlossen.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Ein mit dem Betriebskreis verbundener Schalter ist evtl. fehlerhaft oder nicht korrekt angeschlossen und verursacht damit, dass nur ein Kanal geschlossen wird. Eine Beschreibung des Betriebskreises siehe im Handbuch zur Fehlerbehebung, IRC5.</Causes>
+    <Actions>1) Kabel und Verbindungen prüfen.<p /> 2) Gleichzeitig aufgezeichnete Meldungen in Ereignisprotokoll prüfen, um zu ermitteln, welcher Schalter den Fehler verursacht hat.<p /> 3) Sicherstellen, dass alle Schalter korrekt arbeiten.<p />4) Um die Kreise wieder in einen definierten Status zu bringen, zuerst Not-Aus drücken, dann zurücksetzen <p />5) Wenn keine Verbindung locker ist, den fehlerhaften Schalter austauschen.</Actions>
+  </Message>
+  <Message number="213" eDefine="SYS_ERR_SYS_RUNCHN_NOT_RESET">
+    <Title>Zwei-Kanal-Fehler</Title>
+    <Description>Kurze Statusänderung in einem der Betriebs- oder Sicherheitskreise entdeckt.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Ursache können verschiedene Fehler sein. Eine Beschreibung des Betriebs- und des Sicherheitskreises siehe im Handbuch zur Fehlerbehebung, IRC5.</Causes>
+    <Actions>1) Kabel und Verbindungen prüfen.<p /> 2) Gleichzeitig aufgezeichnete Meldungen in Ereignisprotokoll prüfen, um Fehlerursache zu ermitteln.<p /> 3) Um die Kreise wieder in einen definierten Status zu bringen, zuerst Not-Aus drücken, dann zurücksetzen </Actions>
+  </Message>
+  <Message number="214" eDefine="SYS_ERR_SYS_OPEN_DRV1LIM">
+    <Title>Endlagenschalter offen, DRV1</Title>
+    <Description>Endlagenschalter am Roboter geöffnet.</Description>
+    <Consequences>Das System wechselt in MOTOREN-AUS-Zustand.</Consequences>
+    <Causes>Der Roboter wurde außerhalb des Arbeitsbereichs betrieben, den die Endlagenschalter am Roboter definieren.<p /></Causes>
+    <Actions>1) Gegebenenfalls extern vorhandene Override-Taste drücken und Roboter manuell zurück in den Arbeitsbereich verschieben.<p />2) Betrieb fortsetzen.</Actions>
+  </Message>
+  <Message number="215" eDefine="SYS_ERR_SYS_OPEN_SS">
+    <Title>Übergeordneter Sicherheitshalt offen</Title>
+    <Description>Schaltkreis für übergeordneten Sicherheitshalt wurde geöffnet.</Description>
+    <Consequences>Das System geht in den Zustand des übergeordneten Sicherheitshalts.</Consequences>
+    <Causes>Einer oder mehrere Schalter, die in Serie mit dem Schaltkreis für übergeordneten Sicherheitshalt verbunden sind, wurden geöffnet, was eine Vielzahl von Fehlern verursachen kann. Dies ist in jedem Betriebsmodus möglich. Die Bedeutung des Schaltkreises für übergeordneten Sicherheitshalt wird im Handbuch zur Fehlerbehebung beschrieben.</Causes>
+    <Actions>1) Schalter suchen, zurücksetzen und System neu starten.</Actions>
+  </Message>
+  <Message number="216" eDefine="SYS_ERR_SYS_CLOSE_EN_AUTO">
+    <Title>Zustimmungsschalter im Automatikmodus aktiv</Title>
+    <Description>Das System hat erkannt, dass der Zustimmungsschalter im Automatikbetrieb länger als 3 Sekunden gedrückt wurde.</Description>
+    <Consequences>Das System geht in den Sicherheitshalt-Zustand.</Consequences>
+    <Actions>1. Zustimmungsschalter freigeben.<p />2. In Automatikbetrieb wechseln.</Actions>
+  </Message>
+  <Message number="217" eDefine="SYS_ERR_SYS_OPEN_DRV2LIM">
+    <Title>Endlagenschalter offen, DRV2</Title>
+    <Description>Endlagenschalter am Roboter geöffnet.</Description>
+    <Consequences>Das System wechselt in MOTOREN-AUS-Zustand.</Consequences>
+    <Causes>Der Roboter wurde außerhalb des Arbeitsbereichs betrieben, den die Endlagenschalter am Roboter definieren.</Causes>
+    <Actions>1) Gegebenenfalls extern vorhandene Override-Taste drücken und Roboter manuell zurück in den Arbeitsbereich verschieben.<p />2) Betrieb fortsetzen.</Actions>
+  </Message>
+  <Message number="218" eDefine="SYS_ERR_SYS_OPEN_DRV3LIM">
+    <Title>Endlagenschalter offen, DRV3</Title>
+    <Description>Endlagenschalter am Roboter geöffnet.</Description>
+    <Consequences>Das System wechselt in MOTOREN-AUS-Zustand.</Consequences>
+    <Causes>Der Roboter wurde außerhalb des Arbeitsbereichs betrieben, den die Endlagenschalter am Roboter definieren.</Causes>
+    <Actions>1) Gegebenenfalls extern vorhandene Override-Taste drücken und Roboter manuell zurück in den Arbeitsbereich verschieben.<p />2) Betrieb fortsetzen.</Actions>
+  </Message>
+  <Message number="219" eDefine="SYS_ERR_SYS_OPEN_DRV4LIM">
+    <Title>Endlagenschalter offen, DRV4</Title>
+    <Description>Endlagenschalter am Roboter geöffnet.</Description>
+    <Consequences>Das System wechselt in MOTOREN-AUS-Zustand.</Consequences>
+    <Causes>Der Roboter wurde außerhalb des Arbeitsbereichs betrieben, den die Endlagenschalter am Roboter definieren.</Causes>
+    <Actions>1) Gegebenenfalls extern vorhandene Override-Taste drücken und Roboter manuell zurück in den Arbeitsbereich verschieben.<p />2) Betrieb fortsetzen.</Actions>
+  </Message>
+  <Message number="220" eDefine="SYS_ERR_SYS_CONFLICT_SS">
+    <Title>Konflikt mit übergeordnetem Sicherheitshalt</Title>
+    <Description>Nur einer der beiden Kreise für übergeordneten Sicherheitshalt wurde geöffnet.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Ein mit dem Kreis für übergeordneten Sicherheitshalt verbundener Schalter ist evtl. fehlerhaft oder nicht korrekt angeschlossen und verursacht damit, dass nur ein Kanal geschlossen wird. Eine Beschreibung des Kreises für übergeordneten Sicherheitshalt siehe im Handbuch zur Fehlerbehebung, IRC5.</Causes>
+    <Actions>1) Kabel und Verbindungen prüfen.<p /> 2) Gleichzeitig aufgezeichnete Meldungen in Ereignisprotokoll prüfen, um zu ermitteln, welcher Schalter den Fehler verursacht hat.<p /> 3) Sicherstellen, dass alle Schalter korrekt arbeiten.<p />4) Wenn keine Verbindung locker ist, den fehlerhaften Schalter austauschen.</Actions>
+  </Message>
+  <Message number="221" eDefine="SYS_ERR_SYS_CONFLICT_CH">
+    <Title>Konflikt im Betriebskreis</Title>
+    <Description>Statuskonflikt <p />für Betriebskreis.<p /></Description>
+    <Actions>Kabel des Betriebskreises prüfen.</Actions>
+  </Message>
+  <Message number="222" eDefine="SYS_ERR_SYS_CONFLICT_LIM">
+    <Title>Konflikt mit Endlagenschalter</Title>
+    <Description>Einer der beiden Endlagenschaltkreise wurde geöffnet.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Ein mit dem Endlagenschaltkreis verbundener Schalter ist evtl. fehlerhaft oder nicht korrekt angeschlossen und verursacht damit, dass nur ein Kanal geschlossen wird. Eine Beschreibung des Endlagenschaltkreises siehe im Handbuch zur Fehlerbehebung, IRC5.</Causes>
+    <Actions>1) Kabel und Verbindungen prüfen.<p /> 2) Gleichzeitig aufgezeichnete Meldungen in Ereignisprotokoll prüfen, um zu ermitteln, welcher Schalter den Fehler verursacht hat.<p /> 3) Sicherstellen, dass alle Schalter korrekt arbeiten.<p />4) Wenn keine Verbindung locker ist, den fehlerhaften Schalter austauschen.</Actions>
+  </Message>
+  <Message number="223" eDefine="SYS_ERR_SYS_CONFLICT_ES">
+    <Title>Not-Aus-Konflikt</Title>
+    <Description>Nur einer der beiden Not-Aus-Kreise wurde geöffnet.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Ein mit dem Not-Aus-Kreis verbundener Schalter ist evtl. fehlerhaft oder nicht korrekt angeschlossen und verursacht damit, dass nur ein Kanal geschlossen wird. Eine Beschreibung des Not-Aus-Kreises siehe im Handbuch zur Fehlerbehebung, IRC5.</Causes>
+    <Actions>1) Kabel und Verbindungen prüfen.<p />2) Gleichzeitig aufgezeichnete Meldungen im Ereignisprotokoll prüfen, um zu ermitteln, welcher Schalter den Fehler verursacht hat.<p />3) Sicherstellen, dass alle Schalter korrekt arbeiten.<p />4) Wenn keine Verbindung locker ist, den fehlerhaften Schalter austauschen.</Actions>
+  </Message>
+  <Message number="224" eDefine="SYS_ERR_SYS_CONFLICT_EN">
+    <Title>Zustimmungsschalter-Konflikt </Title>
+    <Description>Nur einer der beiden Zustimmungsschalter-Kreise wurde geöffnet.</Description>
+    <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
+    <Causes>Der Zustimmungsschalter des Programmiergeräts ist eventuell fehlerhaft oder falsch angeschlossen. Das Programmiergerät und sein Zustimmungsschalter werden im Handbuch zur Fehlerbehebung - IRC5 beschrieben.</Causes>
+    <Actions>1. Programmiergerät-Kabel und seinen Anschluss prüfen. <p />2. Gegebenenfalls fehlerhaftes Programmiergerät oder sein Kabel austauschen.</Actions>
+  </Message>
+  <Message number="225" eDefine="SYS_ERR_SYS_CONFLICT_AS">
+    <Title>Automatik-Sicherheitshalt-Konflikt</Title>
+    <Description>Nur einer der beiden Kreise für Sicherheitshalt im Automatikbetrieb wurde geöffnet.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Ein mit dem Kreis für Sicherheitshalt im Automatikbetrieb verbundener Schalter ist evtl. fehlerhaft oder nicht korrekt angeschlossen und verursacht damit, dass nur ein Kanal geschlossen wird. Eine Beschreibung des Kreises für Sicherheitshalt im Automatikbetrieb siehe im Handbuch zur Fehlerbehebung, IRC5.</Causes>
+    <Actions>1) Kabel und Verbindungen prüfen.<p /> 2) Gleichzeitig aufgezeichnete Meldungen in Ereignisprotokoll prüfen, um zu ermitteln, welcher Schalter den Fehler verursacht hat.<p /> 3) Sicherstellen, dass alle Schalter korrekt arbeiten.<p />4) Wenn keine Verbindung locker ist, den fehlerhaften Schalter austauschen.</Actions>
+  </Message>
+  <Message number="226" eDefine="SYS_ERR_SYS_CONFLICT_GS">
+    <Title>Allgemeiner Sicherheitshalt-Konflikt</Title>
+    <Description>Nur einer der beiden Kreise für allgemeinen Sicherheitshalt wurde geöffnet.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Ein mit dem Kreis für allgemeinen Sicherheitshalt verbundener Schalter ist evtl. fehlerhaft oder nicht korrekt angeschlossen und verursacht damit, dass nur ein Kanal geschlossen wird. Eine Beschreibung des Kreises für allgemeinen Sicherheitshalt siehe im Handbuch zur Fehlerbehebung, IRC5.</Causes>
+    <Actions>1) Kabel und Verbindungen prüfen.<p /> 2) Gleichzeitig aufgezeichnete Meldungen in Ereignisprotokoll prüfen, um zu ermitteln, welcher Schalter den Fehler verursacht hat.<p /> 3) Sicherstellen, dass alle Schalter korrekt arbeiten.<p />4) Wenn keine Verbindung locker ist, den fehlerhaften Schalter austauschen.</Actions>
+  </Message>
+  <Message number="227" eDefine="SYS_ERR_SYS_CONFLICT_DRV1K">
+    <Title>Motorschützkonflikt, DRV1</Title>
+    <Description>Nur einer der beiden Motorschütze für Antriebssystem 1 hat den Aktivierungsbefehl bestätigt.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Fehler in den Hilfskontakten des Motorschützes oder in deren Versorgung.</Causes>
+    <Actions>1) Kabel und Verbindungen prüfen.<p /> 2) Die Funktion der Hilfskontakte prüfen.</Actions>
+  </Message>
+  <Message number="231" eDefine="SYS_ERR_SYS_CONFLICT_SOFTES_CH_DEL">
+    <Title>Verzögerter Not-Aus wegen Ungleichgewicht im Schaltkreis</Title>
+    <Description>Das System hat ein Ungleichgewicht in den beiden parallelen Not-Aus-Kreisen festgestellt.</Description>
+    <Consequences>Das System geht nach ca. 1 Sekunde in den Not-Aus-Zustand.</Consequences>
+    <Causes>Das Kontaktpaar in einem der Not-Aus-Schalter arbeitet nicht korrekt.</Causes>
+    <Actions>1. Not-Aus-Schalter isolieren, der den Konflikt verursacht.<p />2. Kontaktpaar prüfen.<p />3. Sicherstellen, dass alle Verbindungen fest angeschlossen sind.<p />4. Schalter ggf. austauschen.</Actions>
+  </Message>
+  <Message number="232" eDefine="SYS_ERR_SYS_CONFLICT_SOFTAS_CH_DEL">
+    <Title>Verzögerter Autom-Sicherheitshalt wg. Ungleichgew. im Schaltkreis</Title>
+    <Description>Das System hat ein Ungleichgewicht in den beiden parallelen Automatik-Halt-Kreisen festgestellt.</Description>
+    <Consequences>Das System geht nach ca. 1 Sekunde in den Sicherheitshalt-Zustand.</Consequences>
+    <Causes>Das Kontaktpaar in einer der Sicherheitsvorrichtungen, die mit dem Automatik-Halt-Kreis verbunden sind, arbeitet nicht korrekt.</Causes>
+    <Actions>1. Sicherheitsvorrichtung isolieren, die den Konflikt verursacht.<p />2. Sicherstellen, dass eine Zwei-Kanal-Vorrichtung benutzt wird.<p />3. Kontaktpaar prüfen.<p />4. Sicherstellen, dass alle Verbindungen fest angeschlossen sind.<p />4. Vorrichtung ggf. austauschen.</Actions>
+  </Message>
+  <Message number="233" eDefine="SYS_ERR_SYS_CONFLICT_SOFTGS_CH_DEL">
+    <Title>Verzögerter allg. Sicherheitshalt wg. Ungleichgew. im Schaltkreis</Title>
+    <Description>Das System hat ein Ungleichgewicht in den beiden parallelen Kreisen für allgemeinen Sicherheitshalt festgestellt.</Description>
+    <Consequences>Das System geht nach ca. 1 Sekunde in den Sicherheitshalt-Zustand.</Consequences>
+    <Causes>Das Kontaktpaar in einer der Sicherheitsvorrichtungen, die mit dem Allgemeinen-Sicherheitshalt-Kreis verbunden sind, arbeitet nicht korrekt.</Causes>
+    <Actions>1. Sicherheitsvorrichtung isolieren, die den Konflikt verursacht.<p />2. Sicherstellen, dass eine Zwei-Kanal-Vorrichtung benutzt wird.<p />3. Kontaktpaar prüfen.<p />4. Sicherstellen, dass alle Verbindungen fest angeschlossen sind.<p />4. Vorrichtung ggf. austauschen.</Actions>
+  </Message>
+  <Message number="234" eDefine="SYS_ERR_SYS_CONFLICT_ES_CH_IMM">
+    <Title>Sofortiger Not-Aus</Title>
+    <Description>Die Not-Aus-Kreise wurden unterbrochen.</Description>
+    <Consequences>Das System geht direkt in den Not-Aus-Zustand.</Consequences>
+    <Causes>Einer oder mehrere der roten Not-Aus-Schalter wurden aktiviert.</Causes>
+    <Actions>1) Not-Aus-Schalter isolieren, der aktiviert wurde.<p />2) Schalter zurücksetzen.</Actions>
+  </Message>
+  <Message number="235" eDefine="SYS_ERR_SYS_CONFLICT_AS_CH_IMM">
+    <Title>Sofortiger Automatik-Sicherheitshalt</Title>
+    <Description>Die Automatik-Halt-Kreise wurden unterbrochen.</Description>
+    <Consequences>Das System geht direkt in den Sicherheitshalt-Zustand.</Consequences>
+    <Causes>Einer oder mehrere der Sicherheitsschalter im Automatik-Halt-Kreis wurde geöffnet.</Causes>
+    <Actions>1) Sicherheitsvorrichtung isolieren, die geöffnet wurde.<p />2) Schalter der Vorrichtung zurücksetzen.</Actions>
+  </Message>
+  <Message number="236" eDefine="SYS_ERR_SYS_CONFLICT_GS_CH_IMM">
+    <Title>Sofortiger allgemeiner Sicherheitshalt</Title>
+    <Description>Die Kreise für den allgemeinen Sicherheitshalt wurden unterbrochen.</Description>
+    <Consequences>Das System geht direkt in den Sicherheitshalt-Zustand.</Consequences>
+    <Causes>Einer oder mehrere der Sicherheitsschalter im Kreis für den allgemeinen Sicherheitshalt wurde geöffnet.</Causes>
+    <Actions>1) Sicherheitsvorrichtung isolieren, die geöffnet wurde.<p />2) Schalter der Vorrichtung zurücksetzen.</Actions>
+  </Message>
+  <Message number="237" eDefine="SYS_ERR_SYS_CONFLICT_SS_CH_IMM">
+    <Title>Sofortiger übergeordneter Sicherheitshalt</Title>
+    <Description>Die Kreise für den übergeordneten Sicherheitshalt wurden unterbrochen.</Description>
+    <Consequences>Das System geht direkt in den Sicherheitshalt-Zustand.</Consequences>
+    <Causes>Einer oder mehrere der Sicherheitsschalter im Kreis für den übergeordneten Sicherheitshalt wurden geöffnet.</Causes>
+    <Actions>1) Sicherheitsvorrichtung isolieren, die geöffnet wurde.<p />2) Schalter der Vorrichtung zurücksetzen.</Actions>
+  </Message>
+  <Message number="238" eDefine="SYS_ERR_SYS_CONFLICT_SOFTSS_CH_DEL">
+    <Title>Verzögerter überg. Sicherheitshalt wg. Ungleichgew. im Schaltkreis</Title>
+    <Description>Das System hat ein Ungleichgewicht in den beiden parallelen Kreisen für übergeordneten Sicherheitshalt festgestellt. <p /></Description>
+    <Consequences>Das System geht nach ca. 1 Sekunde in den Sicherheitshalt-Zustand.</Consequences>
+    <Causes>Das Kontaktpaar in einer der Sicherheitsvorrichtungen, die mit dem Kreis für übergeordneten Sicherheitshalt verbunden sind, arbeitet nicht korrekt.</Causes>
+    <Actions>1. Sicherheitsvorrichtung isolieren, die den Konflikt verursacht.<p />2. Sicherstellen, dass eine Zwei-Kanal-Vorrichtung benutzt wird.<p />3. Kontaktpaar prüfen.<p />4. Sicherstellen, dass alle Verbindungen fest angeschlossen sind.<p />4. Vorrichtung ggf. austauschen.</Actions>
+  </Message>
+  <Message number="240" eDefine="SYS_ERR_SYS_CONFLICT_ENABLE">
+    <Title>Konflikt zwischen ENABLE-Signalen</Title>
+    <Description>Ein Schalter in nur einem der beiden Sicherheitskreise war betroffen, ohne den anderen Kreis zu beeinflussen.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Möglicherweise ist eine lockere Signalverbindung im Sicherheitssystem vorhanden. Eine Beschreibung des Sicherheitskreises finden Sie im Handbuch zur Fehlerbehebung und im Schaltplan.</Causes>
+    <Actions>1) Kabel und Anschlüsse prüfen. <p />2) Sicherstellen, dass alle Signalanschlüsse im Sicherheitssystem korrekt verbunden sind. <p />3) Wenn keine Verbindung locker ist, die fehlerhafte Karte austauschen.</Actions>
+  </Message>
+  <Message number="241" eDefine="SYS_ERR_SYS_CONFLICT_SPEED">
+    <Title>Konflikt Betriebsart</Title>
+    <Description>Es besteht ein Konflikt zwischen der gewählten Betriebsart am Betriebsartenwahlschalter an der Vorderseite der Steuerung und der tatsächlichen Betriebsart, die der Achscomputer erkennt. </Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Eventuell besteht ein Hardwarefehler im Betriebsartenwahlschalter oder seiner Verkabelung mit dem Sicherheitssystem.</Causes>
+    <Actions>Den Betriebsartenwahlschalter und seine Verkabelung mit dem Sicherheitssystem überprüfen.</Actions>
+  </Message>
+  <Message number="245" eDefine="SYS_ERR_SYS_CONFLICT_DRV2RUN">
+    <Title>Statuskonflikt Betriebssteuerung, DRV2</Title>
+    <Description>Statuskonflikt zwischen Betriebssteuerung und Motorschützen für Antriebssystem 2.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Fehler in den Motorschützen oder in deren Versorgung.</Causes>
+    <Actions>1) Kabel und Verbindungen prüfen.<p />2) Einen Warmstart durchführen.</Actions>
+  </Message>
+  <Message number="246" eDefine="SYS_ERR_SYS_CONFLICT_DRV3RUN">
+    <Title>Statuskonflikt Betriebssteuerung, DRV3</Title>
+    <Description>Statuskonflikt zwischen Betriebssteuerung und Motorschützen für Antriebssystem 3.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Fehler in den Motorschützen oder in deren Versorgung.</Causes>
+    <Actions>1) Kabel und Verbindungen prüfen.<p />2) Einen Warmstart durchführen.</Actions>
+  </Message>
+  <Message number="247" eDefine="SYS_ERR_SYS_CONFLICT_DRV4RUN">
+    <Title>Statuskonflikt Betriebssteuerung, DRV4</Title>
+    <Description>Statuskonflikt zwischen Betriebssteuerung und Motorschützen für Antriebssystem 4.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Fehler in den Motorschützen oder in deren Versorgung.</Causes>
+    <Actions>1) Kabel und Verbindungen prüfen.<p />2) Einen Warmstart durchführen.</Actions>
+  </Message>
+  <Message number="248" eDefine="SYS_ERR_SYS_CONFLICT_DRV2K">
+    <Title>Motorschützkonflikt, DRV2</Title>
+    <Description>Nur einer der beiden Motorschütze für Antriebssystem 2 hat den Aktivierungsbefehl bestätigt.</Description>
+    <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
+    <Causes>Fehler in den Hilfskontakten des Motorschützes oder in deren Versorgung.</Causes>
+    <Actions>1) Kabel und Verbindungen prüfen.<p />2) Die Funktion der Hilfskontakte prüfen.</Actions>
+  </Message>
+</Domain>

@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="ARL" domainNo="4" lang="de" elogTextVersion="1.0" min="652" max="774">
+  <Message number="652" eDefine="SYS_ERR_ARL_AXIS_MOVING">
+    <Title>Achsenbewegung</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Eine Roboterachse, eine externe Achse oder eine unabhängige Achse bewegt sich.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Alle Roboterachsen, externen Achsen und unabhängigen Achsen müssen stillstehen.<p />MoveL mit Argument 'Fine' für Roboterachsen und externe Achsen verwenden.<p />IndRMove für unabhängige Achsen verwenden.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="654" eDefine="SYS_ERR_ARL_AXIS_ACT">
+    <Title>Achse nicht aktiv</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Zielposition der Achse ist nicht definiert (9E9) oder<p />die zu bewegende Achse ist derzeit nicht aktiv.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>1) Beim Programmieren der Zielposition war die mechanische Einheit nicht aktiv.<p />2) Beim Ändern der Zielposition war die mechanische Einheit deaktiviert.<p />3) Die mechanische Einheit ist gegenwärtig nicht aktiv.</Causes>
+    <Actions>Vor dem Ändern der oder Bewegen zur Zielposition muss die mechanische Einheit aktiviert werden.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="655" eDefine="SYS_ERR_ARL_AXIS_IND">
+    <Title>Achse ist nicht unabhängig</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Achse ist nicht im unabhängigen Modus.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>Es ist nur möglich, den Status von einer Achse im unabhängigen Modus zu erhalten.</Consequences>
+    <Actions>Achse in unabhängigen Modus bringen.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="658" eDefine="SYS_ERR_ARL_TRIGG_DIPLAG">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Parameter <arg format="%s" ordinal="2" /> ist nur verwendbar, wenn Parameter <arg format="%s" ordinal="3" /> größer als null ist.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Parameter <arg format="%s" ordinal="5" /> wirkt nur in der ersten einer Sequenz von TriggX-Instruktionen, die das geschwindigkeitsabhängige AO-Signal steuert.</Actions>
+  </Message>
+  <Message number="661" eDefine="SYS_ERR_ARL_SIGSUP_SEARCH">
+    <Title>Suchfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Signal <arg format="%s" ordinal="2" /> für die SearchX-Instruktion ist bereits bei Beginn der Suche gesetzt (HIGH oder LOW) oder die E/A-Einheit für das Signal ist für den Vorgang nicht aktiv.<p />Vor nächstem Suchvorgang sicherstellen, dass TCP wieder an Startposition der Suchbahn zurückgesetzt wurde.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>Ohne Umpositionierung vor dem Neustart der zirkulären Suche können Schäden durch Bewegung entstehen.</Consequences>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="662" eDefine="SYS_ERR_ARL_BADWZONE">
+    <Title>Ungültiger Weltzonentyp</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Schalter \<arg format="%s" ordinal="2" /> muss mit einer <arg format="%s" ordinal="3" />-Weltzone verbunden sein.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Bei Verwendung des Schalters \Temp muss die Weltzone den Datentyp 'wztemporary' enthalten.<p />Bei Verwendung des Schalters \Stat muss die Weltzone den Datentyp 'wzstationary' enthalten.</Actions>
+  </Message>
+  <Message number="663" eDefine="SYS_ERR_ARL_WZONE_UNUSED">
+    <Title>Weltzone nicht verwendet</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Argument <arg format="%s" ordinal="2" /> der Instruktion <arg format="%s" ordinal="3" /> verweist auf nicht verwendete Weltzone.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Die Weltzone muss durch eine WZLimSup- oder WZDOSet-Instruktion oder WZDOSet definiert und aktiviert werden.</Actions>
+  </Message>
+  <Message number="664" eDefine="SYS_ERR_ARL_WZONE_IN_USE">
+    <Title>Weltzone bereits in Gebrauch.</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Weltzone '<arg format="%s" ordinal="2" />' wurde bereits definiert und aktiviert.<p />Eine Weltzone kann nur einmal definiert werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Eine Weltzone mit anderem Namen verwenden.</Actions>
+  </Message>
+  <Message number="665" eDefine="SYS_ERR_ARL_WZONE_FULL">
+    <Title>Zu viele Weltzonen</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Weltzone <arg format="%s" ordinal="2" /> konnte nicht übertragen werden. Die Weltzonen-Tabelle ist voll.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Im RAPID-Programm prüfen, ob eine der Weltzonen entfernt werden kann.</Actions>
+  </Message>
+  <Message number="666" eDefine="SYS_ERR_ARL_LOCAL_WZONE">
+    <Title>Unzulässige Weltzonen</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Weltzone '<arg format="%s" ordinal="2" />' ist lokal in aktueller Routine definiert.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Weltzone im Modul als global oder lokal definieren.</Actions>
+  </Message>
+  <Message number="667" eDefine="SYS_ERR_ARL_WZ_NOTENTIRE">
+    <Title>Unzulässige Weltzonen</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Weltzone '<arg format="%s" ordinal="2" />' ist nicht vollständiger Datenverweis.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Wert des Weltzonen-Arguments prüfen.</Actions>
+  </Message>
+  <Message number="668" eDefine="SYS_ERR_ARL_SHAPE_UNUSED">
+    <Title>Shapedata nicht verwendet</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Argument <arg format="%s" ordinal="2" /> der Instruktion <arg format="%s" ordinal="3" /> muss auf definierte Shapedata verweisen.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Shapedata speichern die Definition von Volumen. Sie müssen mit WZBoxDef,<p />WZSphDef oder WZCylDef definiert werden, bevor sie von WZLimSup oder WZDOSet verwendet werden können.</Actions>
+  </Message>
+  <Message number="669" eDefine="SYS_ERR_ARL_INVALID_SHAPE">
+    <Title>Weltzone zu klein</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Mindestens eine Seite oder ein Radius ist kleiner als das erlaubte Minimum in Instruktion <arg format="%s" ordinal="2" />.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Vorherige Instruktion zur Volumendefinition prüfen.</Actions>
+  </Message>
+  <Message number="670" eDefine="SYS_ERR_ARL_INVALID_WZONE">
+    <Title>Ungültige Weltzone</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Index des Weltzonen-Arguments <arg format="%s" ordinal="2" /> in <arg format="%s" ordinal="3" /> ist kein gültiger, durch WZLimSup oder WZDOSet definierter Index.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>RAPID-Programm prüfen.</Actions>
+  </Message>
+  <Message number="671" eDefine="SYS_ERR_ARL_STAT_WZONE">
+    <Title>Unzulässige Verwendung von Weltzone</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Argument <arg format="%s" ordinal="2" /> für <arg format="%s" ordinal="3" /> muss eine temporäre Weltzone sein.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Argument prüfen.</Actions>
+  </Message>
+  <Message number="672" eDefine="SYS_ERR_ARL_WZONE_EQNAME">
+    <Title>Weltzone bereits in Gebrauch</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Weltzone <arg format="%s" ordinal="2" /> konnte nicht übertragen werden. Eine andere Weltzone mit demselben Namen ist bereits im System definiert.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Name der Weltzone prüfen.</Actions>
+  </Message>
+  <Message number="673" eDefine="SYS_ERR_ARL_IO_ACCESS">
+    <Title>E/A-Zugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das in Parameter <arg format="%s" ordinal="2" /> angegebene Signal ist für RAPID-Zugriff schreibgeschützt.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Anderes Anwendersignal wählen oder Zugriffsmodus für das Signal ändern.</Actions>
+  </Message>
+  <Message number="674" eDefine="SYS_ERR_ARL_NOTWRITEPROT">
+    <Title>E/A-Zugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das in Parameter <arg format="%s" ordinal="2" /> angegebene Signal ist nicht schreibgeschützt für Benutzerzugriff über das Programmiergerät oder über RAPID. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Zugriffsmodus für das Signal in der E/A-Konfiguration auf -system- ändern. </Actions>
+  </Message>
+  <Message number="675" eDefine="SYS_ERR_ARL_TRAP_NOTBWD">
+    <Title>Abarbeitungsfehler</Title>
+    <Description>Abarbeitungsmodus von Vorwärts nach Rückwärts oder umgekehrt bei Ausführung einer unsichtbaren Interrupt-Routine nicht zulässig.<p /></Description>
+    <Actions>Wenn möglich, ursprünglichen Modus wählen und Start drücken, um fortzufahren.</Actions>
+  </Message>
+  <Message number="676" eDefine="SYS_ERR_ARL_HOMEJOINT_ROB">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />DeltaJointVal für Roboterachse <arg format="%s" ordinal="2" /> ist &lt;= 0.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Wert für DeltaJointVal prüfen. DeltaJointVal muss für alle überwachten Achsen &gt; 0 mm bzw. &gt; 0 Grad sein.</Actions>
+  </Message>
+  <Message number="677" eDefine="SYS_ERR_ARL_HOMEJOINT_EXT">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />DeltaJointVal für externe Achse <arg format="%s" ordinal="2" /> ist &lt;= 0.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Wert für DeltaJointVal prüfen. DeltaJointVal muss für alle überwachten Achsen &gt; 0 mm bzw. &gt; 0 Grad sein.</Actions>
+  </Message>
+  <Message number="678" eDefine="SYS_ERR_ARL_LIMJOINT_ROB">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />LowJointVal ist größer oder gleich HighJointVal für Roboterachse <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>Werte für HighJointVal und LowJointVal prüfen. HighJointVal muss für alle Achsen mit definierten Ober- und/oder Untergrenzen höher als LowJointVal sein.</Actions>
+  </Message>
+  <Message number="679" eDefine="SYS_ERR_ARL_LIMJOINT_EXT">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />LowJointVal ist größer oder gleich HighJointVal für externe Achse <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>Werte für HighJointVal und LowJointVal prüfen. HighJointVal muss für alle Achsen mit definierten Ober- und/oder Untergrenzen höher als LowJointVal sein.</Actions>
+  </Message>
+  <Message number="680" eDefine="SYS_ERR_ARL_HOMEJOINT_NOTACT">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Fehler in verwendeter WZHomeJointDef. Überwachung von nicht aktiver Achse <arg format="%s" ordinal="2" /> ist nicht zulässig.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Argument 'MiddleJointVal' für die aktuelle Achse auf 9E9 setzen.</Actions>
+  </Message>
+  <Message number="681" eDefine="SYS_ERR_ARL_LIMJOINT_NOTACT">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Fehler in verwendeter WZLimJointDef. Grenze von nicht aktiver Achse <arg format="%s" ordinal="2" /> darf nicht angegeben werden. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Argument 'LowJointVal' und 'HighJointVal' für die aktuelle Achse auf 9E9 setzen.</Actions>
+  </Message>
+  <Message number="698" eDefine="SYS_ERR_ARL_FILREADERR">
+    <Title>Lesefehler</Title>
+    <Description>Task <arg format="%s" ordinal="1" /> versucht erfolglos, die Datei <arg format="%s" ordinal="2" /> zu lesen.</Description>
+    <Consequences>Lesen/Laden von <arg format="%s" ordinal="2" /> war nicht möglich.</Consequences>
+    <Causes>Wenn Sie auf eine Datei auf einem FTP-gemounteten Speichermedium zugreifen möchten, stellen Sie sicher, dass <arg format="%s" ordinal="2" /> die in den FTP-Protokolleinstellungen konfigurierte maximale Dateigröße nicht überschreitet.</Causes>
+  </Message>
+  <Message number="699" eDefine="SYS_ERR_ARL_LOAD_MEMFULL">
+    <Title>Programmspeicher voll</Title>
+    <Description>Die Task <arg format="%s" ordinal="1" /> hat nur <arg format="%s" ordinal="2" /> Byte in ihrem Programmspeicher.</Description>
+    <Consequences>Modul <arg format="%s" ordinal="3" /> konnte nicht geladen werden. </Consequences>
+    <Actions>1. Ein anderes Modul entfernen und Vorgang erneut versuchen.<p />2. Prüfen, ob umfangreiche Datenstrukturen in kleinere Blöcke aufgeteilt werden können.<p />3. Durch die Verwendung installierter Module kann Programmspeicher eingespart werden.<p /></Actions>
+  </Message>
+  <Message number="700" eDefine="SYS_ERR_ARL_SYNTAX">
+    <Title>Syntaxfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Syntaxfehler.<p /><arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="701" eDefine="SYS_ERR_ARL_MAN_MEMFULL">
+    <Title>Programmspeicher voll</Title>
+    <Description>Die Task <arg format="%s" ordinal="1" /> hat nur <arg format="%i" ordinal="2" /> freie Byte in ihrem Speicher.</Description>
+    <Consequences>Der angeforderte Vorgang konnte nicht ausgeführt werden.</Consequences>
+    <Actions>1. Einige Module entfernen und Vorgang erneut versuchen.<p />2. Prüfen, ob umfangreiche Datenstrukturen in kleinere Blöcke aufgeteilt werden können.<p />3. Durch die Verwendung installierter Module kann Programmspeicher eingespart werden.</Actions>
+  </Message>
+  <Message number="702" eDefine="SYS_ERR_ARL_FILNOTFND">
+    <Title>Datei nicht gefunden</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Datei <arg format="%s" ordinal="2" /> wurde nicht gefunden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>- Dateipfad und Dateiname prüfen.<p />- Prüfen, ob Datei existiert.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="703" eDefine="SYS_ERR_ARL_NOTSAVED">
+    <Title>Entladefehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Programmmodul konnte nicht entladen werden.<p />Ursache: Das Modul wurde geändert, aber nicht gespeichert.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /><p /><p /><p /></Description>
+    <Actions>Instruktion UnLoad:<p />Optionalen Schalter ErrIfChanged ohne entsprechende Fehlerbehandlung verwenden.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="704" eDefine="SYS_ERR_ARL_UNLOAD">
+    <Title>Löschen-Fehler </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /><p />Programmmodul konnte nicht gelöscht werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>- Modul nicht mit Load-Instruktion geladen.<p />- Nicht derselbe Dateipfad wie beim Laden verwendet.<p /></Causes>
+    <Actions>- Prüfen, ob das Programmmodul mit der Instruktion Load geladen wurde.<p />- Prüfen, ob Dateipfad und -name in der Instruktion UnLoad und Load gleich sind.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="705" eDefine="SYS_ERR_ARL_SYNTAX_CONT">
+    <Title>Syntaxfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Syntaxfehler.<p /><arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Weitere Syntaxfehler folgen.</Actions>
+  </Message>
+  <Message number="706" eDefine="SYS_ERR_ARL_LOADED">
+    <Title>Ladefehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Programmmodul bereits geladen.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>Der Modulname im Header der Datei <arg format="%s" ordinal="3" /> existiert bereits im Programmspeicher.</Causes>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="707" eDefine="SYS_ERR_ARL_NAME_INVALID">
+    <Title>Name der E/A-Einheit ungültig</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Einheitenname <arg format="%s" ordinal="2" /> existiert nicht.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>- Prüfen, ob Einheitenname korrekt geschrieben ist.<p />- Prüfen, ob Einheit definiert ist.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="708" eDefine="SYS_ERR_ARL_IOENABLE">
+    <Title>E/A-Einheit nicht aktiviert</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />E/A-Einheit <arg format="%s" ordinal="2" /> wurde nicht aktiviert.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>Die maximale Wartezeit war zu kurz.</Causes>
+    <Actions>Wartezeit vergrößern und Vorgang wiederholen.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="709" eDefine="SYS_ERR_ARL_IODISABLE">
+    <Title>E/A-Einheit nicht deaktiviert</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />E/A-Einheit <arg format="%s" ordinal="2" /> wurde nicht deaktiviert.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>Die maximale Wartezeit war zu kurz.</Causes>
+    <Actions>Wartezeit vergrößern und Vorgang wiederholen.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="710" eDefine="SYS_ERR_ARL_ARGNAME">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> ist ein Ausdruck, ist nicht vorhanden oder hat den Typ 'switch'.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Parameter <arg format="%s" ordinal="4" /> so ändern, dass er gültig ist.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="711" eDefine="SYS_ERR_ARL_ALIAS_TYPE">
+    <Title>Alias-Typfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Datentypen für die Argumente - FromSignal - und - ToSignal - müssen gleich sein und den Typ - signalxx - haben. <p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Typ in gültigen Typ ändern (signalai/ao, signaldi/do, signalgi/go).<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="712" eDefine="SYS_ERR_ARL_NOSHELF">
+    <Title>Ereignisroutine-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Zu viele Ereignisroutinen, Routine <arg format="%s" ordinal="2" /> wird nicht abgearbeitet.<p /></Description>
+    <Actions>Die Routine in eine der anderen Routinen einbinden, die für dasselbe Ereignis angegeben sind.</Actions>
+  </Message>
+  <Message number="713" eDefine="SYS_ERR_ARL_ALIAS_DEF">
+    <Title>Alias-Definitionsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Signal im Argument FromSignal: <arg format="%s" ordinal="2" /> muss in der E/A-Konfiguration definiert sein und das Signal im Argument ToSignal: <arg format="%s" ordinal="3" /> muss im RAPID-Programm deklariert sein, darf jedoch nicht in der E/A-Konfiguration definiert sein.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>E/A-Konfiguration und RAPID-Programm prüfen. <p />Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="714" eDefine="SYS_ERR_ARL_UNDQUAT">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Orientierungdefinitionsfehler in <arg format="%s" ordinal="2" />.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Wahrscheinlich eine offline erzeugte 'dummy'-Position (undefinierte<p />Orientierung), die mit korpos geändert werden muss.</Actions>
+  </Message>
+  <Message number="720" eDefine="SYS_ERR_ARL_ALIAS_IO">
+    <Title>Alias-E/A-Installation</Title>
+    <Description>System konnte nicht alle E/A-Signale als RAPID-Symbole aktualisieren.</Description>
+    <Consequences>In einem RAPID-Programm können keine E/A-Signale verwendet werden.</Consequences>
+    <Causes>- Falsche E/A-Konfiguration<p />- Falsche Task-Konfiguration</Causes>
+    <Actions>Steuerung neu starten.</Actions>
+  </Message>
+  <Message number="721" eDefine="SYS_ERR_ARL_IO">
+    <Title>E/A-Installation</Title>
+    <Description>Task <arg format="%s" ordinal="1" />: <p />System konnte nicht alle E/A-Signale als RAPID-Symbole aktualisieren.</Description>
+    <Consequences>In einem RAPID-Programm können keine E/A-Signale verwendet werden.</Consequences>
+    <Causes>- Falsche E/A-Konfiguration<p />- Falsche Task-Konfiguration</Causes>
+    <Actions>Steuerung neu starten.</Actions>
+  </Message>
+  <Message number="722" eDefine="SYS_ERR_ARL_MECUNT">
+    <Title>Mechanische Einheiten</Title>
+    <Description>System konnte nicht alle mechanischen Einheiten als RAPID-Symbole aktualisieren.</Description>
+    <Consequences>In einem RAPID-Programm können keine mechanischen Einheiten verwendet werden.</Consequences>
+    <Causes>- Falsche Bewegungskonfiguration<p />- Falsche Taskkonfiguration</Causes>
+    <Actions>Steuerung neu starten.</Actions>
+  </Message>
+  <Message number="723" eDefine="SYS_ERR_ARL_CAMUNIT">
+    <Title>Kamerainstallation</Title>
+    <Description>Task <arg format="%s" ordinal="1" />:<p />System konnte nicht alle Kameraeinheiten als RAPID-Symbole aktualisieren. </Description>
+    <Consequences>In einem RAPID-Programm können keine Kameraeinheiten verwendet werden.</Consequences>
+    <Causes>- Falsche Kamerakonfiguration<p />- Falsche Taskkonfiguration </Causes>
+    <Actions>Steuerung neu starten.</Actions>
+  </Message>
+  <Message number="724" eDefine="SYS_ERR_ARL_MODULE">
+    <Title>Speichern- oder Löschfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Programmmodul <arg format="%s" ordinal="2" /> konnte nicht gespeichert oder gelöscht werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>- Schreibung des Modulnamens prüfen.<p />- Prüfen, ob das Modul geladen ist.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="726" eDefine="SYS_ERR_ARL_UNKPROC">
+    <Title>Referenzfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Verweis auf Ladevorgang ist ungültig.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Prüfen, ob hier der gleiche Verweis wie in StartLoad angegeben ist.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="727" eDefine="SYS_ERR_ARL_PATH">
+    <Title>Speichernfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Fehlende Dateiquelle <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>Mit FilePath-Argument das Dateiziel angeben.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="728" eDefine="SYS_ERR_ARL_FRAME">
+    <Title>Koordinatensystem-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Neues Koordinatensystem kann nicht berechnet werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>Die Positionen verfügen nicht über die erforderlichen Relationen oder sind nicht genau genug angegeben.</Causes>
+    <Actions>Prüfen, ob die Positionen zu nahe beieinander liegen oder nicht genau genug angegeben sind.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="731" eDefine="SYS_ERR_ARL_AO_HLIM">
+    <Title>Wertfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Wert des Arguments <arg format="%s" ordinal="2" /> für Signal <arg format="%s" ordinal="3" /> liegt über dem maximalen logischen Wert.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Argument ändern oder maximalen logischen Wert-Parameter für das <p />Signal ändern. <p />Fehlerbehebung: <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="732" eDefine="SYS_ERR_ARL_AO_LLIM">
+    <Title>Wertfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Wert des Arguments <arg format="%s" ordinal="2" /> für Signal <arg format="%s" ordinal="3" /> liegt unter dem minimalen logischen Wert.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Argument ändern oder minimalen logischen Wert-Parameter für das Signal ändern. <p />Fehlerbehebung: <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="733" eDefine="SYS_ERR_ARL_AO_RANGE">
+    <Title>Wertfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Wert des Arguments <arg format="%s" ordinal="2" /> für Signal <arg format="%s" ordinal="3" /> liegt unter dem Wert für Argument <arg format="%s" ordinal="4" />. <p />Programmreferenz: <arg format="%s" ordinal="5" /><p /></Description>
+    <Actions>Werte der Argumente ändern.</Actions>
+  </Message>
+  <Message number="734" eDefine="SYS_ERR_ARL_TXTTOLNG">
+    <Title>Symboldefinitionsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der String in der Texttabelle <arg format="%s" ordinal="2" /> bei Index <arg format="%s" ordinal="3" /> ist zu lang.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Datei für die Texttabelle ändern und Kaltstart ausführen.</Actions>
+  </Message>
+  <Message number="735" eDefine="SYS_ERR_ARL_AXIS_DEF">
+    <Title>Argumentfehler</Title>
+    <Description>Die Achse ist nicht definiert.<p /></Description>
+    <Actions>Achse muss definiert werden, bevor diese Instruktion ausgeführt wird.</Actions>
+  </Message>
+  <Message number="736" eDefine="SYS_ERR_ARL_IRB_NOTALLOWED">
+    <Title>Mechanische Einheit - Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Mit dieser Instruktion kann keine Nutzlast am Roboter definiert werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Instruktion GripLoad anstelle von MechUnitLoad verwenden.</Actions>
+  </Message>
+  <Message number="737" eDefine="SYS_ERR_ARL_TXTNOEXIST">
+    <Title>Symboldefinitionsfehler </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Angeforderter Text oder Textpaket existiert nicht. Texttabelle <arg format="%s" ordinal="2" />, Index <arg format="%s" ordinal="3" />.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Argumente prüfen.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="738" eDefine="SYS_ERR_ARL_IO_CON_LOST">
+    <Title>E/A-Fehler</Title>
+    <Description>Zugriff auf E/A-Signal <arg format="%s" ordinal="1" /> auf Einheit <arg format="%s" ordinal="2" /> nicht möglich.<p />Neustart nicht möglich.<p /></Description>
+    <Causes>Verbindung mit E/A-Modul unterbrochen.</Causes>
+    <Actions>Verbindung mit E/A-Modul wieder aufbauen. Um neuen Programmstart<p />zu ermöglichen, PCP an eine sichere Neustart-Position verlagern.</Actions>
+  </Message>
+  <Message number="739" eDefine="SYS_ERR_ARL_MISPAR">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Keines der Optionsargumente 'DO1', 'GO1', 'GO2', 'GO3' oder 'GO4' ist angegeben.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Mindestens eines der Argumente angeben.</Actions>
+  </Message>
+  <Message number="740" eDefine="SYS_ERR_ARL_PERS_GONE">
+    <Title>Abarbeitungsfehler</Title>
+    <Description>Die PERS-Variable, die in der Instruktion TriggStopProc angegeben ist, kann nicht <p />aktualisiert werden, da sie nicht mehr existiert. <p /></Description>
+    <Causes>Programmmodul mit der PERS-Variable wurde wahrscheinlich aus dem <p />Programmspeicher entfernt. </Causes>
+    <Actions>Prüfen, ob Modul mit PERS-Variable entfernt wurde. Wenn ja, Modul wieder- herstellen.</Actions>
+  </Message>
+  <Message number="741" eDefine="SYS_ERR_ARL_NOT_EVENT_RTN">
+    <Title>Kontextfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> nur in Ereignisroutine verwendbar.<p />Programmef. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Instruktion entfernen.</Actions>
+  </Message>
+  <Message number="742" eDefine="SYS_ERR_ARL_EVPT_SMALL">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Timing-Parameter 'diplag' ist größer als der Systemparameter 'Ereign. Vorsetzzeit'.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Systemparameter 'Ereign. Vorsetzzeit' vergrößern oder Kompensation von 'diplag' (Verzögerung) prüfen.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="743" eDefine="SYS_ERR_ARL_SUBTYPE">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Kein gültiger Typ in Argument <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Argument prüfen.</Actions>
+  </Message>
+  <Message number="744" eDefine="SYS_ERR_ARL_VAL_IN_PAR">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Ungültiger Wert in <arg format="%s" ordinal="2" /> in Argument <arg format="%s" ordinal="3" />. <p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Argument prüfen.</Actions>
+  </Message>
+  <Message number="745" eDefine="SYS_ERR_ARL_INPOS_MALMI">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> ist kleiner als <arg format="%s" ordinal="3" /> in Argument <arg format="%s" ordinal="4" />. <p />Programmreferenz: <arg format="%s" ordinal="5" /><p /></Description>
+    <Actions>Argument prüfen.</Actions>
+  </Message>
+  <Message number="746" eDefine="SYS_ERR_ARL_INPOS_FINE">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> TRUE in Parameter <arg format="%s" ordinal="3" /> in Kombination mit Fördererkoordination.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Bei Verlassen eines Förderers nach koordiniertem Stopppunkt sind Feinpunkte nicht verwendbar.<p />Stattdessen Zone verwenden.</Actions>
+  </Message>
+  <Message number="747" eDefine="SYS_ERR_ARL_CFG_INTERNAL">
+    <Title>Zugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Systemparameter <arg format="%s" ordinal="2" /> kann nicht gelesen oder es kann nicht in ihn geschrieben werden. Der Parameter ist intern sowie lese- und schreibgeschützt.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /><p /></Description>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="748" eDefine="SYS_ERR_ARL_CFG_LIMIT">
+    <Title>Wertfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die aus Parameter 'CfgData' in die Systemparameter zu schreibenden Daten liegen außerhalb des zulässigen Bereichs.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="749" eDefine="SYS_ERR_ARL_ALREADY_MOVING">
+    <Title>Abarbeitungsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />StartMove nicht ausführbar, wenn sich der Roboter bewegt.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="752" eDefine="SYS_ERR_ARL_LOADSESS_INUSE">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Ein Ladevorgang mit StartLoad - WaitLoad wurde nicht beendet.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Ladevorgang mit WaitLoad beenden, mit CancelLoad abbrechen oder PZ auf Hauptprogramm setzen.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="753" eDefine="SYS_ERR_ARL_LOAD_PFAIL">
+    <Title>Speicherfehler </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Wegen Netzausfall in ausgeführten Load oder StartLoad ... WaitLoad-Instruktion ist Arbeitsspeicher des RAPID-Programms inkonsistent.<p />***ZUR BEHEBUNG P-START AUSFÜHREN ***<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Actions>P-Start ist wichtig, da der RAPID-Programmspeicher zerstört ist:<p />- Falscher Init-Wert von PERS-Variablen<p />- Reduktion des verfügbaren Programmspeichers </Actions>
+  </Message>
+  <Message number="754" eDefine="SYS_ERR_ARL_ARG_MISSING">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Keine Argumente angegeben.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Bei gewünschter Begrenzung optionales Argument 'On' mit einem Wert setzen, andernfalls 'Off' setzen.</Actions>
+  </Message>
+  <Message number="755" eDefine="SYS_ERR_ARL_NOT_TRAP_RTN">
+    <Title>Kontextfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> nur in Interrupt-Routine verwendbar.<p />Programmef. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Instruktion entfernen.</Actions>
+  </Message>
+  <Message number="756" eDefine="SYS_ERR_ARL_IMPROPER_INTNO">
+    <Title>Kontextfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> nur in Interrupt-Routine verwendbar, die durch Instruktion <arg format="%s" ordinal="3" /> angefordert wurde.  <p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Prüfen, ob INTNO die von <arg format="%s" ordinal="5" /> verwendete Interruptnummer hat. </Actions>
+  </Message>
+  <Message number="757" eDefine="SYS_ERR_ARL_LOADSESS_NOUSE">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Ladevorgang, der abgebrochen werden soll, ist nicht in Gebrauch.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="758" eDefine="SYS_ERR_ARL_IO_CON_LOST_BMW">
+    <Title>E/A-Fehler</Title>
+    <Description>Zugriff auf E/A-Signal <arg format="%s" ordinal="1" /> auf Einheit <arg format="%s" ordinal="2" /> nicht möglich.<p /></Description>
+    <Causes>Verbindung mit E/A-Modul unterbrochen.</Causes>
+    <Actions>Verbindung mit E/A-Modul wieder aufbauen.</Actions>
+  </Message>
+  <Message number="759" eDefine="SYS_ERR_ARL_IMPROPER_TYPE">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument 'Data' in <arg format="%s" ordinal="2" /> hat falschen Datentyp.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Datentyp prüfen. Typen 'non-value' und 'semi-value' dürfen nicht benutzt werden.<p /></Actions>
+  </Message>
+  <Message number="761" eDefine="SYS_ERR_ARL_PAR_NEG">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> hat einen negativen Wert.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Wert positiv oder auf null einstellen.</Actions>
+  </Message>
+  <Message number="762" eDefine="SYS_ERR_ARL_BIG_VAL">
+    <Title>Wertfehler</Title>
+    <Description>Task: <arg format="%16s" ordinal="1" /><p />Wert von Argument <arg format="%s" ordinal="2" /> führt den Roboter aus dem Arbeitsbereich.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Wert verringern.</Actions>
+  </Message>
+  <Message number="763" eDefine="SYS_ERR_ARL_SYS_STOP">
+    <Title>Abarbeitungsfehler</Title>
+    <Description>Task: <arg format="%16s" ordinal="1" /><p />Die Instruktion <arg format="%s" ordinal="2" /> ist nicht ausführbar, solange das System im Stoppzustand ist.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="764" eDefine="SYS_ERR_ARL_PAR_NOT_FREE">
+    <Title>Switch-Argumentfehler</Title>
+    <Description>Task: <arg format="%16s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> muss mit einem switch-Argument verwendet werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Switch Total oder Free verwenden.</Actions>
+  </Message>
+  <Message number="765" eDefine="SYS_ERR_ARL_NOP_DIR">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />In der Instruktion <arg format="%s" ordinal="2" /> ist das Argument <arg format="%s" ordinal="3" /> kein offenes Verzeichnis.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Verzeichnis vor dem Leseversuch öffnen.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="766" eDefine="SYS_ERR_ARL_MISSING_PAR">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />In der Instruktion <arg format="%s" ordinal="2" /> ist das Argument <arg format="%s" ordinal="3" /> nicht ohne Argument <arg format="%s" ordinal="4" /> verwendbar. <p />Programmreferenz: <arg format="%s" ordinal="5" /><p /></Description>
+    <Actions>RAPID-Programm prüfen.</Actions>
+  </Message>
+  <Message number="767" eDefine="SYS_ERR_ARL_SEARCH_OBJ">
+    <Title>Suchfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Objekt des Typs <arg format="%s" ordinal="2" /> konnte nicht gesucht werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>RAPID-Programm prüfen.</Actions>
+  </Message>
+  <Message number="768" eDefine="SYS_ERR_ARL_SYM_ACC">
+    <Title>Symbolzugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Systemsymbol <arg format="%s" ordinal="2" /> im System nicht zugreifbar.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="769" eDefine="SYS_ERR_ARL_SYM_READ_ACC">
+    <Title>Symbol-Lesezugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Symbol <arg format="%s" ordinal="2" /> ist kein lesbares Objekt.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="770" eDefine="SYS_ERR_ARL_SYM_TYPE">
+    <Title>Symboltypfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Symbol <arg format="%s" ordinal="2" /> hat den Typ <arg format="%s" ordinal="3" /> und nicht den erwarteten Typ <arg format="%s" ordinal="4" />.<p />Programmreferenz: <arg format="%s" ordinal="5" /><p /></Description>
+    <Actions>RAPID-Programm prüfen.</Actions>
+  </Message>
+  <Message number="771" eDefine="SYS_ERR_ARL_SYM_ACC_SCOPE">
+    <Title>Symbolzugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Symbol <arg format="%s" ordinal="2" /> ist in diesem Bereich nicht verfügbar.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="772" eDefine="SYS_ERR_ARL_LOST_CNV">
+    <Title>E/A-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> hat Kontakt mit Förderer verloren.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="773" eDefine="SYS_ERR_ARL_INSTR_INTER">
+    <Title>Instruktion unterbrochen</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> wurde unterbrochen. Ursache unbekannt.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="774" eDefine="SYS_ERR_ARL_OBJ_DROPPED">
+    <Title>Objekt gelöscht</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Objekt, auf das die Instruktion <arg format="%s" ordinal="2" /> wartete, wurde gelöscht.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>Startfenster verpasst oder Checkpoint nicht OK.</Causes>
+    <Actions>Wenn Checkpoint nicht benutzt, Checkpoint Distance und Checkpoint Window Width auf null setzen.<p />Instruktion wiederholen.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+</Domain>

@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import com.example.manuelrixen.abbtestapp.Barcode.BarCodeReading;
 import com.example.manuelrixen.abbtestapp.Socket.Receiver;
 import com.example.manuelrixen.abbtestapp.Tabs.CycleTime;
+import com.example.manuelrixen.abbtestapp.Tabs.Events;
 import com.example.manuelrixen.abbtestapp.Tabs.Logging;
 import com.example.manuelrixen.abbtestapp.Tabs.MachineData;
 
@@ -26,6 +27,7 @@ import static android.os.Process.myPid;
 
 public class MainActivity extends BaseClass implements android.app.ActionBar.TabListener {
 
+    private static final int MAX_TABS_COUNT = 4;
     private PowerManager.WakeLock wl;
     private Receiver[] receiver = new Receiver[3];
     private Thread[] rThread = new Thread[3];
@@ -47,6 +49,7 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
     private CycleTime cycleTime;
     private MachineData machineData;
     private Logging logging;
+    private Events events;
 
 
     @Override
@@ -67,6 +70,7 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
         cycleTime = new CycleTime();
         machineData = new MachineData();
         logging = new Logging();
+        events = new Events();
 
         initTabs();
 
@@ -201,6 +205,8 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
                     return cycleTime;
                 case 2:
                     return logging;
+                case 3:
+                    return events;
                 default:
                     return null;
             }
@@ -209,7 +215,7 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
 
         @Override
         public int getCount() {
-            return 3;
+            return MAX_TABS_COUNT;
         }
 
         @Override
@@ -222,6 +228,8 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
                     return getString(R.string.title_section2).toUpperCase(l);
                 case 2:
                     return getString(R.string.title_section3).toUpperCase(l);
+                case 3:
+                    return getString(R.string.title_section4).toUpperCase(l);
             }
             return null;
         }
@@ -240,9 +248,6 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
             String port = iData.getString("port");
 
             startReceiver(0, false, ip, port, cycleTime, machineData, logging);
-            startReceiver(1, true, ip, port, cycleTime, machineData, logging);
-            startReceiver(2, true, ip, port, cycleTime, machineData, logging);
-
         }
         if(resultCode == RESULT_CANCELED){
             finish();

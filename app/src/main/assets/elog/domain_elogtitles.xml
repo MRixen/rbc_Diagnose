@@ -1,0 +1,2559 @@
+<?xml version="1.0" encoding="utf-8"?><!--Title description file for use on the GTPU. Extracted on systempack build-time by ExtractTitles.exe--><ExtractTitles>
+    <Title domain="4" number="1">Argumentfehler</Title>
+    <Title domain="4" number="2">Argumentfehler</Title>
+    <Title domain="4" number="3">Argumentfehler</Title>
+    <Title domain="4" number="4">Argumentfehler</Title>
+    <Title domain="4" number="5">Argumentfehler</Title>
+    <Title domain="4" number="6">Argumentfehler</Title>
+    <Title domain="4" number="7">Argumentfehler</Title>
+    <Title domain="4" number="8">Argumentfehler</Title>
+    <Title domain="4" number="9">Argumentfehler</Title>
+    <Title domain="4" number="10">Argumentfehler</Title>
+    <Title domain="4" number="11">Argumentfehler</Title>
+    <Title domain="4" number="12">Argumentfehler</Title>
+    <Title domain="4" number="13">Argumentfehler</Title>
+    <Title domain="4" number="14">Argumentfehler</Title>
+    <Title domain="4" number="15">Datendeklarationsfehler</Title>
+    <Title domain="4" number="16">Datendeklarationsfehler</Title>
+    <Title domain="4" number="17">Typenfehler</Title>
+    <Title domain="4" number="18">Typenfehler</Title>
+    <Title domain="4" number="19">Begrenzungsfehler</Title>
+    <Title domain="4" number="20">Datendeklarationsfehler</Title>
+    <Title domain="4" number="21">Instruktionsfehler</Title>
+    <Title domain="4" number="22">Typenfehler</Title>
+    <Title domain="4" number="23">Instruktionsfehler</Title>
+    <Title domain="4" number="24">Typenfehler</Title>
+    <Title domain="4" number="25">Typenfehler</Title>
+    <Title domain="4" number="26">Typenfehler</Title>
+    <Title domain="4" number="27">Typenfehler</Title>
+    <Title domain="4" number="28">Typenfehler</Title>
+    <Title domain="4" number="29">Typenfehler</Title>
+    <Title domain="4" number="30">Typenfehler</Title>
+    <Title domain="4" number="31">Typenfehler</Title>
+    <Title domain="4" number="32">Typenfehler</Title>
+    <Title domain="4" number="33">Typenfehler</Title>
+    <Title domain="4" number="34">Typenfehler</Title>
+    <Title domain="4" number="35">Typenfehler</Title>
+    <Title domain="4" number="36">Typenfehler</Title>
+    <Title domain="4" number="37">Datendeklarationsfehler</Title>
+    <Title domain="4" number="38">Datendeklarationsfehler</Title>
+    <Title domain="4" number="39">Ungültiger Name</Title>
+    <Title domain="4" number="40">Ungültiger Name</Title>
+    <Title domain="4" number="41">Ungültiger Name</Title>
+    <Title domain="4" number="42">Ungültiger Name</Title>
+    <Title domain="4" number="43">Ungültiger Name</Title>
+    <Title domain="4" number="44">Ungültiger Name</Title>
+    <Title domain="4" number="45">Ungültiger Name</Title>
+    <Title domain="4" number="46">Ungültiger Name</Title>
+    <Title domain="4" number="47">Ungültiger Name</Title>
+    <Title domain="4" number="48">Ungültiger Name</Title>
+    <Title domain="4" number="49">Ungültiger Name</Title>
+    <Title domain="4" number="50">Typenfehler</Title>
+    <Title domain="4" number="51">Typenfehler</Title>
+    <Title domain="4" number="52">Instruktionsfehler</Title>
+    <Title domain="4" number="54">Typenfehler</Title>
+    <Title domain="4" number="55">Typenfehler</Title>
+    <Title domain="4" number="56">Typenfehler</Title>
+    <Title domain="4" number="57">Typenfehler</Title>
+    <Title domain="4" number="58">Typenfehler</Title>
+    <Title domain="4" number="59">Datendeklarationsfehler</Title>
+    <Title domain="4" number="60">Datendeklarationsfehler</Title>
+    <Title domain="4" number="61">Routinendeklarationsfehler</Title>
+    <Title domain="4" number="62">Ungültiger Name</Title>
+    <Title domain="4" number="63">Datendeklarationsfehler</Title>
+    <Title domain="4" number="64">Routinendeklarationsfehler</Title>
+    <Title domain="4" number="65">Referenzfehler</Title>
+    <Title domain="4" number="66">Datendeklarationsfehler</Title>
+    <Title domain="4" number="67">Typenfehler</Title>
+    <Title domain="4" number="68">Typenfehler</Title>
+    <Title domain="4" number="69">Referenzfehler</Title>
+    <Title domain="4" number="70">Referenzfehler </Title>
+    <Title domain="4" number="71">Referenzfehler</Title>
+    <Title domain="4" number="72">Referenzfehler</Title>
+    <Title domain="4" number="73">Referenzfehler</Title>
+    <Title domain="4" number="74">Referenzfehler</Title>
+    <Title domain="4" number="75">Referenzfehler</Title>
+    <Title domain="4" number="76">Referenzfehler</Title>
+    <Title domain="4" number="77">Referenzfehler</Title>
+    <Title domain="4" number="78">Referenzfehler</Title>
+    <Title domain="4" number="79">Referenzfehler</Title>
+    <Title domain="4" number="80">Referenzfehler</Title>
+    <Title domain="4" number="81">Referenzfehler</Title>
+    <Title domain="4" number="82">Referenzfehler</Title>
+    <Title domain="4" number="83">Typenfehler</Title>
+    <Title domain="4" number="86">Referenzfehler</Title>
+    <Title domain="4" number="87">Referenzfehler</Title>
+    <Title domain="4" number="89">Referenzfehler</Title>
+    <Title domain="4" number="90">Referenzfehler</Title>
+    <Title domain="4" number="92">Referenzfehler</Title>
+    <Title domain="4" number="93">Instruktionsfehler</Title>
+    <Title domain="4" number="94">Datendeklarationsfehler</Title>
+    <Title domain="4" number="95">Instruktionsfehler</Title>
+    <Title domain="4" number="96">Instruktionsfehler</Title>
+    <Title domain="4" number="97">Instruktionsfehler</Title>
+    <Title domain="4" number="98">Parameterfehler</Title>
+    <Title domain="4" number="99">Parameterfehler</Title>
+    <Title domain="4" number="100">Parameterfehler</Title>
+    <Title domain="4" number="101">Typenfehler</Title>
+    <Title domain="4" number="102">Typenfehler</Title>
+    <Title domain="4" number="103">Typenfehler</Title>
+    <Title domain="4" number="104">Datendeklarationsfehler</Title>
+    <Title domain="4" number="105">Datendeklarationsfehler</Title>
+    <Title domain="4" number="106">Datendeklarationsfehler</Title>
+    <Title domain="4" number="107">Datendeklarationsfehler</Title>
+    <Title domain="4" number="108">Typenfehler</Title>
+    <Title domain="4" number="109">Typendefinitionsfehler</Title>
+    <Title domain="4" number="110">Referenzfehler</Title>
+    <Title domain="4" number="111">Ungültiger Name</Title>
+    <Title domain="4" number="112">Referenzfehler</Title>
+    <Title domain="4" number="113">Ungültiger Name</Title>
+    <Title domain="4" number="114">Typendefinitionsfehler</Title>
+    <Title domain="4" number="115">Typendefinitionsfehler</Title>
+    <Title domain="4" number="116">Verweisfehler</Title>
+    <Title domain="4" number="117">Typendefinitionsfehler</Title>
+    <Title domain="4" number="119">Referenzfehler</Title>
+    <Title domain="4" number="120">Referenzfehler</Title>
+    <Title domain="4" number="121">Referenzfehler</Title>
+    <Title domain="4" number="122">Referenzfehler</Title>
+    <Title domain="4" number="123">Argumentfehler</Title>
+    <Title domain="4" number="124">Argumentfehler</Title>
+    <Title domain="4" number="125">Instruktionsfehler</Title>
+    <Title domain="4" number="126">Wertfehler</Title>
+    <Title domain="4" number="127">Wertfehler</Title>
+    <Title domain="4" number="128">Referenzfehler</Title>
+    <Title domain="4" number="129">Referenzfehler</Title>
+    <Title domain="4" number="130">Referenzfehler</Title>
+    <Title domain="4" number="131">Referenzfehler</Title>
+    <Title domain="4" number="135">Syntaxfehler</Title>
+    <Title domain="4" number="136">Syntaxfehler</Title>
+    <Title domain="4" number="137">Syntaxfehler</Title>
+    <Title domain="4" number="138">Syntaxfehler </Title>
+    <Title domain="4" number="139">Syntaxfehler </Title>
+    <Title domain="4" number="140">Numerischer Wert für Symbol <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> außerhalb Bereich</Title>
+    <Title domain="4" number="141">Zeichenfolge zu lang</Title>
+    <Title domain="4" number="142">Textbezeichner außerhalb des zulässigen Bereichs</Title>
+    <Title domain="4" number="143">Aggregat außerhalb des zulässigen Bereichs</Title>
+    <Title domain="4" number="144">Ganzzahl außerhalb des zulässigen Bereichs</Title>
+    <Title domain="4" number="145">Parser-Stapel ist voll </Title>
+    <Title domain="4" number="146">Nicht genügend Heap-Speicher </Title>
+    <Title domain="4" number="147">Bezeichner ist in aktueller Sprache ein reserviertes Wort. </Title>
+    <Title domain="4" number="148">Bezeichner zu lang</Title>
+    <Title domain="4" number="149">Platzhalter zu lang</Title>
+    <Title domain="4" number="150">Unerwarteter unbekannter Token</Title>
+    <Title domain="4" number="152">Datendeklarationsfehler</Title>
+    <Title domain="4" number="155">Argumentfehler
+</Title>
+    <Title domain="4" number="156">Argumentfehler </Title>
+    <Title domain="4" number="157">Instruktionsfehler</Title>
+    <Title domain="4" number="158">Wertfehler</Title>
+    <Title domain="4" number="159">Wertfehler</Title>
+    <Title domain="4" number="160">Fehler im RAPID-Programm</Title>
+    <Title domain="4" number="161">Option fehlt</Title>
+    <Title domain="4" number="162">Fehler im RAPID-Programm</Title>
+    <Title domain="4" number="165">Referenzfehler</Title>
+    <Title domain="4" number="166">Referenzfehler</Title>
+    <Title domain="4" number="168">Referenzfehler </Title>
+    <Title domain="4" number="170">Referenzfehler</Title>
+    <Title domain="4" number="171">Referenzfehler</Title>
+    <Title domain="4" number="172">Referenzfehler</Title>
+    <Title domain="4" number="173">Referenzfehler</Title>
+    <Title domain="4" number="174">Referenzfehler</Title>
+    <Title domain="4" number="175">Referenzfehler</Title>
+    <Title domain="4" number="191">Instruktionsfehler </Title>
+    <Title domain="4" number="192">Argumentfehler</Title>
+    <Title domain="4" number="193">Abarbeitungsfehler</Title>
+    <Title domain="4" number="194">Wertfehler</Title>
+    <Title domain="4" number="195">Begrenzungsfehler</Title>
+    <Title domain="4" number="196">Instruktionsfehler</Title>
+    <Title domain="4" number="197">Abarbeitungsfehler</Title>
+    <Title domain="4" number="198">Wertfehler</Title>
+    <Title domain="4" number="199">Wertfehler</Title>
+    <Title domain="4" number="200">Begrenzungsfehler</Title>
+    <Title domain="4" number="202">Typenfehler</Title>
+    <Title domain="4" number="203">Referenzfehler</Title>
+    <Title domain="4" number="204">Wertfehler</Title>
+    <Title domain="4" number="205">Wertfehler</Title>
+    <Title domain="4" number="206">Interrupt-Warteschlange voll</Title>
+    <Title domain="4" number="207">Wertfehler</Title>
+    <Title domain="4" number="208">Fehlerereignis-Warteschlange voll</Title>
+    <Title domain="4" number="209">Fehlerkontext bereits vorüber</Title>
+    <Title domain="4" number="210">Interrupt aus Warteschlange entfernt</Title>
+    <Title domain="4" number="221">Abarbeitungsfehler</Title>
+    <Title domain="4" number="222">Begrenzungsfehler</Title>
+    <Title domain="4" number="223">Abarbeitungsfehler</Title>
+    <Title domain="4" number="224">Abarbeitungsfehler</Title>
+    <Title domain="4" number="225">Abarbeitungsfehler</Title>
+    <Title domain="4" number="226">Ungültiger Name</Title>
+    <Title domain="4" number="227">Begrenzungsfehler</Title>
+    <Title domain="4" number="228">Abarbeitungsfehler</Title>
+    <Title domain="4" number="229">Abarbeitungsfehler</Title>
+    <Title domain="4" number="230">Abarbeitungsfehler</Title>
+    <Title domain="4" number="241">Wertfehler</Title>
+    <Title domain="4" number="242">Typenfehler </Title>
+    <Title domain="4" number="243">Wertfehler</Title>
+    <Title domain="4" number="244">Wertfehler</Title>
+    <Title domain="4" number="245">Parameterfehler</Title>
+    <Title domain="4" number="246">Sicherer Interrupt kann nicht deaktiviert werden</Title>
+    <Title domain="4" number="251">Ungültiger Name.</Title>
+    <Title domain="4" number="252">Begrenzungsfehler</Title>
+    <Title domain="4" number="253">Typendefinitionsfehler</Title>
+    <Title domain="4" number="254">Symboldefinitionsfehler</Title>
+    <Title domain="4" number="255">Symboldefinitionsfehler</Title>
+    <Title domain="4" number="256">Parameterfehler</Title>
+    <Title domain="4" number="257">Parameterfehler</Title>
+    <Title domain="4" number="258">Parameterfehler</Title>
+    <Title domain="4" number="259">Parameterfehler</Title>
+    <Title domain="4" number="260">Symboldefinitionsfehler</Title>
+    <Title domain="4" number="261">Typendefinitionsfehler</Title>
+    <Title domain="4" number="262">Datendeklarationsfehler</Title>
+    <Title domain="4" number="263">Ungültiger Name.</Title>
+    <Title domain="4" number="264">Symboldefinitionsfehler</Title>
+    <Title domain="4" number="265">Symboldefinitionsfehler</Title>
+    <Title domain="4" number="266">Referenzfehler</Title>
+    <Title domain="4" number="267">Referenzfehler</Title>
+    <Title domain="4" number="268">Symboldefinitionsfehler</Title>
+    <Title domain="4" number="269">Symboldefinitionsfehler</Title>
+    <Title domain="4" number="270">Typendefinitionsfehler</Title>
+    <Title domain="4" number="271">Typendefinitionsfehler</Title>
+    <Title domain="4" number="272">Typenfehler</Title>
+    <Title domain="4" number="273">Referenzfehler</Title>
+    <Title domain="4" number="274">Parameterfehler</Title>
+    <Title domain="4" number="275">Symboldefinitionsfehler</Title>
+    <Title domain="4" number="277">Rückgängig abgebrochen</Title>
+    <Title domain="4" number="278">Rückgängig abgebrochen</Title>
+    <Title domain="4" number="279">Rückgängig abgebrochen</Title>
+    <Title domain="4" number="280">Rückgängig abgebrochen</Title>
+    <Title domain="4" number="281">Rückgängig abgebrochen</Title>
+    <Title domain="4" number="301">Dateizugriffsfehler</Title>
+    <Title domain="4" number="302">Dateizugriffsfehler</Title>
+    <Title domain="4" number="303">Dateizugriffsfehler </Title>
+    <Title domain="4" number="304">Dateizugriffsfehler</Title>
+    <Title domain="4" number="322">Ladefehler</Title>
+    <Title domain="4" number="323">Ladefehler</Title>
+    <Title domain="4" number="324">Ladefehler</Title>
+    <Title domain="4" number="325">Ladefehler</Title>
+    <Title domain="4" number="326">Ladefehler</Title>
+    <Title domain="4" number="327">Ladefehler</Title>
+    <Title domain="4" number="328">Ladefehler</Title>
+    <Title domain="4" number="329">Modul-Installationsfehler </Title>
+    <Title domain="4" number="330">RAPID-Fehler in installiertem Modul </Title>
+    <Title domain="4" number="331">Typenfehler</Title>
+    <Title domain="4" number="332">Typenfehler</Title>
+    <Title domain="4" number="351">Speicherzuteilungsfehler</Title>
+    <Title domain="4" number="352">Speicherzuteilungsfehler</Title>
+    <Title domain="4" number="353">Mechanische Einheit <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> fehlt</Title>
+    <Title domain="4" number="354">Kopie eines dynamisch geladenen Moduls wurde gespeichert. </Title>
+    <Title domain="4" number="355">Eine Stop/QStop-Ereignisroutine wurde gestoppt</Title>
+    <Title domain="4" number="357">Fehlende Fehlerbehandlung</Title>
+    <Title domain="4" number="358">RMQ-Meldung verworfen</Title>
+    <Title domain="4" number="359">Eine Ereignisroutine wurde gestoppt</Title>
+    <Title domain="4" number="502">Abbruch durch digitalen Eingang</Title>
+    <Title domain="4" number="504">Parameterfehler</Title>
+    <Title domain="4" number="506">Systemzugriffsfehler</Title>
+    <Title domain="4" number="507">Begrenzungsfehler</Title>
+    <Title domain="4" number="508">Orientierungswert-Fehler</Title>
+    <Title domain="4" number="511">Parameterfehler</Title>
+    <Title domain="4" number="512">Fehlender Wert für externe Achse</Title>
+    <Title domain="4" number="513">Mechanische Einheit - Fehler</Title>
+    <Title domain="4" number="514">Abarbeitungsfehler</Title>
+    <Title domain="4" number="515">Typfehler</Title>
+    <Title domain="4" number="518">Typfehler</Title>
+    <Title domain="4" number="519">Dateiende</Title>
+    <Title domain="4" number="522">Begrenzungsfehler </Title>
+    <Title domain="4" number="523">Konflikt mechanische Einheit</Title>
+    <Title domain="4" number="524">Fördererzugriffsfehler</Title>
+    <Title domain="4" number="525">Fördererzugriffsfehler</Title>
+    <Title domain="4" number="526">Fördererzugriffsfehler</Title>
+    <Title domain="4" number="527">Dateizugriffsfehler</Title>
+    <Title domain="4" number="528">Dateizugriffsfehler</Title>
+    <Title domain="4" number="529">Dateizugriffsfehler</Title>
+    <Title domain="4" number="530">Parameterfehler</Title>
+    <Title domain="4" number="531">Parameterfehler</Title>
+    <Title domain="4" number="534">Timeout</Title>
+    <Title domain="4" number="535">Typfehler</Title>
+    <Title domain="4" number="536">Systemzugriffsfehler</Title>
+    <Title domain="4" number="537">Dateizugriffsfehler</Title>
+    <Title domain="4" number="538">Max. Wartezeit abgelaufen</Title>
+    <Title domain="4" number="539">Systemzugriffsfehler</Title>
+    <Title domain="4" number="540">Dateizugriffsfehler</Title>
+    <Title domain="4" number="541">Dateizugriffsfehler</Title>
+    <Title domain="4" number="542">Dateizugriffsfehler</Title>
+    <Title domain="4" number="543">Dateizugriffsfehler</Title>
+    <Title domain="4" number="544">Dateizugriffsfehler</Title>
+    <Title domain="4" number="545">Dateizugriffsfehler</Title>
+    <Title domain="4" number="546">Dateizugriffsfehler</Title>
+    <Title domain="4" number="547">Dateizugriffsfehler</Title>
+    <Title domain="4" number="548">Dateizugriffsfehler</Title>
+    <Title domain="4" number="549">Systemzugriffsfehler</Title>
+    <Title domain="4" number="555">E/A-Fehler</Title>
+    <Title domain="4" number="556">E/A-Fehler</Title>
+    <Title domain="4" number="557">E/A-Fehler</Title>
+    <Title domain="4" number="558">E/A-Fehler</Title>
+    <Title domain="4" number="559">E/A-Fehler</Title>
+    <Title domain="4" number="560">Systemzugriffsfehler</Title>
+    <Title domain="4" number="561">Systemzugriffsfehler</Title>
+    <Title domain="4" number="562">Parameterfehler</Title>
+    <Title domain="4" number="563">Systemzugriffsfehler</Title>
+    <Title domain="4" number="564">Argumentfehler</Title>
+    <Title domain="4" number="565">Parameterfehler</Title>
+    <Title domain="4" number="566">Parameterfehler</Title>
+    <Title domain="4" number="567">Parameterfehler</Title>
+    <Title domain="4" number="568">Parameterfehler</Title>
+    <Title domain="4" number="569">Argumentfehler</Title>
+    <Title domain="4" number="570">Argumentfehler</Title>
+    <Title domain="4" number="571">Argumentfehler</Title>
+    <Title domain="4" number="572">Argumentfehler</Title>
+    <Title domain="4" number="573">Argumentfehler</Title>
+    <Title domain="4" number="574">Suchwarnung</Title>
+    <Title domain="4" number="576">ParId-Fehler</Title>
+    <Title domain="4" number="577">ParId-Fehler</Title>
+    <Title domain="4" number="578">ParId-Fehler</Title>
+    <Title domain="4" number="579">ParId-Fehler</Title>
+    <Title domain="4" number="580">ParId-Fehler</Title>
+    <Title domain="4" number="581">ParId-Fehler</Title>
+    <Title domain="4" number="582">ParId-Fehler</Title>
+    <Title domain="4" number="583">ParId-Fehler</Title>
+    <Title domain="4" number="584">ParId-Fehler</Title>
+    <Title domain="4" number="585">ParId-Fehler</Title>
+    <Title domain="4" number="586">ParId-Fehler</Title>
+    <Title domain="4" number="587">ParId-Fehler</Title>
+    <Title domain="4" number="588">ParId-Fehler</Title>
+    <Title domain="4" number="589">ParId-Fehler</Title>
+    <Title domain="4" number="590">ParId-Fehler</Title>
+    <Title domain="4" number="591">Argumentfehler</Title>
+    <Title domain="4" number="592">Programmstopp bei Lastidentifikation </Title>
+    <Title domain="4" number="593">Netzfehler bei Lastidentifikation</Title>
+    <Title domain="4" number="594">Anwenderfehler bei Lastidentifikation</Title>
+    <Title domain="4" number="595">Argumentfehler</Title>
+    <Title domain="4" number="596">Programmstopp bei Lastidentifikation</Title>
+    <Title domain="4" number="597">Geschwindigkeits-Override</Title>
+    <Title domain="4" number="598">Programmstopp während Lastidentifikation</Title>
+    <Title domain="4" number="599">Programmstopp während Lastidentifikation</Title>
+    <Title domain="4" number="603">Argumentfehler</Title>
+    <Title domain="4" number="607">Abarbeitungsfehler</Title>
+    <Title domain="4" number="608">Argumentfehler</Title>
+    <Title domain="4" number="609">Argumentfehler</Title>
+    <Title domain="4" number="611">Abarbeitungsfehler</Title>
+    <Title domain="4" number="612">Argumentfehler</Title>
+    <Title domain="4" number="613">Argumentfehler</Title>
+    <Title domain="4" number="614">Argumentfehler</Title>
+    <Title domain="4" number="615">Argumentfehler</Title>
+    <Title domain="4" number="616">Argumentfehler</Title>
+    <Title domain="4" number="617">Argumentfehler</Title>
+    <Title domain="4" number="620">Argumentfehler </Title>
+    <Title domain="4" number="622">Argumentfehler</Title>
+    <Title domain="4" number="623">Argumentfehler</Title>
+    <Title domain="4" number="624">Argumentfehler</Title>
+    <Title domain="4" number="625">Begrenzungsfehler</Title>
+    <Title domain="4" number="631">Instruktionsfehler</Title>
+    <Title domain="4" number="632">Instruktionsfehler</Title>
+    <Title domain="4" number="634">Referenfehler</Title>
+    <Title domain="4" number="636">Sensorfehler</Title>
+    <Title domain="4" number="637">Sensorfehler</Title>
+    <Title domain="4" number="638">Sensorfehler</Title>
+    <Title domain="4" number="639">Sensorfehler</Title>
+    <Title domain="4" number="640">Sensorfehler</Title>
+    <Title domain="4" number="641">Sensorfehler</Title>
+    <Title domain="4" number="642">Sensorfehler</Title>
+    <Title domain="4" number="643">Sensorfehler</Title>
+    <Title domain="4" number="644">Sensorfehler</Title>
+    <Title domain="4" number="645">Sensorfehler</Title>
+    <Title domain="4" number="646">Sensorfehler</Title>
+    <Title domain="4" number="647">Sensorfehler</Title>
+    <Title domain="4" number="648">Suchfehler</Title>
+    <Title domain="4" number="649">Bahnbegrenzung</Title>
+    <Title domain="4" number="650">Falsche Kombination an Parametern</Title>
+    <Title domain="4" number="651">Numerische Eingabe verwenden</Title>
+    <Title domain="4" number="652">Achsenbewegung</Title>
+    <Title domain="4" number="654">Achse nicht aktiv</Title>
+    <Title domain="4" number="655">Achse ist nicht unabhängig</Title>
+    <Title domain="4" number="658">Parameterfehler</Title>
+    <Title domain="4" number="661">Suchfehler</Title>
+    <Title domain="4" number="662">Ungültiger Weltzonentyp</Title>
+    <Title domain="4" number="663">Weltzone nicht verwendet</Title>
+    <Title domain="4" number="664">Weltzone bereits in Gebrauch.</Title>
+    <Title domain="4" number="665">Zu viele Weltzonen</Title>
+    <Title domain="4" number="666">Unzulässige Weltzonen</Title>
+    <Title domain="4" number="667">Unzulässige Weltzonen</Title>
+    <Title domain="4" number="668">Shapedata nicht verwendet</Title>
+    <Title domain="4" number="669">Weltzone zu klein</Title>
+    <Title domain="4" number="670">Ungültige Weltzone</Title>
+    <Title domain="4" number="671">Unzulässige Verwendung von Weltzone</Title>
+    <Title domain="4" number="672">Weltzone bereits in Gebrauch</Title>
+    <Title domain="4" number="673">E/A-Zugriffsfehler</Title>
+    <Title domain="4" number="674">E/A-Zugriffsfehler</Title>
+    <Title domain="4" number="675">Abarbeitungsfehler</Title>
+    <Title domain="4" number="676">Parameterfehler</Title>
+    <Title domain="4" number="677">Parameterfehler</Title>
+    <Title domain="4" number="678">Parameterfehler</Title>
+    <Title domain="4" number="679">Parameterfehler</Title>
+    <Title domain="4" number="680">Parameterfehler</Title>
+    <Title domain="4" number="681">Parameterfehler</Title>
+    <Title domain="4" number="698">Lesefehler</Title>
+    <Title domain="4" number="699">Programmspeicher voll</Title>
+    <Title domain="4" number="700">Syntaxfehler</Title>
+    <Title domain="4" number="701">Programmspeicher voll</Title>
+    <Title domain="4" number="702">Datei nicht gefunden</Title>
+    <Title domain="4" number="703">Entladefehler</Title>
+    <Title domain="4" number="704">Löschen-Fehler </Title>
+    <Title domain="4" number="705">Syntaxfehler</Title>
+    <Title domain="4" number="706">Ladefehler</Title>
+    <Title domain="4" number="707">Name der E/A-Einheit ungültig</Title>
+    <Title domain="4" number="708">E/A-Einheit nicht aktiviert</Title>
+    <Title domain="4" number="709">E/A-Einheit nicht deaktiviert</Title>
+    <Title domain="4" number="710">Argumentfehler</Title>
+    <Title domain="4" number="711">Alias-Typfehler</Title>
+    <Title domain="4" number="712">Ereignisroutine-Fehler</Title>
+    <Title domain="4" number="713">Alias-Definitionsfehler</Title>
+    <Title domain="4" number="714">Argumentfehler</Title>
+    <Title domain="4" number="720">Alias-E/A-Installation</Title>
+    <Title domain="4" number="721">E/A-Installation</Title>
+    <Title domain="4" number="722">Mechanische Einheiten</Title>
+    <Title domain="4" number="723">Kamerainstallation</Title>
+    <Title domain="4" number="724">Speichern- oder Löschfehler</Title>
+    <Title domain="4" number="726">Referenzfehler</Title>
+    <Title domain="4" number="727">Speichernfehler</Title>
+    <Title domain="4" number="728">Koordinatensystem-Fehler</Title>
+    <Title domain="4" number="731">Wertfehler</Title>
+    <Title domain="4" number="732">Wertfehler</Title>
+    <Title domain="4" number="733">Wertfehler</Title>
+    <Title domain="4" number="734">Symboldefinitionsfehler</Title>
+    <Title domain="4" number="735">Argumentfehler</Title>
+    <Title domain="4" number="736">Mechanische Einheit - Fehler</Title>
+    <Title domain="4" number="737">Symboldefinitionsfehler </Title>
+    <Title domain="4" number="738">E/A-Fehler</Title>
+    <Title domain="4" number="739">Parameterfehler</Title>
+    <Title domain="4" number="740">Abarbeitungsfehler</Title>
+    <Title domain="4" number="741">Kontextfehler</Title>
+    <Title domain="4" number="742">Parameterfehler</Title>
+    <Title domain="4" number="743">Parameterfehler</Title>
+    <Title domain="4" number="744">Parameterfehler</Title>
+    <Title domain="4" number="745">Parameterfehler</Title>
+    <Title domain="4" number="746">Parameterfehler</Title>
+    <Title domain="4" number="747">Zugriffsfehler</Title>
+    <Title domain="4" number="748">Wertfehler</Title>
+    <Title domain="4" number="749">Abarbeitungsfehler</Title>
+    <Title domain="4" number="752">Argumentfehler</Title>
+    <Title domain="4" number="753">Speicherfehler </Title>
+    <Title domain="4" number="754">Argumentfehler</Title>
+    <Title domain="4" number="755">Kontextfehler</Title>
+    <Title domain="4" number="756">Kontextfehler</Title>
+    <Title domain="4" number="757">Argumentfehler</Title>
+    <Title domain="4" number="758">E/A-Fehler</Title>
+    <Title domain="4" number="759">Parameterfehler</Title>
+    <Title domain="4" number="761">Parameterfehler</Title>
+    <Title domain="4" number="762">Wertfehler</Title>
+    <Title domain="4" number="763">Abarbeitungsfehler</Title>
+    <Title domain="4" number="764">Switch-Argumentfehler</Title>
+    <Title domain="4" number="765">Argumentfehler</Title>
+    <Title domain="4" number="766">Parameterfehler</Title>
+    <Title domain="4" number="767">Suchfehler</Title>
+    <Title domain="4" number="768">Symbolzugriffsfehler</Title>
+    <Title domain="4" number="769">Symbol-Lesezugriffsfehler</Title>
+    <Title domain="4" number="770">Symboltypfehler</Title>
+    <Title domain="4" number="771">Symbolzugriffsfehler</Title>
+    <Title domain="4" number="772">E/A-Fehler</Title>
+    <Title domain="4" number="773">Instruktion unterbrochen</Title>
+    <Title domain="4" number="774">Objekt gelöscht</Title>
+    <Title domain="4" number="775">Förderer-Fehler</Title>
+    <Title domain="4" number="776">Förderer-Fehler</Title>
+    <Title domain="4" number="777">Förderer-Fehler</Title>
+    <Title domain="4" number="778">Wertfehler</Title>
+    <Title domain="4" number="779">Fehlernummer lokal</Title>
+    <Title domain="4" number="780">Datenobjekt-Fehler</Title>
+    <Title domain="4" number="781">Dateifehler</Title>
+    <Title domain="4" number="782">Modusfehler</Title>
+    <Title domain="4" number="783">Modusfehler</Title>
+    <Title domain="4" number="784">Modusfehler</Title>
+    <Title domain="4" number="785">Modusfehler</Title>
+    <Title domain="4" number="786">Lesefehler</Title>
+    <Title domain="4" number="787">Anwender-Koordinatensystem-Fehler</Title>
+    <Title domain="4" number="788">Achsenfehler</Title>
+    <Title domain="4" number="789">Begrenzungsfehler</Title>
+    <Title domain="4" number="790">Wertfehler</Title>
+    <Title domain="4" number="791">E/A-Fehler</Title>
+    <Title domain="4" number="792">E/A-Fehler</Title>
+    <Title domain="4" number="793">Fehler bei Installation der Texttabelle</Title>
+    <Title domain="4" number="794">Fehler bei Installation der Texttabelle</Title>
+    <Title domain="4" number="795">Fehler bei Installation der Texttabelle</Title>
+    <Title domain="4" number="796">Überlastfehler</Title>
+    <Title domain="4" number="797">E/A-Fehler</Title>
+    <Title domain="4" number="798">Systemzugriffsfehler</Title>
+    <Title domain="4" number="799">Abarbeitungsfehler</Title>
+    <Title domain="4" number="800">Werkzeugfehler</Title>
+    <Title domain="4" number="801">Berechnungsfehler</Title>
+    <Title domain="4" number="802">Abarbeitungsfehler</Title>
+    <Title domain="4" number="803">Fehlermeldung zu lang</Title>
+    <Title domain="4" number="804">Argumentfehler</Title>
+    <Title domain="4" number="805">Bewegungsfehler</Title>
+    <Title domain="4" number="806">IOF-Fehler</Title>
+    <Title domain="4" number="807">Dateifehler</Title>
+    <Title domain="4" number="811">Kein Kontakt mit Einheit</Title>
+    <Title domain="4" number="812">Abarbeitungsfehler </Title>
+    <Title domain="4" number="813">Abarbeitungsfehler</Title>
+    <Title domain="4" number="814">Abarbeitungsfehler</Title>
+    <Title domain="4" number="815">Achsennummer nicht vorhanden</Title>
+    <Title domain="4" number="816">RolGenInstr-Fehler</Title>
+    <Title domain="4" number="1000">Auswahlliste vorhanden</Title>
+    <Title domain="4" number="1001">Kein gültiger Name</Title>
+    <Title domain="4" number="1002">Puffergröße überschritten</Title>
+    <Title domain="4" number="1003">Auswahlliste nicht definiert</Title>
+    <Title domain="4" number="1004">Itmsrc - interner Fehler</Title>
+    <Title domain="4" number="1005">Auswahlliste zuerst löschen</Title>
+    <Title domain="4" number="1006">Auswahlziel erst bestätigen</Title>
+    <Title domain="4" number="1007">Puffer Auswahlziel voll</Title>
+    <Title domain="4" number="1008">Förderer-E/A-Init-Fehler</Title>
+    <Title domain="4" number="1009">Förderer existiert nicht</Title>
+    <Title domain="4" number="1010">Kein Förderername angegeben</Title>
+    <Title domain="4" number="1011">Förderergrenzen-Fehler</Title>
+    <Title domain="4" number="1012">Fördererdaten zu spät definiert</Title>
+    <Title domain="4" number="1050">Profil nicht aktiviert</Title>
+    <Title domain="4" number="1051">Aufgezeichnetes Profil nicht gespeichert</Title>
+    <Title domain="4" number="1052">Profildatendatei kann nicht verwendet werden</Title>
+    <Title domain="4" number="1100">Zu viele Korrekturen</Title>
+    <Title domain="4" number="1101">Korrektur nicht verbunden</Title>
+    <Title domain="4" number="1102">Keine Korrekturen verbunden</Title>
+    <Title domain="4" number="1200">Servowerkzeug öffnen - Fehler</Title>
+    <Title domain="4" number="1201">Servowerkzeug schließen - Fehler</Title>
+    <Title domain="4" number="1202">Servowerkzeug-Kalibrierungsfehler</Title>
+    <Title domain="4" number="1203">Servowerkzeug-Fehler</Title>
+    <Title domain="4" number="1204">Servowerkzeug-Fehler</Title>
+    <Title domain="4" number="1205">Servowerkzeug-Fehler</Title>
+    <Title domain="4" number="1206">Servowerkzeug-Parameterfehler</Title>
+    <Title domain="4" number="1207">Servowerkzeug-Initialisierungsfehler</Title>
+    <Title domain="4" number="1208">Servowerkzeug-Synchronisierungsfehler</Title>
+    <Title domain="4" number="1209">Servowerkzeug-Aktivierungsfehler</Title>
+    <Title domain="4" number="1210">Servowerkzeug-Fehler</Title>
+    <Title domain="4" number="1211">Servowerkzeug-Fehler</Title>
+    <Title domain="4" number="1212">Fehler Servowerkzeug</Title>
+    <Title domain="4" number="1300">Argumentfehler</Title>
+    <Title domain="4" number="1301">Argumentfehler</Title>
+    <Title domain="4" number="1302">Argumentfehler</Title>
+    <Title domain="4" number="1303">Argumentfehler</Title>
+    <Title domain="4" number="1304">Argumentfehler</Title>
+    <Title domain="4" number="1400">Parameterfehler</Title>
+    <Title domain="4" number="1401">E/A-Fehler</Title>
+    <Title domain="4" number="1402">Wertfehler</Title>
+    <Title domain="4" number="1403">Wertfehler</Title>
+    <Title domain="4" number="1404">Parameterfehler</Title>
+    <Title domain="4" number="1405">Parameterfehler</Title>
+    <Title domain="4" number="1406">Parameterfehler</Title>
+    <Title domain="4" number="1407">Parameterfehler</Title>
+    <Title domain="4" number="1408">Parameterfehler</Title>
+    <Title domain="4" number="1409">Parameterfehler</Title>
+    <Title domain="4" number="1410">Parameterfehler</Title>
+    <Title domain="4" number="1411">Parameterfehler</Title>
+    <Title domain="4" number="1412">Parameterfehler</Title>
+    <Title domain="4" number="1413">Parameterfehler</Title>
+    <Title domain="4" number="1414">Parameterfehler</Title>
+    <Title domain="4" number="1415">Parameterfehler</Title>
+    <Title domain="4" number="1416">Parameterfehler</Title>
+    <Title domain="4" number="1417">Systemzugriffsfehler</Title>
+    <Title domain="4" number="1419">Parameterfehler</Title>
+    <Title domain="4" number="1420">Parameterfehler</Title>
+    <Title domain="4" number="1421">Parameterfehler</Title>
+    <Title domain="4" number="1422">Parameterfehler</Title>
+    <Title domain="4" number="1423">Parameterfehler</Title>
+    <Title domain="4" number="1424">Parameterfehler</Title>
+    <Title domain="4" number="1425">Parameterfehler</Title>
+    <Title domain="4" number="1426">E/A-Fehler</Title>
+    <Title domain="4" number="1427">Argumentfehler</Title>
+    <Title domain="4" number="1428">Achsenfehler</Title>
+    <Title domain="4" number="1429">Achsenfehler</Title>
+    <Title domain="4" number="1430">Argumentfehler</Title>
+    <Title domain="4" number="1431">Systemzugriffsfehler</Title>
+    <Title domain="4" number="1432">Systemzugriffsfehler</Title>
+    <Title domain="4" number="1433">Parameterfehler</Title>
+    <Title domain="4" number="1434">Parameterfehler</Title>
+    <Title domain="4" number="1435">Parameterfehler</Title>
+    <Title domain="4" number="1437">Systemzugriffsfehler</Title>
+    <Title domain="4" number="1438">Undefinierte Last</Title>
+    <Title domain="4" number="1439">Undefinierte Last</Title>
+    <Title domain="4" number="1440">Argument fehlt</Title>
+    <Title domain="4" number="1441">UnLoad-Fehler</Title>
+    <Title domain="4" number="1442">Referenzfehler</Title>
+    <Title domain="4" number="1443">Argumentfehler</Title>
+    <Title domain="4" number="1444">Argumentfehler</Title>
+    <Title domain="4" number="1445">Argumentfehler</Title>
+    <Title domain="4" number="1446">Argumentfehler</Title>
+    <Title domain="4" number="1447">Argumentfehler</Title>
+    <Title domain="4" number="1448">Argumentfehler</Title>
+    <Title domain="4" number="1449">Wertfehler</Title>
+    <Title domain="4" number="1450">Argumentfehler</Title>
+    <Title domain="4" number="1451">Argumentfehler</Title>
+    <Title domain="4" number="1452">Argumentfehler</Title>
+    <Title domain="4" number="1453">Typfehler</Title>
+    <Title domain="4" number="1454">Referenzfehler</Title>
+    <Title domain="4" number="1455">Systemzugriffsfehler</Title>
+    <Title domain="4" number="1456">Argumentfehler</Title>
+    <Title domain="4" number="1457">Argumentfehler</Title>
+    <Title domain="4" number="1458">Argumentfehler</Title>
+    <Title domain="4" number="1459">Argumentfehler</Title>
+    <Title domain="4" number="1460">Argumentfehler</Title>
+    <Title domain="4" number="1461">Wertfehler</Title>
+    <Title domain="4" number="1462">Wertfehler</Title>
+    <Title domain="4" number="1463">Argumentschalter fehlt</Title>
+    <Title domain="4" number="1464">Index zu hoch</Title>
+    <Title domain="4" number="1465">Die Zeichenfolge ist leer</Title>
+    <Title domain="4" number="1466">Die Variablen sind gleich</Title>
+    <Title domain="4" number="1467">Wertfehler</Title>
+    <Title domain="4" number="1468">Wertfehler</Title>
+    <Title domain="4" number="1469">Wertfehler</Title>
+    <Title domain="4" number="1470">Argumentfehler</Title>
+    <Title domain="4" number="1471">Instruktionsfehler</Title>
+    <Title domain="4" number="1472">Instruktionsfehler</Title>
+    <Title domain="4" number="1473">Systemzugriffsfehler</Title>
+    <Title domain="4" number="1474">Wertfehler</Title>
+    <Title domain="4" number="1475">Falsche Größe der Taskliste</Title>
+    <Title domain="4" number="1476">Nichtkonsistente Taskliste</Title>
+    <Title domain="4" number="1477">Timeout</Title>
+    <Title domain="4" number="1483">Argumentfehler</Title>
+    <Title domain="4" number="1484">Timeout</Title>
+    <Title domain="4" number="1486">Instruktionsfehler</Title>
+    <Title domain="4" number="1487">Instruktionsfehler</Title>
+    <Title domain="4" number="1488">Wertfehler</Title>
+    <Title domain="4" number="1489">Wertfehler</Title>
+    <Title domain="4" number="1490">Timeout</Title>
+    <Title domain="4" number="1491">Instruktionsfehler</Title>
+    <Title domain="4" number="1492">Instruktionsfehler</Title>
+    <Title domain="4" number="1493">Abarbeitungsfehler</Title>
+    <Title domain="4" number="1494">Instruktionsfehler</Title>
+    <Title domain="4" number="1495">PZ-Bewegen - Fehler </Title>
+    <Title domain="4" number="1496">PZ-Bewegen - Fehler </Title>
+    <Title domain="4" number="1497">PZ-Bewegen - Benachrichtigung </Title>
+    <Title domain="4" number="1498">Kein def. Anwender-Koordinatensystem in mechanischer Einheit <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />! </Title>
+    <Title domain="4" number="1499">Synchronisierter Modus</Title>
+    <Title domain="4" number="1500">Unabhängiger Modus</Title>
+    <Title domain="4" number="1501">Unzulässige ID</Title>
+    <Title domain="4" number="1502">Unzulässige Domäne</Title>
+    <Title domain="4" number="1503">Unzulässiger Fehlertyp</Title>
+    <Title domain="4" number="1504">Keine mechanische Einheit angegeben.</Title>
+    <Title domain="4" number="1505">Mechanische Einheit nicht in Task</Title>
+    <Title domain="4" number="1506">Task liest keinen TCP-Roboter</Title>
+    <Title domain="4" number="1507">Task liest andere mechanische Einheit</Title>
+    <Title domain="4" number="1508">Last-ID-Fehler</Title>
+    <Title domain="4" number="1509">Last-ID-Fehler</Title>
+    <Title domain="4" number="1510">Last-ID-Fehler</Title>
+    <Title domain="4" number="1511">Last-ID-Fehler</Title>
+    <Title domain="4" number="1512">Interner Fehler</Title>
+    <Title domain="4" number="1513">Last-ID-Fehler</Title>
+    <Title domain="4" number="1514">Load-ID-Fehler</Title>
+    <Title domain="4" number="1515">Last-ID-Fehler</Title>
+    <Title domain="4" number="1516">Last-ID-Fehler</Title>
+    <Title domain="4" number="1517">Last-ID-Fehler</Title>
+    <Title domain="4" number="1518">Last-ID-Fehler</Title>
+    <Title domain="4" number="1519">Last-ID-Fehler</Title>
+    <Title domain="4" number="1520">Fehlerbehandlungskonstante nicht vergeben</Title>
+    <Title domain="4" number="1521">Task-Statusfehler</Title>
+    <Title domain="4" number="1522">Falsche Fehlerbehandlungskonstante verwendet</Title>
+    <Title domain="4" number="1523">Argumentfehler</Title>
+    <Title domain="4" number="1524">Instruktionsfehler</Title>
+    <Title domain="4" number="1525">Instruktionsfehler</Title>
+    <Title domain="4" number="1526">Instruktionsfehler</Title>
+    <Title domain="4" number="1527">Argumentschalter fehlt</Title>
+    <Title domain="4" number="1528">Instruktionsfehler</Title>
+    <Title domain="4" number="1529">Instruktionsfehler</Title>
+    <Title domain="4" number="1530">Instruktionsfehler</Title>
+    <Title domain="4" number="1531">Task nicht in Taskliste </Title>
+    <Title domain="4" number="1532">Konflikt bei Taskliste</Title>
+    <Title domain="4" number="1533">Konflikt bei Synch.-ID</Title>
+    <Title domain="4" number="1534">Inkonsistente Synchronisierungsdaten</Title>
+    <Title domain="4" number="1535">Unerwartetes SyncMoveOn</Title>
+    <Title domain="4" number="1536">Unerwartetes SyncMoveOn</Title>
+    <Title domain="4" number="1537">Unerwartetes SyncMoveOff</Title>
+    <Title domain="4" number="1538">Taskliste falsch</Title>
+    <Title domain="4" number="1539">Geschwindigkeit zu hoch</Title>
+    <Title domain="4" number="1540">Falsche mechanische Einheit</Title>
+    <Title domain="4" number="1541">Nicht zulässig in Lesetask</Title>
+    <Title domain="4" number="1542">Programmstopp</Title>
+    <Title domain="4" number="1543">Argumentfehler</Title>
+    <Title domain="4" number="1544">Veraltete Instruktion</Title>
+    <Title domain="4" number="1545">Argumentfehler</Title>
+    <Title domain="4" number="1546">Argumentfehler</Title>
+    <Title domain="4" number="1547">Argumentfehler</Title>
+    <Title domain="4" number="1548">Modulfehler</Title>
+    <Title domain="4" number="1549">Unerwartetes SyncMoveOn oder SyncMoveOff </Title>
+    <Title domain="4" number="1550">Bahnaufzeichnung-Start/Stopp-Fehler </Title>
+    <Title domain="4" number="1551">Bahnaufzeichnung-Bewegungsfehler</Title>
+    <Title domain="4" number="1552">PathRecorder-Bahnebenenfehler</Title>
+    <Title domain="4" number="1553">Zerstörte Daten</Title>
+    <Title domain="4" number="1554">Synchronisierter Modus</Title>
+    <Title domain="4" number="1555">Kein Kontakt mit Einheit</Title>
+    <Title domain="4" number="1556">Kein Kontakt mit Einheit</Title>
+    <Title domain="4" number="1557">Mech. Einheit nicht gestoppt</Title>
+    <Title domain="4" number="1558">Argumentschalter fehlt</Title>
+    <Title domain="4" number="1559">Keine PERS-Variable</Title>
+    <Title domain="4" number="1560">Kein Beginn der Bewegung</Title>
+    <Title domain="4" number="1561">Kein Text in Funktionstaste </Title>
+    <Title domain="4" number="1562">Gefahr einer falschen kreisförmigen Bewegung</Title>
+    <Title domain="4" number="1563">Argumentfehler </Title>
+    <Title domain="4" number="1564">Darf nicht von Bewegungstask ausgeführt werden</Title>
+    <Title domain="4" number="1565">Unzulässiger Wert</Title>
+    <Title domain="4" number="1566">Signal überschreitet max. Anzahl zulässiger Bits</Title>
+    <Title domain="4" number="1567">Abbruch durch digitalen Ausgang</Title>
+    <Title domain="4" number="1568">Angegebener Name ist kein Bus</Title>
+    <Title domain="4" number="1569">Socket-Fehler</Title>
+    <Title domain="4" number="1570">Socket-Fehler</Title>
+    <Title domain="4" number="1571">Socket-Fehler</Title>
+    <Title domain="4" number="1572">Socket-Fehler </Title>
+    <Title domain="4" number="1573">Socket-Fehler</Title>
+    <Title domain="4" number="1574">Socket-Fehler </Title>
+    <Title domain="4" number="1575">Socket-Fehler </Title>
+    <Title domain="4" number="1576">Socket-Fehler </Title>
+    <Title domain="4" number="1577">Socket-Fehler </Title>
+    <Title domain="4" number="1578">Socket-Fehler </Title>
+    <Title domain="4" number="1579">Socket-Fehler </Title>
+    <Title domain="4" number="1580">Socket-Fehler</Title>
+    <Title domain="4" number="1581">Socket-Fehler </Title>
+    <Title domain="4" number="1582">Socket-Fehler </Title>
+    <Title domain="4" number="1583">Socket-Fehler </Title>
+    <Title domain="4" number="1584">Socket-Fehler </Title>
+    <Title domain="4" number="1585">Socket-Fehler </Title>
+    <Title domain="4" number="1586">Socket-Fehler </Title>
+    <Title domain="4" number="1587">Socket-Fehler</Title>
+    <Title domain="4" number="1590">Socket-Fehler </Title>
+    <Title domain="4" number="1591">Socket-Fehler</Title>
+    <Title domain="4" number="1592">Socket-Fehler</Title>
+    <Title domain="4" number="1593">Socket-Fehler </Title>
+    <Title domain="4" number="1594">Socket-Fehler</Title>
+    <Title domain="4" number="1595">Socket-Fehler</Title>
+    <Title domain="4" number="1596">Socket-Fehler</Title>
+    <Title domain="4" number="1597">Socket-Fehler</Title>
+    <Title domain="4" number="1598">Socket-Fehler</Title>
+    <Title domain="4" number="1599">Socket-Fehler </Title>
+    <Title domain="4" number="1600">Socket-Fehler </Title>
+    <Title domain="4" number="1601">Socket-Fehler</Title>
+    <Title domain="4" number="1602">Socket-Fehler</Title>
+    <Title domain="4" number="1603">Socket-Fehler </Title>
+    <Title domain="4" number="1604">Socket-Fehler </Title>
+    <Title domain="4" number="1605">Socket-Fehler</Title>
+    <Title domain="4" number="1606">Socket-Fehler</Title>
+    <Title domain="4" number="1607">Socket-Fehler</Title>
+    <Title domain="4" number="1611">UIMsgBox - Kein Benutzer oder keine Programmaktion definiert</Title>
+    <Title domain="4" number="1612">Minimaler Wert größer als maximaler Wert</Title>
+    <Title domain="4" number="1613">InitValue liegt nicht innerhalb des Wertebereichs</Title>
+    <Title domain="4" number="1614">InitValue ist keine Ganzzahl</Title>
+    <Title domain="4" number="1615">Referenzfehler</Title>
+    <Title domain="4" number="1616">Referenzfehler</Title>
+    <Title domain="4" number="1617">Zu hohe Häufigkeit von Schreibinstruktionen</Title>
+    <Title domain="4" number="1618">Argumentfehler in "buttondata"</Title>
+    <Title domain="4" number="1619">Argumentfehler in "icondata"</Title>
+    <Title domain="4" number="1620">Socket-Fehler </Title>
+    <Title domain="4" number="1621">StorePath-Fehler </Title>
+    <Title domain="4" number="1622">Unerwartete Instruktion </Title>
+    <Title domain="4" number="1623">Fehlerhafte Verwendung von <arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="4" number="1625">Unerwartete <arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="4" number="1626">Unerwartet: <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> \<arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="4" number="1627">Fehlerhafte Verwendung von <arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="4" number="1630">Unsichere Synchronisierung</Title>
+    <Title domain="4" number="1631">Instruktionsfehler</Title>
+    <Title domain="4" number="1632">Argument existiert nicht</Title>
+    <Title domain="4" number="1633">Kann nur in einer UNDO-Routine verwendet werden</Title>
+    <Title domain="4" number="1634">Unbekannter Taskname</Title>
+    <Title domain="4" number="1635">Unerwartetes SyncMoveOff</Title>
+    <Title domain="4" number="1636">Unerwarteter SyncMoveOff</Title>
+    <Title domain="4" number="1637">Task im Taskauswahlfeld nicht mehr aktiv</Title>
+    <Title domain="4" number="1638">Unzulässige Task-Aktivierung</Title>
+    <Title domain="4" number="1640">Warnung zum Verschieben des PZ</Title>
+    <Title domain="4" number="1641">Warnung zum Verschieben des PZ</Title>
+    <Title domain="4" number="1642">Argumentfehler</Title>
+    <Title domain="4" number="1643">Argumentfehler</Title>
+    <Title domain="4" number="1644">Argumentfehler</Title>
+    <Title domain="4" number="1645">Programm in RAPID angehalten</Title>
+    <Title domain="4" number="1646">Programm von RAPID blockiert</Title>
+    <Title domain="4" number="1647">Programm in RAPID angehalten</Title>
+    <Title domain="4" number="1648">Abarbeitungsfehler</Title>
+    <Title domain="4" number="1649">Falscher Fehlermeldungsaufbau</Title>
+    <Title domain="4" number="1650">Task wurde bereits von anderer Task angehalten</Title>
+    <Title domain="4" number="1651">StartMove-Aktionen für Task ignoriert</Title>
+    <Title domain="4" number="1652">Erzwungene StartMove-Aktion</Title>
+    <Title domain="4" number="1653">CalcJointT-Argumentfehler</Title>
+    <Title domain="4" number="1654">CalcJointT-Abarbeitungsfehler</Title>
+    <Title domain="4" number="1655">Argument ist keine Bewegungstask</Title>
+    <Title domain="4" number="1656">Unzulässiger Wert</Title>
+    <Title domain="4" number="1657">Dateizugriffsfehler</Title>
+    <Title domain="4" number="1658">Programmtask im Zustand StopMove</Title>
+    <Title domain="4" number="1660">Kein Platz für die neue Ansicht</Title>
+    <Title domain="4" number="1661">Assembly wurde nicht gefunden</Title>
+    <Title domain="4" number="1662">Assembly konnte nicht geladen werden</Title>
+    <Title domain="4" number="1663">Instanz konnte nicht erstellt werden</Title>
+    <Title domain="4" number="1664">Der Typname ist für diese Assembly ungültig</Title>
+    <Title domain="4" number="1665">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> stimmt nicht mit Assembly überein</Title>
+    <Title domain="4" number="1666">Schwerer UIShow-Fehler</Title>
+    <Title domain="4" number="1667">Schwerwiegender UI-Fehler</Title>
+    <Title domain="4" number="1670">Gesamtes Datenfeld als Argument nicht zulässig</Title>
+    <Title domain="4" number="1671">Zu hohe Abtastrate</Title>
+    <Title domain="4" number="1672">Ungültige Kombination</Title>
+    <Title domain="4" number="1673">Index außerhalb des zulässigen Bereichs</Title>
+    <Title domain="4" number="1674">Wert außerhalb des zulässigen Bereichs</Title>
+    <Title domain="4" number="1675">Keine Ganzzahl</Title>
+    <Title domain="4" number="1676">Einheit-Zugriffsfehler</Title>
+    <Title domain="4" number="1677">Einheit-Zugriffsfehler</Title>
+    <Title domain="4" number="1678">Einheit-Zugriffsfehler</Title>
+    <Title domain="4" number="1679">Einheit-Zugriffsfehler</Title>
+    <Title domain="4" number="1680">Zeichenfolge zu lang</Title>
+    <Title domain="4" number="1682">Zu viele überwachte E/A</Title>
+    <Title domain="4" number="1683">Argumentfehler</Title>
+    <Title domain="4" number="1684">Wertfehler</Title>
+    <Title domain="4" number="1685">Ungültiger Wert</Title>
+    <Title domain="4" number="1687">Fehler beim Öffnen der Datei</Title>
+    <Title domain="4" number="1688">Ungültiges Argument</Title>
+    <Title domain="4" number="1690">Parameterfehler</Title>
+    <Title domain="4" number="1691">RMQ-Fehler - Ungültiger Client-Name</Title>
+    <Title domain="4" number="1692">RMQ-Fehler- Ungültiger Slot</Title>
+    <Title domain="4" number="1693">RMQ-Fehler - Max. Meldungsgröße überschritten</Title>
+    <Title domain="4" number="1694">RMQ-Fehler - Ungleiche Datentypen</Title>
+    <Title domain="4" number="1695">RMQ-Fehler - Ungleiche Dimensionen von Daten</Title>
+    <Title domain="4" number="1696">RMQ-Fehler - Unzul. Verwendung der Instruktion</Title>
+    <Title domain="4" number="1697">RMQ-Fehler - Keine RMQ konfiguriert</Title>
+    <Title domain="4" number="1698">RMQ-Fehler - Falsche Verwendung von Instruktion</Title>
+    <Title domain="4" number="1699">RMQ-Fehler - Max. Größe Meldung überschritten</Title>
+    <Title domain="4" number="1700">RMQ-Fehler – Interrupt-Setup fehlgeschlagen</Title>
+    <Title domain="4" number="1701">RMQ-Fehler - Keine erfassbare Meldung vorhanden</Title>
+    <Title domain="4" number="1702">RMQ-Fehler - <arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /> ungültig</Title>
+    <Title domain="4" number="1703">RMQ-Fehler - Daten konnten nicht kopiert werden</Title>
+    <Title domain="4" number="1704">RMQ-Fehler - Warteschlange voll</Title>
+    <Title domain="4" number="1705">RMQ-Fehler - Höchstdauer überschritten</Title>
+    <Title domain="4" number="1706">RMQ-Fehler - Höchstdauer überschritten</Title>
+    <Title domain="4" number="1707">RMQ-Fehler – Instruktion in aktuellem Modus ungültig</Title>
+    <Title domain="4" number="1708">RMQ-Fehler – ungültige Meldung</Title>
+    <Title domain="4" number="1711">Kein Prozentwert</Title>
+    <Title domain="4" number="1712">Argumentfehler</Title>
+    <Title domain="4" number="1713">Argumentfehler</Title>
+    <Title domain="4" number="1714">Zu viele Fehlerereignisse</Title>
+    <Title domain="4" number="1715">Ungültige Richtung</Title>
+    <Title domain="4" number="1716">Ungültige Offsetrichtung</Title>
+    <Title domain="4" number="1717">Zu niedriger Wert</Title>
+    <Title domain="4" number="1718">Ungültige Dimensionen</Title>
+    <Title domain="4" number="1719">Unzulässiger Parameter</Title>
+    <Title domain="4" number="1720">Bahn nicht in Stoppunkt</Title>
+    <Title domain="4" number="1721">Ungültiges Argument</Title>
+    <Title domain="4" number="1722">Zu hoher Wert</Title>
+    <Title domain="4" number="1723">Bus im Fehlerzustand</Title>
+    <Title domain="4" number="1724">Aktuelles Werkobjekt ist ungültig</Title>
+    <Title domain="4" number="1725">Ungültige Konfigurationseinstellungen</Title>
+    <Title domain="4" number="1726">StopMoveReset-Aktionen für Task ignoriert</Title>
+    <Title domain="4" number="1727">Die Größe kann nicht in einer num dargestellt werden </Title>
+    <Title domain="4" number="1730">Signal überschreitet max. Anzahl zulässiger Bits</Title>
+    <Title domain="4" number="1731">Signalname nicht definiert</Title>
+    <Title domain="4" number="1732">Zu viele Trigger verwendet</Title>
+    <Title domain="4" number="1737">Instruktions-Reihenfolgefehler</Title>
+    <Title domain="4" number="1738">Option Wrist Interpolation notwendig</Title>
+    <Title domain="4" number="1739">StorePath notwendig</Title>
+    <Title domain="4" number="1740">Lastidentifikation fehlgeschlagen</Title>
+    <Title domain="4" number="1741">Berechnungsüberlauf</Title>
+    <Title domain="4" number="1742">Negative Subtraktion</Title>
+    <Title domain="4" number="1743">Division durch Null</Title>
+    <Title domain="4" number="1744">Instruktionsfehler</Title>
+    <Title domain="4" number="1745">Instruktionsfehler</Title>
+    <Title domain="4" number="1746">Instruktionsfehler</Title>
+    <Title domain="4" number="1747">Prozesssignal aus</Title>
+    <Title domain="4" number="1748">Wertfehler</Title>
+    <Title domain="4" number="1749">Wertfehler</Title>
+    <Title domain="4" number="1750">Unzulässiger Wert</Title>
+    <Title domain="4" number="1751">Datenfeldgrößenfehler</Title>
+    <Title domain="4" number="1752">Num Begrenzungsfehler</Title>
+    <Title domain="4" number="1753">Ungültige Bahnebene</Title>
+    <Title domain="4" number="1754">Path Recorder gelöscht</Title>
+    <Title domain="4" number="1755">Abarbeitungszeit zu lang</Title>
+    <Title domain="4" number="1756">Fehlendes FricIdInit</Title>
+    <Title domain="4" number="1757">Mechanische Einheit nicht gefunden</Title>
+    <Title domain="4" number="1758">Datenfeld zu klein</Title>
+    <Title domain="4" number="1759">Signal überschreitet max. Anzahl zulässiger Bits</Title>
+    <Title domain="4" number="1760">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> wenn im synchronisierten Modus</Title>
+    <Title domain="4" number="1761">Wert nicht im Sollbereich</Title>
+    <Title domain="4" number="1762">Der Zeichenfolgewert des Arguments ist ungültig</Title>
+    <Title domain="4" number="1763">Zeichenfolgenwert des Arguments ist zu hoch</Title>
+    <Title domain="4" number="1764">Falsche Kombination in <arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="4" number="1765">Argumentwert ist zu hoch</Title>
+    <Title domain="4" number="1766">Die Präzision geht dabei verloren</Title>
+    <Title domain="4" number="1767">Instruktionsfehler</Title>
+    <Title domain="4" number="1768">switch fehlt</Title>
+    <Title domain="4" number="1769">Servicedaten nicht gefunden</Title>
+    <Title domain="4" number="1770">Systemzugriffsfehler</Title>
+    <Title domain="4" number="1771">Laden des Auftrags abbrechen</Title>
+    <Title domain="4" number="1772">Parameterfehler</Title>
+    <Title domain="4" number="1773">Timeout</Title>
+    <Title domain="4" number="1774">Typenfehler</Title>
+    <Title domain="4" number="1775">Gleichzeitige Anforderung an Kamera</Title>
+    <Title domain="4" number="1776">Keine weiteren Daten verfügbar</Title>
+    <Title domain="4" number="1777">Die Kamera ist nicht verbunden</Title>
+    <Title domain="4" number="1778">Laden des Jobs fehlgeschlagen</Title>
+    <Title domain="4" number="1779">Parameter kann nicht geändert werden</Title>
+    <Title domain="4" number="1780">Kamera ist im Programmmodus</Title>
+    <Title domain="4" number="1781">Kamera ist im Abarbeitungsmodus</Title>
+    <Title domain="4" number="1782">Dies wird von der Kamera nicht unterstützt</Title>
+    <Title domain="4" number="1783">Kommunikations-Timeout</Title>
+    <Title domain="4" number="1784">Kommunikationsfehler</Title>
+    <Title domain="4" number="1786">Parameter außerhalb Bereich</Title>
+    <Title domain="4" number="1787">Parameter kann nicht gelesen werden</Title>
+    <Title domain="4" number="1788">Kameratask wird nicht geladen</Title>
+    <Title domain="4" number="1789">Keine weiteren Daten verfügbar</Title>
+    <Title domain="4" number="1791">SoftMove mit einer Masse von null nicht zulässig</Title>
+    <Title domain="4" number="1792">Instruktion nicht zulässig</Title>
+    <Title domain="4" number="1793">TriggInt Stopp-Fehler</Title>
+    <Title domain="4" number="1794">Suchfehler</Title>
+    <Title domain="4" number="1795">Falscher Nutzlastmodus</Title>
+    <Title domain="4" number="1796">Argumentfehler</Title>
+    <Title domain="4" number="1797">Signal nicht erreichbar </Title>
+    <Title domain="4" number="1798">Kein Roboter mit TCP gefunden</Title>
+    <Title domain="4" number="1799">Geschwindigkeitswert zu niedrig</Title>
+    <Title domain="4" number="1800">Manuelle Aktion erforderlich</Title>
+    <Title domain="4" number="1801">Im synchronisierten Modus</Title>
+    <Title domain="4" number="1802">Nicht unterstützte Instruktion oder Funktion </Title>
+    <Title domain="4" number="1803">Argumentfehler</Title>
+    <Title domain="4" number="1804">Befehl nicht zulässig</Title>
+    <Title domain="4" number="1805">Ungültige Abmessung</Title>
+    <Title domain="4" number="1806">Die Matrix A ist singulär</Title>
+    <Title domain="4" number="1807">Nicht genügend Speicher</Title>
+    <Title domain="12" number="1">Zu wenig Speicher für Konfiguration (cfg)</Title>
+    <Title domain="12" number="2">Instanz kann nicht gespeichert werden</Title>
+    <Title domain="12" number="3">Falsche cfg-Dateiversion</Title>
+    <Title domain="12" number="4">Zeile zu lang</Title>
+    <Title domain="12" number="5">Attributwert außerhalb des zulässigen Bereichs</Title>
+    <Title domain="12" number="6">Instanzname belegt</Title>
+    <Title domain="12" number="7">Unbekannter Typ/Attribut in cfg-Datei</Title>
+    <Title domain="12" number="8">Obligatorisches Attribut fehlt in cfg-Datei</Title>
+    <Title domain="12" number="9">Fehlender Instanzenname in cfg-Datei</Title>
+    <Title domain="12" number="10">Konfigurationsattribut außerhalb des Bereichs</Title>
+    <Title domain="12" number="11">Unzulässige Versionszeichenfolge</Title>
+    <Title domain="12" number="12">Unzulässiger Domänenname</Title>
+    <Title domain="3" number="1810">DeviceNet-Master/Slave-Karte fehlt</Title>
+    <Title domain="3" number="1811">Zweite DeviceNet-Master/Slave-Karte fehlt</Title>
+    <Title domain="3" number="1812">Unkompatible DeviceNet-Karten </Title>
+    <Title domain="3" number="1910">Profibus-DP-Master-Karte fehlt</Title>
+    <Title domain="3" number="1911">Fehler bei Aktualisierung der Profibus-Karte</Title>
+    <Title domain="3" number="1912">Fehler an Profibus-DP-Master-Karte </Title>
+    <Title domain="3" number="1913">Interner Fehler an Profibus-DP-Master-Karte </Title>
+    <Title domain="3" number="1914">Profibus-Startfehler</Title>
+    <Title domain="3" number="1915">Profibus-Busfehler</Title>
+    <Title domain="3" number="1916">Profibus-Bus OK</Title>
+    <Title domain="3" number="1917">Ausnahme an Profibus-DP-Master-Karte</Title>
+    <Title domain="3" number="2501">Hauptcomputer-FPGA nicht erreichbar</Title>
+    <Title domain="3" number="2530">Keine Kommunikation mit dem Sicherheitssystem</Title>
+    <Title domain="3" number="2540">Firmware-Reflash der Antriebseinheit gestartet</Title>
+    <Title domain="3" number="2541">Firmware-Reflash der Antriebseinheit abgeschlossen</Title>
+    <Title domain="3" number="2542">Hardware der Antriebseinheit nicht unterstützt</Title>
+    <Title domain="3" number="2543">Firmware-Reflash der Antriebseinheit fehlgeschlagen</Title>
+    <Title domain="3" number="2544">Firmwaredatei der Antriebseinheit nicht gefunden</Title>
+    <Title domain="3" number="2545">Typenfehler in der Firmware der Antriebseinheit</Title>
+    <Title domain="3" number="2546">Dateifehler in der Firmware der Antriebseinheit</Title>
+    <Title domain="3" number="2550">Firmware-Reflash gestartet</Title>
+    <Title domain="3" number="2551">Firmware-Reflash abgeschlossen</Title>
+    <Title domain="3" number="2552">Firmware-Reflash fehlgeschlagen</Title>
+    <Title domain="3" number="2553">Firmware-Datei beschädigt</Title>
+    <Title domain="3" number="2554">Firmware-Datei nicht gefunden</Title>
+    <Title domain="3" number="2555">Sicherheitssystemeinheit nicht unterstützt</Title>
+    <Title domain="3" number="2560">Reflash der Achscomputer-Firmware gestartet</Title>
+    <Title domain="3" number="2561">Reflash der Achscomputer-Firmware abgeschlossen</Title>
+    <Title domain="3" number="2562">Achscomputer Kommunikationsfehler</Title>
+    <Title domain="3" number="2563">Achsomputer-Hardware nicht unterstützt</Title>
+    <Title domain="3" number="2564">Reflash der Achscomputer-Firmware fehlgeschlagen</Title>
+    <Title domain="3" number="2565">Firmware-Datei für Achscomputer nicht gefunden</Title>
+    <Title domain="3" number="2567">Achscomputer Firmware-Datei Typenfehler</Title>
+    <Title domain="3" number="2568">Fehler in Achscomputer Firmware-Datei</Title>
+    <Title domain="3" number="2569">Beschädigte Achscomputer-Hardware</Title>
+    <Title domain="3" number="2570">Firmware-Reflash gestartet</Title>
+    <Title domain="3" number="2571">Firmware-Reflash abgeschlossen</Title>
+    <Title domain="3" number="2572">Firmware-Reflash fehlgeschlagen</Title>
+    <Title domain="3" number="2573">Firmware-Datei konnte nicht heruntergeladen werden.</Title>
+    <Title domain="3" number="2574">Beschädigte Achscomputer-Hardware</Title>
+    <Title domain="3" number="2575">Keine Achscomputer-Karte gefunden</Title>
+    <Title domain="3" number="2576">Achsen-Firmware: Keine Kommunikation</Title>
+    <Title domain="3" number="2577">Datenfehler Achscomputer-Hardware</Title>
+    <Title domain="3" number="2580">Firmware-Reflash gestartet</Title>
+    <Title domain="3" number="2581">Firmware-Reflash abgeschlossen</Title>
+    <Title domain="3" number="2582">Firmware-Reflash fehlgeschlagen</Title>
+    <Title domain="3" number="2583">Firmware-Datei beschädigt</Title>
+    <Title domain="3" number="2584">Firmware-Datei nicht gefunden</Title>
+    <Title domain="3" number="2585">Kein Sicherheitssystem vom Achscomputer gefunden</Title>
+    <Title domain="3" number="2590">Firmware-Reflash gestartet</Title>
+    <Title domain="3" number="2591">Firmware-Reflash abgeschlossen</Title>
+    <Title domain="3" number="2592">Firmware-Reflash fehlgeschlagen</Title>
+    <Title domain="3" number="2593">Firmware-Datei beschädigt</Title>
+    <Title domain="3" number="2594">Firmware-Datei nicht gefunden</Title>
+    <Title domain="3" number="2601">Interbus-Master/Slave-Karte fehlt</Title>
+    <Title domain="3" number="2651">Hardware an seriellem Anschluss nicht ansprechbar</Title>
+    <Title domain="3" number="3503">Aktualisierung des Umdrehungszählers fehlgeschlagen</Title>
+    <Title domain="3" number="3601">Feldbus-Adapter fehlt</Title>
+    <Title domain="3" number="4100">Antriebssystem nicht unterstützt</Title>
+    <Title domain="3" number="4101">Antriebssystem nicht unterstützt</Title>
+    <Title domain="3" number="4200">Kommunikation mit allen Antriebseinheiten unterbrochen</Title>
+    <Title domain="3" number="4201">Verbundene Antriebseinheit nicht konfiguriert</Title>
+    <Title domain="3" number="4202">Kommunikation mit Antriebseinheit unterbrochen</Title>
+    <Title domain="3" number="4203">Motorstrom zu hoch</Title>
+    <Title domain="3" number="4251">Eingangsstromphase fehlt</Title>
+    <Title domain="3" number="4252">Netzspannungt fehlt</Title>
+    <Title domain="3" number="4255">Fehler Gleichrichtertemperatur</Title>
+    <Title domain="3" number="4256">Warnung Gleichrichtertemperatur</Title>
+    <Title domain="3" number="4257">Offener Schaltkreis im Entladewiderstand-Schaltkreis</Title>
+    <Title domain="3" number="4258">Kurzschluss im Schaltkreis des Entladewiderstandes</Title>
+    <Title domain="3" number="4261">Gleichrichter Startfehler</Title>
+    <Title domain="3" number="4262">Frequenzwarnung bei eingehender Netzspannung</Title>
+    <Title domain="3" number="4263">Gleichrichter Startfehler</Title>
+    <Title domain="3" number="4264">Gleichrichter Einschaltstrombegrenzung aktiv bei Motoren Ein</Title>
+    <Title domain="3" number="4265">Gleichrichter Kurzschlussfehler</Title>
+    <Title domain="3" number="4266">Gleichrichter Einschaltstrombegrenzung und Entladung aktiv</Title>
+    <Title domain="3" number="4267">Zu viele Gleichrichter angeschlossen</Title>
+    <Title domain="3" number="4268">Fehler beim Laden des Gleichrichters</Title>
+    <Title domain="3" number="4300">Antriebseinheitentyp unbekannt</Title>
+    <Title domain="3" number="4303">Warnung Motorstrom</Title>
+    <Title domain="3" number="4304">Warnung Motorstrom</Title>
+    <Title domain="3" number="4306">Temperaturfehler in Antriebseinheit</Title>
+    <Title domain="3" number="4307">Temperaturwarnung in Antriebseinheit</Title>
+    <Title domain="3" number="4308">Fehler kritische Temperatur Antriebseinheit</Title>
+    <Title domain="3" number="4309">Strom im Antriebstransistor zu hoch</Title>
+    <Title domain="3" number="4311">Antriebswandler Sättigungswarnung</Title>
+    <Title domain="3" number="4312">Fehlende Antriebseinheit</Title>
+    <Title domain="3" number="4313">Falscher Typ Antriebseinheit</Title>
+    <Title domain="3" number="4314">Fehlender Antriebseinheit-Knoten</Title>
+    <Title domain="3" number="4316">Fehler Motorstrom</Title>
+    <Title domain="3" number="4317">Fehler Motorstrom</Title>
+    <Title domain="3" number="4318">Antriebswandler Sättigungsfehler</Title>
+    <Title domain="3" number="4319">Kritischer Fehler in Antriebseinheit</Title>
+    <Title domain="3" number="4320">Zu viele Antriebsknoten angeschlossen</Title>
+    <Title domain="3" number="4321">Konfigurationsfehler in Antriebseinheit</Title>
+    <Title domain="3" number="4322">Konfigurationsfehler in Antriebseinheit</Title>
+    <Title domain="3" number="4400">Gleichrichterspannung zu hoch</Title>
+    <Title domain="3" number="4401">Warnung Gleichrichterspannung zu niedrig</Title>
+    <Title domain="3" number="4402">Gleichrichterspannung zu niedrig</Title>
+    <Title domain="3" number="4404">Gleichrichterspannung liegt im kritischen Bereich</Title>
+    <Title domain="3" number="4405">Warnung Gleichrichterspannung zu hoch</Title>
+    <Title domain="3" number="4406">Fehler Stromversorgung Antriebseinheit</Title>
+    <Title domain="3" number="4407">Interner Fehler in Antriebseinheit</Title>
+    <Title domain="3" number="4408">Fehler Antriebseinheit Hardwaredaten</Title>
+    <Title domain="3" number="4409">Startfehler Antriebseinheit</Title>
+    <Title domain="3" number="4410">Zu viele Antriebseinheiten angeschlossen</Title>
+    <Title domain="3" number="4411">Gleichrichterfehler</Title>
+    <Title domain="3" number="7001">Fehler beim Aktivieren des MOTOREN EIN-Schützes</Title>
+    <Title domain="3" number="7043">Sicherheitssignale überlastet</Title>
+    <Title domain="3" number="7044">Überlast dig. Ausgangssignalen der Sicherheitskarte</Title>
+    <Title domain="3" number="7045">Fehlerhafter externer Computerlüfter</Title>
+    <Title domain="3" number="7046">Sicherheitssignale überlastet</Title>
+    <Title domain="3" number="7049">Fehler beim Aktivieren des Schützes</Title>
+    <Title domain="3" number="7050">Übertemperatur im Hauptcomputer</Title>
+    <Title domain="3" number="7053">Wenig Spannung in CMOS-Batterie</Title>
+    <Title domain="3" number="7054">Fehlerhafter Lüfter der Computereinheit</Title>
+    <Title domain="3" number="7056">Kühlungsfehler</Title>
+    <Title domain="3" number="7062">Computernetzteil-Warnung</Title>
+    <Title domain="3" number="7069">Fehlerhafte Backup-Stromversorgung</Title>
+    <Title domain="3" number="7070">Übertemp. Stromversorgung des Steuerungsmodul</Title>
+    <Title domain="3" number="7074">Spüldruck zu niedrig</Title>
+    <Title domain="3" number="7075">Spüldruck zu hoch</Title>
+    <Title domain="3" number="7076">Unerwartet niedriger Spülfluss</Title>
+    <Title domain="3" number="7077">Unerwartet hoher Spülfluss</Title>
+    <Title domain="3" number="7078">Spül-Timer sind unterschiedlich</Title>
+    <Title domain="3" number="7080">Spülkonfiguration ungültig</Title>
+    <Title domain="3" number="7081">Spül-Timer sind unterschiedlich</Title>
+    <Title domain="3" number="7082">Abweichung zwischen PIB- und MIB-Ausgang</Title>
+    <Title domain="3" number="7083">Störimpuls im Spülsystem</Title>
+    <Title domain="3" number="7090">Temperatur zu hoch, Sensor <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="3" number="7094">Verbindungsaktivierungsfehler</Title>
+    <Title domain="3" number="7095">Fehler Bremsenstrom</Title>
+    <Title domain="3" number="7096">Fehler Bremsenstrom</Title>
+    <Title domain="3" number="7097">Bremsen-Kurzschlussfehler</Title>
+    <Title domain="3" number="7098">Offene Bremsschaltung – Fehler</Title>
+    <Title domain="3" number="7099">Temperatur zu hoch, Sensor <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="3" number="7100">Flashdisk-Fehler an E/A-Knoten</Title>
+    <Title domain="3" number="7101">Bremsenfehler</Title>
+    <Title domain="3" number="7102">Fehlerhafter 24-V-COOL-Pegel</Title>
+    <Title domain="3" number="7103">Fehlerhafter 24V SYS Pegel</Title>
+    <Title domain="3" number="7104">Es ist keine Backup-Spannung verfügbar</Title>
+    <Title domain="3" number="7105">Kommunikation mit Stromversorg. besteht wieder</Title>
+    <Title domain="3" number="7106">Spannung niedrig in Kondensatoreinheit</Title>
+    <Title domain="3" number="7107">Fehlerhafte Kondensatoreinheit</Title>
+    <Title domain="3" number="7108">Keine Kommunikation  - Verteilungseinheit und Computer</Title>
+    <Title domain="3" number="7200">Stromversorgungsfehler: Not-Aus-Stromversorgung</Title>
+    <Title domain="3" number="7201">Stromversorgungsfehler: Sichere 24V-Stromversorgung</Title>
+    <Title domain="3" number="7202">Stromversorgungsfehler: 24V-E/A-Versorgung</Title>
+    <Title domain="3" number="7203">Stromversorgungsfehler: 24V-SYS-Stromversorgung</Title>
+    <Title domain="3" number="7204">Stromversorgungsfehler: 24V-E/A-Versorgung</Title>
+    <Title domain="3" number="7205">Stromversorgungsfehler: 12V-Spül-Stromversorgung</Title>
+    <Title domain="3" number="7206">Stromversorgungsfehler: 12V-PG-Stromversorgung</Title>
+    <Title domain="3" number="7207">Batterieladezustand schwach</Title>
+    <Title domain="3" number="7208">Übertemperatur im Transformator</Title>
+    <Title domain="3" number="7209">Übertemperatur in Schaltschrank</Title>
+    <Title domain="3" number="7210">Fehler an Schütz KM1</Title>
+    <Title domain="3" number="7211">Fehler an Schütz KM2</Title>
+    <Title domain="3" number="7212">Fehler an Schütz KM101</Title>
+    <Title domain="3" number="7213">Fehler an Schütz KM102</Title>
+    <Title domain="3" number="7214">Feedback-Konflikt in Betriebskreis 1</Title>
+    <Title domain="3" number="7215">Feedback-Konflikt in Betriebskreis 2</Title>
+    <Title domain="3" number="7216">Feedback-Konflikt in Bremskreis 1</Title>
+    <Title domain="3" number="7217">Feedback-Konflikt in Bremskreis 2</Title>
+    <Title domain="3" number="7218">Feedback-Konflikt in Kabinenverriegelungskreis 1</Title>
+    <Title domain="3" number="7219">Feedback-Konflikt in Kabinenverriegelungskreis 2</Title>
+    <Title domain="3" number="7220">Feedback-Konflikt in Hochspannungsverriegelungskreis 1</Title>
+    <Title domain="3" number="7221">Feedback-Konflikt in Hochspannungsverriegelungskreis 2</Title>
+    <Title domain="3" number="7222">Feedback-Konflikt in Verriegelungskreis System 2</Title>
+    <Title domain="3" number="7223">Feedback-Konflikt in Hauptrelaiskreis</Title>
+    <Title domain="3" number="7224">Konflikt in Kabinenverriegelungskreis 1</Title>
+    <Title domain="3" number="7225">Konflikt in Kabinenverriegelungskreis 2</Title>
+    <Title domain="3" number="7226">Konflikt in Hochspannungsverriegelungskreis 1</Title>
+    <Title domain="3" number="7227">Konflikt in Hochspannungsverriegelungskreis 2</Title>
+    <Title domain="3" number="7228">Kabinenverriegelungskreis-Konflikt von SIB</Title>
+    <Title domain="3" number="7229">HS-Verriegelungskreis-Konflikt von SIB</Title>
+    <Title domain="3" number="7230">Warnung Bremsenleistung</Title>
+    <Title domain="3" number="7231">Fehler Bremsenleistung</Title>
+    <Title domain="3" number="7232">Konfigurationsfehler - Zyklische Bremsenüberprüfung</Title>
+    <Title domain="3" number="7233">Konfigurationsfehler - Zyklische Bremsenüberprüfung</Title>
+    <Title domain="3" number="7240">Kabinenverriegelungskreis-Konflikt von MIB</Title>
+    <Title domain="3" number="7241">Hochspannungsverriegelungskreis-Konflikt von MIB</Title>
+    <Title domain="3" number="7242">Betriebskreiskonflikt von SIB</Title>
+    <Title domain="3" number="7243">Bremskreiskonflikt von SIB</Title>
+    <Title domain="3" number="7244">Betriebskreiskonflikt von MIB <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="3" number="7245">Bremskreiskonflikt von MIB <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="3" number="7246">Not-Aus-Relais Konflikt</Title>
+    <Title domain="3" number="7247">Lüfter <arg format="%i" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> Fehlfunktion</Title>
+    <Title domain="3" number="7248">Lüfter <arg format="%i" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> Fehlfunktion</Title>
+    <Title domain="3" number="7249">Störimpuls in Not-Aus-Kreisen</Title>
+    <Title domain="3" number="7250">Störimpuls in Automatik-Halt-Kreis</Title>
+    <Title domain="3" number="7251">Störimpuls in Verzögerter-Halt-Kreis</Title>
+    <Title domain="3" number="7252">Störimpuls in Allgemeiner-Sicherheitshalt-Kreis</Title>
+    <Title domain="3" number="7253">Störimpuls in Betriebskreis auf SIB</Title>
+    <Title domain="3" number="7254">Störimpuls in Betriebskreis auf MIB</Title>
+    <Title domain="3" number="7255">Störimpuls in Kabinenverriegelungskreis</Title>
+    <Title domain="3" number="7256">Störimpuls in Hochspannungsverriegelungskreis</Title>
+    <Title domain="3" number="7257">Störimpuls in Verriegelungskreis System 2</Title>
+    <Title domain="3" number="7258">Störimpuls in Prozessverriegelungskreis</Title>
+    <Title domain="3" number="7259">Störimpuls in AUX-Verriegelungskreis</Title>
+    <Title domain="3" number="7501">Unbekanntes Dateisystem: USB-Gerät</Title>
+    <Title domain="3" number="7502">Massenspeicher entfernt</Title>
+    <Title domain="3" number="7503">Fehler des Dateisystems auf dem Massenspeichergerät</Title>
+    <Title domain="3" number="7504">Fehler des Dateisystems auf dem Massenspeichergerät</Title>
+    <Title domain="3" number="7505">Schreibvorgang auf USB-Speichers während Ausschalten</Title>
+    <Title domain="3" number="8100">Konfigurationsfehler</Title>
+    <Title domain="3" number="8101">SMB-Kommunikationsfehler</Title>
+    <Title domain="3" number="8102">Interner Fehler</Title>
+    <Title domain="3" number="8103">Kommunikation mit SMB verloren</Title>
+    <Title domain="3" number="8104">Überhöhte Geschwindigkeit in Programmiermodus</Title>
+    <Title domain="3" number="8105">Daten nicht gefunden</Title>
+    <Title domain="3" number="8200">SMB-Pufferbatterie ausgefallen</Title>
+    <Title domain="3" number="8201">SMB nicht gefunden</Title>
+    <Title domain="3" number="8203">SMB-Offset-Fehler X</Title>
+    <Title domain="3" number="8204">SMB-Offset-Fehler Y</Title>
+    <Title domain="3" number="8205">SMB-Linearitätsfehler</Title>
+    <Title domain="3" number="8206">SMB-Linearitätsfehler X</Title>
+    <Title domain="3" number="8207">SMB-Linearitätsfehler Y</Title>
+    <Title domain="3" number="8208">Resolverfehler</Title>
+    <Title domain="3" number="8209">Resolverfehler</Title>
+    <Title domain="3" number="8210">Übertragungsfehler</Title>
+    <Title domain="3" number="8211">Funktionsfehler während der Messung</Title>
+    <Title domain="3" number="8212">Daten nicht gefunden</Title>
+    <Title domain="3" number="8213">Batterieladung schwach</Title>
+    <Title domain="3" number="8214">Batteriefehler</Title>
+    <Title domain="3" number="8215">Fehler der Batterieüberwachung</Title>
+    <Title domain="3" number="8216">SMB-Funktionalitätsfehler</Title>
+    <Title domain="3" number="8217">SMB-Funktionalitätsfehler</Title>
+    <Title domain="3" number="8218">EIB hohe Encoder-Temperatur</Title>
+    <Title domain="3" number="8230">PMC-Karte nicht korrekt angeschlossen</Title>
+    <Title domain="3" number="8231">PMC-Karte kann nicht gestartet werden</Title>
+    <Title domain="3" number="8232">Max. Anzahl Kanäle für PMC-Karte erreicht</Title>
+    <Title domain="3" number="8233">Fehler im Kraftsensor-Sicherheitskanal</Title>
+    <Title domain="3" number="8234">Max. Kraft oder Drehmoment erreicht</Title>
+    <Title domain="3" number="8235">Sättigungswarnung von Kraftsensoreingang</Title>
+    <Title domain="3" number="8236">Sättigungsfehler von Kraftsensoreingang</Title>
+    <Title domain="3" number="8237">Konfigurationsfehler für Kraft-Messbaugruppe</Title>
+    <Title domain="3" number="9401">Drehmoment-Stromreferenzwert-Fehler</Title>
+    <Title domain="3" number="9402">Motorwinkelreferenz-Warnung</Title>
+    <Title domain="3" number="9403">Drehmoment-Schleifenunterstrom</Title>
+    <Title domain="3" number="9404">Drehmoment-Schleifenüberstrom</Title>
+    <Title domain="3" number="9405">Maximale PWM in Drehmoment-Steuerung erreicht</Title>
+    <Title domain="3" number="9406">Feld-Schleifenüberstrom</Title>
+    <Title domain="3" number="9407">Antriebseinheit hat falschen Typencode</Title>
+    <Title domain="3" number="9408">Gleichrichtereinheit hat falschen Typencode</Title>
+    <Title domain="3" number="9409">Kondensatoreinheit hat falschen Typencode</Title>
+    <Title domain="3" number="9410">Antriebseinheit-Kommunikationswarnung </Title>
+    <Title domain="3" number="9411">Zu viele Kommunikationsfehler</Title>
+    <Title domain="3" number="9412">Zu viele Aktualisierungen wegen verfehlter Referenz</Title>
+    <Title domain="3" number="9413">Antriebssoftware nicht synchron</Title>
+    <Title domain="3" number="9414">Unbekannter Kondensator-Typencode</Title>
+    <Title domain="3" number="9415">Kommunikation mit Antriebseinheit verloren</Title>
+    <Title domain="3" number="9416">Antriebseinheit reagiert nicht</Title>
+    <Title domain="3" number="9417">Versionsdatei für Antriebssoftware nicht gefunden</Title>
+    <Title domain="3" number="9418">Unbekannter Antriebseinheit-Typencode</Title>
+    <Title domain="3" number="9419">Unbekannter Gleichrichter-Typencode</Title>
+    <Title domain="3" number="9420">Antriebseinheit - Fehler bei integriertem Test</Title>
+    <Title domain="3" number="9421">Antriebseinheit - Fehler bei Konfigurationstest</Title>
+    <Title domain="3" number="9422">Antriebseinheit - Überwachungs-Timeout</Title>
+    <Title domain="3" number="9423">Antriebseinheit - interne Warnung</Title>
+    <Title domain="3" number="9424">Antriebseinheit - interner Fehler</Title>
+    <Title domain="3" number="9425">Antriebseinheit - Messfehler</Title>
+    <Title domain="3" number="9426">Gleichrichter - interner Fehler</Title>
+    <Title domain="3" number="9427">Gleichrichterkommunikation fehlt</Title>
+    <Title domain="3" number="9428">Gleichrichter-Startfehler</Title>
+    <Title domain="3" number="9431">Software der Antriebseinheit wird aktualisiert</Title>
+    <Title domain="3" number="9432">Inkompatible Bootversion in Antriebseinheit</Title>
+    <Title domain="3" number="9434">Antriebseinheit - Startfehler</Title>
+    <Title domain="3" number="9435">Antriebseinheit für zusätzliche Achsen nicht gefunden</Title>
+    <Title domain="3" number="9440">Offene Schaltung in Entladewiderstandskreis</Title>
+    <Title domain="3" number="9441">Kurzschluss in Entladewiderstandskreis</Title>
+    <Title domain="3" number="9442">Entladewiderstand zu gering</Title>
+    <Title domain="3" number="9443">Warnung Überlastfehler am Bremswiderstand</Title>
+    <Title domain="3" number="9444">Überlastfehler am Bremswiderstand</Title>
+    <Title domain="3" number="9450">Fehlerhafter Lüfter des Netzteils</Title>
+    <Title domain="3" number="9451">Fehlfunktion von Lüftereinheit</Title>
+    <Title domain="3" number="9452">Fehlfunktion Achscomputer-Kühlung</Title>
+    <Title domain="3" number="9453">Fehlfunktion Transformatorkühlung</Title>
+    <Title domain="3" number="9460">Gleichstromanschlussspannung zu gering</Title>
+    <Title domain="3" number="9461">Gleichrichterspannung zu hoch</Title>
+    <Title domain="3" number="9462">Gleichrichterspannung kritisch</Title>
+    <Title domain="3" number="9463">Motorphasen-Kurzschlusswarnung</Title>
+    <Title domain="3" number="9464">Kurzschluss in Motorphasenkreis</Title>
+    <Title domain="3" number="9465">Motorstromwarnung</Title>
+    <Title domain="3" number="9466">Motorstrom Überlastung</Title>
+    <Title domain="3" number="9467">Antriebseinheit Temperaturwarnung</Title>
+    <Title domain="3" number="9468">Antriebseinheit Temperaturalarm</Title>
+    <Title domain="3" number="9469">Antriebseinheit Temperatur kritisch</Title>
+    <Title domain="3" number="9470">Warnung Leistungshalbleiter</Title>
+    <Title domain="3" number="9471">Leistungshalbleiter Überlastungsfehler</Title>
+    <Title domain="3" number="9472">Netzspannungsphase fehlt</Title>
+    <Title domain="3" number="9473">Alle Netzspannungsphasen fehlen</Title>
+    <Title domain="3" number="9474">Gleichrichterstromwarnung</Title>
+    <Title domain="3" number="9475">Gleichrichterstromfehler</Title>
+    <Title domain="3" number="9476">Warnung Gleichrichtertemperatur</Title>
+    <Title domain="3" number="9477">Gleichrichter Temperaturfehler</Title>
+    <Title domain="3" number="9478">Interner Motor-PTC-Temperaturfehler</Title>
+    <Title domain="3" number="9479">Externer Motor-PTC-Temperaturfehler</Title>
+    <Title domain="3" number="9482">Hauptspannung zu hoch</Title>
+    <Title domain="3" number="9483">Gleichstromverbindung-Kurzschluss</Title>
+    <Title domain="3" number="9484">Betriebskreis im MOTOREN EIN-Zustand offen</Title>
+    <Title domain="3" number="9485">Betriebskreis im Zustand MOTOREN AUS geschlossen</Title>
+    <Title domain="3" number="9486">DC Link nicht angeschlossen</Title>
+    <Title domain="3" number="9500">Logische Spannung zu Antriebseinheit - Warnung</Title>
+    <Title domain="3" number="9501">Logische Spannung zu Antriebseinheit - Fehler</Title>
+    <Title domain="3" number="9502">Logische Spannung zu Gleichrichter - Fehler</Title>
+    <Title domain="3" number="9503">Übertemperatur Netzteil</Title>
+    <Title domain="3" number="9504">Überlastung der Stromversorgung zu den Bremsen</Title>
+    <Title domain="3" number="9505">Hauptspannung zu Netzteil ausgefallen</Title>
+    <Title domain="3" number="9520">Kommunikation mit Antriebsmodul verloren</Title>
+    <Title domain="3" number="9521">Antriebsmodul-Kommunikationswarnung</Title>
+    <Title domain="3" number="9522">Achscomputer nicht gefunden</Title>
+    <Title domain="3" number="9523">Unbenutzter Achscomputer angeschlossen</Title>
+    <Title domain="3" number="9524">Befehlstimeout an Antriebsmodul</Title>
+    <Title domain="3" number="9525">Startfehler Antriebsmodul</Title>
+    <Title domain="3" number="9530">Kommunikationsverlust Achscomputer - Sicherheitssystem</Title>
+    <Title domain="3" number="9531">Störimpulstest für Betriebskreis wird nicht ausgeführt</Title>
+    <Title domain="10" number="0">Interner Fehler</Title>
+    <Title domain="7" number="1001">Doppelte Adresse</Title>
+    <Title domain="7" number="1002">Einheitentyp undefiniert</Title>
+    <Title domain="7" number="1003">E/A-Einheit undefiniert:</Title>
+    <Title domain="7" number="1005">Ungültige Filterzeit</Title>
+    <Title domain="7" number="1006">Ungültige Filterzeit</Title>
+    <Title domain="7" number="1007">Logische Werte außerhalb des Gültigkeitsbereichs</Title>
+    <Title domain="7" number="1008">Physische Werte außerhalb des Gültigkeitsbereichs</Title>
+    <Title domain="7" number="1017">Querverbindung ohne E/A-Signal</Title>
+    <Title domain="7" number="1019">E/A-Signal undefiniert</Title>
+    <Title domain="7" number="1020">Querverbindung ohne resultierendes E/A-Signal</Title>
+    <Title domain="7" number="1021">Doppelte Querverbindungsergebnisse</Title>
+    <Title domain="7" number="1037">Geschlossene Kette in Querverbindung</Title>
+    <Title domain="7" number="1038">Maximale Tiefe der Querverbindung überschritten</Title>
+    <Title domain="7" number="1045">Ungültige Filterzeitspezifikation</Title>
+    <Title domain="7" number="1049">Analog-E/A-Signal invertiert</Title>
+    <Title domain="7" number="1050">Querverbindung mit nicht-digitalem E/A-Signal</Title>
+    <Title domain="7" number="1052">Maximale Anzahl an Querverbindungen überschritten</Title>
+    <Title domain="7" number="1054">Ungültiger Signaltyp</Title>
+    <Title domain="7" number="1058">Keine Kommunikation mit E/A-Einheit</Title>
+    <Title domain="7" number="1072">Gespeicherte Signalwerte nicht lesbar</Title>
+    <Title domain="7" number="1076">Kommunikationsfehler von rtp1</Title>
+    <Title domain="7" number="1077">Kommunikationsfehler von rtp1</Title>
+    <Title domain="7" number="1078">Kommunikationsfehler von rtp1</Title>
+    <Title domain="7" number="1080">Maximale Anzahl der Einheitentypen überschritten</Title>
+    <Title domain="7" number="1081">Maximale Anzahl physischer E/A-Signale überschritten</Title>
+    <Title domain="7" number="1082">Maximale Anzahl der Benutzer-E/A-Signale überschritten</Title>
+    <Title domain="7" number="1083">Max. Anzahl an Symbolen überschritten</Title>
+    <Title domain="7" number="1084">Maximale Anzahl abonnierter E/A-Signale überschritten</Title>
+    <Title domain="7" number="1085">Maximale Anzahl der E/A-Einheiten überschritten</Title>
+    <Title domain="7" number="1097">Eingangs-E/A-Signal gespeichert</Title>
+    <Title domain="7" number="1098">NFS-Server verloren</Title>
+    <Title domain="7" number="1099">Trusted NFS-Server verloren</Title>
+    <Title domain="7" number="1100">Maximale Anzahl der E/A-Busse überschritten</Title>
+    <Title domain="7" number="1101">E/A-Signal undefiniert</Title>
+    <Title domain="7" number="1114">Ungültige IP-Adresse</Title>
+    <Title domain="7" number="1115">Ungültige Subnet-Maske</Title>
+    <Title domain="7" number="1116">Deaktivierte E/A-Einheit mit Einheit-Trustlevel &lt;Required (0)&gt;</Title>
+    <Title domain="7" number="1122">Falsche IP-Adresse</Title>
+    <Title domain="7" number="1123">Kein Übertragungsprotokoll</Title>
+    <Title domain="7" number="1125">Installationserlaubnis verweigert</Title>
+    <Title domain="7" number="1126">Verzeichnis nicht exportiert</Title>
+    <Title domain="7" number="1128">Ethernet nicht installiert</Title>
+    <Title domain="7" number="1129">Zu viele Remote-Datenträger</Title>
+    <Title domain="7" number="1130">Zu viele Remote-Server</Title>
+    <Title domain="7" number="1131">Konnte Verzeichnis nicht installieren </Title>
+    <Title domain="7" number="1141">Standardwert für E/A-Signal außerhalb Bereich</Title>
+    <Title domain="7" number="1156">IPC-Queue voll</Title>
+    <Title domain="7" number="1158">Adresse außerhalb des zulässigen Bereichs</Title>
+    <Title domain="7" number="1163">E/A-Signal an interner E/A-Einheit</Title>
+    <Title domain="7" number="1164">Internes E/A-Signal in Querverbindung</Title>
+    <Title domain="7" number="1165">FTP-Server außer Betrieb</Title>
+    <Title domain="7" number="1166">FTP-Server außer Betrieb</Title>
+    <Title domain="7" number="1167">Falsches Übertragungsprotokoll</Title>
+    <Title domain="7" number="1169">Ethernet nicht installiert</Title>
+    <Title domain="7" number="1182">E/A-Signal undefiniert</Title>
+    <Title domain="7" number="1183">Querverbindung mit ungültigem Operator</Title>
+    <Title domain="7" number="1185">Doppelter Name</Title>
+    <Title domain="7" number="1193">Ungültige physische E/A-Zuordnung</Title>
+    <Title domain="7" number="1196">Ungültiger Verschlüsselungstyp</Title>
+    <Title domain="7" number="1201">Unbekannter E/A-Bus</Title>
+    <Title domain="7" number="1205">Konnte Verzeichnis nicht installieren</Title>
+    <Title domain="7" number="1220">Keine Profibus-Option installiert</Title>
+    <Title domain="7" number="1221">Profibus-Firmwaredatei nicht gefunden</Title>
+    <Title domain="7" number="1222">Profibus-Konfigurationsdatei nicht gefunden</Title>
+    <Title domain="7" number="1223">Profibus-Dateianalyse-Fehler</Title>
+    <Title domain="7" number="1224">Profibus-Kanal per Reflash aktualisiert</Title>
+    <Title domain="7" number="1228">Fehler in Profibus Binärkonfiguration</Title>
+    <Title domain="7" number="1229">Fehler in Profibus Binärparameter</Title>
+    <Title domain="7" number="1230">E/A-Einheit Konfigurationsfehler</Title>
+    <Title domain="7" number="1231">Falsche Profibus-E/A-Einheit angeschlossen</Title>
+    <Title domain="7" number="1232">Interner Slave an falschem Bus</Title>
+    <Title domain="7" number="1241">Zu viele E/A-Einheiten am E/A-Bus</Title>
+    <Title domain="7" number="1261">Transport-Ebenenfehler</Title>
+    <Title domain="7" number="1262">Feldbus comm. Fehler</Title>
+    <Title domain="7" number="1263">CAN comm. Fehler</Title>
+    <Title domain="7" number="1273">E/A-Einheit Konfigurationskonflikt</Title>
+    <Title domain="7" number="1276">Kommunikation mit E/A-Einheit aufgebaut</Title>
+    <Title domain="7" number="1278">Installationserlaubnis verweigert</Title>
+    <Title domain="7" number="1288">Installationspfad ist zu lang</Title>
+    <Title domain="7" number="1289">Speicherpartition ist zu groß</Title>
+    <Title domain="7" number="1290">FTP-Gerät konnte nicht hinzugefügt werden</Title>
+    <Title domain="7" number="1291">Ungültiger lokaler Pfad</Title>
+    <Title domain="7" number="1293">Ungültige Eingangsgröße</Title>
+    <Title domain="7" number="1294">Ungültige Ausgangsgröße</Title>
+    <Title domain="7" number="1295">Ungültige Eingangsgröße</Title>
+    <Title domain="7" number="1296">Ungültige Ausgangsgröße</Title>
+    <Title domain="7" number="1297">Ungültiger Verbindungstyp</Title>
+    <Title domain="7" number="1298">Doppelte Adresse</Title>
+    <Title domain="7" number="1299">DeviceNet-Bus ohne Stromversorgung</Title>
+    <Title domain="7" number="1300">DeviceNet-Bus Kommunikationswarnung</Title>
+    <Title domain="7" number="1301">Bus aus, DeviceNet Bus-Kommunikationsfehler</Title>
+    <Title domain="7" number="1302">Keine DeviceNet-Option installiert</Title>
+    <Title domain="7" number="1303">Ungültige DeviceNet-Anbieter-ID</Title>
+    <Title domain="7" number="1304">Ungültiger DeviceNet-Gerätetyp</Title>
+    <Title domain="7" number="1305">Ungültiger DeviceNet-Produktcode</Title>
+    <Title domain="7" number="1306">Unbekannter DeviceNet-Fehler</Title>
+    <Title domain="7" number="1307">DeviceNet generische Verbindung 1</Title>
+    <Title domain="7" number="1308">DeviceNet generische Verbindung 2</Title>
+    <Title domain="7" number="1309">Identifikation der generischen DeviceNet-Einheit</Title>
+    <Title domain="7" number="1310">DeviceNet E/A-Einheit Verbindungsfehler</Title>
+    <Title domain="7" number="1311">Kommunikation auf DeviceNet-Bus nicht hergestellt</Title>
+    <Title domain="7" number="1312">DeviceNet-E/A-Einheit – expliziter Anschluss nicht aktiviert</Title>
+    <Title domain="7" number="1313">Anweisungsnummer für Feldbusbefehlstyp nicht eindeutig</Title>
+    <Title domain="7" number="1314">Ungültiger Feldbusbefehlstyp</Title>
+    <Title domain="7" number="1315">Maximale Anzahl an Feldbusbefehlen überschritten</Title>
+    <Title domain="7" number="1316">Maximale Anzahl für Feldbusbefehlstypen überschritten</Title>
+    <Title domain="7" number="1317">E/A-Einheit zurückgesetzt</Title>
+    <Title domain="7" number="1320">Maximale Anzahl der E/A-Zugriffsebenen überschritten </Title>
+    <Title domain="7" number="1321">Ungültige E/A-Zugriffsebene</Title>
+    <Title domain="7" number="1323">Ungültige Bit-Werte</Title>
+    <Title domain="7" number="1324">Physische Begrenzungswerte außerhalb des Bereichs</Title>
+    <Title domain="7" number="1325">Ungültige E/A-Bus-Konfiguration</Title>
+    <Title domain="7" number="1326">Ungültige Einheitentyp-Konfiguration</Title>
+    <Title domain="7" number="1328">Ungültiger Name</Title>
+    <Title domain="7" number="1329">Ungültige Anschlusskennung</Title>
+    <Title domain="7" number="1330">Unvereinbare Bustypen</Title>
+    <Title domain="7" number="1331">Ungültiger Bustyp</Title>
+    <Title domain="7" number="1332">Ungültige Fehlerbehebungszeit</Title>
+    <Title domain="7" number="1333">Ungültige DeviceNet-Baudrate</Title>
+    <Title domain="7" number="1334">Befehlstyp ohne Beziehung zu Einheitentyp</Title>
+    <Title domain="7" number="1335">Ungültiger Einheitentyp</Title>
+    <Title domain="7" number="1336">Befehlstyp ohne Pfad</Title>
+    <Title domain="7" number="1337">Befehlstyp ohne Servicebezeichner</Title>
+    <Title domain="7" number="1338">Ungültiger Servicebezeichner</Title>
+    <Title domain="7" number="1339">Feldbusbefehl ohne Bezug zu E/A-Einheit</Title>
+    <Title domain="7" number="1340">Ungültige E/A-Einheit</Title>
+    <Title domain="7" number="1341">Feldbusbefehl – kein Verweis auf Befehlstyp</Title>
+    <Title domain="7" number="1342">Einheitentyp-Konflikt</Title>
+    <Title domain="7" number="1344">Einheitenzuordnung undefiniert</Title>
+    <Title domain="7" number="1346">Einheitenzuordnung außerhalb des zulässigen Bereichs</Title>
+    <Title domain="7" number="1347">Einheitenzuordnung mit überlagernden Segmenten</Title>
+    <Title domain="7" number="1348">Einheitenzuordnung mit unerwartetem Zeichen</Title>
+    <Title domain="7" number="1349">Ungültige Signalgröße</Title>
+    <Title domain="7" number="1350">Ungültiger Bustyp</Title>
+    <Title domain="7" number="1351">Ungültiger Typ von Verbindung 1</Title>
+    <Title domain="7" number="1352">Ungültiger Typ von Verbindung 2</Title>
+    <Title domain="7" number="1353">Einheit ohne Bezug zu Einheitentyp</Title>
+    <Title domain="7" number="1354">E/A-Einheit ohne Bezug zu E/A-Bus</Title>
+    <Title domain="7" number="1355">Ungültiger TrustLevel</Title>
+    <Title domain="7" number="1356">Bustyp-Konflikt</Title>
+    <Title domain="7" number="1357">Doppelte E/A-Einheiten am E/A-Bus &lt;Local&gt;</Title>
+    <Title domain="7" number="1358">Stromausfallwiederherstellung voll</Title>
+    <Title domain="7" number="1361">Querverbindung mit nicht-digital resultierendem Signal</Title>
+    <Title domain="7" number="1362">Außerhalb des E/A-Einheit-Bereichs zugeordnetes E/A-Signal</Title>
+    <Title domain="7" number="1363">Slave-Konfiguration ungültig</Title>
+    <Title domain="7" number="1364">E/A-Warteschlange überlastet</Title>
+    <Title domain="7" number="1365">Sicherheits-E/A-Warteschlange überlastet</Title>
+    <Title domain="7" number="1366">E/A-Warteschlange der Querverbindung überlastet</Title>
+    <Title domain="7" number="1367">Keine Kommunikation mit E/A-Einheit</Title>
+    <Title domain="7" number="1379">Unbekannter physischer Kommunikationskanal</Title>
+    <Title domain="7" number="1380">Anschlusstreiber Kommunikationskanal bereits verwendet</Title>
+    <Title domain="7" number="1381">Kommunikationsanschluss wird bereits verwendet</Title>
+    <Title domain="7" number="1382">DeviceNet-Überwachungszeit ist abgelaufen</Title>
+    <Title domain="7" number="1383">Benutzerdefinierte E/A-Einheiten falsch verbunden</Title>
+    <Title domain="7" number="1385">Max. Anforderungen für Meldungsressource erreicht </Title>
+    <Title domain="7" number="1386">DeviceNet Quick Connect wird nicht unterstützt</Title>
+    <Title domain="7" number="1389">Konfigurationsdateifehler</Title>
+    <Title domain="7" number="1390">DeviceNet-Bus nach Deaktivieren des Bus wiederhergestellt</Title>
+    <Title domain="7" number="1391">Systemsignalkonfiguration</Title>
+    <Title domain="7" number="1392">Ungültige Ausgangsgröße</Title>
+    <Title domain="7" number="1393">Fehler beim Zuweisen von generischer Größe</Title>
+    <Title domain="7" number="1394">Ungültiger physischer Kommunikationskanal</Title>
+    <Title domain="7" number="1395">Kein Übertragungsprotokoll</Title>
+    <Title domain="7" number="1396">Kein Übertragungsprotokoll</Title>
+    <Title domain="7" number="1397">Kein Anwendungsprotokoll </Title>
+    <Title domain="7" number="1398">Kommunikationsfehler von bosv24</Title>
+    <Title domain="7" number="1399">Kommunikationsfehler von bosv24</Title>
+    <Title domain="7" number="1400">Kommunikationsfehler von bosv24</Title>
+    <Title domain="7" number="1401"> Keine Option für den &lt;<arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />&gt; Feldbus-Adapter vorhanden </Title>
+    <Title domain="7" number="1402"> Doppelte Adresse an <arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /> E/A-Bus </Title>
+    <Title domain="7" number="1403">Ungültige Intervallzeit</Title>
+    <Title domain="7" number="1404">Ungültige Eingangs-/Ausgangsgröße</Title>
+    <Title domain="7" number="1405">Doppelte E/A-Einheitenzuordnung</Title>
+    <Title domain="7" number="1406">Kommunikation für DeviceNet-E/A-Bus aufgebaut</Title>
+    <Title domain="7" number="1407">Leitungsschnittstelle nicht gefunden</Title>
+    <Title domain="7" number="1408">Portnummer der Leitung außerhalb des Gültigkeitsbereichs</Title>
+    <Title domain="7" number="1409"><arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> kann kein Port hinzugefügt werden </Title>
+    <Title domain="7" number="1410">Option CIP route nicht installiert</Title>
+    <Title domain="7" number="1411">Keine Routenressourcen mehr vorhanden</Title>
+    <Title domain="7" number="1412">DeviceNet-E/A-Bus verfügt wieder über Bus-Netzspannung</Title>
+    <Title domain="7" number="1414">Gleichzeitige Änderungen des Signalwerts</Title>
+    <Title domain="7" number="1415">Keine Bus-Netzspannung</Title>
+    <Title domain="7" number="1416">Bus-Netzspannung wiederhergestellt</Title>
+    <Title domain="7" number="1417">DeviceNet Hardware fehlt</Title>
+    <Title domain="7" number="1418">Unzulässiger Anbieter</Title>
+    <Title domain="7" number="1419">Unzulässiger Einheitentyp</Title>
+    <Title domain="7" number="1420">Falscher Einheitentyp</Title>
+    <Title domain="7" number="1421">Doppelte Adresse an DeviceNet-E/A-Bus</Title>
+    <Title domain="7" number="1422">Hohe Last an DeviceNet-E/A-Bus</Title>
+    <Title domain="7" number="1423">Geringfügiger Fehler an DeviceNet-E/A-Bus</Title>
+    <Title domain="7" number="1424">DeviceNet-Bus nicht in Betrieb </Title>
+    <Title domain="7" number="1425">Zu viele E/A-Einheiten für DeviceNet </Title>
+    <Title domain="7" number="1426">DeviceNet-E/A-Bus wiederhergestellt </Title>
+    <Title domain="7" number="1428">DeviceNet-E/A-Einheit konfiguriert </Title>
+    <Title domain="7" number="1443">Zu viele interne Profinet-Slaves</Title>
+    <Title domain="7" number="1446">Profinet-Konfigurationskonflikt</Title>
+    <Title domain="7" number="1449">Zu viele Feldbus-Adapter konfiguriert</Title>
+    <Title domain="7" number="1450">EtherNet/IP Master/Slave-Option nicht installiert</Title>
+    <Title domain="7" number="1451">Zusätzlicher Ethernet-Port nicht installiert</Title>
+    <Title domain="7" number="1452">Zu viele EtherNet/IP E/A-Busse konfiguriert</Title>
+    <Title domain="7" number="1453">Falsche Identität für EtherNet/IP E/A-Einheit</Title>
+    <Title domain="7" number="1454"> Die <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />-Adresse fehlt </Title>
+    <Title domain="7" number="1455">EtherNet/IP-Verbindungstyp unbekannt</Title>
+    <Title domain="7" number="1457">EtherNet/IP-Adresse des Gateways nicht zulässig</Title>
+    <Title domain="7" number="1458">Standard Gateway-Adresse konnte nicht geändert werden</Title>
+    <Title domain="7" number="1459">Unzulässige Adresse für EtherNet/IP</Title>
+    <Title domain="7" number="1460">Keine Verbindung zur EtherNet/IP E/A-Einheit möglich</Title>
+    <Title domain="7" number="1461">Doppelte Adresse auf dem EtherNet/IP E/A-Bus</Title>
+    <Title domain="7" number="1462">Unzulässige Subnet-Maske für EtherNet/IP</Title>
+    <Title domain="7" number="1463">Unzulässige Adresse für EtherNet/IP E/A-Bus </Title>
+    <Title domain="7" number="1464">Für EtherNet/IP konnte kein Gateway hinzugefügt werden</Title>
+    <Title domain="7" number="1465">DeviceNet Fehlerreaktion </Title>
+    <Title domain="7" number="1469">Maximale Anzahl interner E/A-Signale überschritten</Title>
+    <Title domain="7" number="1473">DeviceNet-E/A-Bus Scanergebnis </Title>
+    <Title domain="7" number="1474">Feldbusbefehl-Reaktionsmeldung</Title>
+    <Title domain="7" number="1475">Feldbusbefehl-Fehlerreaktion</Title>
+    <Title domain="7" number="1476">DeviceNet-Firmwaredatei nicht gefunden</Title>
+    <Title domain="7" number="1477">Falsche Verbindungsgröße für EtherNet/IP E/A-Einheit</Title>
+    <Title domain="7" number="1478">Ungültige Ein- oder Ausgangsappl. für EtherNet/IP E/A-Einheit</Title>
+    <Title domain="7" number="1479">Ungültige Konfigurationsapplikation für EtherNet/IP E/A-Einheit</Title>
+    <Title domain="7" number="1480">E/A-Einheit ist durch einen anderen Master belegt</Title>
+    <Title domain="7" number="1481">Profinet-Konfigurationsdateifehler</Title>
+    <Title domain="7" number="1482">Profinet-E/A-Bus-Konfiguration verändert</Title>
+    <Title domain="7" number="1483">Profinet-Identifikationsanforderung empfangen</Title>
+    <Title domain="7" number="1485">Unzulässige Subnet-Maske</Title>
+    <Title domain="7" number="1486"> Unzulässige Adresse für &lt;<arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" />&gt; E/A-Bus </Title>
+    <Title domain="7" number="1487"> Unzulässige IP-Adresse für &lt;<arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" />&gt; E/A-Bus </Title>
+    <Title domain="7" number="1488"> Unzulässige Gateway-Adresse für &lt;<arg format="%s" ordinal="3" xmlns="urn:abb-robotics-elog-text" />&gt; E/A-Bus </Title>
+    <Title domain="7" number="1489">Warnung zu Konfiguration von internem Profinet-Slave </Title>
+    <Title domain="7" number="1490">Warnung zu Konfiguration von Profinet-E/A-Einheit</Title>
+    <Title domain="7" number="1491">Konfiguration von Profinet-E/A-Einheit fehlt</Title>
+    <Title domain="7" number="1492">Profinet-Diagnosedaten gemeldet</Title>
+    <Title domain="7" number="1493">Profinet-E/A-Einheit automatisch konfiguriert</Title>
+    <Title domain="7" number="1494">Lizenzcode für Option Profinet fehlt</Title>
+    <Title domain="7" number="1495">Lizenzcode für Option Profinet-Master fehlt</Title>
+    <Title domain="7" number="1496">Keine Kommunikation mit der erforderlichen E/A-Einheit</Title>
+    <Title domain="7" number="1497">Keine Kommunikation mit E/A-Einheit</Title>
+    <Title domain="7" number="1498">Profinet-E/A-Bus-Konfiguration verändert</Title>
+    <Title domain="7" number="1499">E/A-Signal in Querverbindung hat überlagernde Zuordnung</Title>
+    <Title domain="7" number="1500">EtherNet/IP-Verbindungsfehler</Title>
+    <Title domain="7" number="1501">Profinet-Konfigurationsdateifehler</Title>
+    <Title domain="7" number="1502">Profinet-Konfigurationskonflikt</Title>
+    <Title domain="7" number="1503">Fehler bei Profinet-Stationsname</Title>
+    <Title domain="7" number="1504">Maximale Dateigröße überschritten</Title>
+    <Title domain="7" number="1505">Feldbusbefehl-Syntaxfehler</Title>
+    <Title domain="7" number="1506">Feldbusbefehl-Syntaxfehler</Title>
+    <Title domain="7" number="1507">Feldbusbefehl-Syntaxfehler</Title>
+    <Title domain="7" number="1508">Feldbusbefehl-Syntaxfehler</Title>
+    <Title domain="7" number="1509">Feldbusbefehl-Syntaxfehler</Title>
+    <Title domain="7" number="1510">Feldbusbefehl-Syntaxfehler</Title>
+    <Title domain="7" number="1511">Feldbusbefehl-Syntaxfehler</Title>
+    <Title domain="7" number="1512">Ungültiger Servicebezeichner in Feldbusbefehl</Title>
+    <Title domain="7" number="1513">Timeout der Feldbusbefehlsreaktion</Title>
+    <Title domain="7" number="1514">Feldbusbefehl-Verbindungsfehler</Title>
+    <Title domain="7" number="1515">Fehler beim Senden von Feldbusbefehl</Title>
+    <Title domain="7" number="1516">Quick Connect nicht von EtherNet/IP E/A-Einheit unterstützt</Title>
+    <Title domain="7" number="1517">Attribut für eine EtherNet/IP E/A-Einheit wurde geändert</Title>
+    <Title domain="7" number="1519">Es sind zu viele Profinet Master/Slave E/A-Busse konfiguriert</Title>
+    <Title domain="7" number="1520">Eingangsdaten ungültig</Title>
+    <Title domain="7" number="1521">Ausgangsdaten nicht verarbeitet</Title>
+    <Title domain="7" number="1522">Ethernet-Port ist von anderem Client belegt</Title>
+    <Title domain="7" number="1524">Unbekannter Alarm der Profinet-E/A-Einheit</Title>
+    <Title domain="7" number="1525">Diagnose der Profinet-E/A-Einheit</Title>
+    <Title domain="7" number="1526">Unbekannter Alarm der Profinet-E/A-Einheit</Title>
+    <Title domain="7" number="1527">Statuskonflikt bei EtherNet/IP-Gerät</Title>
+    <Title domain="7" number="1528">Allgemeiner EtherNet/IP-Fehler </Title>
+    <Title domain="7" number="1529">Die Zieladresse fehlt</Title>
+    <Title domain="7" number="1530">Die Subnet-Maske fehlt</Title>
+    <Title domain="7" number="1531">Fehlerhafte Zieladresse</Title>
+    <Title domain="7" number="1532">Die Gateway-Adresse fehlt</Title>
+    <Title domain="7" number="1533">Ungültige Konfigurationsgröße für EtherNet/IP E/A-Einheit</Title>
+    <Title domain="7" number="1534">Ungültige Ausgangsgröße für EtherNet/IP E/A-Einheit</Title>
+    <Title domain="7" number="1535">Ungültige Eingangsgröße für EtherNet/IP E/A-Einheit</Title>
+    <Title domain="7" number="1536">Feldbusbefehl-Syntaxfehler</Title>
+    <Title domain="7" number="1537">Ungültige Konfigurationsdaten für EtherNet/IP E/A-Einheit</Title>
+    <Title domain="7" number="1538">Adresse des EtherNet/IP E/A-Bus muss auf PC vorhanden sein</Title>
+    <Title domain="11" number="4800">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4801">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4802">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4803">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4804">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4805">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4806">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4807">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4808">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4809">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4810">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4811">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4812">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4813">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4814">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="5" number="21">Achspositionsfehler</Title>
+    <Title domain="5" number="22">Gleichrichterspannung zu gering</Title>
+    <Title domain="5" number="24">Zonenbahn-Fehler </Title>
+    <Title domain="5" number="25">Neustart unterbrochen</Title>
+    <Title domain="5" number="26">Nahe an Singularität</Title>
+    <Title domain="5" number="27">Achse außerhalb des zulässigen Bereichs</Title>
+    <Title domain="5" number="28">Bewegung in falsche Richtung</Title>
+    <Title domain="5" number="31">Befehl nicht zulässig</Title>
+    <Title domain="5" number="32">Befehl nicht zulässig</Title>
+    <Title domain="5" number="33">Befehl nicht zulässig</Title>
+    <Title domain="5" number="35">Befehl nicht zulässig</Title>
+    <Title domain="5" number="36">Korrektes Anfahren nicht möglich</Title>
+    <Title domain="5" number="37">MOTOREN-EIN-Befehl ignoriert</Title>
+    <Title domain="5" number="41">Roboter in einer Singularität</Title>
+    <Title domain="5" number="42">Bahn konnte nicht erzeugt werden</Title>
+    <Title domain="5" number="50">Position außer Reichweite</Title>
+    <Title domain="5" number="52">Achsgeschwindigkeitsfehler </Title>
+    <Title domain="5" number="53">Zu große Umdrehungszählerdifferenz</Title>
+    <Title domain="5" number="55">Achsenlast zu hoch</Title>
+    <Title domain="5" number="56">Achskollision</Title>
+    <Title domain="5" number="57">Achse nicht synchron</Title>
+    <Title domain="5" number="58">Werkzeug-Koordinatensystem-Fehler</Title>
+    <Title domain="5" number="60">Falsches Werkzeug</Title>
+    <Title domain="5" number="63">Kreisbogen unbestimmt</Title>
+    <Title domain="5" number="65">Kinematikfehler</Title>
+    <Title domain="5" number="66">Roboter nicht aktiv</Title>
+    <Title domain="5" number="67">Einheit nicht aktiv</Title>
+    <Title domain="5" number="76">Orientierung unzulässig</Title>
+    <Title domain="5" number="78">Zu dichte Positionsfolge</Title>
+    <Title domain="5" number="79">Handgelenkpendel nicht verwendbar</Title>
+    <Title domain="5" number="80">Position nicht kompatibel</Title>
+    <Title domain="5" number="82">Verzögerungsgrenze</Title>
+    <Title domain="5" number="85">Zu viele Anwender-Koordinatensysteme</Title>
+    <Title domain="5" number="86">Singularitätsproblem</Title>
+    <Title domain="5" number="87">Singularitätsproblem</Title>
+    <Title domain="5" number="88">Neustart nicht möglich</Title>
+    <Title domain="5" number="89">Pendeln geändert</Title>
+    <Title domain="5" number="91">Neustart nicht möglich</Title>
+    <Title domain="5" number="92">Achscomputer-Reaktion</Title>
+    <Title domain="5" number="94">TuneServo nicht möglich</Title>
+    <Title domain="5" number="96">TuneServo nicht zulässig</Title>
+    <Title domain="5" number="132">Kommutierung fehlgeschlagen</Title>
+    <Title domain="5" number="133">Prüfsignalfehler</Title>
+    <Title domain="5" number="134">Korrekturvektor-Warnung</Title>
+    <Title domain="5" number="135">SoftAct nicht möglich</Title>
+    <Title domain="5" number="138">Grenze für Prüfpunkt des Arms</Title>
+    <Title domain="5" number="139">Grenze für Prüfpunkt des Arms</Title>
+    <Title domain="5" number="140">Nutzlast zu groß</Title>
+    <Title domain="5" number="142">Bewegungskonfiguration</Title>
+    <Title domain="5" number="143">Roboterachsenkonfiguration</Title>
+    <Title domain="5" number="144">Verschiebungs-Koordinatensystem unbestimmt</Title>
+    <Title domain="5" number="145">Kinematische Beschränkung</Title>
+    <Title domain="5" number="147">Netzfehler - Neustart fehlgeschlagen</Title>
+    <Title domain="5" number="153">Befehl nicht zulässig </Title>
+    <Title domain="5" number="156">Keine unabhängige Achse</Title>
+    <Title domain="5" number="157">Korrekturvektor-Warnung</Title>
+    <Title domain="5" number="158">Sensorprozess fehlt</Title>
+    <Title domain="5" number="159">Kein externer Prozess</Title>
+    <Title domain="5" number="160">Position nicht erreichbar</Title>
+    <Title domain="5" number="163">Positionsanpassung</Title>
+    <Title domain="5" number="164">Deaktivierung nicht möglich</Title>
+    <Title domain="5" number="167">Warnung: Neue Synchronisierung</Title>
+    <Title domain="5" number="168">Neue Synchronisierung auf <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="5" number="172">MoveJ unzulässig</Title>
+    <Title domain="5" number="173">Feinpunkt erforderlich</Title>
+    <Title domain="5" number="174">WObj nicht verbunden</Title>
+    <Title domain="5" number="175">Förderer bewegt sich</Title>
+    <Title domain="5" number="176">Förderer nicht aktiv</Title>
+    <Title domain="5" number="177">Neustart nicht möglich</Title>
+    <Title domain="5" number="178">Keine optimale Bewegung</Title>
+    <Title domain="5" number="181">Außerhalb des verbundenen Bereichs</Title>
+    <Title domain="5" number="182">Bewegung in falsche Richtung</Title>
+    <Title domain="5" number="183">Roboter außerhalb des Arbeitsbereichs</Title>
+    <Title domain="5" number="184">Korrekturvektor-Warnung</Title>
+    <Title domain="5" number="185">Korrekturvektor-Warnung</Title>
+    <Title domain="5" number="188">Keine optimale Bewegung</Title>
+    <Title domain="5" number="189">Relaissignal nicht gefunden</Title>
+    <Title domain="5" number="190">Permanenter Interpolator-Sperrfehler</Title>
+    <Title domain="5" number="191">Zu viele TCP-Geschwindigkeiten</Title>
+    <Title domain="5" number="192">Bewegungsfehler</Title>
+    <Title domain="5" number="193">Achse nicht synchron</Title>
+    <Title domain="5" number="194">Interner Positionsfehler</Title>
+    <Title domain="5" number="195">Unabhängige Bewegung nicht möglich</Title>
+    <Title domain="5" number="196">Kalibrierung fehlgeschlagen</Title>
+    <Title domain="5" number="197">Kalibrierung fehlgeschlagen</Title>
+    <Title domain="5" number="198">Kalibrierung fehlgeschlagen</Title>
+    <Title domain="5" number="200">Drehmomentfehler</Title>
+    <Title domain="5" number="201">Orientierung außer Reichweite</Title>
+    <Title domain="5" number="203">Messknoten in Gebrauch</Title>
+    <Title domain="5" number="204">Bewegungsüberwachung</Title>
+    <Title domain="5" number="205">Datenprotokollierungsfehler</Title>
+    <Title domain="5" number="206">Sensorwarnung</Title>
+    <Title domain="5" number="207">Zwischenpunkt hinzufügen</Title>
+    <Title domain="5" number="208">Fehlende Funktion</Title>
+    <Title domain="5" number="209">Kinematische Beschränkung</Title>
+    <Title domain="5" number="210">Lastidentifikation fehlgeschlagen</Title>
+    <Title domain="5" number="214">Konfiguration des Arbeitsbereichs fehlgeschlagen</Title>
+    <Title domain="5" number="215">Lastidentifikation fehlgeschlagen</Title>
+    <Title domain="5" number="218">Bahn nicht beendet</Title>
+    <Title domain="5" number="220">Kein Eingangssignal</Title>
+    <Title domain="5" number="221">Objekt außerhalb der Grenzen</Title>
+    <Title domain="5" number="222">Typenkonflikt MechUnit</Title>
+    <Title domain="5" number="224">Last nicht definierbar</Title>
+    <Title domain="5" number="225">Alter bootsicherer Speicher verloren</Title>
+    <Title domain="5" number="226">Motorreferenzfehler</Title>
+    <Title domain="5" number="227">Prüfsignalfehler</Title>
+    <Title domain="5" number="228">Prüfsignalfehler</Title>
+    <Title domain="5" number="229">Prüfsignalfehler</Title>
+    <Title domain="5" number="230">Prüfsignalfehler</Title>
+    <Title domain="5" number="231">Prüfsignalfehler</Title>
+    <Title domain="5" number="234">Überlauf bei Protokollierung</Title>
+    <Title domain="5" number="235">Keine Interrupts empfangen</Title>
+    <Title domain="5" number="239">Optimaler Not-Aus geändert</Title>
+    <Title domain="5" number="240">Optimaler Not-Aus geändert</Title>
+    <Title domain="5" number="241">Fehlende Funktion</Title>
+    <Title domain="5" number="242">Nicht synchron wegen CFG-Daten</Title>
+    <Title domain="5" number="243">Keine Beschleunigungsgrenze</Title>
+    <Title domain="5" number="244">AbsAcc-Kalibrierung fehlgeschlagen</Title>
+    <Title domain="5" number="245">Befehl nicht zulässig</Title>
+    <Title domain="5" number="246">Verbundener Motor - Fehler</Title>
+    <Title domain="5" number="247">Löschen der Bahn fehlgeschlagen</Title>
+    <Title domain="5" number="248">Servowerkzeug-Fehler</Title>
+    <Title domain="5" number="249">Programmierte Kraft reduziert</Title>
+    <Title domain="5" number="250">Kalibrierkraft reduziert</Title>
+    <Title domain="5" number="251">Werkzeug öffnen fehlgeschlagen</Title>
+    <Title domain="5" number="252">Werkzeug öffnen fehlgeschlagen</Title>
+    <Title domain="5" number="253">Einheit nicht deaktivierbar</Title>
+    <Title domain="5" number="254">Verbundener Motor - Fehler</Title>
+    <Title domain="5" number="256">Synchronisierungsposition - Warnung</Title>
+    <Title domain="5" number="257">Synchronisierungsgeschwindigkeit - Warnung</Title>
+    <Title domain="5" number="258">Sensorrichtungsfehler</Title>
+    <Title domain="5" number="259">Max. Sensorabstand - Fehler</Title>
+    <Title domain="5" number="260">Sensorprüfabstand-Fehler</Title>
+    <Title domain="5" number="261">WZone außerhalb des Arbeitsbereichs</Title>
+    <Title domain="5" number="262">WZone außerhalb des Arbeitsbereichs</Title>
+    <Title domain="5" number="263">Betriebsfaktorwarnung</Title>
+    <Title domain="5" number="265">Dicke außerhalb Bereich</Title>
+    <Title domain="5" number="266">Schließen fehlgeschlagen</Title>
+    <Title domain="5" number="267">Öffnen fehlgeschlagen</Title>
+    <Title domain="5" number="268">Kalibrierung fehlgeschlagen</Title>
+    <Title domain="5" number="269">Abstimmungswert außerhalb der Grenze</Title>
+    <Title domain="5" number="271">Schlechte Ereignisgenauigkeit</Title>
+    <Title domain="5" number="272">Bewegungskonfiguration</Title>
+    <Title domain="5" number="273">Bewegungskonfiguration</Title>
+    <Title domain="5" number="274">Bewegungskonfiguration</Title>
+    <Title domain="5" number="275">Bewegungskonfiguration</Title>
+    <Title domain="5" number="276">Bewegungskonfiguration</Title>
+    <Title domain="5" number="277">Bewegungskonfiguration</Title>
+    <Title domain="5" number="278">Bewegungskonfiguration</Title>
+    <Title domain="5" number="279">Bewegungskonfiguration</Title>
+    <Title domain="5" number="280">Systemkonfiguration</Title>
+    <Title domain="5" number="281">Prozess fehlgeschlagen</Title>
+    <Title domain="5" number="282">Aufzeichnung nicht bereit</Title>
+    <Title domain="5" number="283">Unbekannter Aufzeichnungsdateiname</Title>
+    <Title domain="5" number="284">Mechanische Einheit nicht aktivierbar</Title>
+    <Title domain="5" number="285">DitherAct nicht möglich</Title>
+    <Title domain="5" number="286">Mischung aus koordinierten Koordinatensystemen</Title>
+    <Title domain="5" number="287">Einheit nicht an überwachter Position gestoppt</Title>
+    <Title domain="5" number="288">Synch.-ID-Konflikt</Title>
+    <Title domain="5" number="289">Typenkonflikt von Punkten bei Synchronisierung</Title>
+    <Title domain="5" number="290">Service nicht verfügbar</Title>
+    <Title domain="5" number="294">Datenübertragungsfehler</Title>
+    <Title domain="5" number="295">Bewegungsdaten fehlen</Title>
+    <Title domain="5" number="296">Unterschiedliche Daten im SMB-Speicher</Title>
+    <Title domain="5" number="297">Speicher aktualisiert in SMB</Title>
+    <Title domain="5" number="298">Speicher aktualisiert in Schrank</Title>
+    <Title domain="5" number="299">Geschwindigkeitssteuerung - Warnung</Title>
+    <Title domain="5" number="300">SMB-Speicher wird nicht verwendet</Title>
+    <Title domain="5" number="301">Alle SMB-Daten fehlen</Title>
+    <Title domain="5" number="302">Sensordaten fehlen</Title>
+    <Title domain="5" number="303">Daten der Steuerung fehlen</Title>
+    <Title domain="5" number="305">Verwendete SMB-Platine ist alt</Title>
+    <Title domain="5" number="306">Lastidentifikationsfehler</Title>
+    <Title domain="5" number="307">Erweiterter Arbeitsbereich</Title>
+    <Title domain="5" number="308">In Position Timeout</Title>
+    <Title domain="5" number="309">AbsAcc-Fehler</Title>
+    <Title domain="5" number="310">Unabhängige Achse nicht aktiv</Title>
+    <Title domain="5" number="311">Mechanische Einheit in Task nicht aktivierbar</Title>
+    <Title domain="5" number="312">Mechanische Einheit bereits in anderer Task aktiv</Title>
+    <Title domain="5" number="313">Unabhängige Rücksetzbewegung fehlgeschlagen</Title>
+    <Title domain="5" number="314">Unabhängige Bewegung außerhalb Bereich</Title>
+    <Title domain="5" number="315">Zonenbahn-Fehler</Title>
+    <Title domain="5" number="316">Absolutgenauigkeit nicht aktiviert</Title>
+    <Title domain="5" number="317">Trennen des Antriebsmoduls nicht zulässig</Title>
+    <Title domain="5" number="318">Erneutes Verbinden des Antriebsmoduls unzulässig</Title>
+    <Title domain="5" number="319">Mechanische Einheit nicht aktivierbar</Title>
+    <Title domain="5" number="320">Verbindung zum Antriebsmodul wurde getrennt</Title>
+    <Title domain="5" number="321">Antriebsmodul wurde wieder angeschlossen</Title>
+    <Title domain="5" number="322">Mechanische Einheit nicht mit Bewegungstask verbunden</Title>
+    <Title domain="5" number="323">Kraftsensor konnte nicht abgelesen werden</Title>
+    <Title domain="5" number="324">Kalibrierung der Kraftsteuerung fehlgeschlagen</Title>
+    <Title domain="5" number="325">Kraftsteuerung konnte nicht aktiviert werden</Title>
+    <Title domain="5" number="326">Kraftsteuerung konnte nicht deaktiviert werden</Title>
+    <Title domain="5" number="327">Referenzen konnten nicht gestartet werden</Title>
+    <Title domain="5" number="328">Param.fehler in "FCRefSprForce" oder "FCRefSprTorque"</Title>
+    <Title domain="5" number="329">Parameterfehler in "FCRefSprForce"</Title>
+    <Title domain="5" number="330">Parameterfehler in "FCRefSprTorque"</Title>
+    <Title domain="5" number="333">Fehler bei FCRefLine, FCRefRot oder FCRefCircle</Title>
+    <Title domain="5" number="335">Parameterfehler in "FCRefSpiral"</Title>
+    <Title domain="5" number="336">Parameterfehler in "FCGetProcessData"</Title>
+    <Title domain="5" number="337">Kraftsensor nicht eingerichtet</Title>
+    <Title domain="5" number="338">Parameterfehler in "FCCondAdvanced"</Title>
+    <Title domain="5" number="339">Parameterfehler in "FCCondTime"</Title>
+    <Title domain="5" number="340">Fehler in Verteilerdefinition der Kraftsteuerung</Title>
+    <Title domain="5" number="341">Fehler in Zylinderdefinition der Kraftsteuerung</Title>
+    <Title domain="5" number="342">Fehler in Kugeldefinition der Kraftsteuerung</Title>
+    <Title domain="5" number="343">Fehler in Kegeldefinition der Kraftsteuerung</Title>
+    <Title domain="5" number="344">Achsen außerhalb Grenzen in Kraftsteuerung</Title>
+    <Title domain="5" number="345">Fehler bei Kalibrierung der Kraftsteuerung</Title>
+    <Title domain="5" number="346">Fehler Motortemperatur</Title>
+    <Title domain="5" number="348">Prüfsignalfehler </Title>
+    <Title domain="5" number="349">Warnung Synchronisierungs-ID</Title>
+    <Title domain="5" number="350"> Software-Zangenausgleich unzulässig</Title>
+    <Title domain="5" number="351">Unabhängige Bewegung unzulässig</Title>
+    <Title domain="5" number="352">Konflikt bei Anzahl der Bewegungsinstruktionen</Title>
+    <Title domain="5" number="353">Daten nicht aus Encoder-Einheit lesbar</Title>
+    <Title domain="5" number="354">Angeforderte Kraftreferenz ist zu groß</Title>
+    <Title domain="5" number="355">Angeforderte Drehmomentreferenz ist zu groß</Title>
+    <Title domain="5" number="356">Angeforderte maximale Kraft ist zu groß</Title>
+    <Title domain="5" number="357">Angefordertes maximales Drehmoment ist zu groß</Title>
+    <Title domain="5" number="358">Bei Force Control zu nahe an Singularität</Title>
+    <Title domain="5" number="359">Path Recorder auf StorePath-Ebene nicht zulässig</Title>
+    <Title domain="5" number="361">Bremsenlösen Fehler</Title>
+    <Title domain="5" number="362">Bremsenlösen Timeout</Title>
+    <Title domain="5" number="363">SyncMoveOn fehlgeschlagen</Title>
+    <Title domain="5" number="364">Achse in Stromvektormodus</Title>
+    <Title domain="5" number="366">Referenzpunktfehler</Title>
+    <Title domain="5" number="367">Maschinenstopp durch Sensor Sync</Title>
+    <Title domain="5" number="368">Zu geringer Abstand zwischen Ereignissen mit gleichem Abstand</Title>
+    <Title domain="5" number="369">Kalibrierung mit gespeichertem Offset fehlgeschlagen</Title>
+    <Title domain="5" number="370">Datenübertragung in SMB-Speicher fehlgeschlagen</Title>
+    <Title domain="5" number="371">Die programmierte Geschwindigkeit ist zu hoch</Title>
+    <Title domain="5" number="372">Kontaktkraft zu hoch</Title>
+    <Title domain="5" number="373">Zu hoher Wert für Event Preset Time</Title>
+    <Title domain="5" number="374">FC SpeedChange-Programmstoppfehler</Title>
+    <Title domain="5" number="375">Dynamische Last zu hoch</Title>
+    <Title domain="5" number="376">Geometrische Interpolation fehlgeschlagen</Title>
+    <Title domain="5" number="377">Nur in Positionssteuerung gestattet</Title>
+    <Title domain="5" number="378">Fehler bei FCSetMaxForceChangeTune</Title>
+    <Title domain="5" number="379">Aktive mechanische Einheiten haben sich geändert</Title>
+    <Title domain="5" number="380">Prüfsummenfehler</Title>
+    <Title domain="5" number="381">Geschwindigkeit zu niedrig</Title>
+    <Title domain="5" number="382">Pendelmusterfehler</Title>
+    <Title domain="5" number="383">Cartesian Soft Servo-Konfigurationsfehler</Title>
+    <Title domain="5" number="384">Cartesian Soft Servo-Quaternionen ungültig</Title>
+    <Title domain="5" number="385">Aktivierung Cartesian Soft Servo fehlgeschlagen</Title>
+    <Title domain="5" number="386">Aktivierung von Cartesian Soft Servo-Offset fehlgeschlagen</Title>
+    <Title domain="5" number="387">SoftMove nahezu instabil</Title>
+    <Title domain="5" number="388">Cartesian Soft Servo-Positionsüberwachungsfehler</Title>
+    <Title domain="5" number="389">Cartesian Soft Servo-Singularität</Title>
+    <Title domain="5" number="390">Cartesian Soft Servo-Geschwindigkeitsüberwachung</Title>
+    <Title domain="5" number="391">Cartesian Soft Servo-Bewegung nicht zulässig</Title>
+    <Title domain="5" number="392">SafeMove-Kommunikationsfehler</Title>
+    <Title domain="5" number="393">Kraftoffset nicht in Soft Servo-Richtung angewendet</Title>
+    <Title domain="5" number="394">Die Bahn für die Einheit ist gelöscht</Title>
+    <Title domain="5" number="396">Fehler bei FC-Standardkraftüberwachung</Title>
+    <Title domain="5" number="397">Drehgeschwindigkeitsfehler bei Bahn-Koordinatensystem</Title>
+    <Title domain="5" number="398">AbsAcc-Kreis beginnt mit Änderung des Koordinatensystems</Title>
+    <Title domain="5" number="399">AbsAcc-Kreis ist die erste Bewegungsinstruktion</Title>
+    <Title domain="5" number="400">Bewegungskonfigurationsfehler</Title>
+    <Title domain="5" number="401">Startsynchronisierung fehlgeschlagen</Title>
+    <Title domain="5" number="402">Korrektur endet nicht in Feinpunkt</Title>
+    <Title domain="5" number="403">AW-Platine nicht angeschlossen</Title>
+    <Title domain="5" number="404">Bewegung der Zusatzachse während Handgelenk-Interpolation</Title>
+    <Title domain="5" number="405">Koordinierte Bewegung während Handgelenk-Interpolation</Title>
+    <Title domain="5" number="406">Punkt der Handgelenk-Interpolation nicht auf Kreisebene</Title>
+    <Title domain="5" number="407">Handgelenkachse verriegelt</Title>
+    <Title domain="5" number="408">Handgelenkachsgrenze</Title>
+    <Title domain="5" number="409">Handgelenk-Interpolation nicht möglich</Title>
+    <Title domain="5" number="410">Kollineare Ziele in falscher Reihenfolge</Title>
+    <Title domain="5" number="411">Maximal zulässige programmierte TCP-Last überschritten</Title>
+    <Title domain="5" number="412">Fehler bei Abstimmung der Geschwindigkeitsänderung</Title>
+    <Title domain="5" number="413">Überlastfehler am Ableitwiderstand</Title>
+    <Title domain="5" number="414">Überlastfehlerwarnung am Ableitwiderstand</Title>
+    <Title domain="5" number="415">Motortemperaturfehler</Title>
+    <Title domain="5" number="416">Motortemperatur-Warnung</Title>
+    <Title domain="5" number="417">Überlastfehler in Antriebseinheit</Title>
+    <Title domain="5" number="418">Überlastwarnung in Antriebseinheit</Title>
+    <Title domain="5" number="419">Allgemeiner base_frame-Fehler</Title>
+    <Title domain="5" number="420">IndCnv Mechanische Einheit - Fehler</Title>
+    <Title domain="5" number="421">IndCnv Single-Verfolgungsfehler</Title>
+    <Title domain="5" number="422">IndCnv und Unabhängiger Achsfehler</Title>
+    <Title domain="5" number="423">IndCnv-Zeit vor Indexbewegung zu gering</Title>
+    <Title domain="5" number="424">Robotertyp IndCnv nicht unterstützt</Title>
+    <Title domain="5" number="425">Parameter Friction FFW ist nicht On </Title>
+    <Title domain="5" number="426">Keine Interpolationsobjekte mehr vorhanden</Title>
+    <Title domain="5" number="427">Achse nach Kalibrierung nicht synchron</Title>
+    <Title domain="5" number="428">SC Software-Synchronisierung begonnen</Title>
+    <Title domain="5" number="429">CSS-Parameter Damping veraltet</Title>
+    <Title domain="5" number="430">Datenmangel im Achscomputer</Title>
+    <Title domain="5" number="431">Mögliche Kollision</Title>
+    <Title domain="5" number="432">Identische Basis-Koordinatensysteme</Title>
+    <Title domain="5" number="433">Position wurde in Arbeitsbereich verschoben</Title>
+    <Title domain="5" number="434">Position wurde in Arbeitsbereich verschoben</Title>
+    <Title domain="5" number="435">Inkonsistenter Konfigurationsparameter</Title>
+    <Title domain="5" number="436">Konfigurationsfehler des Roboters</Title>
+    <Title domain="5" number="437">Folgeachse ist mit falschem Motion Planer verbunden</Title>
+    <Title domain="5" number="438">Timeout der Motoren-AUS-Sequenz</Title>
+    <Title domain="5" number="439">Fehler bei Soft Servo Aktivierung</Title>
+    <Title domain="5" number="440">Korrekturgenerator nicht mehr vorhanden</Title>
+    <Title domain="5" number="441">Niedrige Spannung an Batterieeingängen</Title>
+    <Title domain="5" number="442">Konfigurationsfehler der Roboterachse </Title>
+    <Title domain="5" number="443">Mangel an internen Ereignisobjekten</Title>
+    <Title domain="5" number="444">Bewegungsüberwachung</Title>
+    <Title domain="5" number="445">Synch on/off während ExtMotion nicht zulässig </Title>
+    <Title domain="5" number="446">ExtMotion ramp time wurde erhöht</Title>
+    <Title domain="5" number="447">Falsche mechanische Einheiten für ExtMotion</Title>
+    <Title domain="5" number="448">Fehler an ExtMotion-Eingang </Title>
+    <Title domain="5" number="449">Mechanische Einheit nahe an Achsengrenze </Title>
+    <Title domain="5" number="450">ExtMotion Aktivierungsfehler</Title>
+    <Title domain="5" number="451">ExtMotion Deaktivierungsfehler</Title>
+    <Title domain="5" number="452">ExtMotion zyklischer Fehler</Title>
+    <Title domain="5" number="453">Bewegung in ExtMotion nicht zulässig</Title>
+    <Title domain="5" number="454">ExtMotion Positionsüberwachung </Title>
+    <Title domain="5" number="455">ExtMotion Geschwindigkeitsüberwachung</Title>
+    <Title domain="5" number="456">Nahe an Singularität während ExtMotion aktiv ist </Title>
+    <Title domain="5" number="457">ExtMotion-Konfiguration fehlgeschlagen </Title>
+    <Title domain="5" number="458">Programmierte Geschwindigkeit zu hoch</Title>
+    <Title domain="5" number="459">ExtMotion-Eingabe außerhalb des zulässigen Bereichs </Title>
+    <Title domain="5" number="460">Deaktivierung von ExtMotion nicht zulässig </Title>
+    <Title domain="5" number="461">Zu viele kontinuierliche Protokollsignale</Title>
+    <Title domain="1" number="2">Programmzeiger wurde zurückgesetzt</Title>
+    <Title domain="1" number="9">Arbeitsspeicher voll</Title>
+    <Title domain="1" number="10">MOTOREN-AUS-Zustand</Title>
+    <Title domain="1" number="11">MOTOREN-EIN-Zustand</Title>
+    <Title domain="1" number="12">Sicherheitsstopp-Zustand</Title>
+    <Title domain="1" number="13">Not-Aus-Status </Title>
+    <Title domain="1" number="14">Systemfehler-Status </Title>
+    <Title domain="1" number="15">Einrichtbetrieb gewählt</Title>
+    <Title domain="1" number="16">Automatikbetrieb angefordert</Title>
+    <Title domain="1" number="17">Automatikbetrieb bestätigt</Title>
+    <Title domain="1" number="18">Einrichtbetrieb-Maximalgeschwindigkeit angefordert</Title>
+    <Title domain="1" number="19">Einrichtbetrieb-Maximalgeschwindigkeit bestätigt</Title>
+    <Title domain="1" number="20">Status Abarbeitungsfehler</Title>
+    <Title domain="1" number="21">Rücksetzen Abarbeitungsfehler</Title>
+    <Title domain="1" number="24">Kollision erkannt</Title>
+    <Title domain="1" number="25">Kollision bestätigt</Title>
+    <Title domain="1" number="26">Zurück auf Bahn</Title>
+    <Title domain="1" number="27">Nicht zurück auf Bahn</Title>
+    <Title domain="1" number="30">Alle Achsen kommutiert</Title>
+    <Title domain="1" number="31">Alle Achsen kalibriert</Title>
+    <Title domain="1" number="32">Alle Umdrehungszähler aktualisiert</Title>
+    <Title domain="1" number="33">Alle Achsen synchron</Title>
+    <Title domain="1" number="34">Achse nicht kommutiert</Title>
+    <Title domain="1" number="35">Achse nicht kalibriert</Title>
+    <Title domain="1" number="36">Umdrehungszähler nicht aktualisiert</Title>
+    <Title domain="1" number="37">Achse nicht synchron</Title>
+    <Title domain="1" number="38">SMB-Speicher ist OK</Title>
+    <Title domain="1" number="39">SMB-Speicher nicht OK</Title>
+    <Title domain="1" number="40">Programm geladen</Title>
+    <Title domain="1" number="41">Programm gelöscht</Title>
+    <Title domain="1" number="42">Achse neu kalibriert</Title>
+    <Title domain="1" number="43">Neustart fehlgeschlagen</Title>
+    <Title domain="1" number="44">Programmzeiger aktualisiert</Title>
+    <Title domain="1" number="45">System neu gestartet</Title>
+    <Title domain="1" number="46">System-Kaltstart ausgeführt</Title>
+    <Title domain="1" number="48">Hintergrundtask angehalten</Title>
+    <Title domain="1" number="51">Ereignisroutine-Fehler</Title>
+    <Title domain="1" number="52">Wiederanfahren gestartet</Title>
+    <Title domain="1" number="53">Wiederanfahren fertig</Title>
+    <Title domain="1" number="54">Wiederanfahren nicht möglich</Title>
+    <Title domain="1" number="55">Bahnprozess neu gestartet</Title>
+    <Title domain="1" number="60">Test Sicherheitskreis</Title>
+    <Title domain="1" number="61">Eine Position wurde geändert</Title>
+    <Title domain="1" number="62">Ein Modul wurde bearbeitet</Title>
+    <Title domain="1" number="63">Modul wurde bearbeitet</Title>
+    <Title domain="1" number="64">Ein Modul wurde gelöscht</Title>
+    <Title domain="1" number="65">Neuer Benutzer hat begonnen, RAPID zu ändern</Title>
+    <Title domain="1" number="66">Systemmodul kann nicht geladen werden</Title>
+    <Title domain="1" number="67">Zurücksetzen des Programmzeigers</Title>
+    <Title domain="1" number="68">Starten von Programm</Title>
+    <Title domain="1" number="74">NFS-Server in Betrieb</Title>
+    <Title domain="1" number="75">NFS-Server außer Betrieb</Title>
+    <Title domain="1" number="76">FTP-Server in Betrieb</Title>
+    <Title domain="1" number="77">FTP-Server außer Betrieb</Title>
+    <Title domain="1" number="80">Aktualisierte RAPID-Datei gefunden</Title>
+    <Title domain="1" number="81">Hintergrundtask <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="82">RAPID-Tasküberwachung</Title>
+    <Title domain="1" number="83">RAPID-Tasküberwachung</Title>
+    <Title domain="1" number="84">RAPID-Tasküberwachung</Title>
+    <Title domain="1" number="85">RAPID-Tasküberwachung</Title>
+    <Title domain="1" number="86">Roboterspülung OK</Title>
+    <Title domain="1" number="87">Spülstatus: <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="90">P-Start ausgeführt</Title>
+    <Title domain="1" number="91">Neustart nicht möglich</Title>
+    <Title domain="1" number="92">(Neu-) Start nicht möglich</Title>
+    <Title domain="1" number="93">(Neu-) Start nicht möglich</Title>
+    <Title domain="1" number="95">Mindestens eine Task in Taskauswahl nicht markiert</Title>
+    <Title domain="1" number="96">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> nicht aktiv</Title>
+    <Title domain="1" number="97">Neustart nicht möglich</Title>
+    <Title domain="1" number="98">Neustart nicht möglich</Title>
+    <Title domain="1" number="99">Programmstart abgewiesen</Title>
+    <Title domain="1" number="106">Wartungsmeldung</Title>
+    <Title domain="1" number="107">Wartungsmeldung</Title>
+    <Title domain="1" number="108">Wartungsmeldung</Title>
+    <Title domain="1" number="109">Wartungsmeldung</Title>
+    <Title domain="1" number="110">Wartungsmeldung</Title>
+    <Title domain="1" number="111">Wartungsmeldung</Title>
+    <Title domain="1" number="112">Wartungsmeldung</Title>
+    <Title domain="1" number="120">Programm gestoppt</Title>
+    <Title domain="1" number="121">Programm gestoppt</Title>
+    <Title domain="1" number="122">Programm gestoppt</Title>
+    <Title domain="1" number="123">Programm gestoppt</Title>
+    <Title domain="1" number="124">Programm gestoppt</Title>
+    <Title domain="1" number="125">Programm gestoppt</Title>
+    <Title domain="1" number="126">Programm gestoppt</Title>
+    <Title domain="1" number="127">Rückwärts-Abarbeitung nicht möglich</Title>
+    <Title domain="1" number="128">Rückwärts-Abarbeitung nicht möglich </Title>
+    <Title domain="1" number="129">Programm gestoppt</Title>
+    <Title domain="1" number="130">Programm gestoppt</Title>
+    <Title domain="1" number="131">Programm gestoppt</Title>
+    <Title domain="1" number="132">Programm gestoppt</Title>
+    <Title domain="1" number="133">Programm gestoppt</Title>
+    <Title domain="1" number="150">Programm gestartet</Title>
+    <Title domain="1" number="151">Programm gestartet.</Title>
+    <Title domain="1" number="152">Programm gestartet</Title>
+    <Title domain="1" number="155">Programm neu gestartet</Title>
+    <Title domain="1" number="156">Programm neu gestartet</Title>
+    <Title domain="1" number="157">Programm neu gestartet</Title>
+    <Title domain="1" number="170">Hintergrundtask <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="171">Hintergrundtask <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="172">Hintergrundtask <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="173">Hintergrundtask <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="174">Hintergrundtask <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="175">Hintergrundtask <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="176">Hintergrundtask <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="177">Task wird nicht gestartet</Title>
+    <Title domain="1" number="178">Abarbeitungsfehler statische/semistatische Task </Title>
+    <Title domain="1" number="185">Task konnte nicht für Start vorbereitet werden</Title>
+    <Title domain="1" number="190">Geschützter Bereich nicht bereit</Title>
+    <Title domain="1" number="191">Geschützter Bereich nicht bereit</Title>
+    <Title domain="1" number="192">Geschützter Bereich nicht bereit</Title>
+    <Title domain="1" number="193">Geschützter Bereich nicht bereit</Title>
+    <Title domain="1" number="194">Geschützter Bereich nicht bereit</Title>
+    <Title domain="1" number="195">Geschützter Bereich nicht bereit</Title>
+    <Title domain="1" number="196">Geschützter Bereich nicht bereit</Title>
+    <Title domain="1" number="210">Abarbeitung abgebrochen</Title>
+    <Title domain="1" number="211">Abarbeitung abgebrochen</Title>
+    <Title domain="1" number="212">Abarbeitung abgebrochen</Title>
+    <Title domain="1" number="213">Abarbeitung abgebrochen</Title>
+    <Title domain="1" number="214">Abarbeitung abgebrochen</Title>
+    <Title domain="1" number="215">Abarbeitung abgebrochen</Title>
+    <Title domain="1" number="216">Abarbeitung abgebrochen</Title>
+    <Title domain="1" number="217">Abarbeitung abgebrochen</Title>
+    <Title domain="1" number="218">Abarbeitung abgebrochen</Title>
+    <Title domain="1" number="219">Abarbeitung abgebrochen</Title>
+    <Title domain="1" number="230">Backup-Schritt fertig</Title>
+    <Title domain="1" number="231">Backup-Schritt fertig</Title>
+    <Title domain="1" number="232">Backup-Schritt fertig</Title>
+    <Title domain="1" number="250">Restore-Schritt fertig</Title>
+    <Title domain="1" number="251">Restore-Schritt fertig</Title>
+    <Title domain="1" number="252">Restore-Schritt fertig</Title>
+    <Title domain="1" number="253">Restore-Schritt fertig</Title>
+    <Title domain="1" number="260">Systemdiagnose-Info generiert</Title>
+    <Title domain="1" number="261">Systemdiagnose-Info nicht verfügbar</Title>
+    <Title domain="1" number="270">Zyklische Bremsenüberprüfung durchgeführt</Title>
+    <Title domain="1" number="271">Cyclic Brake Check gestartet</Title>
+    <Title domain="1" number="300">P-Start wurde angefordert</Title>
+    <Title domain="1" number="301">P-Start wurde angefordert</Title>
+    <Title domain="1" number="304">Aktualisierung wurde angefordert</Title>
+    <Title domain="1" number="350">Aktualisierung von Task fehlgeschlagen</Title>
+    <Title domain="1" number="351">Task wurde entfernt</Title>
+    <Title domain="1" number="352">Task hinzugefügt</Title>
+    <Title domain="1" number="353">Task wurde neu installiert</Title>
+    <Title domain="1" number="354">Restore wegen verlorener Systemdaten abgebrochen</Title>
+    <Title domain="1" number="355">Wiederherstellungsfehler</Title>
+    <Title domain="1" number="400">Anwender <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> angemeldet</Title>
+    <Title domain="1" number="401">Anwender <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> abgemeldet</Title>
+    <Title domain="1" number="420">Neue unsichere Bewegungsbahn</Title>
+    <Title domain="1" number="421">Geplante Bahn nicht abgebrochen</Title>
+    <Title domain="1" number="1020">Backup-Fehler</Title>
+    <Title domain="1" number="1021">Backup-Fehler</Title>
+    <Title domain="1" number="1022">Backup-Fehler</Title>
+    <Title domain="1" number="1023">Backup-Fehler</Title>
+    <Title domain="1" number="1024">Backup-Fehler</Title>
+    <Title domain="1" number="1025">Backup-Fehler</Title>
+    <Title domain="1" number="1026">Backup-Fehler</Title>
+    <Title domain="1" number="1027">Backup-Fehler</Title>
+    <Title domain="1" number="1028">Backup-Fehler</Title>
+    <Title domain="1" number="1029">Backup-Fehler</Title>
+    <Title domain="1" number="1030">Backup-Fehler</Title>
+    <Title domain="1" number="1031">Backup-Fehler</Title>
+    <Title domain="1" number="1032">Backup-Fehler</Title>
+    <Title domain="1" number="1033">Backup-Fehler</Title>
+    <Title domain="1" number="1034">Backup-Fehler</Title>
+    <Title domain="1" number="1035">Backup-Fehler</Title>
+    <Title domain="1" number="1036">Backup-Fehler</Title>
+    <Title domain="1" number="1037">Backup-Fehler</Title>
+    <Title domain="1" number="1038">Backup-Fehler</Title>
+    <Title domain="1" number="1039">Backup-Fehler</Title>
+    <Title domain="1" number="1040">Backup-Fehler</Title>
+    <Title domain="1" number="1041">Backup-Fehler</Title>
+    <Title domain="1" number="1042">Backup-Fehler</Title>
+    <Title domain="1" number="1043">Backup-Fehler</Title>
+    <Title domain="1" number="1044">Backup-Fehler</Title>
+    <Title domain="1" number="1045">Backup-Fehler</Title>
+    <Title domain="1" number="1120">Backup-Fehler</Title>
+    <Title domain="1" number="1121">Backup-Fehler</Title>
+    <Title domain="1" number="1122">Backup-Fehler</Title>
+    <Title domain="1" number="1123">Backup-Fehler</Title>
+    <Title domain="1" number="1124">Backup-Fehler</Title>
+    <Title domain="1" number="1125">Backup-Fehler</Title>
+    <Title domain="1" number="1126">Backup-Fehler</Title>
+    <Title domain="1" number="1127">Backup-Fehler</Title>
+    <Title domain="1" number="1128">Backup-Fehler</Title>
+    <Title domain="1" number="1129">Backup-Fehler</Title>
+    <Title domain="1" number="1130">Backup-Fehler</Title>
+    <Title domain="1" number="1131">Backup-Fehler</Title>
+    <Title domain="1" number="1132">Backup-Fehler</Title>
+    <Title domain="1" number="1133">Backup-Fehler</Title>
+    <Title domain="1" number="1134">Backup-Fehler</Title>
+    <Title domain="1" number="1135">Backup-Fehler</Title>
+    <Title domain="1" number="1136">Backup-Fehler</Title>
+    <Title domain="1" number="1137">Backup-Fehler</Title>
+    <Title domain="1" number="1138">Backup-Fehler</Title>
+    <Title domain="1" number="1139">Backup-Fehler</Title>
+    <Title domain="1" number="1140">Backup-Fehler</Title>
+    <Title domain="1" number="1220">Backup-Fehler</Title>
+    <Title domain="1" number="1221">Backup-Fehler</Title>
+    <Title domain="1" number="1222">Backup-Fehler</Title>
+    <Title domain="1" number="1223">Backup-Fehler</Title>
+    <Title domain="1" number="1224">Backup-Fehler</Title>
+    <Title domain="1" number="1225">Backup-Fehler</Title>
+    <Title domain="1" number="1226">Backup-Fehler</Title>
+    <Title domain="1" number="1227">Backup-Fehler</Title>
+    <Title domain="1" number="1228">Backup-Fehler</Title>
+    <Title domain="1" number="1229">Backup-Fehler</Title>
+    <Title domain="1" number="1230">Backup-Fehler</Title>
+    <Title domain="1" number="1231">Backup-Fehler</Title>
+    <Title domain="1" number="1232">Backup-Fehler</Title>
+    <Title domain="1" number="1233">Backup-Fehler</Title>
+    <Title domain="1" number="1234">Backup-Fehler</Title>
+    <Title domain="1" number="1235">Backup-Fehler</Title>
+    <Title domain="1" number="1236">Backup-Fehler</Title>
+    <Title domain="1" number="1237">Backup-Fehler</Title>
+    <Title domain="1" number="1238">Backup-Fehler</Title>
+    <Title domain="1" number="1239">Backup-Fehler</Title>
+    <Title domain="1" number="1240">Backup-Fehler</Title>
+    <Title domain="1" number="1260">Backup-Fehler</Title>
+    <Title domain="1" number="2020">Restore-Fehler</Title>
+    <Title domain="1" number="2021">Restore-Fehler</Title>
+    <Title domain="1" number="2022">Restore-Fehler</Title>
+    <Title domain="1" number="2023">Restore-Fehler</Title>
+    <Title domain="1" number="2024">Restore-Fehler</Title>
+    <Title domain="1" number="2025">Restore-Fehler</Title>
+    <Title domain="1" number="2026">Restore-Fehler</Title>
+    <Title domain="1" number="2027">Restore-Fehler</Title>
+    <Title domain="1" number="2028">Restore-Fehler</Title>
+    <Title domain="1" number="2029">Wiederherstellungsfehler</Title>
+    <Title domain="1" number="2030">Restore-Fehler</Title>
+    <Title domain="1" number="2031">Restore-Fehler</Title>
+    <Title domain="1" number="2032">Restore-Fehler</Title>
+    <Title domain="1" number="2033">Restore-Fehler</Title>
+    <Title domain="1" number="2034">Restore-Fehler</Title>
+    <Title domain="1" number="2035">Restore-Fehler</Title>
+    <Title domain="1" number="2036">Restore-Fehler</Title>
+    <Title domain="1" number="2037">Restore-Fehler</Title>
+    <Title domain="1" number="2038">Restore-Fehler</Title>
+    <Title domain="1" number="2039">Restore-Fehler</Title>
+    <Title domain="1" number="2040">Restore-Fehler</Title>
+    <Title domain="1" number="2120">Restore-Fehler</Title>
+    <Title domain="1" number="2121">Restore-Fehler</Title>
+    <Title domain="1" number="2122">Restore-Fehler</Title>
+    <Title domain="1" number="2123">Restore-Fehler</Title>
+    <Title domain="1" number="2124">Restore-Fehler</Title>
+    <Title domain="1" number="2125">Restore-Fehler</Title>
+    <Title domain="1" number="2126">Restore-Fehler</Title>
+    <Title domain="1" number="2127">Restore-Fehler</Title>
+    <Title domain="1" number="2128">Restore-Fehler</Title>
+    <Title domain="1" number="2129">Wiederherstellungsfehler</Title>
+    <Title domain="1" number="2130">Restore-Fehler</Title>
+    <Title domain="1" number="2131">Restore-Fehler</Title>
+    <Title domain="1" number="2132">Restore-Fehler</Title>
+    <Title domain="1" number="2133">Restore-Fehler</Title>
+    <Title domain="1" number="2134">Restore-Fehler</Title>
+    <Title domain="1" number="2135">Restore-Fehler</Title>
+    <Title domain="1" number="2136">Restore-Fehler</Title>
+    <Title domain="1" number="2137">Restore-Fehler</Title>
+    <Title domain="1" number="2138">Restore-Fehler</Title>
+    <Title domain="1" number="2139">Restore-Fehler</Title>
+    <Title domain="1" number="2140">Restore-Fehler</Title>
+    <Title domain="1" number="2220">Restore-Fehler</Title>
+    <Title domain="1" number="2221">Restore-Fehler</Title>
+    <Title domain="1" number="2222">Restore-Fehler</Title>
+    <Title domain="1" number="2223">Restore-Fehler</Title>
+    <Title domain="1" number="2224">Restore-Fehler</Title>
+    <Title domain="1" number="2225">Restore-Fehler</Title>
+    <Title domain="1" number="2226">Restore-Fehler</Title>
+    <Title domain="1" number="2227">Restore-Fehler</Title>
+    <Title domain="1" number="2228">Restore-Fehler</Title>
+    <Title domain="1" number="2229">Wiederherstellungsfehler</Title>
+    <Title domain="1" number="2230">Restore-Fehler</Title>
+    <Title domain="1" number="2231">Restore-Fehler</Title>
+    <Title domain="1" number="2232">Restore-Fehler</Title>
+    <Title domain="1" number="2233">Restore-Fehler</Title>
+    <Title domain="1" number="2234">Restore-Fehler</Title>
+    <Title domain="1" number="2235">Restore-Fehler</Title>
+    <Title domain="1" number="2236">Restore-Fehler</Title>
+    <Title domain="1" number="2237">Restore-Fehler</Title>
+    <Title domain="1" number="2238">Restore-Fehler</Title>
+    <Title domain="1" number="2239">Restore-Fehler</Title>
+    <Title domain="1" number="2240">Restore-Fehler</Title>
+    <Title domain="1" number="2320">Restore-Fehler</Title>
+    <Title domain="1" number="2321">Restore-Fehler</Title>
+    <Title domain="1" number="2322">Restore-Fehler</Title>
+    <Title domain="1" number="2323">Restore-Fehler</Title>
+    <Title domain="1" number="2324">Restore-Fehler</Title>
+    <Title domain="1" number="2325">Restore-Fehler</Title>
+    <Title domain="1" number="2326">Restore-Fehler</Title>
+    <Title domain="1" number="2327">Restore-Fehler</Title>
+    <Title domain="1" number="2328">Restore-Fehler</Title>
+    <Title domain="1" number="2329">Wiederherstellungsfehler</Title>
+    <Title domain="1" number="2330">Restore-Fehler</Title>
+    <Title domain="1" number="2331">Restore-Fehler</Title>
+    <Title domain="1" number="2332">Restore-Fehler</Title>
+    <Title domain="1" number="2333">Restore-Fehler</Title>
+    <Title domain="1" number="2334">Restore-Fehler</Title>
+    <Title domain="1" number="2335">Restore-Fehler</Title>
+    <Title domain="1" number="2336">Restore-Fehler</Title>
+    <Title domain="1" number="2337">Restore-Fehler</Title>
+    <Title domain="1" number="2338">Restore-Fehler</Title>
+    <Title domain="1" number="2339">Restore-Fehler</Title>
+    <Title domain="1" number="2340">Restore-Fehler</Title>
+    <Title domain="1" number="2510">Subnet-Maske des Netzwerks unzulässig</Title>
+    <Title domain="1" number="2511">IP-Adresse der Netzwerkschnittstelle nicht zulässig</Title>
+    <Title domain="1" number="2512">IP-Adresse des Netzwerk-Gateways nicht zulässig</Title>
+    <Title domain="1" number="2513">Keine Parameter vom DHCP-Server</Title>
+    <Title domain="1" number="2514">Initialisierungsfehler an Netzwerkschnittstelle</Title>
+    <Title domain="1" number="2610">Verfügbarer RAM-Speicher niedrig </Title>
+    <Title domain="1" number="2611">Verfügbarer RAM-Speicher sehr niedrig </Title>
+    <Title domain="1" number="2612">Verfügbarer RAM-Speicher zu niedrig </Title>
+    <Title domain="15" number="330">RAPID-Fehler im Modul</Title>
+    <Title domain="2" number="10">Not-Aus-Status</Title>
+    <Title domain="2" number="11">Not-Aus-Zustand</Title>
+    <Title domain="2" number="12">Systemfehler</Title>
+    <Title domain="2" number="25">Stop-Anweisung Timeout</Title>
+    <Title domain="2" number="30">Achse nicht kommutiert</Title>
+    <Title domain="2" number="31">Achse nicht kalibriert</Title>
+    <Title domain="2" number="32">Umdr.-Zähler nicht aktualisiert</Title>
+    <Title domain="2" number="33">Achse nicht synchronisiert</Title>
+    <Title domain="2" number="34">SMB-Speicher nicht OK</Title>
+    <Title domain="2" number="51">Befehl nicht zulässig</Title>
+    <Title domain="2" number="54">Befehl nicht zulässig</Title>
+    <Title domain="2" number="60">Befehl nicht zulässig</Title>
+    <Title domain="2" number="61">Befehl nicht zulässig</Title>
+    <Title domain="2" number="62">Befehl nicht zulässig</Title>
+    <Title domain="2" number="63">Befehl nicht zulässig</Title>
+    <Title domain="2" number="64">Befehl nicht zulässig</Title>
+    <Title domain="2" number="65">Unzulässiger Befehl</Title>
+    <Title domain="2" number="66">Unzulässiger Befehl</Title>
+    <Title domain="2" number="67">Unzulässiger Befehl</Title>
+    <Title domain="2" number="70">Befehl nicht zulässig</Title>
+    <Title domain="2" number="71">Befehl nicht zulässig</Title>
+    <Title domain="2" number="72">Befehl nicht zulässig</Title>
+    <Title domain="2" number="73">Befehl nicht zulässig</Title>
+    <Title domain="2" number="74">Befehl nicht zulässig</Title>
+    <Title domain="2" number="75">Befehl nicht zulässig</Title>
+    <Title domain="2" number="76">Befehl nicht zulässig</Title>
+    <Title domain="2" number="80">Befehl nicht zulässig</Title>
+    <Title domain="2" number="81">Befehl nicht zulässig</Title>
+    <Title domain="2" number="82">Befehl nicht zulässig</Title>
+    <Title domain="2" number="83">Befehl nicht zulässig</Title>
+    <Title domain="2" number="84">Befehl nicht zulässig</Title>
+    <Title domain="2" number="88">Automatikbetrieb abgelehnt</Title>
+    <Title domain="2" number="89">Automatikbetrieb abgelehnt</Title>
+    <Title domain="2" number="92">Befehl nicht zulässig</Title>
+    <Title domain="2" number="93">Automatikbetrieb abgelehnt</Title>
+    <Title domain="2" number="94">Lastname nicht gefunden</Title>
+    <Title domain="2" number="95">Werkzeugname nicht gefunden</Title>
+    <Title domain="2" number="96">Werkobjektname nicht gefunden</Title>
+    <Title domain="2" number="97">Schrittweise Bewegung unzulässig mit LOCAL PERS Last</Title>
+    <Title domain="2" number="98">Schrittweise Bewegung unzulässig mit LOCAL PERS Tool</Title>
+    <Title domain="2" number="99">Schrittweise Bewegung unzulässig mit LOCAL PERS Werkobjekt</Title>
+    <Title domain="2" number="101">PG-Steuerung (Programm)</Title>
+    <Title domain="2" number="103"> Steuerung mit Aktualisierung Taskauswahlfeld ausgelastet</Title>
+    <Title domain="2" number="104">Der Systempfad ist zu lang</Title>
+    <Title domain="2" number="105">Backup-Erstellung läuft bereits</Title>
+    <Title domain="2" number="106">Backup-Pfad</Title>
+    <Title domain="2" number="111">PG-Steuerung (Programm)</Title>
+    <Title domain="2" number="120">System-E/A-Steuerung</Title>
+    <Title domain="2" number="126">Lastdaten wurden geändert</Title>
+    <Title domain="2" number="127">Werkzeugdaten wurden geändert</Title>
+    <Title domain="2" number="128">Werkobjektdaten wurden geändert</Title>
+    <Title domain="2" number="130">Active Task Menu wird wiederhergestellt</Title>
+    <Title domain="2" number="131">Automatikbetrieb abgelehnt</Title>
+    <Title domain="2" number="132">Blockierte E/A-Signale</Title>
+    <Title domain="2" number="133">Debug-Einstellungen in Automatikbetrieb</Title>
+    <Title domain="2" number="134">Aufrufsequenz</Title>
+    <Title domain="2" number="135">Debug-Einstellungen in Automatikbetrieb</Title>
+    <Title domain="2" number="136">Reduzierte Geschwindigkeit</Title>
+    <Title domain="2" number="137">Debug-Einstellungen in Automatikbetrieb</Title>
+    <Title domain="2" number="138">Deaktivierte Tasks</Title>
+    <Title domain="2" number="139">Debug-Einstellungen in Automatikbetrieb</Title>
+    <Title domain="2" number="140">Motoren-EIN unzulässig</Title>
+    <Title domain="2" number="141">Motoren-AUS unzulässig</Title>
+    <Title domain="2" number="142">Start unzulässig</Title>
+    <Title domain="2" number="143">Start von "main" unzulässig</Title>
+    <Title domain="2" number="144">Stopp unzulässig</Title>
+    <Title domain="2" number="145">Stoppzyklus unzulässig</Title>
+    <Title domain="2" number="146">Manueller Interrupt abgelehnt</Title>
+    <Title domain="2" number="147">Laden und Starten unzulässig</Title>
+    <Title domain="2" number="148">Bestätigung abgelehnt</Title>
+    <Title domain="2" number="149">Rücksetzen von Fehler unzulässig</Title>
+    <Title domain="2" number="150">Ladefehler</Title>
+    <Title domain="2" number="153">Motoren Ein und Start unzulässig</Title>
+    <Title domain="2" number="154">Stopp-Instruktion unzulässig</Title>
+    <Title domain="2" number="156">Undefiniertes Argument</Title>
+    <Title domain="2" number="157">Undefiniertes Argument</Title>
+    <Title domain="2" number="158">Kein System Input Signal</Title>
+    <Title domain="2" number="159">Kein System Output Signal</Title>
+    <Title domain="2" number="161">Bahn nicht gefunden</Title>
+    <Title domain="2" number="162">Schreibfehler</Title>
+    <Title domain="2" number="164">Reconfig fehlgeschlagen</Title>
+    <Title domain="2" number="165">Programmzeiger verloren</Title>
+    <Title domain="2" number="166">Speichern des Moduls abgelehnt</Title>
+    <Title domain="2" number="167">Ungespeichertes Modul</Title>
+    <Title domain="2" number="170">Das System wurde gestoppt</Title>
+    <Title domain="2" number="171">Das System wurde angehalten</Title>
+    <Title domain="2" number="172">Systemausfall</Title>
+    <Title domain="2" number="176">Analoger Systemausgang außerhalb von Gültigkeitsbereich</Title>
+    <Title domain="2" number="177">Kurzschluss in Motorphasenkreis</Title>
+    <Title domain="2" number="178"> Falscher Taskname konfiguriert</Title>
+    <Title domain="2" number="179">Kritischer Speichermangel</Title>
+    <Title domain="2" number="181">Rücksetzen von System abgelehnt</Title>
+    <Title domain="2" number="184">Falsches Argument für Systemeingänge</Title>
+    <Title domain="2" number="185">Falscher Name</Title>
+    <Title domain="2" number="187">Diagnose-Aufzeichnungsdatei erstellt</Title>
+    <Title domain="2" number="188">Systemdaten ungültig</Title>
+    <Title domain="2" number="189">Roboterdaten ungültig</Title>
+    <Title domain="2" number="192">Speichermangel</Title>
+    <Title domain="2" number="193">Warnung - Aktualisierung der Roboterdaten</Title>
+    <Title domain="2" number="194">Systemdaten nicht gesichert</Title>
+    <Title domain="2" number="195">Systemdaten beim Abschalten verloren gegangen</Title>
+    <Title domain="2" number="196">Modul gespeichert</Title>
+    <Title domain="2" number="197">Systemdatennicht gefunden</Title>
+    <Title domain="2" number="199">Softstopp des Systems abgelehnt</Title>
+    <Title domain="2" number="200">Endlagenschalter von SC geöffnet</Title>
+    <Title domain="2" number="201">Endlagenschalter offen</Title>
+    <Title domain="2" number="202">Not-Aus offen </Title>
+    <Title domain="2" number="203">Zustimmungsschalter offen</Title>
+    <Title domain="2" number="204">Ungleichgewicht Schlüsselschalterkreise</Title>
+    <Title domain="2" number="205">Automatik-Sicherheitshalt offen</Title>
+    <Title domain="2" number="206">Allgemeiner Sicherheitshalt offen</Title>
+    <Title domain="2" number="208">Schalter im Sicherheitskreis offen </Title>
+    <Title domain="2" number="209">Externes Schütz offen</Title>
+    <Title domain="2" number="211">Zweikanal-Fehler Sicherheitskreis</Title>
+    <Title domain="2" number="212">Zwei-Kanal-Fehler, Betriebskreis</Title>
+    <Title domain="2" number="213">Zwei-Kanal-Fehler</Title>
+    <Title domain="2" number="214">Endlagenschalter offen, DRV1</Title>
+    <Title domain="2" number="215">Übergeordneter Sicherheitshalt offen</Title>
+    <Title domain="2" number="216">Zustimmungsschalter im Automatikmodus aktiv</Title>
+    <Title domain="2" number="217">Endlagenschalter offen, DRV2</Title>
+    <Title domain="2" number="218">Endlagenschalter offen, DRV3</Title>
+    <Title domain="2" number="219">Endlagenschalter offen, DRV4</Title>
+    <Title domain="2" number="220">Konflikt mit übergeordnetem Sicherheitshalt</Title>
+    <Title domain="2" number="221">Konflikt im Betriebskreis</Title>
+    <Title domain="2" number="222">Konflikt mit Endlagenschalter</Title>
+    <Title domain="2" number="223">Not-Aus-Konflikt</Title>
+    <Title domain="2" number="224">Zustimmungsschalter-Konflikt </Title>
+    <Title domain="2" number="225">Automatik-Sicherheitshalt-Konflikt</Title>
+    <Title domain="2" number="226">Allgemeiner Sicherheitshalt-Konflikt</Title>
+    <Title domain="2" number="227">Motorschützkonflikt, DRV1</Title>
+    <Title domain="2" number="231">Verzögerter Not-Aus wegen Ungleichgewicht im Schaltkreis</Title>
+    <Title domain="2" number="232">Verzögerter Autom-Sicherheitshalt wg. Ungleichgew. im Schaltkreis</Title>
+    <Title domain="2" number="233">Verzögerter allg. Sicherheitshalt wg. Ungleichgew. im Schaltkreis</Title>
+    <Title domain="2" number="234">Sofortiger Not-Aus</Title>
+    <Title domain="2" number="235">Sofortiger Automatik-Sicherheitshalt</Title>
+    <Title domain="2" number="236">Sofortiger allgemeiner Sicherheitshalt</Title>
+    <Title domain="2" number="237">Sofortiger übergeordneter Sicherheitshalt</Title>
+    <Title domain="2" number="238">Verzögerter überg. Sicherheitshalt wg. Ungleichgew. im Schaltkreis</Title>
+    <Title domain="2" number="240">Konflikt zwischen ENABLE-Signalen</Title>
+    <Title domain="2" number="241">Konflikt Betriebsart</Title>
+    <Title domain="2" number="245">Statuskonflikt Betriebssteuerung, DRV2</Title>
+    <Title domain="2" number="246">Statuskonflikt Betriebssteuerung, DRV3</Title>
+    <Title domain="2" number="247">Statuskonflikt Betriebssteuerung, DRV4</Title>
+    <Title domain="2" number="248">Motorschützkonflikt, DRV2</Title>
+    <Title domain="2" number="249">Motorschützkonflikt, DRV3</Title>
+    <Title domain="2" number="250">Motorschützkonflikt, DRV4</Title>
+    <Title domain="2" number="252">Hohe Motortemperatur, DRV1</Title>
+    <Title domain="2" number="253">Hohe Temperatur externes Gerät, DRV1</Title>
+    <Title domain="2" number="254">Hohe Motortemperatur, DRV2</Title>
+    <Title domain="2" number="255">Hohe Temperatur externes Gerät, DRV2</Title>
+    <Title domain="2" number="256">Hohe Motortemperatur, DRV3</Title>
+    <Title domain="2" number="257">Hohe Temperatur externes Gerät, DRV3</Title>
+    <Title domain="2" number="258">Hohe Motortemperatur, DRV4</Title>
+    <Title domain="2" number="259">Hohe Temperatur externes Gerät, DRV4</Title>
+    <Title domain="2" number="260">Statuskonflikt Betriebssteuerung, DRV1</Title>
+    <Title domain="2" number="262">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> nicht gefunden </Title>
+    <Title domain="2" number="263">Kommunikationsfehler bei SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="2" number="264">Option für SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> nicht vorhanden </Title>
+    <Title domain="2" number="265">SC-Softstopp-Fehler</Title>
+    <Title domain="2" number="266">PIN-Code-Anforderung für SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="2" number="267">Initialisierung bei SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> fehlgeschlagen </Title>
+    <Title domain="2" number="268">Falscher Typ der SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="2" number="269">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> Fehler in Motorkalibrierungsdaten </Title>
+    <Title domain="2" number="270">Zugriffsfehler</Title>
+    <Title domain="2" number="280">Symbolkonflikt</Title>
+    <Title domain="2" number="281">E/A-Konfigurationsfehler</Title>
+    <Title domain="2" number="282">Ressource und Index existieren</Title>
+    <Title domain="2" number="283">Textdatenbank ist voll</Title>
+    <Title domain="2" number="284">Falscher Signaltyp für Systemeingang</Title>
+    <Title domain="2" number="285">Falscher Signaltyp für Systemausgang</Title>
+    <Title domain="2" number="286">Kein eindeutiges E/A-Signal für Systemausgang</Title>
+    <Title domain="2" number="287">Kein eindeutiges E/A-Signal für System Input</Title>
+    <Title domain="2" number="288">Unbekannter Systemausgangstyp</Title>
+    <Title domain="2" number="289">Unbekannter Systemeingangstyp</Title>
+    <Title domain="2" number="290">Unbekannter Name mech. Einheit für Systemausgang</Title>
+    <Title domain="2" number="291">Unbekannter Typ von Systemeingangsbeschränkung</Title>
+    <Title domain="2" number="292">Unbekannte Systemeingangsbeschränkung</Title>
+    <Title domain="2" number="293">Die angeforderte Aktion ist begrenzt</Title>
+    <Title domain="2" number="294">Aktion <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> kann nicht ausgeführt werden.</Title>
+    <Title domain="2" number="295">Signal nicht als Systemausgang verwendbar</Title>
+    <Title domain="2" number="296">Falscher Taskname konfiguriert</Title>
+    <Title domain="2" number="297">Kommunikationsfehler am Systemausgang</Title>
+    <Title domain="2" number="298">Unbekannter Name mechanischer Einheit für Systemeingang </Title>
+    <Title domain="2" number="307">Fehlfunktion Motorlüftung Achse 1</Title>
+    <Title domain="2" number="308">Fehlfunktion Motorlüftung Achse 2</Title>
+    <Title domain="2" number="309">Fehlfunktion Motorlüftung Achse 3</Title>
+    <Title domain="2" number="310">Kommunikation mit SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> fehlgeschlagen </Title>
+    <Title domain="2" number="311">Sicherheitskreis 1 geöffnet </Title>
+    <Title domain="2" number="312">Sicherheitskreis 2 geöffnet </Title>
+    <Title domain="2" number="313">Überwachungsfehler Sicherheitskreis 1</Title>
+    <Title domain="2" number="314">Überwachungsfehler Sicherheitskreis 2</Title>
+    <Title domain="2" number="315">Überwachungsfehler Sicherheitskreis 2</Title>
+    <Title domain="2" number="316">Überwachungsfehler Sicherheitskreis 2</Title>
+    <Title domain="2" number="317">Überwachungsfehler Sicherheitskreis 2</Title>
+    <Title domain="2" number="321">Not-a-Number</Title>
+    <Title domain="2" number="322">Positiver Wertüberlauf</Title>
+    <Title domain="2" number="323">Negativer Wertüberlauf</Title>
+    <Title domain="2" number="324">Falsches Argument für System-E/A-Signal</Title>
+    <Title domain="2" number="325">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" />-Sicherheitsüberwachung nicht aktiviert</Title>
+    <Title domain="2" number="326">Falsches Argument für System-E/A-Signal</Title>
+    <Title domain="2" number="350">Ungültiger Taskname</Title>
+    <Title domain="2" number="351">Max. Anzahl an Tasks überschritten</Title>
+    <Title domain="2" number="352">Kein gültiger Name für Bewegungsplanung</Title>
+    <Title domain="2" number="353">Mechanische Einheit nicht gefunden</Title>
+    <Title domain="2" number="354">Das Argument ist undefiniert</Title>
+    <Title domain="2" number="355">Name der mech. Einheitengruppe nicht korrekt</Title>
+    <Title domain="2" number="356">Max. Anzahl an Bewegungstasks überschritten</Title>
+    <Title domain="2" number="357">Keine Bewegungstask konfiguriert</Title>
+    <Title domain="2" number="358">Keine Mitglieder von <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> konfiguriert</Title>
+    <Title domain="2" number="359">Cfg-Typ <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> ist konfiguriert</Title>
+    <Title domain="2" number="360">Unbekanntes Ereignis in cfg-Typ <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="2" number="361">Nur gemeinsam benutzte Module in gemeinsam benutzter Task</Title>
+    <Title domain="2" number="362">Kein definierter Taskname</Title>
+    <Title domain="2" number="363">Modul ist kein Systemmodul</Title>
+    <Title domain="2" number="364">Max. Anzahl mech. Einheitengruppen überschritten</Title>
+    <Title domain="2" number="365">Konfiguration wurde aktualisiert</Title>
+    <Title domain="2" number="366">Typfehler in Taskkonfiguration</Title>
+    <Title domain="2" number="367">Keine mechanischen Einheiten konfiguriert</Title>
+    <Title domain="2" number="368">Nicht verbundene mechanische Einheitengruppe</Title>
+    <Title domain="2" number="369">Verwirrende Konfiguration von Systemparametern</Title>
+    <Title domain="2" number="370">Konfigurationsdaten für Wiederanfahrbereich nicht lesbar</Title>
+    <Title domain="2" number="371">Standardmäßige mech. Einheitengruppe wird verwendet</Title>
+    <Title domain="2" number="372">Konfigurationsdaten wurden nicht geladen</Title>
+    <Title domain="2" number="380">Keine Bewegungsplanung mit mech. Einheit verbunden</Title>
+    <Title domain="2" number="381">Fehler bei Wiederherstellung der Bahn nach Stromausfall</Title>
+    <Title domain="2" number="390">Start unzulässig</Title>
+    <Title domain="2" number="391">Start bei "main" unzulässig</Title>
+    <Title domain="2" number="392">Manuelle Unterbrechung unzulässig</Title>
+    <Title domain="2" number="393">Laden und Starten unzulässig</Title>
+    <Title domain="2" number="394">Motoren EIN und Start unzulässig</Title>
+    <Title domain="2" number="395">Ladevorgang abgelehnt</Title>
+    <Title domain="2" number="396">Manueller Interrupt abgelehnt </Title>
+    <Title domain="2" number="397">Manueller Interrupt abgelehnt</Title>
+    <Title domain="2" number="398">Automatikbetrieb abgelehnt</Title>
+    <Title domain="2" number="399">STATIC-/SEMISTATIC-Task gestartet</Title>
+    <Title domain="2" number="400">Debug-Einstellungen in Automatikbetrieb</Title>
+    <Title domain="2" number="401">Zu viele CFG-Instanzen </Title>
+    <Title domain="2" number="402">Automatikbetrieb abgelehnt</Title>
+    <Title domain="2" number="403">RAPID Spy deaktiviert</Title>
+    <Title domain="2" number="404">Debug-Einstellungen in Automatikbetrieb</Title>
+    <Title domain="2" number="405">Automatikbetrieb abgelehnt</Title>
+    <Title domain="2" number="406">Profi Energy-Gerät zurückgesetzt</Title>
+    <Title domain="2" number="407">Debug-Einstellungen in Automatikbetrieb</Title>
+    <Title domain="2" number="440">FW-Upgrade-System konnte nicht initialisiert werden</Title>
+    <Title domain="2" number="441">Firmware-Patch konnte nicht initialisiert werden</Title>
+    <Title domain="2" number="443">Mehrere Firmware-Upgrade-Neustarts</Title>
+    <Title domain="2" number="444">Die SD-Speicherkarte wurde entfernt</Title>
+    <Title domain="2" number="445">Der Adapter von USB auf seriell wurde entfernt</Title>
+    <Title domain="2" number="450">CBC-Geschwindigkeit von SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> überschritten </Title>
+    <Title domain="2" number="451">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> nicht synchronisiert </Title>
+    <Title domain="2" number="452">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> synchronisiert </Title>
+    <Title domain="2" number="453">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - falsche Synch.- Position </Title>
+    <Title domain="2" number="454">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Servo Lag-Limit überschritten </Title>
+    <Title domain="2" number="455">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - falscher Positionswert </Title>
+    <Title domain="2" number="456">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Timeout für Referenzdaten </Title>
+    <Title domain="2" number="457">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> Sicherheitskonfiguration geändert </Title>
+    <Title domain="2" number="458">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - interner Fehler </Title>
+    <Title domain="2" number="459">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - E/A-Fehler </Title>
+    <Title domain="2" number="460">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Sicherheitskonfiguration nicht gefunden </Title>
+    <Title domain="2" number="461">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Roboterkonfiguration nicht gefunden </Title>
+    <Title domain="2" number="462">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Kalibrierungsoffset nicht gefunden </Title>
+    <Title domain="2" number="463">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Sicherheitskonfiguration geladen </Title>
+    <Title domain="2" number="464">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - OSR-Grenze überschritten </Title>
+    <Title domain="2" number="465">SAS-Geschwindigkeit von SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> überschritten </Title>
+    <Title domain="2" number="466">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - E/A-Fehler </Title>
+    <Title domain="2" number="467">STS-Geschwindigkeit von SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> überschritten </Title>
+    <Title domain="2" number="468">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - STZ-Überschreitung </Title>
+    <Title domain="2" number="469">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - SAR-Überschreitung </Title>
+    <Title domain="2" number="470">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Synchronisierungsvorwarnung </Title>
+    <Title domain="2" number="471">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Synchronisierungs-Timeout </Title>
+    <Title domain="2" number="472">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - neue Sicherheitskonfiguration </Title>
+    <Title domain="2" number="473">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Wertekonflikt </Title>
+    <Title domain="2" number="474">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - E/A-Versorgungsfehler </Title>
+    <Title domain="2" number="475">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Synchronisierung abgelehnt </Title>
+    <Title domain="2" number="476">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> deaktiviert </Title>
+    <Title domain="2" number="477">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - SMB-Kommunikationsfehler </Title>
+    <Title domain="2" number="478">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Fehler bei Netzstromversorgung </Title>
+    <Title domain="2" number="479">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - externe Achse fehlt </Title>
+    <Title domain="2" number="480">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> SST-Überschreitung </Title>
+    <Title domain="2" number="481">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - OVR aktiv </Title>
+    <Title domain="2" number="482">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - OVR-Timeout </Title>
+    <Title domain="2" number="483">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - CBC bald erforderlich </Title>
+    <Title domain="2" number="484">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> CBC muss durchgeführt werden </Title>
+    <Title domain="2" number="485">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Bremsdrehmoment zu gering </Title>
+    <Title domain="2" number="486">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> CBC unterbrochen oder fehlerhaft </Title>
+    <Title domain="2" number="487">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - unsynchronisierte Geschwindigkeit überschritten </Title>
+    <Title domain="2" number="488">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Zeitlimit für unsynch. Zustand abgelaufen </Title>
+    <Title domain="2" number="489">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> wurde deaktiviert </Title>
+    <Title domain="2" number="490">OVR-Geschwindigkeit von SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> überschritten </Title>
+    <Title domain="2" number="491">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Override während Start aktiv </Title>
+    <Title domain="2" number="492">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> SST-Überschreitung bei Bremsentest</Title>
+    <Title domain="2" number="493">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - SBR ausgelöst </Title>
+    <Title domain="2" number="494">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - fehlerhafter Werkzeugwechsel </Title>
+    <Title domain="2" number="501">Not-Aus-Kreis Bedienfeld offen</Title>
+    <Title domain="2" number="502">Not-Aus-Kreis FlexPendant offen</Title>
+    <Title domain="2" number="503">Not-Aus ext. Kat. 0 offen</Title>
+    <Title domain="2" number="505">Verzögerter Sicherheitshalt offen</Title>
+    <Title domain="2" number="506">Test-Halt offen</Title>
+    <Title domain="2" number="507">Hardwarekreis offen</Title>
+    <Title domain="2" number="521">Konflikt - Test-Halt</Title>
+    <Title domain="2" number="525">Konflikt Not-Aus am Bedienfeld</Title>
+    <Title domain="2" number="526">Konflikt Not-Aus am FlexPendant</Title>
+    <Title domain="2" number="527">Not-Aus ext. Kat. 0-Konflikt</Title>
+    <Title domain="2" number="528">Konflikt - HS-Eingangssignal-Verriegelung</Title>
+    <Title domain="2" number="529">Konflikt - Kabinenverriegelungs-Eingangssignal</Title>
+    <Title domain="2" number="531">Konflikt - Verzögerter-Halt</Title>
+    <Title domain="2" number="534">Konflikt - Betriebsartenwahlschalter</Title>
+    <Title domain="2" number="535">Konflikt - AUX-Verriegelung</Title>
+    <Title domain="2" number="536">Konflikt - MOTOREN-EIN-Betriebskreis</Title>
+    <Title domain="2" number="556">Sicherheitskreis 2 AXC 1 offen</Title>
+    <Title domain="2" number="557">Sicherheitskreis 2 AXC 2 offen</Title>
+    <Title domain="2" number="558">Manipulatorfehler</Title>
+    <Title domain="2" number="559">Kollisionssensor aktiv</Title>
+    <Title domain="2" number="560">Endlagenschalter an MCOB</Title>
+    <Title domain="2" number="561">MCOB-Software hat Sicherheitskreis geöffnet</Title>
+    <Title domain="2" number="562">Not-Aus-Fehler rücksetzen</Title>
+    <Title domain="2" number="563">Servo-Trennschalter offen</Title>
+    <Title domain="2" number="564">Lösen von Bremsen für Achse 1 und 7</Title>
+    <Title domain="2" number="565">Externer Sicherheitskreis 1 geöffnet</Title>
+    <Title domain="2" number="566">Externer Sicherheitskreis 2 geöffnet</Title>
+    <Title domain="2" number="567">Zu niedrige Spannung an MCOB</Title>
+    <Title domain="2" number="568">Hardwaresicherheitskreis von MCOB offen</Title>
+    <Title domain="2" number="569">Überwachungsfehler für MCOB</Title>
+    <Title domain="2" number="570">PG-Verdrahtungsfehler</Title>
+    <Title domain="2" number="571">HS-Verriegelung offen</Title>
+    <Title domain="2" number="572">Kabinenverriegelung offen</Title>
+    <Title domain="2" number="573">Steuerungs-ID fehlt</Title>
+    <Title domain="2" number="574">Prozessverriegelung offen</Title>
+    <Title domain="2" number="575">AUX-Verriegelung offen</Title>
+    <Title domain="2" number="576">Verriegelungskreis System 2 offen</Title>
+    <Title domain="2" number="577">HV ON offen</Title>
+    <Title domain="2" number="581">Keine SPI-Verbindung zu SIB</Title>
+    <Title domain="2" number="582">Keine SPI-Verbindung zu MIB</Title>
+    <Title domain="2" number="583">Überwachung von PIB-Software schlägt fehl</Title>
+    <Title domain="2" number="584">Fehler in interner SPI</Title>
+    <Title domain="2" number="585">Sicherheitskreis von IPS geöffnet</Title>
+    <Title domain="2" number="586">Überwachungsfehler für PIB-Firmware</Title>
+    <Title domain="2" number="587">Überwachungsfehler für PIB-Firmware</Title>
+    <Title domain="2" number="588">Überwachungsfehler zwischen PIB und MC</Title>
+    <Title domain="2" number="589">Überwachungsfehler zwischen PIB und MCOB</Title>
+    <Title domain="2" number="590">Maske für offenen Schaltkreis nicht gesetzt</Title>
+    <Title domain="2" number="591">Hot-Plug Timeout</Title>
+    <Title domain="2" number="592">Externer Sicherheitskreis offen</Title>
+    <Title domain="2" number="593">Zu niedrige E/A-Spannung an MCB</Title>
+    <Title domain="2" number="600">Keine offizielle RobotWare-Release</Title>
+    <Title domain="2" number="601">Zu lange Pfade beim Entpacken der RobotWare-Dateien</Title>
+    <Title domain="2" number="602">Kein offizielles RobotWare-Image</Title>
+    <Title domain="2" number="610">Kurzschluss in Motorphase</Title>
+    <Title domain="2" number="620">The system has entered an internal test mode</Title>
+    <Title domain="2" number="630">Der Kameraauftrag ist ungültig</Title>
+    <Title domain="2" number="631">Fehler bei Kommunikation mit Kamera</Title>
+    <Title domain="2" number="632">Die IP-Adresse der Kamera hat sich geändert</Title>
+    <Title domain="2" number="633">Integrated Vision nicht installiert</Title>
+    <Title domain="2" number="634">Kein Ergebnis für aktuellen Kamera-Job</Title>
+    <Title domain="2" number="635">Zu viele Kameras verbunden</Title>
+    <Title domain="2" number="636">Doppelter Kameraname</Title>
+    <Title domain="8" number="1">
+            <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+        </Title>
+    <Title domain="8" number="2">
+            <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+        </Title>
+    <Title domain="8" number="3">
+            <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+        </Title>
+</ExtractTitles>

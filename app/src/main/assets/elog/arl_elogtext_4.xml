@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="ARL" domainNo="4" lang="de" elogTextVersion="1.0" min="538" max="651">
+  <Message number="538" eDefine="SYS_ERR_ARL_SYS_TOUT">
+    <Title>Max. Wartezeit abgelaufen</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Programmierte Wartezeit ist abgelaufen.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="539" eDefine="SYS_ERR_ARL_SYS_TASK">
+    <Title>Systemzugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unzulässige Option in dieser Task.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="540" eDefine="SYS_ERR_ARL_FILEACC_NODIR">
+    <Title>Dateizugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> ist kein Verzeichnis. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>Sicherstellen, dass der Dateipfad zum Verzeichnis, das geöffnet werden soll, richtig ist.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="541" eDefine="SYS_ERR_ARL_FILEACC_DIR">
+    <Title>Dateizugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Kein Zugriff auf Verzeichnis <arg format="%s" ordinal="2" />.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>Verzeichnis prüfen, das geöffnet werden soll.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="542" eDefine="SYS_ERR_ARL_FILEACC_FS">
+    <Title>Dateizugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Kein Zugriff auf Dateisystem <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>- Pfad und Dateiname prüfen.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="543" eDefine="SYS_ERR_ARL_FILEACC_DIROPN">
+    <Title>Dateizugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> kann nicht geöffnet werden. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Causes>Es sind bereits zu viele Verzeichnisse geöffnet.</Causes>
+    <Actions>Eines der bereits geöffneten Verzeichnisse schließen.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="544" eDefine="SYS_ERR_ARL_FILEACC_DIRCRE">
+    <Title>Dateizugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Verzeichnis <arg format="%s" ordinal="2" /> konnte nicht erstellt werden. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>- Pfad prüfen.<p />- Schreib- und Ausführungserlaubnis für Verzeichnis prüfen, unter dem das neue Verzeichnis erstellt werden soll.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="545" eDefine="SYS_ERR_ARL_FILEACC_DIRREM">
+    <Title>Dateizugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Verzeichnis <arg format="%s" ordinal="2" /> konnte nicht entfernt werden. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>- Pfad prüfen.<p />- Schreib- und Ausführungserlaubnis für Verzeichnis prüfen, unter dem das Verzeichnis gelöscht werden soll.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="546" eDefine="SYS_ERR_ARL_FILEACC_FILREM">
+    <Title>Dateizugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Datei <arg format="%s" ordinal="2" /> konnte nicht entfernt werden. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>- Pfad prüfen.<p />- Prüfen, ob Schreibberechtigung für die Datei besteht.<p />- Schreib- und Ausführungserlaubnis für Verzeichnis prüfen, unter dem die Datei gelöscht werden soll.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="547" eDefine="SYS_ERR_ARL_FILEACC_FILREN">
+    <Title>Dateizugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Datei <arg format="%s" ordinal="2" /> kann nicht umbenannt werden. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>- Pfad prüfen.<p />- Prüfen, ob Schreibberechtigung für die umzubenennende Datei besteht.<p />- Schreib- und Ausführungsberechtigung für Verzeichnis prüfen, in dem sich die umzubenennende Datei befindet.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="548" eDefine="SYS_ERR_ARL_FILEACC_FILCPY">
+    <Title>Dateizugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Datei <arg format="%s" ordinal="2" /> konnte nicht kopiert werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>- Pfad prüfen.<p />- Schreibberechtigung für das Verzeichnis prüfen, in das die Datei kopiert werden soll.<p />- Verfügbaren Speicher prüfen.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="549" eDefine="SYS_ERR_ARL_SYS_UNIT">
+    <Title>Systemzugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unbekannte mechanische Einheit <arg format="%s" ordinal="2" />. <p />Die Daten vom Typ "mecunit" werden vom System nicht erkannt.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Causes>Daten vom Typ "mecunit" wurden im Programm deklariert.</Causes>
+    <Actions>Deklaration der mecunit-Daten im Programm entfernen und vordefinierte Daten vom Typ "mecunit" (automatisch vom System definiert) verwenden.</Actions>
+  </Message>
+  <Message number="555" eDefine="SYS_ERR_ARL_IOSIG_READ">
+    <Title>E/A-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />E/A-Signal nicht lesbar.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /><p /><p /></Description>
+  </Message>
+  <Message number="556" eDefine="SYS_ERR_ARL_IOSIG_WRITE">
+    <Title>E/A-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />E/A-Signal nicht schreibbar.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /><p /></Description>
+  </Message>
+  <Message number="557" eDefine="SYS_ERR_ARL_IOSIG_CONF">
+    <Title>E/A-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Konfigurationsfehler für E/A-Signal.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>E/A-Signal-Konfiguration oder Alias-Definition prüfen.<p /></Actions>
+  </Message>
+  <Message number="558" eDefine="SYS_ERR_ARL_IOSIG_RD_ATTR">
+    <Title>E/A-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />E/A-Signal <arg format="%s" ordinal="2" /> in Einheit <arg format="%s" ordinal="3" /> nicht lesbar. <p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+  </Message>
+  <Message number="559" eDefine="SYS_ERR_ARL_IOSIG_WR_ATTR">
+    <Title>E/A-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />E/A-Signal <arg format="%s" ordinal="2" /> in Einheit <arg format="%s" ordinal="3" /> nicht schreibbar. <p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+  </Message>
+  <Message number="560" eDefine="SYS_ERR_ARL_SYS_SAVE">
+    <Title>Systemzugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Programm-Modul <arg format="%s" ordinal="2" /> nicht speicherbar. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+  </Message>
+  <Message number="561" eDefine="SYS_ERR_ARL_SYS_MODULE">
+    <Title>Systemzugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> ist kein Modulname. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>Das Modul kann nicht entladen, gespeichert oder gelöscht werden.</Consequences>
+    <Actions>Name des Moduls prüfen.</Actions>
+  </Message>
+  <Message number="562" eDefine="SYS_ERR_ARL_INPAR_AXNO">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unbekannte Achsennummer für mechanische Einheit <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>Wert für Argument 'AxisNo' prüfen.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="563" eDefine="SYS_ERR_ARL_SYS_MUACT">
+    <Title>Systemzugriffsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Mechanische Einheit <arg format="%s" ordinal="2" /> ist nicht aktiv.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Mechanische Einheit aktivieren.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="564" eDefine="SYS_ERR_ARL_ORIENT_ERR">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Orientierungsdefinitionsfehler.<p />'GripLoads attach frame' in Werkzeug oder Werkobjekt (Anwender + Objekt) ist nicht normalisiert.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Orientierung prüfen. Alle verwendeten Orientierungen müssen normalisiert werden, d. h. die Summe der Quadrate der Quaternion-Elemente muss gleich 1 sein.</Actions>
+  </Message>
+  <Message number="565" eDefine="SYS_ERR_ARL_INPAR_VEL">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Beide Argumente müssen &gt; 0 sein.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>Wert des Arguments prüfen.</Actions>
+  </Message>
+  <Message number="566" eDefine="SYS_ERR_ARL_INPAR_ACC">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Alle Argumente müssen &gt; <arg format="%s" ordinal="2" /> und &lt;= <arg format="%s" ordinal="3" /> sein.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /><p /></Description>
+    <Actions>Wert der Argumente prüfen.</Actions>
+  </Message>
+  <Message number="567" eDefine="SYS_ERR_ARL_INPAR_QUAT">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Quaternionfehler.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>aom-Komponente von 'loaddata' prüfen.</Actions>
+  </Message>
+  <Message number="568" eDefine="SYS_ERR_ARL_INPAR_AXNEG">
+    <Title>Parameterfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Achse darf keinen Wert kleiner als 0 haben.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>In positiven Wert ändern.</Actions>
+  </Message>
+  <Message number="569" eDefine="SYS_ERR_ARL_ARG_ACCMAX">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument 'AccMax' setzen, wenn 'AccLim' TRUE ist.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Wert auf Argument 'AccMax' setzen.</Actions>
+  </Message>
+  <Message number="570" eDefine="SYS_ERR_ARL_ARG_DECMAX">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument 'DecelMax' setzen, wenn 'DecelLim' TRUE ist.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Wert auf Argument 'DecelMax' setzen.</Actions>
+  </Message>
+  <Message number="571" eDefine="SYS_ERR_ARL_ARG_ACCMLOW">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Wert von Parameter 'AccMax' ist zu klein.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Wert von Parameter 'AccMax' vergrößern.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="572" eDefine="SYS_ERR_ARL_ARG_DECMLOW">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Wert von Parameter 'DecelMax' ist zu klein.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Wert von Parameter 'DecelMax' vergrößern.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="573" eDefine="SYS_ERR_ARL_ARG_ACCONLOW">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Wert von Argument 'On' ist zu klein.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Wert von Argument 'On' vergrößern.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="574" eDefine="SYS_ERR_ARL_CONTSEARCH">
+    <Title>Suchwarnung</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Anzahl der Treffer bei Suchen war <arg format="%s" ordinal="2" />. <p />Vor nächstem Suchvorgang sicherstellen, dass TCP wieder an Startposition des Suchpfads zurückgesetzt wird.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Ohne Umpositionierung vor dem Neustart der zirkulären Suche können Schäden durch Bewegung entstehen.</Consequences>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="576" eDefine="SYS_ERR_ARL_PARID_ARR">
+    <Title>ParId-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Datenfeldgröße von Argument 'AxValid' ist ungleich der Achsenanzahl.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Größe des Datenfelds prüfen.</Actions>
+  </Message>
+  <Message number="577" eDefine="SYS_ERR_ARL_PARID_ROB">
+    <Title>ParId-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Funktion ParIdRobValid muss vor der Funktion ParIdPosValid ausgeführt werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>Die Funktion ParIdRobValid muss vor der Funktion ParIdPosValid ausgeführt werden.</Causes>
+    <Actions>Sicherstellen, dass die Funktion ParIdRobValid vor ParIdPosValid ausgeführt wurde.</Actions>
+  </Message>
+  <Message number="578" eDefine="SYS_ERR_ARL_PARID_PAYLD">
+    <Title>ParId-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Optionales Argument PayLoad fehlt. Zur PayLoad-Identifizierung muss das Argument angegeben werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Wert für Argument 'PayLoad' angeben.</Actions>
+  </Message>
+  <Message number="579" eDefine="SYS_ERR_ARL_PARID_NOPAYLD">
+    <Title>ParId-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Optionales Argument 'PayLoad' darf nur für Nutzlast-Identifikation verwendet werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Argument 'PayLoad' entfernen.</Actions>
+  </Message>
+  <Message number="580" eDefine="SYS_ERR_ARL_PARID_LDIINI">
+    <Title>ParId-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Falscher Status für LoadIdInit.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Vollständige ParId-Sequenz prüfen.</Actions>
+  </Message>
+  <Message number="581" eDefine="SYS_ERR_ARL_PARID_MOVSEQ">
+    <Title>ParId-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Falscher Status für ParIdMoveSeq.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Vollständige ParId-Sequenz prüfen.</Actions>
+  </Message>
+  <Message number="582" eDefine="SYS_ERR_ARL_PARID_LDIRES">
+    <Title>ParId-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Falscher Status für LoadIdInit.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Vollständige ParId-Sequenz prüfen.</Actions>
+  </Message>
+  <Message number="583" eDefine="SYS_ERR_ARL_PARID_BWD">
+    <Title>ParId-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Rückwärts-Abarbeitung unzulässig.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="584" eDefine="SYS_ERR_ARL_PARID_NXTMOV">
+    <Title>ParId-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />ParIdMoveSeq/Parameter 'NextMove':<p />Falsche Datenfeldgröße.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Größe des Datenfelds prüfen.</Actions>
+  </Message>
+  <Message number="585" eDefine="SYS_ERR_ARL_PARID_WOBFTCP">
+    <Title>ParId-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Fehlendes Argument 'WObj' in LoadId für PayLoad bei raumfestem TCP.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Argument 'WObj' hinzufügen.</Actions>
+  </Message>
+  <Message number="586" eDefine="SYS_ERR_ARL_PARID_NOWOBFTCP">
+    <Title>ParId-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unzulässiges Argument 'WObj'. Argument nur verwendbar für 'PayLoad' bei raumfestem TCP.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Actions>Argument 'WObj' entfernen.</Actions>
+  </Message>
+  <Message number="587" eDefine="SYS_ERR_ARL_PARID_MOVDAT">
+    <Title>ParId-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />ParIdMove/Parameter 'MoveData':<p />Falsche Datenfeldgröße.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Größe des Datenfelds prüfen.</Actions>
+  </Message>
+  <Message number="588" eDefine="SYS_ERR_ARL_PARID_SINDFLT">
+    <Title>ParId-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />ParIdMove/Parameter 'StartIndex':<p />Falscher StartIndex.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>StartIndex prüfen.</Actions>
+  </Message>
+  <Message number="589" eDefine="SYS_ERR_ARL_PARID_SINDNEG">
+    <Title>ParId-Fehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />ParIdMove / Parameter StartIndex: <p />Auf negativen Bewegungstyp zeigen. <p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="590" eDefine="SYS_ERR_ARL_PARID">
+    <Title>ParId-Fehler</Title>
+    <Description>
+      <arg format="%s" ordinal="1" />
+      <p />
+      <arg format="%s" ordinal="2" />
+      <p />
+    </Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="591" eDefine="SYS_ERR_ARL_PARIDTYPE">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unbekannter Typ von Parameteridentifikation.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Argument 'ParIdType' prüfen.</Actions>
+  </Message>
+  <Message number="592" eDefine="SYS_ERR_ARL_PARIDSTOP">
+    <Title>Programmstopp bei Lastidentifikation </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Bei der Lastidentifikation ist keine Art von Programmstopp zulässig.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Identifikationsprozedur erneut von Anfang an starten.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="593" eDefine="SYS_ERR_ARL_PARIDPF">
+    <Title>Netzfehler bei Lastidentifikation</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Netzfehler bei Lastidentifikation führt zu fehlerhaftem Ergebnis.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Programmabarbeitung erneut im selben Betriebsmodus (ohne Versetzen des PZ) für Lastidentifikation von Anfang an beginnen.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="594" eDefine="SYS_ERR_ARL_PARID_RAISEPP">
+    <Title>Anwenderfehler bei Lastidentifikation</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Fehler führt zum Versetzen des PZ an den Beginn der Lastidentifikationsprozedur. <p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Identifikationsprozedur erneut von Anfang an starten. <p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="595" eDefine="SYS_ERR_ARL_PARID_LOADTYPE">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unbekannter Typ von Lastidentifikation.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Argument 'LoadIdType' prüfen.</Actions>
+  </Message>
+  <Message number="596" eDefine="SYS_ERR_ARL_PARID_UNDO">
+    <Title>Programmstopp bei Lastidentifikation</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Jede Art von Programmstopp ist bei der Lastidentifikation unzulässig.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Programmabarbeitung erneut starten für Lastidentifikation ab Beginn.</Actions>
+  </Message>
+  <Message number="597" eDefine="SYS_ERR_ARL_PARID_SPEEDERR">
+    <Title>Geschwindigkeits-Override</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Geschwindigkeits-Override nicht 100 %.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>- Geschwindigkeits-Override auf 100 ändern.<p />- Programmabarbeitung für Lastidentifikation erneut ab Beginn starten.</Actions>
+  </Message>
+  <Message number="598" eDefine="SYS_ERR_ARL_PARID_PROC_STOP">
+    <Title>Programmstopp während Lastidentifikation</Title>
+    <Description>Jede Art von Programmstopp ist bei Lastidentifikationsbewegungen unzulässig.</Description>
+    <Consequences>Die Lastidentifikationssequenz kann nicht abgeschlossen werden.<p />Einige Achsen für die betreffende mechanische Einheit sind jetzt im unabhängigen Modus.</Consequences>
+    <Causes>Unterbrechung der Lastidentifikationssequenz mit Programmstopp oder Deaktivieren des Zustimmungsschalters.</Causes>
+    <Actions>1) Programm neu starten Es wird dann möglich sein, in die Ausgangsposition der Lastidentifikation zurückzukehren. Dann kann die Bewegungssequenz neu gestartet werden. <p />2) Serviceroutine kann auch abgebrochen werden, um die Lastidentifikation komplett zu überspringen.</Actions>
+  </Message>
+  <Message number="599" eDefine="SYS_ERR_ARL_PARID_DATA_LOGGER_ERROR">
+    <Title>Programmstopp während Lastidentifikation</Title>
+    <Description>Jede Art von Programmstopp ist bei Lastidentifikationsbewegungen unzulässig.</Description>
+    <Consequences>Die Lastidentifikationssequenz kann nicht abgeschlossen werden.<p />Einige Achsen für die betreffende mechanische Einheit sind jetzt im unabhängigen Modus. </Consequences>
+    <Causes>Ein Programmstopp hat Messfehler verursacht. Dies wurde erkannt, als die Lastidentifikationsbewegungen neu gestartet wurden. </Causes>
+    <Actions>1) Programm neu starten Es wird dann möglich sein, in die Ausgangsposition der Lastidentifikation zurückzukehren. Dann kann die Bewegungssequenz neu gestartet werden. <p />2) Serviceroutine kann auch abgebrochen werden, um die Lastidentifikation komplett zu überspringen. </Actions>
+  </Message>
+  <Message number="603" eDefine="SYS_ERR_ARL_ARG_NEG">
+    <Title>Argumentfehler</Title>
+    <Description>Argument <arg format="%s" ordinal="1" /> darf keinen negativen Wert haben.<p /></Description>
+    <Actions>Argument <arg format="%s" ordinal="2" /> auf positiven Wert setzen.</Actions>
+  </Message>
+  <Message number="607" eDefine="SYS_ERR_ARL_CIRC_NEWMOD">
+    <Title>Abarbeitungsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Abarbeitungsmodus von Vorwärts nach Rückwärts oder umgekehrt bei kreisförmiger Bewegung nicht zulässig.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Wenn möglich, ursprünglichen Modus wählen und Start drücken, um<p />unterbrochene kreisförmige Bewegung fortzusetzen. Wenn nicht möglich, Roboter und Programmzeiger für neuen Start bewegen.</Actions>
+  </Message>
+  <Message number="608" eDefine="SYS_ERR_ARL_ORI_ERR">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Orientierungdefinitionsfehler in <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Alle verwendeten Orientierungen müssen normalisiert werden, d. h. die Summe der Quadrate der Quaternion-Elemente muss gleich 1 sein.</Actions>
+  </Message>
+  <Message number="609" eDefine="SYS_ERR_ARL_MEC_LONG">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument '\WObj' gibt eine mechanische Einheit mit zu langem Namen an.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Max. 16 Zeichen für den Namen einer mechanischen, koordinierten Einheit verwenden.</Actions>
+  </Message>
+  <Message number="611" eDefine="SYS_ERR_ARL_BWD_TOOLWOBJ">
+    <Title>Abarbeitungsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Rückwärts-Abarbeitung mit dieser Bewegungsinstruktion nicht möglich.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>Rückwärtsbewegung zu einer Position, die mit anderem Werkzeug oder Werkobjekt definiert wurde, kann zu falschem Bahnverlauf führen.<p /></Consequences>
+    <Actions>Werkzeug und Werkobjekt prüfen.</Actions>
+  </Message>
+  <Message number="612" eDefine="SYS_ERR_ARL_NO_IOARG">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Kein Argument für den Namen des Ausgangssignals programmiert.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Bei der Roboterbewegung kann ein raumfester Ausgang gesetzt werden, z. B. digitaler Ausgang, Gruppe von digitalen oder analogen Ausgangssignalen.</Actions>
+  </Message>
+  <Message number="613" eDefine="SYS_ERR_ARL_IOARG_COMB">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Optionales Argument <arg format="%s" ordinal="2" /> kann nur mit Ausgangssignal-Argument <arg format="%s" ordinal="3" /> kombiniert werden. <p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Argumente prüfen und ändern.</Actions>
+  </Message>
+  <Message number="614" eDefine="SYS_ERR_ARL_DO_LIM">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> ist nicht 0 oder 1.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Digitale Signale können nur auf 0 oder 1 gesetzt werden.</Actions>
+  </Message>
+  <Message number="615" eDefine="SYS_ERR_ARL_GO_NOTINT">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> ist kein Integer-Wert.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Digitale Gruppe von Ein-/Ausgangssignalen, Prozessidentität oder Prozess-Auswahl kann nur einen Integer-Wert haben.</Actions>
+  </Message>
+  <Message number="616" eDefine="SYS_ERR_ARL_GO_LIM">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> liegt außerhalb des zulässigen Bereichs. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Benutzte Gruppe von digitalen Ein-/Ausgangssignalen kann abhängig von der Konfiguration in den Systemparametern nur im Bereich 0 bis <arg format="%s" ordinal="4" /> gesetzt werden. <p />Fehlerbehebung: <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="617" eDefine="SYS_ERR_ARL_AO_LIM">
+    <Title>Argumentfehler</Title>
+    <Description>Task <arg format="%s" ordinal="1" />: <p />Eines der Argumente SetValue, SetDvalue, CheckValue oder CheckDvalue liegt außerhalb des zulässigen Bereichs. <p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>Das analoge Signal kann abhängig von der Konfiguration in den E/A-Systemparametern nur im Bereich <arg format="%s" ordinal="3" /> und <arg format="%s" ordinal="4" /> gesetzt/geprüft werden. </Causes>
+    <Actions>RAPID-Programm oder E/A-Konfiguration prüfen.<p />Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="620" eDefine="SYS_ERR_ARL_ARG_TOLNEG">
+    <Title>Argumentfehler </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> hat zu großen negativen Wert.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Argument <arg format="%s" ordinal="4" /> auf <arg format="%s" ordinal="5" /> oder mehr setzen.</Actions>
+  </Message>
+  <Message number="622" eDefine="SYS_ERR_ARL_LOW_CYC">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Wert von Argument Time ist zu klein für zyklische Interrupts.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Wert für Time auf einen Wert größer oder gleich 0,1 s einstellen.</Actions>
+  </Message>
+  <Message number="623" eDefine="SYS_ERR_ARL_LOW_SING">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Wert von Argument Time ist zu klein für einzelne Interrupts.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Wert für Time auf einen Wert größer oder gleich 0,01 s einstellen.</Actions>
+  </Message>
+  <Message number="624" eDefine="SYS_ERR_ARL_DO_LIM2">
+    <Title>Argumentfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> ist nicht zwischen 0 und 2.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Flanke zur Erzeugung des Interrupts angeben.<p />0 = Negative Flanke (high -&gt; low).<p />1 = Positive Flanke (low -&gt; high).<p />2 = Negative und positive Flanke.</Actions>
+  </Message>
+  <Message number="625" eDefine="SYS_ERR_ARL_ROB_LIMIT">
+    <Title>Begrenzungsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Roboter außerhalb seiner Grenzen.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>- Achse außerhalb des Arbeitsbereichs.<p />- Grenzen für mindestens eine gekoppelte Achse überschritten.</Causes>
+    <Actions>Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="631" eDefine="SYS_ERR_ARL_CONC_BASE">
+    <Title>Instruktionsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Zu viele Bewegungsinstruktionen nacheinander mit gleichzeitiger RAPID-Programmabarbeitung. <p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Programm auf der Basis-Abarbeitungsebene des Programms<p />auf max. 5 MoveX \Conc in Folge ändern.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /><p /></Actions>
+  </Message>
+  <Message number="632" eDefine="SYS_ERR_ARL_CONC_TRAP">
+    <Title>Instruktionsfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Im StorePath-RestoPath-Bereich des Programms sind keine Bewegungsinstruktionen mit gleichzeitiger RAPID-Programmabarbeitung zulässig.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Programm so ändern, dass es im Bereich StorePath-RestoPath keine MoveX\Conc-Instruktionen enthält.</Actions>
+  </Message>
+  <Message number="634" eDefine="SYS_ERR_ARL_SIG_UNDEF">
+    <Title>Referenfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Signal <arg format="%s" ordinal="2" /> ist im System unbekannt.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>Wenn das Signal im RAPID-Programm definiert ist, muss es mit der Instruktion AliasIO mit dem konfigurierten Signal verbunden werden.<p /></Causes>
+    <Actions>Alle Signale (außer AliasIO-Signale) müssen in den Systemparametern definiert sein und dürfen nicht im RAPID-Programm definiert werden. <p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="636" eDefine="SYS_ERR_ARL_SEN_NO_MEAS">
+    <Title>Sensorfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Keine Messung vom Sensor.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Angeforderte Daten nicht verfügbar.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /><p /></Actions>
+  </Message>
+  <Message number="637" eDefine="SYS_ERR_ARL_SEN_NOREADY">
+    <Title>Sensorfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Noch nicht bereit.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Angeforderte Funktion ist noch nicht bereit.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="638" eDefine="SYS_ERR_ARL_SEN_GENERRO">
+    <Title>Sensorfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Allgemeiner Fehler.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Allgemeiner Fehler, der nicht speziell mit der angeforderten Aktion zusammenhängt. Block "Error log" lesen, wenn die Funktion verfügbar ist.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="639" eDefine="SYS_ERR_ARL_SEN_BUSY">
+    <Title>Sensorfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Sensor belegt, später wiederholen.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Sensor ist durch andere Funktion belegt.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="640" eDefine="SYS_ERR_ARL_SEN_UNKNOWN">
+    <Title>Sensorfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unbekannter Befehl.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Vom Sensor angeforderte Funktion ist unbekannt.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="641" eDefine="SYS_ERR_ARL_SEN_ILLEGAL">
+    <Title>Sensorfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unzulässige Variable oder Blocknummer.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Angeforderte Variable oder Block nicht im Sensor definiert.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="642" eDefine="SYS_ERR_ARL_SEN_EXALARM">
+    <Title>Sensorfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Externer Alarm.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Alarm von externer Ausrüstung.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="643" eDefine="SYS_ERR_ARL_SEN_CAALARM">
+    <Title>Sensorfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Kamera-Alarm.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Fehler in der Kamera wurde erkannt. Kameratest durchführen, um zu prüfen, ob die Kamera OK ist.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="644" eDefine="SYS_ERR_ARL_SEN_TEMP">
+    <Title>Sensorfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Temperatur-Alarm.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Kamera ist überhitzt und braucht mehr Kühlluft oder -wasser.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="645" eDefine="SYS_ERR_ARL_SEN_VALUE">
+    <Title>Sensorfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Wert außerhalb des zulässigen Bereichs.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Wert der an den Sensor geschickten Daten liegt außerhalb des gültigen Bereichs.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="646" eDefine="SYS_ERR_ARL_SEN_CAMCHECK">
+    <Title>Sensorfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Kameraprüfung fehlgeschlagen.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Die CAMCHECK-Funktion ist fehlgeschlagen. Kamera ist beschädigt. Kamera zur Reparatur einsenden.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="647" eDefine="SYS_ERR_ARL_SEN_TIMEOUT">
+    <Title>Sensorfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Kommunikations-Timeout.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Timeout-Zeit erhöhen und Verbindungen zum Sensor prüfen.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="648" eDefine="SYS_ERR_ARL_TRAP_SEARCH">
+    <Title>Suchfehler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Ausführen von StorePath während aktiver Suchfunktion auf Bewegungsbahn nicht zulässig. <p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>Programm ist gestoppt.</Consequences>
+    <Causes>Ausführen der Instruktion StorePath während aktiver Suchfunktion.</Causes>
+    <Actions>StorePath kann in TRAP-, Ereignis- oder Serviceroutine nicht verwendet werden, während Suchfunktion auf Bewegungsbahn aktiv ist.<p />Wenn im Programm Interrupts für TRAP-Routinen verwendet werden, muss der Interrupt während einer Suche deaktiviert werden. <p />Beispiel: ISleep - SearchL - IWatch </Actions>
+  </Message>
+  <Message number="649" eDefine="SYS_ERR_ARL_PATH_LIMIT">
+    <Title>Bahnbegrenzung</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> ist bereits ausgeführt. Instruktion <arg format="%s" ordinal="4" /> muss zuerst ausgeführt werden, bevor eine neue <arg format="%s" ordinal="5" /> möglich ist.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>RAPID-Programm prüfen.</Actions>
+  </Message>
+  <Message number="650" eDefine="SYS_ERR_ARL_PAR_COMB">
+    <Title>Falsche Kombination an Parametern</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Optionale Parameter und Schalter werden nicht in korrekter Kombination benutzt.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>- Keine optionalen Parameter und kein Schalter behalten das alte Koordinatensystem.<p />- Der Schalter 'Old' hat dieselbe Funktion.<p />- RefPos oder RefNum muss mit Short, Fwd oder Bwd definiert werden.</Actions>
+  </Message>
+  <Message number="651" eDefine="SYS_ERR_ARL_NUM_INPUT">
+    <Title>Numerische Eingabe verwenden</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Anstelle von robtarget die numerische Eingabe für die Position verwenden. <p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Die Position der Roboterachsen kann mit robtarget nicht definiert werden. <p />Optionalen Parameter für die numerische Eingabe der Position verwenden. </Actions>
+  </Message>
+</Domain>

@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="HW" domainNo="3" lang="de" elogTextVersion="1.0" min="4251" max="7082">
+  <Message number="4251" eDefine="SYS_ERR_HW_REC_MAINS_PHASE_MISSING_WARNING">
+    <Title>Eingangsstromphase fehlt</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> hat das Gleichrichter-Modul in der Antriebseinheit bei Einheitsposition <arg format="%d" ordinal="2" /> einen Leistungsverlust in einer Phase erkannt. </Description>
+    <Consequences>Das System wird eventuell mit zu geringer Gleichrichterspannung stoppen.</Consequences>
+    <Causes>1) Verlust einer Phase der Netzspannung. <p />2) Fehlfunktion in Verkabelung oder internen 3-Phasen-Komponenten. <p />3) Gegebenenfalls fehlerhaften Gleichrichter austauschen.</Causes>
+    <Actions>1) Prüfen aller eingehenden Phasen zum Schaltschrank. <p />2) Prüfen aller internen 3-Phasen-Komponenten (Netzschalter, Netzfilter, Sicherungen, Schütz) und Verkabelung im Antriebsmodul. </Actions>
+  </Message>
+  <Message number="4252" eDefine="SYS_ERR_HW_REC_NO_INCOMMING_MAINS_ERROR">
+    <Title>Netzspannungt fehlt</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> hat das Gleichrichter-Modul in der Antriebseinheit bei Einheitsposition <arg format="%d" ordinal="2" /> den Verlust einer Phase der Netzspannung erkannt. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System hat in den ZUstand Motoren-AUS gewechselt.</Consequences>
+    <Causes>1) Ausfall der eingehenden Netzspannung <p />2) Fehlfunktion in der Verkabelung oder in internen 3-Phasen-Komponenten. <p />3) Gegebenenfalls fehlerhaften Gleichrichter austauschen.</Causes>
+    <Actions>1) Überprüfen der eingehenden Netzspannung. <p />2) Prüfen aller internen 3-Phasen-Komponenten (Netzschalter, Netzfilter, Sicherungen, Schütz) und Verkabelung im Antriebsmodul. <p /></Actions>
+  </Message>
+  <Message number="4255" eDefine="SYS_ERR_HW_REC_TEMP_ERROR">
+    <Title>Fehler Gleichrichtertemperatur</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> hat das Gleichrichter-Modul in der Antriebseinheit bei Einheitsposition <arg format="%d" ordinal="2" /> einen zu hohen Temperaturwert erreicht. </Description>
+    <Consequences>Bis sich der Gleichrichter abgekühlt hat, ist keine Operation möglich. Das System hat in den Zustand Motoren-AUS gewechselt.</Consequences>
+    <Causes>1) Die Kühlungslüfter könnten defekt sein oder der Luftstrom ist behindert. <p />2) Umgebungstemperatur eventuell zu hoch. <p />3) Das System läuft unter Umständen über einen zu langen Zeitraum mit zu hohem Drehmoment.</Causes>
+    <Actions>1) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. <p />2) Prüfen, ob die Umgebungstemperatur nicht die Temperaturklassifizierung des Schrankes überschreitet. <p />3) Falls möglich, Anwenderprogramm umschreiben, um den Umfang an starker Beschleunigung und starker Abbremsung zu reduzieren. <p />4) Reduzierung des statischen Drehmoments aufgrund von Gravitation oder externer Kräfte. </Actions>
+  </Message>
+  <Message number="4256" eDefine="SYS_ERR_HW_REC_TEMP_WARNING">
+    <Title>Warnung Gleichrichtertemperatur</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> nähert sich das Gleichrichter-Modul in der Antriebseinheit bei Einheitsposition <arg format="%d" ordinal="2" /> einem zu hohen Temperaturwert. </Description>
+    <Consequences>Es ist möglich weiter fortzufahren, aber die erlaubte Temperaturtoleranz ist für eine Fortführung des Betriebs zu niedrig.</Consequences>
+    <Causes>1) Die Kühlungslüfter könnten defekt sein oder der Luftstrom ist behindert. <p />2) Umgebungstemperatur eventuell zu hoch. <p />3) Das System läuft unter Umständen über einen zu langen Zeitraum mit zu hohem Drehmoment.</Causes>
+    <Actions>1) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. <p />2) Prüfen, ob die Umgebungstemperatur nicht die Temperaturklassifizierung des Schrankes überschreitet. <p />3) Falls möglich, Anwenderprogramm umschreiben, um den Umfang an starker Beschleunigung und starker Abbremsung zu reduzieren. <p />4) Reduzierung des statischen Drehmoments aufgrund von Gravitation oder externer Kräfte. </Actions>
+  </Message>
+  <Message number="4257" eDefine="SYS_ERR_HW_REC_BLEEDER_OPEN_ERROR">
+    <Title>Offener Schaltkreis im Entladewiderstand-Schaltkreis</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> hat der mit dem Gleichrichter-Modul in der Antriebseinheit bei Einheitsposition <arg format="%d" ordinal="2" /> verbundene Entladewiderstand einen zu hohen Widerstand (offener Schaltkreis). </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System hat in den Zustand Motoren-AUS gewechselt. <p /><p />ACHTUNG HOCHSPANNUNG: BEIM AUSSCHALTEN DES SYSTEMS WIRD DER GLEICHRICHTER NICHT ENTLADEN.<p /></Consequences>
+    <Causes>Mögliche Ursache: defektes Entladewiderstandskabel oder defekter Entladewiderstand.</Causes>
+    <Actions>WARNUNG: ES IST EVENTUELL HOCHSPANNUNG VORHANDEN.<p />1) Sicherstellen, dass das Entlladewiderstandskabel korrekt mit der Gleichrichtereinheit verbunden ist. <p />2) Den Entladewiderstand trennen, das Kabel prüfen und den Widerstand messen. Der zu erwartende Widerstand sollte etwa <arg format="%d" ordinal="3" /> Ohm betragen. </Actions>
+  </Message>
+  <Message number="4258" eDefine="SYS_ERR_HW_REC_BLEEDER_SHORT_ERROR">
+    <Title>Kurzschluss im Schaltkreis des Entladewiderstandes</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> weist der mit dem Gleichrichter-Modul in der Antriebseinheit bei Einheitsposition <arg format="%d" ordinal="2" /> verbundene Entladewiderstand auf einen Kurzschluss hin. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System hat in den Zustand Motoren-AUS gewechselt.<p /><p />ACHTUNG HOCHSPANNUNG: BEIM AUSSCHALTEN DES SYSTEMS WIRD DER GLEICHRICHTER NICHT ENTLADEN.<p /></Consequences>
+    <Causes>Mögliche Ursache: defektes Entladewiderstandskabel oder defekter Entladewiderstand.</Causes>
+    <Actions>WARNUNG: ES IST EVENTUELL HOCHSPANNUNG VORHANDEN.<p />1) Sicherstellen, dass das Entladewiderstandskabel korrekt mit der Gleichrichtereinheit verbunden ist. <p />2) Den Entladewiderstand trennen, das Kabel prüfen und den Widerstand messen. Der zu erwartende Widerstand sollte etwa <arg format="%d" ordinal="3" /> Ohm betragen. <p />3) Prüfen des Entladewiderstands auf Kurzschluss gegen Masse. </Actions>
+  </Message>
+  <Message number="4261" eDefine="SYS_ERR_HW_REC_INRUSH_RELAY_ERROR">
+    <Title>Gleichrichter Startfehler</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> zeigt das Eingangsstrom-Steuerungsrelais im Gleichrichter-Modul in der Antriebseinheit bei Einheitsposition <arg format="%d" ordinal="2" /> einen Fehler an. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System hat in den Zustand Motoren-AUS gewechselt.</Consequences>
+    <Causes>Mögliche Ursache: Fehlerhaftes Steuerungsrelais des Gleichrichter-Einschaltstroms.</Causes>
+    <Actions>System neu starten und erneut versuchen. Bleibt das Problem weiter bestehen, Einheit ersetzen.</Actions>
+  </Message>
+  <Message number="4262" eDefine="SYS_ERR_HW_REC_AC_FREQUENCY_WARNING">
+    <Title>Frequenzwarnung bei eingehender Netzspannung</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> hat die eingehende Netzspannung eine falsche Frequenz. Das Gleichrichter-Modul in der Antriebseinheit bei Einheitsposition <arg format="%d" ordinal="2" /> hat das Problem gemeldet. </Description>
+    <Consequences>Das System wird eventuell mit zu geringer Gleichrichterspannung stoppen.</Consequences>
+    <Causes>1) Die eingehende Netzfrequenz liegt außerhalb der Spezifikationen. <p />2) Kurzschluss zwischen Motorphasen oder Masse.</Causes>
+    <Actions>1) Prüfen und Einstellen der Netzfrequenz. <p />2) Kabel und Motor durch Messen ihres Widerstands prüfen. Verbindung vor dem Messen trennen.</Actions>
+  </Message>
+  <Message number="4263" eDefine="SYS_ERR_HW_REC_INRUSH_RESISTOR_OPEN_ERROR">
+    <Title>Gleichrichter Startfehler</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> hat der Gleichrichter im Gleichrichter-Modul bei Einheitsposition <arg format="%d" ordinal="2" /> zu niedrige Spannung. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist kein Betrieb möglich. Das System hat in den Zustand „Motoren-Aus" gewechselt.</Consequences>
+    <Causes>1) Niedrige Wechselspannung am Eingang des Gleichrichters. <p />2) Möglicherweise fehlerhafter Einschaltstrom-Steuerwiderstand des Gleichrichter. <p />3) Ein Kurzschluss ist auf dem Gleichstromanschluss vorhanden.</Causes>
+    <Actions>1) System neu starten und erneut versuchen. <p />2) Eingangsnetzspannung prüfen.<p />3) Alle internen 3-Phasen-Bauteile (Hauptschalter, Netzfilter, Sicherung, Schütze) und Verkabelung im Antriebsmodul überprüfen. <p />4) Bei neu installiertem System mit Netztransformator – Auswahl der Transformatorspannung prüfen.<p />5) Bei Antriebseinheit mit zusätzlichen Achsen – Verkabelung des Gleichstromanschlusses prüfen.<p />6) Einheit austauschen, wenn das Problem weiterhin besteht.</Actions>
+  </Message>
+  <Message number="4264" eDefine="SYS_ERR_HW_REC_INRUSH_ACTIVE_ERROR">
+    <Title>Gleichrichter Einschaltstrombegrenzung aktiv bei Motoren Ein</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> ist der Eingangsstrom-Steuerungswiderstand im Gleichrichter-Modul in der Antriebseinheit bei Einheitsposition <arg format="%d" ordinal="2" /> fehlerhaft aktiviert. </Description>
+    <Consequences>Das System wechselt in den Zustand Motoren-AUS, um die Hardware zu schützen.</Consequences>
+    <Causes>Dieser Fehler tritt auf, sobald die Gleichrichterspannung zu niedrig wird und alle Netzphasen fehlen.</Causes>
+    <Actions>1) Hardware-Ereignisprotokoll auf andere Fehlermeldungen überprüfen.<p />2) Netzpannung prüfen.<p />3) Prüfen, ob auf dem Transformer mit den Jumpern die korrekte Spannung ausgewählt ist (optional).<p />4) Prüfen aller internen 3-Phasen-Komponenten (Netzschalter, Netzfilter, Sicherungen, Schütz) und Verkabelung im Antriebsmodul. </Actions>
+  </Message>
+  <Message number="4265" eDefine="SYS_ERR_HW_REC_DC_LINK_SHORT_CIRCUIT_ERROR">
+    <Title>Gleichrichter Kurzschlussfehler</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> hat der Gleichrichter im Gleichrichter-Modul in der Antriebseinheit bei Einheitsposition <arg format="%d" ordinal="2" /> einen Kurzschluss. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System hat in den Zustand Motoren-AUS gewechselt.</Consequences>
+    <Causes>1) Gleichrichterkabel für einen zusätzlichen Antrieb ist beschädigt oder falsch angeschlossen. <p />2) Interner Fehler in Gleichrichter-Modul oder Antriebseinheit.</Causes>
+    <Actions>Gleichrichterkabel und -anschlüsse prüfen.</Actions>
+  </Message>
+  <Message number="4266" eDefine="SYS_ERR_HW_REC_INRUSH_AND_BLEEDER_ACTIVE_ERROR">
+    <Title>Gleichrichter Einschaltstrombegrenzung und Entladung aktiv</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" />, mit Gleichrichter-Modul in der Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="2" />, ist der Eingangsstrom-Steuerungswiderstand gleichzeitig aktiv mit dem Entladewiderstand. <p />Der Eingangsstrom-Steuerungswiderstand ist im Gleichrichter-Modul der Antriebseinheit integriert.<p />Der Entladewiderstand ist mit dem Gleichrichter-Modul oder der Antriebseinheit mit eingebautem Gleichrichter verbunden. </Description>
+    <Consequences>Das System wechselt in den Zustand Motoren-Aus, um die Hardware zu schützen.</Consequences>
+    <Causes>Dieses Problem tritt wahrscheinlich dann auf, wenn die eingehende Netzspannung für den Gleichrichter zu hoch ist.</Causes>
+    <Actions>1) Prüfen, ob die Netzspannung den Spezifikationen für die Antriebseinheit entspricht.<p />2) Prüfen, ob auf dem Transformer mit den Jumpern die korrekte Spannung ausgewählt ist (optional).</Actions>
+  </Message>
+  <Message number="4267" eDefine="SYS_ERR_HW_REC_TOO_MANY_RECTIFIERS_CONNECTED">
+    <Title>Zu viele Gleichrichter angeschlossen</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> hat das System mehr Gleichrichter erkannt als es handhaben kann. Die Grenze wurde erreicht, als die Antriebseinheit an Einheitenposition <arg format="%d" ordinal="2" /> erkannt wurde. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System hat in den Zustand Systemfehler gewechselt.</Consequences>
+    <Causes>1) Zu viele mit Gleichrichtern ausgestattete Antriebseinheiten sind angeschlossen.</Causes>
+    <Actions>1) Sicherstellen, dass die korrekten Antriebseinheitstypen an das Kommunikationskabel der Antriebseinheit angeschlossen sind. <p />2) Unbenutzte Antriebseinheit(en) trennen. </Actions>
+  </Message>
+  <Message number="4268" eDefine="SYS_ERR_HW_REC_RECTIFIER_CHARGING_ERROR">
+    <Title>Fehler beim Laden des Gleichrichters</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> hat der Gleichrichter im Gleichrichter-Modul bei Einheitenposition <arg format="%d" ordinal="2" /> zu niedrige Spannung. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Betrieb möglich. Das System hat in den Zustand Motoren-AUS gewechselt.</Consequences>
+    <Causes>1) Niedrige Wechselspannung am Gleichrichter-Eingang. <p />2) Mögliche Ursache: fehlerhafter Entladewiderstand des Gleichrichters. <p />3) Ein Entladewiderstand oder seine Verkabelung ist fehlerhaft.<p />4) Kurzschluss im Gleichrichter. </Causes>
+    <Actions>1) System neu starten und erneut versuchen. <p />2) Netzspannung prüfen.<p />3) Bei neu installiertem System mit Netztransformator - Auswahl der Transformatorspannung prüfen.<p />4) Entladewiderstand und seine Verkabelung prüfen.<p />5) Einheit austauschen, wenn das Problem weiterhin besteht.</Actions>
+  </Message>
+  <Message number="4300" eDefine="SYS_ERR_HW_INV_UNKNOWN_DSQC_NUMBER">
+    <Title>Antriebseinheitentyp unbekannt</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> besitzt die Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="2" /> eine unbekannte Hardware-Identität <arg format="%s" ordinal="3" />. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System hat in den Systemfehler-Status gewechselt.</Consequences>
+    <Causes>Die Antriebseinheit wird entweder nicht unterstützt oder ist fehlerhaft.</Causes>
+    <Actions>1) Prüfen, ob die Antriebseinheit von der RobotWare-Version unterstützt wird. Gegebenenfalls RobotWare aktualisieren.<p />2) Antriebseinheit ersetzen. </Actions>
+  </Message>
+  <Message number="4303" eDefine="SYS_ERR_HW_INV_IQ_REGULATION_WARNING">
+    <Title>Warnung Motorstrom</Title>
+    <Description>Für Achse <arg format="%s" ordinal="2" /> hat die Stromsteuerung eine zu hohe Drehmoment-Stromabweichung für den Motor erkannt. Die Achse ist verbunden mit Antriebsmodul <arg format="%d" ordinal="1" /> in der Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="3" /> und Knoten <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>Betrieb ist möglich, aber das System befindet sich nahe einem Anhaltefehler.</Consequences>
+    <Causes>1) Die Motordaten in den Konfigurationsdateien sind eventuell falsch<p />2) Die Motorkabel sind nicht richtig angeschlossen oder beschädigt. <p />3) Kurzschluss im Motorkabel zwischen Phase-Phase oder Phase-Masse. <p />4) Die Gleichrichterspannung ist eventuell zu niedrig.<p />5) Die eingehende Netzspannung liegt außerhalb der Spezifikationen.</Causes>
+    <Actions>1) Sicherstellen, dass die Motordaten in der Konfigurationsdatei für diese Achse korrekt sind. Weitere Informationen zur Überprüfung der Konfigurationsdatei finden Sie im Handbuch zur Fehlerbehebung. <p />2) Prüfen, ob Motorkabel beschädigt oder nicht richtig angeschlossen sind. <p />3) Sicherstellen, dass intern oder zur Masse kein Kurzschluss in den Motorkabeln vorliegt. <p />4) Sicherstellen, dass das Ereignisprotokoll keine Gleichrichter-Fehler enthält. <p />5) Prüfen, ob die Netzspannung den Spezifikationen entspricht</Actions>
+  </Message>
+  <Message number="4304" eDefine="SYS_ERR_HW_INV_ID_REGULATION_WARNING">
+    <Title>Warnung Motorstrom</Title>
+    <Description>Für Achse <arg format="%s" ordinal="2" /> hat die Stromsteuerung eine zu hohe Stromabweichung für den Motor erkannt. Die Achse ist verbunden mit Antriebsmodul <arg format="%d" ordinal="1" /> in der Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="3" /> und Knoten <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>Betrieb ist möglich, aber das System befindet sich nahe einem Anhaltefehler.</Consequences>
+    <Causes>1) Die Motordaten in den Konfigurationsdateien sind eventuell falsch<p />2) Die Motorkabel sind nicht richtig angeschlossen oder beschädigt. <p />3) Kurzschluss im Motorkabel zwischen Phase-Phase oder Phase-Masse.<p />4) Die Gleichrichterspannung ist eventuell zu niedrig.<p />5) Die eingehende Netzspannung liegt außerhalb der Spezifikationen.</Causes>
+    <Actions>1) Sicherstellen, dass die Motordaten in der Konfigurationsdatei für diese Achse korrekt sind. Weitere Informationen zur Überprüfung der Konfigurationsdatei finden Sie im Handbuch zur Fehlerbehebung. <p />2) Prüfen, ob die Motorkabel beschädigt oder nicht richtig angeschlossen sind.<p />3) Sicherstellen, dass intern oder zur Masse kein Kurzschluss in den Motorkabeln vorliegt. <p />4) Sicherstellen, dass das Ereignisprotokoll keine Gleichrichter-Fehler enthält. <p />5) Prüfen, ob die Netzspannung den Spezifikationen entspricht. </Actions>
+  </Message>
+  <Message number="4306" eDefine="SYS_ERR_HW_INV_OVER_TEMP_ERROR">
+    <Title>Temperaturfehler in Antriebseinheit</Title>
+    <Description>Die Antriebseinheit für Achse <arg format="%s" ordinal="2" /> hat ein zu hohes Temperaturniveau erreicht. Die Achse ist verbunden mit Antriebsmodul <arg format="%d" ordinal="1" /> mit der Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="3" /> und Knoten <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System hat in den Zustand Motoren-AUS gewechselt.</Consequences>
+    <Causes>1) Die Kühlungslüfter könnten defekt sein oder der Luftstrom ist behindert. <p />2) Die Kühlungslüfter sind mit Staub bedeckt, was den Kühleffekt reduziert.<p />3) Die Umgebungstemperatur ist unter Umständen zu hoch. <p />4) Die Achse läuft unter Umständen über einen zu langen Zeitraum mit zu hohem Drehmoment. </Causes>
+    <Actions>1) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. <p />2) Kühlungslüfter reinigen.<p />3) Prüfen, dass die Umgebungstemperatur nicht die Temperaturklassifizierung des Schrankes überschreitet. <p />4) Falls möglich, Anwenderprogramm umschreiben, um den Umfang an starker Beschleunigung und starker Abbremsung zu reduzieren. <p />5) Reduzierung des statischen Drehmoments aufgrund von Gravitation oder externer Kräfte. </Actions>
+  </Message>
+  <Message number="4307" eDefine="SYS_ERR_HW_INV_OVER_TEMP_WARNING">
+    <Title>Temperaturwarnung in Antriebseinheit</Title>
+    <Description>Die Antriebseinheit für Achse <arg format="%s" ordinal="2" /> erreicht ein zu hohes Temperaturniveau. Die Achse ist verbunden mit Antriebsmodul <arg format="%d" ordinal="1" /> mit der Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="3" /> und Knoten <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>Es ist möglich fortzufahren, aber die erlaubte Temperaturtoleranz ist für eine Fortführung des Betriebs zu niedrig.</Consequences>
+    <Causes>1) Die Kühlungslüfter könnten defekt sein oder der Luftstrom ist behindert. <p />2) Die Kühlungslüfter sind mit Staub bedeckt, was den Kühleffekt reduziert.<p />3) Die Umgebungstemperatur ist unter Umständen zu hoch. <p />4) Die Achse läuft unter Umständen über einen zu langen Zeitraum mit zu hohem Drehmoment. </Causes>
+    <Actions>1) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. <p />2) Kühlungslüfter reinigen.<p />3) Prüfen, dass die Umgebungstemperatur nicht die Temperaturklassifizierung des Schrankes überschreitet. <p />4) Falls möglich, Anwenderprogramm umschreiben, um den Umfang an starker Beschleunigung und starker Abbremsung zu reduzieren. <p />5) Reduzierung des statischen Drehmoments aufgrund von Gravitation oder externer Kräfte. </Actions>
+  </Message>
+  <Message number="4308" eDefine="SYS_ERR_HW_INV_OVER_TEMP_CRITICAL_ERROR">
+    <Title>Fehler kritische Temperatur Antriebseinheit</Title>
+    <Description>Die Antriebseinheit für Achse <arg format="%s" ordinal="2" /> hat ein kritisches Temperaturniveau erreicht. Die Achse ist verbunden mit Antriebsmodul <arg format="%d" ordinal="1" /> mit der Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="3" /> und Knoten <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand Motoren-AUS.</Consequences>
+    <Causes>1) Die Kühlungslüfter könnten defekt sein oder der Luftstrom ist behindert. <p />2) Die Kühlungslüfter sind mit Staub bedeckt, was den Kühleffekt reduziert.<p />3) Die Umgebungstemperatur ist unter Umständen zu hoch. <p />4) Die Achse läuft unter Umständen über einen zu langen Zeitraum mit zu hohem Drehmoment. </Causes>
+    <Actions>1) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. <p />2) Kühlungslüfter reinigen.<p />3) Prüfen, dass die Umgebungstemperatur nicht die Temperaturklassifizierung des Schrankes überschreitet. <p />4) Falls möglich, Anwenderprogramm umschreiben, um den Umfang an starker Beschleunigung und starker Abbremsung zu reduzieren. <p />5) Reduzierung des statischen Drehmoments aufgrund von Gravitation oder externer Kräfte. </Actions>
+  </Message>
+  <Message number="4309" eDefine="SYS_ERR_HW_INV_OVER_CURRENT_ERROR">
+    <Title>Strom im Antriebstransistor zu hoch</Title>
+    <Description>Der Transistorstrom der Antriebseinheit ist für die Achse <arg format="%s" ordinal="2" /> zu hoch. Die Achse ist verbunden mit Antriebsmodul <arg format="%d" ordinal="1" /> mit der Antriebseinheit bei Einheiten-Position <arg format="%d" ordinal="3" /> und Knoten <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist kein Betrieb möglich. Das System hat in den Zustand Motoren-AUS gewechselt.</Consequences>
+    <Causes>1) Motorkonfiguration ist falsch.<p />2) Eventuell ist die Achslast zu hoch oder der Motor wurde gestoppt (vielleicht wegen einer Kollision). <p />3) Kurzschluss zwischen Motor-Phase-Phase oder Motor-Phase-Masse. </Causes>
+    <Actions>1) Prüfen, ob die Motorkonfiguration richtig ist.<p />2) Prüfen, ob der Roboter kollidiert ist. <p />3) Falls möglich, Reduzierung der Geschwindigkeit des Anwenderprogramms. <p />4) Prüfen, ob die Achslast für die Antriebseinheit zu hoch ist. <p />5) Kabel und Motor durch Messen ihres Widerstands prüfen. Verbindung vor dem Messen trennen. </Actions>
+  </Message>
+  <Message number="4311" eDefine="SYS_ERR_HW_INV_VOLTAGE_SAT_WARNING">
+    <Title>Antriebswandler Sättigungswarnung</Title>
+    <Description>Die Antriebseinheit für Achse <arg format="%s" ordinal="2" /> hat ihre maximale Ausgangsspannung erreicht. Die Achse ist verbunden mit Antriebsmodul <arg format="%d" ordinal="1" /> mit der Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="3" /> und Knoten <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>Betrieb ist möglich, aber das System befindet sich nahe einem Anhaltefehler.</Consequences>
+    <Causes>1) Motor ist nicht richtig an die Antriebseinheit angeschlossen.<p />2) Die Motordaten in der Konfiguration sind eventuell falsch.<p />3) Die Gleichrichterspannung ist zu niedrig. <p />4) Kurzschluss zwischen Motorphasen oder Masse. </Causes>
+    <Actions>1) Motorkabel und –anschlüsse prüfen.<p />2) Konfiguration der Motorparameter prüfen.<p />3) Andere Ereignisprotokollmeldungen der Hardware überprüfen.<p />4) Eingehende Netzspannung zum Gleichrichter-Modul prüfen, Mindestwert der Netztoleranz anpassen. <p />5) Kabel und Motor durch Messen ihres Widerstands prüfen. Verbindung vor dem Messen trennen. </Actions>
+  </Message>
+  <Message number="4312" eDefine="SYS_ERR_HW_INV_UNIT_NOT_FOUND">
+    <Title>Fehlende Antriebseinheit</Title>
+    <Description>Für Achse <arg format="%s" ordinal="1" /> kann vom System keine konfigurierte Antriebseinheit gefunden werden. Die Achse ist konfiguriert für Antriebsmodul <arg format="%d" ordinal="2" /> in der Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="3" />. </Description>
+    <Consequences>Das System hat in den Status Systemfehler gewechselt.</Consequences>
+    <Causes>Eine Achse ist konfiguriert, aber Antriebseinheit wurde nicht gefunden. </Causes>
+    <Actions>1) Prüfen, ob das Antriebsmodul die Antriebseinheit für die konfigurierte Achse enthält.<p />2) Prüfen, ob die Konfiguration für die Position der Antriebseinheit richtig ist.<p />3) Prüfen, ob die Kabel zwischen den Antriebseinheiten in die richtige Anschlussposition eingesteckt sind. <p />4) Ist das Kabel richtig angeschlossen, kann es beschädigt sein und sollte ersetzt werden. <p />5) Prüfen des Ereignisprotokolls auf Fehlermeldungen der Stromversorgung. <p />6) Prüfen der Verkabelung zwischen Stromversorgung und Antriebseinheit.<p />7) Prüfen des 24V-Ausgangs von der Stromversorgung. </Actions>
+  </Message>
+  <Message number="4313" eDefine="SYS_ERR_HW_INV_WRONG_DSQC_NUMBER">
+    <Title>Falscher Typ Antriebseinheit</Title>
+    <Description>In Antriebsmodul <arg format="%d" ordinal="1" /> unterscheidet sich die Hardware-Identität der Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="2" /> von der in der Konfiguration angegebenen Identität. Die Hardware-Identität der installierten Antriebseinheit ist <arg format="%s" ordinal="3" /> und die konfigurierte Identität ist <arg format="%s" ordinal="4" />. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Betrieb möglich. Das System hat in den Zustand Systemfehler gewechselt.</Consequences>
+    <Causes>Die Typ der Antriebseinheit stimmt nicht mit dem Typ im Lizenzcode überein.</Causes>
+    <Actions>1) Prüfen, ob die Positionen der Antriebseinheit richtig sind, d. h. ob die Ethernet-Kabel richtig angeschlossen sind.<p />2) Prüfen, ob der Antriebsmodul-Key der installierten Hardware entspricht.<p />3) Antriebseinheit durch die im Antriebsmodul-Key angegebene Einheit ersetzen. </Actions>
+  </Message>
+  <Message number="4314" eDefine="SYS_ERR_HW_INV_NODE_NOT_FOUND">
+    <Title>Fehlender Antriebseinheit-Knoten</Title>
+    <Description>Für Achse <arg format="%s" ordinal="1" /> unterstützt die Antriebseinheit nicht die konfigurierte Knotennummer. Die Achse ist konfiguriert für Antriebsmodul <arg format="%d" ordinal="2" /> in der Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="3" /> mit Knoten <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>Das System hat in den Zustand Systemfehler gewechselt.</Consequences>
+    <Causes>Der konfigurierte Knoten der Antriebseinheit wird für den konfigurierten Antriebseinheitentyp nicht unterstützt. </Causes>
+    <Actions>Knotennummer der Antriebseinheit in der Konfiguration prüfen. </Actions>
+  </Message>
+  <Message number="4316" eDefine="SYS_ERR_HW_INV_IQ_REGULATION_ERROR">
+    <Title>Fehler Motorstrom</Title>
+    <Description>Für Achse <arg format="%s" ordinal="2" /> hat die Stromsteuerung eine zu hohe Drehmoment-Stromabweichung für den Motor erkannt. Die Achse ist verbunden mit Antriebsmodul <arg format="%d" ordinal="1" /> mit der Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="3" /> und Knoten <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>Das System hat in den Zustand Motoren-AUS gewechselt.</Consequences>
+    <Causes>1) Die Motordaten in den Konfigurationsdateien sind eventuell falsch.<p />2) Die Motorkabel sind beschädigt oder nicht richtig angeschlossen.<p />3) Kurzschluss im Motorkabel zwischen Phase-Phase oder Phase-Masse. <p />4) Die Spannung des Gleichrichteranschlusses ist eventuell zu niedrig.<p />5) Die Netzspannung entspricht eventuell nicht den Spezifikationen. </Causes>
+    <Actions>1) Sicherstellen, dass die Motordaten in der Konfigurationsdatei für diese Achse korrekt sind. Weitere Informationen zur Überprüfung der Konfigurationsdatei finden Sie im Handbuch zur Fehlerbehebung. <p />2) Prüfen, ob Motorkabel beschädigt oder nicht richtig angeschlossen sind.<p />3) Sicherstellen, dass intern oder zur Masse kein Kurzschluss in den Motorkabeln vorliegt. <p />4) Sicherstellen, dass das Ereignisprotokoll keine Gleichrichter-Fehler enthält. <p />5) Prüfen, ob die Netzspannung den Spezifikationen entspricht. Den Mindestwert der Netztoleranz so ändern, dass er der tatsächlichen Netzspannung entspricht. </Actions>
+  </Message>
+  <Message number="4317" eDefine="SYS_ERR_HW_INV_ID_REGULATION_ERROR">
+    <Title>Fehler Motorstrom</Title>
+    <Description>Für Achse <arg format="%s" ordinal="2" /> hat die Stromsteuerung eine zu hohe Stromabweichung für den Motor erkannt. Die Achse ist verbunden mit Antriebsmodul <arg format="%d" ordinal="1" /> mit der Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="3" /> und Knoten <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>Das System hat in den Zustand Motoren-AUS gewechselt.</Consequences>
+    <Causes>1) Die Motordaten in den Konfigurationsdateien sind eventuell falsch.<p />2) Die Motorkabel sind beschädigt oder nicht richtig angeschlossen.<p />3) Kurzschluss im Motorkabel zwischen Phase-Phase oder Phase-Masse. <p />4) Die Spannung des Gleichrichteranschlusses ist eventuell zu niedrig.<p />5) Die Netzspannung entspricht eventuell nicht den Spezifikationen. </Causes>
+    <Actions>1) Sicherstellen, dass die Motordaten in der Konfigurationsdatei für diese Achse korrekt sind. Weitere Informationen zur Überprüfung der Konfigurationsdatei finden Sie im Handbuch zur Fehlerbehebung. <p />2) Prüfen, ob Motorkabel beschädigt oder nicht richtig angeschlossen sind.<p />3) Sicherstellen, dass intern oder zur Masse kein Kurzschluss in den Motorkabeln vorliegt. <p />4) Sicherstellen, dass das Ereignisprotokoll keine Gleichrichter-Fehler enthält. <p />5) Prüfen, ob die Netzspannung den Spezifikationen entspricht. Den Mindestwert der Netztoleranz so ändern, dass er der tatsächlichen Netzspannung entspricht.<p /></Actions>
+  </Message>
+  <Message number="4318" eDefine="SYS_ERR_HW_INV_VOLTAGE_SAT_ERROR">
+    <Title>Antriebswandler Sättigungsfehler</Title>
+    <Description>Die Antriebseinheit für Achse <arg format="%s" ordinal="2" /> hat ihre maximale Ausgangsspannung erreicht. Die Achse ist verbunden mit Antriebsmodul <arg format="%d" ordinal="1" /> mit der Antriebseinheit bei Einheiten-Position <arg format="%d" ordinal="3" /> und Knoten <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>Das System hat in den Zustand Motoren-Aus gewechselt </Consequences>
+    <Causes>1) Motor ist nicht richtig an die Antriebseinheit angeschlossen.<p />2) Die Motordaten in der Konfiguration sind eventuell falsch.<p />3) Die Gleichrichterspannung ist zu niedrig. <p />4) Kurzschluss zwischen Motorphasen oder Masse. </Causes>
+    <Actions>1) Motorkabel und –anschlüsse prüfen.<p />2) Konfiguration der Motor-Parameter prüfen.<p />3) Andere Ereignisprotokollmeldungen der Hardware überprüfen.<p />4) Eingehende Netzspannung zum Gleichrichter-Modul prüfen. <p />5) Kabel und Motor durch Messen ihres Widerstands prüfen. Verbindung vor dem Messen trennen.</Actions>
+  </Message>
+  <Message number="4319" eDefine="SYS_ERR_HW_INV_FAILURE">
+    <Title>Kritischer Fehler in Antriebseinheit</Title>
+    <Description>An der Antriebseinheit für Achse <arg format="%s" ordinal="2" /> ist ein nicht angegebener Fehler aufgetreten, wahrscheinlich durch zu hohe Temperatur oder Kurzschluss. Die Achse ist verbunden mit Antriebsmodul <arg format="%d" ordinal="1" /> mit der Antriebseinheit bei Einheiten-Position <arg format="%d" ordinal="3" /> und Knoten <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Betrieb möglich. Das System geht in den Zustand Motoren-AUS mit null Drehmoment.</Consequences>
+    <Causes>1) Die Kühlungslüfter könnten defekt sein oder der Luftstrom ist behindert. <p />2) Die Kühlungslüfter sind mit Staub bedeckt, was den Kühleffekt reduziert.<p />3) Die Umgebungstemperatur ist unter Umständen zu hoch. <p />4) Die Achse läuft unter Umständen über einen zu langen Zeitraum mit zu hohem Drehmoment. <p />5) Kurzschluss in Kabeln oder Steckverbindern zwischen den Phasen oder zur Masse.<p />6) Kurzschluss im Motor zwischen den Phasen oder zur Masse. </Causes>
+    <Actions>1) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. <p />2) Kühlungslüfter reinigen <p />3) Prüfen, dass die Umgebungstemperatur nicht die Temperaturklassifizierung des Schrankes überschreitet. <p />4) Falls möglich, Anwenderprogramm umschreiben, um den Umfang an starker Beschleunigung und starker Abbremsung zu reduzieren. <p />5) Reduzierung des statischen Drehmoments aufgrund von Gravitation oder externer Kräfte. <p />6) Kabel oder Steckverbinder prüfen/austauschen.<p />7) Motor prüfen/austauschen. </Actions>
+  </Message>
+  <Message number="4320" eDefine="SYS_ERR_HW_INV_TOO_MANY_DRIVE_NODES_CONNECTED">
+    <Title>Zu viele Antriebsknoten angeschlossen</Title>
+    <Description>In Antriebsmodul <arg format="%d" ordinal="1" /> hat das System mehr Antriebsknoten erkannt als es handhaben kann. Der Fehler trat auf, als die Antriebseinheit an Einheitenposition <arg format="%d" ordinal="2" /> erkannt wurde.</Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Betrieb möglich. Das System hat in den Zustand Systemfehler gewechselt.</Consequences>
+    <Causes>1) An das Kommunikationskabel der Antriebseinheit sind zu viele Antriebseinheiten angeschlossen. <p />2) Die angeschlossenen Antriebseinheiten sind eventuell vom falschen Typ oder mit zu vielen Antriebsknoten ausgestattet.</Causes>
+    <Actions>1) Sicherstellen, dass die korrekten Antriebseinheitstypen an das Kommunikationskabel der Antriebseinheit angeschlossen sind. <p />2) Unbenutzte Antriebseinheit(en) trennen.</Actions>
+  </Message>
+  <Message number="4321" eDefine="SYS_ERR_HW_INV_TOO_MANY_USING_SAME_EXCITATION">
+    <Title>Konfigurationsfehler in Antriebseinheit</Title>
+    <Description>In Antriebsmodul <arg format="%d" ordinal="1" /> hat die Antriebseinheit bei Position <arg format="%d" ordinal="2" /> einen Konfigurationsfehler erkannt, der auf einem Konflikt zwischen der Antriebseinheit und dem Messsystem beruht. Die Antriebseinheit kann nur <arg format="%d" ordinal="4" />-Achsen unterstützen, die über dieselbe Messsystemspannung verfügen. Der Fehler ist beim Hinzufügen der Achse <arg format="%s" ordinal="3" /> zum System aufgetreten. <p /><p /></Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Betrieb möglich. Das System hat in den Zustand Systemfehler gewechselt.</Consequences>
+    <Causes>Zu viele Achsen verwenden dieselbe Messsystemspannung und alle verwenden dieselbe Antriebseinheit. </Causes>
+    <Actions>1) Verbinden Sie die Achse <arg format="%s" ordinal="3" /> oder eine andere Achse mit derselben Knotenspannung mit einer anderen Versorgungsspannung (EXC1 - EXC2), indem sie die Messknotenverbindung der Achse in der Hardware und in der Konfiguration verändern.<p />2) Das System neu starten. </Actions>
+  </Message>
+  <Message number="4322" eDefine="SYS_ERR_HW_INV_WRONG_RECTIFIER_CONFIG_ERROR">
+    <Title>Konfigurationsfehler in Antriebseinheit</Title>
+    <Description>In Antriebsmodul <arg format="%d" ordinal="1" /> verwendet die Antriebseinheit bei Position <arg format="%d" ordinal="2" /> einen falschen Gleichrichter. <p /><p /></Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Betrieb möglich. Das System hat in den Zustand Systemfehler gewechselt.</Consequences>
+    <Causes>Eine Antriebseinheit muss immer einen Gleichrichter mit niedrigerer oder gleicher Einheitenposition wie der des Wandlers konfigurieren. Es darf keinen anderen Gleichrichter mit einer Einheitenposition zwischen dem konfigurierten Gleichrichter und der Antriebseinheit geben.</Causes>
+    <Actions>1) Prüfen, ob die Konfigurationsdatei für die zusätzliche Achse vom Typ Antriebssystem 09 ist. <p />2) Benutzten Gleichrichter (dc_link) in der Konfiguration der zusätzlichen Achse ändern. <p />3) Unbenutzten Gleichrichter, der zwischen dem konfigurierten Gleichrichter und der Antriebseinheit montiert ist, entfernen. </Actions>
+  </Message>
+  <Message number="4400" eDefine="SYS_ERR_HW_PU_DC_VOLTAGE_TOO_HIGH_ERROR">
+    <Title>Gleichrichterspannung zu hoch</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> hat die Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="2" /> eine zu hohe Gleichrichterspannung. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System hat in den Zustand Motoren-AUS gewechselt.<p /><p />ACHTUNG HOCHSPANNUNG: DER GLEICHRICHTER WIRD BEI ABSCHALTUNG DES SYSTEMS EVENTUELL SEHR LANGSAM ENTLADEN (CA. 1 STUNDE).<p /></Consequences>
+    <Causes>1) Der Bremswiderstand ist nicht angeschlossen oder fehlerhaft.<p />2) Das Anwenderprogramm enthält unter Umständen eine zu starke Abbremsung der Manipulatorachsen. Die Wahrscheinlichkeit dafür ist höher, wenn das System zusätzliche Achsen enthält.</Causes>
+    <Actions>WARNUNG: ES IST EVENTUELL HOCHSPANNUNG VORHANDEN.<p />1) Sicherstellen, dass das Bremswiderstandkabel korrekt mit der Gleichrichtereinheit verbunden ist. <p />2) Den Bremswiderstand trennen, das Kabel prüfen und den Widerstand messen. Der zu erwartende Widerstand sollte etwa <arg format="%d" ordinal="3" /> Ohm betragen. <p />3) Anwenderprogramm umschreiben, um die Anzahl starker Abbremsungen zu verringern. </Actions>
+  </Message>
+  <Message number="4401" eDefine="SYS_ERR_HW_PU_DC_TOO_LOW_WARNING">
+    <Title>Warnung Gleichrichterspannung zu niedrig</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> hat die Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="2" /> eine Gleichrichterspannung, die sich nahe am minimalen Limit befindet. </Description>
+    <Consequences>Betrieb ist möglich, aber das System befindet sich nahe einem Anhaltefehler.</Consequences>
+    <Causes>Die eingehende Netzspannung zum Gleichrichter-Modul befindet sich außerhalb der Spezifikationen.</Causes>
+    <Actions>1) Hardware-Ereignisprotokollnachrichten auf andere Fehlermeldungen in Bezug auf Netzspannung überprüfen.<p />2) Netzspannung prüfen. Den Mindestwert der Netztoleranz so ändern, dass die Netzspannung innerhalb des angegebenen Intervalls liegt.<p />3) Prüfen, ob auf dem Transformator mit den Jumpern die korrekte Spannung ausgewählt ist (optional).<p />4) Prüfen aller internen 3-Phasen-Komponenten (Netzschalter, Filter, Sicherungen, Schütz) und Verkabelung im Antriebsmodul.<p /></Actions>
+  </Message>
+  <Message number="4402" eDefine="SYS_ERR_HW_PU_DC_TOO_LOW_ERROR">
+    <Title>Gleichrichterspannung zu niedrig</Title>
+    <Description>In Antriebsmodul <arg format="%d" ordinal="1" /> ist die Gleichrichterspannung für Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="2" /> zu niedrig. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Betrieb möglich. Das System hat in den Zustand Motoren-AUS gewechselt.</Consequences>
+    <Causes>Die eingehende Netzspannung zum Gleichrichter-Modul befindet sich außerhalb der Spezifikationen.</Causes>
+    <Actions>1) Hardware-Ereignisprotokollnachrichten auf andere Fehlermeldungen in Bezug auf Netzspannung überprüfen.<p />2) Netzspannung prüfen. Den Mindestwert der Netztoleranz so ändern, dass die Netzspannung innerhalb des angegebenen Intervalls liegt.<p />3) Prüfen, ob auf dem Transformator mit den Jumpern die korrekte Spannung ausgewählt ist (optional).<p />4) Prüfen aller internen 3-Phasen-Komponenten (Netzschalter, Filter, Sicherungen, Schütz) und Verkabelung im Antriebsmodul.<p /></Actions>
+  </Message>
+  <Message number="4404" eDefine="SYS_ERR_HW_PU_DC_VOLTAGE_CRITICAL_TOO_HIGH_ERROR">
+    <Title>Gleichrichterspannung liegt im kritischen Bereich</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> besitzt die Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="2" /> eine Gleichrichterspannung, die im kritischen Bereich liegt. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System hat in den Zustand Motoren-AUS gewechselt.<p /><p />ACHTUNG HOCHSPANNUNG: DER GLEICHRICHTER WIRD BEI ABSCHALTUNG DES SYSTEMS EVENTUELL SEHR LANGSAM ENTLADEN (CA. 1 STUNDE).<p /></Consequences>
+    <Causes>1) Der Bremswiderstand ist nicht angeschlossen oder fehlerhaft.<p />2) Das Anwenderprogramm enthält unter Umständen eine zu starke Abbremsung der Manipulatorachsen. Die Wahrscheinlichkeit dafür ist höher, wenn das System zusätzliche Achsen enthält.</Causes>
+    <Actions>WARNUNG: ES IST EVENTUELL HOCHSPANNUNG VORHANDEN.<p />1) Sicherstellen, dass das Bremswiderstandskabel korrekt mit der Gleichrichtereinheit verbunden ist. <p />2) Den Bremsstand trennen, das Kabel prüfen und den Widerstand messen. Der zu erwartende Widerstand sollte etwa <arg format="%d" ordinal="3" /> Ohm betragen. <p />3) Anwenderprogramm umschreiben, um die Anzahl starker Abbremsungen zu verringern. </Actions>
+  </Message>
+  <Message number="4405" eDefine="SYS_ERR_HW_PU_DC_VOLTAGE_WARNING">
+    <Title>Warnung Gleichrichterspannung zu hoch</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> hat die Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="2" /> eine Gleichrichterspannung, die sich nahe am maximalen Limit befindet. </Description>
+    <Consequences>Die Operation ist möglich, aber das System befindet sich nahe einem Anhaltefehler.<p /><p />ACHTUNG HOCHSPANNUNG: DER GLEICHRICHTER WIRD BEI ABSCHALTUNG DES SYSTEMS EVENTUELL SEHR LANGSAM ENTLADEN (CA. 1 STUNDE).<p /></Consequences>
+    <Causes>1) Der Bremswiderstand ist nicht angeschlossen oder fehlerhaft.<p />2) Das Anwenderprogramm enthält unter Umständen eine zu starke Abbremsung der Manipulatorachsen. Die Wahrscheinlichkeit dafür ist höher, wenn das System zusätzliche Achsen enthält.</Causes>
+    <Actions>WARNUNG: ES IST EVENTUELL HOCHSPANNUNG VORHANDEN.<p />1) Sicherstellen, dass das Bremswiderstandkabel korrekt mit der Gleichrichtereinheit verbunden ist. <p />2) Den Entladewiderstand trennen, das Kabel prüfen und den Widerstand messen. Der zu erwartende Widerstand sollte etwa <arg format="%d" ordinal="3" /> Ohm betragen. <p />3) Anwenderprogramm umschreiben, um die Anzahl starker Abbremsungen zu verringern. </Actions>
+  </Message>
+  <Message number="4406" eDefine="SYS_ERR_HW_PU_LOGIC_VOLTAGE_ERROR">
+    <Title>Fehler Stromversorgung Antriebseinheit</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> hat die Antriebseinheit mit Einheitenposition <arg format="%d" ordinal="2" /> ein Problem mit der logischen Spannung erkannt. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Betrieb möglich. Das System geht in den Zustand Motoren-AUS mit null Drehmoment.</Consequences>
+    <Causes>Die logische 24V-Versorgung zum Antrieb ist temporär oder konstant unterbrochen.</Causes>
+    <Actions>1) Prüfen des Ereignisprotokolls auf Fehlermeldungen der Stromversorgung. <p />2) Prüfen der Verkabelung zwischen Stromversorgung und Antriebseinheit.<p />3) Prüfen der 24V-Ausgangsspannung der Stromversorgung. </Actions>
+  </Message>
+  <Message number="4407" eDefine="SYS_ERR_HW_PU_INTERNAL_ERROR">
+    <Title>Interner Fehler in Antriebseinheit</Title>
+    <Description>In Antriebsmodul <arg format="%d" ordinal="1" /> hat die Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="2" /> einen internen Fehler erkannt.</Description>
+    <Consequences>Das System geht in den Zustand Systemfehler. </Consequences>
+    <Causes>In der Firmware der Antriebseinheit ist ein interner Fehler aufgetreten.</Causes>
+    <Actions>System über den Netzschalter neustarten.</Actions>
+  </Message>
+  <Message number="4408" eDefine="SYS_ERR_HW_PU_EEPROM_ERROR">
+    <Title>Fehler Antriebseinheit Hardwaredaten</Title>
+    <Description>In Antriebsmodul <arg format="%d" ordinal="1" /> besitzt die Antriebseinheit bei Einheitenposition <arg format="%d" ordinal="2" /> in der Einheit gespeicherte, beschädigte Informationen.</Description>
+    <Consequences>Das System hat in den Zustand Systemfehler gewechselt. </Consequences>
+    <Causes>Die Integritätsprüfung bezüglich auf der Antriebseinheit gespeicherter Informationen der Antriebseinheit ist fehlgeschlagen.</Causes>
+    <Actions>1) Erneut versuchen durch Neustarten des Systems mit dem Netzschalter.<p />2) Fehlerhafte Antriebseinheit ersetzen.</Actions>
+  </Message>
+  <Message number="4409" eDefine="SYS_ERR_HW_PU_STARTUP_ERROR">
+    <Title>Startfehler Antriebseinheit</Title>
+    <Description>Die Initialisierung der Antriebseinheit durch das System ist fehlgeschlagen. Die Antriebseinheit befindet sich in Antriebsmodul <arg format="%d" ordinal="1" /> bei Einheitenposition <arg format="%d" ordinal="2" />.</Description>
+    <Consequences>Das System hat in den Zustand Systemfehler gewechselt. </Consequences>
+    <Causes>Die Initialisierung der Antriebseinheit durch das System konnte nicht abgeschlossen werden.</Causes>
+    <Actions>1) Erneut versuchen durch Neustarten des Systems mit dem Netzschalter.<p />2) Andere Meldungen des Hardware-Ereignisprotokolls prüfen.</Actions>
+  </Message>
+  <Message number="4410" eDefine="SYS_ERR_HW_PU_TOO_MANY_UNITS_CONNECTED">
+    <Title>Zu viele Antriebseinheiten angeschlossen</Title>
+    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> hat das System mehr Antriebseinheiten erkannt als es handhaben kann. Die maximale Anzahl unterstützter Antriebseinheiten ist <arg format="%d" ordinal="2" />, es wurden jedoch <arg format="%d" ordinal="3" /> erkannt. </Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System hat in den Zustand Systemfehler gewechselt.</Consequences>
+    <Causes>1) Zu viele Antriebseinheiten sind angeschlossen. <p /></Causes>
+    <Actions>1) Unbenutzte Antriebseinheit(en) trennen. </Actions>
+  </Message>
+  <Message number="4411" eDefine="SYS_ERR_HW_PU_DC_LINK_ERROR">
+    <Title>Gleichrichterfehler</Title>
+    <Description>Das System hat eine unerwartet niedrige Spannung am DC-Bus in einer Antriebseinheit festgestellt, die von keiner Achse verwendet wird. Die Antriebseinheit befindet sich in Antriebsmodul <arg format="%d" ordinal="1" /> an Einheitenposition <arg format="%d" ordinal="2" />.</Description>
+    <Consequences>Bis zur Korrektur des Fehlers ist keine Betrieb möglich. Das System hat in den Zustand Motoren-AUS gewechselt.</Consequences>
+    <Causes>1) Eingehende Netzspannung fehlt.<p />2) Das Buskabel des Gleichrichters ist falsch an die Antriebseinheit angeschlossen.<p />3) Kurzschluss an einem DC-Bus. Er kann sowohl im Inneren der Antriebseinheit als auch in den Kabeln aufgetreten sein.<p /></Causes>
+    <Actions>1) Eingehende Netzspannung prüfen.<p />2) Verkabelung des Gleichrichters prüfen.<p />3) Auf Kurzschlüsse prüfen.<p />4) Antriebseinheit(en) austauschen.</Actions>
+  </Message>
+  <Message number="7001" eDefine="SYS_ERR_HW_AUX_RUN_RELAY">
+    <Title>Fehler beim Aktivieren des MOTOREN EIN-Schützes</Title>
+    <Description>Motoren-Ein-Schütz <arg format="%d" ordinal="1" /> in Antriebsmodul <arg format="%d" ordinal="2" /> wurde nicht wie angewiesen geschlossen.</Description>
+    <Consequences>Mechanische Einheit kann weder manuell noch automatisch betrieben werden.</Consequences>
+    <Causes>1) Der Betriebskreis für das Schütz ist geöffnet.<p />2) Das Schütz selbst verursacht Probleme (mechanisch oder elektrisch).<p />3) Programmiergerät-Zustimmungsschalter wurde eventuell zu schnell umgeschaltet oder System ist nicht korrekt konfiguriert. In seltenen Fällen kann dieser Fehler zusammen mit anderen Fehlern auftreten, was dann im Fehlerprotokoll aufgezeichnet ist.</Causes>
+    <Actions>1) Für Wiederaufnahme des normalen Betriebs zuerst den Fehler bestätigen, dann Zustimmungsschalter freigeben und nach ca. einer Sekunde erneut drücken. <p />2) Kabel und Anschlüsse des Sicherheitssystems prüfen.<p />3) Gegebenenfalls andere zeitlich übereinstimmende Fehlerprotokoll-Meldungen auf Hinweise prüfen. <p />4) Systemkonfiguration hinsichtlich Motoren-Ein-Relais überprüfen. Weitere Informationen zur Überprüfung der Konfigurationsdatei finden Sie im Handbuch zur Fehlerbehebung.</Actions>
+  </Message>
+  <Message number="7043" eDefine="SYS_ERR_HW_AUX_PU_DRVOVLD">
+    <Title>Sicherheitssignale überlastet</Title>
+    <Description>Die AC_ON- oder SPEED-Signale verbrauchen zu viel Strom. </Description>
+    <Consequences>Sicherheitssystem beendet die Signale. Damit erhält das System den Zustand SYS FAIL (für AC_ON) bzw. SYS HALT (für SPEED).</Consequences>
+    <Causes>Eine mit dem Kreis verbundene Last ist eventuell zu groß oder das Sicherheitssystem hat eine Fehlfunktion. (siehe Schaltplan).</Causes>
+    <Actions>1) Alle Lasten prüfen, die mit den Kreisen AC_ON und SPEED verbunden sind.<p />2) Verkabelung des Sicherheitssystems prüfen und gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
+  </Message>
+  <Message number="7044" eDefine="SYS_ERR_HW_AUX_PU_USERDOOVLD">
+    <Title>Überlast dig. Ausgangssignalen der Sicherheitskarte</Title>
+    <Description>Die anwenderspezifischen digitalen Ausgänge der Sicherheitsplatine verbrauchen zu viel Strom.</Description>
+    <Consequences>Sicherheitskarte beendet die Signale. Damit erhält das System den Status SYS HALT.</Consequences>
+    <Causes>Eine mit dem Kreis verbundene Last ist evtl. zu groß oder die Sicherheitskarte hat eine Fehlfunktion (siehe Schaltplan).</Causes>
+    <Actions>1) Alle Lasten prüfen, die mit den anwenderspezifischen digitalen Ausgängen verbunden sind.<p />2. Verkabelung der Sicherheitskarte prüfen und gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
+  </Message>
+  <Message number="7045" eDefine="SYS_ERR_HW_AUX_PU_PANFAN">
+    <Title>Fehlerhafter externer Computerlüfter</Title>
+    <Description>Der externe Computerlüfter im Steuerungsmodul dreht zu langsam.</Description>
+    <Consequences>Keine Systemkonsequenzen. Temperatur des Steuerungsmoduls steigt.</Consequences>
+    <Causes>Fehlerhafte(r) Lüfter, Kabel oder Stromversorgung (siehe Schaltplan).</Causes>
+    <Actions>1) Alle Kabel zum externen Computerlüfter prüfen.<p />2. Lüfter prüfen und gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
+  </Message>
+  <Message number="7046" eDefine="SYS_ERR_HW_AUX_PU_PANEL24OVLD">
+    <Title>Sicherheitssignale überlastet</Title>
+    <Description>Die 24V-Versorgung der Sicherheitskarte verbraucht zu viel Strom. </Description>
+    <Consequences>Sicherheitssystem beendet das Signal. Damit erhält das System den Zustand SYS HALT.</Consequences>
+    <Causes>Eine mit dem Kreis verbundene Last ist eventuell zu groß oder das Sicherheitssystem hat eine Fehlfunktion. (siehe Schaltplan).</Causes>
+    <Actions>1) Alle Lasten prüfen, die mit dem Kreis der 24V-Sicherheitsplatine verbunden sind. <p />2) Verkabelung des Sicherheitssystems prüfen.</Actions>
+  </Message>
+  <Message number="7049" eDefine="SYS_ERR_HW_AUX_ACTIVATION_RELAY">
+    <Title>Fehler beim Aktivieren des Schützes</Title>
+    <Description>Das Aktivierungsschütz der mechanischen Einheit <arg format="%s" ordinal="1" /> konnte nicht geschlossen werden.</Description>
+    <Consequences>Mechanische Einheit kann weder manuell noch automatisch betrieben werden.</Consequences>
+    <Causes>Das im System konfigurierte Aktivierungsrelais ist eventuell fehlerhaft oder das System ist nicht korrekt konfiguriert.</Causes>
+    <Actions>1) Schütz prüfen und sicherstellen, dass seine Verbindungen korrekt angeschlossen sind. <p />2) Systemkonfiguration hinsichtlich Aktivierungsrelais prüfen. Weitere Informationen zur Überprüfung der Konfigurationsdatei finden Sie im Handbuch zur Fehlerbehebung.</Actions>
+  </Message>
+  <Message number="7050" eDefine="SYS_ERR_HW_AUX_CPU_TEMP">
+    <Title>Übertemperatur im Hauptcomputer</Title>
+    <Description>Die Temperatur im Hauptcomputer oder im Prozessor des Hauptcomputers ist zu hoch.</Description>
+    <Consequences>Das System kann beschädigt werden.</Consequences>
+    <Causes>Eventuell ist die Einheit überlastet oder ihre Lüfter funktionieren nicht richtig oder der Luftstrom ist eingeschränkt.</Causes>
+    <Actions>1) Sicherstellen, dass die Lüfter arbeiten.<p />2) Prüfen, ob der Luftstrom zu den Lüftern eventuell eingeschränkt wird.</Actions>
+  </Message>
+  <Message number="7053" eDefine="SYS_ERR_HW_AUX_CMOS_BATTERY">
+    <Title>Wenig Spannung in CMOS-Batterie</Title>
+    <Description>CMOS-Batterie auf Computerplatine ist leer.</Description>
+    <Consequences>Beim Neustart wird das System fehlerhafte Einstellungen benutzen oder es ist kein Neustart möglich.</Consequences>
+    <Causes>Fehlerhafte Batterie.</Causes>
+    <Actions>1. CMOS-Batterie austauschen.</Actions>
+  </Message>
+  <Message number="7054" eDefine="SYS_ERR_HW_AUX_MAIN_FAN">
+    <Title>Fehlerhafter Lüfter der Computereinheit</Title>
+    <Description>Die Lüfter in der Computereinheit drehen zu langsam.</Description>
+    <Consequences>Keine Systemkonsequenzen. Temperatur der Computereinheit steigt.</Consequences>
+    <Causes>Fehlerhafte(r) Lüfter, Kabel oder Stromversorgung (siehe Schaltplan).</Causes>
+    <Actions>1) Kabel zum Lüfter der Computereinheit prüfen.<p />2) Lüfter prüfen.<p />3) Stromversorgung des Lüfters prüfen.<p />4) Gegebenenfalls fehlerhafte Komponente austauschen.</Actions>
+  </Message>
+  <Message number="7056" eDefine="SYS_ERR_HW_AUX_LM78_FAN3_ERROR">
+    <Title>Kühlungsfehler</Title>
+    <Description>Lüfter der Kühlung hat angehalten oder dreht sehr langsam (weniger als <arg format="%.f" ordinal="1" /> rpm).</Description>
+    <Actions>1. Lüfterkabel prüfen.<p />2. Lüfter austauschen.</Actions>
+  </Message>
+  <Message number="7062" eDefine="SYS_ERR_HW_AUX_VOLTAGE_ALARM">
+    <Title>Computernetzteil-Warnung</Title>
+    <Description>Die <arg format="%.f" ordinal="1" /> -V-Spannung des Computernetzteils beträgt <arg format="%.f" ordinal="2" /> V und liegt damit außerhalb des zulässigen Bereichs.</Description>
+    <Consequences>- </Consequences>
+    <Causes>Netzteil, Kabel, Eingangsspannung zum Netzteil oder Ausgangslast können die fehlerhafte Spannungsebene verursachen (siehe Handbuch zur Fehlerbehebung und Schaltplan).</Causes>
+    <Actions>1) Alle Kabel zum Netzteil prüfen.<p />2) Ausgangs- und Eingangsspannung messen.<p />3) Gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
+  </Message>
+  <Message number="7069" eDefine="SYS_ERR_HW_AUX_PSU_FAIL">
+    <Title>Fehlerhafte Backup-Stromversorgung</Title>
+    <Description>Reserve-Energiemodul im Steuerungsmodul, das die Backup-Spannung bereitstellt, ist fehlerhaft.</Description>
+    <Consequences>Nach dem Ausschalten muss ein Neustart Typ B durchgeführt werden. Beim Abschalten werden keine geänderten Systemdaten gespeichert.</Consequences>
+    <Causes>Mögliche Ursache: Fehlerhafte(s) Reserve-Energiemodul, Kabel oder Ladeeinheit.</Causes>
+    <Actions>Hauptschalter erst ausschalten, wenn Batterie geladen, da das System sonst einen Kaltstart ausführt! <p />1) Kabel und Anschlüsse des Reserve-Energiemoduls prüfen. <p />2) Reserve-Energiemodul prüfen.<p />3) Stromversorgung prüfen. <p />4) Gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
+  </Message>
+  <Message number="7070" eDefine="SYS_ERR_HW_AUX_PSU_TEMP">
+    <Title>Übertemp. Stromversorgung des Steuerungsmodul</Title>
+    <Description>Die Temperatur im Netzteil des Steuerungsmoduls ist zu hoch.</Description>
+    <Consequences>Das System wird sofort abgeschaltet.</Consequences>
+    <Causes>Mögliche Ursache: Schlechte Kühlung, zu hohe Last am Netzteil oder fehlerhaftes Netzteil.</Causes>
+    <Actions>1) Lüfter prüfen.<p />2) Ausgangsleistung prüfen.<p />3) Gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
+  </Message>
+  <Message number="7074" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_TOO_LOW_PRES">
+    <Title>Spüldruck zu niedrig</Title>
+    <Description>Spülsystem-Nummer <arg format="%i" ordinal="1" /> für Manipulator Interface Board (MIB) <arg format="%i" ordinal="2" />.</Description>
+    <Actions>Druckluftversorgung des Spülsystems prüfen und Lecks suchen im: <p />1. Spülsystem. <p />2. Schlauchkanal. <p />3. Manipulator.</Actions>
+  </Message>
+  <Message number="7075" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_TOO_HIGH_PRES">
+    <Title>Spüldruck zu hoch</Title>
+    <Description>Spülsystem-Nummer <arg format="%i" ordinal="1" /> für Manipulator Interface Board (MIB) <arg format="%i" ordinal="2" />.</Description>
+    <Actions>Spüleinheit und Luftversorgung prüfen.</Actions>
+  </Message>
+  <Message number="7076" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_UNEXP_LOW_FLOW">
+    <Title>Unerwartet niedriger Spülfluss</Title>
+    <Description>Spülsystem-Nummer <arg format="%i" ordinal="1" /> für Manipulator Interface Board (MIB) <arg format="%i" ordinal="2" />.</Description>
+    <Actions>Spüleinheit und Luftversorgung prüfen. Lecks im Spülsystem suchen.</Actions>
+  </Message>
+  <Message number="7077" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_UNEXP_HIGH_FLOW">
+    <Title>Unerwartet hoher Spülfluss</Title>
+    <Description>Spülsystem-Nummer <arg format="%i" ordinal="1" /> für Manipulator Interface Board (MIB) <arg format="%i" ordinal="2" />.</Description>
+    <Actions>Spüleinheit und Luftversorgung prüfen.</Actions>
+  </Message>
+  <Message number="7078" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_UNAC_TIMER_DIV1">
+    <Title>Spül-Timer sind unterschiedlich</Title>
+    <Description>Unzulässige Abweichung zwischen <arg format="%i" ordinal="1" /> -Spül-Timern für Process Interface Board (PIB) und Manipulator Interface Board (MIB). </Description>
+    <Consequences>Der Spül-Timer wird neu gestartet. </Consequences>
+    <Actions>1. Serial Peripheral Interface (SPI)-Kabel prüfen.<p />2. MIB austauschen, falls defekt.<p />3. PIB austauschen, falls defekt.<p /><p /></Actions>
+  </Message>
+  <Message number="7080" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_CFG_FAULT">
+    <Title>Spülkonfiguration ungültig</Title>
+    <Description>Der Spülzeitcode für Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> X19 ist ungültig. </Description>
+    <Consequences>Standardzeit (300 s) wird verwendet. <p /><p /></Consequences>
+    <Causes>Code für Spülzeit ist falsch oder fehlt.</Causes>
+    <Actions>1. Prüfen, ob Spülzeittaste ordnungsgemäß montiert ist.<p />2. Spülzeittaste austauschen.</Actions>
+  </Message>
+  <Message number="7081" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_UNAC_TIMER_DIV2">
+    <Title>Spül-Timer sind unterschiedlich</Title>
+    <Description>Unzulässige Abweichung zwischen CPLD- und FPGA-Firmware in <arg format="%i" ordinal="1" /> -Spül-Timern für Manipulator Interface Board (MIB). </Description>
+    <Consequences>Der Spül-Timer wird neu gestartet.</Consequences>
+    <Actions>MIB austauschen, falls defekt.</Actions>
+  </Message>
+  <Message number="7082" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_OUT_FAULT">
+    <Title>Abweichung zwischen PIB- und MIB-Ausgang</Title>
+    <Description>Ausgangsstatus für Spülrelais und Stromrelais ist nicht zwischen Process Interface Board (PIB) und Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> abgestimmt. </Description>
+    <Consequences>Spülsequenz wird neu gestartet.</Consequences>
+  </Message>
+</Domain>

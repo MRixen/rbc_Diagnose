@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="INT" domainNo="10" lang="de" elogTextVersion="1.0" min="0" max="0">
+  <Message number="0">
+    <Title>Interner Fehler</Title>
+    <Description>
+      <arg format="%s" ordinal="1" />
+      <p />
+    </Description>
+    <Actions />
+  </Message>
+</Domain>

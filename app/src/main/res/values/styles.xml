@@ -4,7 +4,11 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
 
         <!-- Customize your theme here. -->
+
     </style>
-
-
 </resources>
+
+<!--<style name="dialog_style" parent="@android:style/Theme.Dialog">-->
+<!--<item name="android:textColor">@color/dialogTextColor</item>-->
+<!--<item name="android:windowTitleStyle">@style/dialogTitleStyle</item>-->
+<!--</style>-->
