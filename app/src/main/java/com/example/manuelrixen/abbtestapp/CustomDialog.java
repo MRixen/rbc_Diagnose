@@ -16,7 +16,7 @@ public class CustomDialog extends Dialog{
     public CustomDialog(Context context) {
         super(context);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.layout_dialog);
+        setContentView(R.layout.dialog_events);
 
         Window dialogWindow = this.getWindow();
         dialogWindow.setBackgroundDrawable(new ColorDrawable(context.getResources().getColor(R.color.ModernWhite)));

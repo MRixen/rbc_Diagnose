@@ -40,6 +40,9 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
     private XmlPullParser xmlParser;
     private CustomDialog customDialog;
 
+    private boolean firstRun = true;
+    private boolean initOk = false;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -57,7 +60,17 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
             Log.d("xml_parser", "error1");
         }
         customDialog = new CustomDialog(getActivity());
+
+        // For testing
+//        String[] tempMessage = new String[] {"1","0","1"};
+//        new XMLParsing().execute(tempMessage);
+
+
         return rootView;
+    }
+
+    public Receiver.FirstEventListener getFirstEventListener() {
+        return this;
     }
 
     @Override
@@ -68,7 +81,9 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
 
     @Override
     public void onEvent1(boolean normal, String msg, String msgType) {
-        showEvent(msgType, msg, normal);
+        if(initOk){
+            showEvent(msgType, msg, normal);
+        }
     }
 
     @Override
@@ -79,24 +94,30 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
 
     @Override
     public void onEvent2(boolean normal, String msg, String msgType) {
-        showEvent(msgType, msg, normal);
+        if(initOk){
+            showEvent(msgType, msg, normal);
+        }
     }
 
     private void showEvent(String msgType, String eventMessage, boolean normal) {
-        boolean motorsOffState = true;
-
         // Split event message to get the motors state (first entry) the event domain (second entry) and the event number (third entry)
         String[] tempMessage = eventMessage.split("_");
 
         // TODO Add code to show warning messages, info messages, etc. in textview (not in dialog)
+        // TODO Switch automatically to event tab when a dialog message appear
         if (msgType.equals("e") && tempMessage[0].equals("1")){
             // Show dialog, when the motors in off state
+            Log.d("showEvent", "tempMessage[0]: " + tempMessage[0]);
             new XMLParsing().execute(tempMessage);
         }
         else if (msgType.equals("e") &&  tempMessage[0].equals("0")) {
             // Show event messages in text view (only warnings and infos)
             // eventViewer.setText(msgTemp + "\n" + eventViewer.getText());
         }
+    }
+
+    public void setInitOk() {
+        this.initOk = true;
     }
 
     private class XMLParsing extends AsyncTask<String, Void, String[]> {
@@ -112,6 +133,8 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
                         if (Integer.parseInt(eventMessages[2]) <= 175) filename = "elog/"+"opr_"+"elogtext_"+1+".xml";
                         if ((Integer.parseInt(eventMessages[2]) > 175) && (Integer.parseInt(eventMessages[2]) <= 1231)) filename = "elog/"+"opr_"+"elogtext_"+2+".xml";
                         if (Integer.parseInt(eventMessages[2]) > 1231) filename = "elog/"+"opr_"+"elogtext_"+3+".xml";
+                        Log.d("showEvent", "filename: " + filename);
+                        Log.d("showEvent", "eventMessages[2]: " + eventMessages[2]);
                         break;
                     case 2:
                         if (Integer.parseInt(eventMessages[2]) <= 150) filename = "elog/"+"sys_"+"elogtext_"+1+".xml";
@@ -152,6 +175,8 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
                         if (Integer.parseInt(eventMessages[2]) > 1463) filename = "elog/"+"io_"+"elogtext_"+4+".xml";
                         break;
                     default:
+                        // For testing
+//                        filename = "xmldata/testxml.xml";
                         filename = "";
                 }
                 InputStream in_s = getActivity().getAssets().open(filename);
@@ -161,7 +186,7 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
                 boolean messageReadOk = false;
                 int event = xmlParser.getEventType();
 
-                while (event != XmlPullParser.END_DOCUMENT)
+                while ((event != XmlPullParser.END_DOCUMENT) && !messageReadOk)
                 {
                     switch (event){
                         case XmlPullParser.START_TAG:
@@ -172,27 +197,37 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
                                     messageEntryFound = true;
                                 }
                             }
-                            // TODO Add Consequences as attribute
+                            // TODO Add Consequences as attribute, etc.
+                            // TODO Add possiblity to insert the arguments inside xml-string
                             if(messageEntryFound && name.equals("Title")) eventDescription[0] = xmlParser.nextText();
                             if(messageEntryFound && name.equals("Description")) eventDescription[1] = xmlParser.nextText();
-                            if(messageEntryFound && name.equals("Actions")) eventDescription[2] = xmlParser.nextText();
+//                            if(messageEntryFound && name.equals("Actions")) eventDescription[2] = xmlParser.nextText();
                             break;
 
                         case XmlPullParser.END_TAG:
-                            if(name.equals("/Message") && !messageEntryFound) messageReadOk = true;
+                            name = xmlParser.getName();
+                            if(name.equals("Message") && messageEntryFound){
+                                messageReadOk = true;
+                                Log.d("xmlParser", "messageReadOk");
+                            }
                            break;
                     }
-                    if (!messageReadOk) event = xmlParser.next();
+                    if (!messageReadOk){
+                        event = xmlParser.next();
+                    }
                 }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
-                Log.d("xml_parser", String.valueOf(e));
+                Log.d("xml_parser1", String.valueOf(e));
             } catch (XmlPullParserException e) {
                 e.printStackTrace();
-                Log.d("xml_parser", String.valueOf(e));
+                Log.d("xml_parser2", String.valueOf(e));
             } catch (IOException e) {
                 e.printStackTrace();
-                Log.d("xml_parser", String.valueOf(e));
+                Log.d("xml_parser3", String.valueOf(e));
+            } catch (NullPointerException e){
+                e.printStackTrace();
+                Log.d("xml_parser4", String.valueOf(e));
             }
             return eventDescription;
         }

@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.manuelrixen.abbtestapp.Tabs.CycleTime;
+import com.example.manuelrixen.abbtestapp.Tabs.Events;
 import com.example.manuelrixen.abbtestapp.Tabs.Logging;
 import com.example.manuelrixen.abbtestapp.Tabs.MachineData;
 
@@ -27,6 +28,7 @@ public class Receiver implements Runnable {
     private FirstEventListener cycleTime_firstEventListener;
     private FirstEventListener machineData_firstEventListener;
     private FirstEventListener logging_firstEventListener;
+    private FirstEventListener event_firstEventListener;
     private SecondEventListener cycleTime_secondEventListener;
 
     private NetClient nc;
@@ -34,13 +36,14 @@ public class Receiver implements Runnable {
     private Activity activity = new Activity();
     private boolean normal;
 
-    public Receiver(Context context, String ip, String port, boolean normal, int eventListenerNumber, CycleTime cycleTime, MachineData machineData, Logging logging) {
+    public Receiver(Context context, String ip, String port, boolean normal, int eventListenerNumber, CycleTime cycleTime, MachineData machineData, Logging logging, Events events) {
         this.normal = normal;
         this.context = context;
         this.cycleTime_firstEventListener = cycleTime.getFirstEventListener();
         this.cycleTime_secondEventListener = cycleTime.getSecondEventListener();
         this.machineData_firstEventListener = machineData.getFirstEventListener();
         this.logging_firstEventListener = logging.getFirstEventListener();
+        this.event_firstEventListener = events.getFirstEventListener();
 
         this.eventListenerNumber = eventListenerNumber;
         nc = new NetClient(ip, Integer.parseInt(port));
@@ -73,6 +76,13 @@ public class Receiver implements Runnable {
                                             cycleTime_secondEventListener.onEvent2(true, data[0], data[1]);
                                         } else {
                                             cycleTime_secondEventListener.onEvent2(false, data[0], data[1]);
+                                        }
+                                        break;
+                                    case "e":
+                                        if (normal) {
+                                            event_firstEventListener.onEvent1(true, data[0], data[1]);
+                                        } else {
+                                            event_firstEventListener.onEvent1(false, data[0], data[1]);
                                         }
                                         break;
                                     default:

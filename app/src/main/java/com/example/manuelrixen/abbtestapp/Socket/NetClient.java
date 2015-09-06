@@ -99,6 +99,9 @@ public class NetClient {
                         catch(NumberFormatException e){
                             incomingMessage = "";
                         }
+                        catch(IllegalArgumentException e){
+                            incomingMessage = "";
+                        }
 
                         if (incomingMessage.length() != 0) {
 

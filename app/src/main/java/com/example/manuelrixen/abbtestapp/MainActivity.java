@@ -9,6 +9,7 @@ import android.support.v4.app.*;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -131,6 +132,12 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
     @Override
     public void onTabSelected(android.app.ActionBar.Tab tab, FragmentTransaction ft) {
         // When the given tab is selected, switch to the corresponding page in the ViewPager.
+        Log.d("tab_position: ", String.valueOf(tab.getPosition()));
+        switch (tab.getPosition()){
+            case 3:
+                events.setInitOk();
+                break;
+        }
         mViewPager.setCurrentItem(tab.getPosition());
     }
 
@@ -247,15 +254,15 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
             String ip = iData.getString("ip");
             String port = iData.getString("port");
 
-            startReceiver(0, false, ip, port, cycleTime, machineData, logging);
+            startReceiver(0, false, ip, port, cycleTime, machineData, logging, events);
         }
         if(resultCode == RESULT_CANCELED){
             finish();
         }
     }
 
-    private void startReceiver(int number, boolean normalView, String ip, String port, CycleTime cycleTime, MachineData machineData, Logging logging) {
-        receiver[number] = new Receiver(this, ip, port, normalView, number, cycleTime, machineData, logging);
+    private void startReceiver(int number, boolean normalView, String ip, String port, CycleTime cycleTime, MachineData machineData, Logging logging, Events events) {
+        receiver[number] = new Receiver(this, ip, port, normalView, number, cycleTime, machineData, logging, events);
         rThread[number] = new Thread(receiver[number]);
         rThread[number].start();
         try {

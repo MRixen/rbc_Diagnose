@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record>
     <Message number="1" eDefine="SYS_ERR_ARL_ARGDUPOPT">
-        <Title>Argumentfehler</Title>
-        <Description>Optionales Argument X mehrmals im selben Routineaufruf vorhanden.</Description>
-        <Actions>1) Sicherstellen, dass der optionale Parameter im selben Routinenaufruf nur einmal angegeben ist.</Actions>
+        <Title>Argumentfehler 1</Title>
+        <Description>Optionales Argument 1 mehrmals im selben Routineaufruf vorhanden.</Description>
+        <Actions>1) Sicherstellen 1, dass der optionale Parameter im selben Routinenaufruf nur einmal angegeben ist.</Actions>
+    </Message>
+    <Message number="2" eDefine="SYS_ERR_ARL_ARGDUPOPT">
+        <Title>Argumentfehler 2</Title>
+        <Description>Optionales Argument 2 mehrmals im selben Routineaufruf vorhanden.</Description>
+        <Actions>1) Sicherstellen 2, dass der optionale Parameter im selben Routinenaufruf nur einmal angegeben ist.</Actions>
+    </Message>
+    <Message number="3" eDefine="SYS_ERR_ARL_ARGDUPOPT">
+        <Title>Argumentfehler 3</Title>
+        <Description>Optionales Argument 3 mehrmals im selben Routineaufruf vorhanden.</Description>
+        <Actions>1) Sicherstellen 3, dass der optionale Parameter im selben Routinenaufruf nur einmal angegeben ist.</Actions>
     </Message>
 </record>
