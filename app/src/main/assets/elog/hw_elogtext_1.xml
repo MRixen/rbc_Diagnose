@@ -5,14 +5,14 @@
     <Description>DeviceNet-Master/Slave-Karte funktioniert nicht.</Description>
     <Consequences>Keine Kommunikation im DeviceNet möglich.</Consequences>
     <Causes>DeviceNet-Master/Slave-Karte funktioniert nicht korrekt oder fehlt.</Causes>
-    <Actions>1. Sicherstellen, dass eine DeviceNet-Master/Slave-Karte installiert ist.<p />2. Karte austauschen, falls fehlerhaft.</Actions>
+    <Actions>1. Sicherstellen, dass eine DeviceNet-Master/Slave-Karte installiert ist.2. Karte austauschen, falls fehlerhaft.</Actions>
   </Message>
   <Message number="1811" eDefine="SYS_ERR_HW_D603_SECOND_BOARD_NOT_FOUND">
     <Title>Zweite DeviceNet-Master/Slave-Karte fehlt</Title>
     <Description>Dualoption ist konfiguriert, aber nur eine DeviceNet-Master/Slave-Karte ist installiert.</Description>
     <Consequences>Nur ein DeviceNet-Bus ist verfügbar.</Consequences>
     <Causes>Die zweite DeviceNet-Master/Slave-Karte funktioniert nicht korrekt oder fehlt.</Causes>
-    <Actions>1. Sicherstellen, dass eine zweite DeviceNet-Master/Slave-Karte installiert ist.<p />2. Zweite Karte austauschen, falls fehlerhaft.</Actions>
+    <Actions>1. Sicherstellen, dass eine zweite DeviceNet-Master/Slave-Karte installiert ist.2. Zweite Karte austauschen, falls fehlerhaft.</Actions>
   </Message>
   <Message number="1812" eDefine="SYS_ERR_HW_D603_INCOMPATIBLE_BOARDS">
     <Title>Unkompatible DeviceNet-Karten </Title>
@@ -26,39 +26,39 @@
     <Description>Profibus-DP-Master-Karte funktioniert nicht.</Description>
     <Consequences>Keine Kommunikation im Profibus möglich.</Consequences>
     <Causes>Profibus-DP-Master-Karte funktioniert nicht korrekt oder fehlt.</Causes>
-    <Actions>1. Sicherstellen, dass eine Profibus-DP-Master-Karte installiert ist. <p />2. Karte austauschen, falls fehlerhaft.</Actions>
+    <Actions>1. Sicherstellen, dass eine Profibus-DP-Master-Karte installiert ist. 2. Karte austauschen, falls fehlerhaft.</Actions>
   </Message>
   <Message number="1911" eDefine="SYS_ERR_HW_D510_PROGRAM_ERR">
     <Title>Fehler bei Aktualisierung der Profibus-Karte</Title>
-    <Description>RobotWare konnte neue Treibersoftware nicht auf Profibus-DP-Master-Karte herunterladen. Der Kanal <arg format="%s" ordinal="1" /> (ch <arg format="%i" ordinal="2" />) der Profibus-Karte konnte nicht programmiert werden. Interner Fehlercode: <arg format="%i" ordinal="3" />.</Description>
+    <Description>RobotWare konnte neue Treibersoftware nicht auf Profibus-DP-Master-Karte herunterladen. Der Kanal %s (ch %i2) der Profibus-Karte konnte nicht programmiert werden. Interner Fehlercode: %i3.</Description>
     <Consequences>Keine Kommunikation im Profibus möglich.</Consequences>
     <Causes>RobotWare ist eventuell beschädigt oder die Kartenhardware arbeitet nicht korrekt.</Causes>
-    <Actions>1. System neu starten, um erneut Download der Software zu versuchen. <p />2. Vorhandene Systemdateien neu installieren. <p />3. Ein neues System erstellen und ausführen, um die Treibersoftware herunterzuladen. <p />4. Karte austauschen, falls fehlerhaft.</Actions>
+    <Actions>1. System neu starten, um erneut Download der Software zu versuchen. 2. Vorhandene Systemdateien neu installieren. 3. Ein neues System erstellen und ausführen, um die Treibersoftware herunterzuladen. 4. Karte austauschen, falls fehlerhaft.</Actions>
   </Message>
   <Message number="1912" eDefine="SYS_ERR_HW_D510_STARTUP_ERR">
     <Title>Fehler an Profibus-DP-Master-Karte </Title>
     <Description>Profibus-DP-Master-Karte wurde nicht korrekt gestartet. </Description>
     <Consequences>Keine Kommunikation im Profibus möglich.</Consequences>
     <Causes>Die Hardware der Profibus-DP-Master-Karte hat eventuell eine Fehlfunktion.</Causes>
-    <Actions>1. System neu starten. <p />2. Profibus-DP-Master-Karte austauschen, falls fehlerhaft.</Actions>
+    <Actions>1. System neu starten. 2. Profibus-DP-Master-Karte austauschen, falls fehlerhaft.</Actions>
   </Message>
   <Message number="1913" eDefine="SYS_ERR_HW_D510_BOARD_ERR">
     <Title>Interner Fehler an Profibus-DP-Master-Karte </Title>
-    <Description>Profibus-DP-Master-Karte hat internen Fehler <arg format="%i" ordinal="1" /> gemeldet. </Description>
+    <Description>Profibus-DP-Master-Karte hat internen Fehler %i1 gemeldet. </Description>
     <Consequences>Keine Kommunikation im Profibus möglich.</Consequences>
     <Causes>Die Hardware der Profibus-DP-Master-Karte hat eventuell eine Fehlfunktion.</Causes>
-    <Actions>1. System neu starten. <p />2. Profibus-DP-Master-Karte austauschen, falls fehlerhaft.</Actions>
+    <Actions>1. System neu starten. 2. Profibus-DP-Master-Karte austauschen, falls fehlerhaft.</Actions>
   </Message>
   <Message number="1914" eDefine="SYS_ERR_HW_D510_BUS_ERROR">
     <Title>Profibus-Startfehler</Title>
-    <Description>- Profibus-Master-Busfehler. Fehlercode <arg format="%i" ordinal="1" />. Kabel, Abschlüsse und Module prüfen, dann neu starten.</Description>
+    <Description>- Profibus-Master-Busfehler. Fehlercode %i1. Kabel, Abschlüsse und Module prüfen, dann neu starten.</Description>
     <Actions />
   </Message>
   <Message number="1915" eDefine="SYS_ERR_HW_D510_TO_MANY_ERRORS">
     <Title>Profibus-Busfehler</Title>
-    <Description>Profibus-Master-Busfehler.<p /><p />Interner Fehler.<p />Fehlercode: <arg format="%i" ordinal="1" />.</Description>
+    <Description>Profibus-Master-Busfehler.Interner Fehler.Fehlercode: %i1.</Description>
     <Consequences>Bestimmte erwartete, zugehörige Fehler sind eventuell verzögert.</Consequences>
-    <Causes>Fehlerhafte Profibus-Kabel, Abschlüsse und/oder Modul(e).<p />Doppelte Profibus-Adressen.</Causes>
+    <Causes>Fehlerhafte Profibus-Kabel, Abschlüsse und/oder Modul(e).Doppelte Profibus-Adressen.</Causes>
     <Actions>Kabel, Abschlüsse und Module prüfen.</Actions>
   </Message>
   <Message number="1916" eDefine="SYS_ERR_HW_D510_BUS_OK">
@@ -67,10 +67,10 @@
   </Message>
   <Message number="1917" eDefine="SYS_ERR_HW_D510_EXCEPTION">
     <Title>Ausnahme an Profibus-DP-Master-Karte</Title>
-    <Description>In der Profibus-DP-Master-Karte ist ein schwerwiegender Fehler aufgetreten. <arg format="%s" ordinal="1" /> Kanal in Task <arg format="%i" ordinal="2" />. Parameter <arg format="%s" ordinal="3" /></Description>
+    <Description>In der Profibus-DP-Master-Karte ist ein schwerwiegender Fehler aufgetreten. %s Kanal in Task %i2. Parameter %s</Description>
     <Consequences>Keine Kommunikation im Profibus möglich.</Consequences>
     <Causes>Die Hardware der Profibus-DP-Master-Karte hat eventuell eine Fehlfunktion.</Causes>
-    <Actions>1. System neu starten. <p />2. Profibus-DP-Master-Karte austauschen, falls fehlerhaft.</Actions>
+    <Actions>1. System neu starten. 2. Profibus-DP-Master-Karte austauschen, falls fehlerhaft.</Actions>
   </Message>
   <Message number="2501" eDefine="SYS_ERR_HW_FPGA_NOT_FOUND">
     <Title>Hauptcomputer-FPGA nicht erreichbar</Title>
@@ -84,231 +84,231 @@
     <Description>Es besteht keine serielle Kommunikation zwischen Sicherheitssystem und Roboterkommunikationskarte. </Description>
     <Consequences>Das System wechselt in den Zustand SYS FAIL.</Consequences>
     <Causes>Wahrscheinlich Hardwarefehler in Kabel zwischen Sicherheitssystem und Roboterkommunikationskarte. Sicherheitssystem oder seine Stromversorgung können ebenfalls fehlerhaft sein.</Causes>
-    <Actions>1) System neu starten, um Betrieb wiederaufzunehmen. <p />2) Sicherstellen, dass das Kabel zwischen Roboterkommunikationskarte und Sicherheitssystem funktioniert und korrekt angeschlossen ist. <p />3) Netzteil des Sicherheitssystems prüfen. <p />4) Gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
+    <Actions>1) System neu starten, um Betrieb wiederaufzunehmen. 2) Sicherstellen, dass das Kabel zwischen Roboterkommunikationskarte und Sicherheitssystem funktioniert und korrekt angeschlossen ist. 3) Netzteil des Sicherheitssystems prüfen. 4) Gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
   </Message>
   <Message number="2540" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_STARTED">
     <Title>Firmware-Reflash der Antriebseinheit gestartet</Title>
-    <Description>In Antriebsmodul <arg format="%d" ordinal="1" /> hat eine erforderliche Aktualisierung der Firmware in der Antriebseinheit mit Einheiten-Position <arg format="%d" ordinal="2" /> begonnen. Die alte Firmware-Revision <arg format="%d" ordinal="3" /> wird ersetzt durch Version <arg format="%d" ordinal="4" />.</Description>
+    <Description>In Antriebsmodul %d1 hat eine erforderliche Aktualisierung der Firmware in der Antriebseinheit mit Einheiten-Position %d2 begonnen. Die alte Firmware-Revision %d3 wird ersetzt durch Version %d4.</Description>
     <Actions>Warten, bis der Aktualisierungsprozess der Firmware abgeschlossen ist. System nicht ausschalten!</Actions>
   </Message>
   <Message number="2541" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_COMPLETE">
     <Title>Firmware-Reflash der Antriebseinheit abgeschlossen</Title>
-    <Description>In Antriebsmodul <arg format="%d" ordinal="1" /> ist die erforderliche Aktualisierung der Firmware in der Antriebseinheit mit Einheiten-Position <arg format="%d" ordinal="2" /> abgeschlossen. Neue Version ist <arg format="%d" ordinal="3" />.</Description>
+    <Description>In Antriebsmodul %d1 ist die erforderliche Aktualisierung der Firmware in der Antriebseinheit mit Einheiten-Position %d2 abgeschlossen. Neue Version ist %d3.</Description>
   </Message>
   <Message number="2542" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_NOT_SUPPORTED">
     <Title>Hardware der Antriebseinheit nicht unterstützt</Title>
-    <Description>In Antriebsmodul <arg format="%d" ordinal="1" /> kann das System die Antriebseinheit mit Hardware-Identität <arg format="%s" ordinal="2" /> nicht verwenden, da die Hardware-Version <arg format="%d" ordinal="3" /> nicht unterstützt wird.</Description>
+    <Description>In Antriebsmodul %d1 kann das System die Antriebseinheit mit Hardware-Identität %s nicht verwenden, da die Hardware-Version %d3 nicht unterstützt wird.</Description>
     <Consequences>Das System kann die Antriebseinheit nicht verwenden. Das System hat in den Zustand Systemfehler gewechselt.</Consequences>
     <Causes>Die RobotWare-Version ist zu alt für die Antriebseinheit.</Causes>
-    <Actions>1) Das System auf eine RobotWare-Version aktualisieren, die die Version der Antriebseinheit unterstützt.<p />2) Ersetzen der Antriebseinheit mit einer kompatiblen Version.</Actions>
+    <Actions>1) Das System auf eine RobotWare-Version aktualisieren, die die Version der Antriebseinheit unterstützt.2) Ersetzen der Antriebseinheit mit einer kompatiblen Version.</Actions>
   </Message>
   <Message number="2543" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_FAILED">
     <Title>Firmware-Reflash der Antriebseinheit fehlgeschlagen</Title>
-    <Description>In Antriebsmodul <arg format="%d" ordinal="1" /> ist die Aktualisierung der Firmware in der Antriebseinheit mit Einheiten-Position <arg format="%d" ordinal="2" /> fehlgeschlagen.</Description>
+    <Description>In Antriebsmodul %d1 ist die Aktualisierung der Firmware in der Antriebseinheit mit Einheiten-Position %d2 fehlgeschlagen.</Description>
     <Consequences>Die erforderliche Aktualisierung der Firmware der Antriebseinheit wurde nicht durchgeführt. </Consequences>
-    <Actions>1) Andere Ereignisprotokollmeldungen der Hardware überprüfen, um detaillierte Erläuterungen für den Fehlerzustand zu erhalten.<p />2) Erneut versuchen durch Neustart des Systems mit dem Netzschalter.</Actions>
+    <Actions>1) Andere Ereignisprotokollmeldungen der Hardware überprüfen, um detaillierte Erläuterungen für den Fehlerzustand zu erhalten.2) Erneut versuchen durch Neustart des Systems mit dem Netzschalter.</Actions>
   </Message>
   <Message number="2544" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_FILE_NOT_FOUND">
     <Title>Firmwaredatei der Antriebseinheit nicht gefunden</Title>
-    <Description>Die Datei <arg format="%s" ordinal="1" />, erforderlich für die Aktualisierung der Firmware einer Antriebseinheit, wurde nicht gefunden.</Description>
+    <Description>Die Datei %s, erforderlich für die Aktualisierung der Firmware einer Antriebseinheit, wurde nicht gefunden.</Description>
     <Consequences>Die erforderliche Aktualisierung der Firmware der Antriebseinheit wurde nicht durchgeführt.</Consequences>
     <Causes>Die RobotWare-Installation beinhaltet keine Firmware-Datei.</Causes>
     <Actions>System neu installieren.</Actions>
   </Message>
   <Message number="2545" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_FILE_TYPE_ERROR">
     <Title>Typenfehler in der Firmware der Antriebseinheit</Title>
-    <Description>Die Datei <arg format="%s" ordinal="1" />, erforderlich für die Aktualisierung der Firmware einer Antriebseinheit, ist vom falschen Typ.</Description>
+    <Description>Die Datei %s, erforderlich für die Aktualisierung der Firmware einer Antriebseinheit, ist vom falschen Typ.</Description>
     <Consequences>Die erforderliche Aktualisierung der Firmware der Antriebseinheit wurde nicht durchgeführt.</Consequences>
     <Causes>Die RobotWare-Installation ist fehlerhaft.</Causes>
     <Actions>System neu installieren.</Actions>
   </Message>
   <Message number="2546" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_FILE_CORRUPT">
     <Title>Dateifehler in der Firmware der Antriebseinheit</Title>
-    <Description>Die Datei <arg format="%s" ordinal="1" />, erforderlich für die Aktualisierung der Firmware einer Antriebseinheit, ist nicht verwendbar, da sie die Integritätsprüfung nicht bestanden hat. </Description>
+    <Description>Die Datei %s, erforderlich für die Aktualisierung der Firmware einer Antriebseinheit, ist nicht verwendbar, da sie die Integritätsprüfung nicht bestanden hat. </Description>
     <Consequences>Die erforderliche Aktualisierung der Firmware der Antriebseinheit wurde nicht durchgeführt.</Consequences>
     <Causes>Die RobotWare-Installation ist fehlerhaft.</Causes>
     <Actions>System neu installieren.</Actions>
   </Message>
   <Message number="2550" eDefine="SYS_ERR_HW_FW_REFLASH_STARTED">
     <Title>Firmware-Reflash gestartet</Title>
-    <Description>Angeforderte Aktualisierung der Firmware <arg format="%s" ordinal="1" /> wurde gestartet. Benutzte Datei: <arg format="%s" ordinal="2" />]. </Description>
+    <Description>Angeforderte Aktualisierung der Firmware %s wurde gestartet. Benutzte Datei: %s]. </Description>
     <Actions>Auf Reflash-Ende warten.</Actions>
   </Message>
   <Message number="2551" eDefine="SYS_ERR_HW_FW_REFLASH_COMPLETE">
     <Title>Firmware-Reflash abgeschlossen</Title>
-    <Description>Die Aktualisierung der <arg format="%s" ordinal="1" /> Firmware wurde erfolgreich abgeschlossen.</Description>
+    <Description>Die Aktualisierung der %s Firmware wurde erfolgreich abgeschlossen.</Description>
   </Message>
   <Message number="2552" eDefine="SYS_ERR_HW_FW_REFLASH_FAILED">
     <Title>Firmware-Reflash fehlgeschlagen</Title>
-    <Description>Die Aktualisierung der <arg format="%s" ordinal="1" /> Firmware ist fehlgeschlagen.<p />Interner Fehlercode: <arg format="%d" ordinal="2" /></Description>
-    <Actions>1. Prüfen anderer Fehlermeldungen für detaillierte Erklärung.<p />2. Neustart des Systems.<p />3. Neuinstallation des Systems.<p />4. <arg format="%s" ordinal="3" /> ersetzen.</Actions>
+    <Description>Die Aktualisierung der %s Firmware ist fehlgeschlagen.Interner Fehlercode: %d2</Description>
+    <Actions>1. Prüfen anderer Fehlermeldungen für detaillierte Erklärung.2. Neustart des Systems.3. Neuinstallation des Systems.4. %s ersetzen.</Actions>
   </Message>
   <Message number="2553" eDefine="SYS_ERR_HW_FW_FILE_CORRUPT">
     <Title>Firmware-Datei beschädigt</Title>
-    <Description>Die Firmware-Datei [ <arg format="%s" ordinal="1" />] ist beschädigt. Interner Fehlercode: <arg format="%d" ordinal="2" /></Description>
+    <Description>Die Firmware-Datei [ %s] ist beschädigt. Interner Fehlercode: %d2</Description>
     <Actions>System neu installieren.</Actions>
   </Message>
   <Message number="2554" eDefine="SYS_ERR_HW_FW_FILE_NOT_FOUND">
     <Title>Firmware-Datei nicht gefunden</Title>
-    <Description>Die Firmware-Datei [ <arg format="%s" ordinal="1" />] wurde nicht gefunden.</Description>
+    <Description>Die Firmware-Datei [ %s] wurde nicht gefunden.</Description>
     <Actions>System neu installieren.</Actions>
   </Message>
   <Message number="2555" eDefine="SYS_ERR_HW_FW_PU_UNUSABLE">
     <Title>Sicherheitssystemeinheit nicht unterstützt</Title>
-    <Description>Das System kann die Sicherheitssystemeinheit <arg format="%s" ordinal="1" />, Revision <arg format="%d" ordinal="2" /> nicht verwenden.</Description>
+    <Description>Das System kann die Sicherheitssystemeinheit %s, Revision %d2 nicht verwenden.</Description>
     <Consequences>Das System kann die betroffene Hardware nicht verwenden.</Consequences>
     <Actions>1. Austausch der betroffenen Hardware mit einer kompatiblen Version.</Actions>
   </Message>
   <Message number="2560" eDefine="SYS_ERR_HW_FW_SC_REFLASH_STARTED">
     <Title>Reflash der Achscomputer-Firmware gestartet</Title>
-    <Description>In Antriebsmodul <arg format="%d" ordinal="1" /> hat eine erforderliche Aktualisierung der Firmware im Achscomputer <arg format="%s" ordinal="2" /> mit Hardware-Identität <arg format="%s" ordinal="3" /> begonnen. Die alte Firmware-Revision <arg format="%d" ordinal="4" /> wird ersetzt durch Version <arg format="%d" ordinal="5" />.</Description>
+    <Description>In Antriebsmodul %d1 hat eine erforderliche Aktualisierung der Firmware im Achscomputer %s mit Hardware-Identität %s begonnen. Die alte Firmware-Revision %d4 wird ersetzt durch Version %d5.</Description>
     <Actions>Warten, bis der Aktualisierungsprozess der Firmware abgeschlossen ist. System nicht ausschalten!</Actions>
   </Message>
   <Message number="2561" eDefine="SYS_ERR_HW_FW_SC_REFLASH_COMPLETE">
     <Title>Reflash der Achscomputer-Firmware abgeschlossen</Title>
-    <Description>In Antriebsmodul <arg format="%d" ordinal="1" /> ist eine Aktualisierung der Firmware im Achscomputer <arg format="%s" ordinal="2" /> mit Hardware-Identität <arg format="%s" ordinal="3" /> abgeschlossen. Neue Version ist <arg format="%d" ordinal="4" />.</Description>
+    <Description>In Antriebsmodul %d1 ist eine Aktualisierung der Firmware im Achscomputer %s mit Hardware-Identität %s abgeschlossen. Neue Version ist %d4.</Description>
   </Message>
   <Message number="2562" eDefine="SYS_ERR_HW_FW_AXC_COMMUNICATION">
     <Title>Achscomputer Kommunikationsfehler</Title>
-    <Description>Beim Versuch des Systems, die Firmware-Informationen auszulesen, war keine Kommunikation mit dem Achscomputer in Antriebsmodul <arg format="%d" ordinal="1" /> möglich.</Description>
+    <Description>Beim Versuch des Systems, die Firmware-Informationen auszulesen, war keine Kommunikation mit dem Achscomputer in Antriebsmodul %d1 möglich.</Description>
     <Consequences>Das System kann nicht feststellen, ob eine Aktualisierung der Firmware in dem betroffenen Antriebsmodul notwendig ist. Das System hat in den Zustand Systemfehler gewechselt.</Consequences>
     <Causes>Mögliche Ursachen: Kabelbruch, defekter Anschluss oder massive Interferenzen im Kabel zwischen Hauptcomputer und Achscomputer.</Causes>
-    <Actions>1) Sicherstellen, dass das Kabel zwischen Hauptcomputer und Achscomputer nicht beschädigt ist und dass beide Anschlüsse korrekt angeschlossen sind. <p />2) Sicherstellen, dass keine extremen elektromagnetischen Interferenzen in der Nähe der Roboterkabel erzeugt werden.</Actions>
+    <Actions>1) Sicherstellen, dass das Kabel zwischen Hauptcomputer und Achscomputer nicht beschädigt ist und dass beide Anschlüsse korrekt angeschlossen sind. 2) Sicherstellen, dass keine extremen elektromagnetischen Interferenzen in der Nähe der Roboterkabel erzeugt werden.</Actions>
   </Message>
   <Message number="2563" eDefine="SYS_ERR_HW_FW_AXC_NOT_SUPPORTED">
     <Title>Achsomputer-Hardware nicht unterstützt</Title>
-    <Description>In Antriebsmodul <arg format="%d" ordinal="2" /> kann das System den Achscomputer mit Hardwareidentität <arg format="%s" ordinal="1" /> nicht verwenden, da die Hardware-Version <arg format="%d" ordinal="3" /> nicht unterstützt wird.</Description>
+    <Description>In Antriebsmodul %d2 kann das System den Achscomputer mit Hardwareidentität %s nicht verwenden, da die Hardware-Version %d3 nicht unterstützt wird.</Description>
     <Consequences>Das System kann den Achscomputer nicht verwenden. Das System hat in den Zustand Systemfehler gewechselt.</Consequences>
     <Causes>Die RobotWare-Version ist zu alt für die Achscomputer-Einheit.</Causes>
-    <Actions>1) Ersetzen des Achscomputers mit einer kompatiblen Version.<p />2) System aktualisieren auf eine RobotWare-Version, die die Version des Achscomputers unterstützt.</Actions>
+    <Actions>1) Ersetzen des Achscomputers mit einer kompatiblen Version.2) System aktualisieren auf eine RobotWare-Version, die die Version des Achscomputers unterstützt.</Actions>
   </Message>
   <Message number="2564" eDefine="SYS_ERR_HW_FW_SC_REFLASH_FAILED">
     <Title>Reflash der Achscomputer-Firmware fehlgeschlagen</Title>
-    <Description>In Antriebsmodul <arg format="%d" ordinal="1" /> ist eine Aktualisierung der Firmware im Achscomputer <arg format="%s" ordinal="2" /> mit Hardware-Identität <arg format="%s" ordinal="3" /> fehlgeschlagen.</Description>
+    <Description>In Antriebsmodul %d1 ist eine Aktualisierung der Firmware im Achscomputer %s mit Hardware-Identität %s fehlgeschlagen.</Description>
     <Consequences>Die erforderliche Aktualisierung der Firmware des Achscomputers wurde nicht durchgeführt.</Consequences>
-    <Actions>1) Andere Ereignisprotokollmeldungen der Hardware überprüfen, um detaillierte Erläuterungen für den Fehlerzustand zu erhalten.<p />2) Erneut versuchen durch Neustart des Systems mit dem Hauptschalter.</Actions>
+    <Actions>1) Andere Ereignisprotokollmeldungen der Hardware überprüfen, um detaillierte Erläuterungen für den Fehlerzustand zu erhalten.2) Erneut versuchen durch Neustart des Systems mit dem Hauptschalter.</Actions>
   </Message>
   <Message number="2565" eDefine="SYS_ERR_HW_FW_SC_REFLASH_FILE_NOT_FOUND">
     <Title>Firmware-Datei für Achscomputer nicht gefunden</Title>
-    <Description>Die Datei <arg format="%s" ordinal="1" />, erforderlich für die Aktualisierung einer Achscomputer-Firmware einer Antriebseinheit, wurde nicht gefunden.</Description>
+    <Description>Die Datei %s, erforderlich für die Aktualisierung einer Achscomputer-Firmware einer Antriebseinheit, wurde nicht gefunden.</Description>
     <Consequences>Die erforderliche Aktualisierung der Firmware des Achscomputers wurde nicht durchgeführt.</Consequences>
     <Causes>Die RobotWare-Installation beinhaltet keine Firmware-Datei.</Causes>
     <Actions>System neu installieren.</Actions>
   </Message>
   <Message number="2567" eDefine="SYS_ERR_HW_FW_SC_REFLASH_FILE_TYPE_ERROR">
     <Title>Achscomputer Firmware-Datei Typenfehler</Title>
-    <Description>Die Datei <arg format="%s" ordinal="1" />, erforderlich für die Aktualisierung der Firmware des Achscomputers, ist vom falschen Typ.</Description>
+    <Description>Die Datei %s, erforderlich für die Aktualisierung der Firmware des Achscomputers, ist vom falschen Typ.</Description>
     <Consequences>Die erforderliche Aktualisierung der Firmware des Achscomputers wird nicht durchgeführt. </Consequences>
     <Causes>Die Firmware-Datei ist beschädigt. </Causes>
     <Actions>System neu installieren.</Actions>
   </Message>
   <Message number="2568" eDefine="SYS_ERR_HW_FW_SC_REFLASH_FILE_CORRUPT">
     <Title>Fehler in Achscomputer Firmware-Datei</Title>
-    <Description>Die Datei <arg format="%s" ordinal="1" />, erforderlich für die Aktualisierung der Firmware des Achscomputers, ist nicht verwendbar, da sie die Integritätsprüfung nicht bestanden hat.</Description>
+    <Description>Die Datei %s, erforderlich für die Aktualisierung der Firmware des Achscomputers, ist nicht verwendbar, da sie die Integritätsprüfung nicht bestanden hat.</Description>
     <Consequences>Die erforderliche Aktualisierung der Firmware des Achscomputers wurde nicht durchgeführt.</Consequences>
     <Causes>Die Firmware-Datei ist beschädigt.</Causes>
     <Actions>System neu installieren.</Actions>
   </Message>
   <Message number="2569" eDefine="SYS_ERR_HW_FW_SC_CORRUPT_FLASH">
     <Title>Beschädigte Achscomputer-Hardware</Title>
-    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> ist der Inhalt im Flash-Speicher des Achscomputers beschädigt. </Description>
-    <Actions>1. Erneut versuchen durch Neustarten des Systems mit dem Netzschalter.<p />2. Bleibt das Problem weiter bestehen, Achscomputer ersetzen. </Actions>
+    <Description>Im Antriebsmodul %d1 ist der Inhalt im Flash-Speicher des Achscomputers beschädigt. </Description>
+    <Actions>1. Erneut versuchen durch Neustarten des Systems mit dem Netzschalter.2. Bleibt das Problem weiter bestehen, Achscomputer ersetzen. </Actions>
   </Message>
   <Message number="2570" eDefine="SYS_ERR_HW_FW_AXC_REFLASH_STARTED">
     <Title>Firmware-Reflash gestartet</Title>
-    <Description>Angeforderte Aktualisierung der Firmware <arg format="%s" ordinal="1" /> wurde gestartet. Austauschen der alten Firmware-Version: <arg format="%d" ordinal="2" />]. </Description>
+    <Description>Angeforderte Aktualisierung der Firmware %s wurde gestartet. Austauschen der alten Firmware-Version: %d2]. </Description>
     <Actions>Auf Reflash-Ende warten.</Actions>
   </Message>
   <Message number="2571" eDefine="SYS_ERR_HW_FW_AXC_REFLASH_COMPLETE">
     <Title>Firmware-Reflash abgeschlossen</Title>
-    <Description>Die Aktualisierung der <arg format="%s" ordinal="1" /> Firmware wurde erfolgreich abgeschlossen. Neue Version: [<arg format="%d" ordinal="2" />]. Interner Code: [<arg format="%d" ordinal="3" />].</Description>
+    <Description>Die Aktualisierung der %s Firmware wurde erfolgreich abgeschlossen. Neue Version: [%d2]. Interner Code: [%d3].</Description>
   </Message>
   <Message number="2572" eDefine="SYS_ERR_HW_FW_AXC_REFLASH_FAILED">
     <Title>Firmware-Reflash fehlgeschlagen</Title>
-    <Description>Die Aktualisierung der <arg format="%s" ordinal="1" /> Firmware ist fehlgeschlagen.<p />Aktuelle Version: <arg format="%d" ordinal="2" />. Interner Fehlercode: <arg format="%d" ordinal="3" />.</Description>
-    <Actions>1. Andere Ereignisprotokollmeldungen der Hardware überprüfen, um detaillierte Erläuterungen für den Fehlerzustand zu erhalten.<p />2. Neustart des Systems.<p /></Actions>
+    <Description>Die Aktualisierung der %s Firmware ist fehlgeschlagen.Aktuelle Version: %d2. Interner Fehlercode: %d3.</Description>
+    <Actions>1. Andere Ereignisprotokollmeldungen der Hardware überprüfen, um detaillierte Erläuterungen für den Fehlerzustand zu erhalten.2. Neustart des Systems.</Actions>
   </Message>
   <Message number="2573" eDefine="SYS_ERR_HW_FW_AXC_FILE_ERROR">
     <Title>Firmware-Datei konnte nicht heruntergeladen werden.</Title>
-    <Description>Die Firmware-Datei <arg format="%s" ordinal="1" /> wurde nicht gefunden. Interner Fehlercode: <arg format="%d" ordinal="2" />.</Description>
+    <Description>Die Firmware-Datei %s wurde nicht gefunden. Interner Fehlercode: %d2.</Description>
     <Actions>System neu installieren.</Actions>
   </Message>
   <Message number="2574" eDefine="SYS_ERR_HW_FW_AXC_CORRUPT_FLASH">
     <Title>Beschädigte Achscomputer-Hardware</Title>
-    <Description>Der <arg format="%s" ordinal="1" /> Flash-Speicher enthält beschädigten Inhalt. Interner Fehlercode: <arg format="%d" ordinal="2" />.</Description>
-    <Actions>1. Andere Ereignisprotokollmeldungen der Hardware überprüfen, um detaillierte Erläuterungen für den Fehlerzustand zu erhalten.<p />2. System neu starten.<p />3. Ersetzen des Achscomputers, falls Fehler erneut auftritt.</Actions>
+    <Description>Der %s Flash-Speicher enthält beschädigten Inhalt. Interner Fehlercode: %d2.</Description>
+    <Actions>1. Andere Ereignisprotokollmeldungen der Hardware überprüfen, um detaillierte Erläuterungen für den Fehlerzustand zu erhalten.2. System neu starten.3. Ersetzen des Achscomputers, falls Fehler erneut auftritt.</Actions>
   </Message>
   <Message number="2575" eDefine="SYS_ERR_HW_FW_AXC_NO_BOARD_PRESENT">
     <Title>Keine Achscomputer-Karte gefunden</Title>
     <Description>System konnte keinen verbundenen Achscomputer finden.</Description>
-    <Actions>1. System auf Achscomputer-Karte überprüfen.<p />2. Ethernet-Kabel zwischen Haupt- und Achscomputer prüfen.<p />3. System neu starten.</Actions>
+    <Actions>1. System auf Achscomputer-Karte überprüfen.2. Ethernet-Kabel zwischen Haupt- und Achscomputer prüfen.3. System neu starten.</Actions>
   </Message>
   <Message number="2576" eDefine="SYS_ERR_HW_FW_AXC_NO_CONTACT">
     <Title>Achsen-Firmware: Keine Kommunikation</Title>
-    <Description>Es war keine Kommunikation des System mit Achsenkarte <arg format="%d" ordinal="1" /> möglich, um die Firmware-Version zu prüfen.</Description>
+    <Description>Es war keine Kommunikation des System mit Achsenkarte %d1 möglich, um die Firmware-Version zu prüfen.</Description>
     <Consequences>Das System kann die Firmware im betroffenen Achscomputer nicht prüfen und gegebenenfalls aktualisieren.</Consequences>
-    <Actions>1. System auf Achscomputerkarte überprüfen.<p />2. Ethernet-Kabel zwischen Haupt- und Achscomputer prüfen.<p />3. System neu starten.<p /></Actions>
+    <Actions>1. System auf Achscomputerkarte überprüfen.2. Ethernet-Kabel zwischen Haupt- und Achscomputer prüfen.3. System neu starten.</Actions>
   </Message>
   <Message number="2577" eDefine="SYS_ERR_HW_FW_AXC_HW_EEPROM_ERROR">
     <Title>Datenfehler Achscomputer-Hardware</Title>
-    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> hat der Achscomputer beschädigte Informationen der Einheit gespeicherte. </Description>
+    <Description>Im Antriebsmodul %d1 hat der Achscomputer beschädigte Informationen der Einheit gespeicherte. </Description>
     <Consequences>Das System hat in den Status Systemfehler gewechselt. </Consequences>
     <Causes>Die Integritätsprüfung bezüglich auf der Einheit gespeicherter Informationen des Achscomputers ist fehlgeschlagen.</Causes>
-    <Actions>1. Erneut versuchen durch Neustarten des Systems mit dem Netzschalter.<p />2. Fehlerhaften Achscomputer ersetzen. </Actions>
+    <Actions>1. Erneut versuchen durch Neustarten des Systems mit dem Netzschalter.2. Fehlerhaften Achscomputer ersetzen. </Actions>
   </Message>
   <Message number="2580" eDefine="SYS_ERR_HW_FW_CB_REFLASH_STARTED">
     <Title>Firmware-Reflash gestartet</Title>
-    <Description>Angeforderte Aktualisierung der Firmware <arg format="%s" ordinal="1" /> wurde gestartet. Interner Code: <arg format="%d" ordinal="2" />]. <p />Datei: [ <arg format="%s" ordinal="3" />]. <p /></Description>
+    <Description>Angeforderte Aktualisierung der Firmware %s wurde gestartet. Interner Code: %d2]. Datei: [ %s]. </Description>
     <Actions>Auf Reflash-Ende warten.</Actions>
   </Message>
   <Message number="2581" eDefine="SYS_ERR_HW_FW_CB_REFLASH_COMPLETE">
     <Title>Firmware-Reflash abgeschlossen</Title>
-    <Description>Die Aktualisierung der <arg format="%s" ordinal="1" /> Firmware wurde erfolgreich abgeschlossen. Interner Code: [<arg format="%d" ordinal="2" />]</Description>
+    <Description>Die Aktualisierung der %s Firmware wurde erfolgreich abgeschlossen. Interner Code: [%d2]</Description>
     <Actions>Keine Aktion erforderlich</Actions>
   </Message>
   <Message number="2582" eDefine="SYS_ERR_HW_FW_CB_REFLASH_FAILED">
     <Title>Firmware-Reflash fehlgeschlagen</Title>
-    <Description>Die Aktualisierung der <arg format="%s" ordinal="1" /> Firmware ist fehlgeschlagen.<p />Interner Fehlercode: <arg format="%d" ordinal="2" /><p /></Description>
-    <Actions>1. Prüfen anderer Fehlernachrichten für detaillierte Erklärung.<p />2. System neu installieren.<p /></Actions>
+    <Description>Die Aktualisierung der %s Firmware ist fehlgeschlagen.Interner Fehlercode: %d2</Description>
+    <Actions>1. Prüfen anderer Fehlernachrichten für detaillierte Erklärung.2. System neu installieren.</Actions>
   </Message>
   <Message number="2583" eDefine="SYS_ERR_HW_FW_CB_FILE_CORRUPT">
     <Title>Firmware-Datei beschädigt</Title>
-    <Description>Aktualisierung der Firmware <arg format="%s" ordinal="1" /> fehlgeschlagen.<p />Die Firmware-Datei [ <arg format="%s" ordinal="3" />] ist beschädigt.<p />Interner Fehlercode: <arg format="%d" ordinal="2" />. <p /></Description>
+    <Description>Aktualisierung der Firmware %s fehlgeschlagen.Die Firmware-Datei [ %s] ist beschädigt.Interner Fehlercode: %d2. </Description>
     <Actions>System neu installieren.</Actions>
   </Message>
   <Message number="2584" eDefine="SYS_ERR_HW_FW_CB_FILE_NOT_FOUND">
     <Title>Firmware-Datei nicht gefunden</Title>
-    <Description>Aktualisierung der Firmware <arg format="%s" ordinal="1" /> fehlgeschlagen.<p />Die Firmware-Datei [ <arg format="%s" ordinal="3" />] wurde nicht gefunden.<p />Interner Fehlercode: <arg format="%d" ordinal="2" />. <p /></Description>
+    <Description>Aktualisierung der Firmware %s fehlgeschlagen.Die Firmware-Datei [ %s] wurde nicht gefunden.Interner Fehlercode: %d2. </Description>
     <Actions>System neu installieren.</Actions>
   </Message>
   <Message number="2585" eDefine="SYS_ERR_HW_FW_NO_CB_BOARD_PRESENT">
     <Title>Kein Sicherheitssystem vom Achscomputer gefunden</Title>
     <Description>Der Achscomputer hat das Sicherheitssystem nicht erkannt.</Description>
-    <Actions>1. Kommunikationskabel zwischen dem Achscomputer und dem Sicherheitssystem prüfen.<p />2. Stromversorgung des Sicherheitssystems prüfen.<p />3. Das System neu starten.<p /></Actions>
+    <Actions>1. Kommunikationskabel zwischen dem Achscomputer und dem Sicherheitssystem prüfen.2. Stromversorgung des Sicherheitssystems prüfen.3. Das System neu starten.</Actions>
   </Message>
   <Message number="2590" eDefine="SYS_ERR_HW_FW_DU_REFLASH_STARTED">
     <Title>Firmware-Reflash gestartet</Title>
-    <Description>Angeforderte Aktualisierung der Firmware <arg format="%s" ordinal="1" /> in Antriebsmodul <arg format="%d" ordinal="2" /> wurde gestartet.<p />Datei: [ <arg format="%s" ordinal="3" />]. <p /></Description>
+    <Description>Angeforderte Aktualisierung der Firmware %s in Antriebsmodul %d2 wurde gestartet.Datei: [ %s]. </Description>
     <Actions>Auf Reflash-Ende warten. Dies dauert ca. 3,5 Minuten.</Actions>
   </Message>
   <Message number="2591" eDefine="SYS_ERR_HW_FW_DU_REFLASH_COMPLETE">
     <Title>Firmware-Reflash abgeschlossen</Title>
-    <Description>Aktualisierung der Firmware <arg format="%s" ordinal="1" /> in Antriebsmodul <arg format="%d" ordinal="2" /> wurde erfolgreich abgeschlossen.</Description>
+    <Description>Aktualisierung der Firmware %s in Antriebsmodul %d2 wurde erfolgreich abgeschlossen.</Description>
     <Actions>Keine Aktion erforderlich.</Actions>
   </Message>
   <Message number="2592" eDefine="SYS_ERR_HW_FW_DU_REFLASH_FAILED">
     <Title>Firmware-Reflash fehlgeschlagen</Title>
-    <Description>Die Aktualisierung der <arg format="%s" ordinal="1" /> Firmware in Antriebsmodul <arg format="%d" ordinal="2" /> ist fehlgeschlagen.<p /></Description>
-    <Actions>1. Prüfen anderer Fehlernachrichten für detaillierte Erklärung.<p />2. System neu installieren.<p /></Actions>
+    <Description>Die Aktualisierung der %s Firmware in Antriebsmodul %d2 ist fehlgeschlagen.</Description>
+    <Actions>1. Prüfen anderer Fehlernachrichten für detaillierte Erklärung.2. System neu installieren.</Actions>
   </Message>
   <Message number="2593" eDefine="SYS_ERR_HW_FW_DU_FILE_CORRUPT">
     <Title>Firmware-Datei beschädigt</Title>
-    <Description>Aktualisierung der Firmware <arg format="%s" ordinal="1" /> in Antriebsmodul <arg format="%d" ordinal="2" /> fehlgeschlagen.<p />Die Firmware-Datei [<arg format="%s" ordinal="3" />] ist beschädigt.<p /></Description>
+    <Description>Aktualisierung der Firmware %s in Antriebsmodul %d2 fehlgeschlagen.Die Firmware-Datei [%s] ist beschädigt.</Description>
     <Actions>System neu installieren.</Actions>
   </Message>
   <Message number="2594" eDefine="SYS_ERR_HW_FW_DU_FILE_NOT_FOUND">
     <Title>Firmware-Datei nicht gefunden</Title>
-    <Description>Aktualisierung der Firmware <arg format="%s" ordinal="1" /> in Antriebsmodul <arg format="%d" ordinal="2" /> fehlgeschlagen.<p />Die Firmware-Datei [<arg format="%s" ordinal="3" />] wurde nicht gefunden.<p /></Description>
+    <Description>Aktualisierung der Firmware %s in Antriebsmodul %d2 fehlgeschlagen.Die Firmware-Datei [%s] wurde nicht gefunden.</Description>
     <Actions>System neu installieren.</Actions>
   </Message>
   <Message number="2601" eDefine="SYS_ERR_HW_IBS_BOARD_NOT_FOUND">
@@ -316,69 +316,69 @@
     <Description>Interbus-Master/Slave-Karte funktioniert nicht.</Description>
     <Consequences>Keine Kommunikation im Interbus möglich.</Consequences>
     <Causes>Interbus-Master/Slave-Karte funktioniert nicht korrekt oder fehlt.</Causes>
-    <Actions>Sicherstellen, dass eine Interbus-Master/Slave-Karte installiert ist.<p />2. Karte austauschen, falls fehlerhaft.</Actions>
+    <Actions>Sicherstellen, dass eine Interbus-Master/Slave-Karte installiert ist.2. Karte austauschen, falls fehlerhaft.</Actions>
   </Message>
   <Message number="2651" eDefine="SYS_ERR_HW_SERIAL_BOARD_NOT_FOUND">
     <Title>Hardware an seriellem Anschluss nicht ansprechbar</Title>
-    <Description>Versuchte Adressierung des seriellen Anschlusses <arg format="%s" ordinal="1" /> durch das System ist fehlgeschlagen.</Description>
+    <Description>Versuchte Adressierung des seriellen Anschlusses %s durch das System ist fehlgeschlagen.</Description>
     <Consequences>Die optionale Hardware am seriellen Anschluss kann nicht angesprochen werden. Der Anschluss und der den Anschluss verwendende physikalische Kanal stehen nicht zur Verfügung.</Consequences>
     <Causes>Die Hardware am seriellen Anschluss fehlt oder funktioniert nicht.</Causes>
-    <Actions>1) Sicherstellen, dass die erforderliche Hardware am seriellen Anschluss korrekt installiert und nicht fehlerhaft ist.<p />2) Ersetzen der Hardware.</Actions>
+    <Actions>1) Sicherstellen, dass die erforderliche Hardware am seriellen Anschluss korrekt installiert und nicht fehlerhaft ist.2) Ersetzen der Hardware.</Actions>
   </Message>
   <Message number="3503" eDefine="SYS_ERR_HW_MOC_IO_SYNCH_FAILED">
     <Title>Aktualisierung des Umdrehungszählers fehlgeschlagen</Title>
-    <Description>Aktualisierung des Umdrehungszählers für Achse <arg format="%s" ordinal="1" /> ist fehlgeschlagen.<p /></Description>
+    <Description>Aktualisierung des Umdrehungszählers für Achse %s ist fehlgeschlagen.</Description>
     <Consequences>Achse ist nicht synchronisiert.</Consequences>
-    <Causes>1. Achse fehlt oder ist nicht aktiv.<p />2. Messsystemfehler.</Causes>
-    <Actions>1. Prüfen, ob Achse aktiv.<p />2. Prüfen der Konfigurationsdateien.<p />3. Messsystem überprüfen.</Actions>
+    <Causes>1. Achse fehlt oder ist nicht aktiv.2. Messsystemfehler.</Causes>
+    <Actions>1. Prüfen, ob Achse aktiv.2. Prüfen der Konfigurationsdateien.3. Messsystem überprüfen.</Actions>
   </Message>
   <Message number="3601" eDefine="SYS_ERR_HW_AB_MODULE_NOT_FOUND">
     <Title>Feldbus-Adapter fehlt</Title>
     <Description>Der Feldbus-Adapter fehlt.</Description>
     <Consequences>Keine Kommunikation mit dem Feldbus-Adapter möglich.</Consequences>
     <Causes>Feldbus-Adapter ist entweder fehlerhaft oder er fehlt.</Causes>
-    <Actions>1. Sicherstellen, dass ein Feldbus-Adapter installiert ist.<p />2. Gegebenenfalls fehlerhaftes Modul austauschen. </Actions>
+    <Actions>1. Sicherstellen, dass ein Feldbus-Adapter installiert ist.2. Gegebenenfalls fehlerhaftes Modul austauschen. </Actions>
   </Message>
   <Message number="4100" eDefine="SYS_ERR_HW_FOX_NOT_SUPPORTED">
     <Title>Antriebssystem nicht unterstützt</Title>
-    <Description>Das konfigurierte Antriebssystem im Antriebsmodul <arg format="%d" ordinal="1" /> stammt nicht vom Typ Antriebssystem '04.</Description>
+    <Description>Das konfigurierte Antriebssystem im Antriebsmodul %d1 stammt nicht vom Typ Antriebssystem '04.</Description>
     <Consequences>Das System hat in den Zustand Systemfehler gewechselt.</Consequences>
-    <Causes>1. Falscher Antriebsmodulschlüssel gewählt, d. h., die Konfiguration entspricht nicht der Hardware.<p />2. Für das System unpassende Hardware.</Causes>
-    <Actions>1. Neuinstallation des Systems mit einem Antriebsmodul-Key, der zur Hardware passt.<p />2. Ersetzen des Antriebsmoduls durch eins, das Antriebssystem '04 unterstützt.</Actions>
+    <Causes>1. Falscher Antriebsmodulschlüssel gewählt, d. h., die Konfiguration entspricht nicht der Hardware.2. Für das System unpassende Hardware.</Causes>
+    <Actions>1. Neuinstallation des Systems mit einem Antriebsmodul-Key, der zur Hardware passt.2. Ersetzen des Antriebsmoduls durch eins, das Antriebssystem '04 unterstützt.</Actions>
   </Message>
   <Message number="4101" eDefine="SYS_ERR_HW_ROBODRIVE_NOT_SUPPORTED">
     <Title>Antriebssystem nicht unterstützt</Title>
-    <Description>Das konfigurierte Antriebssystem im Antriebsmodul <arg format="%d" ordinal="1" /> stammt nicht vom Typ Antriebssystem '09.</Description>
+    <Description>Das konfigurierte Antriebssystem im Antriebsmodul %d1 stammt nicht vom Typ Antriebssystem '09.</Description>
     <Consequences>Das System hat in den Zustand Systemfehler gewechselt.</Consequences>
-    <Causes>1. Falscher Antriebsmodul-Key gewählt, d. h., die Konfiguration entspricht nicht der Hardware.<p />2. Für das System unpassende Hardware.</Causes>
-    <Actions>1. Neuinstallation des Systems mit einem Antriebsmodul-Key, der zur Hardware passt.<p />2. Ersetzen des Antriebsmoduls durch eins, das Antriebssystem '09 unterstützt.</Actions>
+    <Causes>1. Falscher Antriebsmodul-Key gewählt, d. h., die Konfiguration entspricht nicht der Hardware.2. Für das System unpassende Hardware.</Causes>
+    <Actions>1. Neuinstallation des Systems mit einem Antriebsmodul-Key, der zur Hardware passt.2. Ersetzen des Antriebsmoduls durch eins, das Antriebssystem '09 unterstützt.</Actions>
   </Message>
   <Message number="4200" eDefine="SYS_ERR_HW_DRIVES_COMMUNICATION_ERROR">
     <Title>Kommunikation mit allen Antriebseinheiten unterbrochen</Title>
-    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> hat der Achscomputer die Kommunikation mit allen Antriebseinheiten verloren. </Description>
+    <Description>Im Antriebsmodul %d1 hat der Achscomputer die Kommunikation mit allen Antriebseinheiten verloren. </Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand Motoren-AUS.</Consequences>
     <Causes>Kommunikationsproblem zwischen Antriebseinheit und dem Achscomputer.</Causes>
-    <Actions>1) Prüfen, dass alle Kabel korrekt angeschlossen sind.<p />2) Prüfen, dass die Antriebseinheiten logische Spannung haben.<p />3) Ethernetkabel überprüfen/ersetzen.<p />4) Andere Ereignisprotokollmeldungen der Hardware überprüfen.<p />5) Ereignisprotokoll auf Fehlermeldungen der Stromversorgung überprüfen. <p />6) Prüfen der Verkabelung zwischen Stromversorgung und Antriebseinheit.<p />7) Prüfen des 24V-Ausgangs der Stromversorgung. </Actions>
+    <Actions>1) Prüfen, dass alle Kabel korrekt angeschlossen sind.2) Prüfen, dass die Antriebseinheiten logische Spannung haben.3) Ethernetkabel überprüfen/ersetzen.4) Andere Ereignisprotokollmeldungen der Hardware überprüfen.5) Ereignisprotokoll auf Fehlermeldungen der Stromversorgung überprüfen. 6) Prüfen der Verkabelung zwischen Stromversorgung und Antriebseinheit.7) Prüfen des 24V-Ausgangs der Stromversorgung. </Actions>
   </Message>
   <Message number="4201" eDefine="SYS_ERR_HW_DRIVE_NOT_CONFIGURED">
     <Title>Verbundene Antriebseinheit nicht konfiguriert</Title>
-    <Description>Die Antriebseinheit im Antriebsmodul <arg format="%d" ordinal="1" /> mit Antriebseinheitposition <arg format="%d" ordinal="2" /> ist verbunden, wird aber in der Konfiguration nicht verwendet. </Description>
+    <Description>Die Antriebseinheit im Antriebsmodul %d1 mit Antriebseinheitposition %d2 ist verbunden, wird aber in der Konfiguration nicht verwendet. </Description>
     <Consequences>Der Betrieb ist möglich, aber die zusätzliche Antriebseinheit wird nicht verwendet.</Consequences>
     <Causes>Die Antriebseinheit wird in der Konfiguration nicht verwendet.</Causes>
-    <Actions>1) Zusätzliche Antriebseinheit entfernen, falls nicht benötigt.<p />2) Neuinstallation des Systems mit einem Antriebsmodul-Key, der die zusätzliche Antriebseinheit unterstützt. </Actions>
+    <Actions>1) Zusätzliche Antriebseinheit entfernen, falls nicht benötigt.2) Neuinstallation des Systems mit einem Antriebsmodul-Key, der die zusätzliche Antriebseinheit unterstützt. </Actions>
   </Message>
   <Message number="4202" eDefine="SYS_ERR_HW_DRIVE_LOST_COMMUNICATION_ERROR">
     <Title>Kommunikation mit Antriebseinheit unterbrochen</Title>
-    <Description>Im Antriebsmodul <arg format="%d" ordinal="1" /> hat der Achscomputer die Kommunikation mit der Antriebseinheit bei Einheitsposition <arg format="%d" ordinal="2" /> verloren. </Description>
+    <Description>Im Antriebsmodul %d1 hat der Achscomputer die Kommunikation mit der Antriebseinheit bei Einheitsposition %d2 verloren. </Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand Motoren-AUS.</Consequences>
     <Causes>Kommunikationsproblem zwischen Antriebseinheit und dem Achscomputer.</Causes>
-    <Actions>1) Prüfen, dass alle Kabel korrekt angeschlossen sind.<p />2) Prüfen, dass die Antriebseinheit logische Spannung hat.<p />3) Ethernet-Kabel überprüfen/ersetzen.<p />4) Andere Ereignisprotokollmeldungen der Hardware überprüfen.<p />5) Ereignisprotokoll auf Fehlermeldungen der Stromversorgung überprüfen. <p />6) Prüfen der Verkabelung zwischen Stromversorgung und Antriebseinheit.<p />7) Prüfen des 24 V-Ausgangs von der Stromversorgung. </Actions>
+    <Actions>1) Prüfen, dass alle Kabel korrekt angeschlossen sind.2) Prüfen, dass die Antriebseinheit logische Spannung hat.3) Ethernet-Kabel überprüfen/ersetzen.4) Andere Ereignisprotokollmeldungen der Hardware überprüfen.5) Ereignisprotokoll auf Fehlermeldungen der Stromversorgung überprüfen. 6) Prüfen der Verkabelung zwischen Stromversorgung und Antriebseinheit.7) Prüfen des 24 V-Ausgangs von der Stromversorgung. </Actions>
   </Message>
   <Message number="4203" eDefine="SYS_ERR_HW_MOTOR_CURRENT_OVERLOAD_ERROR">
     <Title>Motorstrom zu hoch</Title>
-    <Description>Der Motorstrom für Achse <arg format="%s" ordinal="2" />, verbunden mit Antriebsmodul <arg format="%d" ordinal="1" /> mit der Antriebseinheit bei Position <arg format="%d" ordinal="3" /> und Knoten <arg format="%d" ordinal="4" /> ist zu hoch. </Description>
+    <Description>Der Motorstrom für Achse %s, verbunden mit Antriebsmodul %d1 mit der Antriebseinheit bei Position %d3 und Knoten %d4 ist zu hoch. </Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Betrieb möglich. Das System hat in den Zustand Motoren-AUS gewechselt.</Consequences>
-    <Causes>1) Motorkonfiguration ist falsch.<p />2) Die Achslast ist unter Umständen zu hoch oder der Motor wurde gestoppt (z. B. aufgrund einer Kollision).<p />3) Der Motor ist zu klein für die Antriebseinheit.<p />4) Kurzschluss zwischen Phase-Phase oder Phase-Masse.</Causes>
-    <Actions>1) Prüfen, ob die Motorkonfiguration richtig ist.<p />2) Prüfen, ob der Roboter kollidiert ist. <p />3) Falls möglich, Reduzierung der Geschwindigkeit des Anwenderprogramms. <p />4) Prüfen, ob die Achslast für den Motor zu hoch ist.<p />5) Prüfen, ob der maximale Motorstrom im Vergleich zum Strom der Antriebseinheit nicht zu niedrig ist.<p />6) Kabel und Motor durch Messen ihres Widerstands prüfen. Verbindung vor dem Messen trennen.</Actions>
+    <Causes>1) Motorkonfiguration ist falsch.2) Die Achslast ist unter Umständen zu hoch oder der Motor wurde gestoppt (z. B. aufgrund einer Kollision).3) Der Motor ist zu klein für die Antriebseinheit.4) Kurzschluss zwischen Phase-Phase oder Phase-Masse.</Causes>
+    <Actions>1) Prüfen, ob die Motorkonfiguration richtig ist.2) Prüfen, ob der Roboter kollidiert ist. 3) Falls möglich, Reduzierung der Geschwindigkeit des Anwenderprogramms. 4) Prüfen, ob die Achslast für den Motor zu hoch ist.5) Prüfen, ob der maximale Motorstrom im Vergleich zum Strom der Antriebseinheit nicht zu niedrig ist.6) Kabel und Motor durch Messen ihres Widerstands prüfen. Verbindung vor dem Messen trennen.</Actions>
   </Message>
 </Domain>

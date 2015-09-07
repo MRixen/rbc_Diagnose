@@ -2,75 +2,75 @@
 <Domain xmlns="urn:abb-robotics-elog-text" elogDomain="EIO" domainNo="7" lang="de" elogTextVersion="1.0" min="1357" max="1463">
   <Message number="1357" eDefine="SYS_EIO_UNT_DUPLICATE_ON_LOCAL_BUS">
     <Title>Doppelte E/A-Einheiten am E/A-Bus &lt;Local&gt;</Title>
-    <Description>Die E/A-Konfiguration für E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Eine andere benutzerdefinierte E/A-Einheit ist bereits mit dem E/A-Bus &lt;Local&gt; verbunden.<p /><p />Es kann nur eine benutzerdefinierte E/A-Einheit mit dem E/A-Bus &lt;Local&gt; verbunden sein.<p /><p />Diese E/A-Einheit wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für E/A-Einheit &lt;%s&gt; ist ungültig.Eine andere benutzerdefinierte E/A-Einheit ist bereits mit dem E/A-Bus &lt;Local&gt; verbunden.Es kann nur eine benutzerdefinierte E/A-Einheit mit dem E/A-Bus &lt;Local&gt; verbunden sein.Diese E/A-Einheit wurde abgelehnt. </Description>
     <Actions>Konfiguration der E/A korrigieren.</Actions>
   </Message>
   <Message number="1358" eDefine="SYS_EIO_UNT_POOL_ERR">
     <Title>Stromausfallwiederherstellung voll</Title>
-    <Description>E/A-Einheit&lt;<arg format="%s" ordinal="1" />&gt; konnte für Stromausfallwiederherstellung nicht eingerichtet werden.<p />Die Tabelle für Stromausfall ist voll. </Description>
+    <Description>E/A-Einheit&lt;%s&gt; konnte für Stromausfallwiederherstellung nicht eingerichtet werden.Die Tabelle für Stromausfall ist voll. </Description>
     <Actions>Einige andere E/A-Einheiten aus der Wiederherstellungsliste entfernen.</Actions>
   </Message>
   <Message number="1361" eDefine="SYS_EIO_CRS_RES_NOT_DIG">
     <Title>Querverbindung mit nicht-digital resultierendem Signal</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p /><p />Der Parameter &lt;Resultant I/O signal&gt; einer Querverbindung bezieht sich auf ein E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt;, das nicht digital ist.<p />Nur Digital-E/A-Signale können querverbunden werden.<p /><p />Diese Querverbindung wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Der Parameter &lt;Resultant I/O signal&gt; einer Querverbindung bezieht sich auf ein E/A-Signal &lt;%s&gt;, das nicht digital ist.Nur Digital-E/A-Signale können querverbunden werden.Diese Querverbindung wurde abgelehnt. </Description>
     <Actions>Das nicht-digitale E/A-Signal aus der Querverbindung entfernen.</Actions>
   </Message>
   <Message number="1362" eDefine="SYS_EIO_SIG_INVALID_MAPPING">
     <Title>Außerhalb des E/A-Einheit-Bereichs zugeordnetes E/A-Signal</Title>
-    <Description>Physischer Zustand des E/A-Signals &lt;<arg format="%s" ordinal="1" />&gt; kann nicht auf VALID geändert werden.<p />Ursache ist, dass das Signal Bit(s) außerhalb des Datenbereichs der entsprechenden Einheit zugeordnet ist. <p /><p />E/A-Signal zugeordnet zu E/A-Einheit &lt;<arg format="%s" ordinal="2" />&gt;<p />E/A-Signal zugeordnet zu Bit(s): &lt;<arg format="%s" ordinal="3" />&gt;<p />Ausgangs-Datenbereichsgröße für die E/A-Einheit ist <arg format="%d" ordinal="4" /> Bits<p />Eingangs-Datenbereichsgröße für die E/A-Einheit ist <arg format="%d" ordinal="5" /> Bits<p /></Description>
+    <Description>Physischer Zustand des E/A-Signals &lt;%s&gt; kann nicht auf VALID geändert werden.Ursache ist, dass das Signal Bit(s) außerhalb des Datenbereichs der entsprechenden Einheit zugeordnet ist. E/A-Signal zugeordnet zu E/A-Einheit &lt;%s&gt;E/A-Signal zugeordnet zu Bit(s): &lt;%s&gt;Ausgangs-Datenbereichsgröße für die E/A-Einheit ist %d4 BitsEingangs-Datenbereichsgröße für die E/A-Einheit ist %d5 Bits</Description>
     <Consequences>Der physische Zustand dieses E/A-Signals bleibt NOT VALID.</Consequences>
-    <Actions>1. Sicherstellen, dass die Einheitenzuordnung des E/A-Signals korrekt ist.<p />2. Sicherstellen, dass das E/A-Signal der korrekten Einheit zugewiesen ist.<p />3. Prüfen, ob die Werte der Systemparameter „Connection Input/Output Size“ für den Einheitentyp erhöht werden können. </Actions>
+    <Actions>1. Sicherstellen, dass die Einheitenzuordnung des E/A-Signals korrekt ist.2. Sicherstellen, dass das E/A-Signal der korrekten Einheit zugewiesen ist.3. Prüfen, ob die Werte der Systemparameter „Connection Input/Output Size“ für den Einheitentyp erhöht werden können. </Actions>
   </Message>
   <Message number="1363" eDefine="SYS_EIO_DN_SLAVE_INVALID">
     <Title>Slave-Konfiguration ungültig</Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt;, konfiguriert auf der Master-Adresse, ist nicht als interner Slave gültig.<p /></Description>
-    <Actions>1. Adresse auf der E/A-Einheit ändern.<p />2. Einheitentyp auf der Einheit auf DN_SLAVE ändern. </Actions>
+    <Description>Die E/A-Einheit &lt;%s&gt;, konfiguriert auf der Master-Adresse, ist nicht als interner Slave gültig.</Description>
+    <Actions>1. Adresse auf der E/A-Einheit ändern.2. Einheitentyp auf der Einheit auf DN_SLAVE ändern. </Actions>
   </Message>
   <Message number="1364" eDefine="SYS_EIO_SIG_QUEUE_FULL">
     <Title>E/A-Warteschlange überlastet</Title>
     <Description>Die Eingangs- und Ausgangs-E/A-Signale für die E/A-Warteschlangenbehandlung von und zum System sind überlastet.</Description>
     <Consequences>Das System wechselt in den Status SYS STOP.</Consequences>
     <Causes>Das wird verursacht durch zu häufige Signaländerungen oder eine zu große Folge von Signaländerungen, erzeugt durch Eingangs-E/A-Signale oder Querverbindungen zwischen E/A-Signalen.</Causes>
-    <Actions>Querverbindungen überprüfen. Weitere Informationen zur Überprüfung der Konfigurationsdatei finden Sie im Handbuch zur Fehlerbehebung. <p />2. Überprüfen der Häufigkeit von Eingangs-E/A-Signalen von jeglicher externer Ausrüstung, verbunden mit dem System. Auf Anomalität prüfen und ändern, falls erforderlich. <p />3. Ist eine extrem hohe E/A-Belastung normal und erforderlich, ermitteln, ob Programmierverzögerungen in der RAPID-Anwendung dieses Problem lösen könnten. </Actions>
+    <Actions>Querverbindungen überprüfen. Weitere Informationen zur Überprüfung der Konfigurationsdatei finden Sie im Handbuch zur Fehlerbehebung. 2. Überprüfen der Häufigkeit von Eingangs-E/A-Signalen von jeglicher externer Ausrüstung, verbunden mit dem System. Auf Anomalität prüfen und ändern, falls erforderlich. 3. Ist eine extrem hohe E/A-Belastung normal und erforderlich, ermitteln, ob Programmierverzögerungen in der RAPID-Anwendung dieses Problem lösen könnten. </Actions>
   </Message>
   <Message number="1365" eDefine="SYS_EIO_SIG_PRIO_QUEUE_FULL">
     <Title>Sicherheits-E/A-Warteschlange überlastet</Title>
     <Description>Die Eingangs- und Ausgangs-E/A-Signale für die Sicherheits-E/A-Warteschlangenbehandlung sind überlastet.</Description>
     <Consequences>Das System wechselt in den Status SYS HALT.</Consequences>
     <Causes>Das wird verursacht durch zu häufige Signaländerungen der Sicherheits-E/A-Signale. Manchmal passiert das aufgrund erratischer Masseanschlüsse in E/A-Signalen aus externer Ausrüstung.</Causes>
-    <Actions>1. Wiederholte E/A-Signale am Sicherheitseingang bewirken ein Anhalten des Systems. Siehe Fehlerprotokoll für andere Fehler, die eventuell zu diesem Zustand führen. <p />2. Erdung jedes Signals aus externen Ausrüstungselementen prüfen, das die Sicherheits-E/A-Signale beeinflusst. <p />3. Überprüfen der Häufigkeit von Eingangs-E/A-Signalen von jeglicher externer Ausrüstung, verbunden mit dem System. Auf Anomalie prüfen und ändern, falls erforderlich. </Actions>
+    <Actions>1. Wiederholte E/A-Signale am Sicherheitseingang bewirken ein Anhalten des Systems. Siehe Fehlerprotokoll für andere Fehler, die eventuell zu diesem Zustand führen. 2. Erdung jedes Signals aus externen Ausrüstungselementen prüfen, das die Sicherheits-E/A-Signale beeinflusst. 3. Überprüfen der Häufigkeit von Eingangs-E/A-Signalen von jeglicher externer Ausrüstung, verbunden mit dem System. Auf Anomalie prüfen und ändern, falls erforderlich. </Actions>
   </Message>
   <Message number="1366" eDefine="SYS_EIO_CRS_QUEUE_FULL">
     <Title>E/A-Warteschlange der Querverbindung überlastet</Title>
     <Description>Die Eingangs- und Ausgangs-E/A-Signale der Querverbindung für die E/A-Warteschlangenbehandlung vom und zum System sind überlastet.</Description>
     <Consequences>Das System wechselt in den Status SYS STOP.</Consequences>
     <Causes>Das wird verursacht durch zu häufige Signaländerungen oder eine zu große Folge von Signaländerungen, erzeugt durch Eingangs- oder Ausgangs-E/A-Signale als Aktoren zwischen Querverbindungen.</Causes>
-    <Actions>Querverbindungen überprüfen. Weitere Informationen zur Überprüfung der Konfigurationsdatei finden Sie im Handbuch zur Fehlerbehebung. <p />2. Prüfen der Häufigkeit von Eingangs- und Ausgangs-E/A-Signalen als Aktoren in Querverbindungen. <p />3. Ist eine extrem hohe E/A-Belastung normal und erforderlich, ermitteln, ob Programmierverzögerungen in der RAPID-Anwendung dieses Problem lösen könnten. </Actions>
+    <Actions>Querverbindungen überprüfen. Weitere Informationen zur Überprüfung der Konfigurationsdatei finden Sie im Handbuch zur Fehlerbehebung. 2. Prüfen der Häufigkeit von Eingangs- und Ausgangs-E/A-Signalen als Aktoren in Querverbindungen. 3. Ist eine extrem hohe E/A-Belastung normal und erforderlich, ermitteln, ob Programmierverzögerungen in der RAPID-Anwendung dieses Problem lösen könnten. </Actions>
   </Message>
   <Message number="1367" eDefine="SYS_EIO_UNT_NO_CONTACT">
     <Title>Keine Kommunikation mit E/A-Einheit</Title>
-    <Description>Beim Start wurde keine Kommunikation mit E/A-Einheit <arg format="%s" ordinal="1" /> mit Adresse <arg format="%s" ordinal="3" /> auf E/A-Bus <arg format="%s" ordinal="2" /> hergestellt. </Description>
+    <Description>Beim Start wurde keine Kommunikation mit E/A-Einheit %s mit Adresse %s auf E/A-Bus %s hergestellt. </Description>
     <Consequences>Zugriff auf die E/A-Einheit (bzw. die E/A-Signale darauf) ist nicht möglich, da sie derzeit nicht mit der Steuerung kommuniziert.</Consequences>
     <Causes>Die E/A-Einheit ist entweder nicht mit dem System verbunden oder sie ist verbunden und ihr wurde die falsche Adresse zugewiesen.</Causes>
-    <Actions>1. Sicherstellen, dass alle E/A-Einheitenadressen der Konfiguration entsprechen. <p />2. Sicherstellen, dass alle Adressen eindeutig sind und von nicht mehr als einer E/A-Einheit verwendet werden. <p />3. Adresse ändern und/oder fehlende E/A-Einheit verbinden. <p />4. Wenn Sie die Adresse geändert haben, muss die E/A-Einheit aus- und wieder eingeschaltet werden, um sicherzustellen, dass die Adresse geändert wurde. </Actions>
+    <Actions>1. Sicherstellen, dass alle E/A-Einheitenadressen der Konfiguration entsprechen. 2. Sicherstellen, dass alle Adressen eindeutig sind und von nicht mehr als einer E/A-Einheit verwendet werden. 3. Adresse ändern und/oder fehlende E/A-Einheit verbinden. 4. Wenn Sie die Adresse geändert haben, muss die E/A-Einheit aus- und wieder eingeschaltet werden, um sicherzustellen, dass die Adresse geändert wurde. </Actions>
   </Message>
   <Message number="1379" eDefine="SYS_EIO_SIO_CONNECTOR_UNKNOWN">
     <Title>Unbekannter physischer Kommunikationskanal</Title>
-    <Description>Der Anschluss &lt;<arg format="%s" ordinal="1" />&gt;, der für den physischen Kanal &lt;<arg format="%s" ordinal="2" />&gt; definiert wurde, ist unbekannt. </Description>
+    <Description>Der Anschluss &lt;%s&gt;, der für den physischen Kanal &lt;%s&gt; definiert wurde, ist unbekannt. </Description>
     <Consequences>Der physische Kanal kann nicht verwendet werden.</Consequences>
-    <Causes> - Der in der Konfiguration des physischen Kanals definierte Anschluss ist falsch geschrieben oder bezieht sich auf einen nicht verwendbaren Anschluss. <p />- Anschlusskonfiguration fehlt. </Causes>
-    <Actions>1. Sicherstellen, dass der in der Konfiguration des physischen Kanals definierte Anschluss auf einen verfügbaren Anschluss verweist. <p />2. Sicherstellen, dass die Option "Multiple Serial Ports" installiert ist, falls die verwendete Konfiguration dies erfordert. <p />3. System neu installieren, um sicherzustellen, dass die Konfigurationsdateien OK sind. </Actions>
+    <Causes> - Der in der Konfiguration des physischen Kanals definierte Anschluss ist falsch geschrieben oder bezieht sich auf einen nicht verwendbaren Anschluss. - Anschlusskonfiguration fehlt. </Causes>
+    <Actions>1. Sicherstellen, dass der in der Konfiguration des physischen Kanals definierte Anschluss auf einen verfügbaren Anschluss verweist. 2. Sicherstellen, dass die Option "Multiple Serial Ports" installiert ist, falls die verwendete Konfiguration dies erfordert. 3. System neu installieren, um sicherzustellen, dass die Konfigurationsdateien OK sind. </Actions>
   </Message>
   <Message number="1380" eDefine="SYS_EIO_SIO_DRIVER_ALREADY_IN_USE">
     <Title>Anschlusstreiber Kommunikationskanal bereits verwendet</Title>
-    <Description>Der Anschluss &lt;<arg format="%s" ordinal="1" />&gt; kann den Treiber &lt;<arg format="%s" ordinal="2" />&gt; nicht verwenden. Der Treiber wird bereits von Anschluss &lt;<arg format="%s" ordinal="3" />&gt; verwendet. </Description>
+    <Description>Der Anschluss &lt;%s&gt; kann den Treiber &lt;%s&gt; nicht verwenden. Der Treiber wird bereits von Anschluss &lt;%s&gt; verwendet. </Description>
     <Consequences>Der Anschluss und der den Anschluss verwendende physikalische Kanal stehen nicht zur Verfügung.</Consequences>
-    <Causes>- Eventuell waren die Konfigurationsdateien fehlerhaft. <p />- Eventuell wurde eine Konfigurationsdatei mit falsch konfigurierten physischen Kanälen geladen. </Causes>
-    <Actions>1. Sicherstellen, dass die Konfiguration des physischen Anschlusses gültig ist. <p />2. System neu installieren, um sicherzustellen, dass die Konfigurationsdateien OK sind. </Actions>
+    <Causes>- Eventuell waren die Konfigurationsdateien fehlerhaft. - Eventuell wurde eine Konfigurationsdatei mit falsch konfigurierten physischen Kanälen geladen. </Causes>
+    <Actions>1. Sicherstellen, dass die Konfiguration des physischen Anschlusses gültig ist. 2. System neu installieren, um sicherzustellen, dass die Konfigurationsdateien OK sind. </Actions>
   </Message>
   <Message number="1381" eDefine="SYS_EIO_SIO_CONNECTOR_ALREADY_IN_USE">
     <Title>Kommunikationsanschluss wird bereits verwendet</Title>
-    <Description>Der physische Kanal &lt;<arg format="%s" ordinal="1" />&gt; kann den Anschluss &lt;<arg format="%s" ordinal="2" />&gt; nicht verwenden. Der Anschluss wird bereits vom physischen Kanal &lt;<arg format="%s" ordinal="3" />&gt; verwendet. </Description>
+    <Description>Der physische Kanal &lt;%s&gt; kann den Anschluss &lt;%s&gt; nicht verwenden. Der Anschluss wird bereits vom physischen Kanal &lt;%s&gt; verwendet. </Description>
     <Consequences>Der Anschluss und der den Anschluss verwendende physikalische Kanal stehen nicht zur Verfügung.</Consequences>
     <Causes>Mehrere physische Kanäle wurden in der Konfiguration unter Umständen demselben Anschluss zugewiesen.</Causes>
     <Actions>Sicherstellen, dass jeder Anschluss von nur einem physischen Kanal verwendet wird.</Actions>
@@ -78,84 +78,84 @@
   <Message number="1382" eDefine="SYS_EIO_DN_WATCHDOG_TIMER">
     <Title>DeviceNet-Überwachungszeit ist abgelaufen</Title>
     <Description>Das System hat keine Antwort von der DeviceNet-Einheit erhalten, und der Überwachungs-Timer ist abgelaufen. </Description>
-    <Consequences>Der DeviceNet-E/A-Bus wird NICHT ausgeführt, und somit ist keine Kommunikation über DeviceNet-E/A-Bus &lt;<arg format="%d" ordinal="1" />&gt; möglich. Das System geht in den Zustand SYS FAIL. Die Bedeutung dieses Zustands wird vollständig im Handbuch zur Fehlerbehebung IRC5 beschrieben. <p /></Consequences>
+    <Consequences>Der DeviceNet-E/A-Bus wird NICHT ausgeführt, und somit ist keine Kommunikation über DeviceNet-E/A-Bus &lt;%d1&gt; möglich. Das System geht in den Zustand SYS FAIL. Die Bedeutung dieses Zustands wird vollständig im Handbuch zur Fehlerbehebung IRC5 beschrieben. </Consequences>
     <Causes>Die E/A-Last am DeviceNet-Bus ist eventuell zu hoch, beispielsweise wenn ein RAPID-Programm versucht, E/A-Signale mit einer Rate abzusetzen, die die am DeviceNet-Bus verfügbare Bandbreite überschreitet.</Causes>
     <Actions>Die E/A-Last am DeviceNet-Bus reduzieren.</Actions>
   </Message>
   <Message number="1383" eDefine="SYS_EIO_UNT_NO_UNITS_ON_LOCAL_BUS">
     <Title>Benutzerdefinierte E/A-Einheiten falsch verbunden</Title>
-    <Description>Die E/A-Konfiguration für E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Benutzerdefinierte Einheiten dürfen nicht mit E/A-Bus &lt;Local&gt; verbunden werden.<p /><p />Diese E/A-Einheit wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für E/A-Einheit &lt;%s&gt; ist ungültig.Benutzerdefinierte Einheiten dürfen nicht mit E/A-Bus &lt;Local&gt; verbunden werden.Diese E/A-Einheit wurde abgelehnt. </Description>
     <Actions>Konfiguration der E/A korrigieren.</Actions>
   </Message>
   <Message number="1385" eDefine="SYS_EIO_REQ_EXHAUSTED">
     <Title>Max. Anforderungen für Meldungsressource erreicht </Title>
-    <Description>Weitere gleichzeitige E/A-Anforderungen können nicht verarbeitet werden.<p />Maximale Anzahl gleichzeitiger E/A-Anforderungen mit Argument für Verzögerung, Impuls oder Timeout überschritten. </Description>
+    <Description>Weitere gleichzeitige E/A-Anforderungen können nicht verarbeitet werden.Maximale Anzahl gleichzeitiger E/A-Anforderungen mit Argument für Verzögerung, Impuls oder Timeout überschritten. </Description>
     <Consequences>E/A-Anforderung kann nicht erfüllt werden.</Consequences>
-    <Causes>Zu viele E/A-Instruktionen mit Impuls- oder Verzögerungsargument.<p />Zu viele Prozessinstruktionen mit Impuls, Verzögerung oder Timeout.<p /><p /></Causes>
-    <Actions>1. Anzahl gleichzeitiger E/A-Instruktionen mit Impuls- oder Verzögerungsargument verringern.<p />2. Anzahl gleichzeitiger Prozessinstruktionen mit Impuls-, Verzögerungs- oder Timeout-Argument verringern.<p /></Actions>
+    <Causes>Zu viele E/A-Instruktionen mit Impuls- oder Verzögerungsargument.Zu viele Prozessinstruktionen mit Impuls, Verzögerung oder Timeout.</Causes>
+    <Actions>1. Anzahl gleichzeitiger E/A-Instruktionen mit Impuls- oder Verzögerungsargument verringern.2. Anzahl gleichzeitiger Prozessinstruktionen mit Impuls-, Verzögerungs- oder Timeout-Argument verringern.</Actions>
   </Message>
   <Message number="1386" eDefine="SYS_EIO_DN_QUICK_CONN_NOT_SUPPORTED">
     <Title>DeviceNet Quick Connect wird nicht unterstützt</Title>
-    <Description>Der Einheitentyp &lt;<arg format="%s" ordinal="1" />&gt; kann nicht mit dem DeviceNet-Bus als Quick Connect-E/A-Einheit verbunden werden. </Description>
+    <Description>Der Einheitentyp &lt;%s&gt; kann nicht mit dem DeviceNet-Bus als Quick Connect-E/A-Einheit verbunden werden. </Description>
     <Consequences>Dieser Einheitentyp wurde zurückgewiesen, und keine Funktionen auf der Basis dieses Einheitentyps funktionieren.</Consequences>
     <Causes>Die Version der verbundenen Einheit ist eventuell zu alt.</Causes>
-    <Actions>1. Quick Connect-Konfigurationsparameter deaktivieren. <p />2. DeviceNet-Master/Slave-Karte durch neuere Version ersetzen. </Actions>
+    <Actions>1. Quick Connect-Konfigurationsparameter deaktivieren. 2. DeviceNet-Master/Slave-Karte durch neuere Version ersetzen. </Actions>
   </Message>
   <Message number="1389" eDefine="SYS_EIO_CFG_ERR_FOUND">
     <Title>Konfigurationsdateifehler</Title>
-    <Description>Fehler beim Laden der Konfigurationsdaten.<p />Alle Konfigurationsdaten werden im Konfigurations-Ereignisprotokoll erfasst. </Description>
+    <Description>Fehler beim Laden der Konfigurationsdaten.Alle Konfigurationsdaten werden im Konfigurations-Ereignisprotokoll erfasst. </Description>
     <Consequences>Die Konfiguration in der Datei wird nicht installiert.</Consequences>
     <Actions>Fehler im Konfigurations-Ereignisprotokoll anzeigen.</Actions>
   </Message>
   <Message number="1390" eDefine="SYS_EIO_DN_BUSOFF_RECOVERED">
     <Title>DeviceNet-Bus nach Deaktivieren des Bus wiederhergestellt</Title>
-    <Description>DeviceNet-E/A-Bus &lt;<arg format="%s" ordinal="1" />&gt; nach Deaktivieren des Bus wiederhergestellt. </Description>
+    <Description>DeviceNet-E/A-Bus &lt;%s&gt; nach Deaktivieren des Bus wiederhergestellt. </Description>
   </Message>
   <Message number="1391" eDefine="SYS_EIO_CC_CFG_ERR">
     <Title>Systemsignalkonfiguration</Title>
-    <Description>Fehler während der Konfiguration eines System Input/Output-Signals.<p /><p />System-E/A-Name: <arg format="%s" ordinal="1" /></Description>
+    <Description>Fehler während der Konfiguration eines System Input/Output-Signals.System-E/A-Name: %s</Description>
     <Consequences>Das System wechselt in den Zustand SYS FAIL.</Consequences>
     <Causes>Alle Fehler während der Konfiguration von System Input/Output-Signalen werden als schwerwiegend betrachtet, und das System wechselt in den Zustand SYS FAIL.</Causes>
-    <Actions>1. Verbindung der Einheit prüfen, mit der das Systemsignal verbunden ist.<p />2. Konfiguration der E/A-Einheit prüfen.<p /><p /></Actions>
+    <Actions>1. Verbindung der Einheit prüfen, mit der das Systemsignal verbunden ist.2. Konfiguration der E/A-Einheit prüfen.</Actions>
   </Message>
   <Message number="1392" eDefine="SYS_EIO_DN_STROBE_BUFFER_SIZE">
     <Title>Ungültige Ausgangsgröße</Title>
-    <Description>Auf DeviceNet E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; entspricht die Ausgangsgröße &lt;<arg format="%s" ordinal="2" />&gt; von Verbindung 1 nicht der E/A-Einheit. Bei Verwendung von Strobe Connection sind als Ausgangsgröße nur 1 und -1 zulässig. </Description>
-    <Actions>1. Größe in Konfiguration ändern.<p />2. Modul prüfen.<p />3. Einheitentyp DN_GENERIC verwenden. </Actions>
+    <Description>Auf DeviceNet E/A-Einheit &lt;%s&gt; entspricht die Ausgangsgröße &lt;%s&gt; von Verbindung 1 nicht der E/A-Einheit. Bei Verwendung von Strobe Connection sind als Ausgangsgröße nur 1 und -1 zulässig. </Description>
+    <Actions>1. Größe in Konfiguration ändern.2. Modul prüfen.3. Einheitentyp DN_GENERIC verwenden. </Actions>
   </Message>
   <Message number="1393" eDefine="SYS_EIO_DN_GENERIC_C1_ERR">
     <Title>Fehler beim Zuweisen von generischer Größe</Title>
-    <Description>Generische Größe (-1) von <arg format="%s" ordinal="2" /> für DeviceNet-E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; konnte nicht zugewiesen werden. </Description>
-    <Causes>DeviceNet-E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; kann nicht mit dem Einheitentyp DN_GENERIC oder mit der generischen Größe (-1) von <arg format="%s" ordinal="2" /> konfiguriert werden. </Causes>
-    <Actions>1. Aktuelle Einheitentyp-Konfiguration mit neuer <arg format="%s" ordinal="2" />-Größe aktualisieren.<p />2. Nicht den Einheitentyp DN_GENERIC verwenden. <p /></Actions>
+    <Description>Generische Größe (-1) von %s für DeviceNet-E/A-Einheit &lt;%s&gt; konnte nicht zugewiesen werden. </Description>
+    <Causes>DeviceNet-E/A-Einheit &lt;%s&gt; kann nicht mit dem Einheitentyp DN_GENERIC oder mit der generischen Größe (-1) von %s konfiguriert werden. </Causes>
+    <Actions>1. Aktuelle Einheitentyp-Konfiguration mit neuer %s-Größe aktualisieren.2. Nicht den Einheitentyp DN_GENERIC verwenden. </Actions>
   </Message>
   <Message number="1394" eDefine="SYS_EIO_SIO_INVALID_CHANNEL">
     <Title>Ungültiger physischer Kommunikationskanal</Title>
-    <Description>Der Kommunikationskanal <arg format="%s" ordinal="1" /> liegt außerhalb des zulässigen Bereichs. </Description>
-    <Consequences>Der Kommunikationskanal <arg format="%s" ordinal="1" /> ist nicht verfügbar. </Consequences>
-    <Causes>Adapterkarte DSQC 1003 nicht installiert oder der Kommunikationskanal &lt;<arg format="%s" ordinal="1" />&gt; liegt außerhalb des zulässigen Bereichs.<p /></Causes>
-    <Actions>1. Zulässigen Mindest- und Höchstwert der Anschlüsse prüfen.<p />2. Erforderliche Hardware prüfen. </Actions>
+    <Description>Der Kommunikationskanal %s liegt außerhalb des zulässigen Bereichs. </Description>
+    <Consequences>Der Kommunikationskanal %s ist nicht verfügbar. </Consequences>
+    <Causes>Adapterkarte DSQC 1003 nicht installiert oder der Kommunikationskanal &lt;%s&gt; liegt außerhalb des zulässigen Bereichs.</Causes>
+    <Actions>1. Zulässigen Mindest- und Höchstwert der Anschlüsse prüfen.2. Erforderliche Hardware prüfen. </Actions>
   </Message>
   <Message number="1395" eDefine="SYS_EIO_SIO_TRP_TYPE_UNKNOWN">
     <Title>Kein Übertragungsprotokoll</Title>
-    <Description>Das Übertragungsprotokoll &lt;<arg format="%s" ordinal="1" />&gt; für Kanal &lt;<arg format="%s" ordinal="2" />&gt; fehlt. </Description>
-    <Consequences>Die Übertragungsinstanz &lt;<arg format="%s" ordinal="2" />&gt; ist nicht verfügbar. </Consequences>
-    <Causes>Die Option mit dem Übertragungsprotokoll &lt;<arg format="%s" ordinal="1" />&gt; ist nicht installiert oder der Protokollname ist falsch. </Causes>
-    <Actions>1. Fehlende Option installieren.<p />2. Namen des Übertragungsprotokolls ändern. </Actions>
+    <Description>Das Übertragungsprotokoll &lt;%s&gt; für Kanal &lt;%s&gt; fehlt. </Description>
+    <Consequences>Die Übertragungsinstanz &lt;%s&gt; ist nicht verfügbar. </Consequences>
+    <Causes>Die Option mit dem Übertragungsprotokoll &lt;%s&gt; ist nicht installiert oder der Protokollname ist falsch. </Causes>
+    <Actions>1. Fehlende Option installieren.2. Namen des Übertragungsprotokolls ändern. </Actions>
   </Message>
   <Message number="1396" eDefine="SYS_EIO_SIO_TRP_UNKNOWN">
     <Title>Kein Übertragungsprotokoll</Title>
-    <Description>Das Übertragungsprotokoll &lt;<arg format="%s" ordinal="2" />&gt; fehlt oder der Name des Übertragungsprotokolls ist falsch für &lt;<arg format="%s" ordinal="1" />&gt;. </Description>
-    <Consequences>Die Anwendungsprotokollinstanz &lt;<arg format="%s" ordinal="1" />&gt; ist nicht verfügbar. </Consequences>
+    <Description>Das Übertragungsprotokoll &lt;%s&gt; fehlt oder der Name des Übertragungsprotokolls ist falsch für &lt;%s&gt;. </Description>
+    <Consequences>Die Anwendungsprotokollinstanz &lt;%s&gt; ist nicht verfügbar. </Consequences>
     <Causes>Die Option mit dem Übertragungsprotokoll ist nicht installiert oder der Anwendungsname ist falsch.</Causes>
-    <Actions>1. Option installieren.<p />2. Namen des Übertragungsprotokolls in der Konfiguration ändern. </Actions>
+    <Actions>1. Option installieren.2. Namen des Übertragungsprotokolls in der Konfiguration ändern. </Actions>
   </Message>
   <Message number="1397" eDefine="SYS_EIO_SIO_APP_TYPE_UNKNOWN">
     <Title>Kein Anwendungsprotokoll </Title>
-    <Description>Das Anwendungsprotokoll &lt;<arg format="%s" ordinal="1" />&gt; fehlt oder der Name ist falsch. </Description>
-    <Consequences>Die Anwendungsinstanz &lt;<arg format="%s" ordinal="2" />&gt; ist nicht verfügbar. </Consequences>
+    <Description>Das Anwendungsprotokoll &lt;%s&gt; fehlt oder der Name ist falsch. </Description>
+    <Consequences>Die Anwendungsinstanz &lt;%s&gt; ist nicht verfügbar. </Consequences>
     <Causes>Die Option mit dem Anwendungsprotokoll ist nicht installiert oder der Protokollname ist falsch.</Causes>
-    <Actions>1. Option installieren.<p />2. Namen des Anwendungsprotokolls ändern. </Actions>
+    <Actions>1. Option installieren.2. Namen des Anwendungsprotokolls ändern. </Actions>
   </Message>
   <Message number="1398" eDefine="SYS_EIO_TRPBOSV24_TIMEOUT">
     <Title>Kommunikationsfehler von bosv24</Title>
@@ -173,59 +173,59 @@
     <Actions>Serielle Leitung auf Rauschen überprüfen.</Actions>
   </Message>
   <Message number="1401" eDefine="SYS_EIO_AB_NO_FA_OPT">
-    <Title> Keine Option für den &lt;<arg format="%s" ordinal="1" />&gt; Feldbus-Adapter vorhanden </Title>
-    <Description>Ein &lt;<arg format="%s" ordinal="1" />&gt; Feldbus-Adapter wurde gefunden, aber es ist keine Option installiert. </Description>
-    <Consequences>Es ist keine Kommunikation für &lt;<arg format="%s" ordinal="1" />&gt; Feldbus-Adapter möglich. Folgefehler können durch die Konfiguration entstehen, wenn keine entsprechende Option installiert wurde. </Consequences>
-    <Causes>Eventuell wurde versucht, die &lt;<arg format="%s" ordinal="1" />&gt; Feldbus-Adapter-Funktionalität hinzuzufügen, ohne die Option korrekt zu installieren. </Causes>
-    <Actions>Wird die Option &lt;<arg format="%s" ordinal="1" />&gt;-Feldbus-Adapter benötigt: neues System mit dieser Option konfigurieren und das System installieren. </Actions>
+    <Title> Keine Option für den &lt;%s&gt; Feldbus-Adapter vorhanden </Title>
+    <Description>Ein &lt;%s&gt; Feldbus-Adapter wurde gefunden, aber es ist keine Option installiert. </Description>
+    <Consequences>Es ist keine Kommunikation für &lt;%s&gt; Feldbus-Adapter möglich. Folgefehler können durch die Konfiguration entstehen, wenn keine entsprechende Option installiert wurde. </Consequences>
+    <Causes>Eventuell wurde versucht, die &lt;%s&gt; Feldbus-Adapter-Funktionalität hinzuzufügen, ohne die Option korrekt zu installieren. </Causes>
+    <Actions>Wird die Option &lt;%s&gt;-Feldbus-Adapter benötigt: neues System mit dieser Option konfigurieren und das System installieren. </Actions>
   </Message>
   <Message number="1402" eDefine="SYS_EIO_EN_DUPLICATED_IP_ADDRESS">
-    <Title> Doppelte Adresse an <arg format="%s" ordinal="2" /> E/A-Bus </Title>
-    <Description>Die E/A-Bus-Adresse <arg format="%s" ordinal="2" /> ist im Netzwerk doppelt vorhanden.<p /><p />Den Konflikt verursachende Adresse &lt;<arg format="%s" ordinal="1" />&gt;. </Description>
-    <Consequences>Es ist keine Kommunikation am <arg format="%s" ordinal="2" />-E/A-Bus möglich. </Consequences>
-    <Actions>1. Verändern Sie die Adresse der den Konflikt verursachenden E/A-Einheit (oder trennen Sie die E/A-Einheit physisch ab) oder verändern Sie die Adresse für den <arg format="%s" ordinal="2" /> E/A-Bus.<p />2. System neu starten. </Actions>
+    <Title> Doppelte Adresse an %s E/A-Bus </Title>
+    <Description>Die E/A-Bus-Adresse %s ist im Netzwerk doppelt vorhanden.Den Konflikt verursachende Adresse &lt;%s&gt;. </Description>
+    <Consequences>Es ist keine Kommunikation am %s-E/A-Bus möglich. </Consequences>
+    <Actions>1. Verändern Sie die Adresse der den Konflikt verursachenden E/A-Einheit (oder trennen Sie die E/A-Einheit physisch ab) oder verändern Sie die Adresse für den %s E/A-Bus.2. System neu starten. </Actions>
   </Message>
   <Message number="1403" eDefine="SYS_EIO_DN_INTERVAL_ERR">
     <Title>Ungültige Intervallzeit</Title>
-    <Description>Für den DeviceNet-Einheitentyp &lt;<arg format="%s" ordinal="1" />&gt; ist die Intervallzeit für Verbindung <arg format="%d" ordinal="2" /> ungültig. </Description>
+    <Description>Für den DeviceNet-Einheitentyp &lt;%s&gt; ist die Intervallzeit für Verbindung %d2 ungültig. </Description>
     <Causes>Der Wert der Intervallzeit ist geringer als die Production Inhibit Time.</Causes>
-    <Actions>Intervallzeit für Verbindung <arg format="%d" ordinal="2" /> in einen Wert ändern, der höher als die Production Inhibit Time für den Einheitentyp &lt;<arg format="%s" ordinal="1" />&gt; in der E/A-Konfiguration ist. </Actions>
+    <Actions>Intervallzeit für Verbindung %d2 in einen Wert ändern, der höher als die Production Inhibit Time für den Einheitentyp &lt;%s&gt; in der E/A-Konfiguration ist. </Actions>
   </Message>
   <Message number="1404" eDefine="SYS_EIO_AB_INVALID_MAP_SIZE">
     <Title>Ungültige Eingangs-/Ausgangsgröße</Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; besitzt einen ungültigen Wert (Null) als Eingangs- oder Ausgangsgröße. </Description>
+    <Description>Die E/A-Einheit &lt;%s&gt; besitzt einen ungültigen Wert (Null) als Eingangs- oder Ausgangsgröße. </Description>
     <Actions>Eingangs-/Ausgangsgröße auf einen Wert größer Null ändern.</Actions>
   </Message>
   <Message number="1405" eDefine="SYS_EIO_DUP_UNIT_MAP">
     <Title>Doppelte E/A-Einheitenzuordnung</Title>
-    <Description>Das E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; besitzt dieselbe Einheitenzuordnung wie das E/A-Signal &lt;<arg format="%s" ordinal="2" />&gt;. </Description>
+    <Description>Das E/A-Signal &lt;%s&gt; besitzt dieselbe Einheitenzuordnung wie das E/A-Signal &lt;%s&gt;. </Description>
     <Consequences>Das Zuordnen mehrerer E/A-Signale zu denselben Bits in der Einheitenzuordnung kann unvorhersehbare Werte für diese E/A-Signale verursachen, da sich die Reihenfolge der Berechnung nicht steuern lässt. Wenn z. B. ein invertiertes Gruppen-E/A-Ausgangssignal denselben Bits wie einige digitale E/A-Ausgangssignale zugeordnet ist, hängt der Status dieser Bits von der Reihenfolge ab, in der die E/A-Signale gesetzt werden.</Consequences>
     <Actions>Es wird dringend empfohlen, die Zuordnung mehrerer E/A-Signale zu denselben Bits zu vermeiden.</Actions>
   </Message>
   <Message number="1406" eDefine="SYS_EIO_DN_BUS_IS_RUNNING">
     <Title>Kommunikation für DeviceNet-E/A-Bus aufgebaut</Title>
-    <Description>DeviceNet-E/A-Bus &lt;<arg format="%s" ordinal="1" />&gt; hat die Kommunikation hergestellt. </Description>
+    <Description>DeviceNet-E/A-Bus &lt;%s&gt; hat die Kommunikation hergestellt. </Description>
   </Message>
   <Message number="1407" eDefine="SYS_EIO_RTE_INTERFACE_INVALID">
     <Title>Leitungsschnittstelle nicht gefunden</Title>
-    <Description>Die Leitungsschnittstelle &lt;<arg format="%s" ordinal="1" />&gt; für E/A-Bus &lt;<arg format="%s" ordinal="2" />&gt; wurde im System nicht gefunden. </Description>
-    <Consequences>Die Leitung ist nicht verfügbar. Meldungen an Geräte, die an &lt;<arg format="%s" ordinal="2" />&gt; angeschlossen sind, werden nicht weitergeleitet. </Consequences>
-    <Causes>Der E/A-Bus &lt;<arg format="%s" ordinal="2" />&gt; ist nicht definiert oder ist falsch geschrieben. </Causes>
+    <Description>Die Leitungsschnittstelle &lt;%s&gt; für E/A-Bus &lt;%s&gt; wurde im System nicht gefunden. </Description>
+    <Consequences>Die Leitung ist nicht verfügbar. Meldungen an Geräte, die an &lt;%s&gt; angeschlossen sind, werden nicht weitergeleitet. </Consequences>
+    <Causes>Der E/A-Bus &lt;%s&gt; ist nicht definiert oder ist falsch geschrieben. </Causes>
     <Actions>Konfiguration des E/A-Busbezeichners ändern.</Actions>
   </Message>
   <Message number="1408" eDefine="SYS_EIO_RTE_PORT_INVALID">
     <Title>Portnummer der Leitung außerhalb des Gültigkeitsbereichs</Title>
-    <Description>Die angegebene Portnummer <arg format="%ld" ordinal="3" /> der Leitung &lt;<arg format="%s" ordinal="1" />&gt; liegt außerhalb des gültigen Bereichs. </Description>
-    <Consequences>Die Leitung ist nicht verfügbar. Meldungen an Geräte, die an &lt;<arg format="%s" ordinal="2" />&gt; angeschlossen sind, werden nicht weitergeleitet. </Consequences>
-    <Causes>Die Nummer <arg format="%ld" ordinal="3" /> ist außerhalb des gültigen Bereichs. </Causes>
+    <Description>Die angegebene Portnummer %ld3 der Leitung &lt;%s&gt; liegt außerhalb des gültigen Bereichs. </Description>
+    <Consequences>Die Leitung ist nicht verfügbar. Meldungen an Geräte, die an &lt;%s&gt; angeschlossen sind, werden nicht weitergeleitet. </Consequences>
+    <Causes>Die Nummer %ld3 ist außerhalb des gültigen Bereichs. </Causes>
     <Actions>Portnummer ändern.</Actions>
   </Message>
   <Message number="1409" eDefine="SYS_EIO_RTE_OUT_OF_PORT_RESOURCES">
     <Title>
-      <arg format="%s" ordinal="1" /> kann kein Port hinzugefügt werden </Title>
-    <Description>Port <arg format="%ld" ordinal="4" /> von Leitung &lt;<arg format="%s" ordinal="2" />&gt; kann aufgrund fehlender Ressourcen nicht definiert werden. </Description>
-    <Consequences>Die Leitung ist nicht verfügbar. Meldungen an Geräte, die mit Port <arg format="%ld" ordinal="4" /><arg format="%ld" ordinal="4" /> verbunden sind, werden nicht weitergeleitet. </Consequences>
-    <Causes>&lt;<arg format="%s" ordinal="1" />&gt; unterstützt nicht diese Anzahl an Ports. </Causes>
+      %s kann kein Port hinzugefügt werden </Title>
+    <Description>Port %ld4 von Leitung &lt;%s&gt; kann aufgrund fehlender Ressourcen nicht definiert werden. </Description>
+    <Consequences>Die Leitung ist nicht verfügbar. Meldungen an Geräte, die mit Port %ld4%ld4 verbunden sind, werden nicht weitergeleitet. </Consequences>
+    <Causes>&lt;%s&gt; unterstützt nicht diese Anzahl an Ports. </Causes>
     <Actions>Nach Möglichkeit die Anzahl der Ports verringern oder Problem an ABB melden.</Actions>
   </Message>
   <Message number="1410" eDefine="SYS_EIO_RTE_CIPRTE_NOT_INSTALLED">
@@ -238,27 +238,27 @@
   <Message number="1411" eDefine="SYS_EIO_RTE_TABLE_ERR">
     <Title>Keine Routenressourcen mehr vorhanden</Title>
     <Description>Es können keine weiteren Routen hinzugefügt werden, weil im System keine Routenressourcen mehr vorhanden sind.</Description>
-    <Consequences>Dem System wird Route &lt;<arg format="%s" ordinal="2" />&gt; nicht hinzugefügt. </Consequences>
-    <Causes>Es wurden zu viele Routen definiert. Das System lässt nur <arg format="%ld" ordinal="1" /> Routen zu. </Causes>
+    <Consequences>Dem System wird Route &lt;%s&gt; nicht hinzugefügt. </Consequences>
+    <Causes>Es wurden zu viele Routen definiert. Das System lässt nur %ld1 Routen zu. </Causes>
     <Actions>Anzahl an Routen verringern.</Actions>
   </Message>
   <Message number="1412" eDefine="SYS_EIO_DN_POWER_REGAINED">
     <Title>DeviceNet-E/A-Bus verfügt wieder über Bus-Netzspannung</Title>
-    <Description>Der DeviceNet-E/A-Bus &lt;<arg format="%s" ordinal="1" />&gt; verfügt wieder über 24V-Bus-Netzspannung. </Description>
+    <Description>Der DeviceNet-E/A-Bus &lt;%s&gt; verfügt wieder über 24V-Bus-Netzspannung. </Description>
   </Message>
   <Message number="1414" eDefine="SYS_EIO_CONCURRENT_SIG_EVENTS ">
     <Title>Gleichzeitige Änderungen des Signalwerts</Title>
-    <Description>Gleichzeitige Änderungen des E/A-Signalwerts &lt;<arg format="%s" ordinal="1" />&gt; wurden erkannt. </Description>
-    <Consequences>Eine Signalwertänderung von E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; wurde aufgrund einer anderen Wertänderung desselben E/A-Signals abgebrochen. </Consequences>
-    <Causes>Die Ursache der gleichzeitigen Wertänderung ist eine unerwünschte Reihenfolge der Signaländerung in einem Programm. Mehrere Änderungen von E/A-Signal <arg format="%s" ordinal="1" /> können auftreten, wenn ein E/A-Signal gepulst wird, z. B.<p /><p />SetDO <arg format="%s" ordinal="1" />, 0;<p />PulseDO /High /PLength = 0.01, <arg format="%s" ordinal="1" />; <p />WaitTime 0.01; <p />SetDO <arg format="%s" ordinal="1" />, 1;<p /><p />Das E/A-Signal <arg format="%s" ordinal="1" /> ist schließlich 1, jedoch ist in seltenen Fällen kein sichtbarer Puls vorhanden. Diese Art von Reihenfolge sollte vermieden werden. </Causes>
-    <Actions>Sicherstellen, dass gleichzeitige Wertänderungen von E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; beabsichtigt sind, anderenfalls die Reihenfolge der Signaländerung ändern. </Actions>
+    <Description>Gleichzeitige Änderungen des E/A-Signalwerts &lt;%s&gt; wurden erkannt. </Description>
+    <Consequences>Eine Signalwertänderung von E/A-Signal &lt;%s&gt; wurde aufgrund einer anderen Wertänderung desselben E/A-Signals abgebrochen. </Consequences>
+    <Causes>Die Ursache der gleichzeitigen Wertänderung ist eine unerwünschte Reihenfolge der Signaländerung in einem Programm. Mehrere Änderungen von E/A-Signal %s können auftreten, wenn ein E/A-Signal gepulst wird, z. B.SetDO %s, 0;PulseDO /High /PLength = 0.01, %s; WaitTime 0.01; SetDO %s, 1;Das E/A-Signal %s ist schließlich 1, jedoch ist in seltenen Fällen kein sichtbarer Puls vorhanden. Diese Art von Reihenfolge sollte vermieden werden. </Causes>
+    <Actions>Sicherstellen, dass gleichzeitige Wertänderungen von E/A-Signal &lt;%s&gt; beabsichtigt sind, anderenfalls die Reihenfolge der Signaländerung ändern. </Actions>
   </Message>
   <Message number="1415" eDefine="SYS_EIO_DNET_24_POWER_ERR">
     <Title>Keine Bus-Netzspannung</Title>
     <Description>Keine 24V-Spannungsversorgung am DeviceNet E/A-Bus vorhanden.</Description>
     <Consequences>Es ist keine Kommunikation am DeviceNet E/A-Bus möglich.</Consequences>
     <Causes>Netzteil, Kabel, Eingangsspannung zum Netzteil oder Ausgangslast können den Spannungsausfall verursachen (siehe Fehlerbehebungsabschnitt im Handbuch).</Causes>
-    <Actions>1. Sicherstellen, dass DeviceNet E/A-Bus-Anschluss verbunden ist.<p />2. Alle Kabel zum Netzteil prüfen. <p />3. Ausgangs- und Eingangsspannungspegel messen. <p />4. Gegebenenfalls fehlerhafte Einheit austauschen. </Actions>
+    <Actions>1. Sicherstellen, dass DeviceNet E/A-Bus-Anschluss verbunden ist.2. Alle Kabel zum Netzteil prüfen. 3. Ausgangs- und Eingangsspannungspegel messen. 4. Gegebenenfalls fehlerhafte Einheit austauschen. </Actions>
   </Message>
   <Message number="1416" eDefine="SYS_EIO_DNET_24_POWER_OK">
     <Title>Bus-Netzspannung wiederhergestellt</Title>
@@ -269,36 +269,36 @@
     <Description>Der Hardwareadapter DSQC 572 für den DeviceNet E/A-Bus-Kontakt fehlt.</Description>
     <Consequences>Es ist keine Kommunikation am DeviceNet E/A-Bus möglich.</Consequences>
     <Causes>DSQC 572 fehlt oder das Kabel zwischen dem Hauptcomputer und DSQC 572 ist nicht eingesteckt.</Causes>
-    <Actions>1. Alle Kabel prüfen. <p />2. Gegebenenfalls defekten Hardwareadapter DSQC 572 austauschen. </Actions>
+    <Actions>1. Alle Kabel prüfen. 2. Gegebenenfalls defekten Hardwareadapter DSQC 572 austauschen. </Actions>
   </Message>
   <Message number="1418" eDefine="SYS_EIO_DNET_WRONG_VENDOR_ERR">
     <Title>Unzulässiger Anbieter</Title>
-    <Description>Die an den DeviceNet E/A-Bus angeschlossene E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; wird nicht unterstützt. Gemeldete Anbieter-ID war <arg format="%d" ordinal="2" />, erwartet wird <arg format="%d" ordinal="3" />. </Description>
+    <Description>Die an den DeviceNet E/A-Bus angeschlossene E/A-Einheit &lt;%s&gt; wird nicht unterstützt. Gemeldete Anbieter-ID war %d2, erwartet wird %d3. </Description>
     <Consequences>Keine Kommunikation mit der E/A-Einheit möglich.</Consequences>
-    <Actions>1. Die E/A-Einheit aus der Konfiguration entfernen. <p />2. Die E/A-Einheit durch einen unterstützten Typ ersetzen. </Actions>
+    <Actions>1. Die E/A-Einheit aus der Konfiguration entfernen. 2. Die E/A-Einheit durch einen unterstützten Typ ersetzen. </Actions>
   </Message>
   <Message number="1419" eDefine="SYS_EIO_DNET_NOT_ALLOWED_ERR">
     <Title>Unzulässiger Einheitentyp</Title>
-    <Description>Die an den DeviceNet E/A-Bus angeschlossene E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist kein unterstützter DeviceNet-Modultyp. </Description>
+    <Description>Die an den DeviceNet E/A-Bus angeschlossene E/A-Einheit &lt;%s&gt; ist kein unterstützter DeviceNet-Modultyp. </Description>
     <Consequences>Keine Kommunikation mit der E/A-Einheit möglich.</Consequences>
-    <Actions>1. Die E/A-Einheit aus der Konfiguration entfernen. <p />2. Die E/A-Einheit durch einen unterstützten E/A-Einheitentyp ersetzen. </Actions>
+    <Actions>1. Die E/A-Einheit aus der Konfiguration entfernen. 2. Die E/A-Einheit durch einen unterstützten E/A-Einheitentyp ersetzen. </Actions>
   </Message>
   <Message number="1420" eDefine="SYS_EIO_DNET_CONFIG_ERR">
     <Title>Falscher Einheitentyp</Title>
-    <Description>Die an den DeviceNet E/A-Bus angeschlossene E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist nicht vom selben Typ wie konfiguriert.<p />Der gemeldete Produktcode lautet <arg format="%d" ordinal="2" />, während <arg format="%d" ordinal="3" /> erwartet wurde. </Description>
+    <Description>Die an den DeviceNet E/A-Bus angeschlossene E/A-Einheit &lt;%s&gt; ist nicht vom selben Typ wie konfiguriert.Der gemeldete Produktcode lautet %d2, während %d3 erwartet wurde. </Description>
     <Consequences>Keine Kommunikation mit der E/A-Einheit möglich.</Consequences>
     <Actions>Konfiguration der E/A-Einheit ändern.</Actions>
   </Message>
   <Message number="1421" eDefine="SYS_EIO_DNET_DUPMAC_ERR">
     <Title>Doppelte Adresse an DeviceNet-E/A-Bus</Title>
-    <Description>Die reservierte Adresse <arg format="%d" ordinal="1" /> für den DeviceNet-Master wird von einer anderen E/A-Einheit im Netzwerk verwendet. </Description>
-    <Actions>1. Adresse für die den Konflikt verursachende E/A-Einheit ändern.<p />2. Die E/A-Einheit, die Adresse für den Master verwendet, vom Netzwerk trennen.<p /></Actions>
+    <Description>Die reservierte Adresse %d1 für den DeviceNet-Master wird von einer anderen E/A-Einheit im Netzwerk verwendet. </Description>
+    <Actions>1. Adresse für die den Konflikt verursachende E/A-Einheit ändern.2. Die E/A-Einheit, die Adresse für den Master verwendet, vom Netzwerk trennen.</Actions>
   </Message>
   <Message number="1422" eDefine="SYS_EIO_DNET_OVERRUN_INFO">
     <Title>Hohe Last an DeviceNet-E/A-Bus</Title>
     <Description>Der Umfang des Datenverkehrs am DeviceNet-E/A-Bus ist zu hoch oder das System ist zu ausgelastet, um alle Meldungen am DeviceNet-E/A-Bus zu behandeln.</Description>
     <Consequences>Möglicherweise gehen E/A-Daten verloren oder werden verzögert.</Consequences>
-    <Actions>1. Production Inhibit Parameter für alle konfigurierten E/A-Einheiten ändern.<p />2. Systemlast verringern.<p /></Actions>
+    <Actions>1. Production Inhibit Parameter für alle konfigurierten E/A-Einheiten ändern.2. Systemlast verringern.</Actions>
   </Message>
   <Message number="1423" eDefine="SYS_EIO_DNET_MINOR_ERROR_INFO">
     <Title>Geringfügiger Fehler an DeviceNet-E/A-Bus</Title>
@@ -314,8 +314,8 @@
   </Message>
   <Message number="1425" eDefine="SYS_EIO_DNET_MAX_UNITS_ERR">
     <Title>Zu viele E/A-Einheiten für DeviceNet </Title>
-    <Description>Für den DeviceNet-E/A-Bus sind zu viele E/A-Einheiten konfiguriert. Die maximal zulässige Anzahl ist <arg format="%d" ordinal="1" />. Die E/A-Einheit &lt;<arg format="%s" ordinal="2" />&gt; wurde zurückgewiesen. </Description>
-    <Consequences>Es ist kein Austausch von Daten mit E/A-Einheit &lt;<arg format="%s" ordinal="2" />&gt; möglich. </Consequences>
+    <Description>Für den DeviceNet-E/A-Bus sind zu viele E/A-Einheiten konfiguriert. Die maximal zulässige Anzahl ist %d1. Die E/A-Einheit &lt;%s&gt; wurde zurückgewiesen. </Description>
+    <Consequences>Es ist kein Austausch von Daten mit E/A-Einheit &lt;%s&gt; möglich. </Consequences>
     <Actions>Die E/A-Einheit aus der E/A-Konfiguration entfernen.</Actions>
   </Message>
   <Message number="1426" eDefine="SYS_EIO_DNET_BUS_OFF_OK">
@@ -325,108 +325,108 @@
   </Message>
   <Message number="1428" eDefine="SYS_EIO_DNET_BUS_AUTO_CONFIG_INFO">
     <Title>DeviceNet-E/A-Einheit konfiguriert </Title>
-    <Description>Eine neue E/A-Einheit wurde gefunden und am DeviceNet-E/A-Bus konfiguriert.<p /><p />Einheitenname: <arg format="%s" ordinal="1" /><p />Einheitenadresse. <arg format="%d" ordinal="2" /><p />Eingangs-Bytes / Ausgangs-Bytes: <arg format="%s" ordinal="3" /><p />Anbieter-ID: <arg format="%d" ordinal="4" /><p />Produktcode: <arg format="%d" ordinal="5" /></Description>
-    <Actions>1. Die Steuerung neu starten, um die Konfiguration der E/A-Einheit zu aktivieren.<p />2. Konfiguration bearbeiten oder löschen. </Actions>
+    <Description>Eine neue E/A-Einheit wurde gefunden und am DeviceNet-E/A-Bus konfiguriert.Einheitenname: %sEinheitenadresse. %d2Eingangs-Bytes / Ausgangs-Bytes: %sAnbieter-ID: %d4Produktcode: %d5</Description>
+    <Actions>1. Die Steuerung neu starten, um die Konfiguration der E/A-Einheit zu aktivieren.2. Konfiguration bearbeiten oder löschen. </Actions>
   </Message>
   <Message number="1443" eDefine="SYS_EIO_PNET_TOO_MANY_INT_SLAVE">
     <Title>Zu viele interne Profinet-Slaves</Title>
     <Description>In der Steuerung sind zu viele interne Profinet-Slaves definiert.</Description>
-    <Consequences>Profinet-E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; wird nicht konfiguriert. Mit dieser E/A-Einheit ist keine Kommunikation möglich. </Consequences>
-    <Causes>Profinet-E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist als interner Profinet-Slave definiert, jedoch wurde bereits ein anderer interner Profinet-Slave konfiguriert. </Causes>
-    <Actions>E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; aus der Konfiguration entfernen. </Actions>
+    <Consequences>Profinet-E/A-Einheit &lt;%s&gt; wird nicht konfiguriert. Mit dieser E/A-Einheit ist keine Kommunikation möglich. </Consequences>
+    <Causes>Profinet-E/A-Einheit &lt;%s&gt; ist als interner Profinet-Slave definiert, jedoch wurde bereits ein anderer interner Profinet-Slave konfiguriert. </Causes>
+    <Actions>E/A-Einheit &lt;%s&gt; aus der Konfiguration entfernen. </Actions>
   </Message>
   <Message number="1446" eDefine="SYS_EIO_AB_PNET_CFG_MISMATCH">
     <Title>Profinet-Konfigurationskonflikt</Title>
-    <Description>Konfigurationskonflikt zwischen Feldbus-Adapter und dem Profinet-Master in Slot <arg format="%d" ordinal="1" />, der eine Verbindung herzustellen versucht. </Description>
+    <Description>Konfigurationskonflikt zwischen Feldbus-Adapter und dem Profinet-Master in Slot %d1, der eine Verbindung herzustellen versucht. </Description>
     <Consequences>Der Feldbus-Adapter gibt einen Diagnosefehler an, und es wird keine Verbindung zwischen dem Feldbus-Adapter und dem Profinet-Master hergestellt.</Consequences>
-    <Causes>Konflikt von Datentyp/Datengröße in Slot <arg format="%d" ordinal="1" />, für die Profinet-Master-Konfiguration. Der erwartete Datentyp/Datengröße ist <arg format="%d" ordinal="2" /><arg format="%s" ordinal="3" /> Bytes. </Causes>
-    <Actions>Korrektur von Datentyp/Datengröße in Slot <arg format="%d" ordinal="1" /> über das externe Konfigurationswerkzeug oder Ändern der Datengröße in der Konfiguration der Systemparameter.<p /><p />HINWEIS:<p />In der Profinet-Master-Konfiguration sollten sich die Eingangsdaten in Slot 1 und die Ausgangsdaten in Slot 2 befinden. </Actions>
+    <Causes>Konflikt von Datentyp/Datengröße in Slot %d1, für die Profinet-Master-Konfiguration. Der erwartete Datentyp/Datengröße ist %d2%s Bytes. </Causes>
+    <Actions>Korrektur von Datentyp/Datengröße in Slot %d1 über das externe Konfigurationswerkzeug oder Ändern der Datengröße in der Konfiguration der Systemparameter.HINWEIS:In der Profinet-Master-Konfiguration sollten sich die Eingangsdaten in Slot 1 und die Ausgangsdaten in Slot 2 befinden. </Actions>
   </Message>
   <Message number="1449" eDefine="SYS_EIO_AB_TOO_MANY_UNITS">
     <Title>Zu viele Feldbus-Adapter konfiguriert</Title>
     <Description>Zu viele Feldbus-Adapter konfiguriert Es darf nur ein Feldbus-Adapter konfiguriert werden. </Description>
-    <Consequences>Der Feldbus-Adapter &lt;<arg format="%s" ordinal="1" />&gt; wurde abgelehnt, und keine davon abhängigen Funktionen werden funktionieren. </Consequences>
-    <Actions>1. Feldbus-Adapter in der Konfiguration entfernen.<p />2. Starten Sie das System neu. </Actions>
+    <Consequences>Der Feldbus-Adapter &lt;%s&gt; wurde abgelehnt, und keine davon abhängigen Funktionen werden funktionieren. </Consequences>
+    <Actions>1. Feldbus-Adapter in der Konfiguration entfernen.2. Starten Sie das System neu. </Actions>
   </Message>
   <Message number="1450" eDefine="SYS_EIO_EN_MS_OPTION_NOT_INSTALLED">
     <Title>EtherNet/IP Master/Slave-Option nicht installiert</Title>
     <Description>EtherNet/IP E/A-Bus wurde konfiguriert, aber die EtherNet/IP Master/Slave-Option wurde nicht installiert.</Description>
     <Consequences>Keine Kommunikation über EtherNet/IP möglich. Folgefehler können durch die Konfiguration von EtherNet/IP entstehen, wenn keine entsprechende Option installiert wurde.</Consequences>
     <Causes>Eventuell wurde versucht, die EtherNet/IP-Funktionalität hinzuzufügen, ohne die Option korrekt zu installieren.</Causes>
-    <Actions>1. Wird die Option EtherNet/IP benötigt: neues System mit dieser Option konfigurieren und das System installieren.<p />2. Wenn die EtherNet/IP-Option nicht erforderlich ist: neues System ohne diese Option konfigurieren und das System installieren. </Actions>
+    <Actions>1. Wird die Option EtherNet/IP benötigt: neues System mit dieser Option konfigurieren und das System installieren.2. Wenn die EtherNet/IP-Option nicht erforderlich ist: neues System ohne diese Option konfigurieren und das System installieren. </Actions>
   </Message>
   <Message number="1451" eDefine="SYS_EIO_EN_ETH_OPTION_NOT_INSTALLED">
     <Title>Zusätzlicher Ethernet-Port nicht installiert</Title>
     <Description>EtherNet/IP E/A-Bus wurde für Verwendung des zusätzlichen Ethernet-Port konfiguriert, aber der zusätzliche Ethernet-Port wurde nicht installiert.</Description>
     <Consequences>Keine Kommunikation über EtherNet/IP-Bus möglich.</Consequences>
     <Causes>Eventuell wurde versucht, die EtherNet/IP-Funktionalität hinzuzufügen, ohne die korrekte Option zu installieren.</Causes>
-    <Actions>1. Wird die Option zusätzlicher Ethernet-Port benötigt: neues System mit dieser Option konfigurieren und das System installieren.<p />2. Wenn die Option zusätzlicher Ethernet-Port nicht erforderlich ist: Konfiguration ändern und das System neu starten. </Actions>
+    <Actions>1. Wird die Option zusätzlicher Ethernet-Port benötigt: neues System mit dieser Option konfigurieren und das System installieren.2. Wenn die Option zusätzlicher Ethernet-Port nicht erforderlich ist: Konfiguration ändern und das System neu starten. </Actions>
   </Message>
   <Message number="1452" eDefine="SYS_EIO_EN_TOO_MANY_BUSES_CONFIGURED">
     <Title>Zu viele EtherNet/IP E/A-Busse konfiguriert</Title>
     <Description>Zu viele EtherNet/IP E/A-Busse sind konfiguriert. Es kann nur ein E/A-Bus für EtherNet/IP Master/Slave betrieben werden.</Description>
-    <Actions>1. Einen der EtherNet/IP-Busse aus der Konfiguration entfernen.<p />2. System neu starten. </Actions>
+    <Actions>1. Einen der EtherNet/IP-Busse aus der Konfiguration entfernen.2. System neu starten. </Actions>
   </Message>
   <Message number="1453" eDefine="SYS_EIO_EN_IDENTITY_MISMATCH">
     <Title>Falsche Identität für EtherNet/IP E/A-Einheit</Title>
-    <Description>Falsche Identität für die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt;.<p /><p />Die richtige Identität lautet:<p />Anbieter-ID &lt;<arg format="%d" ordinal="2" />&gt;<p />Gerätetyp&lt;<arg format="%d" ordinal="3" />&gt;<p />Produktcode &lt;<arg format="%d" ordinal="4" />&gt; </Description>
+    <Description>Falsche Identität für die E/A-Einheit &lt;%s&gt;.Die richtige Identität lautet:Anbieter-ID &lt;%d2&gt;Gerätetyp&lt;%d3&gt;Produktcode &lt;%d4&gt; </Description>
     <Consequences>Mit dieser E/A-Einheit wird kein Kontakt hergestellt.</Consequences>
     <Actions>Konfiguration für den E/A-Einheitentyp mithilfe der Identitätsinformationen oben korrigieren.</Actions>
   </Message>
   <Message number="1454" eDefine="SYS_EIO_EN_NO_IP_ADDRESS_SPECIFIED">
-    <Title> Die <arg format="%s" ordinal="1" />-Adresse fehlt </Title>
-    <Description>Keine IP-Adresse für den <arg format="%s" ordinal="1" />-E/A-Bus angegeben. </Description>
-    <Consequences>Es ist keine Kommunikation am <arg format="%s" ordinal="1" />-E/A-Bus möglich. </Consequences>
-    <Actions>1. Gültige IP-Adresse in der E/A-Bus-Konfiguration angeben.<p />2. System neu starten. </Actions>
+    <Title> Die %s-Adresse fehlt </Title>
+    <Description>Keine IP-Adresse für den %s-E/A-Bus angegeben. </Description>
+    <Consequences>Es ist keine Kommunikation am %s-E/A-Bus möglich. </Consequences>
+    <Actions>1. Gültige IP-Adresse in der E/A-Bus-Konfiguration angeben.2. System neu starten. </Actions>
   </Message>
   <Message number="1455" eDefine="SYS_EIO_EN_CNX_TYPE_INVALID">
     <Title>EtherNet/IP-Verbindungstyp unbekannt</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Der Einheitentyp &lt;<arg format="%s" ordinal="1" />&gt; besitzt einen ungültigen/unbekannten Anschlusstyp &lt;<arg format="%s" ordinal="2" />&gt;. <p /><p />Es muss sich um einen der folgenden Verbindungstypen handeln:<p />- MULTICAST<p />- POINT2POINT </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Der Einheitentyp &lt;%s&gt; besitzt einen ungültigen/unbekannten Anschlusstyp &lt;%s&gt;. Es muss sich um einen der folgenden Verbindungstypen handeln:- MULTICAST- POINT2POINT </Description>
     <Consequences>Dieser Einheitentyp wurde abgelehnt.</Consequences>
-    <Actions>1. Verbindungstyp für den Einheitentyp korrigieren.<p />2. Starten Sie das System neu. </Actions>
+    <Actions>1. Verbindungstyp für den Einheitentyp korrigieren.2. Starten Sie das System neu. </Actions>
   </Message>
   <Message number="1457" eDefine="SYS_EIO_EN_INVALID_GATEWAY">
     <Title>EtherNet/IP-Adresse des Gateways nicht zulässig</Title>
-    <Description>Die Gateway-Adresse darf nicht dieselbe wie die IP-Adresse sein.<p /><p />Oder die Gateway-Adresse darf nicht die voreingestellte Adresse &lt;0.0.0.0&gt; sein. </Description>
-    <Consequences> Die Standard-Gateway-Adresse der Steuerung &lt;<arg format="%s" ordinal="1" />&gt; wird anstelle der angegebenen Gateway-Adresse &lt;<arg format="%s" ordinal="2" />&gt; verwendet. </Consequences>
-    <Actions>1. Wird kein physisches Gateway verwendet, in der Konfiguration gar keine Gateway-Adresse angeben.<p />2. System neu starten. </Actions>
+    <Description>Die Gateway-Adresse darf nicht dieselbe wie die IP-Adresse sein.Oder die Gateway-Adresse darf nicht die voreingestellte Adresse &lt;0.0.0.0&gt; sein. </Description>
+    <Consequences> Die Standard-Gateway-Adresse der Steuerung &lt;%s&gt; wird anstelle der angegebenen Gateway-Adresse &lt;%s&gt; verwendet. </Consequences>
+    <Actions>1. Wird kein physisches Gateway verwendet, in der Konfiguration gar keine Gateway-Adresse angeben.2. System neu starten. </Actions>
   </Message>
   <Message number="1458" eDefine="SYS_EIO_EN_COULD_NOT_SET_GATEWAY">
     <Title>Standard Gateway-Adresse konnte nicht geändert werden</Title>
-    <Description>Wenn in der Ethernet/IP-Konfiguration keine Zieladresse angegeben ist, wird die standardmäßige Gateway-Adresse der Steuerung geändert. Die Zieladresse wurde nicht angegeben, und die angegebene Gateway-Adresse &lt;<arg format="%s" ordinal="1" />&gt; war nicht gültig und konnte nicht verwendet werden. </Description>
+    <Description>Wenn in der Ethernet/IP-Konfiguration keine Zieladresse angegeben ist, wird die standardmäßige Gateway-Adresse der Steuerung geändert. Die Zieladresse wurde nicht angegeben, und die angegebene Gateway-Adresse &lt;%s&gt; war nicht gültig und konnte nicht verwendet werden. </Description>
     <Consequences>Es ist keine Kommunikation am EtherNet/IP E/A-Bus möglich.</Consequences>
-    <Actions>1. Gateway in der Konfiguration des EtherNet/IP E/A-Bus korrigieren.<p />2. System neu starten. </Actions>
+    <Actions>1. Gateway in der Konfiguration des EtherNet/IP E/A-Bus korrigieren.2. System neu starten. </Actions>
   </Message>
   <Message number="1459" eDefine="SYS_EIO_EN_ILLEGAL_BUS_ADDRESS">
     <Title>Unzulässige Adresse für EtherNet/IP</Title>
-    <Description>Die Adresse &lt;<arg format="%s" ordinal="1" />&gt; für den EtherNet/IP E/A-Bus ist unzulässig. </Description>
+    <Description>Die Adresse &lt;%s&gt; für den EtherNet/IP E/A-Bus ist unzulässig. </Description>
     <Consequences>Keine Kommunikation über EtherNet/IP-Bus möglich.</Consequences>
-    <Actions>1. Adresse in der Konfiguration des EtherNet/IP E/A-Bus korrigieren.<p />2. System neu starten. </Actions>
+    <Actions>1. Adresse in der Konfiguration des EtherNet/IP E/A-Bus korrigieren.2. System neu starten. </Actions>
   </Message>
   <Message number="1460" eDefine="SYS_EIO_EN_CAN_NOT_CONNECT_TO_UNIT">
     <Title>Keine Verbindung zur EtherNet/IP E/A-Einheit möglich</Title>
-    <Description>Die konfigurierte E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; mit der Adresse &lt;<arg format="%s" ordinal="2" />&gt; ist nicht physisch auf dem EtherNet/IP E/A-Bus vorhanden. </Description>
+    <Description>Die konfigurierte E/A-Einheit &lt;%s&gt; mit der Adresse &lt;%s&gt; ist nicht physisch auf dem EtherNet/IP E/A-Bus vorhanden. </Description>
     <Consequences>Zugriff auf die E/A-Einheit (bzw. die E/A-Signale darauf) ist nicht möglich, da sie derzeit nicht mit der Steuerung kommuniziert. Das System wechselt in den Status SYS FAIL, wenn der E/A-Einheit bei der Konfiguration Unit Trust Level Required (0) zugewiesen wurde.</Consequences>
-    <Causes>Die E/A-Einheit ist physisch nicht vorhanden.<p />Die Adresse der E/A-Einheit ist falsch.<p />Die E/A-Einheit funktioniert nicht korrekt. </Causes>
-    <Actions>1. Überprüfen, ob die E/A-Einheit physisch auf dem EtherNet/IP E/A-Bus vorhanden ist und ob die Adresse korrekt ist.<p />2. Wenn die Adresse geändert wurde, System neu starten. </Actions>
+    <Causes>Die E/A-Einheit ist physisch nicht vorhanden.Die Adresse der E/A-Einheit ist falsch.Die E/A-Einheit funktioniert nicht korrekt. </Causes>
+    <Actions>1. Überprüfen, ob die E/A-Einheit physisch auf dem EtherNet/IP E/A-Bus vorhanden ist und ob die Adresse korrekt ist.2. Wenn die Adresse geändert wurde, System neu starten. </Actions>
   </Message>
   <Message number="1461" eDefine="SYS_EIO_EN_UNIT_ADDR_SAME_AS_MASTER">
     <Title>Doppelte Adresse auf dem EtherNet/IP E/A-Bus</Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; und der EtherNet/IP-Master wurden mit der gleichen Adresse in der Steuerung konfiguriert. </Description>
+    <Description>Die E/A-Einheit &lt;%s&gt; und der EtherNet/IP-Master wurden mit der gleichen Adresse in der Steuerung konfiguriert. </Description>
     <Consequences>Zugriff auf die E/A-Einheit (bzw. die E/A-Signale darauf) ist nicht möglich, da sie derzeit nicht mit der Steuerung kommuniziert.</Consequences>
-    <Actions>1. In der Konfiguration die Adresse der E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; oder die Adresse für den EtherNet/IP-Master ändern. Wenn die Adresse der E/A-Einheit geändert wird und dies ihre physische Adresse ist, so muss sie auch in der E/A-Einheit geändert werden.<p />2. System neu starten. </Actions>
+    <Actions>1. In der Konfiguration die Adresse der E/A-Einheit &lt;%s&gt; oder die Adresse für den EtherNet/IP-Master ändern. Wenn die Adresse der E/A-Einheit geändert wird und dies ihre physische Adresse ist, so muss sie auch in der E/A-Einheit geändert werden.2. System neu starten. </Actions>
   </Message>
   <Message number="1462" eDefine="SYS_EIO_EN_ILLEGAL_BUS_SUBNET_MASK">
     <Title>Unzulässige Subnet-Maske für EtherNet/IP</Title>
-    <Description>Die Subnet-Maske &lt;<arg format="%s" ordinal="1" />&gt; für den EtherNet/IP E/A-Bus ist unzulässig. </Description>
+    <Description>Die Subnet-Maske &lt;%s&gt; für den EtherNet/IP E/A-Bus ist unzulässig. </Description>
     <Consequences>Es ist keine Kommunikation am EtherNet/IP E/A-Bus möglich.</Consequences>
-    <Actions>1. Subnet-Maske in der Konfiguration des EtherNet/IP E/A-Bus korrigieren.<p />2. System neu starten. </Actions>
+    <Actions>1. Subnet-Maske in der Konfiguration des EtherNet/IP E/A-Bus korrigieren.2. System neu starten. </Actions>
   </Message>
   <Message number="1463" eDefine="SYS_EIO_EN_RESERVED_ADDRESS">
     <Title>Unzulässige Adresse für EtherNet/IP E/A-Bus </Title>
-    <Description>EtherNet/IP-Adresse &lt;<arg format="%s" ordinal="1" />&gt; ist reserviert. </Description>
+    <Description>EtherNet/IP-Adresse &lt;%s&gt; ist reserviert. </Description>
     <Consequences>Es ist keine Kommunikation am EtherNet/IP E/A-Bus möglich.</Consequences>
-    <Causes>Die angegebene Adresse befindet sich auf einem Subnet, das durch einen anderen Ethernet-Port reserviert ist. Zwei Ethernet-Ports auf der Steuerung dürfen sich nicht auf demselben Subnet befinden.<p /><p />Beispiel:<p />EtherNet/IP-Port: 192.168.125.x<p />Service-Port: 192.168.125.x<p /><p />Hinweis:<p />Die Subnets im Bereich 192.168.125.xxx - 192.168.130.xxx sind vordefiniert und können nicht verwendet werden. </Causes>
-    <Actions>1. Adresse auf anderes Subnet ändern. <p />2. System neu starten. </Actions>
+    <Causes>Die angegebene Adresse befindet sich auf einem Subnet, das durch einen anderen Ethernet-Port reserviert ist. Zwei Ethernet-Ports auf der Steuerung dürfen sich nicht auf demselben Subnet befinden.Beispiel:EtherNet/IP-Port: 192.168.125.xService-Port: 192.168.125.xHinweis:Die Subnets im Bereich 192.168.125.xxx - 192.168.130.xxx sind vordefiniert und können nicht verwendet werden. </Causes>
+    <Actions>1. Adresse auf anderes Subnet ändern. 2. System neu starten. </Actions>
   </Message>
 </Domain>

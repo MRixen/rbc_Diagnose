@@ -2,54 +2,54 @@
 <Domain xmlns="urn:abb-robotics-elog-text" elogDomain="SYS" domainNo="2" lang="de" elogTextVersion="1.0" min="366" max="489">
   <Message number="366" eDefine="SYS_ERR_SYS_MOTION_TASK_WRONG_TYPE">
     <Title>Typfehler in Taskkonfiguration</Title>
-    <Description>Die Task <arg format="%s" ordinal="1" /> ist mit dem falschen Typ konfiguriert. Die Task, die zur Steuerung mechanischer Einheiten, d. h. Abarbeitung von RAPID-Bewegungsinstruktionen, konfiguriert ist, muss vom Typ <arg format="%s" ordinal="2" /> sein. </Description>
+    <Description>Die Task %s ist mit dem falschen Typ konfiguriert. Die Task, die zur Steuerung mechanischer Einheiten, d. h. Abarbeitung von RAPID-Bewegungsinstruktionen, konfiguriert ist, muss vom Typ %s sein. </Description>
     <Consequences>Die Task wird nicht installiert.</Consequences>
     <Actions>Konfiguration ändern und die Steuerung neu starten.</Actions>
   </Message>
   <Message number="367" eDefine="SYS_ERR_SYS_NO_MEC_IN_MEC_UNIT_GROUP">
     <Title>Keine mechanischen Einheiten konfiguriert</Title>
-    <Description>Die Instanz <arg format="%s" ordinal="1" /> des Konfigurationstyps <arg format="%s" ordinal="2" /> hat kein Argument für mechanische Einheiten.</Description>
+    <Description>Die Instanz %s des Konfigurationstyps %s hat kein Argument für mechanische Einheiten.</Description>
     <Consequences>Am Bewegungssystem sind keine Aktionen möglich, d. h., es werden keine RAPID-Bewegungsinstruktionen abgearbeitet.</Consequences>
     <Actions>Konfiguration ändern und die Steuerung neu starten.</Actions>
   </Message>
   <Message number="368" eDefine="SYS_ERR_SYS_NO_TASK_CTRL_MEC_GROUP">
     <Title>Nicht verbundene mechanische Einheitengruppe</Title>
-    <Description>Es ist keine Bewegungstask mit der mechanischen Einheitengruppe <arg format="%s" ordinal="1" /> verbunden.<p /></Description>
+    <Description>Es ist keine Bewegungstask mit der mechanischen Einheitengruppe %s verbunden.</Description>
     <Consequences>Die Verwendung der zu dieser Gruppe gehörenden mechanischen Einheiten ist nicht möglich.</Consequences>
     <Causes>Die Fehlerursache kann eine fehlende Instanz einer RAPID-Task in der Controller-Domäne der Konfiguration sein, oder eine Task, die nicht als Bewegungstask konfiguriert wurde.</Causes>
-    <Actions>1. Eine Bewegungstask hinzufügen, die mit der mechanischen Einheitengruppe verbunden ist.<p />2. Eine vorhandene Task ohne Bewegung zu einer Bewegungstask ändern.<p />3. Die mechanische Einheitengruppe entfernen.<p />4. Auf falsch geschriebene Namen überprüfen.</Actions>
+    <Actions>1. Eine Bewegungstask hinzufügen, die mit der mechanischen Einheitengruppe verbunden ist.2. Eine vorhandene Task ohne Bewegung zu einer Bewegungstask ändern.3. Die mechanische Einheitengruppe entfernen.4. Auf falsch geschriebene Namen überprüfen.</Actions>
   </Message>
   <Message number="369" eDefine="SYS_ERR_SYS_MIX_OF_SYS_MISC">
     <Title>Verwirrende Konfiguration von Systemparametern</Title>
     <Description>Eine Mischung aus alten und neuen Strukturen vom Typ "System Misc" ist vorhanden.</Description>
     <Consequences>Möglicherweise sind nicht die korrekten Parameter konfiguriert.</Consequences>
     <Causes>Eine Konfiguration mit alten und neuen Strukturen wurde in das System geladen.</Causes>
-    <Actions>1. Prüfen, ob die korrekten Parameter konfiguriert wurden.<p />2. Aktualisieren der Parameter in "System Misc" mit korrekten Werten.<p />3. Die Controller-Domäne speichern und die alte Konfigurationsdatei ersetzen.</Actions>
+    <Actions>1. Prüfen, ob die korrekten Parameter konfiguriert wurden.2. Aktualisieren der Parameter in "System Misc" mit korrekten Werten.3. Die Controller-Domäne speichern und die alte Konfigurationsdatei ersetzen.</Actions>
   </Message>
   <Message number="370" eDefine="SYS_ERR_SYS_MISSING_REGAIN_DIST_CFG">
     <Title>Konfigurationsdaten für Wiederanfahrbereich nicht lesbar</Title>
-    <Description>Das System konnte die Konfigurationsdaten für den Typ &lt; <arg format="%s" ordinal="1" />&gt; nicht lesen. Der Wiederanfahrbereich ist die Grenze für eine Systemwarnung vor einem Start mit Wiederanfahrbewegung.</Description>
+    <Description>Das System konnte die Konfigurationsdaten für den Typ &lt; %s&gt; nicht lesen. Der Wiederanfahrbereich ist die Grenze für eine Systemwarnung vor einem Start mit Wiederanfahrbewegung.</Description>
     <Consequences>Der Standardwert für den Wiederanfahrbereich wird verwendet.</Consequences>
-    <Causes>- Die in das System geladene Datei "sys.cfg" enthält keine Informationen bezüglich des Wiederanfahrbereichs.<p />- Aufgrund von Dateifehlern wurde keine Datei "sys.cfg" geladen.</Causes>
+    <Causes>- Die in das System geladene Datei "sys.cfg" enthält keine Informationen bezüglich des Wiederanfahrbereichs.- Aufgrund von Dateifehlern wurde keine Datei "sys.cfg" geladen.</Causes>
     <Actions>1) Eine neue Datei "sys.cfg" laden und das System neu starten.</Actions>
   </Message>
   <Message number="371" eDefine="SYS_ERR_SYS_DEFAULT_MEC_UNIT_GROUP">
     <Title>Standardmäßige mech. Einheitengruppe wird verwendet</Title>
-    <Description>Die Konfiguration von Task <arg format="%s" ordinal="1" /> hat keine Verbindung zu <arg format="%s" ordinal="2" />. Das Attribut <arg format="%s" ordinal="3" /> ist für ein MultiMove-System erforderlich und fehlt. </Description>
-    <Consequences>Die Task führt keine Bewegung der mechanischen Einheit aus, kann jedoch Bewegungsdaten lesen. Die RAPID-Funktionen können fehlschlagen, wenn sie Bewegungsdaten lesen und mit der falschen mechanischen Einheit verbunden sind. Die mechanische Einheitengruppe in <arg format="%s" ordinal="4" /> wurde mit der Task verbunden.</Consequences>
-    <Causes>- Das Attribut wurde bei Erstellung der Konfiguration nicht angegeben. <p />- Die Konfigurationsdatei könnte in einem Nicht-MultiMove-System erstellt worden sein.</Causes>
+    <Description>Die Konfiguration von Task %s hat keine Verbindung zu %s. Das Attribut %s ist für ein MultiMove-System erforderlich und fehlt. </Description>
+    <Consequences>Die Task führt keine Bewegung der mechanischen Einheit aus, kann jedoch Bewegungsdaten lesen. Die RAPID-Funktionen können fehlschlagen, wenn sie Bewegungsdaten lesen und mit der falschen mechanischen Einheit verbunden sind. Die mechanische Einheitengruppe in %s wurde mit der Task verbunden.</Consequences>
+    <Causes>- Das Attribut wurde bei Erstellung der Konfiguration nicht angegeben. - Die Konfigurationsdatei könnte in einem Nicht-MultiMove-System erstellt worden sein.</Causes>
     <Actions>1) Sicherstellen, dass die korrekte mechanische Einheitengruppe mit der Task verbunden ist.</Actions>
   </Message>
   <Message number="372" eDefine="SYS_ERR_SYS_MISSING_MODPOS_CFG">
     <Title>Konfigurationsdaten wurden nicht geladen</Title>
-    <Description>Das System konnte die Konfigurationsdaten für den Typ &lt;<arg format="%s" ordinal="1" />&gt; nicht lesen.</Description>
+    <Description>Das System konnte die Konfigurationsdaten für den Typ &lt;%s&gt; nicht lesen.</Description>
     <Consequences>HotEdit oder KorPos ist nicht möglich.</Consequences>
-    <Causes>- Die in das System geladene Datei sys.cfg enthält keine HotEdit- und KorPos-Informationen. <p />- Aufgrund von Dateifehlern wurde die Datei sys.cfg nicht geladen.</Causes>
+    <Causes>- Die in das System geladene Datei sys.cfg enthält keine HotEdit- und KorPos-Informationen. - Aufgrund von Dateifehlern wurde die Datei sys.cfg nicht geladen.</Causes>
     <Actions>Eine neue Datei sys.cfg laden und das System neu starten.</Actions>
   </Message>
   <Message number="380" eDefine="SYS_ERR_SYS_MECUNIT_WITHOUT_MOTIONP">
     <Title>Keine Bewegungsplanung mit mech. Einheit verbunden</Title>
-    <Description>Mit der mechanischen Einheit <arg format="%s" ordinal="2" /> ist keine Bewegungsplanung verbunden.</Description>
+    <Description>Mit der mechanischen Einheit %s ist keine Bewegungsplanung verbunden.</Description>
     <Consequences>Es ist nicht möglich, diese mechanische Einheit in einer Operation wie z. B. Kalibrierung oder Aktivierung zu benutzen.</Consequences>
     <Causes>Der Fehler ist möglicherweise auf einen Fehler in der Konfiguration zurückzuführen.</Causes>
     <Actions>Konfiguration von Motion und/oder Controller prüfen.</Actions>
@@ -59,74 +59,74 @@
     <Description>Die Bahn wurde nicht erfolgreich wiederhergestellt</Description>
     <Consequences>Der Programmzeiger muss vor Neustart des Programms verschoben werden. Es wird empfohlen, den Roboter an eine sichere Position zu bewegen, auch wenn sich der Roboter beim Neustart eventuell nicht auf der ursprünglichen Bahn bewegt.</Consequences>
     <Causes>Verschiedene Fehler können die Ursache sein. Fehler, die das System in den Zustand SYS FAIL bringen, führen normalerweise dazu, dass die Neuerstellung der Bahn nach einem Stromausfall fehlschlägt.</Causes>
-    <Actions>1. Andere Ereignisprotokollmeldungen von demselben Zeitpunkt überprüfen, um tatsächliche Ursache zu bestimmen. <p />2. Ursache des Fehlers beseitigen. <p />3. Den Roboter vor dem Neustart an sichere Position bewegen. Der Roboter bewegt sich eventuell nicht auf der ursprünglichen Bahn. </Actions>
+    <Actions>1. Andere Ereignisprotokollmeldungen von demselben Zeitpunkt überprüfen, um tatsächliche Ursache zu bestimmen. 2. Ursache des Fehlers beseitigen. 3. Den Roboter vor dem Neustart an sichere Position bewegen. Der Roboter bewegt sich eventuell nicht auf der ursprünglichen Bahn. </Actions>
   </Message>
   <Message number="390" eDefine="SYS_ERR_SYS_MASTER_REJ_START">
     <Title>Start unzulässig</Title>
-    <Description>Start/Neustart des Programms über System-E/A nicht zulässig.<p />Grund dafür ist der Schreibzugriff durch<p /><arg format="%s" ordinal="1" /> mit <arg format="%s" ordinal="2" />.</Description>
+    <Description>Start/Neustart des Programms über System-E/A nicht zulässig.Grund dafür ist der Schreibzugriff durch%s mit %s.</Description>
     <Actions />
   </Message>
   <Message number="391" eDefine="SYS_ERR_SYS_MASTER_REJ_START_MAIN">
     <Title>Start bei "main" unzulässig</Title>
-    <Description>Start des Programms bei "main" über System-E/A nicht zulässig.<p />Grund dafür ist der Schreibzugriff durch<p /><arg format="%s" ordinal="1" /> mit <arg format="%s" ordinal="2" />.</Description>
+    <Description>Start des Programms bei "main" über System-E/A nicht zulässig.Grund dafür ist der Schreibzugriff durch%s mit %s.</Description>
     <Actions />
   </Message>
   <Message number="392" eDefine="SYS_ERR_SYS_MASTER_REJ_MANINT">
     <Title>Manuelle Unterbrechung unzulässig</Title>
-    <Description>Manuelle Unterbrechung des Programms über System-E/A nicht zulässig.<p />Grund dafür ist der Schreibzugriff durch<p /><arg format="%s" ordinal="1" /> mit <arg format="%s" ordinal="2" />.</Description>
+    <Description>Manuelle Unterbrechung des Programms über System-E/A nicht zulässig.Grund dafür ist der Schreibzugriff durch%s mit %s.</Description>
     <Actions />
   </Message>
   <Message number="393" eDefine="SYS_ERR_SYS_MASTER_REJ_LOADSTART">
     <Title>Laden und Starten unzulässig</Title>
-    <Description>Laden und Starten des Programms über System-E/A nicht zulässig.<p />Grund dafür ist der Schreibzugriff durch<p /><arg format="%s" ordinal="1" /> mit <arg format="%s" ordinal="2" />.</Description>
+    <Description>Laden und Starten des Programms über System-E/A nicht zulässig.Grund dafür ist der Schreibzugriff durch%s mit %s.</Description>
     <Actions />
   </Message>
   <Message number="394" eDefine="SYS_ERR_SYS_MASTER_REJ_MOTONSTART">
     <Title>Motoren EIN und Start unzulässig</Title>
-    <Description>Motoren EIN und Start/Neustart des Programms über System-E/A nicht zulässig.<p />Grund dafür ist der Schreibzugriff durch<p /><arg format="%s" ordinal="1" /> mit <arg format="%s" ordinal="2" />.</Description>
+    <Description>Motoren EIN und Start/Neustart des Programms über System-E/A nicht zulässig.Grund dafür ist der Schreibzugriff durch%s mit %s.</Description>
     <Actions />
   </Message>
   <Message number="395" eDefine="SYS_ERR_SYS_MASTER_REJ_LOAD">
     <Title>Ladevorgang abgelehnt</Title>
-    <Description>Laden des Programms über System-E/A wurde abgelehnt.<p />Ursache: Schreibzugriff ist bei <arg format="%s" ordinal="1" /> unter Verwendung von <arg format="%s" ordinal="2" />.</Description>
+    <Description>Laden des Programms über System-E/A wurde abgelehnt.Ursache: Schreibzugriff ist bei %s unter Verwendung von %s.</Description>
   </Message>
   <Message number="396" eDefine="SYS_ERR_SYS_REJ_SYNC_STATE">
     <Title>Manueller Interrupt abgelehnt </Title>
-    <Description>Manueller Interrupt des Programms über System-E/A wurde in Task <arg format="%s" ordinal="2" /> abgelehnt.<p />Manueller Interrupt ist während synchronisierter Bewegung nicht zulässig.</Description>
+    <Description>Manueller Interrupt des Programms über System-E/A wurde in Task %s abgelehnt.Manueller Interrupt ist während synchronisierter Bewegung nicht zulässig.</Description>
   </Message>
   <Message number="397" eDefine="SYS_ERR_SYS_REJ_PRCNAM">
     <Title>Manueller Interrupt abgelehnt</Title>
-    <Description>Manueller Interrupt des Programms über System-E/A wurde in Task <arg format="%s" ordinal="2" /> abgelehnt.<p />Der Interrupt ist mit <arg format="%s" ordinal="3" /> verbunden. Dies ist keine gültige RAPID-Prozedur.</Description>
+    <Description>Manueller Interrupt des Programms über System-E/A wurde in Task %s abgelehnt.Der Interrupt ist mit %s verbunden. Dies ist keine gültige RAPID-Prozedur.</Description>
     <Consequences>
-      <arg format="%s" ordinal="3" /> wird nicht ausgeführt.</Consequences>
-    <Causes>1. <arg format="%s" ordinal="3" /> ist nicht vorhanden.<p />2. <arg format="%s" ordinal="3" /> ist keine Prozedur (PROC), die null (0) Parameter akzeptiert.</Causes>
-    <Actions>Sicherstellen, dass <arg format="%s" ordinal="3" /> eine Prozedur (PROC) ist, die null (0) Parameter akzeptiert.</Actions>
+      %s wird nicht ausgeführt.</Consequences>
+    <Causes>1. %s ist nicht vorhanden.2. %s ist keine Prozedur (PROC), die null (0) Parameter akzeptiert.</Causes>
+    <Actions>Sicherstellen, dass %s eine Prozedur (PROC) ist, die null (0) Parameter akzeptiert.</Actions>
   </Message>
   <Message number="398" eDefine="SYS_ERR_SYS_START_EXEC">
     <Title>Automatikbetrieb abgelehnt</Title>
     <Description>Eine angehaltene STATIC-/SEMISTATIC-Task (bzw. Hintergrundtask) konnte nicht gestartet werden, als Automatikbetrieb angefordert wurde.</Description>
     <Consequences>System kann nicht in Automatikbetrieb wechseln.</Consequences>
     <Causes>Eine angehaltene STATIC-/SEMISTATIC-Task konnte nicht gestartet werden.</Causes>
-    <Actions>1. In Einrichtbetrieb wechseln.<p />2. Sicherstellen, dass alle STATIC-/SEMISTATIC-Tasks über ein Programm/Modul mit dem konfigurierten Produktionseintrag verfügen.<p />3. Sicherstellen, dass keine STATIC-/SEMISTATIC-Task Syntaxfehler aufweist.<p />4) In Automatikbetrieb wechseln und bestätigen.</Actions>
+    <Actions>1. In Einrichtbetrieb wechseln.2. Sicherstellen, dass alle STATIC-/SEMISTATIC-Tasks über ein Programm/Modul mit dem konfigurierten Produktionseintrag verfügen.3. Sicherstellen, dass keine STATIC-/SEMISTATIC-Task Syntaxfehler aufweist.4) In Automatikbetrieb wechseln und bestätigen.</Actions>
   </Message>
   <Message number="399" eDefine="SYS_ERR_SYS_START_EXEC_RESET">
     <Title>STATIC-/SEMISTATIC-Task gestartet</Title>
     <Description>Mindestens eine STATIC-/SEMISTATIC-Task (bzw. Hintergrundtask) wurde nach dem Starten im Automatikbetrieb nicht ausgeführt.</Description>
     <Consequences>Die Abarbeitung wurde in mindestens einer STATIC-/SEMISTATIC-Task gestartet.</Consequences>
     <Causes>System ist beim Warmstart in Automatikbetrieb gewechselt.</Causes>
-    <Actions>Keine - Debug-Einstellungen des Systems wurden automatisch zurückgesetzt.<p /><p />Um Debug-Einstellungen in Automatikbetrieb beizubehalten:<p />1. In Einrichtbetrieb wechseln.<p />2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen. <p />3. In Automatikbetrieb wechseln und bestätigen. <p />4. Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter.</Actions>
+    <Actions>Keine - Debug-Einstellungen des Systems wurden automatisch zurückgesetzt.Um Debug-Einstellungen in Automatikbetrieb beizubehalten:1. In Einrichtbetrieb wechseln.2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen. 3. In Automatikbetrieb wechseln und bestätigen. 4. Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter.</Actions>
   </Message>
   <Message number="400" eDefine="SYS_ERR_SYS_START_EXEC_KEEP">
     <Title>Debug-Einstellungen in Automatikbetrieb</Title>
     <Description>Eine STATIC-/SEMISTATIC-Task (bzw. Hintergrundtask) wurde angehalten.</Description>
-    <Consequences>Die STATIC-/SEMISTATIC-Task wird nicht gestartet.<p />System ist im Automatikbetrieb nicht im Produktionsmodus.</Consequences>
-    <Actions>Für Produktionsmodus: <p />1. In Einrichtbetrieb wechseln.<p />2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf Yes setzen. <p />3. In Automatikbetrieb wechseln und bestätigen.<p />4. Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter.</Actions>
+    <Consequences>Die STATIC-/SEMISTATIC-Task wird nicht gestartet.System ist im Automatikbetrieb nicht im Produktionsmodus.</Consequences>
+    <Actions>Für Produktionsmodus: 1. In Einrichtbetrieb wechseln.2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf Yes setzen. 3. In Automatikbetrieb wechseln und bestätigen.4. Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter.</Actions>
   </Message>
   <Message number="401" eDefine="SYS_ERR_SYS_TOO_MANY_INSTANCES">
     <Title>Zu viele CFG-Instanzen </Title>
-    <Description>Es sind zu viele Instanzen von <arg format="%s" ordinal="1" /> vom Typ <arg format="%s" ordinal="2" /> in Parametergruppe <arg format="%s" ordinal="3" /> vorhanden.</Description>
+    <Description>Es sind zu viele Instanzen von %s vom Typ %s in Parametergruppe %s vorhanden.</Description>
     <Consequences>Möglicherweise wird eine falsche Instanz verwendet und unerwartetes Verhalten verursacht.</Consequences>
-    <Causes>Es sind mehrere Instanzen von <arg format="%s" ordinal="1" /> vom Typ <arg format="%s" ordinal="2" /> in Parametergruppe <arg format="%s" ordinal="3" /> vorhanden.</Causes>
+    <Causes>Es sind mehrere Instanzen von %s vom Typ %s in Parametergruppe %s vorhanden.</Causes>
     <Actions>Entfernen Sie alle Instanzen bis auf eine Instanz.</Actions>
   </Message>
   <Message number="402" eDefine="SYS_ERR_SYS_RAPID_SPY">
@@ -134,27 +134,27 @@
     <Description>Eine aktive RAPID Spy-Sitzung konnte nicht deaktiviert werden, als der Automatikbetrieb angefordert wurde.</Description>
     <Consequences>System kann nicht in Automatikbetrieb wechseln.</Consequences>
     <Causes>RAPID Spy konnte nicht deaktiviert werden.</Causes>
-    <Actions>1) Zurück in Einrichtbetrieb wechseln. <p />2) Einen externen Client verwenden, z.B. RobotStudio, um RAPID Spy zu deaktivieren. <p />3) Zurück in Automatikbetrieb wechseln und bestätigen.</Actions>
+    <Actions>1) Zurück in Einrichtbetrieb wechseln. 2) Einen externen Client verwenden, z.B. RobotStudio, um RAPID Spy zu deaktivieren. 3) Zurück in Automatikbetrieb wechseln und bestätigen.</Actions>
   </Message>
   <Message number="403" eDefine="SYS_ERR_SYS_RAPID_SPY_RESET">
     <Title>RAPID Spy deaktiviert</Title>
     <Description>RAPID Spy wurde nach dem Start im Automatikbetrieb deaktiviert.</Description>
     <Consequences>RAPID Spy wurde deaktiviert.</Consequences>
     <Causes>System wurde während des Warmstart in Automatikbetrieb geschaltet.</Causes>
-    <Actions>Keine - Debug-Einstellungen des Systems wurden automatisch zurückgesetzt.<p /><p />Um Debug-Einstellungen in Automatikbetrieb beizubehalten:<p />1. In Einrichtbetrieb wechseln.<p />2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen. <p />3. In Automatikbetrieb wechseln und bestätigen. <p />4. Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter.</Actions>
+    <Actions>Keine - Debug-Einstellungen des Systems wurden automatisch zurückgesetzt.Um Debug-Einstellungen in Automatikbetrieb beizubehalten:1. In Einrichtbetrieb wechseln.2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen. 3. In Automatikbetrieb wechseln und bestätigen. 4. Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter.</Actions>
   </Message>
   <Message number="404" eDefine="SYS_ERR_SYS_RAPID_SPY_KEEP">
     <Title>Debug-Einstellungen in Automatikbetrieb</Title>
     <Description>RAPID Spy ist aktiv.</Description>
-    <Consequences>RAPID Spy wird nicht deaktiviert.<p />System ist im Automatikbetrieb nicht im vollen Produktionsmodus.</Consequences>
-    <Actions>Für Produktionsmodus: <p />1. In Einrichtbetrieb wechseln.<p />2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf Yes setzen. <p />3. In Automatikbetrieb wechseln und bestätigen.<p />4. Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter.</Actions>
+    <Consequences>RAPID Spy wird nicht deaktiviert.System ist im Automatikbetrieb nicht im vollen Produktionsmodus.</Consequences>
+    <Actions>Für Produktionsmodus: 1. In Einrichtbetrieb wechseln.2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf Yes setzen. 3. In Automatikbetrieb wechseln und bestätigen.4. Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter.</Actions>
   </Message>
   <Message number="405" eDefine="SYS_ERR_SYS_EIO">
     <Title>Automatikbetrieb abgelehnt</Title>
     <Description>Ein aktives Profi Energy-Gerät konnte nicht zurückgesetzt werden, als der Automatikbetrieb angefordert wurde.</Description>
     <Consequences>System kann nicht in Automatikbetrieb wechseln.</Consequences>
     <Causes>Ein Profi Energy-Gerät konnte nicht zurückgesetzt werden.</Causes>
-    <Actions>1) Zurück in Einrichtbetrieb wechseln. <p />2) Profi Energy-Gerät zurücksetzen. <p />3) Zurück in Automatikbetrieb wechseln und bestätigen.
+    <Actions>1) Zurück in Einrichtbetrieb wechseln. 2) Profi Energy-Gerät zurücksetzen. 3) Zurück in Automatikbetrieb wechseln und bestätigen.
         </Actions>
   </Message>
   <Message number="406" eDefine="SYS_ERR_SYS_EIO_RESET">
@@ -162,28 +162,28 @@
     <Description>Ein Profi Energy-Gerät wurde nach dem Start im Automatikbetrieb zurückgesetzt.</Description>
     <Consequences>Ein Profi Energy-Gerät wurde zurückgesetzt.</Consequences>
     <Causes>System ist beim Warmstart in Automatikbetrieb gewechselt.</Causes>
-    <Actions>Keine. Debug-Einstellungen des Systems wurden automatisch zurückgesetzt.<p /><p />Um Debug-Einstellungen in Automatikbetrieb beizubehalten:<p />1. In den Einrichtbetrieb wechseln.<p />2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen. <p />3. Zurück in den Automatikbetrieb wechseln und bestätigen. <p />4. Weitere Informationen siehe Technisches Referenzhandbuch - Systemparameter. </Actions>
+    <Actions>Keine. Debug-Einstellungen des Systems wurden automatisch zurückgesetzt.Um Debug-Einstellungen in Automatikbetrieb beizubehalten:1. In den Einrichtbetrieb wechseln.2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen. 3. Zurück in den Automatikbetrieb wechseln und bestätigen. 4. Weitere Informationen siehe Technisches Referenzhandbuch - Systemparameter. </Actions>
   </Message>
   <Message number="407" eDefine="SYS_ERR_SYS_EIO_KEEP">
     <Title>Debug-Einstellungen in Automatikbetrieb</Title>
     <Description>Ein Profi Energy-Gerät befindet sich im Pausenmodus.</Description>
-    <Consequences>Ein Profi Energy-Gerät wird nicht zurückgesetzt.<p />System befindet sich im Automatikbetrieb, nicht im vollen Produktionsmodus.
+    <Consequences>Ein Profi Energy-Gerät wird nicht zurückgesetzt.System befindet sich im Automatikbetrieb, nicht im vollen Produktionsmodus.
         </Consequences>
-    <Actions>Für Produktionsmodus: <p />1. In Einrichtbetrieb wechseln.<p />2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf Yes setzen. <p />3. In Automatikbetrieb wechseln und bestätigen.<p />4. Weitere Informationen siehe Technisches Referenzhandbuch - Systemparameter.
+    <Actions>Für Produktionsmodus: 1. In Einrichtbetrieb wechseln.2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf Yes setzen. 3. In Automatikbetrieb wechseln und bestätigen.4. Weitere Informationen siehe Technisches Referenzhandbuch - Systemparameter.
         </Actions>
   </Message>
   <Message number="440" eDefine="SYS_ERR_SYS_UPGRADE_FAILED_TO_INITIALIZE">
     <Title>FW-Upgrade-System konnte nicht initialisiert werden</Title>
     <Description>Das Firmware-Upgrade-System für Hardwarekarten konnte nicht initialisiert werden.</Description>
     <Consequences>Die Firmware von Hardwarekarten wird nicht aktualisiert.</Consequences>
-    <Causes>Eine ungültige XML-Datei in der Steuerungsinstallation:<p /><arg format="%s" ordinal="1" /></Causes>
-    <Actions>Für Entwickler:<p />- Datei korrigieren. Für die Überprüfung die Schemadatei hw_compatibility.xsd verwenden.<p />Für andere Benutzer:<p />- Das System neu installieren.</Actions>
+    <Causes>Eine ungültige XML-Datei in der Steuerungsinstallation:%s</Causes>
+    <Actions>Für Entwickler:- Datei korrigieren. Für die Überprüfung die Schemadatei hw_compatibility.xsd verwenden.Für andere Benutzer:- Das System neu installieren.</Actions>
   </Message>
   <Message number="441" eDefine="SYS_ERR_SYS_UPGRADE_PATCH_FAILED_TO_INITIALIZE">
     <Title>Firmware-Patch konnte nicht initialisiert werden</Title>
     <Description>Das Firmware-Patch für Hardwarekarten konnte nicht initialisiert werden.</Description>
     <Consequences>Die Firmware-Patches für Hardwarekarten werden nicht angewendet.</Consequences>
-    <Causes>Die Firmware-Patch-Datei war ungültig:<p /><arg format="%s" ordinal="1" /></Causes>
+    <Causes>Die Firmware-Patch-Datei war ungültig:%s</Causes>
     <Actions>Patch-Datei korrigieren. Für die Überprüfung die Schemadatei hw_compatibility.xsd verwenden.</Actions>
   </Message>
   <Message number="443" eDefine="SYS_ERR_SYS_UPGRADE_MULTIPLE_RESTARTS">
@@ -208,213 +208,213 @@
     <Actions>Neustart ausführen wie in Bedienungsanleitung IRC5 beschrieben.</Actions>
   </Message>
   <Message number="450" eDefine="SYS_ERR_SYS_PSC_0">
-    <Title>CBC-Geschwindigkeit von SC <arg format="%d" ordinal="1" /> überschritten </Title>
-    <Description>Cyclic Brake Check (CBC)-Geschwindigkeitslimit in Safety Controller (SC) für mechanische Einheit <arg format="%s" ordinal="2" /> wird überschritten. CBC-Test-Intervall ist abgelaufen oder eine vorherige Bremsenüberprüfung ist fehlgeschlagen. </Description>
+    <Title>CBC-Geschwindigkeit von SC %d1 überschritten </Title>
+    <Description>Cyclic Brake Check (CBC)-Geschwindigkeitslimit in Safety Controller (SC) für mechanische Einheit %s wird überschritten. CBC-Test-Intervall ist abgelaufen oder eine vorherige Bremsenüberprüfung ist fehlgeschlagen. </Description>
     <Actions>Geschwindigkeit verringern und Bremsenüberprüfung durchführen. </Actions>
   </Message>
   <Message number="451" eDefine="SYS_ERR_SYS_PSC_1">
-    <Title>SC <arg format="%d" ordinal="1" /> nicht synchronisiert </Title>
-    <Description>Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> ist nicht mit überwachten mechanischen Einheiten synchronisiert.</Description>
-    <Actions>Alle von der Sicherheitssteuerung <arg format="%d" ordinal="1" /> überwachten mechanischen Einheiten auf die in der Sicherheitskonfiguration definierten Synchronisierungspositionen bewegen. </Actions>
+    <Title>SC %d1 nicht synchronisiert </Title>
+    <Description>Sicherheitssteuerung (SC) %d1 ist nicht mit überwachten mechanischen Einheiten synchronisiert.</Description>
+    <Actions>Alle von der Sicherheitssteuerung %d1 überwachten mechanischen Einheiten auf die in der Sicherheitskonfiguration definierten Synchronisierungspositionen bewegen. </Actions>
   </Message>
   <Message number="452" eDefine="SYS_ERR_SYS_PSC_2">
-    <Title>SC <arg format="%d" ordinal="1" /> synchronisiert </Title>
-    <Description>Die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> ist jetzt mit überwachten mechanischen Einheiten synchronisiert. Die Sicherheitsüberwachung kann verwendet werden. </Description>
+    <Title>SC %d1 synchronisiert </Title>
+    <Description>Die Sicherheitssteuerung (SC) %d1 ist jetzt mit überwachten mechanischen Einheiten synchronisiert. Die Sicherheitsüberwachung kann verwendet werden. </Description>
   </Message>
   <Message number="453" eDefine="SYS_ERR_SYS_PSC_3">
-    <Title>SC <arg format="%d" ordinal="1" /> - falsche Synch.- Position </Title>
-    <Description>Die Positionen der überwachten mechanischen Einheiten stimmen nicht mit den in der Sicherheitskonfiguration für Safety Controller (SC) <arg format="%d" ordinal="1" /> definierten Synchronisierungspositionen an Achse <arg format="%d" ordinal="3" /> überein. </Description>
-    <Actions> - Prüfen, ob sich alle überwachten mechanischen Einheiten an der konfigurierten Synchronisierungsposition befinden.<p /> - Prüfen, ob der Synchronisierungsschalter ordnungsgemäß arbeitet.<p /> - Prüfen, ob Motorkalibrierung und Umdrehungszähler aktualisiert und korrekt sind.<p /> - Prüfen, ob Synchronisierungsposition in der Sicherheitskonfiguration korrekt ist.<p /> - Auf Konfigurationsfehler überprüfen.<p /> - Motorkalibrierungswerte herunterladen.<p /> - Prüfen, ob Achse 4 oder 6 als unabhängig konfiguriert ist, wenn JA, prüfen, ob die EPS-Konfiguration entsprechend konfiguriert ist. </Actions>
+    <Title>SC %d1 - falsche Synch.- Position </Title>
+    <Description>Die Positionen der überwachten mechanischen Einheiten stimmen nicht mit den in der Sicherheitskonfiguration für Safety Controller (SC) %d1 definierten Synchronisierungspositionen an Achse %d3 überein. </Description>
+    <Actions> - Prüfen, ob sich alle überwachten mechanischen Einheiten an der konfigurierten Synchronisierungsposition befinden. - Prüfen, ob der Synchronisierungsschalter ordnungsgemäß arbeitet. - Prüfen, ob Motorkalibrierung und Umdrehungszähler aktualisiert und korrekt sind. - Prüfen, ob Synchronisierungsposition in der Sicherheitskonfiguration korrekt ist. - Auf Konfigurationsfehler überprüfen. - Motorkalibrierungswerte herunterladen. - Prüfen, ob Achse 4 oder 6 als unabhängig konfiguriert ist, wenn JA, prüfen, ob die EPS-Konfiguration entsprechend konfiguriert ist. </Actions>
   </Message>
   <Message number="454" eDefine="SYS_ERR_SYS_PSC_4">
-    <Title>SC <arg format="%d" ordinal="1" /> - Servo Lag-Limit überschritten </Title>
-    <Description>Safety Controller (SC) <arg format="%d" ordinal="1" /> hat zu große Abweichung zwischen angeforderter und tatsächlicher Position für mechanische Einheit <arg format="%s" ordinal="2" /> an Achse <arg format="%d" ordinal="3" /> festgestellt. </Description>
-    <Actions> - Auf Kollision überprüfen.<p /> - Bei Verwendung von externer Achse Servo Lag-Einstellungen in Sicherheitskonfiguration prüfen.<p /> - Bei Verwendung von Soft Servo prüfen, ob Operational Safety Range (OSR) Tolerance in der Sicherheitskonfiguration auf zu niedrigen Wert gesetzt ist.<p /> - Prüfen, ob Umdrehungszähler aktualisiert sind.<p /> - Prüfen, ob Verbindungsprobleme mit Hauptcomputer, Achscomputer oder serieller Messsystemkarte vorhanden sind.<p /> - Prüfen, ob Werkzeuggewicht korrekt definiert ist.<p /></Actions>
+    <Title>SC %d1 - Servo Lag-Limit überschritten </Title>
+    <Description>Safety Controller (SC) %d1 hat zu große Abweichung zwischen angeforderter und tatsächlicher Position für mechanische Einheit %s an Achse %d3 festgestellt. </Description>
+    <Actions> - Auf Kollision überprüfen. - Bei Verwendung von externer Achse Servo Lag-Einstellungen in Sicherheitskonfiguration prüfen. - Bei Verwendung von Soft Servo prüfen, ob Operational Safety Range (OSR) Tolerance in der Sicherheitskonfiguration auf zu niedrigen Wert gesetzt ist. - Prüfen, ob Umdrehungszähler aktualisiert sind. - Prüfen, ob Verbindungsprobleme mit Hauptcomputer, Achscomputer oder serieller Messsystemkarte vorhanden sind. - Prüfen, ob Werkzeuggewicht korrekt definiert ist.</Actions>
   </Message>
   <Message number="455" eDefine="SYS_ERR_SYS_PSC_5">
-    <Title>SC <arg format="%d" ordinal="1" /> - falscher Positionswert </Title>
-    <Description>Falscher Positionswert von Serial Measurement Board von SC <arg format="%d" ordinal="1" /> für mechanische Einheit <arg format="%s" ordinal="2" /> erkannt. </Description>
-    <Actions>- Resolver und Resolveranschlüsse prüfen.<p />- Serial Measurement Board austauschen.<p />- Resolver austauschen. </Actions>
+    <Title>SC %d1 - falscher Positionswert </Title>
+    <Description>Falscher Positionswert von Serial Measurement Board von SC %d1 für mechanische Einheit %s erkannt. </Description>
+    <Actions>- Resolver und Resolveranschlüsse prüfen.- Serial Measurement Board austauschen.- Resolver austauschen. </Actions>
   </Message>
   <Message number="456" eDefine="SYS_ERR_SYS_PSC_6">
-    <Title>SC <arg format="%d" ordinal="1" /> - Timeout für Referenzdaten </Title>
-    <Description>Die Robotersteuerung sendet keine Referenzdaten mehr an die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" />. </Description>
-    <Actions>1. Vorherige Fehlerprotokolle auf mögliche Ursachen überprüfen.<p />2. System neu starten. </Actions>
+    <Title>SC %d1 - Timeout für Referenzdaten </Title>
+    <Description>Die Robotersteuerung sendet keine Referenzdaten mehr an die Sicherheitssteuerung (SC) %d1. </Description>
+    <Actions>1. Vorherige Fehlerprotokolle auf mögliche Ursachen überprüfen.2. System neu starten. </Actions>
   </Message>
   <Message number="457" eDefine="SYS_ERR_SYS_PSC_7">
-    <Title>SC <arg format="%d" ordinal="1" /> Sicherheitskonfiguration geändert </Title>
-    <Description>Die Sicherheitskonfiguration für den Safety Controller (SC) <arg format="%d" ordinal="1" /> hat Inhalte angepasst oder kann nicht mit der genutzten Software zusammenarbeiten. </Description>
-    <Causes> - Eine neue Sicherheitskonfiguration wurde heruntergeladen, der Normalfall. <p /> - Die Konfiguration kann nicht mit der verwendeten Hardware zusammenarbeiten. Typisch, wenn die Fehlerprotokollmeldung mit der Anfrage eines neuen Pincodes wiederholt wird. <p /> - Beschädigte Sicherheitskonfiguration. Typisch, wenn die Fehlerprotokollmeldung mit der Anfrage eines neuen Pincodes wiederholt wird. </Causes>
-    <Actions>1. Auf neue Fehlerprotokollmeldung prüfen, die anzeigt, ob eine neue Sicherheitskonfiguration heruntergeladen wurde.<p />2. Wenn keine neue Sicherheitskonfiguration heruntergeladen wurde und diese Fehlerprotokollmeldung nach einem Warmstart auftritt, eine neue Sicherheitskonfiguration auf die Sicherheitssteuerung herunterladen.<p />3. Wenn diese Fehlerprotokollmeldung nach jedem Warmstart auftritt und die Anfrage eines neuen Pincodes wiederholt wird, eine neue Sicherheitskonfiguration erstellen und herunterladen. </Actions>
+    <Title>SC %d1 Sicherheitskonfiguration geändert </Title>
+    <Description>Die Sicherheitskonfiguration für den Safety Controller (SC) %d1 hat Inhalte angepasst oder kann nicht mit der genutzten Software zusammenarbeiten. </Description>
+    <Causes> - Eine neue Sicherheitskonfiguration wurde heruntergeladen, der Normalfall.  - Die Konfiguration kann nicht mit der verwendeten Hardware zusammenarbeiten. Typisch, wenn die Fehlerprotokollmeldung mit der Anfrage eines neuen Pincodes wiederholt wird.  - Beschädigte Sicherheitskonfiguration. Typisch, wenn die Fehlerprotokollmeldung mit der Anfrage eines neuen Pincodes wiederholt wird. </Causes>
+    <Actions>1. Auf neue Fehlerprotokollmeldung prüfen, die anzeigt, ob eine neue Sicherheitskonfiguration heruntergeladen wurde.2. Wenn keine neue Sicherheitskonfiguration heruntergeladen wurde und diese Fehlerprotokollmeldung nach einem Warmstart auftritt, eine neue Sicherheitskonfiguration auf die Sicherheitssteuerung herunterladen.3. Wenn diese Fehlerprotokollmeldung nach jedem Warmstart auftritt und die Anfrage eines neuen Pincodes wiederholt wird, eine neue Sicherheitskonfiguration erstellen und herunterladen. </Actions>
   </Message>
   <Message number="458" eDefine="SYS_ERR_SYS_PSC_8">
-    <Title>SC <arg format="%d" ordinal="1" /> - interner Fehler </Title>
-    <Description>Interner Fehler in der Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" />.</Description>
-    <Actions>- Verkabelung der Sicherheitssteuerung überprüfen.<p />- Zustand der Sicherheitssteuerung anhand von LED überprüfen.<p />- Sicherheitssteuerung austauschen, wenn Fehler noch vorhanden ist.</Actions>
+    <Title>SC %d1 - interner Fehler </Title>
+    <Description>Interner Fehler in der Sicherheitssteuerung (SC) %d1.</Description>
+    <Actions>- Verkabelung der Sicherheitssteuerung überprüfen.- Zustand der Sicherheitssteuerung anhand von LED überprüfen.- Sicherheitssteuerung austauschen, wenn Fehler noch vorhanden ist.</Actions>
   </Message>
   <Message number="459" eDefine="SYS_ERR_SYS_PSC_9">
-    <Title>SC <arg format="%d" ordinal="1" /> - E/A-Fehler </Title>
-    <Description>E/A-Fehler in der Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" />. </Description>
-    <Actions>- Verkabelung der Sicherheitssteuerung überprüfen.<p />- Zustand der Sicherheitssteuerung  überprüfen.<p /><p />Nach Ausführen der empfohlenen Maßnahmen Warmstart der Robotersteuerung durchführen. </Actions>
+    <Title>SC %d1 - E/A-Fehler </Title>
+    <Description>E/A-Fehler in der Sicherheitssteuerung (SC) %d1. </Description>
+    <Actions>- Verkabelung der Sicherheitssteuerung überprüfen.- Zustand der Sicherheitssteuerung  überprüfen.Nach Ausführen der empfohlenen Maßnahmen Warmstart der Robotersteuerung durchführen. </Actions>
   </Message>
   <Message number="460" eDefine="SYS_ERR_SYS_PSC_10">
-    <Title>SC <arg format="%d" ordinal="1" /> - Sicherheitskonfiguration nicht gefunden </Title>
-    <Description>Sicherheitskonfiguration für die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> konnte nicht abgerufen werden. </Description>
-    <Actions>- Warmstart der Robotersteuerung durchführen.<p />- Sicherheitskonfiguration in die Sicherheitssteuerung laden.<p />- System neu installieren. </Actions>
+    <Title>SC %d1 - Sicherheitskonfiguration nicht gefunden </Title>
+    <Description>Sicherheitskonfiguration für die Sicherheitssteuerung (SC) %d1 konnte nicht abgerufen werden. </Description>
+    <Actions>- Warmstart der Robotersteuerung durchführen.- Sicherheitskonfiguration in die Sicherheitssteuerung laden.- System neu installieren. </Actions>
   </Message>
   <Message number="461" eDefine="SYS_ERR_SYS_PSC_11">
-    <Title>SC <arg format="%d" ordinal="1" /> - Roboterkonfiguration nicht gefunden </Title>
-    <Description>Roboterkonfiguration für die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> konnte nicht abgerufen werden. </Description>
-    <Actions>- Warmstart der Robotersteuerung durchführen.<p />- System neu installieren. </Actions>
+    <Title>SC %d1 - Roboterkonfiguration nicht gefunden </Title>
+    <Description>Roboterkonfiguration für die Sicherheitssteuerung (SC) %d1 konnte nicht abgerufen werden. </Description>
+    <Actions>- Warmstart der Robotersteuerung durchführen.- System neu installieren. </Actions>
   </Message>
   <Message number="462" eDefine="SYS_ERR_SYS_PSC_12">
-    <Title>SC <arg format="%d" ordinal="1" /> - Kalibrierungsoffset nicht gefunden </Title>
-    <Description>Motorkalibrierungsoffsets für die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> konnten nicht abgerufen werden. </Description>
+    <Title>SC %d1 - Kalibrierungsoffset nicht gefunden </Title>
+    <Description>Motorkalibrierungsoffsets für die Sicherheitssteuerung (SC) %d1 konnten nicht abgerufen werden. </Description>
     <Actions>Neue Kalibrierungsoffsets in die Sicherheitssteuerung laden.</Actions>
   </Message>
   <Message number="463" eDefine="SYS_ERR_SYS_PSC_13">
-    <Title>SC <arg format="%d" ordinal="1" /> - Sicherheitskonfiguration geladen </Title>
-    <Description>Sicherheitskonfiguration für die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> wurde erfolgreich geladen. </Description>
+    <Title>SC %d1 - Sicherheitskonfiguration geladen </Title>
+    <Description>Sicherheitskonfiguration für die Sicherheitssteuerung (SC) %d1 wurde erfolgreich geladen. </Description>
   </Message>
   <Message number="464" eDefine="SYS_ERR_SYS_PSC_14">
-    <Title>SC <arg format="%d" ordinal="1" /> - OSR-Grenze überschritten </Title>
-    <Description>Die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> hat zu große Abweichung zwischen angeforderter und tatsächlicher Position in Operational Safety Range (OSR) für mechanische Einheit <arg format="%s" ordinal="2" /> an Achse <arg format="%d" ordinal="3" /> festgestellt. </Description>
-    <Actions>- Auf Kollision prüfen.<p />- Prüfen, ob Operational Safety Range (OSR)-Toleranz in Sicherheitskonfiguration auf zu geringen Wert gesetzt ist.<p />- Sicherheitssteuerung synchronisieren, wenn die Umdrehungszähler seit letzter Synchronisierung aktualisiert wurden. </Actions>
+    <Title>SC %d1 - OSR-Grenze überschritten </Title>
+    <Description>Die Sicherheitssteuerung (SC) %d1 hat zu große Abweichung zwischen angeforderter und tatsächlicher Position in Operational Safety Range (OSR) für mechanische Einheit %s an Achse %d3 festgestellt. </Description>
+    <Actions>- Auf Kollision prüfen.- Prüfen, ob Operational Safety Range (OSR)-Toleranz in Sicherheitskonfiguration auf zu geringen Wert gesetzt ist.- Sicherheitssteuerung synchronisieren, wenn die Umdrehungszähler seit letzter Synchronisierung aktualisiert wurden. </Actions>
   </Message>
   <Message number="465" eDefine="SYS_ERR_SYS_PSC_15">
-    <Title>SAS-Geschwindigkeit von SC <arg format="%d" ordinal="1" /> überschritten </Title>
-    <Description>Safe Axis Speed (SAS)-Überschreitung von mechanischer Einheit <arg format="%s" ordinal="2" />, Achse <arg format="%d" ordinal="3" /> an der Sicherheitssteuerung (SC). </Description>
-    <Actions>Geschwindigkeit von Achse <arg format="%d" ordinal="3" /> verringern.</Actions>
+    <Title>SAS-Geschwindigkeit von SC %d1 überschritten </Title>
+    <Description>Safe Axis Speed (SAS)-Überschreitung von mechanischer Einheit %s, Achse %d3 an der Sicherheitssteuerung (SC). </Description>
+    <Actions>Geschwindigkeit von Achse %d3 verringern.</Actions>
   </Message>
   <Message number="466" eDefine="SYS_ERR_SYS_PSC_16">
-    <Title>SC <arg format="%d" ordinal="1" /> - E/A-Fehler </Title>
-    <Description>E/A-Fehler in der Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" />, E/A <arg format="%d" ordinal="3" />, Typ <arg format="%d" ordinal="4" /><p />Typ 1: Eingang<p />Typ 2: Ausgang<p /></Description>
-    <Causes>- Falscher Anschluss von E/A-Klemmen an der Sicherheitssteuerung<p />- Zweikanal-E/A-Konflikt<p /></Causes>
-    <Actions>- Kabel zu Sicherheitssteuerung überprüfen.<p />- Zustand der Sicherheitssteuerung überprüfen.<p /><p />Nach Ausführen der empfohlenen Maßnahmen Warmstart der Robotersteuerung durchführen. </Actions>
+    <Title>SC %d1 - E/A-Fehler </Title>
+    <Description>E/A-Fehler in der Sicherheitssteuerung (SC) %d1, E/A %d3, Typ %d4Typ 1: EingangTyp 2: Ausgang</Description>
+    <Causes>- Falscher Anschluss von E/A-Klemmen an der Sicherheitssteuerung- Zweikanal-E/A-Konflikt</Causes>
+    <Actions>- Kabel zu Sicherheitssteuerung überprüfen.- Zustand der Sicherheitssteuerung überprüfen.Nach Ausführen der empfohlenen Maßnahmen Warmstart der Robotersteuerung durchführen. </Actions>
   </Message>
   <Message number="467" eDefine="SYS_ERR_SYS_PSC_17">
-    <Title>STS-Geschwindigkeit von SC <arg format="%d" ordinal="1" /> überschritten </Title>
-    <Description>Safe Tool Speed (STS) in der Sicherheitssteuerung (SC) für mechanische Einheit <arg format="%s" ordinal="2" /> ist zu hoch. Ursache <arg format="%d" ordinal="3" />. </Description>
-    <Causes>1. tool0-Geschwindigkeit <p />2. Ellenbogengeschwindigkeit <p />3. Werkzeuggeschwindigkeit<p />4. Geschwindigkeit von externer Achse </Causes>
+    <Title>STS-Geschwindigkeit von SC %d1 überschritten </Title>
+    <Description>Safe Tool Speed (STS) in der Sicherheitssteuerung (SC) für mechanische Einheit %s ist zu hoch. Ursache %d3. </Description>
+    <Causes>1. tool0-Geschwindigkeit 2. Ellenbogengeschwindigkeit 3. Werkzeuggeschwindigkeit4. Geschwindigkeit von externer Achse </Causes>
     <Actions>Werkzeuggeschwindigkeit reduzieren.</Actions>
   </Message>
   <Message number="468" eDefine="SYS_ERR_SYS_PSC_18">
-    <Title>SC <arg format="%d" ordinal="1" /> - STZ-Überschreitung </Title>
-    <Description>Überschreitung von Safe Tool Zone (STZ) <arg format="%d" ordinal="3" /> für mechanische Einheit <arg format="%s" ordinal="2" />. <p />Werkzeug <arg format="%s" ordinal="5" /> war aktiv.<p />Ursache <arg format="%d" ordinal="4" /></Description>
-    <Causes> 1. Geschwindigkeitsüberschreitung<p /> 2. Falsche Werkzeugposition<p /> 3. Falsche Werkzeugorientierung<p /> 4. Falsche Ellenbogen-Position<p /> 11. Falsche Position Werkzeugpunkt 1<p /> 12. Falsche Position Werkzeugpunkt 2<p /> 13. Falsche Position Werkzeugpunkt 3<p /> 14. Falsche Position Werkzeugpunkt 4<p /> 15. Falsche Position Werkzeugpunkt 5<p /> 16. Falsche Position Werkzeugpunkt 6<p /> 17. Falsche Position Werkzeugpunkt 7<p /> 18. Falsche Position Werkzeugpunkt 8<p /></Causes>
-    <Actions> - Geschwindigkeit verringern<p /> - Roboterwerkzeug an sichere Position bewegen<p /> - Werkzeugorientierung anpassen<p /></Actions>
+    <Title>SC %d1 - STZ-Überschreitung </Title>
+    <Description>Überschreitung von Safe Tool Zone (STZ) %d3 für mechanische Einheit %s. Werkzeug %s war aktiv.Ursache %d4</Description>
+    <Causes> 1. Geschwindigkeitsüberschreitung 2. Falsche Werkzeugposition 3. Falsche Werkzeugorientierung 4. Falsche Ellenbogen-Position 11. Falsche Position Werkzeugpunkt 1 12. Falsche Position Werkzeugpunkt 2 13. Falsche Position Werkzeugpunkt 3 14. Falsche Position Werkzeugpunkt 4 15. Falsche Position Werkzeugpunkt 5 16. Falsche Position Werkzeugpunkt 6 17. Falsche Position Werkzeugpunkt 7 18. Falsche Position Werkzeugpunkt 8</Causes>
+    <Actions> - Geschwindigkeit verringern - Roboterwerkzeug an sichere Position bewegen - Werkzeugorientierung anpassen</Actions>
   </Message>
   <Message number="469" eDefine="SYS_ERR_SYS_PSC_19">
-    <Title>SC <arg format="%d" ordinal="1" /> - SAR-Überschreitung </Title>
-    <Description>Überschreitung von Safe Axis Range (SAR) <arg format="%d" ordinal="3" /> für mechanische Einheit <arg format="%s" ordinal="2" />, Achse <arg format="%d" ordinal="4" /></Description>
+    <Title>SC %d1 - SAR-Überschreitung </Title>
+    <Description>Überschreitung von Safe Axis Range (SAR) %d3 für mechanische Einheit %s, Achse %d4</Description>
     <Actions>Mechanische Einheit an sichere Position bewegen. </Actions>
   </Message>
   <Message number="470" eDefine="SYS_ERR_SYS_PSC_20">
-    <Title>SC <arg format="%d" ordinal="1" /> - Synchronisierungsvorwarnung </Title>
-    <Description>Für mechanische Einheiten, die von der Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> überwacht werden, ist in weniger als <arg format="%d" ordinal="3" /> Stunde(n) eine Synchronisierung erforderlich. </Description>
+    <Title>SC %d1 - Synchronisierungsvorwarnung </Title>
+    <Description>Für mechanische Einheiten, die von der Sicherheitssteuerung (SC) %d1 überwacht werden, ist in weniger als %d3 Stunde(n) eine Synchronisierung erforderlich. </Description>
     <Actions>Synchronisierung vor Ablauf des Zeitlimits durchführen.</Actions>
   </Message>
   <Message number="471" eDefine="SYS_ERR_SYS_PSC_21">
-    <Title>SC <arg format="%d" ordinal="1" /> - Synchronisierungs-Timeout </Title>
-    <Description>Synchronisierungszeitlimit für die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> abgelaufen. Die letzte Synchronisierung ist vor <arg format="%d" ordinal="3" /> Stunden erfolgt. </Description>
+    <Title>SC %d1 - Synchronisierungs-Timeout </Title>
+    <Description>Synchronisierungszeitlimit für die Sicherheitssteuerung (SC) %d1 abgelaufen. Die letzte Synchronisierung ist vor %d3 Stunden erfolgt. </Description>
     <Actions>Synchronisierung ausführen.</Actions>
   </Message>
   <Message number="472" eDefine="SYS_ERR_SYS_PSC_22">
-    <Title>SC <arg format="%d" ordinal="1" /> - neue Sicherheitskonfiguration </Title>
-    <Description>Die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> hat eine neue Sicherheitskonfiguration erhalten. Es muss ein neuer PIN-Code aktiviert werden. </Description>
-    <Actions>1. Als Benutzer mit Berechtigung für Sicherheitskonfiguration anmelden.<p />2. In "Systemeinstellungen" neuen PIN-Code für die Sicherheitssteuerung eingeben. </Actions>
+    <Title>SC %d1 - neue Sicherheitskonfiguration </Title>
+    <Description>Die Sicherheitssteuerung (SC) %d1 hat eine neue Sicherheitskonfiguration erhalten. Es muss ein neuer PIN-Code aktiviert werden. </Description>
+    <Actions>1. Als Benutzer mit Berechtigung für Sicherheitskonfiguration anmelden.2. In "Systemeinstellungen" neuen PIN-Code für die Sicherheitssteuerung eingeben. </Actions>
   </Message>
   <Message number="473" eDefine="SYS_ERR_SYS_PSC_23">
-    <Title>SC <arg format="%d" ordinal="1" /> - Wertekonflikt </Title>
-    <Description>Die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> wies zu lange einen Wertekonflikt für einen Sicherheitsausgang auf. </Description>
+    <Title>SC %d1 - Wertekonflikt </Title>
+    <Description>Die Sicherheitssteuerung (SC) %d1 wies zu lange einen Wertekonflikt für einen Sicherheitsausgang auf. </Description>
     <Consequences>Die Sicherheitssteuerung ist in den sicheren Zustand gewechselt und gibt nach 10 Minuten einen Fehler aufgrund eines internen Konflikts aus, wenn empfohlene Aktionen nicht durchgeführt werden.</Consequences>
-    <Causes>- Die mechanische Einheit war zu lange an einer Position an oder in der Nähe einer überwachten Funktionsgrenze.<p />- Interner Berechnungsfehler in der Sicherheitssteuerung. </Causes>
+    <Causes>- Die mechanische Einheit war zu lange an einer Position an oder in der Nähe einer überwachten Funktionsgrenze.- Interner Berechnungsfehler in der Sicherheitssteuerung. </Causes>
     <Actions>Alle Achsen und Werkzeuge mechanischer Einheiten innerhalb oder außerhalb überwachter Funktionsgrenzen verschieben.</Actions>
   </Message>
   <Message number="474" eDefine="SYS_ERR_SYS_PSC_24">
-    <Title>SC <arg format="%d" ordinal="1" /> - E/A-Versorgungsfehler </Title>
-    <Description>E/A-Versorgungsspannung für die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> ist außerhalb des gültigen Bereichs. </Description>
+    <Title>SC %d1 - E/A-Versorgungsfehler </Title>
+    <Description>E/A-Versorgungsspannung für die Sicherheitssteuerung (SC) %d1 ist außerhalb des gültigen Bereichs. </Description>
     <Causes>Spannung ist außerhalb der Grenzwerte oder nicht vorhanden.</Causes>
-    <Actions>1. 24V-Versorgungsspannung mit korrekter Spannung mit E/A-Anschlüssen verbinden.<p />2. Warmstart der Robotersteuerung ausführen. </Actions>
+    <Actions>1. 24V-Versorgungsspannung mit korrekter Spannung mit E/A-Anschlüssen verbinden.2. Warmstart der Robotersteuerung ausführen. </Actions>
   </Message>
   <Message number="475" eDefine="SYS_ERR_SYS_PSC_25">
-    <Title>SC <arg format="%d" ordinal="1" /> - Synchronisierung abgelehnt </Title>
-    <Description>Die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> ist nicht ordnungsgemäß für Synchronisierung konfiguriert. </Description>
-    <Causes>- Sicherheitskonfigurations-PIN ist nicht gesetzt oder falsch.<p />- Sicherheitskonfiguration ist leer.<p />- Sicherheitskonfiguration ist beschädigt oder fehlt.<p />- Sicherheitssteuerung ist mit falschem SMB-Bus verbunden.<p />- E/A-Stromversorgung fehlt.<p /></Causes>
+    <Title>SC %d1 - Synchronisierung abgelehnt </Title>
+    <Description>Die Sicherheitssteuerung (SC) %d1 ist nicht ordnungsgemäß für Synchronisierung konfiguriert. </Description>
+    <Causes>- Sicherheitskonfigurations-PIN ist nicht gesetzt oder falsch.- Sicherheitskonfiguration ist leer.- Sicherheitskonfiguration ist beschädigt oder fehlt.- Sicherheitssteuerung ist mit falschem SMB-Bus verbunden.- E/A-Stromversorgung fehlt.</Causes>
     <Actions>Mögliche Ursachen überprüfen.</Actions>
   </Message>
   <Message number="476" eDefine="SYS_ERR_SYS_PSC_26">
-    <Title>SC <arg format="%d" ordinal="1" /> deaktiviert </Title>
-    <Description>Die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> ist deaktiviert. </Description>
+    <Title>SC %d1 deaktiviert </Title>
+    <Description>Die Sicherheitssteuerung (SC) %d1 ist deaktiviert. </Description>
     <Consequences>Alle Überwachungsfunktionen in der Sicherheitssteuerung wurden deaktiviert. Mögliche Gefährdung der Sicherheit. </Consequences>
     <Actions>Eine Sicherheitskonfiguration in die Sicherheitssteuerung laden. </Actions>
   </Message>
   <Message number="477" eDefine="SYS_ERR_SYS_PSC_27">
-    <Title>SC <arg format="%d" ordinal="1" /> - SMB-Kommunikationsfehler </Title>
-    <Description>Keine Kommunikation der Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> mit Serial Measurement Board (SMB). </Description>
-    <Actions>1. Sicherstellen, dass Kabel von SMB zur Sicherheitssteuerung am richtigen SMB-Anschluss angeschlossen ist und funktionsfähig ist.<p />2. System neu starten.<p /></Actions>
+    <Title>SC %d1 - SMB-Kommunikationsfehler </Title>
+    <Description>Keine Kommunikation der Sicherheitssteuerung (SC) %d1 mit Serial Measurement Board (SMB). </Description>
+    <Actions>1. Sicherstellen, dass Kabel von SMB zur Sicherheitssteuerung am richtigen SMB-Anschluss angeschlossen ist und funktionsfähig ist.2. System neu starten.</Actions>
   </Message>
   <Message number="478" eDefine="SYS_ERR_SYS_PSC_28">
-    <Title>SC <arg format="%d" ordinal="1" /> - Fehler bei Netzstromversorgung </Title>
-    <Description>Netzversorgungsspannung für die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> ist außerhalb des gültigen Bereichs. </Description>
+    <Title>SC %d1 - Fehler bei Netzstromversorgung </Title>
+    <Description>Netzversorgungsspannung für die Sicherheitssteuerung (SC) %d1 ist außerhalb des gültigen Bereichs. </Description>
     <Causes>Spannung ist außerhalb der Grenzwerte oder nicht vorhanden.</Causes>
-    <Actions>1. Kabel der Sicherheitssteuerung überprüfen.<p />2. Netzversorgungsspannung überprüfen.<p />3. Warmstart der Robotersteuerung durchführen. </Actions>
+    <Actions>1. Kabel der Sicherheitssteuerung überprüfen.2. Netzversorgungsspannung überprüfen.3. Warmstart der Robotersteuerung durchführen. </Actions>
   </Message>
   <Message number="479" eDefine="SYS_ERR_SYS_PSC_29">
-    <Title>SC <arg format="%d" ordinal="1" /> - externe Achse fehlt </Title>
-    <Description>Eine von der Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> überwachte externe Achse ist nicht mehr in der Systemkonfiguration vorhanden. </Description>
+    <Title>SC %d1 - externe Achse fehlt </Title>
+    <Description>Eine von der Sicherheitssteuerung (SC) %d1 überwachte externe Achse ist nicht mehr in der Systemkonfiguration vorhanden. </Description>
     <Actions>Die überwachte externe Achse neu installieren oder eine Sicherheitskonfiguration ohne Überwachung der externen Achse laden.</Actions>
   </Message>
   <Message number="480" eDefine="SYS_ERR_SYS_PSC_30">
-    <Title>SC <arg format="%d" ordinal="1" /> SST-Überschreitung </Title>
-    <Description>Überschreitung von Safe Stand Still (SST) <arg format="%d" ordinal="4" /> in Sicherheitssteuerung (SC) für mechanische Einheit <arg format="%s" ordinal="2" />, Achse <arg format="%d" ordinal="3" />. </Description>
-    <Actions>- RAPID-Programm überprüfen.<p />- Prozessausrüstung überprüfen.<p />- Sicherstellen, dass bei aktivem SST keine Bewegung erfolgt.<p />- Frühere Fehlerprotokollmeldungen überprüfen.<p /></Actions>
+    <Title>SC %d1 SST-Überschreitung </Title>
+    <Description>Überschreitung von Safe Stand Still (SST) %d4 in Sicherheitssteuerung (SC) für mechanische Einheit %s, Achse %d3. </Description>
+    <Actions>- RAPID-Programm überprüfen.- Prozessausrüstung überprüfen.- Sicherstellen, dass bei aktivem SST keine Bewegung erfolgt.- Frühere Fehlerprotokollmeldungen überprüfen.</Actions>
   </Message>
   <Message number="481" eDefine="SYS_ERR_SYS_PSC_31">
-    <Title>SC <arg format="%d" ordinal="1" /> - OVR aktiv </Title>
-    <Description>Override Operation (OVR) für die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> aktiv.<p />SafeMove stoppt den Roboter bei aktivem OVR nach ca. 20 Minuten.<p />Geschwindigkeit ist auf 250 mm/s oder 18 Grad/s begrenzt.<p /></Description>
+    <Title>SC %d1 - OVR aktiv </Title>
+    <Description>Override Operation (OVR) für die Sicherheitssteuerung (SC) %d1 aktiv.SafeMove stoppt den Roboter bei aktivem OVR nach ca. 20 Minuten.Geschwindigkeit ist auf 250 mm/s oder 18 Grad/s begrenzt.</Description>
     <Actions>Mit OVR-Eingang verbundenes Signal deaktivieren.</Actions>
   </Message>
   <Message number="482" eDefine="SYS_ERR_SYS_PSC_32">
-    <Title>SC <arg format="%d" ordinal="1" /> - OVR-Timeout </Title>
-    <Description>Override-Operation (OVR) war zu lange an der Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> aktiv. </Description>
-    <Actions>1. Warmstart der Robotersteuerung durchführen.<p />2. Mit OVR-Eingang verbundenes Signal umschalten.<p />3. Stopp durch Drücken der MOTOREN-EIN-Taste bestätigen.<p />4. Roboter zurück in Arbeitsbereich bewegen.<p />5. Mit OVR-Eingang verbundenes Signal deaktivieren.<p /></Actions>
+    <Title>SC %d1 - OVR-Timeout </Title>
+    <Description>Override-Operation (OVR) war zu lange an der Sicherheitssteuerung (SC) %d1 aktiv. </Description>
+    <Actions>1. Warmstart der Robotersteuerung durchführen.2. Mit OVR-Eingang verbundenes Signal umschalten.3. Stopp durch Drücken der MOTOREN-EIN-Taste bestätigen.4. Roboter zurück in Arbeitsbereich bewegen.5. Mit OVR-Eingang verbundenes Signal deaktivieren.</Actions>
   </Message>
   <Message number="483" eDefine="SYS_ERR_SYS_PSC_33">
-    <Title>SC <arg format="%d" ordinal="1" /> - CBC bald erforderlich </Title>
-    <Description>Zyklische Bremsenüberprüfung (CBC) ist in weniger als <arg format="%d" ordinal="3" /> Stunden erforderlich. </Description>
+    <Title>SC %d1 - CBC bald erforderlich </Title>
+    <Description>Zyklische Bremsenüberprüfung (CBC) ist in weniger als %d3 Stunden erforderlich. </Description>
     <Actions>Bremsenüberprüfung vor Ablauf des Zeitlimits durchführen.</Actions>
   </Message>
   <Message number="484" eDefine="SYS_ERR_SYS_PSC_34">
-    <Title>SC <arg format="%d" ordinal="1" /> CBC muss durchgeführt werden </Title>
+    <Title>SC %d1 CBC muss durchgeführt werden </Title>
     <Description>Zeitlimit für Cyclic Brake Check (CBC) wurde in Safety Controller (SC) überschritten oder letzte Bremsenüberprüfung fehlgeschlagen. </Description>
     <Actions>Bremsenüberprüfung durchführen</Actions>
   </Message>
   <Message number="485" eDefine="SYS_ERR_SYS_PSC_35">
-    <Title>SC <arg format="%d" ordinal="1" /> - Bremsdrehmoment zu gering </Title>
-    <Description>Bremsdrehmoment in Safety Controller (SC) für mechanische Einheit <arg format="%s" ordinal="2" /> Achse <arg format="%s" ordinal="3" /> ist zu gering. </Description>
-    <Causes> - Achse wurde nicht getestet.<p /> - Bremsenverschleiß. </Causes>
-    <Actions> - Überprüfen, ob fehlerhafte Achse aktiviert ist.<p /> - Wenn fehlerhafte Achse aktiviert ist, Bremse(n) möglichst bald austauschen. </Actions>
+    <Title>SC %d1 - Bremsdrehmoment zu gering </Title>
+    <Description>Bremsdrehmoment in Safety Controller (SC) für mechanische Einheit %s Achse %s ist zu gering. </Description>
+    <Causes> - Achse wurde nicht getestet. - Bremsenverschleiß. </Causes>
+    <Actions> - Überprüfen, ob fehlerhafte Achse aktiviert ist. - Wenn fehlerhafte Achse aktiviert ist, Bremse(n) möglichst bald austauschen. </Actions>
   </Message>
   <Message number="486" eDefine="SYS_ERR_SYS_PSC_36">
-    <Title>SC <arg format="%d" ordinal="1" /> CBC unterbrochen oder fehlerhaft </Title>
-    <Description>Safety Controller (SC) hat festgestellt, dass die letzte Cyclic Brake Check (CBC) an der mechanischen Einheit <arg format="%s" ordinal="2" /> unterbrochen oder fehlerhaft war. </Description>
-    <Actions> - Frühere Fehlerprotokollmeldungen überprüfen.<p /> - eine neue Bremsenüberprüfung nur durchführen, wenn nötig; meist wenn<p />   auch Fehlermeldung 20485 angezeigt wird. </Actions>
+    <Title>SC %d1 CBC unterbrochen oder fehlerhaft </Title>
+    <Description>Safety Controller (SC) hat festgestellt, dass die letzte Cyclic Brake Check (CBC) an der mechanischen Einheit %s unterbrochen oder fehlerhaft war. </Description>
+    <Actions> - Frühere Fehlerprotokollmeldungen überprüfen. - eine neue Bremsenüberprüfung nur durchführen, wenn nötig; meist wenn   auch Fehlermeldung 20485 angezeigt wird. </Actions>
   </Message>
   <Message number="487" eDefine="SYS_ERR_SYS_PSC_37">
-    <Title>SC <arg format="%d" ordinal="1" /> - unsynchronisierte Geschwindigkeit überschritten </Title>
-    <Description>Überschreitung der Achsengeschwindigkeit, als die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> nicht synchronisiert war. </Description>
+    <Title>SC %d1 - unsynchronisierte Geschwindigkeit überschritten </Title>
+    <Description>Überschreitung der Achsengeschwindigkeit, als die Sicherheitssteuerung (SC) %d1 nicht synchronisiert war. </Description>
     <Actions>Mechanische Einheit mit geringer Achsengeschwindigkeit an Kalibrierstellung bewegen. Geschwindigkeit auf 250 mm/s oder 18 Grad/s verringern.</Actions>
   </Message>
   <Message number="488" eDefine="SYS_ERR_SYS_PSC_38">
-    <Title>SC <arg format="%d" ordinal="1" /> - Zeitlimit für unsynch. Zustand abgelaufen </Title>
-    <Description>Zeitspanne zum Bewegen des Roboters in unsynchronisiertem Zustand ist für die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> abgelaufen. </Description>
-    <Actions>1. Bestätigungsstopp durch Drücken der MOTOREN-EIN-Taste durchführen oder Systemeingang aktivieren.<p />2. Sicherheitssteuerung <arg format="%d" ordinal="1" /> synchronisieren. </Actions>
+    <Title>SC %d1 - Zeitlimit für unsynch. Zustand abgelaufen </Title>
+    <Description>Zeitspanne zum Bewegen des Roboters in unsynchronisiertem Zustand ist für die Sicherheitssteuerung (SC) %d1 abgelaufen. </Description>
+    <Actions>1. Bestätigungsstopp durch Drücken der MOTOREN-EIN-Taste durchführen oder Systemeingang aktivieren.2. Sicherheitssteuerung %d1 synchronisieren. </Actions>
   </Message>
   <Message number="489" eDefine="SYS_ERR_SYS_PSC_39">
-    <Title>SC <arg format="%d" ordinal="1" /> wurde deaktiviert </Title>
-    <Description>Die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> wurde deaktiviert und es sind keine Überwachungsfunktionen aktiv. </Description>
+    <Title>SC %d1 wurde deaktiviert </Title>
+    <Description>Die Sicherheitssteuerung (SC) %d1 wurde deaktiviert und es sind keine Überwachungsfunktionen aktiv. </Description>
     <Causes>Entweder wurde ein Kaltstart durchgeführt oder es handelt sich um den ersten Start der Sicherheitssteuerung.</Causes>
-    <Actions>Eine Konfiguration in die Sicherheitssteuerung <arg format="%d" ordinal="1" /> laden. </Actions>
+    <Actions>Eine Konfiguration in die Sicherheitssteuerung %d1 laden. </Actions>
   </Message>
 </Domain>

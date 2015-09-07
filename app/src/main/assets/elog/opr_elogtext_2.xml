@@ -1,97 +1,97 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Domain xmlns="urn:abb-robotics-elog-text" elogDomain="OPR" domainNo="1" lang="de" elogTextVersion="1.0" min="176" max="1231">
   <Message number="176" eDefine="SYS_ERR_OPR_BGRND_REFSTART_UNDEF">
-    <Title>Hintergrundtask <arg format="%s" ordinal="1" /></Title>
+    <Title>Hintergrundtask %s</Title>
     <Description>startet nicht. Modul kann nicht geladen werden.</Description>
     <Causes>Die Moduldatei fehlt im Zielverzeichnis.</Causes>
-    <Actions>1. Moduldatei in Zielverzeichnis kopieren.<p />2. I-Start ausführen.</Actions>
+    <Actions>1. Moduldatei in Zielverzeichnis kopieren.2. I-Start ausführen.</Actions>
   </Message>
   <Message number="177" eDefine="SYS_ERR_OPR_BGRND_REFSTART_NOMEM">
     <Title>Task wird nicht gestartet</Title>
-    <Description>Task <arg format="%s" ordinal="1" />: <p />Nicht genügend Programmspeicher oder Programmspeicher ist fragmentiert. Module können fehlen oder möglicherweise wurden Daten nicht installiert.</Description>
-    <Actions>1. Module löschen/neu laden und Warmstart ausführen.<p />2. Umfangreiche Datenstrukturen aufteilen.<p />3. P-Start des Systems durchführen.<p />4. Stapelgröße für System erhöhen.</Actions>
+    <Description>Task %s: Nicht genügend Programmspeicher oder Programmspeicher ist fragmentiert. Module können fehlen oder möglicherweise wurden Daten nicht installiert.</Description>
+    <Actions>1. Module löschen/neu laden und Warmstart ausführen.2. Umfangreiche Datenstrukturen aufteilen.3. P-Start des Systems durchführen.4. Stapelgröße für System erhöhen.</Actions>
   </Message>
   <Message number="178" eDefine="SYS_ERR_OPR_BGRND_STEP_NOT_ALLOWED">
     <Title>Abarbeitungsfehler statische/semistatische Task </Title>
-    <Description>Task <arg format="%s" ordinal="1" /> kann nicht gestartet werden.<p />Eine statische/semistatische Task kann nur im Modus "kontinuierlich" ausgeführt werden.</Description>
+    <Description>Task %s kann nicht gestartet werden.Eine statische/semistatische Task kann nur im Modus "kontinuierlich" ausgeführt werden.</Description>
     <Consequences>Es werden keine Tasks gestartet.</Consequences>
     <Causes>Versuch, eine statische/semistatische Task einen Schritt (vorwärts oder rückwärts) abzuarbeiten.</Causes>
     <Actions>
-      <arg format="%s" ordinal="1" /> im Modus "kontinuierlich" starten.</Actions>
+      %s im Modus "kontinuierlich" starten.</Actions>
   </Message>
   <Message number="185" eDefine="SYS_ERR_OPR_PREP_TASK_NOMEM">
     <Title>Task konnte nicht für Start vorbereitet werden</Title>
-    <Description>Task <arg format="%s" ordinal="1" />:<p />Nicht genügend Programmspeicher oder Programmspeicher ist fragmentiert. Module können fehlen oder möglicherweise wurden Daten nicht installiert.</Description>
-    <Actions>1. Module entladen/neu laden und Warmstart ausführen.<p />2. Umfangreiche Datenstrukturen aufteilen.<p />3. P-Start des Systems durchführen.<p /></Actions>
+    <Description>Task %s:Nicht genügend Programmspeicher oder Programmspeicher ist fragmentiert. Module können fehlen oder möglicherweise wurden Daten nicht installiert.</Description>
+    <Actions>1. Module entladen/neu laden und Warmstart ausführen.2. Umfangreiche Datenstrukturen aufteilen.3. P-Start des Systems durchführen.</Actions>
   </Message>
   <Message number="190" eDefine="SYS_ERR_OPR_PROT_AREA_HEAL">
     <Title>Geschützter Bereich nicht bereit</Title>
-    <Description>Stromausfall in geschütztem Bereich für Task <arg format="%s" ordinal="2" />. System versucht Behebung des Problems.</Description>
+    <Description>Stromausfall in geschütztem Bereich für Task %s. System versucht Behebung des Problems.</Description>
   </Message>
   <Message number="191" eDefine="SYS_ERR_OPR_PROT_AREA_PEND_ERR">
     <Title>Geschützter Bereich nicht bereit</Title>
-    <Description>Stromausfall in geschütztem Bereich für Task <arg format="%s" ordinal="2" />. Anstehender Fehler wurde aus Warteschlange entfernt.</Description>
+    <Description>Stromausfall in geschütztem Bereich für Task %s. Anstehender Fehler wurde aus Warteschlange entfernt.</Description>
   </Message>
   <Message number="192" eDefine="SYS_ERR_OPR_PROT_AREA_PEND_EXIT">
     <Title>Geschützter Bereich nicht bereit</Title>
-    <Description>Stromausfall in geschütztem Bereich für Task <arg format="%s" ordinal="2" />. Anstehender Exit wurde aus Warteschlange entfernt.</Description>
+    <Description>Stromausfall in geschütztem Bereich für Task %s. Anstehender Exit wurde aus Warteschlange entfernt.</Description>
   </Message>
   <Message number="193" eDefine="SYS_ERR_OPR_PROT_AREA_CYCLE">
     <Title>Geschützter Bereich nicht bereit</Title>
-    <Description>Stromausfall in geschütztem Bereich für Task <arg format="%s" ordinal="2" />. Dies kann zu einem zusätzlichen Programmzyklus führen.</Description>
+    <Description>Stromausfall in geschütztem Bereich für Task %s. Dies kann zu einem zusätzlichen Programmzyklus führen.</Description>
   </Message>
   <Message number="194" eDefine="SYS_ERR_OPR_PROT_AREA_RESTART">
     <Title>Geschützter Bereich nicht bereit</Title>
-    <Description>Stromausfall in geschütztem Bereich für Task <arg format="%s" ordinal="2" />. Die Task wird von der Hauptroutine aus neu gestartet.</Description>
+    <Description>Stromausfall in geschütztem Bereich für Task %s. Die Task wird von der Hauptroutine aus neu gestartet.</Description>
   </Message>
   <Message number="195" eDefine="SYS_ERR_OPR_PROT_AREA_RESET">
     <Title>Geschützter Bereich nicht bereit</Title>
-    <Description>Stromausfall in geschütztem Bereich für Task <arg format="%s" ordinal="2" />. Alle Tasks werden zurückgesetzt und alle Anwenderprogramme gehen verloren.</Description>
+    <Description>Stromausfall in geschütztem Bereich für Task %s. Alle Tasks werden zurückgesetzt und alle Anwenderprogramme gehen verloren.</Description>
     <Actions>Anwenderprogramm speichern und Warmstart des Systems versuchen.</Actions>
   </Message>
   <Message number="196" eDefine="SYS_ERR_OPR_PROT_AREA_UNDEF">
     <Title>Geschützter Bereich nicht bereit</Title>
-    <Description>Stromausfall in geschütztem Bereich für Task <arg format="%s" ordinal="2" />. </Description>
+    <Description>Stromausfall in geschütztem Bereich für Task %s. </Description>
   </Message>
   <Message number="210" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_POW_ON">
     <Title>Abarbeitung abgebrochen</Title>
-    <Description>Neustart löscht die Abarbeitung einer NETZ_EIN-Systemereignisroutine in Task <arg format="%.16s" ordinal="2" />.</Description>
+    <Description>Neustart löscht die Abarbeitung einer NETZ_EIN-Systemereignisroutine in Task %.16s2.</Description>
   </Message>
   <Message number="211" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_STOP">
     <Title>Abarbeitung abgebrochen</Title>
-    <Description>Neustart löscht die Abarbeitung einer STOP-Systemereignisroutine in Task <arg format="%.16s" ordinal="2" />.</Description>
+    <Description>Neustart löscht die Abarbeitung einer STOP-Systemereignisroutine in Task %.16s2.</Description>
   </Message>
   <Message number="212" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_ESTOP">
     <Title>Abarbeitung abgebrochen</Title>
-    <Description>Neustart löscht die Abarbeitung einer NOT-AUS-Systemereignisroutine in Task <arg format="%.16s" ordinal="2" />.</Description>
+    <Description>Neustart löscht die Abarbeitung einer NOT-AUS-Systemereignisroutine in Task %.16s2.</Description>
   </Message>
   <Message number="213" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_START">
     <Title>Abarbeitung abgebrochen</Title>
-    <Description>Neustart löscht die Abarbeitung einer START-Systemereignisroutine in Task <arg format="%.16s" ordinal="2" />.</Description>
+    <Description>Neustart löscht die Abarbeitung einer START-Systemereignisroutine in Task %.16s2.</Description>
   </Message>
   <Message number="214" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_RESTART">
     <Title>Abarbeitung abgebrochen</Title>
-    <Description>Neustart löscht die Abarbeitung einer NEUSTART-Systemereignisroutine in Task <arg format="%.16s" ordinal="2" />.</Description>
+    <Description>Neustart löscht die Abarbeitung einer NEUSTART-Systemereignisroutine in Task %.16s2.</Description>
   </Message>
   <Message number="215" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_RESET">
     <Title>Abarbeitung abgebrochen</Title>
-    <Description>Neustart löscht die Abarbeitung einer RESET-Systemereignisroutine in Task <arg format="%.16s" ordinal="2" />.</Description>
+    <Description>Neustart löscht die Abarbeitung einer RESET-Systemereignisroutine in Task %.16s2.</Description>
   </Message>
   <Message number="216" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_INTERNAL">
     <Title>Abarbeitung abgebrochen</Title>
-    <Description>Neustart löscht die Abarbeitung einer INTERNEN Systemereignisroutine in Task <arg format="%.16s" ordinal="2" />.</Description>
+    <Description>Neustart löscht die Abarbeitung einer INTERNEN Systemereignisroutine in Task %.16s2.</Description>
   </Message>
   <Message number="217" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_USER">
     <Title>Abarbeitung abgebrochen</Title>
-    <Description>Neustart löscht die Abarbeitung einer ANWENDER-Routine in Task <arg format="%.16s" ordinal="2" />.</Description>
+    <Description>Neustart löscht die Abarbeitung einer ANWENDER-Routine in Task %.16s2.</Description>
   </Message>
   <Message number="218" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_UNDEF">
     <Title>Abarbeitung abgebrochen</Title>
-    <Description>Neustart löscht die Abarbeitung in Task <arg format="%.16s" ordinal="2" />. </Description>
+    <Description>Neustart löscht die Abarbeitung in Task %.16s2. </Description>
   </Message>
   <Message number="219" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_STEP">
     <Title>Abarbeitung abgebrochen</Title>
-    <Description>Neustart löscht die Abarbeitung einer STEP-Systemereignisroutine in Task <arg format="%.16s" ordinal="2" />.</Description>
+    <Description>Neustart löscht die Abarbeitung einer STEP-Systemereignisroutine in Task %.16s2.</Description>
   </Message>
   <Message number="230" eDefine="SYS_ERR_OPR_BACKUP_STEP_PREP">
     <Title>Backup-Schritt fertig</Title>
@@ -123,13 +123,13 @@
   </Message>
   <Message number="260" eDefine="SYS_ERR_OPR_PACKAGING_DIAG_INFO_OK">
     <Title>Systemdiagnose-Info generiert</Title>
-    <Description>Systemdiagnose-Information wurde erfolgreich generiert in Datei <arg format="%s" ordinal="1" />. </Description>
+    <Description>Systemdiagnose-Information wurde erfolgreich generiert in Datei %s. </Description>
   </Message>
   <Message number="261" eDefine="SYS_ERR_OPR_PACKAGING_DIAG_INFO_FAILED">
     <Title>Systemdiagnose-Info nicht verfügbar</Title>
-    <Description>Benutzer wollte Systemdiagnose-Info in Datei <arg format="%s" ordinal="1" /> speichern. System konnte diese Anforderung nicht erfüllen.</Description>
+    <Description>Benutzer wollte Systemdiagnose-Info in Datei %s speichern. System konnte diese Anforderung nicht erfüllen.</Description>
     <Consequences>Systemdiagnose-Information dient gewöhnlich der Mitteilung eines Systemproblems an den ABB-Support.</Consequences>
-    <Causes>Das System befindet sich in einem Zustand, in dem die gewünschte Information nicht generiert werden kann.<p />Überprüfen, ob genügend Speicherplatz auf der Speichereinheit vorhanden ist.</Causes>
+    <Causes>Das System befindet sich in einem Zustand, in dem die gewünschte Information nicht generiert werden kann.Überprüfen, ob genügend Speicherplatz auf der Speichereinheit vorhanden ist.</Causes>
     <Actions>Wenden Sie sich bei einem Problem mit dem System an den ABB-Support.</Actions>
   </Message>
   <Message number="270" eDefine="SYS_ERR_OPR_CBC_INFO">
@@ -154,46 +154,46 @@
   </Message>
   <Message number="350" eDefine="SYS_ERR_OPR_REFRESH_FAILD">
     <Title>Aktualisierung von Task fehlgeschlagen</Title>
-    <Description>System konnte Task <arg format="%s" ordinal="1" /> nicht mit neuer Konfiguration aktualisieren.</Description>
+    <Description>System konnte Task %s nicht mit neuer Konfiguration aktualisieren.</Description>
   </Message>
   <Message number="351" eDefine="SYS_ERR_OPR_TASK_REMOVED">
     <Title>Task wurde entfernt</Title>
-    <Description>Task <arg format="%s" ordinal="1" /> wurde wegen Konfigurationsänderungen entfernt.</Description>
+    <Description>Task %s wurde wegen Konfigurationsänderungen entfernt.</Description>
   </Message>
   <Message number="352" eDefine="SYS_ERR_OPR_TASK_ADDED">
     <Title>Task hinzugefügt</Title>
-    <Description>Task <arg format="%s" ordinal="1" /> wurde wegen Konfigurationsänderungen installiert.</Description>
+    <Description>Task %s wurde wegen Konfigurationsänderungen installiert.</Description>
   </Message>
   <Message number="353" eDefine="SYS_ERR_OPR_TASK_REINSTALLED">
     <Title>Task wurde neu installiert</Title>
-    <Description>Task <arg format="%s" ordinal="1" /> wurde wegen Konfigurationsänderungen neu installiert.</Description>
+    <Description>Task %s wurde wegen Konfigurationsänderungen neu installiert.</Description>
   </Message>
   <Message number="354" eDefine="SYS_ERR_OPR_RESTORE_ERR_ABORT_IN_BSTART">
     <Title>Restore wegen verlorener Systemdaten abgebrochen</Title>
-    <Description>Das System verwendet ein Backup der Systemdaten, da diese beim letzten Abschalten nicht korrekt gespeichert wurden. Daher wurde ein zuvor angeforderter Restore vom Verzeichnis <arg format="%s" ordinal="1" /> erneut versucht, aber abgebrochen.<p /></Description>
+    <Description>Das System verwendet ein Backup der Systemdaten, da diese beim letzten Abschalten nicht korrekt gespeichert wurden. Daher wurde ein zuvor angeforderter Restore vom Verzeichnis %s erneut versucht, aber abgebrochen.</Description>
     <Consequences>Es werden keine RAPID-Programme oder -Module geladen.</Consequences>
     <Causes>Die Systemdaten wurden beim letzten Abschalten nicht korrekt gespeichert.</Causes>
-    <Actions>Nach Wiederherstellen des Systemdatenverlusts durch (B)ackup-Neustart oder Neuinstallation des Systems prüfen, ob das Backup-Verzeichnis <arg format="%s" ordinal="2" /> OK ist. Dann erneut Restore ausführen.</Actions>
+    <Actions>Nach Wiederherstellen des Systemdatenverlusts durch (B)ackup-Neustart oder Neuinstallation des Systems prüfen, ob das Backup-Verzeichnis %s OK ist. Dann erneut Restore ausführen.</Actions>
   </Message>
   <Message number="355" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_UNK">
     <Title>Wiederherstellungsfehler</Title>
-    <Description>Fehler beim Wiederherstellen der Task. Ladeversuch in unbekannte Task, <arg format="%s" ordinal="1" />. </Description>
-    <Consequences>Das Laden wurde abgebrochen für <arg format="%s" ordinal="1" />. </Consequences>
+    <Description>Fehler beim Wiederherstellen der Task. Ladeversuch in unbekannte Task, %s. </Description>
+    <Consequences>Das Laden wurde abgebrochen für %s. </Consequences>
     <Causes>Das aktuelle System verfügt nicht über dieselben Optionen wie das System, das für die Erstellung des Backups verwendet wurde.</Causes>
   </Message>
   <Message number="400" eDefine="SYS_ERR_OPR_UAS_LOGON_USER">
-    <Title>Anwender <arg format="%s" ordinal="1" /> angemeldet</Title>
-    <Description>Anwender <arg format="%s" ordinal="1" /> hat sich unter Verwendung von <arg format="%s" ordinal="2" /> angemeldet.</Description>
+    <Title>Anwender %s angemeldet</Title>
+    <Description>Anwender %s hat sich unter Verwendung von %s angemeldet.</Description>
   </Message>
   <Message number="401" eDefine="SYS_ERR_OPR_UAS_LOGOFF_USER">
-    <Title>Anwender <arg format="%s" ordinal="1" /> abgemeldet</Title>
-    <Description>Anwender <arg format="%s" ordinal="1" /> hat sich unter Verwendung von <arg format="%s" ordinal="2" /> abgemeldet.</Description>
+    <Title>Anwender %s abgemeldet</Title>
+    <Description>Anwender %s hat sich unter Verwendung von %s abgemeldet.</Description>
   </Message>
   <Message number="420" eDefine="SYS_ERR_OPR_UNSAFE_ROBOT_MOVEMENTS">
     <Title>Neue unsichere Bewegungsbahn</Title>
-    <Description>Die Bewegungsbahn wurde nach der Änderung einer Position in Task <arg format="%s" ordinal="1" /> gelöscht. Der Roboter bewegt sich zu der Position, die in der vom Programmzeiger markierten Bewegungsinstruktion angegeben wird. Bewegungsinstruktionen zwischen der geänderten Position und dem Programmzeiger werden übersprungen. </Description>
-    <Consequences>Die programmierte Geschwindigkeit wird für diese Bewegung verwendet. <p />Die neue ungetestete Bahn enthält eventuell Hindernisse, die eine Kollision verursachen. </Consequences>
-    <Actions>Programmzeiger prüfen und gegebenenfalls versetzen. <p />Geschwindigkeit verringern. </Actions>
+    <Description>Die Bewegungsbahn wurde nach der Änderung einer Position in Task %s gelöscht. Der Roboter bewegt sich zu der Position, die in der vom Programmzeiger markierten Bewegungsinstruktion angegeben wird. Bewegungsinstruktionen zwischen der geänderten Position und dem Programmzeiger werden übersprungen. </Description>
+    <Consequences>Die programmierte Geschwindigkeit wird für diese Bewegung verwendet. Die neue ungetestete Bahn enthält eventuell Hindernisse, die eine Kollision verursachen. </Consequences>
+    <Actions>Programmzeiger prüfen und gegebenenfalls versetzen. Geschwindigkeit verringern. </Actions>
   </Message>
   <Message number="421" eDefine="SYS_ERR_OPR_PLANNED_PATH_NOT_ABORTED">
     <Title>Geplante Bahn nicht abgebrochen</Title>
@@ -205,168 +205,168 @@
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt 'Vorbereitung'. Unbekannter Fehler.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1021" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_21">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt 'Vorbereitung'. Allgemeiner Fehler.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1022" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_22">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt 'Vorbereitung'. Verzeichnis enthält Objekte, die erstellt werden sollen.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1023" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_23">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt 'Vorbereitung'. Im Verzeichnis fehlt mindestens ein erforderliches Objekt.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1024" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_24">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt 'Vorbereitung'. Das Verzeichnis existiert nicht.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1025" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_25">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt „Vorbereitung“. Verzeichnis kann nicht erstellt werden. </Description>
-    <Causes>Der Pfad könnte zu lang sein.<p />Eventuell besitzen Sie keinen Schreibzugriff auf das Backup-Laufwerk.<p />Eventuell ist das Laufwerk voll.<p />Falls es sich um ein Netzwerk-Laufwerk handelt, ist die Verbindung möglicherweise getrennt. </Causes>
+    <Causes>Der Pfad könnte zu lang sein.Eventuell besitzen Sie keinen Schreibzugriff auf das Backup-Laufwerk.Eventuell ist das Laufwerk voll.Falls es sich um ein Netzwerk-Laufwerk handelt, ist die Verbindung möglicherweise getrennt. </Causes>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1026" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_26">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt 'Vorbereitung'. Fehler beim Schreiben von Backup.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1027" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_27">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt 'Vorbereitung'. Fehler beim Lesen der Konfigurationsparameter.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1028" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_28">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt 'Vorbereitung'. Fehler beim Schreiben der Konfigurationsparameter.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1029" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_29">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt „Vorbereitung“. Der angegebene Backup-Pfad ist zu lang.</Description>
-    <Causes>Der angegebene Backup-Pfad überschreitet die Anzahl maximal erlaubter <arg format="%s" ordinal="4" /> Zeichen.</Causes>
+    <Causes>Der angegebene Backup-Pfad überschreitet die Anzahl maximal erlaubter %s Zeichen.</Causes>
     <Actions>Verwenden Sie einen kürzeren Pfad zum Erstellen des Backups.</Actions>
   </Message>
   <Message number="1030" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_30">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt 'Vorbereitung'. Keine Objekte mehr.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1031" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_31">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt 'Vorbereitung'. Im Verzeichnis fehlt mindestens ein erforderliches Objekt.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1032" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_32">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt 'Vorbereitung'. Systemversion passt nicht zu Backup.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1033" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_33">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt 'Vorbereitung'. Fehler beim Wiederherstellen der Konfigurationsparameter.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1034" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_34">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt 'Vorbereitung'. Fehler beim Wiederherstellen der Konfigurationsparameter.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1035" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_35">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt 'Vorbereitung'. Diskrepanz zwischen aktuellem System und Backup.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1036" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_36">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt "Vorbereitung". Schreibfehler.</Description>
     <Consequences>Das Backup ist unvollständig.</Consequences>
-    <Causes>Enentuell besitzen Sie keinen Schreibzugriff auf das Backup-Laufwerk.<p />Enentuell ist das Laufwerk voll.<p />Falls es sich um ein Netzwerk-Laufwerk handelt, ist die Verbindung möglicherweise getrennt.</Causes>
+    <Causes>Enentuell besitzen Sie keinen Schreibzugriff auf das Backup-Laufwerk.Enentuell ist das Laufwerk voll.Falls es sich um ein Netzwerk-Laufwerk handelt, ist die Verbindung möglicherweise getrennt.</Causes>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1037" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_37">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt 'Vorbereitung'. Mindestens ein Modulname ist zu lang.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1038" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_38">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt 'Vorbereitung'. Unbekannte Task.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1039" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_39">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt 'Vorbereitung'. Speichermedium voll.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1040" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_40">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt 'Vorbereitung'. Objekt nicht löschbar.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="1041" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_41">
     <Title>Backup-Fehler</Title>
-    <Description>Fehler beim Backup-Schritt "Vorbereitung". Fehler beim Überprüfen des Systems.<p />system.xml ist nicht im System installiert.</Description>
+    <Description>Fehler beim Backup-Schritt "Vorbereitung". Fehler beim Überprüfen des Systems.system.xml ist nicht im System installiert.</Description>
     <Consequences>Das Backup wird abgebrochen.</Consequences>
     <Causes>system.xml ist nicht im System installiert.</Causes>
     <Actions>Das System neu installieren.</Actions>
   </Message>
   <Message number="1042" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_42">
     <Title>Backup-Fehler</Title>
-    <Description>Fehler beim Backup-Schritt "Vorbereitung". Fehler beim Überprüfen des Systems.<p />system.xml ist nicht im Verzeichnis SYSTEM vorhanden.</Description>
+    <Description>Fehler beim Backup-Schritt "Vorbereitung". Fehler beim Überprüfen des Systems.system.xml ist nicht im Verzeichnis SYSTEM vorhanden.</Description>
     <Consequences>Das Backup wird abgebrochen.</Consequences>
     <Causes>system.xml ist nicht im Verzeichnis SYSTEM vorhanden.</Causes>
     <Actions>Das System neu installieren.</Actions>
   </Message>
   <Message number="1043" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_43">
     <Title>Backup-Fehler</Title>
-    <Description>Fehler beim Backup-Schritt "Vorbereitung". Fehler beim Überprüfen des Systems.<p />linked_m.sys ist nicht im Verzeichnis HOME vorhanden.</Description>
+    <Description>Fehler beim Backup-Schritt "Vorbereitung". Fehler beim Überprüfen des Systems.linked_m.sys ist nicht im Verzeichnis HOME vorhanden.</Description>
     <Consequences>Das Backup wird abgebrochen.</Consequences>
     <Causes>linked_m.sys ist nicht im Verzeichnis HOME vorhanden.</Causes>
     <Actions>Das System neu installieren.</Actions>
@@ -433,7 +433,7 @@
   <Message number="1129" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_29">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt „Vorbereitung“. Der angegebene Backup-Pfad ist zu lang.</Description>
-    <Causes>Der angegebene Backup-Pfad überschreitet die Anzahl maximal erlaubter <arg format="%s" ordinal="3" /> Zeichen.</Causes>
+    <Causes>Der angegebene Backup-Pfad überschreitet die Anzahl maximal erlaubter %s Zeichen.</Causes>
     <Actions>Verwenden Sie einen kürzeren Pfad zum Erstellen des Backups.</Actions>
   </Message>
   <Message number="1130" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_30">
@@ -539,7 +539,7 @@
   <Message number="1229" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_29">
     <Title>Backup-Fehler</Title>
     <Description>Fehler beim Backup-Schritt „Vorbereitung“. Der angegebene Backup-Pfad ist zu lang.</Description>
-    <Causes>Der angegebene Backup-Pfad überschreitet die Anzahl maximal erlaubter <arg format="%s" ordinal="3" /> Zeichen.</Causes>
+    <Causes>Der angegebene Backup-Pfad überschreitet die Anzahl maximal erlaubter %s Zeichen.</Causes>
     <Actions>Verwenden Sie einen kürzeren Pfad zum Erstellen des Backups.</Actions>
   </Message>
   <Message number="1230" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_30">

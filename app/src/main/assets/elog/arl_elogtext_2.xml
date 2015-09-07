@@ -2,185 +2,185 @@
 <Domain xmlns="urn:abb-robotics-elog-text" elogDomain="ARL" domainNo="4" lang="de" elogTextVersion="1.0" min="97" max="224">
   <Message number="97" eDefine="SYS_ERR_ARL_RTNTNX">
     <Title>Instruktionsfehler</Title>
-    <Description>TRYNEXT nur in Fehlerbehandlung erlaubt.<p /></Description>
+    <Description>TRYNEXT nur in Fehlerbehandlung erlaubt.</Description>
     <Actions>Die Instruktion TRYNEXT darf nur in Fehlerbehandlungen benutzt werden. Instruktion entfernen. </Actions>
   </Message>
   <Message number="98" eDefine="SYS_ERR_ARL_SWTIN">
     <Title>Parameterfehler</Title>
-    <Description>'switch'-Parameter muss Übergabemodus IN haben.<p /></Description>
+    <Description>'switch'-Parameter muss Übergabemodus IN haben.</Description>
     <Actions>Kennzeichnung des Parameter-Übergabemodus entfernen. Wenn Übergabemodus IN nicht ausreicht, den Datentyp des Parameters ändern. </Actions>
   </Message>
   <Message number="99" eDefine="SYS_ERR_ARL_SWTNOTDIM">
     <Title>Parameterfehler</Title>
-    <Description>'switch'-Parameter nicht dimensionierbar.<p /></Description>
+    <Description>'switch'-Parameter nicht dimensionierbar.</Description>
     <Actions>Angabe der Datenfelddimension entfernen oder Datentyp des Parameters ändern. </Actions>
   </Message>
   <Message number="100" eDefine="SYS_ERR_ARL_SWTOPP">
     <Title>Parameterfehler</Title>
-    <Description>'switch' nur zulässig für optionalen Parameter.<p /></Description>
+    <Description>'switch' nur zulässig für optionalen Parameter.</Description>
     <Actions>Parameter in einen optionalen Parameter ändern oder Datentyp des Parameters ändern. Wenn das Objekt kein Parameter ist, den Datentyp ändern. </Actions>
   </Message>
   <Message number="101" eDefine="SYS_ERR_ARL_TYPMM">
     <Title>Typenfehler</Title>
-    <Description>Typenkonflikt bei erwartetem Typ <arg format="%.18s" ordinal="1" /> und gefundenem Typ <arg format="%.18s" ordinal="2" />.<p /></Description>
+    <Description>Typenkonflikt bei erwartetem Typ %.18s1 und gefundenem Typ %.18s2.</Description>
     <Actions>Ausdruck hat nicht den erwarteten Datentyp. </Actions>
   </Message>
   <Message number="102" eDefine="SYS_ERR_ARL_TYPMMAGG">
     <Title>Typenfehler</Title>
-    <Description>Typenkonflikt bei Aggregat, erwarteter Typ <arg format="%.18s" ordinal="1" />.<p /><p /></Description>
+    <Description>Typenkonflikt bei Aggregat, erwarteter Typ %.18s1.</Description>
     <Actions>Aggregat entspricht nicht dem erwarteten Datentyp. </Actions>
   </Message>
   <Message number="103" eDefine="SYS_ERR_ARL_TYPMMSDB">
     <Title>Typenfehler</Title>
-    <Description>Persistente <arg format="%.18s" ordinal="1" />, <arg format="%.16s" ordinal="2" /> Typenkonflikt.<p /></Description>
+    <Description>Persistente %.18s1, %.16s2 Typenkonflikt.</Description>
     <Actions>Es existieren bereits Persistentendaten mit demselben Namen, aber mit anderem Datentyp. Die Persistente umbenennen oder ihren Datentyp ändern. </Actions>
   </Message>
   <Message number="104" eDefine="SYS_ERR_ARL_UNDARRDIM">
     <Title>Datendeklarationsfehler</Title>
-    <Description>Datenfelddimensionen können nicht bestimmt werden (zirkulärer Konstantenbezug?) <p /></Description>
+    <Description>Datenfelddimensionen können nicht bestimmt werden (zirkulärer Konstantenbezug?) </Description>
     <Actions>Prüfen, ob alle Konstanten, auf die verwiesen wird, korrekt definiert sind. Wenn ja, ist das Programm zu komplex. Deklarationen ändern. </Actions>
   </Message>
   <Message number="105" eDefine="SYS_ERR_ARL_UNDCONTYP">
     <Title>Datendeklarationsfehler</Title>
-    <Description>Typ des Konstantenwerts kann nicht bestimmt werden (zirkulärer<p />Konstantenbezug?) <p /></Description>
+    <Description>Typ des Konstantenwerts kann nicht bestimmt werden (zirkulärerKonstantenbezug?) </Description>
     <Actions>Prüfen, ob alle Konstanten, auf die verwiesen wird, korrekt definiert sind. Wenn ja, ist das Programm zu komplex. Deklarationen ändern. </Actions>
   </Message>
   <Message number="106" eDefine="SYS_ERR_ARL_UNDCONVAL">
     <Title>Datendeklarationsfehler</Title>
-    <Description>Konstantenwert-Ausdruck kann nicht berechnet werden (zirkulärer<p />Konstantenbezug?) <p /></Description>
+    <Description>Konstantenwert-Ausdruck kann nicht berechnet werden (zirkulärerKonstantenbezug?) </Description>
     <Actions>Prüfen, ob alle Konstanten, auf die verwiesen wird, korrekt definiert sind. Wenn ja, ist das Programm zu komplex. Deklarationen ändern. </Actions>
   </Message>
   <Message number="107" eDefine="SYS_ERR_ARL_UNDVARTYP">
     <Title>Datendeklarationsfehler</Title>
-    <Description>Typ des Variablenwerts kann nicht bestimmt werden (zirkulärer<p />Konstantenbezug?) <p /></Description>
+    <Description>Typ des Variablenwerts kann nicht bestimmt werden (zirkulärerKonstantenbezug?) </Description>
     <Actions>Prüfen, ob alle Konstanten, auf die verwiesen wird, korrekt definiert sind. Wenn ja, ist das Programm zu komplex. Deklarationen ändern. </Actions>
   </Message>
   <Message number="108" eDefine="SYS_ERR_ARL_UNKAGGTYP">
     <Title>Typenfehler</Title>
-    <Description>Unbekannter Aggregattyp<p /></Description>
+    <Description>Unbekannter Aggregattyp</Description>
     <Actions>Aggregat an dieser Position nicht verwendbar, da der erwartete Datentyp fehlt. Daten mit gewünschtem Datentyp und Aggregatwert deklarieren. Name der Daten anstelle des Aggregats verwenden. </Actions>
   </Message>
   <Message number="109" eDefine="SYS_ERR_ARL_UNDRCPTYP">
     <Title>Typendefinitionsfehler</Title>
-    <Description>Typ der Datensatzkomponente <arg format="%.16s" ordinal="1" /> kann nicht bestimmt werden<p />(zirkuläre Typendefinitionen?) <p /></Description>
-    <Actions>Prüfen, ob der Typ der Komponente korrekt definiert ist. Wenn ja, könnte eine<p />Zirkulärdefinition vorliegen. Typ einer Komponente kann nicht auf seinen eigenen Datensatztyp verweisen. </Actions>
+    <Description>Typ der Datensatzkomponente %.16s1 kann nicht bestimmt werden(zirkuläre Typendefinitionen?) </Description>
+    <Actions>Prüfen, ob der Typ der Komponente korrekt definiert ist. Wenn ja, könnte eineZirkulärdefinition vorliegen. Typ einer Komponente kann nicht auf seinen eigenen Datensatztyp verweisen. </Actions>
   </Message>
   <Message number="110" eDefine="SYS_ERR_ARL_NAMAMBREC">
     <Title>Referenzfehler</Title>
-    <Description>Datensatzname <arg format="%.16s" ordinal="1" /> mehrdeutig.<p /></Description>
+    <Description>Datensatzname %.16s1 mehrdeutig.</Description>
     <Actions>Mindestens ein anderes Objekt mit demselben Namen wie der angegebene Datensatzname ist von dieser Programmposition aus sichtbar. Alle Objektnamen müssen die Benennungsregeln der Eindeutigkeit erfüllen. </Actions>
   </Message>
   <Message number="111" eDefine="SYS_ERR_ARL_NAMAMBGREC">
     <Title>Ungültiger Name</Title>
-    <Description>Name des globalen Datensatzes <arg format="%.16s" ordinal="1" /> mehrdeutig.<p /></Description>
+    <Description>Name des globalen Datensatzes %.16s1 mehrdeutig.</Description>
     <Actions>Die Namen von globalen Typen müssen unter allen globalen Typen, Daten, globalen Routinen und Modulen im ganzen Programm eindeutig sein. Datensatz umbenennen oder den Namen ändern, der den Konflikt verursacht. </Actions>
   </Message>
   <Message number="112" eDefine="SYS_ERR_ARL_NAMAMBALI">
     <Title>Referenzfehler</Title>
-    <Description>Aliasname <arg format="%.16s" ordinal="1" /> mehrdeutig.<p /></Description>
-    <Actions>Mindestens ein anderes Objekt mit demselben Namen wie der angegebene Aliasname ist von dieser Programmposition aus sichtbar.<p />Alle Objektnamen müssen die Benennungsregeln der Eindeutigkeit erfüllen. </Actions>
+    <Description>Aliasname %.16s1 mehrdeutig.</Description>
+    <Actions>Mindestens ein anderes Objekt mit demselben Namen wie der angegebene Aliasname ist von dieser Programmposition aus sichtbar.Alle Objektnamen müssen die Benennungsregeln der Eindeutigkeit erfüllen. </Actions>
   </Message>
   <Message number="113" eDefine="SYS_ERR_ARL_NAMAMBGALI">
     <Title>Ungültiger Name</Title>
-    <Description>Globaler Aliasname <arg format="%.16s" ordinal="1" /> mehrdeutig.<p /></Description>
-    <Actions>Die Namen von globalen Typen müssen unter allen globalen Typen, Daten, globalen Routinen und Modulen im ganzen Programm eindeutig sein.<p />Alias umbenennen oder den Namen ändern, der den Konflikt verursacht. </Actions>
+    <Description>Globaler Aliasname %.16s1 mehrdeutig.</Description>
+    <Actions>Die Namen von globalen Typen müssen unter allen globalen Typen, Daten, globalen Routinen und Modulen im ganzen Programm eindeutig sein.Alias umbenennen oder den Namen ändern, der den Konflikt verursacht. </Actions>
   </Message>
   <Message number="114" eDefine="SYS_ERR_ARL_ALITOALI">
     <Title>Typendefinitionsfehler</Title>
-    <Description>Typenverweis von Aliasname <arg format="%.16s" ordinal="1" /> ist ein Aliastyp.<p /></Description>
-    <Actions>Prüfen, ob der Typ der Komponente korrekt definiert ist. Wenn ja, könnte eine<p />Zirkulärdefinition vorliegen. Typ einer Komponente kann nicht auf eigenen<p />Datensatztyp verweisen. </Actions>
+    <Description>Typenverweis von Aliasname %.16s1 ist ein Aliastyp.</Description>
+    <Actions>Prüfen, ob der Typ der Komponente korrekt definiert ist. Wenn ja, könnte eineZirkulärdefinition vorliegen. Typ einer Komponente kann nicht auf eigenenDatensatztyp verweisen. </Actions>
   </Message>
   <Message number="115" eDefine="SYS_ERR_ARL_UNDALITYP">
     <Title>Typendefinitionsfehler</Title>
-    <Description>Aliastyp <arg format="%.16s" ordinal="1" /> kann nicht bestimmt werden (zirkuläre Typendefinitionen?) <p /></Description>
-    <Actions>Prüfen, ob der Typ des Alias korrekt definiert ist. Wenn ja, könnte eine<p />Zirkulärdefinition vorliegen.<p />Typ eines Alias kann nicht auf einen Datensatztyp verweisen, der diesen Alias als Komponente benutzt. </Actions>
+    <Description>Aliastyp %.16s1 kann nicht bestimmt werden (zirkuläre Typendefinitionen?) </Description>
+    <Actions>Prüfen, ob der Typ des Alias korrekt definiert ist. Wenn ja, könnte eineZirkulärdefinition vorliegen.Typ eines Alias kann nicht auf einen Datensatztyp verweisen, der diesen Alias als Komponente benutzt. </Actions>
   </Message>
   <Message number="116" eDefine="SYS_ERR_ARL_NAMAMBRCP">
     <Title>Verweisfehler</Title>
-    <Description>Name der Datensatzkomponente <arg format="%.16s" ordinal="2" /> mehrdeutig.<p /></Description>
-    <Actions>Mindestens ein anderes Objekt mit demselben Namen wie die angegebene Komponente ist von dieser Programmposition aus sichtbar.<p />Alle Objektnamen müssen die Benennungsregeln der Eindeutigkeit erfüllen.</Actions>
+    <Description>Name der Datensatzkomponente %.16s2 mehrdeutig.</Description>
+    <Actions>Mindestens ein anderes Objekt mit demselben Namen wie die angegebene Komponente ist von dieser Programmposition aus sichtbar.Alle Objektnamen müssen die Benennungsregeln der Eindeutigkeit erfüllen.</Actions>
   </Message>
   <Message number="117" eDefine="SYS_ERR_ARL_PHRRECRCP">
     <Title>Typendefinitionsfehler</Title>
-    <Description>Platzhalter für Datensatzkomponente nicht erlaubt in Definition von benanntem Datensatz.<p /></Description>
+    <Description>Platzhalter für Datensatzkomponente nicht erlaubt in Definition von benanntem Datensatz.</Description>
     <Actions>Definition vervollständigen oder Datenname durch Platzhalter austauschen. </Actions>
   </Message>
   <Message number="119" eDefine="SYS_ERR_ARL_SEMIRCP">
     <Title>Referenzfehler</Title>
-    <Description>'semi-value'-Typ <arg format="%.16s" ordinal="1" /> kann nicht für Datensatzkomponenten benutzt werden.<p /></Description>
+    <Description>'semi-value'-Typ %.16s1 kann nicht für Datensatzkomponenten benutzt werden.</Description>
   </Message>
   <Message number="120" eDefine="SYS_ERR_ARL_ILLREFTASK">
     <Title>Referenzfehler</Title>
-    <Description>Unzulässiger Verweis auf installiertes Taskobjekt <arg format="%.16s" ordinal="1" /> vom gemeinsam benutzten Objekt aus.<p /></Description>
-    <Actions>Das entsprechende gemeinsam benutzte Objekt, das entsprechende ReaL-Objekt-<p />Archiv oder RAPID-Modul in jeder Task (nicht gemeinsam benutzt) installieren. </Actions>
+    <Description>Unzulässiger Verweis auf installiertes Taskobjekt %.16s1 vom gemeinsam benutzten Objekt aus.</Description>
+    <Actions>Das entsprechende gemeinsam benutzte Objekt, das entsprechende ReaL-Objekt-Archiv oder RAPID-Modul in jeder Task (nicht gemeinsam benutzt) installieren. </Actions>
   </Message>
   <Message number="121" eDefine="SYS_ERR_ARL_SEMIARR">
     <Title>Referenzfehler</Title>
-    <Description>'semi-value'-Typ für Datenfelder unzulässig.<p /></Description>
+    <Description>'semi-value'-Typ für Datenfelder unzulässig.</Description>
   </Message>
   <Message number="122" eDefine="SYS_ERR_ARL_REFNOTPRC_LNK">
     <Title>Referenzfehler</Title>
     <Description>
-      <arg format="%.16s" ordinal="1" /> ist kein Verweis auf eine Prozedur.<p /></Description>
-    <Actions>Der angegebene Name bezeichnet ein von einer Prozedur abweichendes Objekt.<p />Prüfen, ob die gewünschte Prozedur durch ein anderes Objekt mit demselben Namen verdeckt ist.</Actions>
+      %.16s1 ist kein Verweis auf eine Prozedur.</Description>
+    <Actions>Der angegebene Name bezeichnet ein von einer Prozedur abweichendes Objekt.Prüfen, ob die gewünschte Prozedur durch ein anderes Objekt mit demselben Namen verdeckt ist.</Actions>
   </Message>
   <Message number="123" eDefine="SYS_ERR_ARL_ARGNOTPER_LNK">
     <Title>Argumentfehler</Title>
-    <Description>Argument für 'PERS'-Parameter <arg format="%.16s" ordinal="1" /> ist kein Verweis auf eine Persistente<p />oder ist schreibgeschützt.<p /></Description>
+    <Description>Argument für 'PERS'-Parameter %.16s1 ist kein Verweis auf eine Persistenteoder ist schreibgeschützt.</Description>
     <Actions>Sicherstellen, dass das Argument nur Persistente oder persistenter Parameter und nicht schreibgeschützt ist. Keine () um das Argument verwenden.</Actions>
   </Message>
   <Message number="124" eDefine="SYS_ERR_ARL_ARGNOTVAR_LNK">
     <Title>Argumentfehler</Title>
-    <Description>Argument für 'VAR'-Parameter <arg format="%.16s" ordinal="1" /> ist kein Verweis auf eine Variable<p />oder ist schreibgeschützt.<p /></Description>
+    <Description>Argument für 'VAR'-Parameter %.16s1 ist kein Verweis auf eine Variableoder ist schreibgeschützt.</Description>
     <Actions>Sicherstellen, dass das Argument nur Variable oder variabler Parameter und nicht schreibgeschützt ist. Keine () um das Argument verwenden.</Actions>
   </Message>
   <Message number="125" eDefine="SYS_ERR_ARL_CNTNOTVAR_LNK">
     <Title>Instruktionsfehler</Title>
-    <Description>Interruptnummer ist keine statische Variable, wird von mehreren Tasks benutzt oder ist schreibgeschützt.<p /></Description>
+    <Description>Interruptnummer ist keine statische Variable, wird von mehreren Tasks benutzt oder ist schreibgeschützt.</Description>
     <Actions>Interruptnummer darf nur eine Variable oder ein variabler Parameter sein. Die Variable muss statisch sein und darf nicht von mehreren Tasks benutzt werden. Sie darf nicht schreibgeschützt sein.</Actions>
   </Message>
   <Message number="126" eDefine="SYS_ERR_ARL_MAXINTVAL_LNK">
     <Title>Wertfehler</Title>
-    <Description>Integer-Wert <arg format="%G" ordinal="1" /> ist zu groß.<p /></Description>
+    <Description>Integer-Wert %G1 ist zu groß.</Description>
     <Actions>Der Wert des Ausdrucks muss eine Ganzzahl sein. Der aktuelle Wert liegt außerhalb des Integer-Bereichs.</Actions>
   </Message>
   <Message number="127" eDefine="SYS_ERR_ARL_NOTINTVAL_LNK">
     <Title>Wertfehler</Title>
     <Description>
-      <arg format="%G" ordinal="1" /> ist kein Integer-Wert.<p /></Description>
+      %G1 ist kein Integer-Wert.</Description>
     <Actions>Der Wert des Ausdrucks muss eine Ganzzahl sein. Der aktuelle Wert weist einen Bruchteil auf.</Actions>
   </Message>
   <Message number="128" eDefine="SYS_ERR_ARL_REFUNKDAT_LNK">
     <Title>Referenzfehler</Title>
-    <Description>Verweis auf unbekanntes ganzes Datenobjekt <arg format="%.16s" ordinal="1" />.<p /></Description>
-    <Actions>Keine Daten (oder ein anderes Objekt) mit dem angegebenen Namen sind<p />von dieser Programmposition aus sichtbar.</Actions>
+    <Description>Verweis auf unbekanntes ganzes Datenobjekt %.16s1.</Description>
+    <Actions>Keine Daten (oder ein anderes Objekt) mit dem angegebenen Namen sindvon dieser Programmposition aus sichtbar.</Actions>
   </Message>
   <Message number="129" eDefine="SYS_ERR_ARL_REFUNKFUN_LNK">
     <Title>Referenzfehler</Title>
-    <Description>Verweis auf unbekannte Funktion <arg format="%.16s" ordinal="1" />.<p /></Description>
+    <Description>Verweis auf unbekannte Funktion %.16s1.</Description>
     <Actions>Keine Funktion (oder ein anderes Objekt) mit dem angegebenen Namen ist von dieser Programmposition aus sichtbar.</Actions>
   </Message>
   <Message number="130" eDefine="SYS_ERR_ARL_REFUNKPRC_LNK">
     <Title>Referenzfehler</Title>
-    <Description>Verweis auf unbekannte Prozedur <arg format="%.16s" ordinal="1" />.<p /></Description>
+    <Description>Verweis auf unbekannte Prozedur %.16s1.</Description>
     <Actions>Keine Prozedur (oder ein anderes Objekt) mit dem angegebenen Namen ist von dieser Programmposition aus sichtbar.</Actions>
   </Message>
   <Message number="131" eDefine="SYS_ERR_ARL_REFUNKTRP_LNK">
     <Title>Referenzfehler</Title>
-    <Description>Verweis auf unbekannten Interrupt <arg format="%.16s" ordinal="1" />.<p /></Description>
+    <Description>Verweis auf unbekannten Interrupt %.16s1.</Description>
     <Actions>Kein Interrupt (oder ein anderes Objekt) mit dem angegebenen Namen ist von dieser Programmposition aus sichtbar.</Actions>
   </Message>
   <Message number="135" eDefine="SYS_ERR_ARL_EXPECTED">
     <Title>Syntaxfehler</Title>
-    <Description>Erwartet: <arg format="%.16s" ordinal="1" /><p /></Description>
+    <Description>Erwartet: %.16s1</Description>
   </Message>
   <Message number="136" eDefine="SYS_ERR_ARL_UNEXPECTED">
     <Title>Syntaxfehler</Title>
-    <Description>Unerwartet: <arg format="%.16s" ordinal="1" /><p /></Description>
+    <Description>Unerwartet: %.16s1</Description>
   </Message>
   <Message number="137" eDefine="SYS_ERR_ARL_EXPECTED_OTHER">
     <Title>Syntaxfehler</Title>
-    <Description>Erwartet: <arg format="%.16s" ordinal="1" />, aber gefunden: <arg format="%.16s" ordinal="2" /><p /></Description>
+    <Description>Erwartet: %.16s1, aber gefunden: %.16s2</Description>
   </Message>
   <Message number="138" eDefine="SYS_ERR_ARL_STACK_BACKEDUP">
     <Title>Syntaxfehler </Title>
@@ -191,27 +191,27 @@
     <Description>Syntaxfehler, Analyse beendet.</Description>
   </Message>
   <Message number="140" eDefine="SYS_ERR_ARL_NUM_LIT_OUT_RANGE">
-    <Title>Numerischer Wert für Symbol <arg format="%s" ordinal="1" /> außerhalb Bereich</Title>
-    <Description>Numerischer Wert für Symbol <arg format="%s" ordinal="1" /> außerhalb des zulässigen Bereichs.</Description>
+    <Title>Numerischer Wert für Symbol %s außerhalb Bereich</Title>
+    <Description>Numerischer Wert für Symbol %s außerhalb des zulässigen Bereichs.</Description>
     <Actions>Wert verkleinern.</Actions>
   </Message>
   <Message number="141" eDefine="SYS_ERR_ARL_STR_TOO_LONG">
     <Title>Zeichenfolge zu lang</Title>
-    <Description>Die Zeichenfolge <arg format="%s" ordinal="1" /> ist zu lang.</Description>
+    <Description>Die Zeichenfolge %s ist zu lang.</Description>
     <Actions>Zeichenfolge kürzen.</Actions>
   </Message>
   <Message number="142" eDefine="SYS_ERR_ARL_TXID_OUT_RANGE">
     <Title>Textbezeichner außerhalb des zulässigen Bereichs</Title>
-    <Description>Textbezeichner <arg format="%s" ordinal="1" /> ist außerhalb des zulässigen Bereichs.</Description>
+    <Description>Textbezeichner %s ist außerhalb des zulässigen Bereichs.</Description>
   </Message>
   <Message number="143" eDefine="SYS_ERR_ARL_AGG_OUT_RANGE">
     <Title>Aggregat außerhalb des zulässigen Bereichs</Title>
-    <Description>Das Aggregat <arg format="%s" ordinal="1" /> ist außerhalb des zulässigen Bereichs.</Description>
+    <Description>Das Aggregat %s ist außerhalb des zulässigen Bereichs.</Description>
     <Actions>Aggregat verkleinern.</Actions>
   </Message>
   <Message number="144" eDefine="SYS_ERR_ARL_INT_OUT_RANGE">
     <Title>Ganzzahl außerhalb des zulässigen Bereichs</Title>
-    <Description>Die Ganzzahl <arg format="%s" ordinal="1" /> ist außerhalb des zulässigen Bereichs.</Description>
+    <Description>Die Ganzzahl %s ist außerhalb des zulässigen Bereichs.</Description>
     <Actions>Ganzzahl verkleinern.</Actions>
   </Message>
   <Message number="145" eDefine="SYS_ERR_ARL_PARSE_STACK_FULL">
@@ -226,17 +226,17 @@
   </Message>
   <Message number="147" eDefine="SYS_ERR_ARL_RESERVED_WORD">
     <Title>Bezeichner ist in aktueller Sprache ein reserviertes Wort. </Title>
-    <Description>Bezeichner <arg format="%s" ordinal="1" /> ist in der aktuellen Sprache ein reserviertes Wort. </Description>
+    <Description>Bezeichner %s ist in der aktuellen Sprache ein reserviertes Wort. </Description>
     <Actions>Name des Bezeichners ändern.</Actions>
   </Message>
   <Message number="148" eDefine="SYS_ERR_ARL_ID_TOO_LONG">
     <Title>Bezeichner zu lang</Title>
-    <Description>Name des Bezeichners <arg format="%s" ordinal="1" /> ist zu lang.</Description>
+    <Description>Name des Bezeichners %s ist zu lang.</Description>
     <Actions>Bezeichner kürzeren Namen zuweisen.</Actions>
   </Message>
   <Message number="149" eDefine="SYS_ERR_ARL_PLACEHOLD_TOO_LONG">
     <Title>Platzhalter zu lang</Title>
-    <Description>Der Platzhalter <arg format="%s" ordinal="1" /> ist zu lang.</Description>
+    <Description>Der Platzhalter %s ist zu lang.</Description>
     <Actions>Platzhalter kürzeren Namen zuweisen.</Actions>
   </Message>
   <Message number="150" eDefine="SYS_ERR_ARL_UNEXP_UNKN">
@@ -252,209 +252,209 @@
   <Message number="155" eDefine="SYS_ERR_ARL_ARGNOTPER">
     <Title>Argumentfehler
 </Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Argument für<p />"PERS"-Parameter <arg format="%.16s" ordinal="2" /> ist keine<p />Persistente oder ist schreibgeschützt.<p /></Description>
+    <Description>Task %.16s1: Argument für"PERS"-Parameter %.16s2 ist keinePersistente oder ist schreibgeschützt.</Description>
     <Actions>Sicherstellen, dass das Argument nur eine Persistente oder ein persistenter Parameter und nicht schreibgeschützt ist. Keine () um das Argument verwenden.
 </Actions>
   </Message>
   <Message number="156" eDefine="SYS_ERR_ARL_ARGNOTVAR">
     <Title>Argumentfehler </Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Argument für VAR-Parameter <arg format="%.16s" ordinal="2" /> ist kein Verweis auf eine Variable oder ist schreibgeschützt. </Description>
-    <Actions>Sicherstellen, dass das Argument nur Variable oder variabler Parameter und nicht schreibgeschützt ist.<p />Keine () um das Argument verwenden. </Actions>
+    <Description>Task %.16s1: Argument für VAR-Parameter %.16s2 ist kein Verweis auf eine Variable oder ist schreibgeschützt. </Description>
+    <Actions>Sicherstellen, dass das Argument nur Variable oder variabler Parameter und nicht schreibgeschützt ist.Keine () um das Argument verwenden. </Actions>
   </Message>
   <Message number="157" eDefine="SYS_ERR_ARL_CNTNOTVAR">
     <Title>Instruktionsfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Interruptnummer ist keine statische Variable, wird von mehreren Tasks benutzt oder ist schreibgeschützt. <p /></Description>
+    <Description>Task %.16s1: Interruptnummer ist keine statische Variable, wird von mehreren Tasks benutzt oder ist schreibgeschützt. </Description>
     <Actions>Interruptnummer darf nur eine Variable oder ein variabler Parameter sein. Die Variable muss statisch sein und darf nicht von mehreren Tasks benutzt werden. Sie darf nicht schreibgeschützt sein. </Actions>
   </Message>
   <Message number="158" eDefine="SYS_ERR_ARL_MAXINTVAL">
     <Title>Wertfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Ganzzahl  <arg format="%G" ordinal="2" /> ist zu groß.<p /></Description>
+    <Description>Task %.16s1: Ganzzahl  %G2 ist zu groß.</Description>
     <Actions>Der Wert des Ausdrucks muss eine Ganzzahl sein. Der aktuelle Wert liegt außerhalb des Integer-Bereichs. </Actions>
   </Message>
   <Message number="159" eDefine="SYS_ERR_ARL_NOTINTVAL">
     <Title>Wertfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: <arg format="%G" ordinal="2" /> keine Ganzzahl.<p /></Description>
+    <Description>Task %.16s1: %G2 keine Ganzzahl.</Description>
     <Actions>Der Wert des Ausdrucks muss eine Ganzzahl sein. Der aktuelle Wert weist einen Bruchteil auf. </Actions>
   </Message>
   <Message number="160" eDefine="SYS_ERR_RAPID_CODE_ERROR">
     <Title>Fehler im RAPID-Programm</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: RAPID-Programm enthält Fehler. </Description>
+    <Description>Task %.16s1: RAPID-Programm enthält Fehler. </Description>
     <Actions>Mit "Programm kontrollieren" im Programmeneditor auf RAPID-Fehler prüfen und das Programm korrigieren.</Actions>
   </Message>
   <Message number="161" eDefine="SYS_ERR_ARL_OPTION_MISSING">
     <Title>Option fehlt</Title>
-    <Description>Die Instruktion <arg format="%.16s" ordinal="1" /> verlangt die Option <arg format="%.16s" ordinal="2" />. </Description>
+    <Description>Die Instruktion %.16s1 verlangt die Option %.16s2. </Description>
     <Consequences>Das Programm wird nicht korrekt ausgeführt.</Consequences>
     <Causes>System-Image enthält nicht die erforderliche Option.</Causes>
     <Actions>System-Image mit der erforderlichen Option aktualisieren.</Actions>
   </Message>
   <Message number="162" eDefine="SYS_ERR_ARL_RAPID_CODE_ERROR_BACK">
     <Title>Fehler im RAPID-Programm</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: RAPID-Programm enthält Fehler.</Description>
-    <Actions>Ergreifen Sie folgende Maßnahmen um einen Programmtest zu ermöglichen:<p />1. Tasktyp in NORMAL ändern. <p />2. Steuerung neu starten. <p />3. RAPID-Fehler suchen und Programm korrigieren.</Actions>
+    <Description>Task %.16s1: RAPID-Programm enthält Fehler.</Description>
+    <Actions>Ergreifen Sie folgende Maßnahmen um einen Programmtest zu ermöglichen:1. Tasktyp in NORMAL ändern. 2. Steuerung neu starten. 3. RAPID-Fehler suchen und Programm korrigieren.</Actions>
   </Message>
   <Message number="165" eDefine="SYS_ERR_ARL_REFUNKDAT">
     <Title>Referenzfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Verweis auf unbekanntes ganzes Datenobjekt <arg format="%.16s" ordinal="2" />.<p /></Description>
+    <Description>Task %.16s1: Verweis auf unbekanntes ganzes Datenobjekt %.16s2.</Description>
     <Actions>Keine Daten (oder ein anderes Objekt) mit dem angegebenen Namen ist von dieser Programmposition aus sichtbar. </Actions>
   </Message>
   <Message number="166" eDefine="SYS_ERR_ARL_REFUNKFUN">
     <Title>Referenzfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Verweis auf unbekannte Funktion <arg format="%.16s" ordinal="2" />.<p /></Description>
+    <Description>Task %.16s1: Verweis auf unbekannte Funktion %.16s2.</Description>
     <Actions>Keine Funktion (oder ein anderes Objekt) mit dem angegebenen Namen ist von dieser Programmposition aus sichtbar. </Actions>
   </Message>
   <Message number="168" eDefine="SYS_ERR_ARL_REFUNKPRC">
     <Title>Referenzfehler </Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Verweis auf unbekannte Prozedur <arg format="%.16s" ordinal="2" />.<p /></Description>
-    <Actions>Keine Prozedur (oder ein anderes Objekt) mit dem angegebenen Namen ist von dieser Programmposition aus sichtbar.<p />Zur Vermeidung solcher Laufzeitfehler, entsprechenden Code in Fehlerbehandlung hinzufügen.<p />ERRNO wird auf "ERR_REFUNKPRC" gesetzt. </Actions>
+    <Description>Task %.16s1: Verweis auf unbekannte Prozedur %.16s2.</Description>
+    <Actions>Keine Prozedur (oder ein anderes Objekt) mit dem angegebenen Namen ist von dieser Programmposition aus sichtbar.Zur Vermeidung solcher Laufzeitfehler, entsprechenden Code in Fehlerbehandlung hinzufügen.ERRNO wird auf "ERR_REFUNKPRC" gesetzt. </Actions>
   </Message>
   <Message number="170" eDefine="SYS_ERR_ARL_REFUNKTRP">
     <Title>Referenzfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Verweis auf unbekannten Interrupt <arg format="%.16s" ordinal="2" />.<p /></Description>
+    <Description>Task %.16s1: Verweis auf unbekannten Interrupt %.16s2.</Description>
     <Actions>Kein Interrupt (oder ein anderes Objekt) mit dem angegebenen Namen ist von dieser Programmposition aus sichtbar. </Actions>
   </Message>
   <Message number="171" eDefine="SYS_ERR_ARL_REFUNKSYM">
     <Title>Referenzfehler</Title>
-    <Description>Task <arg format="%s" ordinal="1" />: <p />Verweis auf unbekannte Daten (oder ein anderes Objekt) gefunden bei Abarbeitung des Moduls <arg format="%s" ordinal="2" />. </Description>
+    <Description>Task %s: Verweis auf unbekannte Daten (oder ein anderes Objekt) gefunden bei Abarbeitung des Moduls %s. </Description>
     <Actions>Programm auf ungelöste Verweise prüfen.</Actions>
   </Message>
   <Message number="172" eDefine="SYS_ERR_ARL_REFUNKMOD">
     <Title>Referenzfehler</Title>
-    <Description>Task <arg format="%s" ordinal="1" />: <p />Verweis auf unbekanntes Modul <arg format="%s" ordinal="2" />. </Description>
-    <Actions>Von dieser Programmposition aus ist kein Modul (oder ein anderes Objekt) mit dem angegebenen Namen sichtbar. Programm auf fehlerhaften Modulverweis oder fehlendes Modul prüfen.<p /></Actions>
+    <Description>Task %s: Verweis auf unbekanntes Modul %s. </Description>
+    <Actions>Von dieser Programmposition aus ist kein Modul (oder ein anderes Objekt) mit dem angegebenen Namen sichtbar. Programm auf fehlerhaften Modulverweis oder fehlendes Modul prüfen.</Actions>
   </Message>
   <Message number="173" eDefine="SYS_ERR_ARL_REFNOTMOD">
     <Title>Referenzfehler</Title>
-    <Description>Task <arg format="%s" ordinal="1" />: <p />Verweis auf Objekt <arg format="%s" ordinal="2" />, das kein Modul ist.</Description>
-    <Actions>Der angegebene Name identifiziert ein von einem Modul abweichendes Objekt.<p />Programm auf fehlerhaften Modulverweis prüfen.</Actions>
+    <Description>Task %s: Verweis auf Objekt %s, das kein Modul ist.</Description>
+    <Actions>Der angegebene Name identifiziert ein von einem Modul abweichendes Objekt.Programm auf fehlerhaften Modulverweis prüfen.</Actions>
   </Message>
   <Message number="174" eDefine="SYS_ERR_ARL_REFAMBMOD">
     <Title>Referenzfehler</Title>
-    <Description>Task <arg format="%s" ordinal="1" />: <p />Verweis auf Modul <arg format="%s" ordinal="2" /> ist mehrdeutig.</Description>
+    <Description>Task %s: Verweis auf Modul %s ist mehrdeutig.</Description>
     <Actions>Von dieser Programmposition aus ist mindestens ein anderes Objekt mit demselben Namen wie das angegebene Modul sichtbar. Alle Objektnamen müssen die Benennungsregeln der Eindeutigkeit erfüllen.</Actions>
   </Message>
   <Message number="175" eDefine="SYS_ERR_ARL_REFAMBPRC2">
     <Title>Referenzfehler</Title>
-    <Description>Task <arg format="%s" ordinal="1" />: <p />Verweis auf Prozedur <arg format="%s" ordinal="2" /> ist mehrdeutig.</Description>
+    <Description>Task %s: Verweis auf Prozedur %s ist mehrdeutig.</Description>
     <Actions>Von dieser Programmposition aus ist mindestens ein anderes Objekt mit demselben Namen wie die angegebene Prozedur sichtbar. Alle Objektnamen müssen die Benennungsregeln der Eindeutigkeit erfüllen.</Actions>
   </Message>
   <Message number="191" eDefine="SYS_ERR_ARL_ALRDYCNT">
     <Title>Instruktionsfehler </Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Variable und Interrupt-Routine bereits verbunden.<p /></Description>
+    <Description>Task %.16s1: Variable und Interrupt-Routine bereits verbunden.</Description>
     <Actions>Es ist unzulässig, eine bestimmte Variable mehrmals mit einer Interrupt-Routine zu verbinden. </Actions>
   </Message>
   <Message number="192" eDefine="SYS_ERR_ARL_ARGDUPCND">
     <Title>Argumentfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: <arg format="%.16s" ordinal="2" /> ist das zweite vorhandene bedingte Argument für ausschließende Parameter.<p /></Description>
+    <Description>Task %.16s1: %.16s2 ist das zweite vorhandene bedingte Argument für ausschließende Parameter.</Description>
     <Actions>Argumente dürfen für nur einen Parameter aus einer Liste sich gegenseitig ausschließender Parameter angegeben werden. </Actions>
   </Message>
   <Message number="193" eDefine="SYS_ERR_ARL_CALLPROC">
     <Title>Abarbeitungsfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Fehler <arg format="%i" ordinal="2" /> bei letztem Prozeduraufruf für Verbindung.<p /></Description>
+    <Description>Task %.16s1: Fehler %i2 bei letztem Prozeduraufruf für Verbindung.</Description>
     <Actions>Die Instruktion für den Prozeduraufruf enthält einen Fehler. Ursache siehe in vorheriger Meldung. </Actions>
   </Message>
   <Message number="194" eDefine="SYS_ERR_ARL_DIVZERO">
     <Title>Wertfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Division durch null<p /></Description>
+    <Description>Task %.16s1: Division durch null</Description>
     <Actions>Division durch 0 nicht möglich. Programm so ändern, dass die Division nicht erfolgt, wenn der Teiler gleich null ist. </Actions>
   </Message>
   <Message number="195" eDefine="SYS_ERR_ARL_EXCRTYMAX">
     <Title>Begrenzungsfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: <p />Die konfigurierte maximale Anzahl an RETRYs (<arg format="%i" ordinal="2" /> Neuversuche) wurde überschritten. <p /></Description>
-    <Actions>Die Fehlerkorrektur vor Abarbeiten der Instruktion RETRY war wahrscheinlich<p />nicht ausreichend für die Beseitigung des Fehlers. <p />Fehlerbehandlungsroutine prüfen. </Actions>
+    <Description>Task %.16s1: Die konfigurierte maximale Anzahl an RETRYs (%i2 Neuversuche) wurde überschritten. </Description>
+    <Actions>Die Fehlerkorrektur vor Abarbeiten der Instruktion RETRY war wahrscheinlichnicht ausreichend für die Beseitigung des Fehlers. Fehlerbehandlungsroutine prüfen. </Actions>
   </Message>
   <Message number="196" eDefine="SYS_ERR_ARL_EXECPHR">
     <Title>Instruktionsfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Platzhalter nicht ausführbar.<p /></Description>
+    <Description>Task %.16s1: Platzhalter nicht ausführbar.</Description>
     <Actions>Platzhalter oder Instruktion mit Platzhalter entfernen oder Instruktion vervollständigen. Dann Abarbeitung fortsetzen. </Actions>
   </Message>
   <Message number="197" eDefine="SYS_ERR_ARL_FNCNORET">
     <Title>Abarbeitungsfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Funktion liefert keinen Wert.<p /></Description>
+    <Description>Task %.16s1: Funktion liefert keinen Wert.</Description>
     <Actions>Das Ende der Funktion wurde erreicht, ohne dass eine RETURN-Instruktion abgearbeitet wurde. RETURN-Instruktion durch Einfügen eines Rückgabewerts hinzufügen. </Actions>
   </Message>
   <Message number="198" eDefine="SYS_ERR_ARL_ILLQUAT">
     <Title>Wertfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Unzulässiger Orientierungswert <arg format="%.40s" ordinal="2" />.<p /></Description>
+    <Description>Task %.16s1: Unzulässiger Orientierungswert %.40s2.</Description>
     <Actions>Versuch, unzulässigen Wert für Orientierung (Quaternion) zu verwenden </Actions>
   </Message>
   <Message number="199" eDefine="SYS_ERR_ARL_ILLRAISE">
     <Title>Wertfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Unzulässige Fehlernummer <arg format="%i" ordinal="2" /> in <arg format="%s" ordinal="3" />. </Description>
+    <Description>Task %.16s1: Unzulässige Fehlernummer %i2 in %s. </Description>
     <Actions>Fehlernummern im Bereich 1-90 verwenden oder Fehlernummern mit der Instruktion BookErrNo festlegen.</Actions>
   </Message>
   <Message number="200" eDefine="SYS_ERR_ARL_INOMAX">
     <Title>Begrenzungsfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Keine Interruptnummern mehr verfügbar.<p /></Description>
+    <Description>Task %.16s1: Keine Interruptnummern mehr verfügbar.</Description>
     <Actions>Es ist nur eine begrenze Anzahl an Interrupt-Nummern verfügbar. Programm so ändern, dass es weniger Interruptnummern benutzt. Diese Meldung kann auch nach einem Systemfehler gezeigt werden. </Actions>
   </Message>
   <Message number="202" eDefine="SYS_ERR_ARL_NOTEQDIM">
     <Title>Typenfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Dimensionen <arg format="%i" ordinal="2" /> und <arg format="%i" ordinal="3" /> von entsprechender Datenfeld-<p />Dimensionsnummer <arg format="%i" ordinal="4" /> sind inkompatibel.<p /></Description>
+    <Description>Task %.16s1: Dimensionen %i2 und %i3 von entsprechender Datenfeld-Dimensionsnummer %i4 sind inkompatibel.</Description>
     <Actions>Datenfeld hat nicht die erwartete Größe. Zuweisung des Datenfelds ist nur bei identischer Größe möglich. </Actions>
   </Message>
   <Message number="203" eDefine="SYS_ERR_ARL_NOTPRES">
     <Title>Referenzfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Optionaler Parameter <arg format="%.16s" ordinal="2" /> nicht vorhanden.<p /></Description>
-    <Actions>Auf den Wert eines nicht vorhandenen optionalen Parameters kann nicht verwiesen werden. Mithilfe der vordefinierten Funktion 'Present' prüfen, ob<p />der Parameter vorhanden ist, bevor sein Wert benutzt wird. </Actions>
+    <Description>Task %.16s1: Optionaler Parameter %.16s2 nicht vorhanden.</Description>
+    <Actions>Auf den Wert eines nicht vorhandenen optionalen Parameters kann nicht verwiesen werden. Mithilfe der vordefinierten Funktion 'Present' prüfen, obder Parameter vorhanden ist, bevor sein Wert benutzt wird. </Actions>
   </Message>
   <Message number="204" eDefine="SYS_ERR_ARL_OUTOFBND">
     <Title>Wertfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Datenfeldindex <arg format="%i" ordinal="2" /> für Dimension Nummer <arg format="%i" ordinal="3" /> außerhalb des zulässigen Bereichs (1- <arg format="%i" ordinal="4" />).<p /></Description>
+    <Description>Task %.16s1: Datenfeldindex %i2 für Dimension Nummer %i3 außerhalb des zulässigen Bereichs (1- %i4).</Description>
     <Actions>Der Wert des Datenfeldindex ist nicht positiv oder verletzt die deklarierte Größe des Datenfelds. </Actions>
   </Message>
   <Message number="205" eDefine="SYS_ERR_ARL_STRTOOLNG">
     <Title>Wertfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: RAPID-Zeichenfolge <arg format="%.16s" ordinal="2" /> ist zu lang. </Description>
+    <Description>Task %.16s1: RAPID-Zeichenfolge %.16s2 ist zu lang. </Description>
     <Actions>String-Wert überschreitet die maximal erlaubte Länge. Programm so ändern, dass es kürzere Zeichenfolgen verwendet. </Actions>
   </Message>
   <Message number="206" eDefine="SYS_ERR_ARL_INTQUEFULL">
     <Title>Interrupt-Warteschlange voll</Title>
-    <Description>Abarbeitung aller normalen Tasks wurde gestoppt. Während der Abarbeitung einer TRAP-Routine sind in <arg format="%.16s" ordinal="1" /> zu viele Interrupts aufgetreten.</Description>
+    <Description>Abarbeitung aller normalen Tasks wurde gestoppt. Während der Abarbeitung einer TRAP-Routine sind in %.16s1 zu viele Interrupts aufgetreten.</Description>
     <Consequences>Das System ist blockiert und kann nicht neu gestartet werden, bevor der Programmzeiger an eine beliebige Position bewegt wurde.</Consequences>
-    <Causes>Zu viele Interrupts beim Abarbeiten einer Interrupt-Routine. Die Ursache kann eine hohe CPU-Auslastung sein.<p /></Causes>
-    <Actions>1) Abarbeitungszeit in Interrupt-Routine minimieren. <p />2) Interrupts beim Abarbeiten einer Interrupt-Routine mithilfe der Befehle „Isleep“ oder „Iwatch“ deaktivieren/aktivieren.</Actions>
+    <Causes>Zu viele Interrupts beim Abarbeiten einer Interrupt-Routine. Die Ursache kann eine hohe CPU-Auslastung sein.</Causes>
+    <Actions>1) Abarbeitungszeit in Interrupt-Routine minimieren. 2) Interrupts beim Abarbeiten einer Interrupt-Routine mithilfe der Befehle „Isleep“ oder „Iwatch“ deaktivieren/aktivieren.</Actions>
   </Message>
   <Message number="207" eDefine="SYS_ERR_ARL_ILLRERAISE">
     <Title>Wertfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Unzulässige Fehlernummer <arg format="%i" ordinal="2" /> in <arg format="%s" ordinal="3" />.</Description>
+    <Description>Task %.16s1: Unzulässige Fehlernummer %i2 in %s.</Description>
     <Actions>Fehlernummern in einer Fehlerbehandlungsroutine müssen positiv sein.</Actions>
   </Message>
   <Message number="208" eDefine="SYS_ERR_ARL_ERREVT_QUEFULL">
     <Title>Fehlerereignis-Warteschlange voll</Title>
-    <Description>Task <arg format="%s" ordinal="1" />: Programm arbeitete bereits ein Fehlerereignis ab, als ein neues Ereignis eintrat.</Description>
+    <Description>Task %s: Programm arbeitete bereits ein Fehlerereignis ab, als ein neues Ereignis eintrat.</Description>
     <Actions>Ursache des Fehlerereignisses beseitigen und Programm neu starten.</Actions>
   </Message>
   <Message number="209" eDefine="SYS_ERR_ARL_ERR_CONTEXT_CONSUMED">
     <Title>Fehlerkontext bereits vorüber</Title>
-    <Description>Fehlerereignis ist in Task <arg format="%s" ordinal="1" /> aufgetreten. Kontext der RAPID-Instruktion, der dieses Ereignis verursacht hat, ist aber bereits vorüber. Daher ist eine Fehlerbehandlung nicht möglich.</Description>
+    <Description>Fehlerereignis ist in Task %s aufgetreten. Kontext der RAPID-Instruktion, der dieses Ereignis verursacht hat, ist aber bereits vorüber. Daher ist eine Fehlerbehandlung nicht möglich.</Description>
     <Actions>Ursache des Fehlerereignisses beseitigen und Programm neu starten.</Actions>
   </Message>
   <Message number="210" eDefine="SYS_ERR_ARL_INTERRUPT_REMOVED">
     <Title>Interrupt aus Warteschlange entfernt</Title>
-    <Description>Alle Interrupts aus der Interrupt-Warteschlange in Task <arg format="%s" ordinal="1" /> wurden gelöscht. </Description>
+    <Description>Alle Interrupts aus der Interrupt-Warteschlange in Task %s wurden gelöscht. </Description>
     <Consequences>Es können keine mit dem Interrupt verknüpften Interrupt-Routinen ausgeführt werden.</Consequences>
-    <Causes>- Das Programm wurde gestoppt.<p />- Eventuell wird eine Service- oder eine Ereignisroutine ausgeführt.<p />- Das Programm wird in Einzelschritten ausgeführt.</Causes>
+    <Causes>- Das Programm wurde gestoppt.- Eventuell wird eine Service- oder eine Ereignisroutine ausgeführt.- Das Programm wird in Einzelschritten ausgeführt.</Causes>
   </Message>
   <Message number="221" eDefine="SYS_ERR_ARL_ABORT">
     <Title>Abarbeitungsfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Abarbeitung abgebrochen.<p /></Description>
+    <Description>Task %.16s1: Abarbeitung abgebrochen.</Description>
     <Actions>Abarbeitung wurde wegen schwerem Fehler abgebrochen. </Actions>
   </Message>
   <Message number="222" eDefine="SYS_ERR_ARL_EXSTOVFL">
     <Title>Begrenzungsfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Stapelüberlauf bei Abarbeitung<p /></Description>
+    <Description>Task %.16s1: Stapelüberlauf bei Abarbeitung</Description>
     <Actions>Programm zu komplex für Abarbeitung.  Wahrscheinlich enthält das Programm rekursive Routinen. </Actions>
   </Message>
   <Message number="223" eDefine="SYS_ERR_ARL_FATAL">
     <Title>Abarbeitungsfehler</Title>
-    <Description>Abarbeitung der Task <arg format="%.16s" ordinal="1" /> wurde wegen eines Laufzeitfehlers gestoppt.</Description>
+    <Description>Abarbeitung der Task %.16s1 wurde wegen eines Laufzeitfehlers gestoppt.</Description>
     <Consequences>Programmabarbeitung wird sofort angehalten.</Consequences>
     <Causes>Der Programmfehler wird als NICHT BEHEBBAR betrachtet, d. h. es wurde keine Fehlerbehandlung durch eine Routine (falls benutzt) erlaubt. Die Fehlerursache kann variieren und wird wahrscheinlich gleichzeitig in einer Meldung im Ereignisprotokoll aufgezeichnet.</Causes>
     <Actions>1) Gleichzeitig aufgezeichnete Meldungen in Ereignisprotokoll prüfen, um Ursache zu ermitteln.</Actions>
   </Message>
   <Message number="224" eDefine="SYS_ERR_ARL_ILLREAL">
     <Title>Abarbeitungsfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: Unzulässiger Rückgabe-Code <arg format="%i" ordinal="2" /> von ReaL-Routine.<p />Ursache ist immer ein interner Fehler in der ReaL-Routine. <p /></Description>
+    <Description>Task %.16s1: Unzulässiger Rückgabe-Code %i2 von ReaL-Routine.Ursache ist immer ein interner Fehler in der ReaL-Routine. </Description>
   </Message>
 </Domain>

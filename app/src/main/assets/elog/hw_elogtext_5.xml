@@ -2,402 +2,402 @@
 <Domain xmlns="urn:abb-robotics-elog-text" elogDomain="HW" domainNo="3" lang="de" elogTextVersion="1.0" min="9421" max="9531">
   <Message number="9421" eDefine="SYS_ERR_HW_DM_DRV_CONFIG_TEST_ERR">
     <Title>Antriebseinheit - Fehler bei Konfigurationstest</Title>
-    <Description>Antriebseinheit Nummer <arg format="%d" ordinal="3" /> in Antriebsmodul <arg format="%s" ordinal="1" /> hat einen internen Fehler erkannt.</Description>
+    <Description>Antriebseinheit Nummer %d3 in Antriebsmodul %s hat einen internen Fehler erkannt.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Evtl. schlechte Verbindung zur Antriebseinheit oder falsche Hardware eingebaut.</Causes>
-    <Actions>1) System abschalten und neu starten.<p />2) Wenn das Problem weiter besteht, fehlerhafte Antriebseinheit ermitteln und austauschen.</Actions>
+    <Actions>1) System abschalten und neu starten.2) Wenn das Problem weiter besteht, fehlerhafte Antriebseinheit ermitteln und austauschen.</Actions>
   </Message>
   <Message number="9422" eDefine="SYS_ERR_HW_DM_DRV_WATCHDOG">
     <Title>Antriebseinheit - Überwachungs-Timeout</Title>
-    <Description>Das Zeitlimit des Überwachungs-Timers für Antriebseinheit Nummer <arg format="%d" ordinal="3" /> in Antriebsmodul <arg format="%d" ordinal="1" /> ist abgelaufen.</Description>
+    <Description>Das Zeitlimit des Überwachungs-Timers für Antriebseinheit Nummer %d3 in Antriebsmodul %d1 ist abgelaufen.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Evtl. schlechte Verbindung zur Antriebseinheit oder falsche Hardware eingebaut. Ursache kann auch ein interner Fehler in der Antriebseinheit sein.</Causes>
-    <Actions>1) System abschalten und neu starten.<p />2) Wenn das Problem weiter besteht, fehlerhafte Antriebseinheit ermitteln und austauschen.</Actions>
+    <Actions>1) System abschalten und neu starten.2) Wenn das Problem weiter besteht, fehlerhafte Antriebseinheit ermitteln und austauschen.</Actions>
   </Message>
   <Message number="9423" eDefine="SYS_ERR_HW_DM_DRV_INT_WARNING">
     <Title>Antriebseinheit - interne Warnung</Title>
-    <Description>Interne Messwarnung für Antriebseinheit Nummer <arg format="%d" ordinal="3" /> in Antriebsmodul <arg format="%d" ordinal="1" />. </Description>
+    <Description>Interne Messwarnung für Antriebseinheit Nummer %d3 in Antriebsmodul %d1. </Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Probleme durch fehlerhaftes Steuerungskabel, Gleichstromanschluss (Verteilerschiene oder Kabel) oder interne Hardware.</Causes>
-    <Actions>1) Prüfen, ob Steuerungskabel und Gleichstromverbindung (Verteilerschiene oder Kabel) korrekt für diese Einheit verbunden sind.<p />2) System neu starten.</Actions>
+    <Actions>1) Prüfen, ob Steuerungskabel und Gleichstromverbindung (Verteilerschiene oder Kabel) korrekt für diese Einheit verbunden sind.2) System neu starten.</Actions>
   </Message>
   <Message number="9424" eDefine="SYS_ERR_HW_DM_DRV_INT_ERROR">
     <Title>Antriebseinheit - interner Fehler</Title>
-    <Description>Interne Messwarnung für Antriebseinheit Nummer <arg format="%d" ordinal="3" /> in Antriebsmodul <arg format="%d" ordinal="1" />. </Description>
+    <Description>Interne Messwarnung für Antriebseinheit Nummer %d3 in Antriebsmodul %d1. </Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Evtl. schlechte Verbindung zur Antriebseinheit oder falsche Hardware eingebaut. Kann auch durch fehlerhaftes Steuerungskabel, Gleichstromanschluss (Verteilerschiene oder Kabel) oder interne Hardware verursacht werden.</Causes>
-    <Actions>1) Sicherstellen, dass Steuerungskabel und Gleichstromanschluss (Verteilerschiene oder Kabel) korrekt für diese Einheit verbunden sind.<p />2) System abschalten und neu starten.<p />3) Wenn das Problem weiter besteht, fehlerhafte Einheit ermitteln und austauschen.</Actions>
+    <Actions>1) Sicherstellen, dass Steuerungskabel und Gleichstromanschluss (Verteilerschiene oder Kabel) korrekt für diese Einheit verbunden sind.2) System abschalten und neu starten.3) Wenn das Problem weiter besteht, fehlerhafte Einheit ermitteln und austauschen.</Actions>
   </Message>
   <Message number="9425" eDefine="SYS_ERR_HW_DM_DRV_MEAS_ERR">
     <Title>Antriebseinheit - Messfehler</Title>
-    <Description>Eine Strommessschaltung in Antriebseinheit Nummer <arg format="%d" ordinal="3" />, Antriebsmodul <arg format="%d" ordinal="1" />, verbunden mit Achse <arg format="%s" ordinal="2" />, ist fehlgeschlagen.</Description>
+    <Description>Eine Strommessschaltung in Antriebseinheit Nummer %d3, Antriebsmodul %d1, verbunden mit Achse %s, ist fehlgeschlagen.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Mögliche Ursache: Fehlerhafte oder fehlende Gleichstromverbindung zwischen Gleichrichter und Laufwerkseinheiten.</Causes>
-    <Actions>1) Sicherstellen, dass die Gleichstromverbindung (Verteilerschiene oder Kabel) korrekt an Gleichrichter und Antriebseinheit angeschlossen ist.<p />2) Anzeige-LEDs an Gleichrichter und Antriebseinheit prüfen. Die Bedeutung der LEDs wird im Handbuch zur Fehlerbehebung beschrieben.</Actions>
+    <Actions>1) Sicherstellen, dass die Gleichstromverbindung (Verteilerschiene oder Kabel) korrekt an Gleichrichter und Antriebseinheit angeschlossen ist.2) Anzeige-LEDs an Gleichrichter und Antriebseinheit prüfen. Die Bedeutung der LEDs wird im Handbuch zur Fehlerbehebung beschrieben.</Actions>
   </Message>
   <Message number="9426" eDefine="SYS_ERR_HW_DM_RECT_INT_ERROR">
     <Title>Gleichrichter - interner Fehler</Title>
-    <Description>Der Gleichrichter an Kommunikationsverbindung <arg format="%d" ordinal="4" />, verbunden mit Antriebsmodul <arg format="%d " ordinal="1" />, hat einen internen Fehler erkannt.</Description>
+    <Description>Der Gleichrichter an Kommunikationsverbindung %d4, verbunden mit Antriebsmodul %d 1, hat einen internen Fehler erkannt.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Mögliche Ursache: Fehlerhafte oder fehlende Signalverbindung zwischen Gleichrichter und Antriebseinheiten.</Causes>
-    <Actions>1) Sicherstellen, dass das Signalkabel korrekt an Gleichrichter und Antriebseinheit angeschlossen ist.<p />2) Anzeige-LEDs an Gleichrichter und Antriebseinheit prüfen. Die Bedeutung der LEDs wird im Handbuch zur Fehlerbehebung beschrieben.</Actions>
+    <Actions>1) Sicherstellen, dass das Signalkabel korrekt an Gleichrichter und Antriebseinheit angeschlossen ist.2) Anzeige-LEDs an Gleichrichter und Antriebseinheit prüfen. Die Bedeutung der LEDs wird im Handbuch zur Fehlerbehebung beschrieben.</Actions>
   </Message>
   <Message number="9427" eDefine="SYS_ERR_HW_DM_RECT_COMMS_MISSING">
     <Title>Gleichrichterkommunikation fehlt</Title>
-    <Description>Kommunikation mit Gleichrichter an Antriebskomm.-Verbindung <arg format="%d" ordinal="4" />, Antriebsmodul <arg format="%d" ordinal="1" />, ging verloren.</Description>
+    <Description>Kommunikation mit Gleichrichter an Antriebskomm.-Verbindung %d4, Antriebsmodul %d1, ging verloren.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Mögliche Ursache: Fehlerhafte oder fehlende Signalverbindung zwischen Gleichrichter und Antriebseinheiten.</Causes>
-    <Actions>1) Sicherstellen, dass das Signalkabel korrekt mit dem Gleichrichter und der Antriebseinheit verbunden ist.<p />2) System abschalten und neu starten.<p />3) Wenn das Problem weiter besteht, fehlerhafte Einheit ermitteln und austauschen.</Actions>
+    <Actions>1) Sicherstellen, dass das Signalkabel korrekt mit dem Gleichrichter und der Antriebseinheit verbunden ist.2) System abschalten und neu starten.3) Wenn das Problem weiter besteht, fehlerhafte Einheit ermitteln und austauschen.</Actions>
   </Message>
   <Message number="9428" eDefine="SYS_ERR_HW_DM_RECT_GLOB_ERR">
     <Title>Gleichrichter-Startfehler</Title>
-    <Description>Der Gleichrichter an Antriebskomm.-Verbindung <arg format="%d" ordinal="4" />, Antriebsmodul <arg format="%d" ordinal="1" />, hat einen Startfehler erkannt.</Description>
+    <Description>Der Gleichrichter an Antriebskomm.-Verbindung %d4, Antriebsmodul %d1, hat einen Startfehler erkannt.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Ursache kann auch ein interner Fehler in der Gleichrichtereinheit sein.</Causes>
-    <Actions>1) Sicherstellen, dass das Signalkabel korrekt mit dem Gleichrichter und der Antriebseinheit verbunden ist.<p />2) System abschalten und neu starten.<p />3) Wenn das Problem weiter besteht, fehlerhafte Gleichrichtereinheit ermitteln und austauschen.</Actions>
+    <Actions>1) Sicherstellen, dass das Signalkabel korrekt mit dem Gleichrichter und der Antriebseinheit verbunden ist.2) System abschalten und neu starten.3) Wenn das Problem weiter besteht, fehlerhafte Gleichrichtereinheit ermitteln und austauschen.</Actions>
   </Message>
   <Message number="9431" eDefine="SYS_ERR_HW_DM_DRV_IMAGE_UPDATE">
     <Title>Software der Antriebseinheit wird aktualisiert</Title>
-    <Description>Die Software der Antriebseinheit in Antriebsmodul <arg format="%d" ordinal="1" /> wird aktualisiert.<p /><p />Warten Sie, bis die Aktualisierung abgeschlossen ist. Dies dauert ca. 3,5 Minuten.<p /><p />HINWEIS: Schalten Sie den Strom nicht ab und starten Sie die Steuerung nicht neu, bevor der Download beendet ist.<p /><p /></Description>
+    <Description>Die Software der Antriebseinheit in Antriebsmodul %d1 wird aktualisiert.Warten Sie, bis die Aktualisierung abgeschlossen ist. Dies dauert ca. 3,5 Minuten.HINWEIS: Schalten Sie den Strom nicht ab und starten Sie die Steuerung nicht neu, bevor der Download beendet ist.</Description>
     <Actions>Bitte warten…</Actions>
   </Message>
   <Message number="9432" eDefine="SYS_ERR_HW_DM_WRONG_BOOT_VERSION">
     <Title>Inkompatible Bootversion in Antriebseinheit</Title>
-    <Description>Die Bootversion in Antriebsmodul <arg format="%d" ordinal="1" /> ist Version <arg format="%d" ordinal="3" />, die nicht zulässig ist. Die neueste erlaubte Bootversion ist <arg format="%d" ordinal="2" />. </Description>
+    <Description>Die Bootversion in Antriebsmodul %d1 ist Version %d3, die nicht zulässig ist. Die neueste erlaubte Bootversion ist %d2. </Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Bootversion ist nicht kompatibel mit der Hardwareversion.</Causes>
     <Actions>1) Antriebseinheit durch Einheit austauschen, die eine Bootversion verwendet, die gleich oder höher ist als die neueste erlaubte Version.</Actions>
   </Message>
   <Message number="9434" eDefine="SYS_ERR_HW_DM_DRIVE_START_FAILURE">
     <Title>Antriebseinheit - Startfehler</Title>
-    <Description>Die Antriebseinheit in Antriebsmodul <arg format="%d" ordinal="1" /> konnte nicht starten. Antriebsbootstatus = <arg format="%d" ordinal="2" />. Antrieb dsp1 Status = <arg format="%d" ordinal="3" /></Description>
+    <Description>Die Antriebseinheit in Antriebsmodul %d1 konnte nicht starten. Antriebsbootstatus = %d2. Antrieb dsp1 Status = %d3</Description>
     <Consequences>Der Roboter kann nicht betrieben werden.</Consequences>
     <Causes>Verschiedene Fehler können die Ursache sein.</Causes>
-    <Actions>1) Netzstrom zum Modul abschalten und dann wieder einschalten. Ein normaler Neustart reicht NICHT!<p />2) Bei Weiterbestehen des Problems Antriebseinheit austauschen.</Actions>
+    <Actions>1) Netzstrom zum Modul abschalten und dann wieder einschalten. Ein normaler Neustart reicht NICHT!2) Bei Weiterbestehen des Problems Antriebseinheit austauschen.</Actions>
   </Message>
   <Message number="9435" eDefine="SYS_ERR_HW_DM_EXT_DRIVE_NOT_FOUND">
     <Title>Antriebseinheit für zusätzliche Achsen nicht gefunden</Title>
-    <Description>Das System kann keinen zusätzlichen Achsenantrieb für Achse <arg format="%s" ordinal="1" /> in Antriebsmodul <arg format="%d" ordinal="2" /> finden.</Description>
+    <Description>Das System kann keinen zusätzlichen Achsenantrieb für Achse %s in Antriebsmodul %d2 finden.</Description>
     <Consequences>Das System geht in den Zustand Systemfehler.</Consequences>
-    <Causes>Mögliche Ursache:<p />1) Zusätzliche Achse konfiguriert, aber keine Antriebseinheit im Antriebsmodul.<p />2) Externe Antriebseinheit, aber keine Kabelverbindung zur X<arg format="%d" ordinal="3" /> Anschlussposition an der Hauptantriebseinheit.<p />3) Beschädigtes Kabel zwischen zusätzlichem Achsenantrieb und der Hauptantriebseinheit.<p /><p /><p /></Causes>
-    <Actions>1) Prüfen, ob das Antriebsmodul ausreichend zusätzliche Achsenantriebe enthält.<p />2) Prüfen, ob der Konfigurationsschlüssel mehr externe Antriebseinheiten definiert, als mit dem Antriebsmodul verbunden sind<p />3) Prüfen, ob das Kabel zwischen der zusätzlichen Achsenantriebseinheit und der Hauptantriebseinheit korrekt eingesteckt ist.<p />4) Ist das Kabel vorhanden und korrekt eingesteckt, kann es beschädigt sein und sollte ersetzt werden.</Actions>
+    <Causes>Mögliche Ursache:1) Zusätzliche Achse konfiguriert, aber keine Antriebseinheit im Antriebsmodul.2) Externe Antriebseinheit, aber keine Kabelverbindung zur X%d3 Anschlussposition an der Hauptantriebseinheit.3) Beschädigtes Kabel zwischen zusätzlichem Achsenantrieb und der Hauptantriebseinheit.</Causes>
+    <Actions>1) Prüfen, ob das Antriebsmodul ausreichend zusätzliche Achsenantriebe enthält.2) Prüfen, ob der Konfigurationsschlüssel mehr externe Antriebseinheiten definiert, als mit dem Antriebsmodul verbunden sind3) Prüfen, ob das Kabel zwischen der zusätzlichen Achsenantriebseinheit und der Hauptantriebseinheit korrekt eingesteckt ist.4) Ist das Kabel vorhanden und korrekt eingesteckt, kann es beschädigt sein und sollte ersetzt werden.</Actions>
   </Message>
   <Message number="9440" eDefine="SYS_ERR_HW_DM_BLDR_OPEN">
     <Title>Offene Schaltung in Entladewiderstandskreis</Title>
-    <Description>Entladewiderstand, der mit Gleichrichter an Antriebsverbindung <arg format="%d" ordinal="4" />, Antriebsmodul <arg format="%d" ordinal="1" />, angeschlossen ist, ist ein offener Schaltkreis.</Description>
+    <Description>Entladewiderstand, der mit Gleichrichter an Antriebsverbindung %d4, Antriebsmodul %d1, angeschlossen ist, ist ein offener Schaltkreis.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Mögliche Ursache: Fehlerhaftes Entladewiderstandskabel oder fehlerhafter Entladewiderstand.</Causes>
-    <Actions>1) Sicherstellen, dass das Entladewiderstandskabel korrekt an die Gleichrichtereinheit angeschlossen ist.<p />2) Sicherstellen, dass Kabel und Widerstand korrekt arbeiten, indem jeweils ihr Widerstand gemessen wird. Verbindung vor dem Messen trennen.<p />3) Gegebenenfalls fehlerhafte Komponenten austauschen.</Actions>
+    <Actions>1) Sicherstellen, dass das Entladewiderstandskabel korrekt an die Gleichrichtereinheit angeschlossen ist.2) Sicherstellen, dass Kabel und Widerstand korrekt arbeiten, indem jeweils ihr Widerstand gemessen wird. Verbindung vor dem Messen trennen.3) Gegebenenfalls fehlerhafte Komponenten austauschen.</Actions>
   </Message>
   <Message number="9441" eDefine="SYS_ERR_HW_DM_BLDR_SHORT">
     <Title>Kurzschluss in Entladewiderstandskreis</Title>
-    <Description>Entladewiderstand, der mit Gleichrichter an Antriebsverbindung <arg format="%d" ordinal="4" />, Antriebsmodul <arg format="%d" ordinal="1" />, angeschlossen ist, hat einen Kurzschluss.</Description>
+    <Description>Entladewiderstand, der mit Gleichrichter an Antriebsverbindung %d4, Antriebsmodul %d1, angeschlossen ist, hat einen Kurzschluss.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Mögliche Ursache: Fehlerhaftes Entladewiderstandskabel oder fehlerhafter Entladewiderstand.</Causes>
-    <Actions>1) Sicherstellen, dass das Entladewiderstandskabel korrekt an die Gleichrichtereinheit angeschlossen ist.<p />2) Sicherstellen, dass Kabel und Widerstand korrekt arbeiten, indem jeweils ihr Widerstand gemessen wird. Verbindung vor dem Messen trennen.<p />3) Gegebenenfalls fehlerhafte Komponenten austauschen.</Actions>
+    <Actions>1) Sicherstellen, dass das Entladewiderstandskabel korrekt an die Gleichrichtereinheit angeschlossen ist.2) Sicherstellen, dass Kabel und Widerstand korrekt arbeiten, indem jeweils ihr Widerstand gemessen wird. Verbindung vor dem Messen trennen.3) Gegebenenfalls fehlerhafte Komponenten austauschen.</Actions>
   </Message>
   <Message number="9442" eDefine="SYS_ERR_HW_DM_BLDR_LOW_RESISTANCE">
     <Title>Entladewiderstand zu gering</Title>
-    <Description>Entladewiderstand, der mit Gleichrichter an Antriebskommunikationsverbindung <arg format="%d" ordinal="4" />, Antriebsmodul <arg format="%d" ordinal="1" />, angeschlossen ist, ist zu gering. </Description>
+    <Description>Entladewiderstand, der mit Gleichrichter an Antriebskommunikationsverbindung %d4, Antriebsmodul %d1, angeschlossen ist, ist zu gering. </Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Die Entladewiderstände haben evtl. den falschen Widerstandswert oder einer der Entladewiderstände ist ausgefallen und hat einen Kurzschluss verursacht.</Causes>
-    <Actions>1) Entladewiderstände prüfen, um festzustellen, ob sie den korrekten Wert für dieses Antriebsmodul haben.<p />2) Prüfen, ob einer der Widerstände ausgefallen ist. Überprüfung der Konfigurationsdatei siehe im Handbuch zur Fehlerbehebung.</Actions>
+    <Actions>1) Entladewiderstände prüfen, um festzustellen, ob sie den korrekten Wert für dieses Antriebsmodul haben.2) Prüfen, ob einer der Widerstände ausgefallen ist. Überprüfung der Konfigurationsdatei siehe im Handbuch zur Fehlerbehebung.</Actions>
   </Message>
   <Message number="9443" eDefine="SYS_ERR_HW_DM_BLDR_WARNING">
     <Title>Warnung Überlastfehler am Bremswiderstand</Title>
-    <Description>Der Stromverbrauch der Bremswiderstände, die mit Gleichrichter an Antriebskommunikationsverbindung <arg format="%d" ordinal="4" />, Antriebsmodul <arg format="%d" ordinal="1" />, angeschlossen sind, erreicht Überlastung.</Description>
+    <Description>Der Stromverbrauch der Bremswiderstände, die mit Gleichrichter an Antriebskommunikationsverbindung %d4, Antriebsmodul %d1, angeschlossen sind, erreicht Überlastung.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Anwenderprogramm enthält unter Umständen zu viele starke Bremsungen des Manipulators, was wahrscheinlich ist, wenn das System zusätzliche Achsen enthält.</Causes>
     <Actions>1) Anwenderprogramm umschreiben, um die Anzahl starker Bremsungen zu verringern.</Actions>
   </Message>
   <Message number="9444" eDefine="SYS_ERR_HW_DM_BLDR_OVERLOAD">
     <Title>Überlastfehler am Bremswiderstand</Title>
-    <Description>Bremswiderstände, die mit Gleichrichter an Antriebskommunikationsverbindung <arg format="%d" ordinal="4" />, Antriebsmodul <arg format="%d" ordinal="1" />, angeschlossen sind, wurden überlastet.</Description>
+    <Description>Bremswiderstände, die mit Gleichrichter an Antriebskommunikationsverbindung %d4, Antriebsmodul %d1, angeschlossen sind, wurden überlastet.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Anwenderprogramm enthält unter Umständen zu viele starke Bremsungen oder eine zu hohe Nutzlast des Manipulators. Die Wahrscheinlichkeit dafür ist höher, wenn das System zusätzliche Achsen enthält.</Causes>
     <Actions>1) Anwenderprogramm umschreiben, um die Anzahl starker Bremsungen zu verringern.</Actions>
   </Message>
   <Message number="9450" eDefine="SYS_ERR_HW_DM_COOLING_FAN_POWER">
     <Title>Fehlerhafter Lüfter des Netzteils</Title>
-    <Description>Die Stromversorgung der Lüftereinheit in Antriebsmodul <arg format="%d" ordinal="1" /> liegt außerhalb der zulässigen Spannungsgrenzen.</Description>
+    <Description>Die Stromversorgung der Lüftereinheit in Antriebsmodul %d1 liegt außerhalb der zulässigen Spannungsgrenzen.</Description>
     <Causes>Evtl. ist das Netzteil des Hauptlüfters fehlerhaft oder die Versorgung dieses Netzteils liegt außerhalb der zulässigen Spannungsgrenzen.</Causes>
-    <Actions>1) Sicherstellen, dass das Lüfterkabel korrekt angeschlossen ist.<p />2) Sicherstellen, dass alle Lüfter funktionieren. 3) Eingangsspannung zum Netzteil des Hauptlüfters prüfen. Gegebenenfalls fehlerhafte Einheit austauschen.<p /></Actions>
+    <Actions>1) Sicherstellen, dass das Lüfterkabel korrekt angeschlossen ist.2) Sicherstellen, dass alle Lüfter funktionieren. 3) Eingangsspannung zum Netzteil des Hauptlüfters prüfen. Gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
   </Message>
   <Message number="9451" eDefine="SYS_ERR_HW_DM_COOLING_FAN_SPEED">
     <Title>Fehlfunktion von Lüftereinheit</Title>
-    <Description>Der Lüfter in Antriebsmodul <arg format="%d" ordinal="1" /> hatte eine Fehlfunktion.</Description>
+    <Description>Der Lüfter in Antriebsmodul %d1 hatte eine Fehlfunktion.</Description>
     <Causes>Evtl. ist die Lüftereinheit fehlerhaft, die Stromversorgung unterbrochen oder das Netzkabel des Lüfters nicht korrekt angeschlossen.</Causes>
-    <Actions>1) Sicherstellen, dass das Lüfterkabel korrekt angeschlossen ist.<p />2) Sicherstellen, dass alle Lüfter arbeiten und der Luftstrom nicht behindert ist.<p />3) Ausgangsspannung von der Antriebseinheit prüfen, die den Lüfter versorgt. Gegebenenfalls fehlerhafte Einheit austauschen.<p /><p /></Actions>
+    <Actions>1) Sicherstellen, dass das Lüfterkabel korrekt angeschlossen ist.2) Sicherstellen, dass alle Lüfter arbeiten und der Luftstrom nicht behindert ist.3) Ausgangsspannung von der Antriebseinheit prüfen, die den Lüfter versorgt. Gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
   </Message>
   <Message number="9452" eDefine="SYS_ERR_HW_DM_CBFAN1_ERROR">
     <Title>Fehlfunktion Achscomputer-Kühlung</Title>
-    <Description>Der Kühlungslüfter für den Achscomputer in Antriebsmodul <arg format="%d" ordinal="1" /> hatte eine Fehlfunktion.</Description>
-    <Actions>1) Prüfen, ob das Lüfterkabel korrekt eingesteckt ist. <p />2) Fehlerhafte Lüftereinheit austauschen.</Actions>
+    <Description>Der Kühlungslüfter für den Achscomputer in Antriebsmodul %d1 hatte eine Fehlfunktion.</Description>
+    <Actions>1) Prüfen, ob das Lüfterkabel korrekt eingesteckt ist. 2) Fehlerhafte Lüftereinheit austauschen.</Actions>
   </Message>
   <Message number="9453" eDefine="SYS_ERR_HW_DM_CBFAN2_ERROR">
     <Title>Fehlfunktion Transformatorkühlung</Title>
-    <Description>Der Kühlungslüfter für den Transformator, der Antriebsmodul <arg format="%d" ordinal="1" /> versorgt, hatte eine Fehlfunktion.<p /><p /></Description>
-    <Actions>1) Prüfen, ob das Lüfterkabel korrekt eingesteckt ist. <p />2) Fehlerhafte Lüftereinheit austauschen.</Actions>
+    <Description>Der Kühlungslüfter für den Transformator, der Antriebsmodul %d1 versorgt, hatte eine Fehlfunktion.</Description>
+    <Actions>1) Prüfen, ob das Lüfterkabel korrekt eingesteckt ist. 2) Fehlerhafte Lüftereinheit austauschen.</Actions>
   </Message>
   <Message number="9460" eDefine="SYS_ERR_HW_DM_DC_LOW">
     <Title>Gleichstromanschlussspannung zu gering</Title>
-    <Description>Gleichrichterspannung ist zu gering für Gleichrichter an Antriebskommunikationsverbindung <arg format="%d" ordinal="4" />, Antriebsmodul <arg format="%d" ordinal="1" />. </Description>
+    <Description>Gleichrichterspannung ist zu gering für Gleichrichter an Antriebskommunikationsverbindung %d4, Antriebsmodul %d1. </Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Evtl. ist Verteilerschiene der Gleichstromverbindung falsch angeschlossen oder der 3phasige Netzstrom wird unterbrochen, während der Roboter sich im MOTOREN-EIN-Zustand befindet. Das Hauptschütz wurde evtl. auch geöffnet, während der Roboter sich im Motoren-ein-Zustand befand (wodurch der Sicherheitskreis unterbrochen wird). Die Eingangsspannung kann auch zu niedrig sein.</Causes>
-    <Actions>1) Sicherstellen, dass die Verteilerschiene der Gleichstromverbindung korrekt angeschlossen ist.<p />2) Sicherstellen, dass der Netzstrom nicht unterbrochen wurde.<p />3) Sicherstellen, dass der Sicherheitskreis nicht unterbrochen wurde.<p />4) Sicherstellen, dass die Ausgangsspannung des Netzteils am Antriebsmodul innerhalb des zulässigen Bereichs liegt (siehe Produkthandbuch).</Actions>
+    <Actions>1) Sicherstellen, dass die Verteilerschiene der Gleichstromverbindung korrekt angeschlossen ist.2) Sicherstellen, dass der Netzstrom nicht unterbrochen wurde.3) Sicherstellen, dass der Sicherheitskreis nicht unterbrochen wurde.4) Sicherstellen, dass die Ausgangsspannung des Netzteils am Antriebsmodul innerhalb des zulässigen Bereichs liegt (siehe Produkthandbuch).</Actions>
   </Message>
   <Message number="9461" eDefine="SYS_ERR_HW_DM_DC_HIGH">
     <Title>Gleichrichterspannung zu hoch</Title>
-    <Description>Die Gleichrichterspannung ist für den Gleichrichter auf Antriebskommunikationsverbindung <arg format="%d" ordinal="4" />, Antriebsmodul <arg format="%d" ordinal="1" /> zu hoch. </Description>
+    <Description>Die Gleichrichterspannung ist für den Gleichrichter auf Antriebskommunikationsverbindung %d4, Antriebsmodul %d1 zu hoch. </Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Anwenderprogramm enthält unter Umständen zu viele starke Bremsungen des Manipulators, was wahrscheinlich ist, wenn das System zusätzliche Achsen enthält. Die Bremswiderstände könnten fehlerhaft sein.</Causes>
-    <Actions>1) Entlastungswiderstände prüfen, um zu prüfen, ob diese den korrekten Widerstandswert für diese Antriebsmodulkonfiguration besitzen. <p />2) Prüfen der Widerstände auf Defekte. <p />3) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Bremsungen zu verringern.</Actions>
+    <Actions>1) Entlastungswiderstände prüfen, um zu prüfen, ob diese den korrekten Widerstandswert für diese Antriebsmodulkonfiguration besitzen. 2) Prüfen der Widerstände auf Defekte. 3) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Bremsungen zu verringern.</Actions>
   </Message>
   <Message number="9462" eDefine="SYS_ERR_HW_DM_DC_CRITICALY_HIGH">
     <Title>Gleichrichterspannung kritisch</Title>
-    <Description>Die Gleichrichterspannung für den Gleichrichter auf Antriebskommunikationsverbindung <arg format="%d" ordinal="4" />, Antriebsmodul <arg format="%d" ordinal="1" /> ist kritisch.</Description>
+    <Description>Die Gleichrichterspannung für den Gleichrichter auf Antriebskommunikationsverbindung %d4, Antriebsmodul %d1 ist kritisch.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Anwenderprogramm enthält unter Umständen zu viele starke Bremsungen des Manipulators, was wahrscheinlich ist, wenn das System zusätzliche Achsen enthält. Die Bremswiderstände könnten fehlerhaft sein.</Causes>
-    <Actions>1) Entlastungswiderstände prüfen, um zu prüfen, ob diese den korrekten Widerstandswert für diese Antriebsmodulkonfiguration besitzen. <p />2) Prüfen der Widerstände auf Defekte. <p />3) Anwenderprogramm umschreiben, um die Anzahl starker Bremsungen zu verringern.</Actions>
+    <Actions>1) Entlastungswiderstände prüfen, um zu prüfen, ob diese den korrekten Widerstandswert für diese Antriebsmodulkonfiguration besitzen. 2) Prüfen der Widerstände auf Defekte. 3) Anwenderprogramm umschreiben, um die Anzahl starker Bremsungen zu verringern.</Actions>
   </Message>
   <Message number="9463" eDefine="SYS_ERR_HW_DM_SHC_GLITCH">
     <Title>Motorphasen-Kurzschlusswarnung</Title>
-    <Description>Ein Kurzschluss wurde im Motor/Motorkabel für den Motor erkannt, der an Achse <arg format="%s" ordinal="2" /> in Antriebsmodul <arg format="%d" ordinal="1" /> angeschlossen ist. </Description>
+    <Description>Ein Kurzschluss wurde im Motor/Motorkabel für den Motor erkannt, der an Achse %s in Antriebsmodul %d1 angeschlossen ist. </Description>
     <Causes>Mögliche Ursache: Staub oder Metallfragmente haben die Kontakte oder Motorwicklungen verunreinigt.</Causes>
     <Actions>Eventuell Treiberstufe überprüfen und austauschen.</Actions>
   </Message>
   <Message number="9464" eDefine="SYS_ERR_HW_DM_SHC_ERROR">
     <Title>Kurzschluss in Motorphasenkreis</Title>
-    <Description>Motor oder Motorkabel für Achse <arg format="%s" ordinal="2" /> in Antriebsmodul <arg format="%d" ordinal="1" />, Antriebseinheit Nummer <arg format="%d" ordinal="3" />, hat einen Kurzschluss.</Description>
+    <Description>Motor oder Motorkabel für Achse %s in Antriebsmodul %d1, Antriebseinheit Nummer %d3, hat einen Kurzschluss.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Mögliche Ursache: Fehlerhafte(r) Motor oder Motorkabel. Kann auch durch Verunreinigung in den Schützen für die Kabel oder einen Fehler der Motorwicklungen verursacht werden.</Causes>
-    <Actions>1) Sicherstellen, dass das Motorkabel korrekt an die Antriebseinheit angeschlossen ist.<p />2) Kabel und Motor durch Messen ihres Widerstands prüfen. Verbindung vor dem Messen trennen.<p />3) Gegebenenfalls fehlerhafte Komponenten austauschen.</Actions>
+    <Actions>1) Sicherstellen, dass das Motorkabel korrekt an die Antriebseinheit angeschlossen ist.2) Kabel und Motor durch Messen ihres Widerstands prüfen. Verbindung vor dem Messen trennen.3) Gegebenenfalls fehlerhafte Komponenten austauschen.</Actions>
   </Message>
   <Message number="9465" eDefine="SYS_ERR_HW_DM_MAX_MEAS_CURR_GLITCH">
     <Title>Motorstromwarnung</Title>
-    <Description>Der Motorstrom für Achse <arg format="%s" ordinal="2" /> in Antriebsmodul <arg format="%s" ordinal="1" />, Antriebseinheit Nummer <arg format="%d" ordinal="3" />, ist höher als zulässig.</Description>
+    <Description>Der Motorstrom für Achse %s in Antriebsmodul %s, Antriebseinheit Nummer %d3, ist höher als zulässig.</Description>
     <Consequences>-</Consequences>
     <Causes>Eventuell ist die Motorlast zu hoch oder der Motor wurde gestoppt (vielleicht wegen einer Kollision). </Causes>
-    <Actions>1) Prüfen, ob der Roboter kollidiert ist. <p />2) Falls möglich, Reduzierung der Geschwindigkeit des Anwenderprogramms. <p />3) Wenn es sich um eine zusätzliche Achse handelt, sicherstellen, dass die Motorlast nicht zu hoch für die Antriebseinheit ist.</Actions>
+    <Actions>1) Prüfen, ob der Roboter kollidiert ist. 2) Falls möglich, Reduzierung der Geschwindigkeit des Anwenderprogramms. 3) Wenn es sich um eine zusätzliche Achse handelt, sicherstellen, dass die Motorlast nicht zu hoch für die Antriebseinheit ist.</Actions>
   </Message>
   <Message number="9466" eDefine="SYS_ERR_HW_DM_MAX_MEAS_CURR">
     <Title>Motorstrom Überlastung</Title>
-    <Description>Der Motorstrom für Achse <arg format="%s" ordinal="2" /> in Antriebsmodul <arg format="%d" ordinal="1" />, Antriebseinheit Nummer <arg format="%d" ordinal="3" />, ist zu hoch.</Description>
+    <Description>Der Motorstrom für Achse %s in Antriebsmodul %d1, Antriebseinheit Nummer %d3, ist zu hoch.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Evtl. ist die Motorlast zu hoch oder der Motor wurde gestoppt (vielleicht wegen einer Kollision). </Causes>
-    <Actions>1) Prüfen, ob der Roboter kollidiert ist. <p />2) Falls möglich, Reduzierung der Geschwindigkeit des Anwenderprogramms. <p />3) Wenn es sich um eine zusätzliche Achse handelt, sicherstellen, dass die Motorlast nicht zu hoch für die Antriebseinheit ist.</Actions>
+    <Actions>1) Prüfen, ob der Roboter kollidiert ist. 2) Falls möglich, Reduzierung der Geschwindigkeit des Anwenderprogramms. 3) Wenn es sich um eine zusätzliche Achse handelt, sicherstellen, dass die Motorlast nicht zu hoch für die Antriebseinheit ist.</Actions>
   </Message>
   <Message number="9467" eDefine="SYS_ERR_HW_DM_TEMP_WARN">
     <Title>Antriebseinheit Temperaturwarnung</Title>
-    <Description>Die Temperatur in Antriebseinheit Nummer <arg format="%d" ordinal="3" />, Antriebsmodul <arg format="%d" ordinal="1" /> ist über die Warnungsstufe gestiegen, die die niedrigste von drei anomalen Stufen darstellt.</Description>
+    <Description>Die Temperatur in Antriebseinheit Nummer %d3, Antriebsmodul %d1 ist über die Warnungsstufe gestiegen, die die niedrigste von drei anomalen Stufen darstellt.</Description>
     <Causes>Die Umgebungstemperatur ist gegebenenfalls zu hoch, die Lüfter sind defekt oder das Anwenderprogramm verbraucht mehr Strom als das Antriebssystem liefern kann.</Causes>
-    <Actions>1) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. <p />2) Prüfen, ob die Umgebungstemperatur die Schrank-Klassifizierung übersteigt. <p />3) Beinhaltet das System zusätzliche Achsen, prüfen, ob die Motoren für die Antriebseinheiten zu groß sind. <p />4) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
+    <Actions>1) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. 2) Prüfen, ob die Umgebungstemperatur die Schrank-Klassifizierung übersteigt. 3) Beinhaltet das System zusätzliche Achsen, prüfen, ob die Motoren für die Antriebseinheiten zu groß sind. 4) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
   </Message>
   <Message number="9468" eDefine="SYS_ERR_HW_DM_TEMP_ALARM">
     <Title>Antriebseinheit Temperaturalarm</Title>
-    <Description>Die Temperatur in Antriebseinheit Nummer <arg format="%d" ordinal="3" />, Antriebsmodul <arg format="%d" ordinal="1" /> ist über die Alarmstufe gestiegen, die die zweite von drei anomalen Stufen darstellt.</Description>
+    <Description>Die Temperatur in Antriebseinheit Nummer %d3, Antriebsmodul %d1 ist über die Alarmstufe gestiegen, die die zweite von drei anomalen Stufen darstellt.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Die Umgebungstemperatur ist gegebenenfalls zu hoch, die Lüfter sind defekt oder das Anwenderprogramm verbraucht mehr Strom als das Antriebssystem liefern kann.</Causes>
-    <Actions>1) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. <p />2) Prüfen, ob die Umgebungstemperatur die Schrank-Klassifizierung übersteigt. <p />3) Beinhaltet das System zusätzliche Achsen, prüfen, ob die Motoren für die Antriebseinheiten zu groß sind. <p />4) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
+    <Actions>1) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. 2) Prüfen, ob die Umgebungstemperatur die Schrank-Klassifizierung übersteigt. 3) Beinhaltet das System zusätzliche Achsen, prüfen, ob die Motoren für die Antriebseinheiten zu groß sind. 4) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
   </Message>
   <Message number="9469" eDefine="SYS_ERR_HW_DM_TEMP_ERROR">
     <Title>Antriebseinheit Temperatur kritisch</Title>
-    <Description>Die Temperatur in Antriebseinheit Nummer <arg format="%d" ordinal="3" />, Antriebsmodul <arg format="%d" ordinal="1" /> ist über den kritischen Bereich gestiegen, die die höchste von drei anomalen Stufen darstellt.</Description>
+    <Description>Die Temperatur in Antriebseinheit Nummer %d3, Antriebsmodul %d1 ist über den kritischen Bereich gestiegen, die die höchste von drei anomalen Stufen darstellt.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Die Umgebungstemperatur ist gegenenenfalls zu hoch, die Lüfter sind defekt oder das Anwenderprogramm verbraucht mehr Strom als das Antriebssystem liefern kann.</Causes>
-    <Actions>1) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. <p />2) Prüfen, ob die Umgebungstemperatur die Schrank-Klassifizierung übersteigt. <p />3) Beinhaltet das System zusätzliche Achsen, prüfen, ob die Motoren für die Antriebseinheiten zu groß sind. <p />4) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
+    <Actions>1) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. 2) Prüfen, ob die Umgebungstemperatur die Schrank-Klassifizierung übersteigt. 3) Beinhaltet das System zusätzliche Achsen, prüfen, ob die Motoren für die Antriebseinheiten zu groß sind. 4) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
   </Message>
   <Message number="9470" eDefine="SYS_ERR_HW_DM_PDEV_WARN">
     <Title>Warnung Leistungshalbleiter</Title>
-    <Description>Der Leistungshalbleiter für Achse <arg format="%s" ordinal="2" /> in Antriebseinheiten-Nummer <arg format="%d" ordinal="3" />, Antriebsmodul <arg format="%d" ordinal="1" />, nähert sich Überlastung.</Description>
+    <Description>Der Leistungshalbleiter für Achse %s in Antriebseinheiten-Nummer %d3, Antriebsmodul %d1, nähert sich Überlastung.</Description>
     <Causes>Die Motorbelastung könnte zu hoch sein, der Motor wurde gestoppt (eventuell aufgrund einer Kollision), die Motorbelastung ist eventuell zu hoch oder es ist keine ausreichende Kühlung vorhanden.</Causes>
-    <Actions>1) Prüfen, ob der Roboter kollidiert ist. <p />2) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. <p />3) Prüfen, ob die Umgebungstemperatur die Schrank-Klassifizierung übersteigt. <p />4) Beinhaltet das System zusätzliche Achsen, prüfen, ob die Motoren für die Antriebseinheiten zu groß sind. <p />5) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
+    <Actions>1) Prüfen, ob der Roboter kollidiert ist. 2) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. 3) Prüfen, ob die Umgebungstemperatur die Schrank-Klassifizierung übersteigt. 4) Beinhaltet das System zusätzliche Achsen, prüfen, ob die Motoren für die Antriebseinheiten zu groß sind. 5) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
   </Message>
   <Message number="9471" eDefine="SYS_ERR_HW_DM_PDEV_ERROR">
     <Title>Leistungshalbleiter Überlastungsfehler</Title>
-    <Description>Der Leistungshalbleiter für Achse <arg format="%s" ordinal="2" /> in Antriebseinheiten-Nummer <arg format="%d" ordinal="3" />, Antriebsmodul <arg format="%d" ordinal="1" />, wurde überlastet.</Description>
+    <Description>Der Leistungshalbleiter für Achse %s in Antriebseinheiten-Nummer %d3, Antriebsmodul %d1, wurde überlastet.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Die Motorbelastung könnte zu hoch sein, der Motor wurde gestoppt (eventuell aufgrund einer Kollision), die Motorbelastung ist eventuell zu hoch oder es ist keine ausreichende Kühlung vorhanden.</Causes>
-    <Actions>1) Prüfen, ob der Roboter kollidiert ist. <p />2) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. <p />3) Prüfen, ob die Umgebungstemperatur die Schrank-Klassifizierung übersteigt. <p />4) Beinhaltet das System zusätzliche Achsen, prüfen, ob die Motoren für die Antriebseinheiten zu groß sind. <p />5) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
+    <Actions>1) Prüfen, ob der Roboter kollidiert ist. 2) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. 3) Prüfen, ob die Umgebungstemperatur die Schrank-Klassifizierung übersteigt. 4) Beinhaltet das System zusätzliche Achsen, prüfen, ob die Motoren für die Antriebseinheiten zu groß sind. 5) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
   </Message>
   <Message number="9472" eDefine="SYS_ERR_HW_DM_INCOMING_PHASE_MISSING">
     <Title>Netzspannungsphase fehlt</Title>
-    <Description>Der Gleichrichter an Kommunikationsverbindung <arg format="%d" ordinal="4" /> in Antriebsmodul <arg format="%d" ordinal="1" /> erkennt einen Leistungsverlust in einer Phase.</Description>
+    <Description>Der Gleichrichter an Kommunikationsverbindung %d4 in Antriebsmodul %d1 erkennt einen Leistungsverlust in einer Phase.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Mögliche Ursachen: Netzsspannungsausfall oder eine Fehlfunktion in den MOTOREN EIN-Schützen oder ihrer Verkabelung oder in einem anderen Teil des Drehstromnetzes im Steuerungsschrank. In seltenen Fällen kann dieser Fehler zusammen mit anderen Fehlern auftreten, was dann im Fehlerprotokoll aufgezeichnet ist.</Causes>
-    <Actions>1) Sicherstellen, dass der Netzschalter geschlossen ist und die Netzspannung anliegt. Keine Spannung bedeutet, dass das Problem im Netzkabel oder der Werkstattstromversorgung zu suchen ist.<p />2) Falls die Spannung in Ordnung ist, das Eingangsnetzkabel abziehen und den Widerstand aller drei Phasen für alle Komponenten im Drehstromnetz messen. Beim Schütz mit dem geringsten Abstand zum Gleichrichter beginnen und sich zum Netzschalter hin vorarbeiten. Die Schütze können manuell geschlossen werden, um den Test durchzuführen. Elektrische Schaltpläne des Steuerungsschranks konsultieren.<p />3) Anzeige-LEDs an Gleichrichtereinheit prüfen. Deren Bedeutung wird im Handbuch zur Fehlerbehebung beschrieben. <p />4) Wenn die Spannung in Ordnung ist, gegenenenfalls andere gleichzeitige Meldungen im Fehlerprotokoll auf Hinweise prüfen.</Actions>
+    <Actions>1) Sicherstellen, dass der Netzschalter geschlossen ist und die Netzspannung anliegt. Keine Spannung bedeutet, dass das Problem im Netzkabel oder der Werkstattstromversorgung zu suchen ist.2) Falls die Spannung in Ordnung ist, das Eingangsnetzkabel abziehen und den Widerstand aller drei Phasen für alle Komponenten im Drehstromnetz messen. Beim Schütz mit dem geringsten Abstand zum Gleichrichter beginnen und sich zum Netzschalter hin vorarbeiten. Die Schütze können manuell geschlossen werden, um den Test durchzuführen. Elektrische Schaltpläne des Steuerungsschranks konsultieren.3) Anzeige-LEDs an Gleichrichtereinheit prüfen. Deren Bedeutung wird im Handbuch zur Fehlerbehebung beschrieben. 4) Wenn die Spannung in Ordnung ist, gegenenenfalls andere gleichzeitige Meldungen im Fehlerprotokoll auf Hinweise prüfen.</Actions>
   </Message>
   <Message number="9473" eDefine="SYS_ERR_HW_DM_MAINS_MISISNG">
     <Title>Alle Netzspannungsphasen fehlen</Title>
-    <Description>Der Gleichrichter an Kommunikationsverbindung <arg format="%d" ordinal="4" /> in Antriebsmodul <arg format="%d" ordinal="1" /> erkennt einen Leistungsverlust in einer oder mehreren Phasen.</Description>
+    <Description>Der Gleichrichter an Kommunikationsverbindung %d4 in Antriebsmodul %d1 erkennt einen Leistungsverlust in einer oder mehreren Phasen.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Mögliche Ursachen: Netzstromausfall oder eine Fehlfunktion in den MOTOREN EIN-Schützen oder ihrer Verkabelung oder in einem anderen Teil des Drehstromnetzes im Steuerungsschrank. In seltenen Fällen kann dieser Fehler zusammen mit anderen Fehlern auftreten, was dann im Fehlerprotokoll aufgezeichnet ist.</Causes>
-    <Actions>1) Sicherstellen, dass der Netzschalter geschlossen ist und die Netzspannung anliegt. Keine Spannung bedeutet, dass das Problem im Netzkabel oder der Werkstattstromversorgung zu suchen ist.<p />2) Falls die Spannung in Ordnung ist, das Eingangsnetzkabel abziehen und den Widerstand aller drei Phasen für alle Komponenten im Drehstromnetz messen. Beim Schütz mit dem geringsten Abstand zum Gleichrichter beginnen und sich zum Netzschalter hin vorarbeiten. Die Schütze können manuell geschlossen werden, um den Test durchzuführen. Elektrische Schaltpläne des Steuerungsschranks konsultieren.<p />3) Anzeige-LEDs an Gleichrichtereinheit prüfen. Deren Bedeutung wird im Handbuch zur Fehlerbehebung beschrieben. <p />4) Wenn die Spannung in Ordnung ist, gegenenenfalls andere gleichzeitige Meldungen im Fehlerprotokoll auf Hinweise prüfen.<p /></Actions>
+    <Actions>1) Sicherstellen, dass der Netzschalter geschlossen ist und die Netzspannung anliegt. Keine Spannung bedeutet, dass das Problem im Netzkabel oder der Werkstattstromversorgung zu suchen ist.2) Falls die Spannung in Ordnung ist, das Eingangsnetzkabel abziehen und den Widerstand aller drei Phasen für alle Komponenten im Drehstromnetz messen. Beim Schütz mit dem geringsten Abstand zum Gleichrichter beginnen und sich zum Netzschalter hin vorarbeiten. Die Schütze können manuell geschlossen werden, um den Test durchzuführen. Elektrische Schaltpläne des Steuerungsschranks konsultieren.3) Anzeige-LEDs an Gleichrichtereinheit prüfen. Deren Bedeutung wird im Handbuch zur Fehlerbehebung beschrieben. 4) Wenn die Spannung in Ordnung ist, gegenenenfalls andere gleichzeitige Meldungen im Fehlerprotokoll auf Hinweise prüfen.</Actions>
   </Message>
   <Message number="9474" eDefine="SYS_ERR_HW_DM_MAINS_CURR_WARN">
     <Title>Gleichrichterstromwarnung</Title>
-    <Description>Der mit Antriebskomm.-Verbindung <arg format="%d" ordinal="4" /> in Antriebsmodul <arg format="%d" ordinal="1" /> verbundene Gleichrichter nähert sich einer Überlast.</Description>
+    <Description>Der mit Antriebskomm.-Verbindung %d4 in Antriebsmodul %d1 verbundene Gleichrichter nähert sich einer Überlast.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Evtl. ist der Motorstrom insgesamt größer als der Strom, den der Gleichrichter liefern kann.</Causes>
     <Actions>1) Anwenderprogramm gegebenenfalls umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
   </Message>
   <Message number="9475" eDefine="SYS_ERR_HW_DM_MAINS_OVERLOAD">
     <Title>Gleichrichterstromfehler</Title>
-    <Description>Der mit Antriebskomm.-Verbindung <arg format="%d" ordinal="4" /> in Antriebsmodul <arg format="%d" ordinal="1" /> verbundene Gleichrichter ist überlastet.</Description>
+    <Description>Der mit Antriebskomm.-Verbindung %d4 in Antriebsmodul %d1 verbundene Gleichrichter ist überlastet.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Evtl. ist der Motorstrom insgesamt größer als der Strom, den der Gleichrichter liefern kann.</Causes>
     <Actions>1) Anwenderprogramm gegebenenfalls umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
   </Message>
   <Message number="9476" eDefine="SYS_ERR_HW_DM_RECTIFIER_TEMP_WARN">
     <Title>Warnung Gleichrichtertemperatur</Title>
-    <Description>Die Temperatur in der mit der Antriebskommunikationsverbindung <arg format="%d" ordinal="4" /> verbundenen Gleichrichtereinheit in Antriebsmodul <arg format="%d" ordinal="1" /> erreicht einen zu hohen Wert. </Description>
+    <Description>Die Temperatur in der mit der Antriebskommunikationsverbindung %d4 verbundenen Gleichrichtereinheit in Antriebsmodul %d1 erreicht einen zu hohen Wert. </Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Die Lüfter könnten defekt sein oder der Luftstrom ist behindert. Die Umgebungstemperatur könnte zu hoch sein oder das System läuft über zu lange Zeiträume mit zu hoher Belastung.</Causes>
-    <Actions>1) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. <p />2) Prüfen, ob die Umgebungstemperatur die Schrank-Klassifizierung übersteigt. <p />3) Beinhaltet das System zusätzliche Achsen, prüfen, ob die Motoren für die Antriebseinheiten zu groß sind. <p />4) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
+    <Actions>1) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. 2) Prüfen, ob die Umgebungstemperatur die Schrank-Klassifizierung übersteigt. 3) Beinhaltet das System zusätzliche Achsen, prüfen, ob die Motoren für die Antriebseinheiten zu groß sind. 4) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
   </Message>
   <Message number="9477" eDefine="SYS_ERR_HW_DM_RECTIFIER_TEMP_ERROR">
     <Title>Gleichrichter Temperaturfehler</Title>
-    <Description>Die Temperatur in der mit der Antriebskommunikationsverbindung <arg format="%d" ordinal="4" /> verbundenen Gleichrichtereinheit in Antriebsmodul <arg format="%d" ordinal="1" /> hat einen zu hohen Wert erreicht. </Description>
+    <Description>Die Temperatur in der mit der Antriebskommunikationsverbindung %d4 verbundenen Gleichrichtereinheit in Antriebsmodul %d1 hat einen zu hohen Wert erreicht. </Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Die Lüfter könnten defekt sein oder der Luftstrom ist behindert. Die Umgebungstemperatur könnte zu hoch sein oder das System läuft über zu lange Zeiträume mit zu hoher Belastung.</Causes>
-    <Actions>1) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. <p />2) Prüfen, ob die Umgebungstemperatur die Schrank-Klassifizierung übersteigt. <p />3) Beinhaltet das System zusätzliche Achsen, prüfen, ob die Motoren für die Antriebseinheiten zu groß sind. <p />4) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
+    <Actions>1) Prüfen, ob die Lüfter funktionieren und dass der Luftstrom nicht behindert ist. 2) Prüfen, ob die Umgebungstemperatur die Schrank-Klassifizierung übersteigt. 3) Beinhaltet das System zusätzliche Achsen, prüfen, ob die Motoren für die Antriebseinheiten zu groß sind. 4) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
   </Message>
   <Message number="9478" eDefine="SYS_ERR_HW_DM_PTC_INT_ERROR">
     <Title>Interner Motor-PTC-Temperaturfehler</Title>
-    <Description>Die Temperatur in einem oder mehreren mit Antriebsmodul <arg format="%d" ordinal="1" /> verbundenen Robotermotor(en) hat einen zu hohen Wert erreicht. </Description>
+    <Description>Die Temperatur in einem oder mehreren mit Antriebsmodul %d1 verbundenen Robotermotor(en) hat einen zu hohen Wert erreicht. </Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Der Motor wurde eventuell gestoppt (eventuell aufgrund einer Kollision), die Motorbelastung ist eventuell zu hoch oder die Umgebungstemperatur ist höher als die Roboterklassifizierung. </Causes>
-    <Actions>1) Prüfen, ob der Roboter kollidiert ist. <p />2) Prüfen, ob die Umgebungstemperatur die Roboterklassifizierung übersteigt. <p />3) Den Motor abkühlen lassen und dann System wieder starten. Durch übermäßige Hitze beschädigte Motoren austauschen. <p />4) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
+    <Actions>1) Prüfen, ob der Roboter kollidiert ist. 2) Prüfen, ob die Umgebungstemperatur die Roboterklassifizierung übersteigt. 3) Den Motor abkühlen lassen und dann System wieder starten. Durch übermäßige Hitze beschädigte Motoren austauschen. 4) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
   </Message>
   <Message number="9479" eDefine="SYS_ERR_HW_DM_PTC_EXT_ERROR">
     <Title>Externer Motor-PTC-Temperaturfehler</Title>
-    <Description>Die Temperatur in einem oder mehreren mit Antriebsmodul <arg format="%d" ordinal="1" /> verbundenen Achsmotor(en) hat einen zu hohen Wert erreicht. </Description>
+    <Description>Die Temperatur in einem oder mehreren mit Antriebsmodul %d1 verbundenen Achsmotor(en) hat einen zu hohen Wert erreicht. </Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Der Motor wurde eventuell gestoppt (eventuell aufgrund einer Kollision), die Motorbelastung ist eventuell zu hoch oder die Umgebungstemperatur ist höher als die Roboterklassifizierung. </Causes>
-    <Actions>1) Prüfen, ob die zusätzliche Achse kollidiert ist. <p />2) Prüfen, ob die Umgebungstemperatur die Klassifizierung übersteigt. <p />3) Den Motor abkühlen lassen und dann System wieder starten. Durch übermäßige Hitze beschädigte Motoren austauschen. <p />4) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
+    <Actions>1) Prüfen, ob die zusätzliche Achse kollidiert ist. 2) Prüfen, ob die Umgebungstemperatur die Klassifizierung übersteigt. 3) Den Motor abkühlen lassen und dann System wieder starten. Durch übermäßige Hitze beschädigte Motoren austauschen. 4) Falls möglich, Anwenderprogramm umschreiben, um die Anzahl starker Beschleunigungen zu verringern.</Actions>
   </Message>
   <Message number="9482" eDefine="SYS_ERR_HW_DM_INCOMING_MAINS_TOO_HIGH">
     <Title>Hauptspannung zu hoch</Title>
-    <Description>Hauptspannung in Antriebsmodul <arg format="%d" ordinal="1" /> ist zu hoch.</Description>
+    <Description>Hauptspannung in Antriebsmodul %d1 ist zu hoch.</Description>
     <Consequences>Der Roboter kann nicht betrieben werden.</Consequences>
     <Causes>Evtl. ist der Haupttransformator falsch verdrahtet oder die extene Versorgungsspannung ist zu hoch.</Causes>
-    <Actions>1) Eingangsspannung an Hauptschütz in Antriebsmodul messen. Sicherstellen, dass sie im zulässigen Bereich für dieses Modul liegt.<p />2) Verdrahtung des Haupttransformators prüfen wie im Roboter-Produkthandbuch beschrieben.</Actions>
+    <Actions>1) Eingangsspannung an Hauptschütz in Antriebsmodul messen. Sicherstellen, dass sie im zulässigen Bereich für dieses Modul liegt.2) Verdrahtung des Haupttransformators prüfen wie im Roboter-Produkthandbuch beschrieben.</Actions>
   </Message>
   <Message number="9483" eDefine="SYS_ERR_DM_DC_BUS_SHORT_CIRCUIT">
     <Title>Gleichstromverbindung-Kurzschluss</Title>
-    <Description>Ein Kurzschluss wurde auf dem Gleichstromanschluss von Laufwerkmodul <arg format="%d" ordinal="1" /> ermittelt. </Description>
+    <Description>Ein Kurzschluss wurde auf dem Gleichstromanschluss von Laufwerkmodul %d1 ermittelt. </Description>
     <Consequences>Der Roboter kann nicht betrieben werden.</Consequences>
     <Causes>Die Gleichstromverteilerschiene ist evtl. falsch angeschlossen oder ihre Kontaktflächen sind verschmutzt, was einen Kurzschluss verursacht.</Causes>
-    <Actions>1) Sicherstellen, dass die Gleichstrom-Verteilerschienen korrekt angeschlossen sind.<p />2) Sicherstellen, dass alle Kontakte sauber sind.</Actions>
+    <Actions>1) Sicherstellen, dass die Gleichstrom-Verteilerschienen korrekt angeschlossen sind.2) Sicherstellen, dass alle Kontakte sauber sind.</Actions>
   </Message>
   <Message number="9484" eDefine="SYS_ERR_HW_DM_CHAIN_OPEN_ERROR">
     <Title>Betriebskreis im MOTOREN EIN-Zustand offen</Title>
-    <Description>Betriebskreis <arg format="%d" ordinal="2" /> ist offen, wenn System im Zustand MOTOREN EIN ist. Das Problem ist in Antriebssystem <arg format="%d" ordinal="1" /> aufgetreten. </Description>
+    <Description>Betriebskreis %d2 ist offen, wenn System im Zustand MOTOREN EIN ist. Das Problem ist in Antriebssystem %d1 aufgetreten. </Description>
     <Consequences>Das System schaltet in SYS_HALT.</Consequences>
-    <Causes>1) Kabel und Anschlüsse des Sicherheitssystems sind nicht eingesteckt oder beschädigt.<p />2) Das Schütz für den Betriebskreis im Antriebsmodul ist eventuell aufgrund eines mechanischen Problems im Schütz blockiert.<p />3) Auf das Hilfsschütz im Schütz wirken sich eventuell galvanische Störungen oder ein defektes Kabel des Sicherheitssystems aus.</Causes>
-    <Actions>1) Prüfen, ob ein Motorschütz blockiert ist. <p />2) Fehlerhaften Motorschütz austauschen.</Actions>
+    <Causes>1) Kabel und Anschlüsse des Sicherheitssystems sind nicht eingesteckt oder beschädigt.2) Das Schütz für den Betriebskreis im Antriebsmodul ist eventuell aufgrund eines mechanischen Problems im Schütz blockiert.3) Auf das Hilfsschütz im Schütz wirken sich eventuell galvanische Störungen oder ein defektes Kabel des Sicherheitssystems aus.</Causes>
+    <Actions>1) Prüfen, ob ein Motorschütz blockiert ist. 2) Fehlerhaften Motorschütz austauschen.</Actions>
   </Message>
   <Message number="9485" eDefine="SYS_ERR_HW_DM_CHAIN_CLOSE_ERROR">
     <Title>Betriebskreis im Zustand MOTOREN AUS geschlossen</Title>
-    <Description>Betriebskreis <arg format="%d" ordinal="2" /> ist offen, wenn System im Zustand MOTOREN EIN ist. Das Problem ist in Antriebssystem <arg format="%d" ordinal="1" /> aufgetreten. </Description>
+    <Description>Betriebskreis %d2 ist offen, wenn System im Zustand MOTOREN EIN ist. Das Problem ist in Antriebssystem %d1 aufgetreten. </Description>
     <Consequences>Das System schaltet in SYS_HALT.</Consequences>
-    <Causes>1) Das Schütz für diesen Betriebskreis im Antriebsmodul wurde manuell heruntergezogen.<p />2) Das Schütz wurde in Schließposition geschweißt. </Causes>
-    <Actions>1) Wenn das Schütz nicht gelöst wurde und in gezogener Position bleibt, System herunterfahren und Schütz austauschen.<p />2) Wenn das Schütz manuell heruntergezogen wurde, diese Meldung nur als Warnung betrachten.</Actions>
+    <Causes>1) Das Schütz für diesen Betriebskreis im Antriebsmodul wurde manuell heruntergezogen.2) Das Schütz wurde in Schließposition geschweißt. </Causes>
+    <Actions>1) Wenn das Schütz nicht gelöst wurde und in gezogener Position bleibt, System herunterfahren und Schütz austauschen.2) Wenn das Schütz manuell heruntergezogen wurde, diese Meldung nur als Warnung betrachten.</Actions>
   </Message>
   <Message number="9486" eDefine="SYS_ERR_HW_DM_DC_LINK_MISSING">
     <Title>DC Link nicht angeschlossen</Title>
-    <Description>Die DC Link-Verbindung mit dem Antriebsanschluss <arg format="%d" ordinal="2" /> im Antriebsmodul <arg format="%d" ordinal="1" />, Antriebseinheit Nr. <arg format="%d" ordinal="3" />, fehlt oder ist nicht ordnungsgemäß angeschlossen.</Description>
+    <Description>Die DC Link-Verbindung mit dem Antriebsanschluss %d2 im Antriebsmodul %d1, Antriebseinheit Nr. %d3, fehlt oder ist nicht ordnungsgemäß angeschlossen.</Description>
     <Consequences>Das System schaltet in SYS_HALT.</Consequences>
-    <Causes>1) Die Gleichspannungsbrücke fehlt oder ist nicht ordnungsgemäß angeschlossen.<p />2) Wenn die Gleichspannungsbrücke ordnungsgemäß angeschlossen ist: Die den Fehler meldende Antriebseinheit ist eventuell defekt.</Causes>
+    <Causes>1) Die Gleichspannungsbrücke fehlt oder ist nicht ordnungsgemäß angeschlossen.2) Wenn die Gleichspannungsbrücke ordnungsgemäß angeschlossen ist: Die den Fehler meldende Antriebseinheit ist eventuell defekt.</Causes>
     <Actions>1) Prüfen, ob die Gleichspannungsbrücke ordnungsgemäß an alle Antriebseinheiten angeschlossen ist.</Actions>
   </Message>
   <Message number="9500" eDefine="SYS_ERR_HW_DM_DS_LOGIC_WARN">
     <Title>Logische Spannung zu Antriebseinheit - Warnung</Title>
-    <Description>Die 24-V-Versorgung des Netzteilsdes Antriebsmoduls zur Hauptantriebseinheit in Antriebsmodul <arg format="%d" ordinal="1" /> liegt außerhalb des zulässigen Bereichs.</Description>
+    <Description>Die 24-V-Versorgung des Netzteilsdes Antriebsmoduls zur Hauptantriebseinheit in Antriebsmodul %d1 liegt außerhalb des zulässigen Bereichs.</Description>
     <Causes>Die 12-V-Versorgung des Netzteils des Antriebsmoduls liegt evtl. außerhalb des zulässigen Bereichs.</Causes>
-    <Actions>1) Sicherstellen, dass das Netzkabel des Netzteils des Antriebsmoduls zur Hauptantriebseinheit korrekt angeschlossen ist.<p />2) Prüfen, ob die LED des Netzteils rot ist. Die LEDs werden vollständig im Handbuch zur Fehlerbehebung, IRC5, beschrieben.</Actions>
+    <Actions>1) Sicherstellen, dass das Netzkabel des Netzteils des Antriebsmoduls zur Hauptantriebseinheit korrekt angeschlossen ist.2) Prüfen, ob die LED des Netzteils rot ist. Die LEDs werden vollständig im Handbuch zur Fehlerbehebung, IRC5, beschrieben.</Actions>
   </Message>
   <Message number="9501" eDefine="SYS_ERR_HW_DM_DS_LOGIC_ERROR">
     <Title>Logische Spannung zu Antriebseinheit - Fehler</Title>
-    <Description>Die 24-V-Versorgung zur Hauptantriebseinheit in Antriebsmodul <arg format="%d" ordinal="1" /> liegt außerhalb des gültigen Bereichs.</Description>
+    <Description>Die 24-V-Versorgung zur Hauptantriebseinheit in Antriebsmodul %d1 liegt außerhalb des gültigen Bereichs.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Die 12-V-Versorgung des Netzteils liegt evtl. außerhalb des zulässigen Bereichs.</Causes>
-    <Actions>1) Sicherstellen, dass das Netzkabel des Netzteils zur Hauptantriebseinheit korrekt angeschlossen ist.<p />2) Prüfen, ob die LED des Netzteils rot ist. Die LEDs werden vollständig im Handbuch zur Fehlerbehebung, IRC5, beschrieben.</Actions>
+    <Actions>1) Sicherstellen, dass das Netzkabel des Netzteils zur Hauptantriebseinheit korrekt angeschlossen ist.2) Prüfen, ob die LED des Netzteils rot ist. Die LEDs werden vollständig im Handbuch zur Fehlerbehebung, IRC5, beschrieben.</Actions>
   </Message>
   <Message number="9502" eDefine="SYS_ERR_HW_DM_RECTIFIER_LOGIC_WARN">
     <Title>Logische Spannung zu Gleichrichter - Fehler</Title>
-    <Description>Die 24-V-Versorgung zum Gleichrichter in Antriebsmodul <arg format="%d" ordinal="1" /> liegt außerhalb des zulässigen Bereichs.</Description>
+    <Description>Die 24-V-Versorgung zum Gleichrichter in Antriebsmodul %d1 liegt außerhalb des zulässigen Bereichs.</Description>
     <Causes>Evtl. ist das Kabel zwischen Antriebseinheit und Gleichrichter nicht korrekt angeschlossen oder die Eingangsspannung zur Antriebseinheit liegt außerhalb des zulässigen Bereichs.</Causes>
-    <Actions>1) Sicherstellen, dass das Netzkabel des Netzteils zur Gleichrichtereinheit korrekt angeschlossen ist.<p />2) 24-V-Spannung im Netzkabel zur Antriebseinheit prüfen.</Actions>
+    <Actions>1) Sicherstellen, dass das Netzkabel des Netzteils zur Gleichrichtereinheit korrekt angeschlossen ist.2) 24-V-Spannung im Netzkabel zur Antriebseinheit prüfen.</Actions>
   </Message>
   <Message number="9503" eDefine="SYS_ERR_HW_DM_PSU_OVERTEMP">
     <Title>Übertemperatur Netzteil</Title>
-    <Description>Die Temperatur im Netzteil des Antriebsmoduls <arg format="%d" ordinal="1" /> hat eine kritische Stufe erreicht.</Description>
+    <Description>Die Temperatur im Netzteil des Antriebsmoduls %d1 hat eine kritische Stufe erreicht.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Mögliche Ursachen: Die Lüfter sind fehlerhaft, der Luftstrom wird behindert oder die Umgebungstemperatur ist zu hoch.</Causes>
-    <Actions>1) VORSICHT! Lassen Sie die Steuerung vor einem Neustart etwa zehn Minuten lang abkühlen.<p />2) Sicherstellen, dass die Lüfter arbeiten und der Luftstrom nicht behindert ist.<p />3) Sicherstellen, dass die Umgebungstemperatur nicht die Nennwerte für das Antriebsmodul überschreitet.<p />4) Prüfen, ob die Anschlüsse des Netzteils korrekt mit dem Achscomputer verbunden sind.</Actions>
+    <Actions>1) VORSICHT! Lassen Sie die Steuerung vor einem Neustart etwa zehn Minuten lang abkühlen.2) Sicherstellen, dass die Lüfter arbeiten und der Luftstrom nicht behindert ist.3) Sicherstellen, dass die Umgebungstemperatur nicht die Nennwerte für das Antriebsmodul überschreitet.4) Prüfen, ob die Anschlüsse des Netzteils korrekt mit dem Achscomputer verbunden sind.</Actions>
   </Message>
   <Message number="9504" eDefine="SYS_ERR_HW_DM_PSU_BREAK_POWER_LOST">
     <Title>Überlastung der Stromversorgung zu den Bremsen</Title>
-    <Description>Der Bremsenstrom-Schaltkreis in Antriebsmodul <arg format="%d" ordinal="1" /> zieht zu viel Strom. </Description>
+    <Description>Der Bremsenstrom-Schaltkreis in Antriebsmodul %d1 zieht zu viel Strom. </Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Das Bremsenstrom-Kabel kann defekt sein (Kurzschluss) oder zusätzliche Achsmotoren mit Bremsen, die zu viel Strom verbrauchen, werden verwendet. Der Fehler tritt gegebenenfalls auch auf, wenn das Kabel der Stromversorgung nicht richtig an das Antriebsmodul angeschlossen ist.</Causes>
-    <Actions>1) Sicherstellen, dass das Stromversorgungskabel korrekt an das Antriebsmodul angeschlossen ist. <p />2) Prüfen des Bremsenversorgungskabels auf Kurzschlüsse. <p />3) Sicherstellen, dass der durch zusätzliche Achsmotoren verbrauchte Gesamtstrom nicht die Spezifikationen für das Antriebsmodul übersteigt. <p />4) Prüfen, ob Stromanschlüsse korrekt mit dem Achsencomputer verbunden sind, <p />5) Sicherstellen, dass die Spannung 24V BRAKE sich innerhalb der Spezifikationsgrenzen befindet. Siehe Schaltplan im Produkthandbuch IRC5.</Actions>
+    <Actions>1) Sicherstellen, dass das Stromversorgungskabel korrekt an das Antriebsmodul angeschlossen ist. 2) Prüfen des Bremsenversorgungskabels auf Kurzschlüsse. 3) Sicherstellen, dass der durch zusätzliche Achsmotoren verbrauchte Gesamtstrom nicht die Spezifikationen für das Antriebsmodul übersteigt. 4) Prüfen, ob Stromanschlüsse korrekt mit dem Achsencomputer verbunden sind, 5) Sicherstellen, dass die Spannung 24V BRAKE sich innerhalb der Spezifikationsgrenzen befindet. Siehe Schaltplan im Produkthandbuch IRC5.</Actions>
   </Message>
   <Message number="9505" eDefine="SYS_ERR_HW_DM_PSU_INCOMING_MAINS_LOST">
     <Title>Hauptspannung zu Netzteil ausgefallen</Title>
-    <Description>Die Hauptspannungsversorgung zum Netzteil in Antriebsmodul <arg format="%d" ordinal="1" /> ist ausgefallen.</Description>
+    <Description>Die Hauptspannungsversorgung zum Netzteil in Antriebsmodul %d1 ist ausgefallen.</Description>
     <Consequences>Bis zur Korrektur des Fehlers ist keine Operation möglich. Das System geht in den Zustand SYS_FEHLER.</Consequences>
     <Causes>Der Netzschalter am Antriebsmodul wurde evtl. abgeschaltet. Das Eingangsstromkabel ist evtl. fehlerhaft (unterbrochen) oder der Unterbrecher für das Netzteil wurde ausgelöst. Oder der Anschluss des Netzteils ist nicht korrekt mit dem Achscomputer verbunden.</Causes>
-    <Actions>1) Prüfen, ob der Hauptschalter für das Antriebsmodul eingeschaltet ist, und System neu starten.<p />2) Prüfen, ob der Anschluss des Netzteils korrekt mit dem Achscomputer verbunden ist.<p /> 3) Spannung an Hauptschütz prüfen, um sicherzustellen, dass Netzstrom vorhanden ist.<p /> 4) Prüfen, ob Netzteilsicherungen/Sicherungsautomaten im Antriebsmodul ausgelöst wurden.<p /></Actions>
+    <Actions>1) Prüfen, ob der Hauptschalter für das Antriebsmodul eingeschaltet ist, und System neu starten.2) Prüfen, ob der Anschluss des Netzteils korrekt mit dem Achscomputer verbunden ist. 3) Spannung an Hauptschütz prüfen, um sicherzustellen, dass Netzstrom vorhanden ist. 4) Prüfen, ob Netzteilsicherungen/Sicherungsautomaten im Antriebsmodul ausgelöst wurden.</Actions>
   </Message>
   <Message number="9520" eDefine="SYS_ERR_HW_AXC_COMMS_LOST">
     <Title>Kommunikation mit Antriebsmodul verloren</Title>
-    <Description>Der Hauptcomputer hat Kontakt zum Antriebsmodul <arg format="%d" ordinal="1" /> verloren. </Description>
+    <Description>Der Hauptcomputer hat Kontakt zum Antriebsmodul %d1 verloren. </Description>
     <Consequences>Das System geht in den Zustand SYS HALT. Bis zur Korrektur des Fehlers ist keine Operation möglich.</Consequences>
     <Causes>Mögliche Ursachen: Kabelunterbrechung, nicht korrekt verbundener Anschluss oder starke Interferenzen im Kabel.</Causes>
-    <Actions>1) Sicherstellen, dass das Kabel zwischen Steuerungsmodul und Antriebsmodul unbeschädigt ist und beide Enden korrekt angeschlossen sind.<p />2) Sicherstellen, dass keine extremen elektromagnetischen Interferenzen in der Nähe der Roboterkabel erzeugt werden.</Actions>
+    <Actions>1) Sicherstellen, dass das Kabel zwischen Steuerungsmodul und Antriebsmodul unbeschädigt ist und beide Enden korrekt angeschlossen sind.2) Sicherstellen, dass keine extremen elektromagnetischen Interferenzen in der Nähe der Roboterkabel erzeugt werden.</Actions>
   </Message>
   <Message number="9521" eDefine="SYS_ERR_HW_AXC_COMMS_WARNING">
     <Title>Antriebsmodul-Kommunikationswarnung</Title>
-    <Description>Auf der Ethernet-Verbindung zum Antriebsmodul <arg format="%d" ordinal="1" /> wird eine große Anzahl an Kommunikationsfehlern erkannt. <p /><p />Mögliche Ursache: Externe Störquellen verursachen Interferenzen im Kabel.<p /><p /></Description>
+    <Description>Auf der Ethernet-Verbindung zum Antriebsmodul %d1 wird eine große Anzahl an Kommunikationsfehlern erkannt. Mögliche Ursache: Externe Störquellen verursachen Interferenzen im Kabel.</Description>
     <Actions>Sicherstellen, dass sich keine elektromagnetischen Störquellen in der Nähe des Kabels, des Antriebsmoduls oder des Computermoduls befinden.</Actions>
   </Message>
   <Message number="9522" eDefine="SYS_ERR_HW_AXC_BOARD_NOT_FOUND">
     <Title>Achscomputer nicht gefunden</Title>
-    <Description>Der Achscomputer in Antriebsmodul <arg format="%d" ordinal="1" /> ist nicht mit dem Hauptcomputer verbunden.</Description>
+    <Description>Der Achscomputer in Antriebsmodul %d1 ist nicht mit dem Hauptcomputer verbunden.</Description>
     <Consequences>Das System geht in den Zustand SYS_FEHLER. Bis zur Korrektur des Fehlers ist keine Operation möglich.</Consequences>
     <Causes>Mögliche Ursachen: Kabelunterbrechung, nicht korrekt verbundene Anschlüsse oder unterbrochene Stromversorgung.</Causes>
-    <Actions>1) Sicherstellen, dass der Netzschalter am Antriebsmodul <arg format="%d" ordinal="1" /> in der Stellung EIN ist.<p />2) Sicherstellen, dass das Kabel zwischen Steuerungsmodul und Antriebsmodul unbeschädigt ist und beide Enden korrekt angeschlossen sind.<p />3) Sicherstellen, dass das Kabel mit dem korrekten AXC-Anschluss an der Roboterkommunikations- bzw. EtherNet-Karte (falls MultiMove installiert wurde) des Hauptcomputers verbunden ist.<p />4) System neu starten.<p />5) Prüfen, ob das Netzteil in Antriebsmodul <arg format="%d" ordinal="1" /> korrekt arbeitet.<p /></Actions>
+    <Actions>1) Sicherstellen, dass der Netzschalter am Antriebsmodul %d1 in der Stellung EIN ist.2) Sicherstellen, dass das Kabel zwischen Steuerungsmodul und Antriebsmodul unbeschädigt ist und beide Enden korrekt angeschlossen sind.3) Sicherstellen, dass das Kabel mit dem korrekten AXC-Anschluss an der Roboterkommunikations- bzw. EtherNet-Karte (falls MultiMove installiert wurde) des Hauptcomputers verbunden ist.4) System neu starten.5) Prüfen, ob das Netzteil in Antriebsmodul %d1 korrekt arbeitet.</Actions>
   </Message>
   <Message number="9523" eDefine="SYS_ERR_HW_AXC_BOARD_NOT_USED">
     <Title>Unbenutzter Achscomputer angeschlossen</Title>
-    <Description>Der Achscomputer in Antriebsmodul <arg format="%d" ordinal="1" /> ist mit dem Hauptcomputer verbunden, aber nicht in Gebrauch.</Description>
+    <Description>Der Achscomputer in Antriebsmodul %d1 ist mit dem Hauptcomputer verbunden, aber nicht in Gebrauch.</Description>
     <Causes>Ursache kann ein Konfigurationsproblem sein.</Causes>
-    <Actions>1. Unbenutzten Achscomputer trennen oder System so einrichten, dass der Achscomputer benutzt wird.<p />2. System neu starten.<p /></Actions>
+    <Actions>1. Unbenutzten Achscomputer trennen oder System so einrichten, dass der Achscomputer benutzt wird.2. System neu starten.</Actions>
   </Message>
   <Message number="9524" eDefine="SYS_ERR_HW_DM_CMD_TIMEOUT">
     <Title>Befehlstimeout an Antriebsmodul</Title>
-    <Description>Antriebsmodul <arg format="%d" ordinal="1" /> reagiert nicht auf Befehl <arg format="%d" ordinal="2" />. Das System hat das Programm aus Sicherheitsgründen angehalten.<p /><p /></Description>
-    <Actions>1. Prüfen, ob Antriebsmodul eingeschaltet ist.<p />2. Kabel zwischen Hauptcomputer und Achscomputer prüfen.<p /> 3. Neustart des Systems </Actions>
+    <Description>Antriebsmodul %d1 reagiert nicht auf Befehl %d2. Das System hat das Programm aus Sicherheitsgründen angehalten.</Description>
+    <Actions>1. Prüfen, ob Antriebsmodul eingeschaltet ist.2. Kabel zwischen Hauptcomputer und Achscomputer prüfen. 3. Neustart des Systems </Actions>
   </Message>
   <Message number="9525" eDefine="SYS_ERR_HW_AXC_STARTUP_ERROR">
     <Title>Startfehler Antriebsmodul</Title>
-    <Description>Die Initialisierung der Antriebsmoduls <arg format="%d" ordinal="1" /> durch das System konnte nicht abgeschlossen werden. </Description>
+    <Description>Die Initialisierung der Antriebsmoduls %d1 durch das System konnte nicht abgeschlossen werden. </Description>
     <Consequences>Das System hat in den Zustand Systemfehler gewechselt. </Consequences>
     <Causes>Die Initialisierung des Antriebsmoduls durch das System konnte nicht abgeschlossen werden.</Causes>
-    <Actions>1) Erneut versuchen durch Neustarten des Systems mit dem Netzschalter.<p />2) Andere Meldungen des Hardware-Ereignisprotokolls prüfen. </Actions>
+    <Actions>1) Erneut versuchen durch Neustarten des Systems mit dem Netzschalter.2) Andere Meldungen des Hardware-Ereignisprotokolls prüfen. </Actions>
   </Message>
   <Message number="9530" eDefine="SYS_ERR_HW_AXC_CB_COMMS_LOST">
     <Title>Kommunikationsverlust Achscomputer - Sicherheitssystem</Title>
-    <Description>Verbindung zwischen Achscomputer und Sicherheitssystem in Antriebsmodul <arg format="%d" ordinal="1" /> wurde unterbrochen. </Description>
+    <Description>Verbindung zwischen Achscomputer und Sicherheitssystem in Antriebsmodul %d1 wurde unterbrochen. </Description>
     <Consequences>Das System schaltet in den Zustand SYS FAIL.</Consequences>
     <Causes>Die Ursache ist möglicherweise ein defektes Kommunikationskabel oder eine defekte Verbindung zwischen Achscomputer und Sicherheitssystem. Eventuell liegt auch eine starke Interferenz vor oder die Stromversorgung des Sicherheitssystems wurde unterbrochen.</Causes>
-    <Actions>1) Sicherstellen, dass das Kabel zwischen Achscomputer und Sicherheitssystem intakt und korrekt angeschlossen ist. <p />2) Stromversorgung des Sicherheitssystems prüfen.<p />3) Sicherstellen, dass keine extremen elektromagnetischen Interferenzen in der Nähe der Roboterkabel erzeugt werden.</Actions>
+    <Actions>1) Sicherstellen, dass das Kabel zwischen Achscomputer und Sicherheitssystem intakt und korrekt angeschlossen ist. 2) Stromversorgung des Sicherheitssystems prüfen.3) Sicherstellen, dass keine extremen elektromagnetischen Interferenzen in der Nähe der Roboterkabel erzeugt werden.</Actions>
   </Message>
   <Message number="9531" eDefine="SYS_ERR_HW_CB_GLITCH_TEST_NOT_OK">
     <Title>Störimpulstest für Betriebskreis wird nicht ausgeführt</Title>
-    <Description>Der Störimpulstest für den Betriebskreis wurde nicht durchgeführt. Das Problem wurde vom Sicherheitssystem, das mit dem Achscomputer in Antriebsmodul <arg format="%d" ordinal="1" /> verbunden ist, erkannt. </Description>
+    <Description>Der Störimpulstest für den Betriebskreis wurde nicht durchgeführt. Das Problem wurde vom Sicherheitssystem, das mit dem Achscomputer in Antriebsmodul %d1 verbunden ist, erkannt. </Description>
     <Consequences>Das System schaltet in den Zustand SYS HALT.</Consequences>
     <Causes>Ursache hierfür können interne Fehler sein.</Causes>
     <Actions>Kontakt zum zuständigen ABB-Support aufnehmen.</Actions>

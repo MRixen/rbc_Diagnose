@@ -3,8 +3,8 @@
   <Message number="0">
     <Title>Interner Fehler</Title>
     <Description>
-      <arg format="%s" ordinal="1" />
-      <p />
+      %s
+      
     </Description>
     <Actions />
   </Message>

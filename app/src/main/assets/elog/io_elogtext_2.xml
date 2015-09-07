@@ -2,363 +2,363 @@
 <Domain xmlns="urn:abb-robotics-elog-text" elogDomain="EIO" domainNo="7" lang="de" elogTextVersion="1.0" min="1232" max="1356">
   <Message number="1232" eDefine="SYS_EIO_PBUS_INTERNAL_SLAVE">
     <Title>Interner Slave an falschem Bus</Title>
-    <Description>Die Profibus E/A-Einheit <arg format="%s" ordinal="1" /> bei Adresse <arg format="%d" ordinal="2" /> wird als ein Internal Slave auf <arg format="%s" ordinal="3" /> deklariert. Profibus Internal Slaves können nur auf einem Profibus Feldbusadapter betrieben werden. </Description>
+    <Description>Die Profibus E/A-Einheit %s bei Adresse %d2 wird als ein Internal Slave auf %s deklariert. Profibus Internal Slaves können nur auf einem Profibus Feldbusadapter betrieben werden. </Description>
     <Consequences>Das System kann die E/A-Einheit nicht aktivieren, und es ist keine Kommunikation über den Profibus möglich.</Consequences>
-    <Causes>- Die E/A-Einheit bei Adresse <arg format="%d" ordinal="2" /> ist gegebenenfalls mit dem falschen Typ der Einheit konfiguriert worden. <p />- Die E/A-Einheit bei Adresse <arg format="%d" ordinal="2" /> ist gegebenenfalls für den Betrieb auf dem falschen Bus konfiguriert worden. </Causes>
+    <Causes>- Die E/A-Einheit bei Adresse %d2 ist gegebenenfalls mit dem falschen Typ der Einheit konfiguriert worden. - Die E/A-Einheit bei Adresse %d2 ist gegebenenfalls für den Betrieb auf dem falschen Bus konfiguriert worden. </Causes>
     <Actions>1. Systemparameter prüfen/ändern. </Actions>
   </Message>
   <Message number="1241" eDefine="SYS_EIO_UNT_TOO_MANY_UNITS_ON_BUS">
     <Title>Zu viele E/A-Einheiten am E/A-Bus</Title>
-    <Description>Die E/A-Konfiguration für E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Die Anzahl an E/A-Einheiten an E/A-Bus &lt;<arg format="%s" ordinal="2" />&gt; darf <arg format="%d" ordinal="3" /> nicht überschreiten.<p /><p />Diese E/A-Einheit wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für E/A-Einheit &lt;%s&gt; ist ungültig.Die Anzahl an E/A-Einheiten an E/A-Bus &lt;%s&gt; darf %d3 nicht überschreiten.Diese E/A-Einheit wurde abgelehnt. </Description>
     <Actions>Anzahl der definierten E/A-Einheiten reduzieren und Neustart des Systems.</Actions>
   </Message>
   <Message number="1261" eDefine="SYS_EIO_WRONG_PHY_CHANNEL">
     <Title>Transport-Ebenenfehler</Title>
-    <Description>Der physische Kanal für Transportebene <arg format="%s" ordinal="1" /> ist ungültig. </Description>
+    <Description>Der physische Kanal für Transportebene %s ist ungültig. </Description>
     <Actions>Sicherstellen, dass der physische Kanal gültig ist (siehe Handbuch).</Actions>
   </Message>
   <Message number="1262" eDefine="SYS_EIO_FIELDBUS_COMM_ERR">
     <Title>Feldbus comm. Fehler</Title>
-    <Description>Kommunikation mit '<arg format="%s" ordinal="1" />'-Master fehlgeschlagen an Einheit mit Mac ID <arg format="%d" ordinal="2" />.<p /></Description>
+    <Description>Kommunikation mit '%s'-Master fehlgeschlagen an Einheit mit Mac ID %d2.</Description>
     <Actions>1. Verbindung zum Gateway prüfen</Actions>
   </Message>
   <Message number="1263" eDefine="SYS_EIO_CAN_COMM_ERR">
     <Title>CAN comm. Fehler</Title>
-    <Description>CAN Kommunikation fehlgeschlagen aufgrund von <arg format="%s" ordinal="1" />.<p />Code: <arg format="%d" ordinal="2" /></Description>
+    <Description>CAN Kommunikation fehlgeschlagen aufgrund von %s.Code: %d2</Description>
   </Message>
   <Message number="1273" eDefine="SYS_EIO_UNT_UNKNOWN">
     <Title>E/A-Einheit Konfigurationskonflikt</Title>
-    <Description>E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; mit Adresse <arg format="%s" ordinal="2" /> ist in den Systemparametern konfiguriert, kann aber in der E/A-Bus-spezifischen Konfiguration nicht gefunden werden. </Description>
-    <Causes>1. Die E/A-Einheitenadresse in den Systemparametern unterscheidet sich von der Adresse in der E/A-Bus-spezifischen Konfiguration. <p />2. Die E/A-Einheit wurde gar nicht in der E/A-Bus-spezifischen Konfiguration konfiguriert. </Causes>
-    <Actions>1. Prüfen der E/A-Einheitenkonfiguration in Systemparametern.<p />2. E/A-Bus-spezifische Konfiguration prüfen. </Actions>
+    <Description>E/A-Einheit &lt;%s&gt; mit Adresse %s ist in den Systemparametern konfiguriert, kann aber in der E/A-Bus-spezifischen Konfiguration nicht gefunden werden. </Description>
+    <Causes>1. Die E/A-Einheitenadresse in den Systemparametern unterscheidet sich von der Adresse in der E/A-Bus-spezifischen Konfiguration. 2. Die E/A-Einheit wurde gar nicht in der E/A-Bus-spezifischen Konfiguration konfiguriert. </Causes>
+    <Actions>1. Prüfen der E/A-Einheitenkonfiguration in Systemparametern.2. E/A-Bus-spezifische Konfiguration prüfen. </Actions>
   </Message>
   <Message number="1276" eDefine="SYS_EIO_UNT_CONTACT_RESTORED">
     <Title>Kommunikation mit E/A-Einheit aufgebaut</Title>
-    <Description>Kommunikation mit E/A-Einheit aufgebaut &lt;<arg format="%s" ordinal="1" />&gt;. </Description>
+    <Description>Kommunikation mit E/A-Einheit aufgebaut &lt;%s&gt;. </Description>
   </Message>
   <Message number="1278" eDefine="SYS_EIO_FTP_PERMISSION_DENIED">
     <Title>Installationserlaubnis verweigert</Title>
-    <Description>Erlaubnis zur Installation des Verzeichnisses &lt;<arg format="%s" ordinal="1" />&gt; auf dem Server &lt;<arg format="%s" ordinal="2" />&gt; wurde verweigert. </Description>
+    <Description>Erlaubnis zur Installation des Verzeichnisses &lt;%s&gt; auf dem Server &lt;%s&gt; wurde verweigert. </Description>
     <Actions>Benutzername und Kennwort überprüfen</Actions>
   </Message>
   <Message number="1288" eDefine="SYS_EIO_FTP_MOUNT_PATH_TOO_LARGE">
     <Title>Installationspfad ist zu lang</Title>
-    <Description>Installationspfad ist zu groß Der Installationspfad besteht aus FTP-Server-Mount-Punkt und Serverpfad.<p />- Maximale Länge: &lt;<arg format="%d" ordinal="1" />&gt;<p />- Verwendetes Protokoll: &lt;<arg format="%s" ordinal="2" />&gt; </Description>
+    <Description>Installationspfad ist zu groß Der Installationspfad besteht aus FTP-Server-Mount-Punkt und Serverpfad.- Maximale Länge: &lt;%d1&gt;- Verwendetes Protokoll: &lt;%s&gt; </Description>
     <Actions>Installationspunkt oder Serverpfad des FTP-Servers ändern</Actions>
   </Message>
   <Message number="1289" eDefine="SYS_EIO_COMM_PARTITION_TOO_BIG">
     <Title>Speicherpartition ist zu groß</Title>
-    <Description>Speicherpartition für Kommunikationszwecke kann nicht zugeteilt werden Angeforderte Partition <arg format="%8d" ordinal="1" /> KB. Systempartition wird verwendet. </Description>
+    <Description>Speicherpartition für Kommunikationszwecke kann nicht zugeteilt werden Angeforderte Partition %8d1 KB. Systempartition wird verwendet. </Description>
     <Actions>commPartSize verringern</Actions>
   </Message>
   <Message number="1290" eDefine="SYS_EIO_FTP_DEVICE_ADD_ERROR">
     <Title>FTP-Gerät konnte nicht hinzugefügt werden</Title>
-    <Description>Hinzufügen des FTP-Gerätes &lt;<arg format="%s" ordinal="1" />&gt; zum Betriebssystem fehlgeschlagen.<p />Anwendungsprotokoll &lt;<arg format="%s" ordinal="2" />&gt;. </Description>
+    <Description>Hinzufügen des FTP-Gerätes &lt;%s&gt; zum Betriebssystem fehlgeschlagen.Anwendungsprotokoll &lt;%s&gt;. </Description>
     <Actions>Lokalen Pfad der Konfiguration des FTP-Geräts ändern</Actions>
   </Message>
   <Message number="1291" eDefine="SYS_EIO_FTP_DEVICE_INVALID_LOCAL_PATH">
     <Title>Ungültiger lokaler Pfad</Title>
-    <Description>Lokaler Pfad des FTP-Geräts &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig. </Description>
+    <Description>Lokaler Pfad des FTP-Geräts &lt;%s&gt; ist ungültig. </Description>
     <Actions>Lokaler Pfad muss enden mit:</Actions>
   </Message>
   <Message number="1293" eDefine="SYS_EIO_DN_C1_INPUT_SIZE_ERR">
     <Title>Ungültige Eingangsgröße</Title>
-    <Description>Auf DeviceNet E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; entspricht die Eingangsgröße von Verbindung 1 nicht der E/A-Einheit. </Description>
-    <Actions>1. Größe in Konfiguration ändern.<p />2. Modul prüfen.<p />3. Einheitentyp DN_GENERIC verwenden. </Actions>
+    <Description>Auf DeviceNet E/A-Einheit &lt;%s&gt; entspricht die Eingangsgröße von Verbindung 1 nicht der E/A-Einheit. </Description>
+    <Actions>1. Größe in Konfiguration ändern.2. Modul prüfen.3. Einheitentyp DN_GENERIC verwenden. </Actions>
   </Message>
   <Message number="1294" eDefine="SYS_EIO_DN_C1_OUTPUT_SIZE_ERR">
     <Title>Ungültige Ausgangsgröße</Title>
-    <Description>Auf DeviceNet E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; entspricht die Ausgangsgröße von Verbindung 1 nicht der E/A-Einheit. </Description>
-    <Actions>1. Größe in Konfiguration ändern.<p />2. Modul prüfen.<p />3. Einheitentyp DN_GENERIC verwenden. </Actions>
+    <Description>Auf DeviceNet E/A-Einheit &lt;%s&gt; entspricht die Ausgangsgröße von Verbindung 1 nicht der E/A-Einheit. </Description>
+    <Actions>1. Größe in Konfiguration ändern.2. Modul prüfen.3. Einheitentyp DN_GENERIC verwenden. </Actions>
   </Message>
   <Message number="1295" eDefine="SYS_EIO_DN_C2_INPUT_SIZE_ERR">
     <Title>Ungültige Eingangsgröße</Title>
-    <Description>Auf DeviceNet E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; entspricht die Eingangsgröße von Verbindung 2 nicht der E/A-Einheit.<p /></Description>
-    <Actions>1. Größe in Konfiguration ändern.<p />2. Modul prüfen.<p /></Actions>
+    <Description>Auf DeviceNet E/A-Einheit &lt;%s&gt; entspricht die Eingangsgröße von Verbindung 2 nicht der E/A-Einheit.</Description>
+    <Actions>1. Größe in Konfiguration ändern.2. Modul prüfen.</Actions>
   </Message>
   <Message number="1296" eDefine="SYS_EIO_DN_C2_OUTPUT_SIZE_ERR">
     <Title>Ungültige Ausgangsgröße</Title>
-    <Description>Auf DeviceNet E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; entspricht die Ausgangsgröße von Verbindung 2 nicht der E/A-Einheit.<p /></Description>
-    <Actions>1. Größe in Konfiguration ändern.<p />2. Modul prüfen.<p /></Actions>
+    <Description>Auf DeviceNet E/A-Einheit &lt;%s&gt; entspricht die Ausgangsgröße von Verbindung 2 nicht der E/A-Einheit.</Description>
+    <Actions>1. Größe in Konfiguration ändern.2. Modul prüfen.</Actions>
   </Message>
   <Message number="1297" eDefine="SYS_EIO_DN_CONNECTION_SUPPORT_ERR">
     <Title>Ungültiger Verbindungstyp</Title>
-    <Description>Die DeviceNet E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; unterstützt keine Verbindung mit <arg format="%s" ordinal="2" />. </Description>
-    <Actions>1. Verbindung vom Typ 1 und/oder 2 in Konfiguration ändern.<p />2. Einheitentyp DN_GENERIC verwenden. </Actions>
+    <Description>Die DeviceNet E/A-Einheit &lt;%s&gt; unterstützt keine Verbindung mit %s. </Description>
+    <Actions>1. Verbindung vom Typ 1 und/oder 2 in Konfiguration ändern.2. Einheitentyp DN_GENERIC verwenden. </Actions>
   </Message>
   <Message number="1298" eDefine="SYS_EIO_DN_MASTER_DUP_MAC_ERR">
     <Title>Doppelte Adresse</Title>
-    <Description>Die Adresse &lt;<arg format="%d" ordinal="2" />&gt; für den DeviceNet-Master auf E/A-Bus &lt;<arg format="%s" ordinal="1" />&gt; wird durch eine andere E/A-Einheit im Netzwerk verwendet. </Description>
-    <Actions>1. Master-Adresse in Konfiguration ändern.<p />2. E/A-Einheit, die die Adresse belegt, vom Netzwerk trennen.<p />3. System neu starten. </Actions>
+    <Description>Die Adresse &lt;%d2&gt; für den DeviceNet-Master auf E/A-Bus &lt;%s&gt; wird durch eine andere E/A-Einheit im Netzwerk verwendet. </Description>
+    <Actions>1. Master-Adresse in Konfiguration ändern.2. E/A-Einheit, die die Adresse belegt, vom Netzwerk trennen.3. System neu starten. </Actions>
   </Message>
   <Message number="1299" eDefine="SYS_EIO_DN_BUS_POWER_ERR">
     <Title>DeviceNet-Bus ohne Stromversorgung</Title>
     <Description>Keine 24V-Stromversorgung vom DeviceNet-Netzteil vorhanden</Description>
-    <Consequences>Keine Kommunikation auf dem DeviceNet-Bus &lt;<arg format="%s" ordinal="1" />&gt; möglich </Consequences>
+    <Consequences>Keine Kommunikation auf dem DeviceNet-Bus &lt;%s&gt; möglich </Consequences>
     <Causes>Netzteil, Kabel, Eingangsspannung zum Netzteil oder Ausgangslast können den Spannungsausfall verursachen (siehe Handbuch zur Fehlerbehebung und Schaltplan).</Causes>
-    <Actions>1. Alle Kabel zum Netzteil prüfen. <p />2. Ausgangs- und Eingangsspannungspegel messen. <p />3. Gegebenenfalls fehlerhafte E/A-Einheit austauschen. </Actions>
+    <Actions>1. Alle Kabel zum Netzteil prüfen. 2. Ausgangs- und Eingangsspannungspegel messen. 3. Gegebenenfalls fehlerhafte E/A-Einheit austauschen. </Actions>
   </Message>
   <Message number="1300" eDefine="SYS_EIO_DN_BUSERROR_WARNING_ERR">
     <Title>DeviceNet-Bus Kommunikationswarnung</Title>
-    <Description>Am DeviceNet Bus &lt;<arg format="%s" ordinal="1" />&gt; ist eine geringe Anzahl an Kommunikationsfehlern aufgetreten. </Description>
+    <Description>Am DeviceNet Bus &lt;%s&gt; ist eine geringe Anzahl an Kommunikationsfehlern aufgetreten. </Description>
     <Consequences>Der normale Betrieb wird aufrechterhalten, auch auf dem DeviceNet.</Consequences>
     <Causes>Der Fehler kann durch Interferenzen, Netzteil, Netzkabel oder Kommunikationskabel verursacht werden.</Causes>
-    <Actions>1. Sicherstellen, dass alle Abschlusswiderstände korrekt angeschlossen sind. <p />2. Sicherstellen, dass alle Kommunikationskabel und Anschlüsse korrekt arbeiten und dem empfohlenen Typ entsprechen. <p />3. Netzwerktopologie und Kabellänge prüfen. <p />4. Sicherstellen, dass das DeviceNet-Netzteil korrekt arbeitet. Gegebenenfalls fehlerhafte Einheit austauschen.<p /></Actions>
+    <Actions>1. Sicherstellen, dass alle Abschlusswiderstände korrekt angeschlossen sind. 2. Sicherstellen, dass alle Kommunikationskabel und Anschlüsse korrekt arbeiten und dem empfohlenen Typ entsprechen. 3. Netzwerktopologie und Kabellänge prüfen. 4. Sicherstellen, dass das DeviceNet-Netzteil korrekt arbeitet. Gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
   </Message>
   <Message number="1301" eDefine="SYS_EIO_DN_BUSOFF_ERR">
     <Title>Bus aus, DeviceNet Bus-Kommunikationsfehler</Title>
-    <Description>Am DeviceNet Bus &lt;<arg format="%s" ordinal="1" />&gt; ist eine hohe Anzahl an Kommunikationsfehlern aufgetreten. </Description>
+    <Description>Am DeviceNet Bus &lt;%s&gt; ist eine hohe Anzahl an Kommunikationsfehlern aufgetreten. </Description>
     <Consequences>Sämtliche Kommunikation am DeviceNet Bus wurde gestoppt.</Consequences>
     <Causes>Der Fehler kann durch Interferenzen, Netzteil, Netzkabel oder Kommunikationskabel verursacht werden.</Causes>
-    <Actions>1. Sicherstellen, dass das DeviceNet-Netzteil korrekt arbeitet. Gegebenenfalls fehlerhafte E/A-Einheit austauschen. <p />2. Sicherstellen, dass alle Abschlusswiderstände korrekt angeschlossen sind. <p />3. Sicherstellen, dass alle Kommunikationskabel und Anschlüsse korrekt arbeiten und dem empfohlenen Typ entsprechen. <p />4. Netzwerktopologie und Kabellänge prüfen. <p />5. System neu starten. </Actions>
+    <Actions>1. Sicherstellen, dass das DeviceNet-Netzteil korrekt arbeitet. Gegebenenfalls fehlerhafte E/A-Einheit austauschen. 2. Sicherstellen, dass alle Abschlusswiderstände korrekt angeschlossen sind. 3. Sicherstellen, dass alle Kommunikationskabel und Anschlüsse korrekt arbeiten und dem empfohlenen Typ entsprechen. 4. Netzwerktopologie und Kabellänge prüfen. 5. System neu starten. </Actions>
   </Message>
   <Message number="1302" eDefine="SYS_EIO_DN_NO_OPT">
     <Title>Keine DeviceNet-Option installiert</Title>
     <Description>Eine DeviceNet-Master/Slave-Karte wurde eingebaut, aber keine DeviceNet-Option installiert.</Description>
     <Consequences>Keine Kommunikation im DeviceNet möglich. Folgefehler können durch die Konfiguration von DeviceNet entstehen, wenn keine entsprechende Option installiert wurde.</Consequences>
     <Causes>Eventuell wurde versucht, die DeviceNet-Funktionalität hinzuzufügen, ohne die Option korrekt zu installieren.</Causes>
-    <Actions>1. Wenn die DeviceNet-Option erforderlich ist: neues System mit dieser Option konfigurieren und das System installieren. <p />2. Wenn die DeviceNet-Option nicht erforderlich ist: neues System ohne diese Option konfigurieren und das System installieren. </Actions>
+    <Actions>1. Wenn die DeviceNet-Option erforderlich ist: neues System mit dieser Option konfigurieren und das System installieren. 2. Wenn die DeviceNet-Option nicht erforderlich ist: neues System ohne diese Option konfigurieren und das System installieren. </Actions>
   </Message>
   <Message number="1303" eDefine="SYS_EIO_DN_VENDOR_ID_ERR">
     <Title>Ungültige DeviceNet-Anbieter-ID</Title>
-    <Description>Die von der DeviceNet-E/A-Einheit gelesene Anbieter-ID &lt;<arg format="%s" ordinal="1" />&gt; entspricht nicht dem Wert der Konfiguration des Einheiten-Typs.<p />- Konfiguration: &lt;<arg format="%d" ordinal="2" />&gt;<p />- Tatsächlich: &lt;<arg format="%d" ordinal="3" />&gt; </Description>
-    <Actions>1. Anbieter-ID in Konfiguration ändern.<p />2. Sicherstellen, dass der Typ der E/A-Einheit korrekt ist. </Actions>
+    <Description>Die von der DeviceNet-E/A-Einheit gelesene Anbieter-ID &lt;%s&gt; entspricht nicht dem Wert der Konfiguration des Einheiten-Typs.- Konfiguration: &lt;%d2&gt;- Tatsächlich: &lt;%d3&gt; </Description>
+    <Actions>1. Anbieter-ID in Konfiguration ändern.2. Sicherstellen, dass der Typ der E/A-Einheit korrekt ist. </Actions>
   </Message>
   <Message number="1304" eDefine="SYS_EIO_DN_DEVICE_TYPE_ERR">
     <Title>Ungültiger DeviceNet-Gerätetyp</Title>
-    <Description>Die von der DeviceNet-E/A-Einheit gelesene Gerätetyp-ID &lt;<arg format="%s" ordinal="1" />&gt; entspricht nicht dem Wert der Konfiguration des Einheiten-Typs. <p />- Konfiguration: &lt;<arg format="%d" ordinal="2" />&gt;<p />- Tatsächlich: &lt;<arg format="%d" ordinal="3" />&gt; </Description>
-    <Actions>1. Gerätetyp in Konfiguration ändern. <p />2. Sicherstellen, dass der Typ der E/A-Einheit richtig ist. </Actions>
+    <Description>Die von der DeviceNet-E/A-Einheit gelesene Gerätetyp-ID &lt;%s&gt; entspricht nicht dem Wert der Konfiguration des Einheiten-Typs. - Konfiguration: &lt;%d2&gt;- Tatsächlich: &lt;%d3&gt; </Description>
+    <Actions>1. Gerätetyp in Konfiguration ändern. 2. Sicherstellen, dass der Typ der E/A-Einheit richtig ist. </Actions>
   </Message>
   <Message number="1305" eDefine="SYS_EIO_DN_PRODUCT_CODE_ERR">
     <Title>Ungültiger DeviceNet-Produktcode</Title>
-    <Description>Der von der DeviceNet-E/A-Einheit gelesene Produktcode &lt;<arg format="%s" ordinal="1" />&gt; entspricht nicht dem Wert der Konfiguration des Einheiten-Typs.<p />- Konfiguration: &lt;<arg format="%d" ordinal="2" />&gt;<p />- Tatsächlich: &lt;<arg format="%d" ordinal="3" />&gt; </Description>
-    <Actions>1. Produktcode in Konfiguration ändern.<p />2. Sicherstellen, dass der Typ der E/A-Einheit richtig ist. </Actions>
+    <Description>Der von der DeviceNet-E/A-Einheit gelesene Produktcode &lt;%s&gt; entspricht nicht dem Wert der Konfiguration des Einheiten-Typs.- Konfiguration: &lt;%d2&gt;- Tatsächlich: &lt;%d3&gt; </Description>
+    <Actions>1. Produktcode in Konfiguration ändern.2. Sicherstellen, dass der Typ der E/A-Einheit richtig ist. </Actions>
   </Message>
   <Message number="1306" eDefine="SYS_EIO_DN_UNKNOWN_ERR">
     <Title>Unbekannter DeviceNet-Fehler</Title>
-    <Description>Unbekannter Fehler gemeldet von E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; Fehlercode <arg format="%d" ordinal="2" />. </Description>
-    <Actions>1. System neu starten.<p />2. Problem an ABB melden. </Actions>
+    <Description>Unbekannter Fehler gemeldet von E/A-Einheit &lt;%s&gt; Fehlercode %d2. </Description>
+    <Actions>1. System neu starten.2. Problem an ABB melden. </Actions>
   </Message>
   <Message number="1307" eDefine="SYS_EIO_DN_GENERIC_C1">
     <Title>DeviceNet generische Verbindung 1</Title>
-    <Description>Auf DeviceNet E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist die Verbindung 1 Konfiguration generisch.<p />Echte Werte: <p />- Verbindung 1 Typ: &lt;<arg format="%s" ordinal="2" />&gt;<p />- Verbindung 1 Eingangsgröße: &lt;<arg format="%d" ordinal="3" />&gt;<p />- Verbindung 1 Ausgangsgröße: &lt;<arg format="%d" ordinal="4" />&gt; </Description>
-    <Actions>1. Neuen Einheitentyp mit richtigen Werten erstellen.<p />2. Vorhandene Konfiguration des Einheitentyps aktualisieren. </Actions>
+    <Description>Auf DeviceNet E/A-Einheit &lt;%s&gt; ist die Verbindung 1 Konfiguration generisch.Echte Werte: - Verbindung 1 Typ: &lt;%s&gt;- Verbindung 1 Eingangsgröße: &lt;%d3&gt;- Verbindung 1 Ausgangsgröße: &lt;%d4&gt; </Description>
+    <Actions>1. Neuen Einheitentyp mit richtigen Werten erstellen.2. Vorhandene Konfiguration des Einheitentyps aktualisieren. </Actions>
   </Message>
   <Message number="1308" eDefine="SYS_EIO_DN_GENERIC_C2">
     <Title>DeviceNet generische Verbindung 2</Title>
-    <Description>Auf DeviceNet E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist die Verbindung 2 Konfiguration generisch.<p />Echte Werte: <p />- Verbindung 2 Typ: &lt;<arg format="%s" ordinal="2" />&gt;<p />- Verbindung 2 Eingangsgröße: &lt;<arg format="%d" ordinal="3" />&gt;<p />- Verbindung 2 Ausgangsgröße: &lt;<arg format="%d" ordinal="4" />&gt; </Description>
-    <Actions>1. Neuen Einheitentyp mit richtigen Werten erstellen.<p />2. Vorhandene Konfiguration des Einheitentyps aktualisieren. </Actions>
+    <Description>Auf DeviceNet E/A-Einheit &lt;%s&gt; ist die Verbindung 2 Konfiguration generisch.Echte Werte: - Verbindung 2 Typ: &lt;%s&gt;- Verbindung 2 Eingangsgröße: &lt;%d3&gt;- Verbindung 2 Ausgangsgröße: &lt;%d4&gt; </Description>
+    <Actions>1. Neuen Einheitentyp mit richtigen Werten erstellen.2. Vorhandene Konfiguration des Einheitentyps aktualisieren. </Actions>
   </Message>
   <Message number="1309" eDefine="SYS_EIO_DN_GENERIC_IDENT">
     <Title>Identifikation der generischen DeviceNet-Einheit</Title>
-    <Description>Auf DeviceNet E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist die Identifikationskonfiguration generisch.<p />Echte Werte: <p />- Anbieter-ID: &lt;<arg format="%d" ordinal="2" />&gt;<p />- Produktcode: &lt;<arg format="%d" ordinal="3" />&gt;<p />- Gerätetyp: &lt;<arg format="%d" ordinal="4" />&gt; </Description>
-    <Actions>1. Neuen Einheitentyp mit richtigen Werten erstellen.<p />2. Vorhandene Konfiguration des Einheitentyps aktualisieren. </Actions>
+    <Description>Auf DeviceNet E/A-Einheit &lt;%s&gt; ist die Identifikationskonfiguration generisch.Echte Werte: - Anbieter-ID: &lt;%d2&gt;- Produktcode: &lt;%d3&gt;- Gerätetyp: &lt;%d4&gt; </Description>
+    <Actions>1. Neuen Einheitentyp mit richtigen Werten erstellen.2. Vorhandene Konfiguration des Einheitentyps aktualisieren. </Actions>
   </Message>
   <Message number="1310" eDefine="SYS_EIO_DN_ALLOC_BY_OTHER_MASTER">
     <Title>DeviceNet E/A-Einheit Verbindungsfehler</Title>
-    <Description>DeviceNet-E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist durch einen anderen Master belegt. </Description>
-    <Actions>1. Konfiguration prüfen.<p />2. E/A-Einheit aus- und einschalten. </Actions>
+    <Description>DeviceNet-E/A-Einheit &lt;%s&gt; ist durch einen anderen Master belegt. </Description>
+    <Actions>1. Konfiguration prüfen.2. E/A-Einheit aus- und einschalten. </Actions>
   </Message>
   <Message number="1311" eDefine="SYS_EIO_DN_NOTHING_CONNECTED">
     <Title>Kommunikation auf DeviceNet-Bus nicht hergestellt</Title>
-    <Description>Kommunikation auf dem DeviceNet-Bus &lt;<arg format="%s" ordinal="1" />&gt; kann nicht hergestellt werden, da keine E/A-Einheiten physisch angeschlossen sind. </Description>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. E/A-Einheiten mit E/A-Bus verbinden.<p />3. System neu starten.<p />4. E/A-Einheiten vom E/A-Bus &lt;<arg format="%s" ordinal="1" />&gt; aus der Konfiguration entfernen. </Actions>
+    <Description>Kommunikation auf dem DeviceNet-Bus &lt;%s&gt; kann nicht hergestellt werden, da keine E/A-Einheiten physisch angeschlossen sind. </Description>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. E/A-Einheiten mit E/A-Bus verbinden.3. System neu starten.4. E/A-Einheiten vom E/A-Bus &lt;%s&gt; aus der Konfiguration entfernen. </Actions>
   </Message>
   <Message number="1312" eDefine="SYS_EIO_DN_EXPL_CONN_NOT_CONFIGURED">
     <Title>DeviceNet-E/A-Einheit – expliziter Anschluss nicht aktiviert</Title>
-    <Description>Für DeviceNet-E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist der explizite Meldungsanschluss nicht aktiviert. </Description>
+    <Description>Für DeviceNet-E/A-Einheit &lt;%s&gt; ist der explizite Meldungsanschluss nicht aktiviert. </Description>
     <Actions>Konfiguration ändern</Actions>
   </Message>
   <Message number="1313" eDefine="SYS_EIO_CMD_TYPE_ORDER_INVALID">
     <Title>Anweisungsnummer für Feldbusbefehlstyp nicht eindeutig</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Feldbusbefehle &lt;<arg format="%s" ordinal="1" />&gt; und &lt;<arg format="%s" ordinal="2" />&gt; sind mit dem gleichen Einheitentyp verbunden &lt;<arg format="%s" ordinal="3" />&gt; und besitzen die gleiche Anweisungsnummer &lt;<arg format="%d" ordinal="4" />&gt;.<p />Die Anweisungsnummer von Befehlen, angeschlossen an die gleiche E/A-Einheit, muss eindeutig sein.<p /><p />Dieser Befehl wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Feldbusbefehle &lt;%s&gt; und &lt;%s&gt; sind mit dem gleichen Einheitentyp verbunden &lt;%s&gt; und besitzen die gleiche Anweisungsnummer &lt;%d4&gt;.Die Anweisungsnummer von Befehlen, angeschlossen an die gleiche E/A-Einheit, muss eindeutig sein.Dieser Befehl wurde abgelehnt. </Description>
     <Actions>Konfiguration korrigieren</Actions>
   </Message>
   <Message number="1314" eDefine="SYS_EIO_CMD_COMMANDTYPE_INVALID">
     <Title>Ungültiger Feldbusbefehlstyp</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Ein Feldbusbefehl bezieht sich auf einen ungültigen/unbekannten Befehlstyp &lt; <arg format="%s" ordinal="1" />&gt;.<p />Alle Feldbusbefehle müssen sich auf einen vorhandenen Befehlstyp beziehen.<p /><p />Dieser Feldbusbefehl wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Ein Feldbusbefehl bezieht sich auf einen ungültigen/unbekannten Befehlstyp &lt; %s&gt;.Alle Feldbusbefehle müssen sich auf einen vorhandenen Befehlstyp beziehen.Dieser Feldbusbefehl wurde abgelehnt. </Description>
     <Actions>Feldbusbefehlstyp für den Befehl korrigieren</Actions>
   </Message>
   <Message number="1315" eDefine="SYS_EIO_CMD_TABLE_ERR">
     <Title>Maximale Anzahl an Feldbusbefehlen überschritten</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Die maximale Anzahl <arg format="%d" ordinal="1" /> an Feldbusbefehlen im E/A-System wurde überschritten.<p /></Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Die maximale Anzahl %d1 an Feldbusbefehlen im E/A-System wurde überschritten.</Description>
     <Actions>Konfiguration des E/A-Systems so ändern (durch Verringern der Anzahl an Feldbusbefehlen), dass das Maximum nicht überschritten wird.</Actions>
   </Message>
   <Message number="1316" eDefine="SYS_EIO_CMD_TYPE_TABLE_ERR">
     <Title>Maximale Anzahl für Feldbusbefehlstypen überschritten</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Die maximale Anzahl <arg format="%d" ordinal="1" /> an Feldbusbefehlstypen im E/A-System wurde überschritten. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Die maximale Anzahl %d1 an Feldbusbefehlstypen im E/A-System wurde überschritten. </Description>
     <Actions>Konfiguration des E/A-Systems so ändern (durch Verringern der Anzahl der Feldbusbefehlstypen), dass das Maximum nicht überschritten wird. </Actions>
   </Message>
   <Message number="1317" eDefine="SYS_EIO_FCI_UNIT_RESET">
     <Title>E/A-Einheit zurückgesetzt</Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; am E/A-Bus &lt;<arg format="%s" ordinal="2" />&gt; wurde mit dem Feldbusbefehl &lt;<arg format="%s" ordinal="3" />&gt; zurückgesetzt, um sicherzustellen, dass die Feldbusbefehlswerte aktiviert sind.<p />Daher hat die E/A-Einheit während des Neustarts keinen Kontakt, der Kontakt wird jedoch wiederhergestellt. </Description>
+    <Description>Die E/A-Einheit &lt;%s&gt; am E/A-Bus &lt;%s&gt; wurde mit dem Feldbusbefehl &lt;%s&gt; zurückgesetzt, um sicherzustellen, dass die Feldbusbefehlswerte aktiviert sind.Daher hat die E/A-Einheit während des Neustarts keinen Kontakt, der Kontakt wird jedoch wiederhergestellt. </Description>
     <Causes>In der Konfiguration des E/A-Systems wurde ein Feldbusbefehl zum Zurücksetzen der E/A-Einheit definiert.</Causes>
   </Message>
   <Message number="1320" eDefine="SYS_EIO_ACC_TABLE_ERR">
     <Title>Maximale Anzahl der E/A-Zugriffsebenen überschritten </Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Die maximale Anzahl <arg format="%d" ordinal="1" /> E/A-Zugriffsebenen im E/A-System wurde überschritten. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Die maximale Anzahl %d1 E/A-Zugriffsebenen im E/A-System wurde überschritten. </Description>
     <Actions>Konfiguration des E/A-Systems so ändern (durch Verringern der Anzahl der E/A-Zugriffsebenen), dass das Maximum nicht überschritten wird.</Actions>
   </Message>
   <Message number="1321" eDefine="SYS_EIO_SIG_ACC_INVALID">
     <Title>Ungültige E/A-Zugriffsebene</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Das E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; verweist auf eine ungültige/undefinierte E/A-Zugriffsebene &lt;<arg format="%s" ordinal="2" />&gt;.<p />Alle E/A-Signale müssen entweder die Zugriffsebene auslassen oder sich auf eine vorhandene Zugriffsebene beziehen.<p /><p />Dieses E/A-Signal wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Das E/A-Signal &lt;%s&gt; verweist auf eine ungültige/undefinierte E/A-Zugriffsebene &lt;%s&gt;.Alle E/A-Signale müssen entweder die Zugriffsebene auslassen oder sich auf eine vorhandene Zugriffsebene beziehen.Dieses E/A-Signal wurde abgelehnt. </Description>
     <Actions>Eine vorhandene E/A-Zugriffsebene angeben oder eine neue E/A-Zugriffsebene definieren.</Actions>
   </Message>
   <Message number="1323" eDefine="SYS_EIO_SIG_BIT_MAXMIN">
     <Title>Ungültige Bit-Werte</Title>
-    <Description>Die E/A-Konfiguration für E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Der minimale Bit-Wert &lt;<arg format="%s" ordinal="3" />&gt; muss mindestens &lt;<arg format="%s" ordinal="2" />&gt; betragen.<p />Der maximale Bit-Wert &lt;<arg format="%s" ordinal="4" />&gt; darf höchstens &lt;<arg format="%s" ordinal="5" />&gt; betragen.<p />Der minimale Bit-Wert muss niedriger sein als der maximale Bit-Wert.<p /><p />Das E/A-Signal wurde abgelehnt. </Description>
-    <Actions>1. Prüfen, ob das E/A-Signal mit dem richtigen Verschlüsselungstyp konfiguriert ist.<p />2. Minimale und maximale Bit-Werte auf Richtigkeit prüfen. </Actions>
+    <Description>Die E/A-Konfiguration für E/A-Signal &lt;%s&gt; ist ungültig.Der minimale Bit-Wert &lt;%s&gt; muss mindestens &lt;%s&gt; betragen.Der maximale Bit-Wert &lt;%s&gt; darf höchstens &lt;%s&gt; betragen.Der minimale Bit-Wert muss niedriger sein als der maximale Bit-Wert.Das E/A-Signal wurde abgelehnt. </Description>
+    <Actions>1. Prüfen, ob das E/A-Signal mit dem richtigen Verschlüsselungstyp konfiguriert ist.2. Minimale und maximale Bit-Werte auf Richtigkeit prüfen. </Actions>
   </Message>
   <Message number="1324" eDefine="SYS_EIO_SIG_PHYLIM_MAXMIN">
     <Title>Physische Begrenzungswerte außerhalb des Bereichs</Title>
-    <Description>Die E/A-Konfiguration für E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Der physische Einschränkungsminimalwert muss niedriger sein als der physische Einschränkungsmaximalwert.<p /><p />Das E/A-Signal wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für E/A-Signal &lt;%s&gt; ist ungültig.Der physische Einschränkungsminimalwert muss niedriger sein als der physische Einschränkungsmaximalwert.Das E/A-Signal wurde abgelehnt. </Description>
     <Actions>Korrigieren der physischen Begrenzungswerte für das E/A-Signal, damit der Minimalwert kleiner ist als der Maximalwert.</Actions>
   </Message>
   <Message number="1325" eDefine="SYS_EIO_BUS_PROTECTED">
     <Title>Ungültige E/A-Bus-Konfiguration</Title>
-    <Description>Die E/A-Konfiguration für E/A-Bus &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Anwenderdefinierte (extern geladene) E/A-Busse dürfen nicht als lokal festgelegt werden.<p /><p />Dieser E/A-Bus wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für E/A-Bus &lt;%s&gt; ist ungültig.Anwenderdefinierte (extern geladene) E/A-Busse dürfen nicht als lokal festgelegt werden.Dieser E/A-Bus wurde abgelehnt. </Description>
     <Actions>Den Bus-Typ des E/A-Busses ändern.</Actions>
   </Message>
   <Message number="1326" eDefine="SYS_EIO_DRV_PROTECTED">
     <Title>Ungültige Einheitentyp-Konfiguration</Title>
-    <Description>Die E/A-Konfiguration für Einheitentyp &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Anwenderdefinierte (extern geladene) Einheitentypen dürfen nicht als lokal festgelegt werden.<p /><p />Dieser E/A-Bus wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für Einheitentyp &lt;%s&gt; ist ungültig.Anwenderdefinierte (extern geladene) Einheitentypen dürfen nicht als lokal festgelegt werden.Dieser E/A-Bus wurde abgelehnt. </Description>
     <Actions>Den Bus-Typ des E/A-Einheitentyps ändern.</Actions>
   </Message>
   <Message number="1328" eDefine="SYS_EIO_INVALID_RAPID_IDENT">
     <Title>Ungültiger Name</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Die Konfigurationsinstanz &lt;<arg format="%s" ordinal="1" />&gt; entspricht nicht den Regeln des RAPID-Bezeichners.<p /><p />Diese Konfigurationsinstanz wurde abgelehnt. </Description>
-    <Actions>Name der Konfigurationsinstanz korrigieren, damit er mit den folgenden Regeln übereinstimmt:<p /><p />Regeln des RAPID-Bezeichners:<p />1. Die Länge darf 16 Zeichen nicht überschreiten.<p />2. Erstes Zeichen muss ein Buchstabe sein (a-z oder A-Z).<p />3. Nachfolgende Zeichen müssen Buchstaben (a-z oder A-Z), Zahlen (0-9) oder Unterstriche (_) sein. </Actions>
+    <Description>Die E/A-Konfiguration ist ungültig.Die Konfigurationsinstanz &lt;%s&gt; entspricht nicht den Regeln des RAPID-Bezeichners.Diese Konfigurationsinstanz wurde abgelehnt. </Description>
+    <Actions>Name der Konfigurationsinstanz korrigieren, damit er mit den folgenden Regeln übereinstimmt:Regeln des RAPID-Bezeichners:1. Die Länge darf 16 Zeichen nicht überschreiten.2. Erstes Zeichen muss ein Buchstabe sein (a-z oder A-Z).3. Nachfolgende Zeichen müssen Buchstaben (a-z oder A-Z), Zahlen (0-9) oder Unterstriche (_) sein. </Actions>
   </Message>
   <Message number="1329" eDefine="SYS_EIO_BUS_CONNECTOR_ID_INVALID">
     <Title>Ungültige Anschlusskennung</Title>
-    <Description>Die E/A-Konfiguration für E/A-Bus &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Für den Bustyp &lt;<arg format="%s" ordinal="2" />&gt; wurde keine oder eine ungültige Anschluss-ID ausgewählt.<p /><p />Dieser E/A-Bus wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für E/A-Bus &lt;%s&gt; ist ungültig.Für den Bustyp &lt;%s&gt; wurde keine oder eine ungültige Anschluss-ID ausgewählt.Dieser E/A-Bus wurde abgelehnt. </Description>
     <Actions>Gültige Anschlusskennung für den E/A-Bus wählen.</Actions>
   </Message>
   <Message number="1330" eDefine="SYS_EIO_BUS_CONNECTOR_ID_DUPLICATED">
     <Title>Unvereinbare Bustypen</Title>
-    <Description>Die Konfiguration für den E/A-Bus &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Es sind doppelte &lt;<arg format="%s" ordinal="2" />&gt; E/A-Busse mit der gleichen Anschlusskennung vorhanden &lt;<arg format="%s" ordinal="3" />&gt;.<p />E/A-Busse des gleichen Typs müssen eine eindeutige Anschlusskennung besitzen.<p /><p />Dieser E/A-Bus wurde abgelehnt. </Description>
+    <Description>Die Konfiguration für den E/A-Bus &lt;%s&gt; ist ungültig.Es sind doppelte &lt;%s&gt; E/A-Busse mit der gleichen Anschlusskennung vorhanden &lt;%s&gt;.E/A-Busse des gleichen Typs müssen eine eindeutige Anschlusskennung besitzen.Dieser E/A-Bus wurde abgelehnt. </Description>
     <Actions>Anschlusskennung für den E/A-Bus korrigieren.</Actions>
   </Message>
   <Message number="1331" eDefine="SYS_EIO_BUS_BUSTYPE_INVALID">
     <Title>Ungültiger Bustyp</Title>
-    <Description>Die E/A-Konfiguration für den E/A-Bus &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Der Bustyp &lt;<arg format="%s" ordinal="2" />&gt; ist ungültig oder unbekannt<p /><p />Zulässige installierte Typen sind:<arg format="%s" ordinal="3" /><arg format="%s" ordinal="4" /><arg format="%s" ordinal="5" /><p /><p /></Description>
+    <Description>Die E/A-Konfiguration für den E/A-Bus &lt;%s&gt; ist ungültig.Der Bustyp &lt;%s&gt; ist ungültig oder unbekanntZulässige installierte Typen sind:%s%s%s</Description>
     <Consequences>Dieser E/A-Bus wurde abgelehnt, und keine Funktionen auf der Basis dieses Busses funktionieren.</Consequences>
     <Actions>Den Bustyp des E/A-Busses korrigieren.</Actions>
   </Message>
   <Message number="1332" eDefine="SYS_EIO_BUS_RECOVERY_TIME">
     <Title>Ungültige Fehlerbehebungszeit</Title>
-    <Description>Die E/A-Konfiguration für den E/A-Bus &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Der Wert des Fehlerbehebungszeit-Parameters &lt;<arg format="%d" ordinal="2" />&gt; ist falsch.<p /><p />Die Fehlerbehebungszeit (wie oft Kontakt mit verlorenen E/A-Einheiten wiederhergestellt werden soll) darf nicht unter 5 Sekunden liegen.<p /><p />Dieser E/A-Bus wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für den E/A-Bus &lt;%s&gt; ist ungültig.Der Wert des Fehlerbehebungszeit-Parameters &lt;%d2&gt; ist falsch.Die Fehlerbehebungszeit (wie oft Kontakt mit verlorenen E/A-Einheiten wiederhergestellt werden soll) darf nicht unter 5 Sekunden liegen.Dieser E/A-Bus wurde abgelehnt. </Description>
     <Actions>Fehlerbehebungszeit für den E/A-Bus korrigieren.</Actions>
   </Message>
   <Message number="1333" eDefine="SYS_EIO_BUS_BAUDRATE_INVALID">
     <Title>Ungültige DeviceNet-Baudrate</Title>
-    <Description>Die E/A-Konfiguration für E/A-Bus &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Der Wert des DeviceNet-Baudraten-Parameters &lt;<arg format="%d" ordinal="2" />&gt; ist falsch.<p /><p />Gültige DeviceNet-Baudraten:<p />- 125<p />- 250<p />- 500<p /><p />Dieser E/A-Bus wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für E/A-Bus &lt;%s&gt; ist ungültig.Der Wert des DeviceNet-Baudraten-Parameters &lt;%d2&gt; ist falsch.Gültige DeviceNet-Baudraten:- 125- 250- 500Dieser E/A-Bus wurde abgelehnt. </Description>
     <Actions>DeviceNet-Baudrate für den E/A-Bus korrigieren.</Actions>
   </Message>
   <Message number="1334" eDefine="SYS_EIO_CMD_TYPE_DRV_UNDEF">
     <Title>Befehlstyp ohne Beziehung zu Einheitentyp</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Für den Befehlstyp ist keine Beziehung zu einem Einheitentyp definiert &lt;<arg format="%s" ordinal="1" />&gt;.<p />Alle Befehlstypen benötigen einen Bezug zu einem vorhandenen Einheitentyp.<p /><p />Dieser Befehlstyp wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Für den Befehlstyp ist keine Beziehung zu einem Einheitentyp definiert &lt;%s&gt;.Alle Befehlstypen benötigen einen Bezug zu einem vorhandenen Einheitentyp.Dieser Befehlstyp wurde abgelehnt. </Description>
     <Actions>Einheitentyp-Referenz für den Befehlstyp definieren.</Actions>
   </Message>
   <Message number="1335" eDefine="SYS_EIO_CMD_TYPE_DRV_INVALID">
     <Title>Ungültiger Einheitentyp</Title>
-    <Description>Die E/A-Konfiguration für Befehlstyp &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Der Einheitentyp &lt;<arg format="%s" ordinal="2" />&gt; ist ungültig/unbekannt.<p /><p />Alle Befehlstypen müssen sich auf einen vorhandenen/definierten Einheitentyp beziehen.<p /><p />Dieser Befehlstyp wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für Befehlstyp &lt;%s&gt; ist ungültig.Der Einheitentyp &lt;%s&gt; ist ungültig/unbekannt.Alle Befehlstypen müssen sich auf einen vorhandenen/definierten Einheitentyp beziehen.Dieser Befehlstyp wurde abgelehnt. </Description>
     <Actions>Einheitentyp für den Befehlstyp korrigieren.</Actions>
   </Message>
   <Message number="1336" eDefine="SYS_EIO_CMD_TYPE_PATH_UNDEF">
     <Title>Befehlstyp ohne Pfad</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Für den Befehlstyp &lt;<arg format="%s" ordinal="1" />&gt; ist kein Pfad definiert.<p /><p />Dieser Befehlstyp wurde abgelehnt. </Description>
-    <Actions>Pfad &lt;<arg format="%s" ordinal="2" />&gt; für den Befehlstyp definieren.</Actions>
+    <Description>Die E/A-Konfiguration ist ungültig.Für den Befehlstyp &lt;%s&gt; ist kein Pfad definiert.Dieser Befehlstyp wurde abgelehnt. </Description>
+    <Actions>Pfad &lt;%s&gt; für den Befehlstyp definieren.</Actions>
   </Message>
   <Message number="1337" eDefine="SYS_EIO_CMD_TYPE_SERVICE_UNDEF">
     <Title>Befehlstyp ohne Servicebezeichner</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Für den Befehlstyp &lt;<arg format="%s" ordinal="1" />&gt; ist kein Servicebezeichner definiert.<p /><p />Dieser Befehlstyp wurde abgelehnt. </Description>
-    <Actions> Servicebezeichner &lt;<arg format="%s" ordinal="2" />&gt; für den Befehlstyp definieren.</Actions>
+    <Description>Die E/A-Konfiguration ist ungültig.Für den Befehlstyp &lt;%s&gt; ist kein Servicebezeichner definiert.Dieser Befehlstyp wurde abgelehnt. </Description>
+    <Actions> Servicebezeichner &lt;%s&gt; für den Befehlstyp definieren.</Actions>
   </Message>
   <Message number="1338" eDefine="SYS_EIO_CMD_TYPE_SERVICE_INVALID">
     <Title>Ungültiger Servicebezeichner</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Servicebezeichner &lt;<arg format="%ld" ordinal="2" />&gt; ist für den Befehlstyp &lt;<arg format="%s" ordinal="1" />&gt; ungültig.<p /><p />Gültige Servicebezeichner lauten:<p />&lt;<arg format="%s" ordinal="3" />&gt;<p /><p />Dieser Befehlstyp wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Servicebezeichner &lt;%ld2&gt; ist für den Befehlstyp &lt;%s&gt; ungültig.Gültige Servicebezeichner lauten:&lt;%s&gt;Dieser Befehlstyp wurde abgelehnt. </Description>
     <Actions>Servicebezeichner für den Befehlstyp korrigieren.</Actions>
   </Message>
   <Message number="1339" eDefine="SYS_EIO_CMD_UNIT_UNDEF">
     <Title>Feldbusbefehl ohne Bezug zu E/A-Einheit</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Einer der Feldbusbefehle hat keinen Verweis zu einer E/A-Einheit.<p /><p />Alle Feldbusbefehle müssen auf eine vorhandene E/A-Einheit verweisen.<p /><p />Dieser Feldbusbefehl wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Einer der Feldbusbefehle hat keinen Verweis zu einer E/A-Einheit.Alle Feldbusbefehle müssen auf eine vorhandene E/A-Einheit verweisen.Dieser Feldbusbefehl wurde abgelehnt. </Description>
     <Actions>Definieren eines E/A-Einheitenbezugs für den Feldbusbefehl.</Actions>
   </Message>
   <Message number="1340" eDefine="SYS_EIO_CMD_UNIT_INVALID">
     <Title>Ungültige E/A-Einheit</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Ein Feldbusbefehl bezieht sich auf eine ungültige/unbekannte E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt;.<p /><p />Alle Feldbusbefehle müssen sich auf eine vorhandene E/A-Einheit beziehen.<p /><p />Dieser Feldbusbefehl wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Ein Feldbusbefehl bezieht sich auf eine ungültige/unbekannte E/A-Einheit &lt;%s&gt;.Alle Feldbusbefehle müssen sich auf eine vorhandene E/A-Einheit beziehen.Dieser Feldbusbefehl wurde abgelehnt. </Description>
     <Actions>Korrigieren einer E/A-Einheit für den Feldbusbefehl.</Actions>
   </Message>
   <Message number="1341" eDefine="SYS_EIO_CMD_COMMANDTYPE_UNDEF">
     <Title>Feldbusbefehl – kein Verweis auf Befehlstyp</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Einer der Feldbusbefehle hat keinen Verweis auf einen Befehlstyp.<p /><p />Alle Feldbusbefehle müssen auf einen vorhandenen Befehlstyp verweisen.<p /><p />Dieser Feldbusbefehl wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Einer der Feldbusbefehle hat keinen Verweis auf einen Befehlstyp.Alle Feldbusbefehle müssen auf einen vorhandenen Befehlstyp verweisen.Dieser Feldbusbefehl wurde abgelehnt. </Description>
     <Actions>Befehlstypverweis für den Feldbusbefehl definieren.</Actions>
   </Message>
   <Message number="1342" eDefine="SYS_EIO_CMD_UNITTYPE_MISMATCH">
     <Title>Einheitentyp-Konflikt</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Einer der Feldbusbefehle bezieht sich auf eine E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; und einen Befehlstyp &lt;<arg format="%s" ordinal="2" />&gt;, die sich auf verschiedene Einheitentypen beziehen.<p /><p />Durch einen Feldbusbefehl bezeichnete E/A-Einheit und Befehlstyp müssen sich auf den gleichen Einheitentyp beziehen.<p /><p />Dieser Feldbusbefehl wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Einer der Feldbusbefehle bezieht sich auf eine E/A-Einheit &lt;%s&gt; und einen Befehlstyp &lt;%s&gt;, die sich auf verschiedene Einheitentypen beziehen.Durch einen Feldbusbefehl bezeichnete E/A-Einheit und Befehlstyp müssen sich auf den gleichen Einheitentyp beziehen.Dieser Feldbusbefehl wurde abgelehnt. </Description>
     <Actions>Konfiguration korrigieren.</Actions>
   </Message>
   <Message number="1344" eDefine="SYS_EIO_SIG_UNITMAP_UNDEF">
     <Title>Einheitenzuordnung undefiniert</Title>
-    <Description>Die E/A-Konfiguration für E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Die Einheitenzuordnung ist ungültig oder leer.<p />Eine Einheitenzuordnung muss für alle physischen E/A-Signale (mit einer Einheit verbundene Signale) angegeben werden.<p /><p />Dieses E/A-Signal wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für E/A-Signal &lt;%s&gt; ist ungültig.Die Einheitenzuordnung ist ungültig oder leer.Eine Einheitenzuordnung muss für alle physischen E/A-Signale (mit einer Einheit verbundene Signale) angegeben werden.Dieses E/A-Signal wurde abgelehnt. </Description>
     <Actions>Eine Einheitenzuordnung für das E/A-Signal definieren.</Actions>
   </Message>
   <Message number="1346" eDefine="SYS_EIO_SIG_UNITMAP_OUT_OF_RANGE">
     <Title>Einheitenzuordnung außerhalb des zulässigen Bereichs</Title>
-    <Description>Die E/A-Konfiguration für E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Die Einheitenzuordnung &lt;<arg format="%s" ordinal="2" />&gt; ist ungültig, weil Bit &lt;<arg format="%d" ordinal="3" />&gt; außerhalb des zulässigen Bereichs liegt.<p />Alle Bits in der Einheitenzuordnung müssen im Bereich [0, <arg format="%d" ordinal="4" />] liegen.<p /><p />Dieses E/A-Signal wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für E/A-Signal &lt;%s&gt; ist ungültig.Die Einheitenzuordnung &lt;%s&gt; ist ungültig, weil Bit &lt;%d3&gt; außerhalb des zulässigen Bereichs liegt.Alle Bits in der Einheitenzuordnung müssen im Bereich [0, %d4] liegen.Dieses E/A-Signal wurde abgelehnt. </Description>
     <Actions>Einheitenzuordnung korrigieren.</Actions>
   </Message>
   <Message number="1347" eDefine="SYS_EIO_SIG_UNITMAP_OVERLAPPING">
     <Title>Einheitenzuordnung mit überlagernden Segmenten</Title>
-    <Description>Die E/A-Konfiguration für das E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Die Einheitenzuordnung &lt;<arg format="%s" ordinal="2" />&gt; enthält Segmente (z.B. Bit <arg format="%d" ordinal="3" />), die sich überschneiden. <p /><p />Dieses E/A-Signal wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für das E/A-Signal &lt;%s&gt; ist ungültig.Die Einheitenzuordnung &lt;%s&gt; enthält Segmente (z.B. Bit %d3), die sich überschneiden. Dieses E/A-Signal wurde abgelehnt. </Description>
     <Actions>Einheitenzuordnung korrigieren.</Actions>
   </Message>
   <Message number="1348" eDefine="SYS_EIO_SIG_UNITMAP_UNEXP_CHAR">
     <Title>Einheitenzuordnung mit unerwartetem Zeichen</Title>
-    <Description>Die E/A-Konfiguration für E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Unerwartetes Ende oder Zeichen in Position &lt;<arg format="%d" ordinal="3" />&gt; der Einheitenzuordnung gefunden. &lt;<arg format="%s" ordinal="2" />&gt;.<p /><p />Dieses E/A-Signal wurde abgelehnt. </Description>
-    <Actions>Einheitenzuordnung so korrigieren, dass sie der folgenden Syntax entspricht:<p /><p />- {bit} = ([0-9]+)<p />- {range} = ([0-9]+[-][0-9]+)<p />- {segment} = ({bit} | {range})<p />- {unit map} = ({segment}[,])*{segment}<p /><p />Beispiele für gültige Einheitenzuordnungen:<p />- "1"<p />- "0-7, 15-8"<p />- "1,4-3,7" </Actions>
+    <Description>Die E/A-Konfiguration für E/A-Signal &lt;%s&gt; ist ungültig.Unerwartetes Ende oder Zeichen in Position &lt;%d3&gt; der Einheitenzuordnung gefunden. &lt;%s&gt;.Dieses E/A-Signal wurde abgelehnt. </Description>
+    <Actions>Einheitenzuordnung so korrigieren, dass sie der folgenden Syntax entspricht:- {bit} = ([0-9]+)- {range} = ([0-9]+[-][0-9]+)- {segment} = ({bit} | {range})- {unit map} = ({segment}[,])*{segment}Beispiele für gültige Einheitenzuordnungen:- "1"- "0-7, 15-8"- "1,4-3,7" </Actions>
   </Message>
   <Message number="1349" eDefine="SYS_EIO_SIG_SIZE_INVALID">
     <Title>Ungültige Signalgröße</Title>
-    <Description>Die E/A-Konfiguration für Signal &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Signaltyp und Größe des Signals stimmen nicht überein.<p />Die Signalgröße &lt;<arg format="%d" ordinal="3" />&gt; wird von der Einheitenzuordnung festgelegt: &lt;<arg format="%s" ordinal="2" />&gt;.<p /><p />Dieses E/A-Signal wurde abgelehnt. </Description>
-    <Actions>Signaltyp oder Einheitenzuordnung nach folgenden Regeln korrigieren:<p /><p />- Die Größe von digitalen E/A-Signalen muss genau ein Bit betragen.<p />- Die Größe von analogen und Gruppen-E/A-Signalen muss zwischen 2 und 32 Bits betragen. </Actions>
+    <Description>Die E/A-Konfiguration für Signal &lt;%s&gt; ist ungültig.Signaltyp und Größe des Signals stimmen nicht überein.Die Signalgröße &lt;%d3&gt; wird von der Einheitenzuordnung festgelegt: &lt;%s&gt;.Dieses E/A-Signal wurde abgelehnt. </Description>
+    <Actions>Signaltyp oder Einheitenzuordnung nach folgenden Regeln korrigieren:- Die Größe von digitalen E/A-Signalen muss genau ein Bit betragen.- Die Größe von analogen und Gruppen-E/A-Signalen muss zwischen 2 und 32 Bits betragen. </Actions>
   </Message>
   <Message number="1350" eDefine="SYS_EIO_DRV_BUSTYPE_INVALID">
     <Title>Ungültiger Bustyp</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Der Einheitentyp &lt;<arg format="%s" ordinal="1" />&gt; besitzt einen ungültigen/unbekannten Bustyp &lt;<arg format="%s" ordinal="2" />&gt;.<p /><p />Installierte gültige Bustypen sind:<arg format="%s" ordinal="3" /><arg format="%s" ordinal="4" /><arg format="%s" ordinal="5" /><p /><p /></Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Der Einheitentyp &lt;%s&gt; besitzt einen ungültigen/unbekannten Bustyp &lt;%s&gt;.Installierte gültige Bustypen sind:%s%s%s</Description>
     <Consequences>Dieser Einheitentyp wurde abgelehnt, und keine Funktionen auf der Basis dieser Einheit funktionieren.</Consequences>
     <Actions>Bustyp für den Einheitentyp korrigieren.</Actions>
   </Message>
   <Message number="1351" eDefine="SYS_EIO_DRV_C1_TYPE_INVALID">
     <Title>Ungültiger Typ von Verbindung 1</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Einheitentyp &lt;<arg format="%s" ordinal="1" />&gt; hat ungültigen/unbekannten Typ für Verbindung 1 &lt;<arg format="%s" ordinal="2" />&gt;.<p /><p />Der Typ für Verbindung 1 muss einer der folgenden sein:<p />- POLLED<p />- STROBE<p />- COS<p />- CYCLIC<p />- COS_ACKSUP<p />- CYCLIC_ACKSUP<p /><p />Dieser Einheitentyp wurde abgelehnt. </Description>
-    <Actions>Typ von Verbindung 1 des Einheitentyps korrigieren.<p /><p /></Actions>
+    <Description>Die E/A-Konfiguration ist ungültig.Einheitentyp &lt;%s&gt; hat ungültigen/unbekannten Typ für Verbindung 1 &lt;%s&gt;.Der Typ für Verbindung 1 muss einer der folgenden sein:- POLLED- STROBE- COS- CYCLIC- COS_ACKSUP- CYCLIC_ACKSUPDieser Einheitentyp wurde abgelehnt. </Description>
+    <Actions>Typ von Verbindung 1 des Einheitentyps korrigieren.</Actions>
   </Message>
   <Message number="1352" eDefine="SYS_EIO_DRV_C2_TYPE_INVALID">
     <Title>Ungültiger Typ von Verbindung 2</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Einheitentyp &lt;<arg format="%s" ordinal="1" />&gt; hat ungültigen/unbekannten Typ für Verbindung 2 &lt;<arg format="%s" ordinal="2" />&gt;.<p /><p />Der Typ für Verbindung 2 muss weggelassen werden oder einer der folgenden sein:<p />- POLLED<p />- STROBE<p />- COS<p />- CYCLIC<p />- COS_ACKSUP<p />- CYCLIC_ACKSUP<p /><p />Dieser Einheitentyp wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Einheitentyp &lt;%s&gt; hat ungültigen/unbekannten Typ für Verbindung 2 &lt;%s&gt;.Der Typ für Verbindung 2 muss weggelassen werden oder einer der folgenden sein:- POLLED- STROBE- COS- CYCLIC- COS_ACKSUP- CYCLIC_ACKSUPDieser Einheitentyp wurde abgelehnt. </Description>
     <Actions>Typ von Verbindung 2 des Einheitentyps korrigieren.</Actions>
   </Message>
   <Message number="1353" eDefine="SYS_EIO_UNT_DRV_UNDEF">
     <Title>Einheit ohne Bezug zu Einheitentyp</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Für die E/A-Einheit ist kein Bezug zu einem Einheitentyp &lt;<arg format="%s" ordinal="1" />&gt; definiert.<p /><p />Dieses E/A-Signal wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Für die E/A-Einheit ist kein Bezug zu einem Einheitentyp &lt;%s&gt; definiert.Dieses E/A-Signal wurde abgelehnt. </Description>
     <Actions>Einheitentyp-Referenz für die E/A-Einheit definieren.</Actions>
   </Message>
   <Message number="1354" eDefine="SYS_EIO_UNT_BUS_UNDEF">
     <Title>E/A-Einheit ohne Bezug zu E/A-Bus</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Für die E/A-Einheit ist kein Bezug zu einem E/A-Bus &lt;<arg format="%s" ordinal="1" />&gt; definiert.<p /><p />Diese E/A-Einheit wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Für die E/A-Einheit ist kein Bezug zu einem E/A-Bus &lt;%s&gt; definiert.Diese E/A-Einheit wurde abgelehnt. </Description>
     <Actions>Definieren einer E/A-Bus-Bezugs für die E/A-Einheit.</Actions>
   </Message>
   <Message number="1355" eDefine="SYS_EIO_UNT_TRUSTLEVEL_INVALID">
     <Title>Ungültiger TrustLevel</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Einheitentyp &lt;<arg format="%s" ordinal="1" />&gt; hat ungültigen/unbekannten TrustLevel &lt;<arg format="%s" ordinal="2" />&gt;.<p /><p />Gültige TrustLevel-Werte:<p />- 0 (Notwendig)<p />- 1 (Fehler bei Verlust)<p />- 2 (Verlust akzeptiert)<p />- 3 (Stopp bei Verlust)<p /><p />Dieser Befehlstyp wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Einheitentyp &lt;%s&gt; hat ungültigen/unbekannten TrustLevel &lt;%s&gt;.Gültige TrustLevel-Werte:- 0 (Notwendig)- 1 (Fehler bei Verlust)- 2 (Verlust akzeptiert)- 3 (Stopp bei Verlust)Dieser Befehlstyp wurde abgelehnt. </Description>
     <Actions>TrustLevel für den Einheitentyp korrigieren.</Actions>
   </Message>
   <Message number="1356" eDefine="SYS_EIO_UNT_BUSTYPE_MISMATCH">
     <Title>Bustyp-Konflikt</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Einheit &lt;<arg format="%s" ordinal="1" />&gt; bezieht sich auf einen E/A-Bus und einen Einheitentyp mit verschiedenen Bustypen.<p /><p />Diese E/A-Einheit wurde abgelehnt. </Description>
-    <Actions>1. Sicherstellen, dass die E/A-Einheit mit dem richtigen E/A-Bus verbunden ist und dass der Bustyp dieses E/A-Busses richtig ist.<p />2. Sicherstellen, dass die E/A-Einheit sich auf den richtigen Einheitentyp bezieht und dass der Bustyp dieses Einheitentyps richtig ist. </Actions>
+    <Description>Die E/A-Konfiguration ist ungültig.Einheit &lt;%s&gt; bezieht sich auf einen E/A-Bus und einen Einheitentyp mit verschiedenen Bustypen.Diese E/A-Einheit wurde abgelehnt. </Description>
+    <Actions>1. Sicherstellen, dass die E/A-Einheit mit dem richtigen E/A-Bus verbunden ist und dass der Bustyp dieses E/A-Busses richtig ist.2. Sicherstellen, dass die E/A-Einheit sich auf den richtigen Einheitentyp bezieht und dass der Bustyp dieses Einheitentyps richtig ist. </Actions>
   </Message>
 </Domain>

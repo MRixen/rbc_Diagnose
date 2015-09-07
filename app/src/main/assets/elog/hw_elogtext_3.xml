@@ -2,77 +2,77 @@
 <Domain xmlns="urn:abb-robotics-elog-text" elogDomain="HW" domainNo="3" lang="de" elogTextVersion="1.0" min="7083" max="7252">
   <Message number="7083" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_SHUTDOWN">
     <Title>Störimpuls im Spülsystem</Title>
-    <Description>Fehler beim Spülen von Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> gemeldet. Das Spülsystem hat über die Sensoren ein 'Druck nicht OK' erkannt. Motoren und Lackiereinheit werden abgeschaltet und der Hauptcomputer wird eventuell aufgefordert, die Verbindung zum seriellen Messsystem (SMB) zu trennen. Dies ist vom Timing des Signals abhängig. </Description>
+    <Description>Fehler beim Spülen von Manipulator Interface Board (MIB) %i1 gemeldet. Das Spülsystem hat über die Sensoren ein 'Druck nicht OK' erkannt. Motoren und Lackiereinheit werden abgeschaltet und der Hauptcomputer wird eventuell aufgefordert, die Verbindung zum seriellen Messsystem (SMB) zu trennen. Dies ist vom Timing des Signals abhängig. </Description>
     <Consequences>Motoren und Lackiereinheit werden abgeschaltet, der Betriebskreis geöffnet und eventuell die Verbindung zum SMB) getrennt.</Consequences>
-    <Actions>1. Druckluftversorgung prüfen.<p />2. Überprüfen, ob der Luftausgang nicht blockiert ist.<p />3. Spülsensoren und Verkabelung der Spülsensoren überprüfen. </Actions>
+    <Actions>1. Druckluftversorgung prüfen.2. Überprüfen, ob der Luftausgang nicht blockiert ist.3. Spülsensoren und Verkabelung der Spülsensoren überprüfen. </Actions>
   </Message>
   <Message number="7090" eDefine="SYS_ERR_HW_AUX_PTC_ERROR">
-    <Title>Temperatur zu hoch, Sensor <arg format="%d" ordinal="1" /></Title>
+    <Title>Temperatur zu hoch, Sensor %d1</Title>
     <Description>Systemüberhitzung festgestellt Sensor 1-7: Motor 1-7, Sensor 8: Serielle Messbaugruppe. Der Betriebskreis wurde geöffnet.</Description>
   </Message>
   <Message number="7094" eDefine="SYS_ERR_HW_CONNECTION_RELAY_NOT_ACTIVE">
     <Title>Verbindungsaktivierungsfehler</Title>
     <Description>
-      <arg format="%s" ordinal="1" /> konnte nicht aktiviert werden. Verbindungsrelais-Eingang <arg format="%s" ordinal="2" /> zeigt keine Verbindung an.</Description>
-    <Actions>1. Prüfen, ob mechanische Einheit angeschlossen ist.<p />2. Einstellung des Eingangssignals für das Verbindungsrelais prüfen.</Actions>
+      %s konnte nicht aktiviert werden. Verbindungsrelais-Eingang %s zeigt keine Verbindung an.</Description>
+    <Actions>1. Prüfen, ob mechanische Einheit angeschlossen ist.2. Einstellung des Eingangssignals für das Verbindungsrelais prüfen.</Actions>
   </Message>
   <Message number="7095" eDefine="SYS_ERR_HW_AUX_BRAKE_POWER_FAULT">
     <Title>Fehler Bremsenstrom</Title>
-    <Description>Die Überwachung des Bremsenstroms für Manipulator Controller Board (MCOB) hat einen Fehler des Leistungssignals erkannt und alle Bremsen aktiviert.<p /></Description>
-    <Actions>1. Bremsenstrom in MCOB prüfen.<p />2. Bremsenstrom-Relais in Schrank prüfen.<p />3. Auf Störungen des Bremsenstromsignals in MCOB/MCB prüfen.<p />4. Auf Kurzschluss von Bremsen prüfen.<p /></Actions>
+    <Description>Die Überwachung des Bremsenstroms für Manipulator Controller Board (MCOB) hat einen Fehler des Leistungssignals erkannt und alle Bremsen aktiviert.</Description>
+    <Actions>1. Bremsenstrom in MCOB prüfen.2. Bremsenstrom-Relais in Schrank prüfen.3. Auf Störungen des Bremsenstromsignals in MCOB/MCB prüfen.4. Auf Kurzschluss von Bremsen prüfen.</Actions>
   </Message>
   <Message number="7096" eDefine="SYS_ERR_HW_AUX_BRAKE_POWER_FAULT2">
     <Title>Fehler Bremsenstrom</Title>
-    <Description>Die Überwachung des Bremsenstroms für Manipulator Controller Board (MCOB/MCB) hat einen Fehler des Leistungssignals erkannt und alle Bremsen aktiviert.<p /></Description>
-    <Actions>1. Bremsenstrom in MCOB/MCB prüfen.<p />2. Bremsenstrom-Relais in Schrank prüfen.<p />3. Auf Störungen des Bremsenstromsignals in MCOB/MCB prüfen.<p /></Actions>
+    <Description>Die Überwachung des Bremsenstroms für Manipulator Controller Board (MCOB/MCB) hat einen Fehler des Leistungssignals erkannt und alle Bremsen aktiviert.</Description>
+    <Actions>1. Bremsenstrom in MCOB/MCB prüfen.2. Bremsenstrom-Relais in Schrank prüfen.3. Auf Störungen des Bremsenstromsignals in MCOB/MCB prüfen.</Actions>
   </Message>
   <Message number="7097" eDefine="SYS_ERR_HW_AUX_BRAKE_SHORT_CIRCUIT">
     <Title>Bremsen-Kurzschlussfehler</Title>
-    <Description>Überwachung der Bremsen an Manipulator Controller Board (MCOB/MCB) hat Kurzschluss an Achse <arg format="%d" ordinal="1" /> erkannt und alle Bremsen aktiviert. </Description>
+    <Description>Überwachung der Bremsen an Manipulator Controller Board (MCOB/MCB) hat Kurzschluss an Achse %d1 erkannt und alle Bremsen aktiviert. </Description>
     <Actions>1. Bremsen auf Kurzschluss überprüfen.</Actions>
   </Message>
   <Message number="7098" eDefine="SYS_ERR_HW_AUX_BRAKE_OPEN_CIRCUIT">
     <Title>Offene Bremsschaltung – Fehler</Title>
-    <Description>Überwachung der Bremsen an Manipulator Controller Board (MCOB/MCB) hat offenen Schaltkreis an Achse <arg format="%d" ordinal="1" /> erkannt und alle Bremsen aktiviert. </Description>
+    <Description>Überwachung der Bremsen an Manipulator Controller Board (MCOB/MCB) hat offenen Schaltkreis an Achse %d1 erkannt und alle Bremsen aktiviert. </Description>
     <Actions>1. Bremsen auf offenen Schaltkreis überprüfen.</Actions>
   </Message>
   <Message number="7099" eDefine="SYS_ERR_HW_AUX_PTC_ERROR2">
-    <Title>Temperatur zu hoch, Sensor <arg format="%d" ordinal="1" /></Title>
+    <Title>Temperatur zu hoch, Sensor %d1</Title>
     <Description>Systemüberhitzung an Motoren, Serial Measurement Unit (SMU) oder Prozessausrüstung erkannt. der Betriebskreis wurde geöffnet. </Description>
-    <Actions>Sensoren 1-8: Robotermotoren 1-8 <p />Sensor 9: SMU <p />Sensoren 10-14: Prozesse 1-5 <p />Weitere Informationen finden Sie in der aktuellen Roboterkonfiguration. </Actions>
+    <Actions>Sensoren 1-8: Robotermotoren 1-8 Sensor 9: SMU Sensoren 10-14: Prozesse 1-5 Weitere Informationen finden Sie in der aktuellen Roboterkonfiguration. </Actions>
   </Message>
   <Message number="7100" eDefine="SYS_ERR_HW_AUX_FLASH_DISK_ERROR">
     <Title>Flashdisk-Fehler an E/A-Knoten</Title>
-    <Description>Flashname: <arg format="%s" ordinal="1" /><p />Flashdisk-Funktion: <arg format="%s" ordinal="2" /><p />Fehlerbeschreibung: <arg format="%s" ordinal="3" /></Description>
+    <Description>Flashname: %sFlashdisk-Funktion: %sFehlerbeschreibung: %s</Description>
     <Actions>Fehler mitteilen.</Actions>
   </Message>
   <Message number="7101" eDefine="SYS_ERR_HW_AUX_BRAKE_RELAY">
     <Title>Bremsenfehler</Title>
-    <Description>Bremsen für mechanische Einheit <arg format="%s" ordinal="1" /> greifen nicht.</Description>
+    <Description>Bremsen für mechanische Einheit %s greifen nicht.</Description>
     <Consequences>Mechanische Einheit kann zusammenfallen, wenn die Motoren abgeschaltet werden.</Consequences>
     <Causes>Die Konfiguration des Bremsrelais ist fehlerhaft oder das Bremsrelais ist fehlerhaft. Wenn ein externes Bremsrelais benutzt wird, muss es korrekt in der Bewegungskonfigurationsdatei definiert sein.</Causes>
-    <Actions>1) Prüfen Sie, ob das externe Bremsrelais (falls verwendet) korrekt in der Konfigurationsdatei definiert wurde. <p />2) Prüfen Sie, ob das entsprechende E/A-Signal korrekt in der E/A-Konfigurationsdatei definiert wurde. Überprüfung der Konfigurationsdateien siehe Handbuch zur Fehlerbehebung.</Actions>
+    <Actions>1) Prüfen Sie, ob das externe Bremsrelais (falls verwendet) korrekt in der Konfigurationsdatei definiert wurde. 2) Prüfen Sie, ob das entsprechende E/A-Signal korrekt in der E/A-Konfigurationsdatei definiert wurde. Überprüfung der Konfigurationsdateien siehe Handbuch zur Fehlerbehebung.</Actions>
   </Message>
   <Message number="7102" eDefine="SYS_ERR_HW_AUX_PSU_24VCOOL">
     <Title>Fehlerhafter 24-V-COOL-Pegel</Title>
-    <Description>Der 24-V-COOL-Ausgang der DSQC 662 liegt außerhalb des Sollbereichs.<p /></Description>
-    <Consequences>1. Lüfterproblem<p />2. K43 Betriebskreisproblem<p />3. K44 Bremsenproblem<p /></Consequences>
+    <Description>Der 24-V-COOL-Ausgang der DSQC 662 liegt außerhalb des Sollbereichs.</Description>
+    <Consequences>1. Lüfterproblem2. K43 Betriebskreisproblem3. K44 Bremsenproblem</Consequences>
     <Causes>Die Ausgangslast der Einheit DSQC 662 verursacht möglicherweise den fehlerhaften Spannungspegel. Die Stromversorgungseinheiten sind im Handbuch zur Fehlerbehebung und im Schaltplan zu sehen!</Causes>
-    <Actions>1) Überprüfen Sie die LED auf der DSQC 662. Grün ist OK, rot bedeutet, es fehlen 24V.<p />2) Überprüfen Sie den Spannungsstatus auf dem Programmiergerät unter Systeminformationen.<p />3) Überprüfen Sie die 24V an X5 mit und ohne an der Einheit DSQC 662 angeschlossenem X5.<p />4) Überprüfen Sie die Kabel an X5 an der Einheit DSQC 662.<p />5) Entfernen Sie bei Bedarf alle fehlerhaften Einheiten.</Actions>
+    <Actions>1) Überprüfen Sie die LED auf der DSQC 662. Grün ist OK, rot bedeutet, es fehlen 24V.2) Überprüfen Sie den Spannungsstatus auf dem Programmiergerät unter Systeminformationen.3) Überprüfen Sie die 24V an X5 mit und ohne an der Einheit DSQC 662 angeschlossenem X5.4) Überprüfen Sie die Kabel an X5 an der Einheit DSQC 662.5) Entfernen Sie bei Bedarf alle fehlerhaften Einheiten.</Actions>
   </Message>
   <Message number="7103" eDefine="SYS_ERR_HW_AUX_PSU_24VSYS">
     <Title>Fehlerhafter 24V SYS Pegel</Title>
     <Description>Der 24V SYS Ausgang der Verteilungseinheit DSQC 662 oder DSQC 604 liegt außerhalb des Sollbereichs.</Description>
     <Consequences>Keine 24V zum Achsencomputer oder zur Antriebseinheit.</Consequences>
     <Causes>Die Verkabelung oder die Ausgangslast kann die fehlerhafte Spannung in der Verteilungseinheit DSQC 662 oder DSQC 604 verursachen. Die Stromversorgungseinheiten sind im Handbuch zur Fehlerbehebung und im Schaltplan zu sehen!</Causes>
-    <Actions>1) Überprüfen Sie die LED auf der DSQC 662. Grün ist OK, und rot bedeutet, es fehlen 24V.<p />2) Überprüfen Sie den Spannungsstatus auf dem Programmiergerät unter Systeminformationen.<p />3) Überprüfen Sie alle Kabel an der Einheit DSQC 662 und DSQC 604. <p />4) Überprüfen Sie die Ausgangsspannung, und tauschen Sie alle fehlerhaften Einheiten bei Bedarf aus. <p /><p /></Actions>
+    <Actions>1) Überprüfen Sie die LED auf der DSQC 662. Grün ist OK, und rot bedeutet, es fehlen 24V.2) Überprüfen Sie den Spannungsstatus auf dem Programmiergerät unter Systeminformationen.3) Überprüfen Sie alle Kabel an der Einheit DSQC 662 und DSQC 604. 4) Überprüfen Sie die Ausgangsspannung, und tauschen Sie alle fehlerhaften Einheiten bei Bedarf aus. </Actions>
   </Message>
   <Message number="7104" eDefine="SYS_ERR_HW_AUX_PSU_NOBACKUP">
     <Title>Es ist keine Backup-Spannung verfügbar</Title>
     <Description>Das Backup-Energiemodul, welches die Backup-Spannung aufrechterhält, ist nicht funktionsfähig.</Description>
     <Consequences>Nach Abschalten der Stromzufuhr muss ein B-Start ausgeführt werden. Beim Ausschalten werden keine geänderten Systemdaten gespeichert.</Consequences>
     <Causes>Mögliche Ursache: Fehlerhafte Kondensatoreinheit, Kabel oder Verteilungseinheit DSQC 662 oder DSQC 604</Causes>
-    <Actions>Vor Arbeiten am System zunächst eine kontrollierte Abschaltung vornehmen, um sicherzustellen, dass alle Systemdaten korrekt gespeichert werden. <p />1) Überprüfen Sie die Kabel und Steckverbinder des Backup-Energiemoduls.<p />2) Überprüfen Sie den Spannungsstatus auf dem Programmiergerät unter Systeminformationen. <p />3) Überprüfen Sie das Backup-Energiemodul. <p />4) Überprüfen Sie die Verteilereinheit DSQC 662 oder DSQC 604.<p />5) Ersetzen Sie die fehlerhafte Einheit bei Bedarf.</Actions>
+    <Actions>Vor Arbeiten am System zunächst eine kontrollierte Abschaltung vornehmen, um sicherzustellen, dass alle Systemdaten korrekt gespeichert werden. 1) Überprüfen Sie die Kabel und Steckverbinder des Backup-Energiemoduls.2) Überprüfen Sie den Spannungsstatus auf dem Programmiergerät unter Systeminformationen. 3) Überprüfen Sie das Backup-Energiemodul. 4) Überprüfen Sie die Verteilereinheit DSQC 662 oder DSQC 604.5) Ersetzen Sie die fehlerhafte Einheit bei Bedarf.</Actions>
   </Message>
   <Message number="7105" eDefine="SYS_ERR_HW_AUX_PSU_REGAINED_CONTACT">
     <Title>Kommunikation mit Stromversorg. besteht wieder</Title>
@@ -83,63 +83,63 @@
     <Description>Spannung in Kondensatoreinheit des Computers ist zu niedrig für Funktionalität.</Description>
     <Consequences>Keine Systemkonsequenzen. Beim Abschalten werden keine geänderten Systemdaten gespeichert.</Consequences>
     <Causes>Mögliche Ursache: Fehlerhafte(s) Kondensatoreinheit, Kabel oder Netzteil.</Causes>
-    <Actions>Vor Arbeiten am System zunächst eine kontrollierte Abschaltung, um sicherzustellen, dass alle Systemdaten korrekt gespeichert werden.<p />1) Kabel und Anschlüsse der Kondensatoreinheit prüfen.<p />2) Kondensatoreinheit prüfen.<p />3) Stromversorgung prüfen.<p />4) Gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
+    <Actions>Vor Arbeiten am System zunächst eine kontrollierte Abschaltung, um sicherzustellen, dass alle Systemdaten korrekt gespeichert werden.1) Kabel und Anschlüsse der Kondensatoreinheit prüfen.2) Kondensatoreinheit prüfen.3) Stromversorgung prüfen.4) Gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
   </Message>
   <Message number="7107" eDefine="SYS_ERR_HW_AUX_PSU_UC_FAIL">
     <Title>Fehlerhafte Kondensatoreinheit</Title>
     <Description>Kondensatoreinheit für USV-Spannung im Steuerungsmodul ist nicht funktionsfähig.</Description>
     <Consequences>Nach Abschalten der Stromzufuhr muss ein B-Start ausgeführt werden. Beim Abschalten erfolgt kein Backup.</Consequences>
     <Causes>Mögliche Ursache: Fehlerhafte Kondensatoreinheit, Kabel oder Netzteil.</Causes>
-    <Actions>Vor Arbeiten am System zunächst eine kontrollierte Abschaltung, um sicherzustellen, dass alle Systemdaten korrekt gespeichert werden.<p />1) Kabel und Anschluss der Kondensatoreinheit prüfen.<p />2) Kondensatoreinheit prüfen.<p />3) Gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
+    <Actions>Vor Arbeiten am System zunächst eine kontrollierte Abschaltung, um sicherzustellen, dass alle Systemdaten korrekt gespeichert werden.1) Kabel und Anschluss der Kondensatoreinheit prüfen.2) Kondensatoreinheit prüfen.3) Gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
   </Message>
   <Message number="7108" eDefine="SYS_ERR_HW_AUX_PSU_NO_CONTACT">
     <Title>Keine Kommunikation  - Verteilungseinheit und Computer</Title>
     <Description>Der Hauptcomputer hat keine Kommunikation mit der Leistungsverteilungseinheit DSQC 662 oder DSQC 604.</Description>
     <Consequences>Der Hauptcomputer kann keine Statusinformationen abrufen oder die Leistungsverteilungseinheit abschalten. Beim Abschalten werden keine geänderten Systemdaten gespeichert.</Consequences>
     <Causes>Das USB-Kabel vom Hauptcomputer zur Leistungsverteilungseinheit ist eventuell fehlerhaft, verschmutzt oder getrennt, oder die Leistungsverteilungseinheit DSQC 662 oder DSQC 604 oder der Hauptcomputer sind möglicherweise fehlerhaft.</Causes>
-    <Actions>Führen Sie vor Arbeiten am System, soweit möglich, zunächst eine kontrollierte Abschaltung durch, um sicherzustellen, dass alle Systemdaten korrekt gespeichert werden. <p />1) Überprüfen Sie die Kabel und Steckverbinder zur Leistungsverteilungseinheit DSQC 662 oder DSQC 604, und stellen Sie sicher, dass die Steckverbinder auf beiden Seiten sauber und unbeschädigt sind. Überprüfen Sie auch die Steckverbinder im Computer und in DSQC 662 sowie DSQC 604. <p />2) Verbinden und trennen Sie das USB-Kabel, und achten Sie auf die Meldungen auf dem Programmiergerät. Stellen Sie sicher, dass eine Kommunikation in beide Richtungen besteht. Es ist auch möglich, einen anderen USB-Port am Computer auszuprobieren.<p />3) Tauschen Sie alle fehlerhaften Einheiten aus. </Actions>
+    <Actions>Führen Sie vor Arbeiten am System, soweit möglich, zunächst eine kontrollierte Abschaltung durch, um sicherzustellen, dass alle Systemdaten korrekt gespeichert werden. 1) Überprüfen Sie die Kabel und Steckverbinder zur Leistungsverteilungseinheit DSQC 662 oder DSQC 604, und stellen Sie sicher, dass die Steckverbinder auf beiden Seiten sauber und unbeschädigt sind. Überprüfen Sie auch die Steckverbinder im Computer und in DSQC 662 sowie DSQC 604. 2) Verbinden und trennen Sie das USB-Kabel, und achten Sie auf die Meldungen auf dem Programmiergerät. Stellen Sie sicher, dass eine Kommunikation in beide Richtungen besteht. Es ist auch möglich, einen anderen USB-Port am Computer auszuprobieren.3) Tauschen Sie alle fehlerhaften Einheiten aus. </Actions>
   </Message>
   <Message number="7200" eDefine="SYS_ERR_HW_AUX_EMY_24V_OK">
     <Title>Stromversorgungsfehler: Not-Aus-Stromversorgung</Title>
     <Description>Stromversorgungsfehler bei 24 V Not-Aus-Stromversorgung. Feedback von Safety Interface Board (SIB).</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. Stromversorgung prüfen.</Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. Stromversorgung prüfen.</Actions>
   </Message>
   <Message number="7201" eDefine="SYS_ERR_HW_AUX_FAILSAFE_24V_O">
     <Title>Stromversorgungsfehler: Sichere 24V-Stromversorgung</Title>
     <Description>Stromversorgungsfehler bei störungssicherer 24V-Stromversorgung. Feedback von Safety Interface Board (SIB).</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. Stromversorgung prüfen.</Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. Stromversorgung prüfen.</Actions>
   </Message>
   <Message number="7202" eDefine="SYS_ERR_HW_AUX_IO_24V_OK">
     <Title>Stromversorgungsfehler: 24V-E/A-Versorgung</Title>
     <Description>Stromversorgungsfehler bei 24V-E/A-Stromversorgung. Feedback von Safety Interface Board (SIB).</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. Stromversorgung prüfen.</Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. Stromversorgung prüfen.</Actions>
   </Message>
   <Message number="7203" eDefine="SYS_ERR_HW_AUX_24V_SYS_ENA">
     <Title>Stromversorgungsfehler: 24V-SYS-Stromversorgung</Title>
-    <Description>Stromversorgungsfehler gemeldet, wenn 24V SYS &lt; 18 V. Feedback von Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" />.</Description>
+    <Description>Stromversorgungsfehler gemeldet, wenn 24V SYS &lt; 18 V. Feedback von Manipulator Interface Board (MIB) %i1.</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. Stromversorgung prüfen.</Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. Stromversorgung prüfen.</Actions>
   </Message>
   <Message number="7204" eDefine="SYS_ERR_HW_AUX_24V_IO_ENA">
     <Title>Stromversorgungsfehler: 24V-E/A-Versorgung</Title>
-    <Description>Stromversorgungsfehler gemeldet, wenn 24V E/A &lt; 18 V. Feedback von Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" />.</Description>
+    <Description>Stromversorgungsfehler gemeldet, wenn 24V E/A &lt; 18 V. Feedback von Manipulator Interface Board (MIB) %i1.</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. Stromversorgung prüfen.</Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. Stromversorgung prüfen.</Actions>
   </Message>
   <Message number="7205" eDefine="SYS_ERR_HW_AUX_12V_ENA">
     <Title>Stromversorgungsfehler: 12V-Spül-Stromversorgung</Title>
-    <Description>Stromversorgungsfehler gemeldet, wenn 12V Spül &lt; 10,8 V. Feedback von Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" />.</Description>
+    <Description>Stromversorgungsfehler gemeldet, wenn 12V Spül &lt; 10,8 V. Feedback von Manipulator Interface Board (MIB) %i1.</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. Stromversorgung prüfen.</Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. Stromversorgung prüfen.</Actions>
   </Message>
   <Message number="7206" eDefine="SYS_ERR_HW_AUX_12V_TPU">
     <Title>Stromversorgungsfehler: 12V-PG-Stromversorgung</Title>
     <Description>Stromversorgungsfehler bei 12V-Stromversorgung von Programmiergerät (PG). Feedback von Teach Pendant Interface Board (PIB).</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. Stromversorgung prüfen.</Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. Stromversorgung prüfen.</Actions>
   </Message>
   <Message number="7207" eDefine="SYS_ERR_HW_AUX_BATT_LOW">
     <Title>Batterieladezustand schwach</Title>
@@ -151,122 +151,122 @@
     <Description>Die Temperatur im Transformator ist zu hoch.</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
     <Causes>Eventuell ist die Einheit überlastet oder ihre Lüfter funktionieren nicht richtig oder der Luftstrom ist behindert.</Causes>
-    <Actions>1) Sicherstellen, dass die Lüfter arbeiten. <p />2) Prüfen, ob der Luftstrom zu den Lüftern der Einheit behindert ist.</Actions>
+    <Actions>1) Sicherstellen, dass die Lüfter arbeiten. 2) Prüfen, ob der Luftstrom zu den Lüftern der Einheit behindert ist.</Actions>
   </Message>
   <Message number="7209" eDefine="SYS_ERR_HW_AUX_CABINET_TEMP">
     <Title>Übertemperatur in Schaltschrank</Title>
     <Description>Die Temperatur im Schaltschrank ist zu hoch.</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
     <Causes>Eventuell ist die Einheit überlastet oder ihre Lüfter funktionieren nicht richtig oder der Luftstrom ist behindert.</Causes>
-    <Actions>1) Sicherstellen, dass die Lüfter arbeiten. <p />2) Prüfen, ob der Luftstrom zu den Lüftern der Einheit behindert ist.</Actions>
+    <Actions>1) Sicherstellen, dass die Lüfter arbeiten. 2) Prüfen, ob der Luftstrom zu den Lüftern der Einheit behindert ist.</Actions>
   </Message>
   <Message number="7210" eDefine="SYS_ERR_HW_AUX_KM1_ERROR">
     <Title>Fehler an Schütz KM1</Title>
     <Description>An Motorschütz KM1 wurde ein Fehler festgestellt. </Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. Schütz prüfen.</Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. Schütz prüfen.</Actions>
   </Message>
   <Message number="7211" eDefine="SYS_ERR_HW_AUX_KM2_ERROR">
     <Title>Fehler an Schütz KM2</Title>
     <Description>An Motorschütz KM2 wurde ein Fehler festgestellt. </Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. Schütz prüfen.</Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. Schütz prüfen.</Actions>
   </Message>
   <Message number="7212" eDefine="SYS_ERR_HW_AUX_KM101_ERROR">
     <Title>Fehler an Schütz KM101</Title>
     <Description>An Motorschütz KM101 wurde ein Fehler festgestellt. </Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. Schütz prüfen.</Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. Schütz prüfen.</Actions>
   </Message>
   <Message number="7213" eDefine="SYS_ERR_HW_AUX_KM102_ERROR">
     <Title>Fehler an Schütz KM102</Title>
     <Description>An Motorschütz KM102 wurde ein Fehler festgestellt. </Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. Schütz prüfen.</Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. Schütz prüfen.</Actions>
   </Message>
   <Message number="7214" eDefine="SYS_ERR_HW_AUX_RUN_CH1">
     <Title>Feedback-Konflikt in Betriebskreis 1</Title>
-    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> melden nicht übereinstimmende Feedbacksignale für Betriebskreis 1.</Description>
+    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) %i1 melden nicht übereinstimmende Feedbacksignale für Betriebskreis 1.</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. SIB austauschen, falls defekt.<p />3. MIB austauschen, falls defekt.<p /></Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. SIB austauschen, falls defekt.3. MIB austauschen, falls defekt.</Actions>
   </Message>
   <Message number="7215" eDefine="SYS_ERR_HW_AUX_RUN_CH2">
     <Title>Feedback-Konflikt in Betriebskreis 2</Title>
-    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> melden nicht übereinstimmende Feedbacksignale für Betriebskreis 2.</Description>
+    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) %i1 melden nicht übereinstimmende Feedbacksignale für Betriebskreis 2.</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. SIB austauschen, falls defekt.<p />3. MIB austauschen, falls defekt.<p /></Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. SIB austauschen, falls defekt.3. MIB austauschen, falls defekt.</Actions>
   </Message>
   <Message number="7216" eDefine="SYS_ERR_HW_AUX_BRAKE_CH1">
     <Title>Feedback-Konflikt in Bremskreis 1</Title>
-    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> melden nicht übereinstimmende Feedbacksignale für Bremskreis 1.</Description>
+    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) %i1 melden nicht übereinstimmende Feedbacksignale für Bremskreis 1.</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. SIB austauschen, falls defekt.<p />3. MIB austauschen, falls defekt.<p /></Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. SIB austauschen, falls defekt.3. MIB austauschen, falls defekt.</Actions>
   </Message>
   <Message number="7217" eDefine="SYS_ERR_HW_AUX_BRAKE_CH2">
     <Title>Feedback-Konflikt in Bremskreis 2</Title>
-    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> melden nicht übereinstimmende Feedbacksignale für Bremskreis 2.</Description>
+    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) %i1 melden nicht übereinstimmende Feedbacksignale für Bremskreis 2.</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. SIB austauschen, falls defekt.<p />3. MIB austauschen, falls defekt.<p /></Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. SIB austauschen, falls defekt.3. MIB austauschen, falls defekt.</Actions>
   </Message>
   <Message number="7218" eDefine="SYS_ERR_HW_AUX_CABIN_CH1">
     <Title>Feedback-Konflikt in Kabinenverriegelungskreis 1</Title>
-    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> melden nicht übereinstimmende Feedbacksignale für Kabinenverriegelungskreis 1.</Description>
+    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) %i1 melden nicht übereinstimmende Feedbacksignale für Kabinenverriegelungskreis 1.</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. SIB austauschen, falls defekt.<p />3. MIB austauschen, falls defekt.<p /></Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. SIB austauschen, falls defekt.3. MIB austauschen, falls defekt.</Actions>
   </Message>
   <Message number="7219" eDefine="SYS_ERR_HW_AUX_CABIN_CH2">
     <Title>Feedback-Konflikt in Kabinenverriegelungskreis 2</Title>
-    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> melden nicht übereinstimmende Feedbacksignale für Kabinenverriegelungskreis 2.</Description>
+    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) %i1 melden nicht übereinstimmende Feedbacksignale für Kabinenverriegelungskreis 2.</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. SIB austauschen, falls defekt.<p />3. MIB austauschen, falls defekt.<p /></Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. SIB austauschen, falls defekt.3. MIB austauschen, falls defekt.</Actions>
   </Message>
   <Message number="7220" eDefine="SYS_ERR_HW_AUX_HV_CH1">
     <Title>Feedback-Konflikt in Hochspannungsverriegelungskreis 1</Title>
-    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> melden nicht übereinstimmende Feedbacksignale für Hochspannungsverriegelungskreis 1.</Description>
+    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) %i1 melden nicht übereinstimmende Feedbacksignale für Hochspannungsverriegelungskreis 1.</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. SIB austauschen, falls defekt.<p />3. MIB austauschen, falls defekt.<p /></Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. SIB austauschen, falls defekt.3. MIB austauschen, falls defekt.</Actions>
   </Message>
   <Message number="7221" eDefine="SYS_ERR_HW_AUX_HV_CH2">
     <Title>Feedback-Konflikt in Hochspannungsverriegelungskreis 2</Title>
-    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> melden nicht übereinstimmende Feedbacksignale für Hochspannungsverriegelungskreis 2.</Description>
+    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) %i1 melden nicht übereinstimmende Feedbacksignale für Hochspannungsverriegelungskreis 2.</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. SIB austauschen, falls defekt.<p />3. MIB austauschen, falls defekt.<p /></Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. SIB austauschen, falls defekt.3. MIB austauschen, falls defekt.</Actions>
   </Message>
   <Message number="7222" eDefine="SYS_ERR_HW_AUX_SYS2_ILCK">
     <Title>Feedback-Konflikt in Verriegelungskreis System 2</Title>
-    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> melden nicht übereinstimmende Feedbacksignale für Verriegelungskreis System 2.</Description>
+    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) %i1 melden nicht übereinstimmende Feedbacksignale für Verriegelungskreis System 2.</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. SIB austauschen, falls defekt.<p />3. MIB austauschen, falls defekt.<p /></Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. SIB austauschen, falls defekt.3. MIB austauschen, falls defekt.</Actions>
   </Message>
   <Message number="7223" eDefine="SYS_ERR_HW_AUX_MAIN_RLY">
     <Title>Feedback-Konflikt in Hauptrelaiskreis</Title>
-    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> melden nicht übereinstimmende Feedbacksignale für Hauptrelaiskreis.</Description>
+    <Description>Safety Interface Board (SIB) und Manipulator Interface Board (MIB) %i1 melden nicht übereinstimmende Feedbacksignale für Hauptrelaiskreis.</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. SIB austauschen, falls defekt.<p />3. MIB austauschen, falls defekt.<p /></Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. SIB austauschen, falls defekt.3. MIB austauschen, falls defekt.</Actions>
   </Message>
   <Message number="7224" eDefine="SYS_ERR_HW_AUX_CAB_ILCK1">
     <Title>Konflikt in Kabinenverriegelungskreis 1</Title>
     <Description>Abweichung zwischen Eingangs- und Ausgangssignalen für Kabinenverriegelungskreis 1 von Safety Interface Board (SIB).</Description>
     <Consequences>Lackier-Sicherheitskreis wird geöffnet.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. SIB austauschen, falls defekt.</Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. SIB austauschen, falls defekt.</Actions>
   </Message>
   <Message number="7225" eDefine="SYS_ERR_HW_AUX_CAB_ILCK2">
     <Title>Konflikt in Kabinenverriegelungskreis 2</Title>
     <Description>Abweichung zwischen Eingangs- und Ausgangssignalen für Kabinenverriegelungskreis 2 von Safety Interface Board (SIB).</Description>
     <Consequences>Lackier-Sicherheitskreis wird geöffnet.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. SIB austauschen, falls defekt.</Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. SIB austauschen, falls defekt.</Actions>
   </Message>
   <Message number="7226" eDefine="SYS_ERR_HW_AUX_HV_ILCK1">
     <Title>Konflikt in Hochspannungsverriegelungskreis 1</Title>
     <Description>Abweichung zwischen Eingangs- und Ausgangssignalen für Hochspannungsverriegelungskreis 1 von Safety Interface Board (SIB).</Description>
     <Consequences>Lackier-Sicherheitskreis wird geöffnet.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. SIB austauschen, falls defekt.</Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. SIB austauschen, falls defekt.</Actions>
   </Message>
   <Message number="7227" eDefine="SYS_ERR_HW_AUX_HV_ILCK2">
     <Title>Konflikt in Hochspannungsverriegelungskreis 2</Title>
     <Description>Abweichung zwischen Eingangs- und Ausgangssignalen für Hochspannungsverriegelungskreis 2 von Safety Interface Board (SIB).</Description>
     <Consequences>Lackier-Sicherheitskreis wird geöffnet.</Consequences>
-    <Actions>1. Kabel und Anschlüsse prüfen.<p />2. SIB austauschen, falls defekt.</Actions>
+    <Actions>1. Kabel und Anschlüsse prüfen.2. SIB austauschen, falls defekt.</Actions>
   </Message>
   <Message number="7228" eDefine="SYS_ERR_HW_AUX_CAB_CH">
     <Title>Kabinenverriegelungskreis-Konflikt von SIB</Title>
@@ -282,38 +282,38 @@
   </Message>
   <Message number="7230" eDefine="SYS_ERR_HW_AUX_CBC_WARN">
     <Title>Warnung Bremsenleistung</Title>
-    <Description>Die zyklische Bremsenüberprüfung gibt an, dass die Bremse für die mechanische Einheit <arg format="%s" ordinal="1" /> Achse <arg format="%s" ordinal="2" /> nicht das vollständige Bremsdrehmoment aufweist. </Description>
+    <Description>Die zyklische Bremsenüberprüfung gibt an, dass die Bremse für die mechanische Einheit %s Achse %s nicht das vollständige Bremsdrehmoment aufweist. </Description>
     <Consequences>Dies ist nur eine Warnung und es müssen nicht sofort Maßnahmen ergriffen werden.</Consequences>
   </Message>
   <Message number="7231" eDefine="SYS_ERR_HW_AUX_CBC_ERR">
     <Title>Fehler Bremsenleistung</Title>
-    <Description>Die zyklische Bremsenüberprüfung hat festgestellt, dass die Bremse für die mechanische Einheit <arg format="%s" ordinal="1" /> Achse <arg format="%s" ordinal="2" /> ein zu geringes Bremsdrehmoment aufweist.<p />Diese Bremse wird vom Safety Controller für Antriebsmodul Nr. <arg format="%s" ordinal="3" /> nicht akzeptiert. </Description>
-    <Consequences>WARNUNG: Die Bremsleistung für diese Achse ist zu gering.<p /><p />Bis die Bremse ein akzeptiertes Bremsdrehmoment aufweist, kann der Roboter nur mit der in der Konfiguration der zyklische Bremsenüberprüfung  in "Reduzierte max. Geschwindigkeit [mm/s]" angegebenen Geschwindigkeit bewegt werden. </Consequences>
-    <Actions>1) Zyklische Bremsenüberprüfung erneut ausführen.<p />2) Motor mit Bremse austauschen. </Actions>
+    <Description>Die zyklische Bremsenüberprüfung hat festgestellt, dass die Bremse für die mechanische Einheit %s Achse %s ein zu geringes Bremsdrehmoment aufweist.Diese Bremse wird vom Safety Controller für Antriebsmodul Nr. %s nicht akzeptiert. </Description>
+    <Consequences>WARNUNG: Die Bremsleistung für diese Achse ist zu gering.Bis die Bremse ein akzeptiertes Bremsdrehmoment aufweist, kann der Roboter nur mit der in der Konfiguration der zyklische Bremsenüberprüfung  in "Reduzierte max. Geschwindigkeit [mm/s]" angegebenen Geschwindigkeit bewegt werden. </Consequences>
+    <Actions>1) Zyklische Bremsenüberprüfung erneut ausführen.2) Motor mit Bremse austauschen. </Actions>
   </Message>
   <Message number="7232" eDefine="SYS_ERR_HW_AUX_CBC_ARM_TRQ">
     <Title>Konfigurationsfehler - Zyklische Bremsenüberprüfung</Title>
-    <Description>Cyclic Brake Check hat festgestellt, dass die Bremse für die mechanische Einheit <arg format="%s" ordinal="1" /> Achse <arg format="%s" ordinal="2" /> kein definiertes erforderliches Bremsdrehmoment aufweist. </Description>
+    <Description>Cyclic Brake Check hat festgestellt, dass die Bremse für die mechanische Einheit %s Achse %s kein definiertes erforderliches Bremsdrehmoment aufweist. </Description>
     <Consequences>Die zyklische Bremsenüberprüfung wird fortgesetzt, jedoch wird für diese Achse keine gültige Bremsenüberprüfung ausgeführt.</Consequences>
     <Causes>Die Bewegungskonfigurationsdaten für diese Achse sind nicht ordnungsgemäß konfiguriert.</Causes>
-    <Actions>Die Bewegungskonfigurationsdaten für diese Achse sind nicht ordnungsgemäß konfiguriert:<p />1) Einen Wert für Parameter max_static_arm_torque angeben, wenn Achse überprüft werden soll.<p />2) Cyclic Brake Check in Bewegungskonfiguration deaktivieren, wenn Achse nicht überprüft werden soll. </Actions>
+    <Actions>Die Bewegungskonfigurationsdaten für diese Achse sind nicht ordnungsgemäß konfiguriert:1) Einen Wert für Parameter max_static_arm_torque angeben, wenn Achse überprüft werden soll.2) Cyclic Brake Check in Bewegungskonfiguration deaktivieren, wenn Achse nicht überprüft werden soll. </Actions>
   </Message>
   <Message number="7233" eDefine="SYS_ERR_HW_AUX_CBC_ARM_CBC">
     <Title>Konfigurationsfehler - Zyklische Bremsenüberprüfung</Title>
-    <Description>Cyclic Brake Check hat festgestellt, dass die Bremse für die mechanische Einheit <arg format="%s" ordinal="1" /> Achse <arg format="%s" ordinal="2" /> gemäß Konfiguration überprüft werden soll. Die mechanische Einheit kann jedoch nicht in den Safety Controller eingeschlossen werden, weil Aktivierung/Deaktivierung zur Laufzeit zulässig ist. </Description>
+    <Description>Cyclic Brake Check hat festgestellt, dass die Bremse für die mechanische Einheit %s Achse %s gemäß Konfiguration überprüft werden soll. Die mechanische Einheit kann jedoch nicht in den Safety Controller eingeschlossen werden, weil Aktivierung/Deaktivierung zur Laufzeit zulässig ist. </Description>
     <Consequences>Die zyklische Bremsenüberprüfung wird mit anderen mechanischen Einheiten fortgesetzt.</Consequences>
     <Causes>Die Bewegungskonfigurationsdaten für diese Achse sind nicht ordnungsgemäß konfiguriert.</Causes>
-    <Actions>Die Bewegungskonfigurationsdaten für diese Achse sind nicht ordnungsgemäß konfiguriert:<p />1) Cyclic Brake Check wurde angegeben, darf jedoch nicht für diese Achse ausgeführt werden.<p />2) Die mechanische Einheit muss beim Start aktiv sein und die Deaktivierung darf nicht zulässig sein. </Actions>
+    <Actions>Die Bewegungskonfigurationsdaten für diese Achse sind nicht ordnungsgemäß konfiguriert:1) Cyclic Brake Check wurde angegeben, darf jedoch nicht für diese Achse ausgeführt werden.2) Die mechanische Einheit muss beim Start aktiv sein und die Deaktivierung darf nicht zulässig sein. </Actions>
   </Message>
   <Message number="7240" eDefine="SYS_ERR_HW_AUX_CAB_CH_FB">
     <Title>Kabinenverriegelungskreis-Konflikt von MIB</Title>
-    <Description>Nur einer der beiden Kabinenverriegelungskreise wurde geöffnet. Von Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> gemeldet.</Description>
+    <Description>Nur einer der beiden Kabinenverriegelungskreise wurde geöffnet. Von Manipulator Interface Board (MIB) %i1 gemeldet.</Description>
     <Consequences>Lackier-Sicherheitskreis wird geöffnet.</Consequences>
     <Actions>MIB austauschen, falls defekt.</Actions>
   </Message>
   <Message number="7241" eDefine="SYS_ERR_HW_AUX_HV_CH_FB">
     <Title>Hochspannungsverriegelungskreis-Konflikt von MIB</Title>
-    <Description>Nur einer der beiden Hochspannungskreise wurde geöffnet. Von Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> gemeldet.</Description>
+    <Description>Nur einer der beiden Hochspannungskreise wurde geöffnet. Von Manipulator Interface Board (MIB) %i1 gemeldet.</Description>
     <Consequences>Lackier-Sicherheitskreis wird geöffnet.</Consequences>
     <Actions>MIB austauschen, falls defekt.</Actions>
   </Message>
@@ -330,13 +330,13 @@
     <Actions>SIB austauschen, falls defekt.</Actions>
   </Message>
   <Message number="7244" eDefine="SYS_ERR_HW_AUX_RUN_CH_FB">
-    <Title>Betriebskreiskonflikt von MIB <arg format="%d" ordinal="1" /></Title>
+    <Title>Betriebskreiskonflikt von MIB %d1</Title>
     <Description>Nur eines der beiden Betriebskreis-Feedbacksignale von Manipulator Interface Board (MIB) wurde geöffnet.</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
     <Actions>MIB austauschen, falls defekt.</Actions>
   </Message>
   <Message number="7245" eDefine="SYS_ERR_HW_AUX_BRAKE_CH_FB">
-    <Title>Bremskreiskonflikt von MIB <arg format="%d" ordinal="1" /></Title>
+    <Title>Bremskreiskonflikt von MIB %d1</Title>
     <Description>Nur eines der beiden Bremskreis-Feedbacksignale von Manipulator Interface Board (MIB) wurde geöffnet.</Description>
     <Consequences>Das System wechselt in den Zustand SYS HALT.</Consequences>
     <Actions>MIB austauschen, falls defekt.</Actions>
@@ -345,21 +345,21 @@
     <Title>Not-Aus-Relais Konflikt</Title>
     <Description>Nur einer der beiden Not-Aus-Kreise von Safety Interface Board (SIB) wurde intern geöffnet.</Description>
     <Consequences>Das System bleibt im Not-Aus-Zustand.</Consequences>
-    <Actions>1. Not-Aus-Taste drücken und Not-Aus erneut zurücksetzen.<p />2. SIB austauschen falls defekt.</Actions>
+    <Actions>1. Not-Aus-Taste drücken und Not-Aus erneut zurücksetzen.2. SIB austauschen falls defekt.</Actions>
   </Message>
   <Message number="7247" eDefine="SYS_ERR_HW_FAN_DRIVE_SYSTEM">
-    <Title>Lüfter <arg format="%i" ordinal="1" /> Fehlfunktion</Title>
+    <Title>Lüfter %i1 Fehlfunktion</Title>
     <Description>Lüfter der Antriebssysteme auf der Schrankrückseite drehen sich nicht oder sehr langsam.</Description>
     <Consequences>Temperatur des Antriebssystems steigt.</Consequences>
     <Causes>Fehlerhafte(r) Lüfter, Kabel oder Stromversorgung (siehe Schaltplan).</Causes>
-    <Actions>1. Lüfterkabel prüfen.<p />2. Stromversorgung prüfen.<p />3. Lüfter prüfen.</Actions>
+    <Actions>1. Lüfterkabel prüfen.2. Stromversorgung prüfen.3. Lüfter prüfen.</Actions>
   </Message>
   <Message number="7248" eDefine="SYS_ERR_HW_FAN_DOOR">
-    <Title>Lüfter <arg format="%i" ordinal="1" /> Fehlfunktion</Title>
+    <Title>Lüfter %i1 Fehlfunktion</Title>
     <Description>Lüfter in der Schrankvordertür dreht sich nicht oder sehr langsam.</Description>
     <Consequences>Die Temperatur im Schrank steigt.</Consequences>
     <Causes>Fehlerhafte(r) Lüfter, Kabel oder Stromversorgung (siehe Schaltplan).</Causes>
-    <Actions>1. Lüfterkabel prüfen.<p />2. Stromversorgung prüfen.<p />3. Lüfter prüfen.</Actions>
+    <Actions>1. Lüfterkabel prüfen.2. Stromversorgung prüfen.3. Lüfter prüfen.</Actions>
   </Message>
   <Message number="7249" eDefine="SYS_ERR_HW_AUX_GLITCH_ES_INPUTS">
     <Title>Störimpuls in Not-Aus-Kreisen</Title>

@@ -2,484 +2,484 @@
 <Domain xmlns="urn:abb-robotics-elog-text" elogDomain="ARL" domainNo="4" lang="de" elogTextVersion="1.0" min="1514" max="1606">
   <Message number="1514" eDefine="SYS_ERR_ARL_ILL_WOBJ0">
     <Title>Load-ID-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />wobj0 unzulässig für raumfesten TCP.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Anderes Werkobjekt wählen.<p />Nächste Ereignisprotokollmeldung auf nächste erforderliche Benutzeraktion überprüfen.</Actions>
+    <Description>Task: %swobj0 unzulässig für raumfesten TCP.Programmreferenz: %s</Description>
+    <Actions>Anderes Werkobjekt wählen.Nächste Ereignisprotokollmeldung auf nächste erforderliche Benutzeraktion überprüfen.</Actions>
   </Message>
   <Message number="1515" eDefine="SYS_ERR_ARL_ILL_METHOD">
     <Title>Last-ID-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Wahl der Methode außerhalb der Grenzen.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Eine der angegebenen Identifikationsmethoden wählen.<p />Start drücken, um fortzufahren.</Actions>
+    <Description>Task: %sWahl der Methode außerhalb der Grenzen.Programmreferenz: %s</Description>
+    <Actions>Eine der angegebenen Identifikationsmethoden wählen.Start drücken, um fortzufahren.</Actions>
   </Message>
   <Message number="1516" eDefine="SYS_ERR_ARL_SMALL_ANGLE">
     <Title>Last-ID-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Konfigurationswinkel ist nicht geeignet.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sKonfigurationswinkel ist nicht geeignet.Programmreferenz: %s</Description>
     <Consequences>Identifikation ist nicht möglich.</Consequences>
     <Causes>Der gewählte Wert für den Konfigurationswinkel ist kleiner als 30 oder ein anderer Wert, der sich nicht für die Identifikation eignet.</Causes>
-    <Actions>Konfigurationswinkel zwischen +/-30 und +/-90 Grad wählen. <p />Start drücken, um fortzufahren.</Actions>
+    <Actions>Konfigurationswinkel zwischen +/-30 und +/-90 Grad wählen. Start drücken, um fortzufahren.</Actions>
   </Message>
   <Message number="1517" eDefine="SYS_ERR_ARL_LOADID_ERR">
     <Title>Last-ID-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />PZ wurde an den Beginn der Lasterkennungsroutine verschoben und ein Neustart ist jetzt möglich.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Causes>Die Serviceroutine wurde während der Messung angehalten, vom Benutzer durch Abbruch unterbrochen oder wegen eines anderen Fehlers unterbrochen.<p />Ursache siehe in früherer Ereignisprotokollmeldung.</Causes>
-    <Actions>1) Serviceroutine wieder starten<p />2) Mit "Test - Aufruf abbrechen" die Abarbeitung der Serviceroutine beenden.<p />HINWEIS: "Aufruf abbrechen" führt zum Verlust des Programmzeigers.<p />"Test - PZ --&gt; main" verwenden, um einen neuen Programmzeiger abzurufen.</Actions>
+    <Description>Task: %sPZ wurde an den Beginn der Lasterkennungsroutine verschoben und ein Neustart ist jetzt möglich.Programmreferenz: %s</Description>
+    <Causes>Die Serviceroutine wurde während der Messung angehalten, vom Benutzer durch Abbruch unterbrochen oder wegen eines anderen Fehlers unterbrochen.Ursache siehe in früherer Ereignisprotokollmeldung.</Causes>
+    <Actions>1) Serviceroutine wieder starten2) Mit "Test - Aufruf abbrechen" die Abarbeitung der Serviceroutine beenden.HINWEIS: "Aufruf abbrechen" führt zum Verlust des Programmzeigers."Test - PZ --&gt; main" verwenden, um einen neuen Programmzeiger abzurufen.</Actions>
   </Message>
   <Message number="1518" eDefine="SYS_ERR_ARL_MECHUNIT_SEL">
     <Title>Last-ID-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Wahl der mechanischen Einheit außerhalb der Grenzen.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Eine der angezeigten mechanischen Einheiten wählen.<p />Start drücken, um fortzufahren.</Actions>
+    <Description>Task: %sWahl der mechanischen Einheit außerhalb der Grenzen.Programmreferenz: %s</Description>
+    <Actions>Eine der angezeigten mechanischen Einheiten wählen.Start drücken, um fortzufahren.</Actions>
   </Message>
   <Message number="1519" eDefine="SYS_ERR_ARL_ILL_MASS">
     <Title>Last-ID-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Masse muss &gt; 0 kg sein.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Masse mit einem Wert größer 0 angeben.<p />Start drücken, um fortzufahren.</Actions>
+    <Description>Task: %sMasse muss &gt; 0 kg sein.Programmreferenz: %s</Description>
+    <Actions>Masse mit einem Wert größer 0 angeben.Start drücken, um fortzufahren.</Actions>
   </Message>
   <Message number="1520" eDefine="SYS_ERR_ARL_ERR_NOT_BOOKED">
     <Title>Fehlerbehandlungskonstante nicht vergeben</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Fehlerbehandlungskonstante <arg format="%s" ordinal="2" /> ist nicht vergeben.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sFehlerbehandlungskonstante %s ist nicht vergeben.Programmreferenz: %s</Description>
     <Actions>Konstante mit der Instruktion BookErrNo vergeben oder eine Fehlerbehandlungskonstante verwenden, die vom System vergeben wurde (nicht verwendbar mit ErrRaise).</Actions>
   </Message>
   <Message number="1521" eDefine="SYS_ERR_ARL_ILL_TASKSTATUS">
     <Title>Task-Statusfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Keine Task in der Taskliste ist NORMAL aktiviert.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>In Taskauswahlfeld sicherstellen, dass mindestens eine Task in der Taskliste ausgewählt = aktiviert ist.<p />In .cfg-Datei sicherstellen, dass mindestens eine gewählte Task NORMAL ist.</Actions>
+    <Description>Task: %sKeine Task in der Taskliste ist NORMAL aktiviert.Programmreferenz: %s</Description>
+    <Actions>In Taskauswahlfeld sicherstellen, dass mindestens eine Task in der Taskliste ausgewählt = aktiviert ist.In .cfg-Datei sicherstellen, dass mindestens eine gewählte Task NORMAL ist.</Actions>
   </Message>
   <Message number="1522" eDefine="SYS_ERR_ARL_ILL_ERR_CONSTANT">
     <Title>Falsche Fehlerbehandlungskonstante verwendet</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Fehlerbehandlungskonstante <arg format="%s" ordinal="2" /> wurde vom System vergeben. Die Konstante ist mit der Instruktion ErrRaise nicht verwendbar.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sFehlerbehandlungskonstante %s wurde vom System vergeben. Die Konstante ist mit der Instruktion ErrRaise nicht verwendbar.Programmreferenz: %s</Description>
     <Actions>Eine neue Fehlerbehandlungskonstante mit der Instruktion BookErrNo vergeben.</Actions>
   </Message>
   <Message number="1523" eDefine="SYS_ERR_ARL_NOTINT_OR_NEG">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> ist kein Integer-Wert oder ist ein negativer Wert.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sArgument %s ist kein Integer-Wert oder ist ein negativer Wert.Programmreferenz: %s</Description>
     <Actions>Wert des Arguments in nicht negativen Wert ändern.</Actions>
   </Message>
   <Message number="1524" eDefine="SYS_ERR_ARL_IN_UNDO_HANDLER">
     <Title>Instruktionsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Programm wird in einer UNDO-Routine abgearbeitet. Instruktion <arg format="%s" ordinal="2" /> ist in einer UNDO-Routine nicht erlaubt.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sProgramm wird in einer UNDO-Routine abgearbeitet. Instruktion %s ist in einer UNDO-Routine nicht erlaubt.Programmreferenz: %s</Description>
     <Actions>Instruktion entfernen.</Actions>
   </Message>
   <Message number="1525" eDefine="SYS_ERR_ARL_IN_EVENT_ROUTINE">
     <Title>Instruktionsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Programm wird in einer EVENT-Routine abgearbeitet. Instruktion <arg format="%s" ordinal="2" /> ist in einer EVENT-Routine nicht erlaubt.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sProgramm wird in einer EVENT-Routine abgearbeitet. Instruktion %s ist in einer EVENT-Routine nicht erlaubt.Programmreferenz: %s</Description>
     <Actions>Instruktion entfernen.</Actions>
   </Message>
   <Message number="1526" eDefine="SYS_ERR_ARL_NOT_ERROR_HANDLER">
     <Title>Instruktionsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="3" /> nur in einer Fehlerbehandlungsroutine verwendbar.<p />Programmef. <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sInstruktion %s nur in einer Fehlerbehandlungsroutine verwendbar.Programmef. %s</Description>
     <Actions>Instruktion entfernen oder in eine Fehlerbehandlungsroutine verschieben.</Actions>
   </Message>
   <Message number="1527" eDefine="SYS_ERR_ARL_NO_SWITCH_ARG">
     <Title>Argumentschalter fehlt</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Ein Argument fehlt.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Der switch-Parameter '\Continue' oder '\BreakOff' in <arg format="%s" ordinal="3" /> muss definiert werden.</Actions>
+    <Description>Task: %sEin Argument fehlt.Programmreferenz: %s</Description>
+    <Actions>Der switch-Parameter '\Continue' oder '\BreakOff' in %s muss definiert werden.</Actions>
   </Message>
   <Message number="1528" eDefine="SYS_ERR_ARL_NOT_NOSTEPIN">
     <Title>Instruktionsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> nur in No-Stepin-Routine verwendbar. </Description>
+    <Description>Task: %sInstruktion %s nur in No-Stepin-Routine verwendbar. </Description>
     <Actions>Instruktion entfernen oder in eine No-Stepin-Routine verschieben.</Actions>
   </Message>
   <Message number="1529" eDefine="SYS_ERR_ARL_ILL_SWITCH">
     <Title>Instruktionsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Schalter \Inpos nur zulässig, wenn die Task eine mechanische Einheit steuert.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sSchalter \Inpos nur zulässig, wenn die Task eine mechanische Einheit steuert.Programmreferenz: %s</Description>
     <Actions>Schalter \Inpos aus Instruktion entfernen.</Actions>
   </Message>
   <Message number="1530" eDefine="SYS_ERR_ARL_WOBJ_NOT_IN_TASK">
     <Title>Instruktionsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> nicht ausführbar, während koordiniertes Werkobjekt auf die mechanische Einheit <arg format="%s" ordinal="3" /> verweist, die sich in einer anderen Task befindet.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
-    <Actions>Stattdessen Werkobjekt mit Verweis auf eine mechanische Einheit in derselben Task wie der TCP-Roboter verwenden.<p /><p />Funktion CalcJointT kann auch dann verwendet werden, wenn sich das koordinierte Werkobjekt in einer anderen Task befindet und wenn<p />- Schalter \UseCurWObjPos verwendet wird<p />- Das koordinierte Werkobjekt steht still.</Actions>
+    <Description>Task: %sInstruktion %s nicht ausführbar, während koordiniertes Werkobjekt auf die mechanische Einheit %s verweist, die sich in einer anderen Task befindet.Programmreferenz: %s</Description>
+    <Actions>Stattdessen Werkobjekt mit Verweis auf eine mechanische Einheit in derselben Task wie der TCP-Roboter verwenden.Funktion CalcJointT kann auch dann verwendet werden, wenn sich das koordinierte Werkobjekt in einer anderen Task befindet und wenn- Schalter \UseCurWObjPos verwendet wird- Das koordinierte Werkobjekt steht still.</Actions>
   </Message>
   <Message number="1531" eDefine="SYS_ERR_ARL_TASK_NOT_IN_LIST">
     <Title>Task nicht in Taskliste </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> ist keine der Tasks in der Taskliste oder es besteht ein Konflikt zwischen den Tasklisten in den verschiedenen Tasks.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>- Aktuelle Task in die Taskliste einfügen.<p />- Sicherstellen, dass die Tasklisten in den verschiedenen Tasks ähnlich sind.<p /><p />Bei Verwendung von PERS-Variablen ist es eventuell nötig, die Module mit den Tasklisten zu löschen und wieder neu zu laden. </Actions>
+    <Description>Task: %s%s ist keine der Tasks in der Taskliste oder es besteht ein Konflikt zwischen den Tasklisten in den verschiedenen Tasks.Programmreferenz: %s</Description>
+    <Actions>- Aktuelle Task in die Taskliste einfügen.- Sicherstellen, dass die Tasklisten in den verschiedenen Tasks ähnlich sind.Bei Verwendung von PERS-Variablen ist es eventuell nötig, die Module mit den Tasklisten zu löschen und wieder neu zu laden. </Actions>
   </Message>
   <Message number="1532" eDefine="SYS_ERR_ARL_MISMATCH_TASKLIST">
     <Title>Konflikt bei Taskliste</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Fehler bei Synchronisierung aus folgenden Gründen:<p />1) Die Taskliste <arg format="%s" ordinal="2" /> stimmt nicht mit den Tasklisten mit derselben<p />SyncID in den anderen Tasks überein oder in der Taskliste wird ein Taskname mehrfach verwendet.<p />2) In der ersten ausgeführten Instruktion sind im Taskauswahlfeld andere Tasks als in den folgenden Instruktionen aktiviert.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Description>Task: %sFehler bei Synchronisierung aus folgenden Gründen:1) Die Taskliste %s stimmt nicht mit den Tasklisten mit derselbenSyncID in den anderen Tasks überein oder in der Taskliste wird ein Taskname mehrfach verwendet.2) In der ersten ausgeführten Instruktion sind im Taskauswahlfeld andere Tasks als in den folgenden Instruktionen aktiviert.Programmreferenz: %s</Description>
     <Consequences>Programmabarbeitung wird sofort angehalten.</Consequences>
-    <Causes>Dieser Fehler weist eine der folgenden Ursachen auf:<p />1) Tasklisten mit derselben SyncID verfügen über unterschiedlichen Inhalt<p />oder ein Taskname wird mehrfach verwendet.<p />2) Eine oder mehrere Tasks wurden nach der Ausführung der ersten Instruktion im Taskauswahlfeld aktiviert/deaktiviert.<p /></Causes>
-    <Actions>1) Tasklisten und SyncIDs prüfen und ändern, oder derselbe Fehler tritt erneut auf.<p />2) Neu starten. Die Instruktionen werden mit dem aktuellen Status des Taskauswahlfelds ausgeführt.<p /><p /><p /></Actions>
+    <Causes>Dieser Fehler weist eine der folgenden Ursachen auf:1) Tasklisten mit derselben SyncID verfügen über unterschiedlichen Inhaltoder ein Taskname wird mehrfach verwendet.2) Eine oder mehrere Tasks wurden nach der Ausführung der ersten Instruktion im Taskauswahlfeld aktiviert/deaktiviert.</Causes>
+    <Actions>1) Tasklisten und SyncIDs prüfen und ändern, oder derselbe Fehler tritt erneut auf.2) Neu starten. Die Instruktionen werden mit dem aktuellen Status des Taskauswahlfelds ausgeführt.</Actions>
   </Message>
   <Message number="1533" eDefine="SYS_ERR_ARL_MISMATCH_SYNCID">
     <Title>Konflikt bei Synch.-ID</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Synch.-ID <arg format="%s" ordinal="2" /> entspricht nicht der Synch.-ID in den anderen Tasks.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sDie Synch.-ID %s entspricht nicht der Synch.-ID in den anderen Tasks.Programmreferenz: %s</Description>
     <Causes>Die Verwendung von nicht globalen Tasklisten kann diesen Fehler verursachen.</Causes>
-    <Actions>Synch.-ID ändern und Tasklisten prüfen.<p />PZ muss vor dem Fortfahren in allen Tasks auf "main" gesetzt werden.</Actions>
+    <Actions>Synch.-ID ändern und Tasklisten prüfen.PZ muss vor dem Fortfahren in allen Tasks auf "main" gesetzt werden.</Actions>
   </Message>
   <Message number="1534" eDefine="SYS_ERR_ARL_INC_SYNCHDATA">
     <Title>Inkonsistente Synchronisierungsdaten</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Inkonsistente Synchronisierungsdaten in Taskliste <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Inhalt der Taskliste ändern.<p />PZ muss vor dem Fortfahren in allen Tasks auf 'haupt' gesetzt werden.<p /></Actions>
+    <Description>Task: %sInkonsistente Synchronisierungsdaten in Taskliste %s. Programmreferenz: %s</Description>
+    <Actions>Inhalt der Taskliste ändern.PZ muss vor dem Fortfahren in allen Tasks auf 'haupt' gesetzt werden.</Actions>
   </Message>
   <Message number="1535" eDefine="SYS_ERR_ARL_UNEXP_SYNC_ON_IN_ON">
     <Title>Unerwartetes SyncMoveOn</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unerwartetes SyncMoveOn (Synch.-ID <arg format="%s" ordinal="2" />). System befindet sich bereits im synchronisierten Modus.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Causes>Die Programmtask befindet sich bereits im synchronisierten Modus, weil SyncMoveOn bereits abgearbeitet wurde.<p />Dieser Fehler kann durch die Verwendung von nicht globalen Tasklisten verursacht werden.</Causes>
-    <Actions>Der PZ muss in allen Tasks auf main verschoben werden, bevor die Programmabarbeitung fortgesetzt werden kann.<p />SyncMoveOn-Instruktion entfernen. Auf jede SyncMoveOn-Instruktion muss eine SyncMoveOff-Instruktion folgen.<p />Die Tasklisten prüfen.<p /><p /><p /></Actions>
+    <Description>Task: %sUnerwartetes SyncMoveOn (Synch.-ID %s). System befindet sich bereits im synchronisierten Modus.Programmreferenz: %s</Description>
+    <Causes>Die Programmtask befindet sich bereits im synchronisierten Modus, weil SyncMoveOn bereits abgearbeitet wurde.Dieser Fehler kann durch die Verwendung von nicht globalen Tasklisten verursacht werden.</Causes>
+    <Actions>Der PZ muss in allen Tasks auf main verschoben werden, bevor die Programmabarbeitung fortgesetzt werden kann.SyncMoveOn-Instruktion entfernen. Auf jede SyncMoveOn-Instruktion muss eine SyncMoveOff-Instruktion folgen.Die Tasklisten prüfen.</Actions>
   </Message>
   <Message number="1536" eDefine="SYS_ERR_ARL_UNEXP_SYNC_ON_IN_WAIT_OFF">
     <Title>Unerwartetes SyncMoveOn</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unerwartetes SyncMoveOn (Synch.-ID <arg format="%s" ordinal="2" />). System wartet auf SyncMoveOff.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>SyncMoveOn-Instruktion entfernen. Auf jede SyncMoveOn-Instruktion muss eine SyncMoveOff-Instruktion folgen.<p /></Actions>
+    <Description>Task: %sUnerwartetes SyncMoveOn (Synch.-ID %s). System wartet auf SyncMoveOff.Programmreferenz: %s</Description>
+    <Actions>SyncMoveOn-Instruktion entfernen. Auf jede SyncMoveOn-Instruktion muss eine SyncMoveOff-Instruktion folgen.</Actions>
   </Message>
   <Message number="1537" eDefine="SYS_ERR_ARL_UNEXP_SYNC_OFF_IN_WAIT_ON">
     <Title>Unerwartetes SyncMoveOff</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unerwartetes SyncMoveOff (Synch.-ID <arg format="%s" ordinal="2" />). System wartet auf SyncMoveOn.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>SyncMoveOff-Instruktion entfernen. Auf jede SyncMoveOn-Instruktion muss eine SyncMoveOff-Instruktion folgen.<p /><p /></Actions>
+    <Description>Task: %sUnerwartetes SyncMoveOff (Synch.-ID %s). System wartet auf SyncMoveOn.Programmreferenz: %s</Description>
+    <Actions>SyncMoveOff-Instruktion entfernen. Auf jede SyncMoveOn-Instruktion muss eine SyncMoveOff-Instruktion folgen.</Actions>
   </Message>
   <Message number="1538" eDefine="SYS_ERR_ARL_READ_TASK_IN_TASKLIST">
     <Title>Taskliste falsch</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Task, <arg format="%s" ordinal="2" />, in der TaskList ist eine Lesetask und kann nicht synchronisiert werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sDie Task, %s, in der TaskList ist eine Lesetask und kann nicht synchronisiert werden.Programmreferenz: %s</Description>
     <Actions>Taskliste oder die Konfiguration ändern.</Actions>
   </Message>
   <Message number="1539" eDefine="SYS_ERR_ARL_STIFF_STOP_ERROR">
     <Title>Geschwindigkeit zu hoch</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Geschwindigkeit ist über <arg format="%s" ordinal="2" /> mm/s. Dies ist zu schnell bei Verwendung eines harten Stopps (Schalter \Stop).<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sGeschwindigkeit ist über %s mm/s. Dies ist zu schnell bei Verwendung eines harten Stopps (Schalter \Stop).Programmreferenz: %s</Description>
     <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
     <Actions>Geschwindigkeit ändern oder Stopptyp ändern.</Actions>
   </Message>
   <Message number="1540" eDefine="SYS_ERR_ARL_TASK_READ_MECUNIT">
     <Title>Falsche mechanische Einheit</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Task liest die Steuerungstask <arg format="%s" ordinal="2" />, die nicht die mechanische Einheit <arg format="%s" ordinal="3" /> steuert. <p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Description>Task: %sDie Task liest die Steuerungstask %s, die nicht die mechanische Einheit %s steuert. Programmreferenz: %s</Description>
     <Actions>\MechUnit oder die Konfiguration ändern.</Actions>
   </Message>
   <Message number="1541" eDefine="SYS_ERR_ARL_IS_READ_TASK">
     <Title>Nicht zulässig in Lesetask</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion ist in einer Lesetask nicht erlaubt.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sInstruktion ist in einer Lesetask nicht erlaubt.Programmreferenz: %s</Description>
     <Actions>Instruktion entfernen.</Actions>
   </Message>
   <Message number="1542" eDefine="SYS_ERR_ARL_PROG_STOP">
     <Title>Programmstopp</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Wiederanfahren auf Bahn wegen Programmstopp im System nicht möglich.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+    <Description>Task: %sWiederanfahren auf Bahn wegen Programmstopp im System nicht möglich.Programmreferenz: %s</Description>
+    <Actions>Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1543" eDefine="SYS_ERR_ARL_UNEXIST_LOAD">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Lastdaten wurden definiert, sind aber nicht mehr im System verfügbar.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Causes>Mögliche Fehlerursache:<p />1) Die Instruktion GripLoad wird möglicherweise in einem Modul ausgeführt, das nicht mehr im System verfügbar ist.<p />2) Möglicherweise wurde eine Bewegungsinstruktion mit dem optionalen Argument Tload in einem Modul ausgeführt, das nicht mehr im System verfügbar ist.</Causes>
-    <Actions>Unbedingt GripLoad load0, ausführen, um die Lastdaten zurückzusetzen.<p />Wenn in Bewegungsinstruktionen das optionale Argument Tload verwendet wird, zum Zurücksetzen der Lastdaten SetSysData load0 ausführen.</Actions>
+    <Description>Task: %sLastdaten wurden definiert, sind aber nicht mehr im System verfügbar.Programmreferenz: %s</Description>
+    <Causes>Mögliche Fehlerursache:1) Die Instruktion GripLoad wird möglicherweise in einem Modul ausgeführt, das nicht mehr im System verfügbar ist.2) Möglicherweise wurde eine Bewegungsinstruktion mit dem optionalen Argument Tload in einem Modul ausgeführt, das nicht mehr im System verfügbar ist.</Causes>
+    <Actions>Unbedingt GripLoad load0, ausführen, um die Lastdaten zurückzusetzen.Wenn in Bewegungsinstruktionen das optionale Argument Tload verwendet wird, zum Zurücksetzen der Lastdaten SetSysData load0 ausführen.</Actions>
   </Message>
   <Message number="1544" eDefine="SYS_ERR_ARL_OBSOLETE_PROC">
     <Title>Veraltete Instruktion</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Prozedur <arg format="%s" ordinal="2" /> ist veraltet. Sie wird jetzt funktionieren, könnte aber in einer neueren Anwendung entfernt werden. <arg format="%s" ordinal="3" /> an deren Stelle verwenden, die die gleiche Funktionalität bietet.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Description>Task: %sDie Prozedur %s ist veraltet. Sie wird jetzt funktionieren, könnte aber in einer neueren Anwendung entfernt werden. %s an deren Stelle verwenden, die die gleiche Funktionalität bietet.Programmreferenz: %s</Description>
   </Message>
   <Message number="1545" eDefine="SYS_ERR_ARL_LOCAL_PERS">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Argument <arg format="%s" ordinal="2" /> darf nicht den Typ LOCAL PERS haben.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sDas Argument %s darf nicht den Typ LOCAL PERS haben.Programmreferenz: %s</Description>
     <Actions>LOCAL aus der Datendeklaration entfernen.</Actions>
   </Message>
   <Message number="1546" eDefine="SYS_ERR_ARL_DATA_OBJ_NOT_USABLE">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Objekt <arg format="%s" ordinal="2" /> existiert nicht im System oder hat den Typ LOCAL PERS.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>- Objekt deklarieren.<p />- LOCAL aus der Datendeklaration entfernen.</Actions>
+    <Description>Task: %sDas Objekt %s existiert nicht im System oder hat den Typ LOCAL PERS.Programmreferenz: %s</Description>
+    <Actions>- Objekt deklarieren.- LOCAL aus der Datendeklaration entfernen.</Actions>
   </Message>
   <Message number="1547" eDefine="SYS_ERR_ARL_MISS_OPTION">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Schalter \Corr ist nicht ohne die Option Path Offset verwendbar.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sDer Schalter \Corr ist nicht ohne die Option Path Offset verwendbar.Programmreferenz: %s</Description>
     <Actions>Argument entfernen oder Option installieren.</Actions>
   </Message>
   <Message number="1548" eDefine="SYS_ERR_ARL_ACTIVEMOD">
     <Title>Modulfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Modul, <arg format="%s" ordinal="2" />, das gelöscht werden soll, ist aktiv und kann daher nicht gelöscht werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sDas Modul, %s, das gelöscht werden soll, ist aktiv und kann daher nicht gelöscht werden.Programmreferenz: %s</Description>
     <Actions>Sicherstellen, dass das zu löschende Modul nicht aktiv ist.</Actions>
   </Message>
   <Message number="1549" eDefine="SYS_ERR_ARL_WRONG_PATH">
     <Title>Unerwartetes SyncMoveOn oder SyncMoveOff </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Falsche Bahnebene. SyncMoveOn oder SyncMoveOff nicht auf StorePath-Ebene verwendbar.<p />Verwendetes <arg format="%s" ordinal="2" />: <arg format="%s" ordinal="3" /><p />Programmreferenz: <arg format="%s" ordinal="4" /><p /><p /><p /></Description>
+    <Description>Task: %sFalsche Bahnebene. SyncMoveOn oder SyncMoveOff nicht auf StorePath-Ebene verwendbar.Verwendetes %s: %sProgrammreferenz: %s</Description>
     <Actions>RAPID-Programm prüfen.</Actions>
   </Message>
   <Message number="1550" eDefine="SYS_ERR_ARL_PATH_REC_WRONG_STATE">
     <Title>Bahnaufzeichnung-Start/Stopp-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Abarbeitung <arg format="%s" ordinal="2" /> fehlgeschlagen.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Sicherstellen, dass keine Rückwärtsbewegung mit PathRecMoveBwd<p />ohne Beendigung durch PathRecMoveFwd begonnen wurde. </Actions>
+    <Description>Task: %sAbarbeitung %s fehlgeschlagen.Programmreferenz: %s</Description>
+    <Actions>Sicherstellen, dass keine Rückwärtsbewegung mit PathRecMoveBwdohne Beendigung durch PathRecMoveFwd begonnen wurde. </Actions>
   </Message>
   <Message number="1551" eDefine="SYS_ERR_ARL_PATH_REC_NOT_REACHABLE">
     <Title>Bahnaufzeichnung-Bewegungsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Abarbeitung von <arg format="%s" ordinal="2" /> fehlgeschlagen. Die angegebene Kennung ist nicht erreichbar. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sAbarbeitung von %s fehlgeschlagen. Die angegebene Kennung ist nicht erreichbar. Programmreferenz: %s</Description>
     <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
-    <Causes>Dieser Fehler ist aus einem der folgenden Gründe aufgetreten:<p />1) Der PathRecorder wurde nicht gestartet.<p />2) Der Programmzeiger wurde manuell bewegt.<p />3) Die Grenze der <arg format="%s" ordinal="4" /> aufgezeichneten Bewegungsinstruktionen wurde überschritten.<p />4) Die Programmausführung wurde durch WaitSyncTask oder SyncMoveOff beschränkt. </Causes>
+    <Causes>Dieser Fehler ist aus einem der folgenden Gründe aufgetreten:1) Der PathRecorder wurde nicht gestartet.2) Der Programmzeiger wurde manuell bewegt.3) Die Grenze der %s aufgezeichneten Bewegungsinstruktionen wurde überschritten.4) Die Programmausführung wurde durch WaitSyncTask oder SyncMoveOff beschränkt. </Causes>
     <Actions>RAPID-Programm überprüfen </Actions>
   </Message>
   <Message number="1552" eDefine="SYS_ERR_ARL_PATH_REC_WRONG_PATH_LEVEL">
     <Title>PathRecorder-Bahnebenenfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> auf aktueller Bahnebene nicht ausführbar.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>- Zur Trap-Ebene wechseln. <p />- StorePath ausführen, um zur Bahnebene zu wechseln. <p /></Actions>
+    <Description>Task: %s%s auf aktueller Bahnebene nicht ausführbar.Programmreferenz: %s</Description>
+    <Actions>- Zur Trap-Ebene wechseln. - StorePath ausführen, um zur Bahnebene zu wechseln. </Actions>
   </Message>
   <Message number="1553" eDefine="SYS_ERR_ARL_WRONG_SYS_DATA">
     <Title>Zerstörte Daten</Title>
-    <Description>Systemdaten <arg format="%s" ordinal="1" /> in einer der Tasks wurden geändert. Es ist NICHT erlaubt, diese Daten zu ändern.</Description>
-    <Actions>Das System hat die Daten beim Systemstart wiederhergestellt, aber das Programm muss geprüft werden. Inhalt entfernen, wo <arg format="%s" ordinal="2" /> ein Wert zugewiesen wurde.</Actions>
+    <Description>Systemdaten %s in einer der Tasks wurden geändert. Es ist NICHT erlaubt, diese Daten zu ändern.</Description>
+    <Actions>Das System hat die Daten beim Systemstart wiederhergestellt, aber das Programm muss geprüft werden. Inhalt entfernen, wo %s ein Wert zugewiesen wurde.</Actions>
   </Message>
   <Message number="1554" eDefine="SYS_ERR_ARL_CONC_IN_SYNC">
     <Title>Synchronisierter Modus</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Optionaler Parameter '\Conc' nicht verwendbar, wenn das System im synchronisierten Modus ist.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sOptionaler Parameter '\Conc' nicht verwendbar, wenn das System im synchronisierten Modus ist.Programmreferenz: %s</Description>
     <Actions>Optionalen Parameter '\Conc' aus jeder Instruktion entfernen, die im synchronisierten Modus verwendet wird.</Actions>
   </Message>
   <Message number="1555" eDefine="SYS_ERR_ARL_UNIT_NOT_RUN_ATTR">
     <Title>Kein Kontakt mit Einheit</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Kein Kontakt mit der Einheit <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Causes>Eventuell wurde die Einheit deaktiviert (IODisable 'UNIT1', 1;)<p />Keine Stromversorgung zur Einheit.</Causes>
-    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sKein Kontakt mit der Einheit %s. Programmreferenz: %s</Description>
+    <Causes>Eventuell wurde die Einheit deaktiviert (IODisable 'UNIT1', 1;)Keine Stromversorgung zur Einheit.</Causes>
+    <Actions>Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1556" eDefine="SYS_ERR_ARL_UNIT_NOT_RUNNING">
     <Title>Kein Kontakt mit Einheit</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Kein Kontakt mit der Einheit<p />.Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Causes>Eventuell wurde die Einheit deaktiviert (IODisable 'UNIT1', 1;)<p />Keine Stromversorgung zur Einheit.<p /></Causes>
-    <Actions>Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+    <Description>Task: %sKein Kontakt mit der Einheit.Programmreferenz: %s</Description>
+    <Causes>Eventuell wurde die Einheit deaktiviert (IODisable 'UNIT1', 1;)Keine Stromversorgung zur Einheit.</Causes>
+    <Actions>Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1557" eDefine="SYS_ERR_ARL_IPOL_NOTSTOPPED">
     <Title>Mech. Einheit nicht gestoppt</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Ändern des Abarbeitungsmodus unzulässig, wenn nicht alle Bewegungstasks gestoppt sind.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sÄndern des Abarbeitungsmodus unzulässig, wenn nicht alle Bewegungstasks gestoppt sind.Programmreferenz: %s</Description>
     <Actions>Programm stoppen und erneut versuchen.</Actions>
   </Message>
   <Message number="1558" eDefine="SYS_ERR_ARL_NO_SWITCH">
     <Title>Argumentschalter fehlt</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument fehlt in Instruktion <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sArgument fehlt in Instruktion %s. Programmreferenz: %s</Description>
     <Actions>Der Instruktion den Schalter SyncOrgMoveInst oder SyncLastMoveInst hinzufügen.</Actions>
   </Message>
   <Message number="1559" eDefine="SYS_ERR_ARL_NOT_PERS_TASK">
     <Title>Keine PERS-Variable</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Taskliste <arg format="%s" ordinal="2" /> ist entweder LOCAL- oder TASK-persistent. Dies ist nicht zulässig. Sie muss global sein.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Description>Task: %sDie Taskliste %s ist entweder LOCAL- oder TASK-persistent. Dies ist nicht zulässig. Sie muss global sein.Programmreferenz: %s</Description>
     <Actions>Ändern Sie den Typ der Taskliste zu PERS.</Actions>
   </Message>
   <Message number="1560" eDefine="SYS_ERR_ARL_EMERG_STOP">
     <Title>Kein Beginn der Bewegung</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Beginn der Bewegung war nicht möglich.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
-    <Causes>1. Es liegt ein Not-Aus vor.<p />2. Es gab einen weiteren Fehler im System.</Causes>
-    <Actions>1. Not-Aus zurücksetzen, falls erforderlich.<p />2. Überprüfung früherer Fehlermeldungen auf Ursache.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+    <Description>Task: %sBeginn der Bewegung war nicht möglich.Programmreferenz: %s</Description>
+    <Causes>1. Es liegt ein Not-Aus vor.2. Es gab einen weiteren Fehler im System.</Causes>
+    <Actions>1. Not-Aus zurücksetzen, falls erforderlich.2. Überprüfung früherer Fehlermeldungen auf Ursache.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1561" eDefine="SYS_ERR_ARL_MISSING_TEXT">
     <Title>Kein Text in Funktionstaste </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion TPReadFK enthält für keinen Funktionstasten-Text.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sInstruktion TPReadFK enthält für keinen Funktionstasten-Text.Programmreferenz: %s</Description>
     <Consequences>Bei Abarbeitung der Instruktion steht keine Taste zur Verfügung, die gedrückt werden kann. </Consequences>
     <Actions>Text für mindestens eine der Funktionstasten TPFK1 .. TPFK5 angeben.</Actions>
   </Message>
   <Message number="1562" eDefine="SYS_ERR_ARL_PROC_ERR_NOT_HANDLED">
     <Title>Gefahr einer falschen kreisförmigen Bewegung</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Gefahr einer falschen kreisförmigen Bewegung wegen:<p /> 1) Asynchroner Prozessfehler ist aufgetreten und wurde nicht in Fehlerbehandlung behoben.<p />2) Programmzeiger bei zirkulärer Instruktion in Kombination mit ausgeführter KORPOS einer früheren Bewegungsinstruktion.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sGefahr einer falschen kreisförmigen Bewegung wegen: 1) Asynchroner Prozessfehler ist aufgetreten und wurde nicht in Fehlerbehandlung behoben.2) Programmzeiger bei zirkulärer Instruktion in Kombination mit ausgeführter KORPOS einer früheren Bewegungsinstruktion.Programmreferenz: %s</Description>
     <Consequences>Das Programm kann nicht von der aktuellen Position gestartet werden, da der Roboter eventuell eine unerwartete Bewegung ausführt.</Consequences>
-    <Causes>Einer der folgenden Fehler:<p />1) Im RAPID-Programm fehlt eine Fehlerbehandlungsroutine oder die Routine behandelt diesen speziellen Fehler nicht.<p /> 2) KORPOS-Operation ausgeführt, während keine Abarbeitung in Einzelschritten oder move-Schritten aktiv war.</Causes>
-    <Actions>Eine der folgenden Aktionen:<p />1) Programm bearbeiten. <p />2) Programmzeiger versetzen, damit Programm gestartet werden kann.</Actions>
+    <Causes>Einer der folgenden Fehler:1) Im RAPID-Programm fehlt eine Fehlerbehandlungsroutine oder die Routine behandelt diesen speziellen Fehler nicht. 2) KORPOS-Operation ausgeführt, während keine Abarbeitung in Einzelschritten oder move-Schritten aktiv war.</Causes>
+    <Actions>Eine der folgenden Aktionen:1) Programm bearbeiten. 2) Programmzeiger versetzen, damit Programm gestartet werden kann.</Actions>
   </Message>
   <Message number="1563" eDefine="SYS_ERR_ARL_WOBJ_MOVE_BY_ITSELF">
     <Title>Argumentfehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Mechanische Einheit <arg format="%s" ordinal="2" />, die im WObj für diese MOVE-<p />Instruktion angegeben wurde, ist dieselbe mechanische Einheit <arg format="%s" ordinal="3" /> wie der Roboter für diese Programmtask.<p />Programmreferenz: <arg format="%s" ordinal="4" /></Description>
+    <Description>Task: %sMechanische Einheit %s, die im WObj für diese MOVE-Instruktion angegeben wurde, ist dieselbe mechanische Einheit %s wie der Roboter für diese Programmtask.Programmreferenz: %s</Description>
     <Consequences>Es ist nicht möglich, dass der Roboter das Werkobjekt selbst bewegt. </Consequences>
     <Actions>Verwendete wobjdata kontrollieren und ändern.</Actions>
   </Message>
   <Message number="1564" eDefine="SYS_ERR_ARL_ALLMOTIONTASKS">
     <Title>Darf nicht von Bewegungstask ausgeführt werden</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Instruktionen StopMove, StartMove und StopMoveReset mit dem optionalen Parameter \AllMotionTasks dürfen nicht von einer Bewegungstask ausgeführt werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
-    <Causes>Stopp und Neustart aller Bewegungen im System dürfen nur von einer<p />Überwachungstask ausgeführt werden, die als Lese- (oder Hintergrund-) task abläuft.</Causes>
+    <Description>Task: %sDie Instruktionen StopMove, StartMove und StopMoveReset mit dem optionalen Parameter \AllMotionTasks dürfen nicht von einer Bewegungstask ausgeführt werden.Programmreferenz: %s</Description>
+    <Causes>Stopp und Neustart aller Bewegungen im System dürfen nur von einerÜberwachungstask ausgeführt werden, die als Lese- (oder Hintergrund-) task abläuft.</Causes>
     <Actions>Instruktion entfernen.</Actions>
   </Message>
   <Message number="1565" eDefine="SYS_ERR_ARL_NOT_ALLOW_NUM_VAL">
     <Title>Unzulässiger Wert</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unzulässiger Wert in Argument <arg format="%s" ordinal="2" />. <p /><p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Wert prüfen und ändern. Es muss eine Ganzzahl zwischen <arg format="%s" ordinal="2" /> und <arg format="%s" ordinal="4" /> sein. </Actions>
+    <Description>Task: %sUnzulässiger Wert in Argument %s. Programmreferenz: %s</Description>
+    <Actions>Wert prüfen und ändern. Es muss eine Ganzzahl zwischen %s und %s sein. </Actions>
   </Message>
   <Message number="1566" eDefine="SYS_ERR_ARL_LIM_SIG_BITS">
     <Title>Signal überschreitet max. Anzahl zulässiger Bits</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Signal <arg format="%s" ordinal="2" /> ist zu lang.<p /><p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sDas Signal %s ist zu lang.Programmreferenz: %s</Description>
     <Actions>Gruppensignale, bestehend aus 23 Bits oder weniger, können durch den Datentyp „num“ und Gruppensignale mit 32 Bits oder weniger durch den Datentyp „dnum“ dargestellt werden, falls diese in einem RAPID-Programm verwendet werden.</Actions>
   </Message>
   <Message number="1567" eDefine="SYS_ERR_ARL_DOBREAK">
     <Title>Abbruch durch digitalen Ausgang</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Ein digitaler Ausgang hat die Abarbeitung unterbrochen.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /><p /></Description>
-    <Actions>Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+    <Description>Task: %sEin digitaler Ausgang hat die Abarbeitung unterbrochen.Programmreferenz: %s</Description>
+    <Actions>Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1568" eDefine="SYS_ERR_ARL_NOT_BUS">
     <Title>Angegebener Name ist kein Bus</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Busname <arg format="%s" ordinal="2" /> existiert nicht.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Description>Task: %sBusname %s existiert nicht.Programmreferenz: %s</Description>
     <Causes>Der Name der Einheit ist falsch geschrieben oder nicht definiert.</Causes>
-    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /><p /></Actions>
+    <Actions>Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1569" eDefine="SYS_ERR_ARL_SOCK_LISTEN_ISCONN">
     <Title>Socket-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Socket ist bereits verbunden oder kann nicht für die Prüfung auf eingehende Verbindungen verwendet werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sDer Socket ist bereits verbunden oder kann nicht für die Prüfung auf eingehende Verbindungen verwendet werden.Programmreferenz: %s</Description>
     <Actions>Einen anderen Socket für die Prüfung auf eingehende Verbindungen verwenden.</Actions>
   </Message>
   <Message number="1570" eDefine="SYS_ERR_ARL_SOCK_ACCPT_NOLISTEN">
     <Title>Socket-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Socket kann keine eingehenden Verbindungsanfragen akzeptieren, da er sich nicht im Prüfstatus befindet.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sDer Socket kann keine eingehenden Verbindungsanfragen akzeptieren, da er sich nicht im Prüfstatus befindet.Programmreferenz: %s</Description>
     <Causes>SocketAccept wird vor SocketListen verwendet.</Causes>
-    <Actions>Socket vor dem Akzeptieren in den Prüfstatus versetzen.<p /></Actions>
+    <Actions>Socket vor dem Akzeptieren in den Prüfstatus versetzen.</Actions>
   </Message>
   <Message number="1571" eDefine="SYS_ERR_ARL_SOCK_ADDR_INUSE">
     <Title>Socket-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Adresse wird bereits verwendet und kann von diesem Socket nicht verwendet werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
-    <Actions>Fehlerbehebung: <arg format="%s" ordinal="3" /><p /></Actions>
+    <Description>Task: %sDie Adresse wird bereits verwendet und kann von diesem Socket nicht verwendet werden.Programmreferenz: %s</Description>
+    <Actions>Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1572" eDefine="SYS_ERR_ARL_SOCK_CREATE_UNEXPT">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unerwarteter Fehler beim Erstellen des Socket.<p />Protokoll auf weitere Meldungen mit möglichen Ursachen überprüfen.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sUnerwarteter Fehler beim Erstellen des Socket.Protokoll auf weitere Meldungen mit möglichen Ursachen überprüfen.Programmreferenz: %s</Description>
     <Actions>Programmzeiger auf "main" setzen und Programm neu starten. </Actions>
   </Message>
   <Message number="1573" eDefine="SYS_ERR_ARL_SOCK_CREATE_TOOMANY">
     <Title>Socket-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Es können keine Sockets mehr erstellt werden. Die maximale Anzahl an gleichzeitig erstellbaren Sockets ist 32.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sEs können keine Sockets mehr erstellt werden. Die maximale Anzahl an gleichzeitig erstellbaren Sockets ist 32.Programmreferenz: %s</Description>
     <Actions>Einen oder mehrere Sockets schließen, um einen neuen Socket erstellen zu können.</Actions>
   </Message>
   <Message number="1574" eDefine="SYS_ERR_ARL_SOCK_NOTCREATED">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Socket muss erstellt werden, bevor er  in einer Socketinstruktion verwendet werden kann.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
-    <Causes>Mögliche Fehlerursache:<p />1) Socket wurde gar nicht erstellt.<p />2) PZ-Bewegungen sind erfolgt.<p />3) Start des Programms nach Netzausfall.<p />4) Socket wurde nach SocketCreate geschlossen. </Causes>
-    <Actions>Vor Verwendung des Socket an geeigneter Stelle im Programm eine Instruktion zur Erstellung eines Socket einfügen.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+    <Description>Task: %sDer Socket muss erstellt werden, bevor er  in einer Socketinstruktion verwendet werden kann.Programmreferenz: %s</Description>
+    <Causes>Mögliche Fehlerursache:1) Socket wurde gar nicht erstellt.2) PZ-Bewegungen sind erfolgt.3) Start des Programms nach Netzausfall.4) Socket wurde nach SocketCreate geschlossen. </Causes>
+    <Actions>Vor Verwendung des Socket an geeigneter Stelle im Programm eine Instruktion zur Erstellung eines Socket einfügen.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1575" eDefine="SYS_ERR_ARL_SOCK_ADDR_INVALID">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die angegebene Adresse ist ungültig. Die einzig gültigen Adressen sind die LAN-Adresse der Steuerung oder die Serviceportadresse 192.168.125.1.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sDie angegebene Adresse ist ungültig. Die einzig gültigen Adressen sind die LAN-Adresse der Steuerung oder die Serviceportadresse 192.168.125.1.Programmreferenz: %s</Description>
     <Actions>Die LAN-Adresse oder die Serviceportadresse angeben.</Actions>
   </Message>
   <Message number="1576" eDefine="SYS_ERR_ARL_SOCK_PORT_INVALID">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der angegebene Port ist ungültig.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sDer angegebene Port ist ungültig.Programmreferenz: %s</Description>
     <Actions>Zur Verwendung werden Portnummern im Bereich 1025-4999 empfohlen. </Actions>
   </Message>
   <Message number="1577" eDefine="SYS_ERR_ARL_SOCK_TIMEOUT_ZERO">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der in der Instruktion angegebene Timeout ist zu niedrig. Der Timeout wird in Sekunden angegeben und darf nicht null sein.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sDer in der Instruktion angegebene Timeout ist zu niedrig. Der Timeout wird in Sekunden angegeben und darf nicht null sein.Programmreferenz: %s</Description>
     <Actions>Für den Timeout einen Wert größer null verwenden. </Actions>
   </Message>
   <Message number="1578" eDefine="SYS_ERR_ARL_SOCK_CONN_UNEXPT">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unerwarteter Fehler beim Anschließen des Socket.<p />Ereignisprotokoll auf weitere Meldungen mit möglichen Ursachen überprüfen.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sUnerwarteter Fehler beim Anschließen des Socket.Ereignisprotokoll auf weitere Meldungen mit möglichen Ursachen überprüfen.Programmreferenz: %s</Description>
     <Actions>Programmzeiger auf "main" setzen und Programm neu starten.</Actions>
   </Message>
   <Message number="1579" eDefine="SYS_ERR_ARL_SOCK_CONN_REFUSE">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Verbindung wurde vom Remote-Host verweigert.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sDie Verbindung wurde vom Remote-Host verweigert.Programmreferenz: %s</Description>
   </Message>
   <Message number="1580" eDefine="SYS_ERR_ARL_SOCK_CONN_ALREADY">
     <Title>Socket-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Socket ist bereits verbunden und kann nicht erneut verbunden werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sDer Socket ist bereits verbunden und kann nicht erneut verbunden werden.Programmreferenz: %s</Description>
     <Causes>SocketConnect wurde bereits für die angegebene Buchse ausgeführt. </Causes>
-    <Actions>Socket schließen und vor dem Verbinden erneut erstellen.<p /></Actions>
+    <Actions>Socket schließen und vor dem Verbinden erneut erstellen.</Actions>
   </Message>
   <Message number="1581" eDefine="SYS_ERR_ARL_SOCK_TIMEOUT">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Instruktion wurde nicht innerhalb des Timeout-Zeitraums abgeschlossen.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
-    <Actions>Höheren Timeout-Wert eingeben oder eine Fehlerbehandlung verwenden, um das Ausführen der Instruktion erneut zu versuchen.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+    <Description>Task: %sDie Instruktion wurde nicht innerhalb des Timeout-Zeitraums abgeschlossen.Programmreferenz: %s</Description>
+    <Actions>Höheren Timeout-Wert eingeben oder eine Fehlerbehandlung verwenden, um das Ausführen der Instruktion erneut zu versuchen.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1582" eDefine="SYS_ERR_ARL_SOCK_DATAEMPTY">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Es wurden keine Daten zum Senden oder Speichern angegeben.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sEs wurden keine Daten zum Senden oder Speichern angegeben.Programmreferenz: %s</Description>
     <Actions>Zeichenfolge, Rawbyte oder Byte-Datenfeld größer null verwenden.</Actions>
   </Message>
   <Message number="1583" eDefine="SYS_ERR_ARL_SOCK_DATATOOBIG">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die angegebenen Daten sind zu groß.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sDie angegebenen Daten sind zu groß.Programmreferenz: %s</Description>
     <Actions>Ein Socket kann pro Instruktion höchstens 1.024 Byte verarbeiten. </Actions>
   </Message>
   <Message number="1584" eDefine="SYS_ERR_ARL_SOCK_SEND_EMPDATA">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die zu sendende Zeichenfolge ist leer oder es sind keine Daten vorhanden.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sDie zu sendende Zeichenfolge ist leer oder es sind keine Daten vorhanden.Programmreferenz: %s</Description>
     <Actions>Prüfen, ob die Daten korrekt sind.</Actions>
   </Message>
   <Message number="1585" eDefine="SYS_ERR_ARL_SOCK_SEND_LENZERO">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Anzahl der zu sendenden Bytes ist größer null.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
-    <Actions>Den Wert für den optionalen Parameter "NoOfBytes" auf einen Wert größer null ändern.<p /><p /></Actions>
+    <Description>Task: %sDie Anzahl der zu sendenden Bytes ist größer null.Programmreferenz: %s</Description>
+    <Actions>Den Wert für den optionalen Parameter "NoOfBytes" auf einen Wert größer null ändern.</Actions>
   </Message>
   <Message number="1586" eDefine="SYS_ERR_ARL_SOCK_LENINVALID">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Anzahl der zu sendenden Bytes ist länger als die tatsächlichen Daten.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
-    <Actions>Wert des optionalen Parameters NoOfBytes so ändern, dass er kleiner oder gleich dem Wert der tatsächlichen Daten ist.<p />Den optionalen Parameter löschen, falls alle Daten gesendet werden sollen.</Actions>
+    <Description>Task: %sDie Anzahl der zu sendenden Bytes ist länger als die tatsächlichen Daten.Programmreferenz: %s</Description>
+    <Actions>Wert des optionalen Parameters NoOfBytes so ändern, dass er kleiner oder gleich dem Wert der tatsächlichen Daten ist.Den optionalen Parameter löschen, falls alle Daten gesendet werden sollen.</Actions>
   </Message>
   <Message number="1587" eDefine="SYS_ERR_ARL_SOCK_SEND_UNEXPT">
     <Title>Socket-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unerwarteter Fehler beim Senden der Daten.<p />Ereignisprotokoll auf weitere Meldungen mit möglichen Ursachen überprüfen.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sUnerwarteter Fehler beim Senden der Daten.Ereignisprotokoll auf weitere Meldungen mit möglichen Ursachen überprüfen.Programmreferenz: %s</Description>
     <Actions>Programmzeiger auf "main" setzen und das Programm neu starten.</Actions>
   </Message>
   <Message number="1590" eDefine="SYS_ERR_ARL_SOCK_DATAINVALID">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Byte-Datenfeld ist ungültig. Ein Byte-Datenfeld kann nur Ganzzahlen zwischen 0 und 255 enthalten.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sDas Byte-Datenfeld ist ungültig. Ein Byte-Datenfeld kann nur Ganzzahlen zwischen 0 und 255 enthalten.Programmreferenz: %s</Description>
     <Actions>Das Byte-Datenfeld so ändern, dass es gültige Daten enthält, oder Rawbytes verwenden, um komplexe Daten zu senden. </Actions>
   </Message>
   <Message number="1591" eDefine="SYS_ERR_ARL_SOCK_STATE_UNEXPT">
     <Title>Socket-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unerwarteter Fehler beim Abrufen des Socketstatus.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sUnerwarteter Fehler beim Abrufen des Socketstatus.Programmreferenz: %s</Description>
     <Actions>Programmzeiger auf "main" setzen und Programm neu starten.</Actions>
   </Message>
   <Message number="1592" eDefine="SYS_ERR_ARL_SOCK_RECV_NODATA">
     <Title>Socket-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Keine Daten empfangen.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sKeine Daten empfangen.Programmreferenz: %s</Description>
     <Causes>Die Verbindung wurde möglicherweise vom Remote-Host unterbrochen.</Causes>
     <Actions>Programmzeiger auf "main" setzen und Programm neu starten.</Actions>
   </Message>
   <Message number="1593" eDefine="SYS_ERR_ARL_SOCK_RECV_DATATOLONG">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die empfangenen Daten sind zu lang, um sie in einer Zeichenfolge zu speichern. Die maximale Länge in einer Zeichenfolge speicherbarer Daten beträgt 80 Zeichen.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sDie empfangenen Daten sind zu lang, um sie in einer Zeichenfolge zu speichern. Die maximale Länge in einer Zeichenfolge speicherbarer Daten beträgt 80 Zeichen.Programmreferenz: %s</Description>
     <Actions>Ein Byte-Datenfeld oder Rawbytes verwenden, um Daten mit mehr als 80 Byte zu empfangen.</Actions>
   </Message>
   <Message number="1594" eDefine="SYS_ERR_ARL_SOCK_NOCONN">
     <Title>Socket-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Socket ist nicht verbunden. <p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
-    <Causes>Client-seitig: SocketConnect vor dem Empfangen, Senden und Einsehen von Daten verwenden.<p />Server-seitig, SocketAccept vor dem Senden, Empfangen und Einsehen von Daten verwenden.<p /></Causes>
-    <Actions>SocketConnect bzw. SocketAccept für Verbindung zum Socket verwenden, bevor Empfangen/Senden/Einsehen versucht wird.<p /></Actions>
+    <Description>Task: %sDas Socket ist nicht verbunden. Programmreferenz: %s</Description>
+    <Causes>Client-seitig: SocketConnect vor dem Empfangen, Senden und Einsehen von Daten verwenden.Server-seitig, SocketAccept vor dem Senden, Empfangen und Einsehen von Daten verwenden.</Causes>
+    <Actions>SocketConnect bzw. SocketAccept für Verbindung zum Socket verwenden, bevor Empfangen/Senden/Einsehen versucht wird.</Actions>
   </Message>
   <Message number="1595" eDefine="SYS_ERR_ARL_SOCK_CONNCLOSE">
     <Title>Socket-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Verbindung wurde vom Remote-Host unterbrochen.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
-    <Actions>Vor erneutem Versuch von Empfangen/Senden/Einsehen mithilfe einer Fehlerbehandlung die Verbindung herstellen.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+    <Description>Task: %sDie Verbindung wurde vom Remote-Host unterbrochen.Programmreferenz: %s</Description>
+    <Actions>Vor erneutem Versuch von Empfangen/Senden/Einsehen mithilfe einer Fehlerbehandlung die Verbindung herstellen.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1596" eDefine="SYS_ERR_ARL_SOCK_BIND_UNEXPT">
     <Title>Socket-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unerwarteter Fehler beim Binden des Socket.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sUnerwarteter Fehler beim Binden des Socket.Programmreferenz: %s</Description>
     <Actions>Programmzeiger auf "main" setzen und Programm neu starten.</Actions>
   </Message>
   <Message number="1597" eDefine="SYS_ERR_ARL_SOCK_BIND_ALREADY">
     <Title>Socket-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Socket wurde bereits an eine Adresse gebunden und kann nicht erneut gebunden werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sDer Socket wurde bereits an eine Adresse gebunden und kann nicht erneut gebunden werden.Programmreferenz: %s</Description>
     <Actions>Socket schließen und erneut erstellen, bevor versucht wird, den Socket an eine neue Adresse zu binden.</Actions>
   </Message>
   <Message number="1598" eDefine="SYS_ERR_ARL_SOCK_LISTEN_UNEXPT">
     <Title>Socket-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unerwarteter Fehler beim Versuch, Verbindungen zu prüfen.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sUnerwarteter Fehler beim Versuch, Verbindungen zu prüfen.Programmreferenz: %s</Description>
     <Actions>Programmzeiger auf "main" setzen und Programm neu starten.</Actions>
   </Message>
   <Message number="1599" eDefine="SYS_ERR_ARL_SOCK_LISTEN_NOBIND">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Socket wurde nicht an eine Adresse gebunden.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sDer Socket wurde nicht an eine Adresse gebunden.Programmreferenz: %s</Description>
     <Actions>Die Instruktion zum Binden des Socket verwenden, um anzugeben, welche Adresse auf eingehende Verbindungen überprüft werden soll.</Actions>
   </Message>
   <Message number="1600" eDefine="SYS_ERR_ARL_SOCK_ACCPT_SOCKALRDY">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der angegebene Client-Socket wird bereits verwendet. Der Client-Socket darf nicht erstellt werden, bevor die SocketAccept aufgerufen wird.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sDer angegebene Client-Socket wird bereits verwendet. Der Client-Socket darf nicht erstellt werden, bevor die SocketAccept aufgerufen wird.Programmreferenz: %s</Description>
     <Causes>SocketAccept wurde bereits für den angegebenen Socket ausgeführt. </Causes>
     <Actions>Client-Socket schließen, bevor sie im Aufruf zum Akzeptieren des Socket verwendet wird, oder mehrere SocketAccept-Instruktionen mit derselbem Client-Socket entfernen.</Actions>
   </Message>
   <Message number="1601" eDefine="SYS_ERR_ARL_SOCK_ACCPT_UNEXPT">
     <Title>Socket-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unerwarteter Fehler beim Akzeptieren der Verbindung.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sUnerwarteter Fehler beim Akzeptieren der Verbindung.Programmreferenz: %s</Description>
     <Actions>Programmzeiger auf "main" setzen und Programm neu starten.</Actions>
   </Message>
   <Message number="1602" eDefine="SYS_ERR_ARL_SOCK_RECV_UNEXPT">
     <Title>Socket-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unerwarteter Fehler beim Empfang von Daten.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sUnerwarteter Fehler beim Empfang von Daten.Programmreferenz: %s</Description>
     <Actions>Programmzeiger auf "main" setzen und Programm neu starten.</Actions>
   </Message>
   <Message number="1603" eDefine="SYS_ERR_ARL_SOCK_SOCK_CREATED">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Socket wurde bereits erstellt.<p />Ein Socket kann nur einmal erstellt werden und muss geschlossen werden, bevor er erneut erstellt werden kann.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sDer Socket wurde bereits erstellt.Ein Socket kann nur einmal erstellt werden und muss geschlossen werden, bevor er erneut erstellt werden kann.Programmreferenz: %s</Description>
     <Actions>Einen anderen Socket verwenden oder Socket vor dem Erstellen schließen.</Actions>
   </Message>
   <Message number="1604" eDefine="SYS_ERR_ARL_SOCK_LISTEN_ALREADY">
     <Title>Socket-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Socket prüft bereits, ob Verbindungen eingehen.<p />Ein Socket kann nur einmal für die Prüfung auf eingehende Verbindungen verwendet werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sDer Socket prüft bereits, ob Verbindungen eingehen.Ein Socket kann nur einmal für die Prüfung auf eingehende Verbindungen verwendet werden.Programmreferenz: %s</Description>
     <Causes>Mehrfache Verwendung von SocketListen mit demselben Socket.</Causes>
     <Actions>Anderen Socket verwenden oder Socket vor dem erneuten Verwenden schließen.</Actions>
   </Message>
   <Message number="1605" eDefine="SYS_ERR_ARL_SOCK_SOCK_INVALID">
     <Title>Socket-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Socket ist nicht mehr gültig.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task: %sDer Socket ist nicht mehr gültig.Programmreferenz: %s</Description>
     <Consequences>Programmabarbeitung wird sofort angehalten.</Consequences>
-    <Causes>Der verwendete Socket ist ungültig. Das <arg format="%s" ordinal="4" /> wurde wahrscheinlich mit der Instruktion <arg format="%s" ordinal="3" /> kopiert. Dann wurde das ursprüngliche <arg format="%s" ordinal="4" /> mit <arg format="%s" ordinal="5" /> geschlossen. Wenn das kopierte <arg format="%s" ordinal="4" /> verwendet wird, tritt dieses Problem auf.</Causes>
-    <Actions>Beim Behandeln der Datentypen von <arg format="%s" ordinal="4" /> Socketinstruktionen verwenden.</Actions>
+    <Causes>Der verwendete Socket ist ungültig. Das %s wurde wahrscheinlich mit der Instruktion %s kopiert. Dann wurde das ursprüngliche %s mit %s geschlossen. Wenn das kopierte %s verwendet wird, tritt dieses Problem auf.</Causes>
+    <Actions>Beim Behandeln der Datentypen von %s Socketinstruktionen verwenden.</Actions>
   </Message>
   <Message number="1606" eDefine="SYS_ERR_ARL_SOCK_ONLY_TCP">
     <Title>Socket-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Socket-Typ ist vom Typ Datagram Protocol (UDP/IP). <p />Die aktuelle Instruktion <arg format="%s" ordinal="2" /> wird nur für das Übertragungssteuerungsprotokoll TCP/IP unterstützt.<p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Description>Task: %sDer Socket-Typ ist vom Typ Datagram Protocol (UDP/IP). Die aktuelle Instruktion %s wird nur für das Übertragungssteuerungsprotokoll TCP/IP unterstützt.Programmreferenz: %s</Description>
     <Consequences>Programmabarbeitung wird sofort angehalten.</Consequences>
     <Causes>Der verwendete Socket-Typ ist nicht gültig. </Causes>
     <Actions>Überprüfen Sie, wie das Socket erstellt wurde. </Actions>

@@ -2,291 +2,291 @@
 <Domain xmlns="urn:abb-robotics-elog-text" elogDomain="EIO" domainNo="7" lang="de" elogTextVersion="1.0" min="1464" max="1538">
   <Message number="1464" eDefine="SYS_EIO_EN_COULD_NOT_ADD_GATEWAY">
     <Title>Für EtherNet/IP konnte kein Gateway hinzugefügt werden</Title>
-    <Description>Gateway-Adresse &lt;<arg format="%s" ordinal="1" />&gt; mit der Zieladresse &lt;<arg format="%s" ordinal="2" />&gt; für EtherNet/IP konnte nicht hinzugefügt werden. </Description>
+    <Description>Gateway-Adresse &lt;%s&gt; mit der Zieladresse &lt;%s&gt; für EtherNet/IP konnte nicht hinzugefügt werden. </Description>
     <Consequences>Es ist keine Kommunikation am EtherNet/IP E/A-Bus möglich.</Consequences>
-    <Causes>1. Gateway-Adresse oder Zieladresse sind ungültig.<p />2. Es wurde keine Zieladresse angegeben. </Causes>
-    <Actions>1. In der Konfiguration des EtherNet/IP E/A-Bus die Gateway- oder die Zieladresse korrigieren.<p />2. System neu starten. </Actions>
+    <Causes>1. Gateway-Adresse oder Zieladresse sind ungültig.2. Es wurde keine Zieladresse angegeben. </Causes>
+    <Actions>1. In der Konfiguration des EtherNet/IP E/A-Bus die Gateway- oder die Zieladresse korrigieren.2. System neu starten. </Actions>
   </Message>
   <Message number="1465" eDefine="SYS_EIO_DNET_ERROR_RSP">
     <Title>DeviceNet Fehlerreaktion </Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; hat eine Fehlerreaktion gemeldet.<p /><p />Allgemeiner Fehlercode <arg format="%ld" ordinal="2" />.<p />Zusätzlicher Code <arg format="%ld" ordinal="3" /></Description>
-    <Actions>1. Informationen über den Allgemeinen Fehlercode finden Sie im DeviceNet Anwendungshandbuch oder in der DeviceNet Spezifikation Anhang H.<p />2. Die E/A-Einheit wird eventuell durch einen anderen Master verwendet.<p />3. Schalten Sie die Stromzufuhr zur E/A-Einheit ein und wieder aus. </Actions>
+    <Description>Die E/A-Einheit &lt;%s&gt; hat eine Fehlerreaktion gemeldet.Allgemeiner Fehlercode %ld2.Zusätzlicher Code %ld3</Description>
+    <Actions>1. Informationen über den Allgemeinen Fehlercode finden Sie im DeviceNet Anwendungshandbuch oder in der DeviceNet Spezifikation Anhang H.2. Die E/A-Einheit wird eventuell durch einen anderen Master verwendet.3. Schalten Sie die Stromzufuhr zur E/A-Einheit ein und wieder aus. </Actions>
   </Message>
   <Message number="1469" eDefine="SYS_EIO_INTERNAL_SIG_TABLE_ERR">
     <Title>Maximale Anzahl interner E/A-Signale überschritten</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Die maximale Anzahl, <arg format="%d" ordinal="1" />, interner E/A-Signale im E/A-System wurde überschritten. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Die maximale Anzahl, %d1, interner E/A-Signale im E/A-System wurde überschritten. </Description>
     <Actions>Konfiguration des E/A-Systems so ändern (durch Verringern der Anzahl E/A-Signale, die in der Konfiguration der Zusatzoption angegeben sind), dass das Maximum nicht überschritten wird. </Actions>
   </Message>
   <Message number="1473" eDefine="SYS_EIO_DNET_BUS_SCAN">
     <Title>DeviceNet-E/A-Bus Scanergebnis </Title>
-    <Description>Adresse: Produkt: Anbieter-ID: Produktcode:<p /><p /><arg format="%s" ordinal="1" /></Description>
+    <Description>Adresse: Produkt: Anbieter-ID: Produktcode:%s</Description>
   </Message>
   <Message number="1474" eDefine="SYS_EIO_CMD_GET_DISPLAY">
     <Title>Feldbusbefehl-Reaktionsmeldung</Title>
-    <Description>Eine 'Get data response' Meldung &lt;<arg format="%s" ordinal="1" />&gt; von E/A-Einheit &lt;<arg format="%s" ordinal="2" />&gt; wurde empfangen.<p /><p />Reaktionsmeldung als Rohdaten:<p /><arg format="%s" ordinal="4" /><p /><p />Reaktionsmeldung als Zeichenfolge:<p /><arg format="%s" ordinal="3" /></Description>
+    <Description>Eine 'Get data response' Meldung &lt;%s&gt; von E/A-Einheit &lt;%s&gt; wurde empfangen.Reaktionsmeldung als Rohdaten:%sReaktionsmeldung als Zeichenfolge:%s</Description>
   </Message>
   <Message number="1475" eDefine="SYS_EIO_FCI_ERROR_DISPLAY">
     <Title>Feldbusbefehl-Fehlerreaktion</Title>
-    <Description>Der Feldbusbefehl &lt;<arg format="%s" ordinal="1" />&gt;, der an E/A-Einheit &lt;<arg format="%s" ordinal="2" />&gt; gesendet wurde, hat eine Fehlerreaktion zurückgegeben.<p />Fehlercode: &lt;<arg format="%s" ordinal="3" />&gt; </Description>
+    <Description>Der Feldbusbefehl &lt;%s&gt;, der an E/A-Einheit &lt;%s&gt; gesendet wurde, hat eine Fehlerreaktion zurückgegeben.Fehlercode: &lt;%s&gt; </Description>
     <Consequences>Der Feldbusbefehl wurde von der E/A-Einheit nicht akzeptiert.</Consequences>
     <Actions>Informationen über den Allgemeiner Fehlercode finden Sie im DeviceNet Anwendungshandbuch oder in der DeviceNet Spezifikation Anhang H.</Actions>
   </Message>
   <Message number="1476" eDefine="SYS_EIO_DN_NO_FWFILE_FOUND">
     <Title>DeviceNet-Firmwaredatei nicht gefunden</Title>
-    <Description>Die DeviceNet-Firmware-Datei &lt;<arg format="%s" ordinal="1" />&gt; wurde nicht gefunden oder ist nicht lesbar.<p />Eventuell ist die Kartenfirmware veraltet. </Description>
-    <Actions>System neu installieren.<p /></Actions>
+    <Description>Die DeviceNet-Firmware-Datei &lt;%s&gt; wurde nicht gefunden oder ist nicht lesbar.Eventuell ist die Kartenfirmware veraltet. </Description>
+    <Actions>System neu installieren.</Actions>
   </Message>
   <Message number="1477" eDefine="SYS_EIO_EN_INVALID_CONNECTION_SIZE">
     <Title>Falsche Verbindungsgröße für EtherNet/IP E/A-Einheit</Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist mit einer ungültigen Eingangs- und/oder Ausgangsgröße konfiguriert. </Description>
+    <Description>Die E/A-Einheit &lt;%s&gt; ist mit einer ungültigen Eingangs- und/oder Ausgangsgröße konfiguriert. </Description>
     <Consequences>Keine Kommunikation mit der E/A-Einheit möglich.</Consequences>
     <Actions>Größe für die E/A-Einheit mithilfe der Einheitentypkonfiguration korrigieren.</Actions>
   </Message>
   <Message number="1478" eDefine="SYS_EIO_EN_INVALID_INPUT_OUTPUT_ASSEMBLY">
     <Title>Ungültige Ein- oder Ausgangsappl. für EtherNet/IP E/A-Einheit</Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; besitzt eine ungültige Eingangs- und/oder Ausgangsapplikation (Assembly). </Description>
+    <Description>Die E/A-Einheit &lt;%s&gt; besitzt eine ungültige Eingangs- und/oder Ausgangsapplikation (Assembly). </Description>
     <Consequences>Keine Kommunikation mit der E/A-Einheit möglich.</Consequences>
     <Actions>Eingangs-/Ausgangsapplikation (Assembly) mithilfe der E/A-Einheit in der Einheitentypkonfiguration korrigieren.</Actions>
   </Message>
   <Message number="1479" eDefine="SYS_EIO_EN_INVALID_CONFIGURATION_ASSEMBLY">
     <Title>Ungültige Konfigurationsapplikation für EtherNet/IP E/A-Einheit</Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; besitzt eine ungültige Konfigurationsapplikation. </Description>
+    <Description>Die E/A-Einheit &lt;%s&gt; besitzt eine ungültige Konfigurationsapplikation. </Description>
     <Consequences>Keine Kommunikation mit der E/A-Einheit möglich.</Consequences>
     <Actions>Konfigurationsapplikation für die E/A-Einheit in der Einheitentypkonfiguration korrigieren.</Actions>
   </Message>
   <Message number="1480" eDefine="SYS_EIO_EN_OWNERSHIP_CONFLICT">
     <Title>E/A-Einheit ist durch einen anderen Master belegt</Title>
-    <Description>Es ist keine Verbindung mit der E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; möglich, da sie bereits eine aktive Verbindung besitzt. </Description>
-    <Consequences>Mit der E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist keine Kommunikation möglich, so lange wie die E/A-Einheit von einem anderen Master verwendet wird. </Consequences>
-    <Actions>Verbindung des anderen Masters zur E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; aufheben oder die Adresse ändern. </Actions>
+    <Description>Es ist keine Verbindung mit der E/A-Einheit &lt;%s&gt; möglich, da sie bereits eine aktive Verbindung besitzt. </Description>
+    <Consequences>Mit der E/A-Einheit &lt;%s&gt; ist keine Kommunikation möglich, so lange wie die E/A-Einheit von einem anderen Master verwendet wird. </Consequences>
+    <Actions>Verbindung des anderen Masters zur E/A-Einheit &lt;%s&gt; aufheben oder die Adresse ändern. </Actions>
   </Message>
   <Message number="1481" eDefine="SYS_EIO_PNET_NO_CFG_PATH_FOUND">
     <Title>Profinet-Konfigurationsdateifehler</Title>
-    <Description>Die Profinet-Konfigurationsdatei &lt;<arg format="%s" ordinal="1" />&gt; konnte nicht gefunden oder geöffnet werden. </Description>
-    <Consequences>Die Konfigurationsdatei wird benötigt, damit die am &lt;<arg format="%s" ordinal="2" />&gt; E/A-Bus definierten E/A-Einheiten verwendet werden können. </Consequences>
-    <Actions>1. Sicherstellen, dass die Datei existiert.<p />2. Sicherstellen, dass sich die Konfigurationsdatei im HOME-Verzeichnis Ihres aktuellen Systems befindet, wenn der Dateiname ohne Pfad verwendet wird. </Actions>
+    <Description>Die Profinet-Konfigurationsdatei &lt;%s&gt; konnte nicht gefunden oder geöffnet werden. </Description>
+    <Consequences>Die Konfigurationsdatei wird benötigt, damit die am &lt;%s&gt; E/A-Bus definierten E/A-Einheiten verwendet werden können. </Consequences>
+    <Actions>1. Sicherstellen, dass die Datei existiert.2. Sicherstellen, dass sich die Konfigurationsdatei im HOME-Verzeichnis Ihres aktuellen Systems befindet, wenn der Dateiname ohne Pfad verwendet wird. </Actions>
   </Message>
   <Message number="1482" eDefine="SYS_EIO_PNET_CFG_CHANGED_ON_BUS">
     <Title>Profinet-E/A-Bus-Konfiguration verändert</Title>
-    <Description>Systemparameter am E/A-Bus &lt;<arg format="%s" ordinal="4" />&gt; wurden durch ein externes Konfigurationstool oder einen Master, der eine Verbindung herzustellen versucht, geändert.<p />Folgende Werte wurden geändert:<p /><p />IP-Adresse: &lt;<arg format="%s" ordinal="1" />&gt;<p />Subnet-Maske: &lt;<arg format="%s" ordinal="2" />&gt;<p />Gateway-Adresse: &lt;<arg format="%s" ordinal="3" />&gt; </Description>
+    <Description>Systemparameter am E/A-Bus &lt;%s&gt; wurden durch ein externes Konfigurationstool oder einen Master, der eine Verbindung herzustellen versucht, geändert.Folgende Werte wurden geändert:IP-Adresse: &lt;%s&gt;Subnet-Maske: &lt;%s&gt;Gateway-Adresse: &lt;%s&gt; </Description>
     <Consequences>Die geänderten Parameterwerte werden erst gültig, wenn ein Warmstart der Steuerung durchgeführt wurde.</Consequences>
     <Actions>Warmstart durchführen.</Actions>
   </Message>
   <Message number="1483" eDefine="SYS_EIO_PNET_LED_FLASH">
     <Title>Profinet-Identifikationsanforderung empfangen</Title>
-    <Description>Eine Profinet-Identifikationsanforderung wurde von einem externen Konfigurationstool empfangen.<p /><p />Die MAC-Adresse am &lt;<arg format="%s" ordinal="2" />&gt; E/A-Bus ist &lt;<arg format="%s" ordinal="1" />&gt;. </Description>
+    <Description>Eine Profinet-Identifikationsanforderung wurde von einem externen Konfigurationstool empfangen.Die MAC-Adresse am &lt;%s&gt; E/A-Bus ist &lt;%s&gt;. </Description>
   </Message>
   <Message number="1485" eDefine="SYS_EIO_PNET_ILLEGAL_BUS_SUBNET_MASK">
     <Title>Unzulässige Subnet-Maske</Title>
-    <Description>Die Subnet-Maske &lt;<arg format="%s" ordinal="1" />&gt; für den &lt;<arg format="%s" ordinal="2" />&gt; E/A-Bus ist unzulässig. Der zulässige Bereich für die Subnet-Maske ist &lt;255.255.255.xxx&gt;. </Description>
-    <Consequences>Die Subnet-Maske am &lt;<arg format="%s" ordinal="2" />&gt; E/A-Bus wurde nicht geändert. </Consequences>
-    <Actions>1. Subnet-Maske für den &lt;<arg format="%s" ordinal="2" />&gt; E/A-Bus korrigieren. </Actions>
+    <Description>Die Subnet-Maske &lt;%s&gt; für den &lt;%s&gt; E/A-Bus ist unzulässig. Der zulässige Bereich für die Subnet-Maske ist &lt;255.255.255.xxx&gt;. </Description>
+    <Consequences>Die Subnet-Maske am &lt;%s&gt; E/A-Bus wurde nicht geändert. </Consequences>
+    <Actions>1. Subnet-Maske für den &lt;%s&gt; E/A-Bus korrigieren. </Actions>
   </Message>
   <Message number="1486" eDefine="SYS_EIO_PNET_ILLEGAL_BUS_ADDRESS">
-    <Title> Unzulässige Adresse für &lt;<arg format="%s" ordinal="2" />&gt; E/A-Bus </Title>
-    <Description>Die IP-Adresse &lt;<arg format="%s" ordinal="1" />&gt; für den &lt;<arg format="%s" ordinal="2" />&gt; E/A-Bus ist unzulässig. </Description>
-    <Consequences>Der &lt;<arg format="%s" ordinal="2" />&gt; E/A-Bus kann nicht verwendet werden. </Consequences>
-    <Actions>Adresse für den &lt;<arg format="%s" ordinal="2" />&gt; E/A-Bus korrigieren. </Actions>
+    <Title> Unzulässige Adresse für &lt;%s&gt; E/A-Bus </Title>
+    <Description>Die IP-Adresse &lt;%s&gt; für den &lt;%s&gt; E/A-Bus ist unzulässig. </Description>
+    <Consequences>Der &lt;%s&gt; E/A-Bus kann nicht verwendet werden. </Consequences>
+    <Actions>Adresse für den &lt;%s&gt; E/A-Bus korrigieren. </Actions>
   </Message>
   <Message number="1487" eDefine="SYS_EIO_PNET_RESERVED_ADDRESS">
-    <Title> Unzulässige IP-Adresse für &lt;<arg format="%s" ordinal="2" />&gt; E/A-Bus </Title>
-    <Description>Die &lt;<arg format="%s" ordinal="2" />&gt; E/A-Bus-Adresse &lt;<arg format="%s" ordinal="1" />&gt; ist reserviert. </Description>
-    <Consequences>Es ist keine Kommunikation am &lt;<arg format="%s" ordinal="2" />&gt; E/A-Bus möglich. </Consequences>
-    <Causes>Die angegebene Adresse befindet sich auf einem Subnet, das durch einen anderen Ethernet-Port reserviert ist. Zwei Ethernet-Ports auf der Steuerung dürfen sich nicht auf demselben Subnet befinden.<p /><p />Beispiel:<p />&lt;<arg format="%s" ordinal="2" />&gt; Port: 192.168.125.xxx<p />Service-Port: 192.168.125.xxx<p /><p />Hinweis:<p />Die Subnets im Bereich 192.168.125.xxx - 192.168.130.xxx sind vordefiniert und können nicht verwendet werden. </Causes>
+    <Title> Unzulässige IP-Adresse für &lt;%s&gt; E/A-Bus </Title>
+    <Description>Die &lt;%s&gt; E/A-Bus-Adresse &lt;%s&gt; ist reserviert. </Description>
+    <Consequences>Es ist keine Kommunikation am &lt;%s&gt; E/A-Bus möglich. </Consequences>
+    <Causes>Die angegebene Adresse befindet sich auf einem Subnet, das durch einen anderen Ethernet-Port reserviert ist. Zwei Ethernet-Ports auf der Steuerung dürfen sich nicht auf demselben Subnet befinden.Beispiel:&lt;%s&gt; Port: 192.168.125.xxxService-Port: 192.168.125.xxxHinweis:Die Subnets im Bereich 192.168.125.xxx - 192.168.130.xxx sind vordefiniert und können nicht verwendet werden. </Causes>
     <Actions>Adresse auf anderes Subnet ändern.</Actions>
   </Message>
   <Message number="1488" eDefine="SYS_EIO_PNET_COULD_NOT_SET_GATEWAY">
-    <Title> Unzulässige Gateway-Adresse für &lt;<arg format="%s" ordinal="3" />&gt; E/A-Bus </Title>
-    <Description>Die angegebene Gateway-Adresse &lt;<arg format="%s" ordinal="2" />&gt; ist ungültig und kann nicht verwendet werden. </Description>
+    <Title> Unzulässige Gateway-Adresse für &lt;%s&gt; E/A-Bus </Title>
+    <Description>Die angegebene Gateway-Adresse &lt;%s&gt; ist ungültig und kann nicht verwendet werden. </Description>
     <Consequences>Die Gateway-Adresse wird nicht geändert.</Consequences>
-    <Causes>Die angegebene Gateway-Adresse liegt eventuell nicht im Bereich der &lt;<arg format="%s" ordinal="3" />&gt; E/A-Bus-Subnet-Maske &lt;<arg format="%s" ordinal="1" />&gt;. </Causes>
-    <Actions>Gateway-Adresse in der &lt;<arg format="%s" ordinal="3" />&gt; E/A-Bus-Konfiguration korrigieren. </Actions>
+    <Causes>Die angegebene Gateway-Adresse liegt eventuell nicht im Bereich der &lt;%s&gt; E/A-Bus-Subnet-Maske &lt;%s&gt;. </Causes>
+    <Actions>Gateway-Adresse in der &lt;%s&gt; E/A-Bus-Konfiguration korrigieren. </Actions>
   </Message>
   <Message number="1489" eDefine="SYS_EIO_PNET_CONFIG_MISSMATCH">
     <Title>Warnung zu Konfiguration von internem Profinet-Slave </Title>
-    <Description>Ein Profinet-Master hat eine Verbindung mit dem internen Profinet-Slave am &lt;<arg format="%s" ordinal="3" />&gt; E/A-Bus hergestellt. Die Slot-Konfiguration des Profinet-Masters, der eine Verbindung herzustellen versucht, und die des internen Profinet-Slaves sind unterschiedlich.<p />Der interne Profinet-Slave ist derzeitig mit folgenden Modulen konfiguriert:<p /><p />Slot 1: DI <arg format="%ld" ordinal="1" /> Bytes<p />Slot 2: DO <arg format="%ld" ordinal="2" /> Bytes<p /></Description>
+    <Description>Ein Profinet-Master hat eine Verbindung mit dem internen Profinet-Slave am &lt;%s&gt; E/A-Bus hergestellt. Die Slot-Konfiguration des Profinet-Masters, der eine Verbindung herzustellen versucht, und die des internen Profinet-Slaves sind unterschiedlich.Der interne Profinet-Slave ist derzeitig mit folgenden Modulen konfiguriert:Slot 1: DI %ld1 BytesSlot 2: DO %ld2 Bytes</Description>
     <Consequences>Es können nicht alle E/A-Signale verwendet werden.</Consequences>
-    <Actions>1. Profinet-Master, der eine Verbindung herzustellen versucht, neu konfigurieren, damit er mit dem internen Profinet-Slave übereinstimmt.<p />2. Neukonfigurierung des internen Profinet-Slaves in der Steuerung, damit er mit dem Profinet-Master, der eine Verbindung herzustellen versucht, übereinstimmt. </Actions>
+    <Actions>1. Profinet-Master, der eine Verbindung herzustellen versucht, neu konfigurieren, damit er mit dem internen Profinet-Slave übereinstimmt.2. Neukonfigurierung des internen Profinet-Slaves in der Steuerung, damit er mit dem Profinet-Master, der eine Verbindung herzustellen versucht, übereinstimmt. </Actions>
   </Message>
   <Message number="1490" eDefine="SYS_EIO_PNET_NO_CFG_UNIT_FOUND">
     <Title>Warnung zu Konfiguration von Profinet-E/A-Einheit</Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; am &lt;<arg format="%s" ordinal="3" />&gt; E/A-Bus wurde in der Profinet Konfigurationsdatei &lt;<arg format="%s" ordinal="2" />&gt; konfiguriert, aber nicht in den Systemparametern. </Description>
-    <Actions>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; den Systemparametern hinzufügen oder die E/A-Einheit aus der Profinet-Konfigurationsdatei entfernen. </Actions>
+    <Description>Die E/A-Einheit &lt;%s&gt; am &lt;%s&gt; E/A-Bus wurde in der Profinet Konfigurationsdatei &lt;%s&gt; konfiguriert, aber nicht in den Systemparametern. </Description>
+    <Actions>Die E/A-Einheit &lt;%s&gt; den Systemparametern hinzufügen oder die E/A-Einheit aus der Profinet-Konfigurationsdatei entfernen. </Actions>
   </Message>
   <Message number="1491" eDefine="SYS_EIO_PNET_NO_STACK_CONFIG_FOR_UNIT">
     <Title>Konfiguration von Profinet-E/A-Einheit fehlt</Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; am &lt;<arg format="%s" ordinal="3" />&gt; E/A-Bus wurde in den Systemparametern konfiguriert, aber nicht in der Profinet-Konfigurationsdatei &lt;<arg format="%s" ordinal="2" />&gt;. </Description>
-    <Consequences>Keine Kommunikation mit der E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; möglich. </Consequences>
-    <Actions>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; der Profinet-Konfigurationsdatei hinzufügen oder die E/A-Einheit aus den Systemparametern entfernen. </Actions>
+    <Description>Die E/A-Einheit &lt;%s&gt; am &lt;%s&gt; E/A-Bus wurde in den Systemparametern konfiguriert, aber nicht in der Profinet-Konfigurationsdatei &lt;%s&gt;. </Description>
+    <Consequences>Keine Kommunikation mit der E/A-Einheit &lt;%s&gt; möglich. </Consequences>
+    <Actions>Die E/A-Einheit &lt;%s&gt; der Profinet-Konfigurationsdatei hinzufügen oder die E/A-Einheit aus den Systemparametern entfernen. </Actions>
   </Message>
   <Message number="1492" eDefine="SYS_EIO_PNET_UNIT_ALARM_WARNING">
     <Title>Profinet-Diagnosedaten gemeldet</Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; hat Diagnosedaten in Slot <arg format="%ld" ordinal="2" /> gemeldet.<p /><p /><arg format="%s" ordinal="3" /></Description>
+    <Description>Die E/A-Einheit &lt;%s&gt; hat Diagnosedaten in Slot %ld2 gemeldet.%s</Description>
   </Message>
   <Message number="1493" eDefine="SYS_EIO_PNET_NEW_UNIT_ADDED_IN_CFG">
     <Title>Profinet-E/A-Einheit automatisch konfiguriert</Title>
-    <Description>Eine neue E/A-Einheit wurde in der Profinet-Konfigurationsdatei gefunden. Die E/A-Einheit wurde in der Steuerung automatisch mit den folgenden Parametern konfiguriert:<p /><p />Einheitenname: <arg format="%s" ordinal="1" /><p />Input-Bytes: <arg format="%d" ordinal="2" /><p />Output-Bytes: <arg format="%s" ordinal="3" /></Description>
-    <Actions>1. Konfiguration bearbeiten oder löschen.<p />2. Die Steuerung neu starten, um die Konfiguration der E/A-Einheit zu aktivieren. </Actions>
+    <Description>Eine neue E/A-Einheit wurde in der Profinet-Konfigurationsdatei gefunden. Die E/A-Einheit wurde in der Steuerung automatisch mit den folgenden Parametern konfiguriert:Einheitenname: %sInput-Bytes: %d2Output-Bytes: %s</Description>
+    <Actions>1. Konfiguration bearbeiten oder löschen.2. Die Steuerung neu starten, um die Konfiguration der E/A-Einheit zu aktivieren. </Actions>
   </Message>
   <Message number="1494" eDefine="SYS_EIO_PNET_OPTION_ERR">
     <Title>Lizenzcode für Option Profinet fehlt</Title>
-    <Description>Der Lizenzcode für die Ausführung des&lt;<arg format="%s" ordinal="1" />&gt; E/A-Busses auf der Steuerung wurde nicht erkannt. </Description>
-    <Consequences>Es ist keine Kommunikation am &lt;<arg format="%s" ordinal="1" />&gt;-E/A-Bus möglich. </Consequences>
+    <Description>Der Lizenzcode für die Ausführung des&lt;%s&gt; E/A-Busses auf der Steuerung wurde nicht erkannt. </Description>
+    <Consequences>Es ist keine Kommunikation am &lt;%s&gt;-E/A-Bus möglich. </Consequences>
     <Causes>Eventuell wurde versucht, die Profinet-Funktionalität hinzuzufügen, ohne die Option korrekt zu installieren.</Causes>
-    <Actions>1. Neues System mit der Option Profinet konfigurieren und das System installieren.<p />2. Wenn Profinet nicht erforderlich ist, ein neues System ohne diese Option konfigurieren und dieses System installieren. </Actions>
+    <Actions>1. Neues System mit der Option Profinet konfigurieren und das System installieren.2. Wenn Profinet nicht erforderlich ist, ein neues System ohne diese Option konfigurieren und dieses System installieren. </Actions>
   </Message>
   <Message number="1495" eDefine="SYS_EIO_PNET_ONLY_SLAVE_OPTION_ERROR">
     <Title>Lizenzcode für Option Profinet-Master fehlt</Title>
-    <Description>Es wurde kein Lizenzcode für die Ausführung der Option &lt;<arg format="%s" ordinal="2" />&gt; E/A-Bus als Profinet-Master auf der Steuerung gefunden. Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist nicht als interner Profinet-Slave definiert. </Description>
-    <Consequences>Keine Kommunikation mit der E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; möglich. </Consequences>
-    <Causes>Der installierte Lizenzcode für die Option &lt;<arg format="%s" ordinal="2" />&gt; E/A-Bus unterstützt nur eine interne Profinet-Slave E/A-Einheit. </Causes>
-    <Actions>Neues System mit der Option Profinet Master/Slave konfigurieren oder die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; aus den Systemparametern entfernen. </Actions>
+    <Description>Es wurde kein Lizenzcode für die Ausführung der Option &lt;%s&gt; E/A-Bus als Profinet-Master auf der Steuerung gefunden. Die E/A-Einheit &lt;%s&gt; ist nicht als interner Profinet-Slave definiert. </Description>
+    <Consequences>Keine Kommunikation mit der E/A-Einheit &lt;%s&gt; möglich. </Consequences>
+    <Causes>Der installierte Lizenzcode für die Option &lt;%s&gt; E/A-Bus unterstützt nur eine interne Profinet-Slave E/A-Einheit. </Causes>
+    <Actions>Neues System mit der Option Profinet Master/Slave konfigurieren oder die E/A-Einheit &lt;%s&gt; aus den Systemparametern entfernen. </Actions>
   </Message>
   <Message number="1496" eDefine="SYS_EIO_UNT_REQUIRED_CONTACT_LOST">
     <Title>Keine Kommunikation mit der erforderlichen E/A-Einheit</Title>
-    <Description>Die zuvor funktionierende Kommunikation mit der E/A-Einheit <arg format="%s" ordinal="1" /> mit der Adresse <arg format="%s" ordinal="3" /> am E/A-Bus <arg format="%s" ordinal="2" /> wurde verloren. </Description>
+    <Description>Die zuvor funktionierende Kommunikation mit der E/A-Einheit %s mit der Adresse %s am E/A-Bus %s wurde verloren. </Description>
     <Consequences>Der E/A-Einheit wurde bei der Konfiguration Einheiten-TrustLevel Required (0) zugewiesen. Das System wechselt in den Zustand Systemfehler.</Consequences>
     <Causes>Die E/A-Einheit wurde eventeull vom System getrennt.</Causes>
-    <Actions>1. Sicherstellen, dass das Buskabel mit der Steuerung verbunden ist. <p />2. Sicherstellen, dass die E/A-Einheit korrekt mit Strom versorgt wird. <p />3. Sicherstellen, dass die Verkabelung zur E/A-Einheit korrekt angeschlossen ist. </Actions>
+    <Actions>1. Sicherstellen, dass das Buskabel mit der Steuerung verbunden ist. 2. Sicherstellen, dass die E/A-Einheit korrekt mit Strom versorgt wird. 3. Sicherstellen, dass die Verkabelung zur E/A-Einheit korrekt angeschlossen ist. </Actions>
   </Message>
   <Message number="1497" eDefine="SYS_EIO_UNT_REQUIRED_NO_CONTACT">
     <Title>Keine Kommunikation mit E/A-Einheit</Title>
-    <Description>Beim Start wurde keine Kommunikation mit E/A-Einheit <arg format="%s" ordinal="1" /> mit Adresse <arg format="%s" ordinal="3" /> auf E/A-Bus <arg format="%s" ordinal="2" /> hergestellt. </Description>
+    <Description>Beim Start wurde keine Kommunikation mit E/A-Einheit %s mit Adresse %s auf E/A-Bus %s hergestellt. </Description>
     <Consequences>Der E/A-Einheit wurde bei der Konfiguration Einheiten-TrustLevel Required (0) zugewiesen. Das System wechselt in den Zustand Systemfehler.</Consequences>
     <Causes>Die E/A-Einheit ist entweder nicht mit dem System verbunden oder sie ist verbunden und ihr wurde die falsche Adresse zugewiesen.</Causes>
-    <Actions>1. Sicherstellen, dass alle E/A-Einheitenadressen der Konfiguration entsprechen. <p />2. Sicherstellen, dass alle Adressen eindeutig sind und von nicht mehr als einer E/A-Einheit verwendet werden. <p />3. Adresse ändern und/oder fehlende E/A-Einheit verbinden. <p />4. Wenn Sie die Adresse geändert haben, muss die E/A-Einheit aus- und wieder eingeschaltet werden, um sicherzustellen, dass die Adresse geändert wurde. <p />5. Sicherstellen, dass der Feldbus funktioniert <p /></Actions>
+    <Actions>1. Sicherstellen, dass alle E/A-Einheitenadressen der Konfiguration entsprechen. 2. Sicherstellen, dass alle Adressen eindeutig sind und von nicht mehr als einer E/A-Einheit verwendet werden. 3. Adresse ändern und/oder fehlende E/A-Einheit verbinden. 4. Wenn Sie die Adresse geändert haben, muss die E/A-Einheit aus- und wieder eingeschaltet werden, um sicherzustellen, dass die Adresse geändert wurde. 5. Sicherstellen, dass der Feldbus funktioniert </Actions>
   </Message>
   <Message number="1498" eDefine="SYS_EIO_PNET_CFG_NAME_CHANGED_ON_BUS">
     <Title>Profinet-E/A-Bus-Konfiguration verändert</Title>
-    <Description>Bustyp-Systemparameter am E/A-Bus &lt;<arg format="%s" ordinal="2" />&gt; wurden durch ein externes Konfigurationstool oder einen Master, der eine Verbindung herzustellen versucht, geändert.<p />Folgende Werte wurden geändert:<p /><p />Stationsname: &lt;<arg format="%s" ordinal="1" />&gt; </Description>
+    <Description>Bustyp-Systemparameter am E/A-Bus &lt;%s&gt; wurden durch ein externes Konfigurationstool oder einen Master, der eine Verbindung herzustellen versucht, geändert.Folgende Werte wurden geändert:Stationsname: &lt;%s&gt; </Description>
     <Consequences>Die geänderten Parameterwerte werden erst gültig, wenn ein Warmstart der Steuerung durchgeführt wurde.</Consequences>
     <Actions>Warmstart durchführen.</Actions>
   </Message>
   <Message number="1499" eDefine="SYS_EIO_CRS_SIGNAL_UNITMAP_OVERLAP">
     <Title>E/A-Signal in Querverbindung hat überlagernde Zuordnung</Title>
-    <Description>Das resultierende E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; besitzt eine überlagernde Einheitenzuordnung mit dem invertierten Haupt-E/A-Signal &lt;<arg format="%s" ordinal="2" />&gt;. </Description>
+    <Description>Das resultierende E/A-Signal &lt;%s&gt; besitzt eine überlagernde Einheitenzuordnung mit dem invertierten Haupt-E/A-Signal &lt;%s&gt;. </Description>
     <Consequences>Die Verwendung von E/A-Signalen mit überlagernden Einheitenzuordnungen in einer Querverbindung können zu unendlichen Signaleinstellungsschleifen führen.</Consequences>
     <Actions>Die Einheitenzuordnung korrigieren oder eins der E/A-Signale als virtuell definieren.</Actions>
   </Message>
   <Message number="1500" eDefine="SYS_EIO_EN_GEN_UCMM_RSP_CON_FAILURE_ERROR">
     <Title>EtherNet/IP-Verbindungsfehler</Title>
-    <Description>Keine Verbindung zur E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; möglich.<p /><p /><arg format="%s" ordinal="2" /></Description>
+    <Description>Keine Verbindung zur E/A-Einheit &lt;%s&gt; möglich.%s</Description>
     <Consequences>Keine Kommunikation mit der E/A-Einheit möglich.</Consequences>
   </Message>
   <Message number="1501" eDefine="SYS_EIO_PNET_CONFIG_FILE_ERROR">
     <Title>Profinet-Konfigurationsdateifehler</Title>
-    <Description>Die Profinet Konfigurationsdatei &lt;<arg format="%s" ordinal="1" />&gt; war nicht gültig. Interner Fehlercode &lt;<arg format="%ld" ordinal="2" />&gt;. </Description>
-    <Consequences>Es ist keine Kommunikation am &lt;<arg format="%s" ordinal="3" />&gt;-E/A-Bus möglich. </Consequences>
+    <Description>Die Profinet Konfigurationsdatei &lt;%s&gt; war nicht gültig. Interner Fehlercode &lt;%ld2&gt;. </Description>
+    <Consequences>Es ist keine Kommunikation am &lt;%s&gt;-E/A-Bus möglich. </Consequences>
     <Causes>Die Profinet-Konfigurationsdatei wurde eventuell beschädigt oder sie könnte mit einem inkompatiblen Dateiformat erstellt worden sein.</Causes>
     <Actions>Neue Profinet-Konfigurationsdateien erstellen.</Actions>
   </Message>
   <Message number="1502" eDefine="SYS_EIO_PNET_CONFIG_MISMATCH_MASTER">
     <Title>Profinet-Konfigurationskonflikt</Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; hat eine unterschiedliche Slot-Konfiguration im Vergleich mit der Konfiguration für diese E/A-Einheit in der Profinet-Konfigurationsdatei &lt;<arg format="%s" ordinal="2" />&gt; gemeldet.<p /><p />Der erste Slot-Konflikt wurde berichtet an Slot &lt;<arg format="%ld" ordinal="3" />&gt;<p />&lt;<arg format="%ld" ordinal="4" />&gt; Slot-Konflikte gefunden. </Description>
+    <Description>Die E/A-Einheit &lt;%s&gt; hat eine unterschiedliche Slot-Konfiguration im Vergleich mit der Konfiguration für diese E/A-Einheit in der Profinet-Konfigurationsdatei &lt;%s&gt; gemeldet.Der erste Slot-Konflikt wurde berichtet an Slot &lt;%ld3&gt;&lt;%ld4&gt; Slot-Konflikte gefunden. </Description>
     <Consequences>Es können eventuell nicht alle E/A-Signale verwendet werden.</Consequences>
-    <Causes>Die in Slot &lt;<arg format="%ld" ordinal="3" />&gt; verwendeten Modultypen sind eventuell vom falschen Typ oder haben eine andere Version als die aktuelle Hardware der E/A-Einheit. </Causes>
-    <Actions>1. Profinet-Konfigurationsdatei &lt;<arg format="%s" ordinal="2" />&gt; aktualisieren.<p />2. Hardware der E/A-Einheit prüfen. </Actions>
+    <Causes>Die in Slot &lt;%ld3&gt; verwendeten Modultypen sind eventuell vom falschen Typ oder haben eine andere Version als die aktuelle Hardware der E/A-Einheit. </Causes>
+    <Actions>1. Profinet-Konfigurationsdatei &lt;%s&gt; aktualisieren.2. Hardware der E/A-Einheit prüfen. </Actions>
   </Message>
   <Message number="1503" eDefine="SYS_EIO_PNET_STATION_NAME_ERROR">
     <Title>Fehler bei Profinet-Stationsname</Title>
-    <Description>Der E/A-Bus-Systemparameter &lt;Station Name&gt; am &lt;<arg format="%s" ordinal="2" />&gt; E/A-Bus enthält ein oder mehr unzulässige Zeichen. Das Zeichen an Position &lt;<arg format="%ld" ordinal="1" />&gt; ist nicht zulässig. </Description>
-    <Consequences>Der &lt;<arg format="%s" ordinal="2" />&gt; E/A-Bus kann nicht verwendet werden. </Consequences>
+    <Description>Der E/A-Bus-Systemparameter &lt;Station Name&gt; am &lt;%s&gt; E/A-Bus enthält ein oder mehr unzulässige Zeichen. Das Zeichen an Position &lt;%ld1&gt; ist nicht zulässig. </Description>
+    <Consequences>Der &lt;%s&gt; E/A-Bus kann nicht verwendet werden. </Consequences>
     <Actions>Systemparameter &lt;Station Name&gt; zu einer zulässigen Zeichenfolge ändern.</Actions>
   </Message>
   <Message number="1504" eDefine="SYS_EIO_FTP_FILE_TOO_LARGE">
     <Title>Maximale Dateigröße überschritten</Title>
-    <Description>Dateidaten können nicht in die Steuerung kopiert werden. Die Datei <arg format="%s" ordinal="1" /> ist zu groß.<p />Dateigröße: <arg format="%d" ordinal="2" /><p />Max. Dateigröße: <arg format="%d" ordinal="3" /></Description>
+    <Description>Dateidaten können nicht in die Steuerung kopiert werden. Die Datei %s ist zu groß.Dateigröße: %d2Max. Dateigröße: %d3</Description>
     <Causes>Die Datei überschreitet die zulässige Größe.</Causes>
     <Actions>Konfiguration des FTP-Clients prüfen und den Systemparameter MaxFileSize erhöhen, um die Datei in die Steuerung übertragen zu können.</Actions>
   </Message>
   <Message number="1505" eDefine="SYS_EIO_FCI_PATH_ERROR_MISSING_COMMA">
     <Title>Feldbusbefehl-Syntaxfehler</Title>
-    <Description>Feldbusbefehl konnte nicht an E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; gesendet werden, da ein Syntaxfehler in der Befehlspfad-Zeichenfolge vorliegt.<p /><p />Name des Feldbusbefehlstyps &lt;<arg format="%s" ordinal="2" />&gt;.<p />Syntaxfehler: Fehlendes Komma. </Description>
+    <Description>Feldbusbefehl konnte nicht an E/A-Einheit &lt;%s&gt; gesendet werden, da ein Syntaxfehler in der Befehlspfad-Zeichenfolge vorliegt.Name des Feldbusbefehlstyps &lt;%s&gt;.Syntaxfehler: Fehlendes Komma. </Description>
     <Consequences>Der Feldbusbefehl wurde nicht gesendet.</Consequences>
     <Actions>Zeichenfolge für den Pfad des Feldbusbefehls korrigieren.</Actions>
   </Message>
   <Message number="1506" eDefine="SYS_EIO_FCI_PATH_ERROR_BAD_PATH_SIZE">
     <Title>Feldbusbefehl-Syntaxfehler</Title>
-    <Description>Feldbusbefehl konnte nicht an E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; gesendet werden, da ein Syntaxfehler in der Befehlspfad-Zeichenfolge vorliegt.<p /><p />Name des Feldbusbefehlstyps &lt;<arg format="%s" ordinal="2" />&gt;.<p />Syntaxfehler: Ungültige Dateigröße angegeben. </Description>
+    <Description>Feldbusbefehl konnte nicht an E/A-Einheit &lt;%s&gt; gesendet werden, da ein Syntaxfehler in der Befehlspfad-Zeichenfolge vorliegt.Name des Feldbusbefehlstyps &lt;%s&gt;.Syntaxfehler: Ungültige Dateigröße angegeben. </Description>
     <Consequences>Der Feldbusbefehl wurde nicht gesendet.</Consequences>
     <Actions>Zeichenfolge für den Pfad des Feldbusbefehls korrigieren.</Actions>
   </Message>
   <Message number="1507" eDefine="SYS_EIO_FCI_PATH_ERROR_INCORRECT_PATH_SIZE">
     <Title>Feldbusbefehl-Syntaxfehler</Title>
-    <Description>Feldbusbefehl konnte nicht an E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; gesendet werden, da ein Syntaxfehler in der Befehlspfad-Zeichenfolge vorliegt.<p /><p />Name des Feldbusbefehlstyps &lt;<arg format="%s" ordinal="2" />&gt;.<p />Syntaxfehler: Falsche Pfadgröße. </Description>
+    <Description>Feldbusbefehl konnte nicht an E/A-Einheit &lt;%s&gt; gesendet werden, da ein Syntaxfehler in der Befehlspfad-Zeichenfolge vorliegt.Name des Feldbusbefehlstyps &lt;%s&gt;.Syntaxfehler: Falsche Pfadgröße. </Description>
     <Consequences>Der Feldbusbefehl wurde nicht gesendet.</Consequences>
     <Actions>Zeichenfolge für den Pfad des Feldbusbefehls korrigieren.</Actions>
   </Message>
   <Message number="1508" eDefine="SYS_EIO_FCI_PATH_ERROR_BAD_DATA_TYPE">
     <Title>Feldbusbefehl-Syntaxfehler</Title>
-    <Description>Feldbusbefehl konnte nicht an E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; gesendet werden, da ein Syntaxfehler in der Befehlspfad-Zeichenfolge vorliegt.<p /><p />Name des Feldbusbefehlstyps &lt;<arg format="%s" ordinal="2" />&gt;.<p />Syntaxfehler: Ungültiger Datentyp. </Description>
+    <Description>Feldbusbefehl konnte nicht an E/A-Einheit &lt;%s&gt; gesendet werden, da ein Syntaxfehler in der Befehlspfad-Zeichenfolge vorliegt.Name des Feldbusbefehlstyps &lt;%s&gt;.Syntaxfehler: Ungültiger Datentyp. </Description>
     <Consequences>Der Feldbusbefehl wurde nicht gesendet.</Consequences>
     <Actions>Zeichenfolge für den Pfad des Feldbusbefehls korrigieren.</Actions>
   </Message>
   <Message number="1509" eDefine="SYS_EIO_FCI_PATH_ERROR_MISSING_SPACE">
     <Title>Feldbusbefehl-Syntaxfehler</Title>
-    <Description>Feldbusbefehl konnte nicht an E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; gesendet werden, da ein Syntaxfehler in der Befehlspfad-Zeichenfolge vorliegt.<p /><p />Name des Feldbusbefehlstyps &lt;<arg format="%s" ordinal="2" />&gt;.<p />Syntaxfehler: Fehlendes Leerzeichen. </Description>
+    <Description>Feldbusbefehl konnte nicht an E/A-Einheit &lt;%s&gt; gesendet werden, da ein Syntaxfehler in der Befehlspfad-Zeichenfolge vorliegt.Name des Feldbusbefehlstyps &lt;%s&gt;.Syntaxfehler: Fehlendes Leerzeichen. </Description>
     <Consequences>Der Feldbusbefehl wurde nicht gesendet.</Consequences>
     <Actions>Zeichenfolge für den Pfad des Feldbusbefehls korrigieren.</Actions>
   </Message>
   <Message number="1510" eDefine="SYS_EIO_FCI_PATH_ERROR_INCORRECT_BYTE_SIZE">
     <Title>Feldbusbefehl-Syntaxfehler</Title>
-    <Description>Feldbusbefehl konnte nicht an E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; gesendet werden, da ein Syntaxfehler in der Befehlspfad-Zeichenfolge vorliegt.<p /><p />Name des Feldbusbefehlstyps &lt;<arg format="%s" ordinal="2" />&gt;.<p />Syntaxfehler: Falsche Bytegröße. </Description>
+    <Description>Feldbusbefehl konnte nicht an E/A-Einheit &lt;%s&gt; gesendet werden, da ein Syntaxfehler in der Befehlspfad-Zeichenfolge vorliegt.Name des Feldbusbefehlstyps &lt;%s&gt;.Syntaxfehler: Falsche Bytegröße. </Description>
     <Consequences>Der Feldbusbefehl wurde nicht gesendet.</Consequences>
     <Actions>Zeichenfolge für den Pfad des Feldbusbefehls korrigieren.</Actions>
   </Message>
   <Message number="1511" eDefine="SYS_EIO_FCI_PATH_ERROR_INCORRECT_DATA_SIZE">
     <Title>Feldbusbefehl-Syntaxfehler</Title>
-    <Description>Feldbusbefehl konnte nicht an E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; gesendet werden, da ein Syntaxfehler in der Befehlspfad-Zeichenfolge vorliegt.<p /><p />Name des Feldbusbefehlstyps &lt;<arg format="%s" ordinal="2" />&gt;.<p />Syntaxfehler: Falsche Datengröße. </Description>
+    <Description>Feldbusbefehl konnte nicht an E/A-Einheit &lt;%s&gt; gesendet werden, da ein Syntaxfehler in der Befehlspfad-Zeichenfolge vorliegt.Name des Feldbusbefehlstyps &lt;%s&gt;.Syntaxfehler: Falsche Datengröße. </Description>
     <Consequences>Der Feldbusbefehl wurde nicht gesendet.</Consequences>
     <Actions>Zeichenfolge für den Pfad des Feldbusbefehls korrigieren.</Actions>
   </Message>
   <Message number="1512" eDefine="SYS_EIO_FCI_SERVICE_INVALID">
     <Title>Ungültiger Servicebezeichner in Feldbusbefehl</Title>
-    <Description>Feldbusbefehl konnte nicht an E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; gesendet werden, da der Servicebezeichner &lt;<arg format="%ld" ordinal="2" />&gt; ungültig ist.<p />Gültige Servicebezeichner lauten:<p />&lt;<arg format="%s" ordinal="3" />&gt;<p /></Description>
+    <Description>Feldbusbefehl konnte nicht an E/A-Einheit &lt;%s&gt; gesendet werden, da der Servicebezeichner &lt;%ld2&gt; ungültig ist.Gültige Servicebezeichner lauten:&lt;%s&gt;</Description>
     <Actions>Servicebezeichner korrigieren.</Actions>
   </Message>
   <Message number="1513" eDefine="SYS_EIO_FCI_RESPONSE_TIMEOUT">
     <Title>Timeout der Feldbusbefehlsreaktion</Title>
-    <Description>Timeout beim Senden des Feldbusbefehls &lt;<arg format="%s" ordinal="1" />&gt; an die E/A-Einheit &lt;<arg format="%s" ordinal="2" />&gt; </Description>
+    <Description>Timeout beim Senden des Feldbusbefehls &lt;%s&gt; an die E/A-Einheit &lt;%s&gt; </Description>
     <Consequences>Der Feldbusbefehl wurde nicht gesendet.</Consequences>
-    <Actions>1. Syntax des Feldbusbefehls prüfen.<p />2. Sicherstellen, dass das Buskabel mit der Steuerung verbunden ist. <p />3. Sicherstellen, dass die E/A-Einheit korrekt mit Strom versorgt wird. <p />4. Sicherstellen, dass die Verkabelung zur E/A-Einheit korrekt angeschlossen ist. </Actions>
+    <Actions>1. Syntax des Feldbusbefehls prüfen.2. Sicherstellen, dass das Buskabel mit der Steuerung verbunden ist. 3. Sicherstellen, dass die E/A-Einheit korrekt mit Strom versorgt wird. 4. Sicherstellen, dass die Verkabelung zur E/A-Einheit korrekt angeschlossen ist. </Actions>
   </Message>
   <Message number="1514" eDefine="SYS_EIO_FCI_NO_ACTIVE_CONNECTION">
     <Title>Feldbusbefehl-Verbindungsfehler</Title>
-    <Description>Feldbusbefehl &lt;<arg format="%s" ordinal="1" />&gt; konnte nicht an die E/A-Einheit &lt;<arg format="%s" ordinal="2" />&gt; gesendet werden, da keine aktive Verbindung vorhanden war. </Description>
+    <Description>Feldbusbefehl &lt;%s&gt; konnte nicht an die E/A-Einheit &lt;%s&gt; gesendet werden, da keine aktive Verbindung vorhanden war. </Description>
     <Consequences>Der Feldbusbefehl wurde nicht gesendet.</Consequences>
-    <Actions>1. Syntax des Feldbusbefehls prüfen.<p />2. Sicherstellen, dass das Buskabel mit der Steuerung verbunden ist. <p />3. Sicherstellen, dass die E/A-Einheit korrekt mit Strom versorgt wird. <p />4. Sicherstellen, dass die Verkabelung zur E/A-Einheit korrekt angeschlossen ist. </Actions>
+    <Actions>1. Syntax des Feldbusbefehls prüfen.2. Sicherstellen, dass das Buskabel mit der Steuerung verbunden ist. 3. Sicherstellen, dass die E/A-Einheit korrekt mit Strom versorgt wird. 4. Sicherstellen, dass die Verkabelung zur E/A-Einheit korrekt angeschlossen ist. </Actions>
   </Message>
   <Message number="1515" eDefine="SYS_EIO_FCI_SEND_ERROR">
     <Title>Fehler beim Senden von Feldbusbefehl</Title>
-    <Description>Der Feldbusbefehl &lt;<arg format="%s" ordinal="1" />&gt; konnte nicht an die E/A-Einheit &lt;<arg format="%s" ordinal="2" />&gt; gesendet werden. <p /><p /><arg format="%s" ordinal="3" /></Description>
+    <Description>Der Feldbusbefehl &lt;%s&gt; konnte nicht an die E/A-Einheit &lt;%s&gt; gesendet werden. %s</Description>
     <Consequences>Der Feldbusbefehl wurde nicht gesendet.</Consequences>
-    <Actions>1. Syntax des Feldbusbefehls prüfen.<p />2. Sicherstellen, dass das Buskabel mit der Steuerung verbunden ist. <p />3. Sicherstellen, dass die E/A-Einheit korrekt mit Strom versorgt wird. <p />4. Sicherstellen, dass die Verkabelung zur E/A-Einheit korrekt angeschlossen ist. </Actions>
+    <Actions>1. Syntax des Feldbusbefehls prüfen.2. Sicherstellen, dass das Buskabel mit der Steuerung verbunden ist. 3. Sicherstellen, dass die E/A-Einheit korrekt mit Strom versorgt wird. 4. Sicherstellen, dass die Verkabelung zur E/A-Einheit korrekt angeschlossen ist. </Actions>
   </Message>
   <Message number="1516" eDefine="SYS_EIO_EN_NO_QUICK_CONNECT_SUPPORT">
     <Title>Quick Connect nicht von EtherNet/IP E/A-Einheit unterstützt</Title>
-    <Description>Quick Connect wird von der E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; nicht unterstützt. </Description>
-    <Actions>1. In der E/A-Konfiguration den Einheitentyp-Parameter Quick Connect für die E/A-Einheit auf "Nicht verwendet" festlegen.<p />2. Das System neu starten. </Actions>
+    <Description>Quick Connect wird von der E/A-Einheit &lt;%s&gt; nicht unterstützt. </Description>
+    <Actions>1. In der E/A-Konfiguration den Einheitentyp-Parameter Quick Connect für die E/A-Einheit auf "Nicht verwendet" festlegen.2. Das System neu starten. </Actions>
   </Message>
   <Message number="1517" eDefine="SYS_EIO_EN_ATTR_CHANGED">
     <Title>Attribut für eine EtherNet/IP E/A-Einheit wurde geändert</Title>
-    <Description>Das Attribut <arg format="%s" ordinal="2" /> für die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; wurde in „<arg format="%s" ordinal="3" />“ geändert. </Description>
+    <Description>Das Attribut %s für die E/A-Einheit &lt;%s&gt; wurde in „%s“ geändert. </Description>
   </Message>
   <Message number="1519" eDefine="SYS_EIO_PNET_TOO_MANY_BUSES_CONFIGURED">
     <Title>Es sind zu viele Profinet Master/Slave E/A-Busse konfiguriert</Title>
     <Description>Es sind zu viele Profinet Master/Slave E/A-Busse konfiguriert. Für Profinet Master/Slave kann nur ein E/A-Bus vorhanden sein.</Description>
-    <Actions>1. Alle Profinet Master/Slave E/A-Busse außer einem aus der Konfiguration entfernen.<p />2. System neu starten. </Actions>
+    <Actions>1. Alle Profinet Master/Slave E/A-Busse außer einem aus der Konfiguration entfernen.2. System neu starten. </Actions>
   </Message>
   <Message number="1520" eDefine="SYS_EIO_PNET_IOPS_BAD">
     <Title>Eingangsdaten ungültig</Title>
-    <Description>Die Einheit &lt;<arg format="%s" ordinal="1" />&gt; gibt an, dass Eingangsdaten von Slot &lt;<arg format="%d" ordinal="2" />&gt; ungültig sind.</Description>
+    <Description>Die Einheit &lt;%s&gt; gibt an, dass Eingangsdaten von Slot &lt;%d2&gt; ungültig sind.</Description>
     <Consequences>Die Eingangsdaten werden verworfen.</Consequences>
     <Causes>Interner Fehler in der Einheit.</Causes>
   </Message>
   <Message number="1521" eDefine="SYS_EIO_PNET_IOCS_BAD">
     <Title>Ausgangsdaten nicht verarbeitet</Title>
-    <Description>Die Einheit &lt;<arg format="%s" ordinal="1" />&gt; gibt an, dass Ausgangsdaten an Slot &lt;<arg format="%d" ordinal="2" />&gt; nicht verarbeitet werden können.</Description>
+    <Description>Die Einheit &lt;%s&gt; gibt an, dass Ausgangsdaten an Slot &lt;%d2&gt; nicht verarbeitet werden können.</Description>
     <Consequences>Die Ausgangsdaten werden von der Einheit verworfen.</Consequences>
     <Causes>Interner Fehler in der Einheit.</Causes>
   </Message>
@@ -299,88 +299,88 @@
   </Message>
   <Message number="1524" eDefine="SYS_EIO_PNET_ALARM_UNKNOWN">
     <Title>Unbekannter Alarm der Profinet-E/A-Einheit</Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; hat einen unbekannten Alarm in Slot &lt;<arg format="%ld" ordinal="2" />&gt; gemeldet.<p />Für nähere Erklärungen zu dem Alarmcode die spezifische Dokumentation für die E/A-Einheit verwenden.<p /><p />Alarmcode: <arg format="%s" ordinal="3" /></Description>
+    <Description>Die E/A-Einheit &lt;%s&gt; hat einen unbekannten Alarm in Slot &lt;%ld2&gt; gemeldet.Für nähere Erklärungen zu dem Alarmcode die spezifische Dokumentation für die E/A-Einheit verwenden.Alarmcode: %s</Description>
   </Message>
   <Message number="1525" eDefine="SYS_EIO_PNSW_UNIT_ALARM_DIAG">
     <Title>Diagnose der Profinet-E/A-Einheit</Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; hat Diagnosedaten in Slot &lt;<arg format="%ld" ordinal="2" />&gt; gemeldet.<p />Für nähere Erklärungen zu den Diagnosedaten die spezifische Dokumentation für die E/A-Einheit verwenden.<p /><p /><arg format="%s" ordinal="3" /></Description>
+    <Description>Die E/A-Einheit &lt;%s&gt; hat Diagnosedaten in Slot &lt;%ld2&gt; gemeldet.Für nähere Erklärungen zu den Diagnosedaten die spezifische Dokumentation für die E/A-Einheit verwenden.%s</Description>
   </Message>
   <Message number="1526" eDefine="SYS_EIO_PNSW_UNIT_ALARM_UNKNOWN">
     <Title>Unbekannter Alarm der Profinet-E/A-Einheit</Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; hat einen unbekannten Alarm in Slot &lt;<arg format="%ld" ordinal="2" />&gt; gemeldet.<p />Für nähere Erklärungen zu dem Alarmcode die spezifische Dokumentation für die E/A-Einheit verwenden.<p /><p />Alarmcode: <arg format="%s" ordinal="3" /></Description>
+    <Description>Die E/A-Einheit &lt;%s&gt; hat einen unbekannten Alarm in Slot &lt;%ld2&gt; gemeldet.Für nähere Erklärungen zu dem Alarmcode die spezifische Dokumentation für die E/A-Einheit verwenden.Alarmcode: %s</Description>
   </Message>
   <Message number="1527" eDefine="SYS_EIO_EN_DEVICE_STATE_CONFLICT">
     <Title>Statuskonflikt bei EtherNet/IP-Gerät</Title>
-    <Description>Der aktuelle Status der E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; verhindert, dass eine Kommunikation hergestellt wird oder dass ein bestimmter Dienst ausgeführt wird. Es handelt sich um ein gerätespezifisches Verhalten, das vom Händler dokumentiert wurde. </Description>
-    <Consequences>Mit der E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist keine Kommunikation möglich, so lange wie sich die E/A-Einheit in diesem Status befindet. </Consequences>
-    <Actions>1. Aktuellen Status der E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; überprüfen. <p />2. Wenn der Status „error“ ist, E/A-Konfiguration bzw. die Hardware-Einrichtung der E/A-Einheit überprüfen und Herstellerdokumentation einsehen. Wenn der Status „running“ ist, war die E/A-Einheit vorher zeitweilig während des Kommunikationsversuchs belegt, aber ist jetzt wieder hergestellt. Es sind keine weiteren Maßnahmen erforderlich.</Actions>
+    <Description>Der aktuelle Status der E/A-Einheit &lt;%s&gt; verhindert, dass eine Kommunikation hergestellt wird oder dass ein bestimmter Dienst ausgeführt wird. Es handelt sich um ein gerätespezifisches Verhalten, das vom Händler dokumentiert wurde. </Description>
+    <Consequences>Mit der E/A-Einheit &lt;%s&gt; ist keine Kommunikation möglich, so lange wie sich die E/A-Einheit in diesem Status befindet. </Consequences>
+    <Actions>1. Aktuellen Status der E/A-Einheit &lt;%s&gt; überprüfen. 2. Wenn der Status „error“ ist, E/A-Konfiguration bzw. die Hardware-Einrichtung der E/A-Einheit überprüfen und Herstellerdokumentation einsehen. Wenn der Status „running“ ist, war die E/A-Einheit vorher zeitweilig während des Kommunikationsversuchs belegt, aber ist jetzt wieder hergestellt. Es sind keine weiteren Maßnahmen erforderlich.</Actions>
   </Message>
   <Message number="1528" eDefine="SYS_EIO_EN_GENERAL_UCMM_RESPONSE_ERROR">
     <Title>Allgemeiner EtherNet/IP-Fehler </Title>
-    <Description>Keine Verbindung zur E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt;. <p /><p /><arg format="%s" ordinal="2" /></Description>
+    <Description>Keine Verbindung zur E/A-Einheit &lt;%s&gt;. %s</Description>
     <Consequences>Keine Kommunikation mit der E/A-Einheit möglich. </Consequences>
   </Message>
   <Message number="1529" eDefine="SYS_EIO_EN_MISSING_DESTINATION">
     <Title>Die Zieladresse fehlt</Title>
-    <Description>Die Gateway-Adresse <arg format="%s" ordinal="1" /> im Netzwerk <arg format="%s" ordinal="2" /> ist definiert, aber es ist keine Zieladresse definiert. </Description>
+    <Description>Die Gateway-Adresse %s im Netzwerk %s ist definiert, aber es ist keine Zieladresse definiert. </Description>
     <Consequences>Dieses Gateway wird nicht verwendet, da die Zieladresse fehlt. </Consequences>
-    <Actions>Legen Sie eine Zieladresse fest, die zusammen mit der Gateway-Adresse verwendet werden soll.<p />Oder entfernen Sie die Definition der Gateway-Adresse. </Actions>
+    <Actions>Legen Sie eine Zieladresse fest, die zusammen mit der Gateway-Adresse verwendet werden soll.Oder entfernen Sie die Definition der Gateway-Adresse. </Actions>
   </Message>
   <Message number="1530" eDefine="SYS_EIO_EN_MISSING_SUBNET_MASK">
     <Title>Die Subnet-Maske fehlt</Title>
-    <Description>Die Subnet-Maske fehlt im <arg format="%s" ordinal="1" /> Netzwerk. Das <arg format="%s" ordinal="1" /> Netzwerk befindet sich an Anschluss <arg format="%s" ordinal="2" />.</Description>
-    <Consequences>Das <arg format="%s" ordinal="1" /> Netzwerk wird nicht in Betrieb genommen. Es ist keine Kommunikation im <arg format="%s" ordinal="1" /> Netzwerk möglich. </Consequences>
+    <Description>Die Subnet-Maske fehlt im %s Netzwerk. Das %s Netzwerk befindet sich an Anschluss %s.</Description>
+    <Consequences>Das %s Netzwerk wird nicht in Betrieb genommen. Es ist keine Kommunikation im %s Netzwerk möglich. </Consequences>
     <Causes>Die Subnet-Maske fehlt. </Causes>
     <Actions>Eine Subnet-Maske hinzufügen.</Actions>
   </Message>
   <Message number="1531" eDefine="SYS_EIO_EN_ILLEGAL_DESTINATION">
     <Title>Fehlerhafte Zieladresse</Title>
-    <Description>Die angegebene Zieladresse <arg format="%s" ordinal="1" /> im <arg format="%s" ordinal="2" /> Netzwerk ist nicht zulässig. Entspricht nicht dem Standard für IP-Namen oder befindet sich im selben Netzwerk wie der Scanner und der Adapter.</Description>
+    <Description>Die angegebene Zieladresse %s im %s Netzwerk ist nicht zulässig. Entspricht nicht dem Standard für IP-Namen oder befindet sich im selben Netzwerk wie der Scanner und der Adapter.</Description>
     <Consequences>Es ist keine Zieladresse verfügbar. </Consequences>
-    <Causes>1. Die angegebene Adresse entspricht nicht dem Standard für IP-Adressen.<p />2. Die Adresse ist dieselbe wie die Bus-Adresse oder die Gateway-Adresse.<p />3. Die Adresse befindet sich im selben Netzwerk wie Bus und Gateway.<p />4. Die Adresse ist dieselbe wie die Broadcast- oder Netzwerkadresse.</Causes>
+    <Causes>1. Die angegebene Adresse entspricht nicht dem Standard für IP-Adressen.2. Die Adresse ist dieselbe wie die Bus-Adresse oder die Gateway-Adresse.3. Die Adresse befindet sich im selben Netzwerk wie Bus und Gateway.4. Die Adresse ist dieselbe wie die Broadcast- oder Netzwerkadresse.</Causes>
     <Actions>Geben Sie eine gültige Zieladresse an. </Actions>
   </Message>
   <Message number="1532" eDefine="SYS_EIO_EN_MISSING_GATEWAY">
     <Title>Die Gateway-Adresse fehlt</Title>
-    <Description>Die Zieladresse <arg format="%s" ordinal="1" /> in <arg format="%s" ordinal="2" /> ist definiert, aber es ist keine Gateway-Adresse definiert. </Description>
+    <Description>Die Zieladresse %s in %s ist definiert, aber es ist keine Gateway-Adresse definiert. </Description>
     <Consequences>Die Zieladresse wird nicht verwendet, da die Gateway-Adresse fehlt. </Consequences>
-    <Actions>Legen Sie eine Gateway-Adresse fest, die zusammen mit der Zieladresse verwendet werden soll.<p />Oder entfernen Sie die Definition der Zieladresse. </Actions>
+    <Actions>Legen Sie eine Gateway-Adresse fest, die zusammen mit der Zieladresse verwendet werden soll.Oder entfernen Sie die Definition der Zieladresse. </Actions>
   </Message>
   <Message number="1533" eDefine="SYS_EIO_EN_INVALID_CONFIGURATION_SIZE">
     <Title>Ungültige Konfigurationsgröße für EtherNet/IP E/A-Einheit</Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; besitzt eine ungültige Konfigurationsgröße. Die maximale unterstützte Konfigurationsgröße beträgt &lt;<arg format="%s" ordinal="2" />&gt; Byte. </Description>
+    <Description>Die E/A-Einheit &lt;%s&gt; besitzt eine ungültige Konfigurationsgröße. Die maximale unterstützte Konfigurationsgröße beträgt &lt;%s&gt; Byte. </Description>
     <Consequences>Keine Kommunikation mit der E/A-Einheit möglich.</Consequences>
     <Actions>Konfigurationsgröße für die E/A-Einheit mithilfe der Einheitentypkonfiguration korrigieren.</Actions>
   </Message>
   <Message number="1534" eDefine="SYS_EIO_EN_INVALID_OUTPUT_SIZE">
     <Title>Ungültige Ausgangsgröße für EtherNet/IP E/A-Einheit</Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; besitzt eine ungültige Ausgangsgröße. Die maximale unterstützte Ausgangsgröße beträgt &lt;<arg format="%s" ordinal="2" />&gt; Byte. </Description>
+    <Description>Die E/A-Einheit &lt;%s&gt; besitzt eine ungültige Ausgangsgröße. Die maximale unterstützte Ausgangsgröße beträgt &lt;%s&gt; Byte. </Description>
     <Consequences>Keine Kommunikation mit der E/A-Einheit möglich.</Consequences>
     <Actions>Ausgangsgröße für die E/A-Einheit mithilfe der Einheitentypkonfiguration korrigieren.</Actions>
   </Message>
   <Message number="1535" eDefine="SYS_EIO_EN_INVALID_INPUT_SIZE">
     <Title>Ungültige Eingangsgröße für EtherNet/IP E/A-Einheit</Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; besitzt eine ungültige Eingangsgröße. Die maximale unterstützte Eingangsgröße beträgt &lt;<arg format="%s" ordinal="2" />&gt; Byte. </Description>
+    <Description>Die E/A-Einheit &lt;%s&gt; besitzt eine ungültige Eingangsgröße. Die maximale unterstützte Eingangsgröße beträgt &lt;%s&gt; Byte. </Description>
     <Consequences>Keine Kommunikation mit der E/A-Einheit möglich.</Consequences>
     <Actions>Eingangsgröße für die E/A-Einheit mithilfe der Einheitentypkonfiguration korrigieren.</Actions>
   </Message>
   <Message number="1536" eDefine="SYS_EIO_FCI_VALUE_FORMAT_ERROR">
     <Title>Feldbusbefehl-Syntaxfehler</Title>
-    <Description>Feldbusbefehl konnte nicht an E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; gesendet werden, da ein Syntaxfehler in der Befehlswert-Zeichenfolge vorliegt.<p /><p />Name des Feldbusbefehlstyps &lt;<arg format="%s" ordinal="2" />&gt;.<p />Syntaxfehler: <arg format="%s" ordinal="3" /> kann nicht gelesen werden. </Description>
+    <Description>Feldbusbefehl konnte nicht an E/A-Einheit &lt;%s&gt; gesendet werden, da ein Syntaxfehler in der Befehlswert-Zeichenfolge vorliegt.Name des Feldbusbefehlstyps &lt;%s&gt;.Syntaxfehler: %s kann nicht gelesen werden. </Description>
     <Consequences>Der Feldbusbefehl wurde nicht gesendet.</Consequences>
     <Actions>Zeichenfolge für den Wert des Feldbusbefehls korrigieren.</Actions>
   </Message>
   <Message number="1537" eDefine="SYS_EIO_EN_INVALID_CONFIGURATION_DATA">
     <Title>Ungültige Konfigurationsdaten für EtherNet/IP E/A-Einheit</Title>
-    <Description>Die E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; besitzt ungültige Konfigurationsdaten. <arg format="%s" ordinal="2" /> kann in Position <arg format="%s" ordinal="3" /> in den Konfigurationsdaten nicht gelesen werden. </Description>
+    <Description>Die E/A-Einheit &lt;%s&gt; besitzt ungültige Konfigurationsdaten. %s kann in Position %s in den Konfigurationsdaten nicht gelesen werden. </Description>
     <Consequences>Keine Kommunikation mit der E/A-Einheit möglich.</Consequences>
     <Actions>Konfigurationsdaten für die E/A-Einheit mithilfe der Einheitentypkonfiguration korrigieren.</Actions>
   </Message>
   <Message number="1538" eDefine="SYS_EIO_EN_VC_MISSING_IP_ON_PC">
     <Title>Adresse des EtherNet/IP E/A-Bus muss auf PC vorhanden sein</Title>
-    <Description>Die festgelegte Adresse <arg format="%s" ordinal="1" />, die am EtherNet/IP E/A-Bus konfiguriert ist, kann auf keiner Netzwerkschnittstelle auf dem PC gefunden werden. </Description>
+    <Description>Die festgelegte Adresse %s, die am EtherNet/IP E/A-Bus konfiguriert ist, kann auf keiner Netzwerkschnittstelle auf dem PC gefunden werden. </Description>
     <Consequences>Es ist keine Kommunikation am EtherNet/IP E/A-Bus möglich. </Consequences>
-    <Causes>Die Adresse <arg format="%s" ordinal="1" /> ist auf keiner Netzwerkschnittstelle des PCs konfiguriert. </Causes>
-    <Actions>Legen Sie die Adresse <arg format="%s" ordinal="1" /> auf der Netzwerkschnittstelle fest, die mit dem EtherNet/IP E/A-Bus auf dem PC verbunden ist.</Actions>
+    <Causes>Die Adresse %s ist auf keiner Netzwerkschnittstelle des PCs konfiguriert. </Causes>
+    <Actions>Legen Sie die Adresse %s auf der Netzwerkschnittstelle fest, die mit dem EtherNet/IP E/A-Bus auf dem PC verbunden ist.</Actions>
   </Message>
 </Domain>

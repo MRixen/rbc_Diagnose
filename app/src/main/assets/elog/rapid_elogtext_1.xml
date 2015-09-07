@@ -2,6 +2,6 @@
 <Domain elogDomain="RAPID" domainNo="15" lang="de" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="330" max="330">
   <Message number="330" eDefine="SYS_ERR_RAPID_INSTALLATION_ERROR">
     <Title>RAPID-Fehler im Modul</Title>
-    <Description>Task:<arg format="%s" ordinal="1" /><p />Modul (Zeile/Spalte): <arg format="%s" ordinal="2" /><p /><p />Fehler mit Symbol: <arg format="%s" ordinal="3" /></Description>
+    <Description>Task:%sModul (Zeile/Spalte): %sFehler mit Symbol: %s</Description>
   </Message>
 </Domain>

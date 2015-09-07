@@ -47,153 +47,153 @@
   </Message>
   <Message number="1260" eDefine="SYS_ERR_OPR_BACKUP_ERR_BACKUP_FILE">
     <Title>Backup-Fehler</Title>
-    <Description>Fehler beim Kopieren von <arg format="%s" ordinal="1" /> zu <arg format="%s" ordinal="2" />. </Description>
+    <Description>Fehler beim Kopieren von %s zu %s. </Description>
     <Consequences>Die Datei ist nicht Teil des erstellten Backups.</Consequences>
   </Message>
   <Message number="2020" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_DEF">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Unbekannter Fehler.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2021" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_21">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Allgemeiner Fehler.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2022" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_22">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Verzeichnis enthält Objekte, die erstellt werden sollen.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2023" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_23">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Im Verzeichnis fehlt mindestens ein erforderliches Objekt.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2024" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_24">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Das Verzeichnis existiert nicht.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2025" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_25">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Verzeichnis kann nicht erstellt werden.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2026" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_26">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Fehler beim Schreiben von Backup.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2027" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_27">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Fehler beim Lesen der Konfigurationsparameter.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2028" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_28">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Fehler beim Schreiben der Konfigurationsparameter.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2029" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_29">
     <Title>Wiederherstellungsfehler</Title>
     <Description>Fehler beim Wiederherstellungsschritt „Vorbereitung“. Der Pfad ist zu lang.</Description>
-    <Causes>Die Anzahl maximal erlaubter <arg format="%s" ordinal="4" /> Zeichen wurde überschritten.</Causes>
+    <Causes>Die Anzahl maximal erlaubter %s Zeichen wurde überschritten.</Causes>
     <Actions>Stellen Sie sicher, dass keine Dateien mit tiefen Strukturen oder langen Namen zum Backup hinzugefügt wurden, das zur Wiederherstellung verwendet wurde.</Actions>
   </Message>
   <Message number="2030" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_30">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Keine Objekte mehr.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2031" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_31">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Im Verzeichnis fehlt mindestens ein erforderliches Objekt.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2032" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_32">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Systemversion passt nicht zu Backup.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2033" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_33">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Fehler beim Wiederherstellen der Konfigurationsparameter.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2034" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_34">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Fehler beim Wiederherstellen der Konfigurationsparameter.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2035" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_35">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Diskrepanz zwischen aktuellem System und Backup.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2036" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_36">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Schreibfehler.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2037" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_37">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Mindestens ein Modulname ist zu lang.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2038" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_38">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Unbekannte Task.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2039" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_39">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Speichermedium voll.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2040" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_40">
     <Title>Restore-Fehler</Title>
     <Description>Fehler beim Restore-Schritt 'Vorbereitung'. Objekt nicht löschbar.</Description>
     <Actions>
-      <arg format="%s" ordinal="3" />
+      %s
     </Actions>
   </Message>
   <Message number="2120" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_DEF">
@@ -235,7 +235,7 @@
   <Message number="2129" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_29">
     <Title>Wiederherstellungsfehler</Title>
     <Description>Fehler beim Wiederherstellungsschritt „Vorbereitung“. Der Pfad ist zu lang.</Description>
-    <Causes>Die Anzahl maximal erlaubter <arg format="%s" ordinal="3" /> Zeichen wurde überschritten.</Causes>
+    <Causes>Die Anzahl maximal erlaubter %s Zeichen wurde überschritten.</Causes>
     <Actions>Stellen Sie sicher, dass keine Dateien mit tiefen Strukturen oder langen Namen zum Backup hinzugefügt wurden, das zur Wiederherstellung verwendet wurde.</Actions>
   </Message>
   <Message number="2130" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_30">
@@ -323,7 +323,7 @@
   <Message number="2229" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_29">
     <Title>Wiederherstellungsfehler</Title>
     <Description>Fehler beim Wiederherstellungsschritt „Vorbereitung“. Der Pfad ist zu lang.</Description>
-    <Causes>Die Anzahl maximal erlaubter <arg format="%s" ordinal="3" /> Zeichen wurde überschritten.</Causes>
+    <Causes>Die Anzahl maximal erlaubter %s Zeichen wurde überschritten.</Causes>
     <Actions>Stellen Sie sicher, dass keine Dateien mit tiefen Strukturen oder langen Namen zum Backup hinzugefügt wurden, das zur Wiederherstellung verwendet wurde.</Actions>
   </Message>
   <Message number="2230" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_30">
@@ -409,7 +409,7 @@
   <Message number="2329" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_29">
     <Title>Wiederherstellungsfehler</Title>
     <Description>Fehler beim Wiederherstellungsschritt „Vorbereitung“. Der Pfad ist zu lang.</Description>
-    <Causes>Die Anzahl maximal erlaubter <arg format="%s" ordinal="3" /> Zeichen wurde überschritten.</Causes>
+    <Causes>Die Anzahl maximal erlaubter %s Zeichen wurde überschritten.</Causes>
     <Actions>Stellen Sie sicher, dass keine Dateien mit tiefen Strukturen oder langen Namen zum Backup hinzugefügt wurden, das zur Wiederherstellung verwendet wurde.</Actions>
   </Message>
   <Message number="2330" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_30">
@@ -458,54 +458,54 @@
   </Message>
   <Message number="2510" eDefine="SYS_ERR_OPR_NET_SUBNET_MASK_ERR">
     <Title>Subnet-Maske des Netzwerks unzulässig</Title>
-    <Description>Subnet-Maske <arg format="%s" ordinal="1" /> für die Netzwerkschnittstelle <arg format="%s" ordinal="2" /> ist unzulässig.</Description>
+    <Description>Subnet-Maske %s für die Netzwerkschnittstelle %s ist unzulässig.</Description>
     <Consequences>Die Netzwerkschnittstelle wird nicht konfiguriert und kann nicht verwendet werden.</Consequences>
     <Causes>Die Subnet-Maske des Netzwerks ist eventuell falsch geschrieben.</Causes>
     <Actions>1) Sicherstellen, dass die Subnet-Maske korrekt geschrieben ist.</Actions>
   </Message>
   <Message number="2511" eDefine="SYS_ERR_OPR_NET_IP_ERR">
     <Title>IP-Adresse der Netzwerkschnittstelle nicht zulässig</Title>
-    <Description>Die Netzwerk-IP-Adresse <arg format="%s" ordinal="1" /> für Schnittstelle <arg format="%s" ordinal="2" /> ist unzulässig/fehlt.</Description>
+    <Description>Die Netzwerk-IP-Adresse %s für Schnittstelle %s ist unzulässig/fehlt.</Description>
     <Consequences>Die Schnittstelle wird nicht konfiguriert und kann nicht verwendet werden.</Consequences>
     <Causes>Die Netzwerk-IP-Adresse ist eventuell falsch geschrieben oder existiert bereits im Netzwerk.</Causes>
     <Actions>1) Sicherstellen, dass die Schnittstellen-IP-Adresse korrekt und nicht doppelt vorhanden ist.</Actions>
   </Message>
   <Message number="2512" eDefine="SYS_ERR_OPR_NET_GATEWAY_ERR">
     <Title>IP-Adresse des Netzwerk-Gateways nicht zulässig</Title>
-    <Description>Die standardmäßige IP-Adresse <arg format="%s" ordinal="1" /> des Gateways ist unzulässig/fehlt oder die LAN-IP-Adresse <arg format="%s" ordinal="2" /> ist unzulässig.</Description>
+    <Description>Die standardmäßige IP-Adresse %s des Gateways ist unzulässig/fehlt oder die LAN-IP-Adresse %s ist unzulässig.</Description>
     <Consequences>Das Netzwerk ist nicht erreichbar und kann nicht verwendet werden.</Consequences>
-    <Causes>Die IP-Adressen des Gateways und/oder des LAN sind eventuell falsch geschrieben.<p /></Causes>
-    <Actions>1) Sicherstellen, dass die IP-Adressen des Gateways und des LAN korrekt sind.<p /></Actions>
+    <Causes>Die IP-Adressen des Gateways und/oder des LAN sind eventuell falsch geschrieben.</Causes>
+    <Actions>1) Sicherstellen, dass die IP-Adressen des Gateways und des LAN korrekt sind.</Actions>
   </Message>
   <Message number="2513" eDefine="SYS_ERR_OPR_NET_DHCP_ERR">
     <Title>Keine Parameter vom DHCP-Server</Title>
-    <Description>Die Netzwerkschnittstelle <arg format="%s" ordinal="1" /> hat vom DHCP-Server keine Parameter erhalten.</Description>
+    <Description>Die Netzwerkschnittstelle %s hat vom DHCP-Server keine Parameter erhalten.</Description>
     <Consequences>Die Schnittstelle wird nicht konfiguriert und kann nicht verwendet werden.</Consequences>
     <Causes>Die LAN-Verbindung funktioniert nicht. Der DHCP-Server ist nicht aktiviert.</Causes>
-    <Actions>1) Sicherstellen, dass das LAN-Kabel funktioniert und korrekt angeschlossen ist.<p />2) Sicherstellen, dass der DHCP-Server aktiviert ist.<p />3) Die LAN-IP-Adresse manuell einstellen.</Actions>
+    <Actions>1) Sicherstellen, dass das LAN-Kabel funktioniert und korrekt angeschlossen ist.2) Sicherstellen, dass der DHCP-Server aktiviert ist.3) Die LAN-IP-Adresse manuell einstellen.</Actions>
   </Message>
   <Message number="2514" eDefine="SYS_ERR_OPR_NET_DEVICE_ERR">
     <Title>Initialisierungsfehler an Netzwerkschnittstelle</Title>
-    <Description>Die Netzwerkschnittstelle <arg format="%s" ordinal="1" /> konnte nicht initialisiert werden.</Description>
+    <Description>Die Netzwerkschnittstelle %s konnte nicht initialisiert werden.</Description>
     <Consequences>Die Schnittstelle wird nicht konfiguriert und kann nicht verwendet werden.</Consequences>
-    <Causes>Die Netzwerkparameter sind eventuell falsch.<p />- Die Hardware kann beschädigt sein und muss ersetzt werden.</Causes>
-    <Actions>1) Sicherstellen, dass die Netzwerkparameter für die verwendete Schnittstelle korrekt sind.<p />2) Ursache durch Austauschen der eventuell fehlerhaften Hardware isolieren.</Actions>
+    <Causes>Die Netzwerkparameter sind eventuell falsch.- Die Hardware kann beschädigt sein und muss ersetzt werden.</Causes>
+    <Actions>1) Sicherstellen, dass die Netzwerkparameter für die verwendete Schnittstelle korrekt sind.2) Ursache durch Austauschen der eventuell fehlerhaften Hardware isolieren.</Actions>
   </Message>
   <Message number="2610" eDefine="SYS_ERR_OPR_MEMORY_LOW_WARNING">
     <Title>Verfügbarer RAM-Speicher niedrig </Title>
-    <Description>Die verfügbare RAM-Speicherkapazität ist niedrig. Gesamte RAM-Speichergröße: <arg format="%d" ordinal="1" /> Byte. Freier Speicherplatz: <arg format="%d" ordinal="2" /> Byte. </Description>
+    <Description>Die verfügbare RAM-Speicherkapazität ist niedrig. Gesamte RAM-Speichergröße: %d1 Byte. Freier Speicherplatz: %d2 Byte. </Description>
     <Consequences>Im System ist möglicherweise nicht genug Speicherplatz vorhanden. </Consequences>
     <Actions>Es wird empfohlen, das System neu zu starten. </Actions>
   </Message>
   <Message number="2611" eDefine="SYS_ERR_OPR_MEMORY_VERY_LOW_WARNING">
     <Title>Verfügbarer RAM-Speicher sehr niedrig </Title>
-    <Description>Die verfügbare RAM-Speicherkapazität ist sehr niedrig. Gesamte RAM-Speichergröße: <arg format="%d" ordinal="1" /> Byte. Freier Speicherplatz: <arg format="%d" ordinal="2" /> Byte. </Description>
+    <Description>Die verfügbare RAM-Speicherkapazität ist sehr niedrig. Gesamte RAM-Speichergröße: %d1 Byte. Freier Speicherplatz: %d2 Byte. </Description>
     <Consequences>Im System ist möglicherweise nicht genug Speicherplatz vorhanden. Eine Speicherzuweisung wird für nicht produktionsrelevante Funktionalitäten abgelehnt. </Consequences>
     <Actions>Es wird dringend empfohlen, das System neu zu starten. </Actions>
   </Message>
   <Message number="2612" eDefine="SYS_ERR_OPR_MEMORY_TOO_LOW">
     <Title>Verfügbarer RAM-Speicher zu niedrig </Title>
-    <Description>Die verfügbare RAM-Speicherkapazität ist zu niedrig. Gesamte RAM-Speichergröße: <arg format="%d" ordinal="1" /> Byte. Freier Speicherplatz: <arg format="%d" ordinal="2" /> Byte. </Description>
+    <Description>Die verfügbare RAM-Speicherkapazität ist zu niedrig. Gesamte RAM-Speichergröße: %d1 Byte. Freier Speicherplatz: %d2 Byte. </Description>
     <Consequences>Das System wechselt in den Status "Systemfehler".</Consequences>
     <Actions>System bitte neu starten.</Actions>
   </Message>

@@ -5,53 +5,53 @@
     <Description>Nur einer der beiden Motorschütze für Antriebssystem 3 hat den Aktivierungsbefehl bestätigt.</Description>
     <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Fehler in den Hilfskontakten des Motorschützes oder in deren Versorgung.</Causes>
-    <Actions>1) Kabel und Verbindungen prüfen. <p /> 2) Die Funktion der Hilfskontakte prüfen.</Actions>
+    <Actions>1) Kabel und Verbindungen prüfen.  2) Die Funktion der Hilfskontakte prüfen.</Actions>
   </Message>
   <Message number="250" eDefine="SYS_ERR_SYS_CONFLICT_DRV4K">
     <Title>Motorschützkonflikt, DRV4</Title>
     <Description>Nur einer der beiden Motorschütze für Antriebssystem 4 hat den Aktivierungsbefehl bestätigt.</Description>
     <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Fehler in den Hilfskontakten des Motorschützes oder in deren Versorgung.</Causes>
-    <Actions>1) Kabel und Verbindungen prüfen.<p /> 2) Die Funktion der Hilfskontakte prüfen.</Actions>
+    <Actions>1) Kabel und Verbindungen prüfen. 2) Die Funktion der Hilfskontakte prüfen.</Actions>
   </Message>
   <Message number="252" eDefine="SYS_ERR_SYS_ACTIVE_DRV1PTCINT">
     <Title>Hohe Motortemperatur, DRV1</Title>
-    <Description>Überhitzung im Manipulatormotor. Sicherstellen, dass der Motor abkühlt, bevor der Befehl „Motoren Ein“ wieder ausgeführt wird.<p /></Description>
-    <Actions>1) Warten, bis der überhitzte Motor abgekühlt ist, bevor der Befehl „Motoren Ein“ wieder ausgeführt wird. <p />2) Wird ein optionaler Luftfilter verwendet, prüfen, ob er verstopft ist und ausgetauscht werden muss.</Actions>
+    <Description>Überhitzung im Manipulatormotor. Sicherstellen, dass der Motor abkühlt, bevor der Befehl „Motoren Ein“ wieder ausgeführt wird.</Description>
+    <Actions>1) Warten, bis der überhitzte Motor abgekühlt ist, bevor der Befehl „Motoren Ein“ wieder ausgeführt wird. 2) Wird ein optionaler Luftfilter verwendet, prüfen, ob er verstopft ist und ausgetauscht werden muss.</Actions>
   </Message>
   <Message number="253" eDefine="SYS_ERR_SYS_ACTIVE_DRV1PTCEXT">
     <Title>Hohe Temperatur externes Gerät, DRV1</Title>
-    <Description>Überhitzung in externem Gerät. Sicherstellen, dass das externe Gerät abkühlt, bevor es wieder eingeschaltet wird.<p /></Description>
+    <Description>Überhitzung in externem Gerät. Sicherstellen, dass das externe Gerät abkühlt, bevor es wieder eingeschaltet wird.</Description>
     <Actions>Warten, bis der überhitzte Motor abgekühlt ist, bevor der Motoren-EIN-Befehl wieder ausgeführt wird.</Actions>
   </Message>
   <Message number="254" eDefine="SYS_ERR_SYS_ACTIVE_DRV2PTCINT">
     <Title>Hohe Motortemperatur, DRV2</Title>
-    <Description>Überhitzung im Manipulatormotor. Sicherstellen, dass der Motor abkühlt, bevor der Befehl „Motoren Ein“ wieder ausgeführt wird.<p /></Description>
-    <Actions>1) Warten, bis der überhitzte Motor abgekühlt ist, bevor der Befehl „Motoren Ein“ wieder ausgeführt wird. <p />2) Wird ein optionaler Luftfilter verwendet, prüfen, ob er verstopft ist und ausgetauscht werden muss.</Actions>
+    <Description>Überhitzung im Manipulatormotor. Sicherstellen, dass der Motor abkühlt, bevor der Befehl „Motoren Ein“ wieder ausgeführt wird.</Description>
+    <Actions>1) Warten, bis der überhitzte Motor abgekühlt ist, bevor der Befehl „Motoren Ein“ wieder ausgeführt wird. 2) Wird ein optionaler Luftfilter verwendet, prüfen, ob er verstopft ist und ausgetauscht werden muss.</Actions>
   </Message>
   <Message number="255" eDefine="SYS_ERR_SYS_ACTIVE_DRV2PTCEXT">
     <Title>Hohe Temperatur externes Gerät, DRV2</Title>
-    <Description>Überhitzung in externem Gerät. Sicherstellen, dass das externe Gerät abkühlt, bevor es wieder eingeschaltet wird.<p /></Description>
+    <Description>Überhitzung in externem Gerät. Sicherstellen, dass das externe Gerät abkühlt, bevor es wieder eingeschaltet wird.</Description>
     <Actions>Warten, bis der überhitzte Motor abgekühlt ist, bevor der Motoren-EIN-Befehl wieder ausgeführt wird.</Actions>
   </Message>
   <Message number="256" eDefine="SYS_ERR_SYS_ACTIVE_DRV3PTCINT">
     <Title>Hohe Motortemperatur, DRV3</Title>
-    <Description>Überhitzung im Manipulatormotor. Sicherstellen, dass der Motor abkühlt, bevor der Befehl „Motoren Ein“ wieder ausgeführt wird.<p /></Description>
-    <Actions>1) Warten, bis der überhitzte Motor abgekühlt ist, bevor der Befehl „Motoren Ein“ wieder ausgeführt wird. <p />2) Wird ein optionaler Luftfilter verwendet, prüfen, ob er verstopft ist und ausgetauscht werden muss.</Actions>
+    <Description>Überhitzung im Manipulatormotor. Sicherstellen, dass der Motor abkühlt, bevor der Befehl „Motoren Ein“ wieder ausgeführt wird.</Description>
+    <Actions>1) Warten, bis der überhitzte Motor abgekühlt ist, bevor der Befehl „Motoren Ein“ wieder ausgeführt wird. 2) Wird ein optionaler Luftfilter verwendet, prüfen, ob er verstopft ist und ausgetauscht werden muss.</Actions>
   </Message>
   <Message number="257" eDefine="SYS_ERR_SYS_ACTIVE_DRV3PTCEXT">
     <Title>Hohe Temperatur externes Gerät, DRV3</Title>
-    <Description>Überhitzung in externem Gerät. Sicherstellen, dass das externe Gerät abkühlt, bevor es wieder eingeschaltet wird.<p /></Description>
+    <Description>Überhitzung in externem Gerät. Sicherstellen, dass das externe Gerät abkühlt, bevor es wieder eingeschaltet wird.</Description>
     <Actions>Warten, bis der überhitzte Motor abgekühlt ist, bevor der Motoren-EIN-Befehl wieder ausgeführt wird.</Actions>
   </Message>
   <Message number="258" eDefine="SYS_ERR_SYS_ACTIVE_DRV4PTCINT">
     <Title>Hohe Motortemperatur, DRV4</Title>
-    <Description>Überhitzung im Manipulatormotor. Sicherstellen, dass der Motor abkühlt, bevor der Befehl „Motoren Ein“ wieder ausgeführt wird.<p /></Description>
-    <Actions>1) Warten, bis der überhitzte Motor abgekühlt ist, bevor der Befehl „Motoren Ein“ wieder ausgeführt wird. <p />2) Wird ein optionaler Luftfilter verwendet, prüfen, ob er verstopft ist und ausgetauscht werden muss.</Actions>
+    <Description>Überhitzung im Manipulatormotor. Sicherstellen, dass der Motor abkühlt, bevor der Befehl „Motoren Ein“ wieder ausgeführt wird.</Description>
+    <Actions>1) Warten, bis der überhitzte Motor abgekühlt ist, bevor der Befehl „Motoren Ein“ wieder ausgeführt wird. 2) Wird ein optionaler Luftfilter verwendet, prüfen, ob er verstopft ist und ausgetauscht werden muss.</Actions>
   </Message>
   <Message number="259" eDefine="SYS_ERR_SYS_ACTIVE_DRV4PTCEXT">
     <Title>Hohe Temperatur externes Gerät, DRV4</Title>
-    <Description>Überhitzung in externem Gerät. Sicherstellen, dass das externe Gerät abkühlt, bevor es wieder eingeschaltet wird.<p /></Description>
+    <Description>Überhitzung in externem Gerät. Sicherstellen, dass das externe Gerät abkühlt, bevor es wieder eingeschaltet wird.</Description>
     <Actions>Warten, bis der überhitzte Motor abgekühlt ist, bevor der Motoren-EIN-Befehl wieder ausgeführt wird.</Actions>
   </Message>
   <Message number="260" eDefine="SYS_ERR_SYS_CONFLICT_DRV1RUN">
@@ -59,23 +59,23 @@
     <Description>Statuskonflikt zwischen Betriebssteuerung und Motorschützen für Antriebssystem 1.</Description>
     <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Fehler in den Motorschützen oder in deren Versorgung.</Causes>
-    <Actions>1) Kabel und Verbindungen prüfen.<p />2) Einen Warmstart durchführen.</Actions>
+    <Actions>1) Kabel und Verbindungen prüfen.2) Einen Warmstart durchführen.</Actions>
   </Message>
   <Message number="262" eDefine="SYS_ERR_SYS_PSC_NOT_FOUND">
-    <Title>SC <arg format="%d" ordinal="1" /> nicht gefunden </Title>
-    <Description>Das System verfügt über eine Option für eine <arg format="%s" ordinal="2" />-Sicherheitssteuerung (SC) am Antriebsmodul <arg format="%d" ordinal="1" />, jedoch wurde kein Sicherheitssteuerung gefunden. </Description>
-    <Actions>- Verkabelung der Sicherheitssteuerung  überprüfen.<p />- Zustand der Sicherheitssteuerung überprüfen.<p /><p />Nach Ausführen der empfohlenen Maßnahmen Warmstart der Steuerung durchführen. </Actions>
+    <Title>SC %d1 nicht gefunden </Title>
+    <Description>Das System verfügt über eine Option für eine %s-Sicherheitssteuerung (SC) am Antriebsmodul %d1, jedoch wurde kein Sicherheitssteuerung gefunden. </Description>
+    <Actions>- Verkabelung der Sicherheitssteuerung  überprüfen.- Zustand der Sicherheitssteuerung überprüfen.Nach Ausführen der empfohlenen Maßnahmen Warmstart der Steuerung durchführen. </Actions>
   </Message>
   <Message number="263" eDefine="SYS_ERR_SYS_PSC_NO_COM_ESTABLISHED">
-    <Title>Kommunikationsfehler bei SC <arg format="%d" ordinal="1" /></Title>
-    <Description>Kommunikationsfehler bei Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /></Description>
-    <Actions>- Verkabelung der Sicherheitssteuerung überprüfen.<p />- Zustand der Sicherheitssteuerung überprüfen.<p /><p />Nach Ausführen der empfohlenen Maßnahmen Warmstart der Steuerung durchführen. </Actions>
+    <Title>Kommunikationsfehler bei SC %d1</Title>
+    <Description>Kommunikationsfehler bei Sicherheitssteuerung (SC) %d1</Description>
+    <Actions>- Verkabelung der Sicherheitssteuerung überprüfen.- Zustand der Sicherheitssteuerung überprüfen.Nach Ausführen der empfohlenen Maßnahmen Warmstart der Steuerung durchführen. </Actions>
   </Message>
   <Message number="264" eDefine="SYS_ERR_SYS_PSC_OPTION_NOT_PRESENT">
-    <Title>Option für SC <arg format="%d" ordinal="1" /> nicht vorhanden </Title>
+    <Title>Option für SC %d1 nicht vorhanden </Title>
     <Description>
-      <arg format="%s" ordinal="2" />-Sicherheitssteuerung (SC) für Antriebsmodul <arg format="%d" ordinal="1" />gefunden. Dieses System besitzt keine Option für eine Sicherheitssteuerung dieses Antriebsmoduls. </Description>
-    <Actions>- Softwareoptionen des Antriebsmoduls überprüfen.<p />- System mit Option Safety Controller installieren. </Actions>
+      %s-Sicherheitssteuerung (SC) für Antriebsmodul %d1gefunden. Dieses System besitzt keine Option für eine Sicherheitssteuerung dieses Antriebsmoduls. </Description>
+    <Actions>- Softwareoptionen des Antriebsmoduls überprüfen.- System mit Option Safety Controller installieren. </Actions>
   </Message>
   <Message number="265" eDefine="SYS_ERR_SYS_PSC_SOFT_STOP_ERROR">
     <Title>SC-Softstopp-Fehler</Title>
@@ -83,106 +83,106 @@
     <Actions>Endlagenschalter-Verbindung prüfen, wenn SafeMove vorhanden ist.</Actions>
   </Message>
   <Message number="266" eDefine="SYS_ERR_SYS_PSC_INPUT_PINCODE">
-    <Title>PIN-Code-Anforderung für SC <arg format="%d" ordinal="1" /></Title>
-    <Description>Die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> verfügt über eine neue Sicherheitskonfiguration, und ein PIN-Code muss aktiviert werden. </Description>
-    <Actions>1. Als Benutzer mit Berechtigung für Sicherheitskonfiguration anmelden.<p />2. In "Systemeinstellungen" neuen PIN-Code für die Sicherheitssteuerung eingeben. </Actions>
+    <Title>PIN-Code-Anforderung für SC %d1</Title>
+    <Description>Die Sicherheitssteuerung (SC) %d1 verfügt über eine neue Sicherheitskonfiguration, und ein PIN-Code muss aktiviert werden. </Description>
+    <Actions>1. Als Benutzer mit Berechtigung für Sicherheitskonfiguration anmelden.2. In "Systemeinstellungen" neuen PIN-Code für die Sicherheitssteuerung eingeben. </Actions>
   </Message>
   <Message number="267" eDefine="SYS_ERR_SYS_PSC_STARTUP_ERROR">
-    <Title>Initialisierung bei SC <arg format="%d" ordinal="1" /> fehlgeschlagen </Title>
-    <Description>Die Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> wurde nicht ordnungsgemäß initialisiert oder hat während des Startens nicht reagiert. </Description>
-    <Actions>1. Vorherige Fehlerprotokolle auf mögliche Ursachen überprüfen.<p />2. System neu starten. </Actions>
+    <Title>Initialisierung bei SC %d1 fehlgeschlagen </Title>
+    <Description>Die Sicherheitssteuerung (SC) %d1 wurde nicht ordnungsgemäß initialisiert oder hat während des Startens nicht reagiert. </Description>
+    <Actions>1. Vorherige Fehlerprotokolle auf mögliche Ursachen überprüfen.2. System neu starten. </Actions>
   </Message>
   <Message number="268" eDefine="SYS_ERR_SYS_PSC_WRONG_TYPE">
-    <Title>Falscher Typ der SC <arg format="%d" ordinal="1" /></Title>
+    <Title>Falscher Typ der SC %d1</Title>
     <Description>
-      <arg format="%s" ordinal="2" />-Sicherheitssteuerung (SC) für Antriebsmodul <arg format="%d" ordinal="1" /> gefunden, erwartet: <arg format="%s" ordinal="3" />. </Description>
-    <Actions>- Softwareoptionen des Antriebsmoduls überprüfen.<p />- System mit korrekter Safety Controller-Option installieren.<p />- Korrekten Typ von Sicherheitssteuerung installieren. </Actions>
+      %s-Sicherheitssteuerung (SC) für Antriebsmodul %d1 gefunden, erwartet: %s. </Description>
+    <Actions>- Softwareoptionen des Antriebsmoduls überprüfen.- System mit korrekter Safety Controller-Option installieren.- Korrekten Typ von Sicherheitssteuerung installieren. </Actions>
   </Message>
   <Message number="269" eDefine="SYS_ERR_SYS_PSC_CALIB_ERROR">
-    <Title>SC <arg format="%d" ordinal="1" /> Fehler in Motorkalibrierungsdaten </Title>
-    <Description>Es wurden keine Kalibrierungsdaten auf den Safety Controller (SC) des Antriebsmoduls <arg format="%d" ordinal="1" /> heruntergeladen oder Daten sind fehlerhaft. </Description>
+    <Title>SC %d1 Fehler in Motorkalibrierungsdaten </Title>
+    <Description>Es wurden keine Kalibrierungsdaten auf den Safety Controller (SC) des Antriebsmoduls %d1 heruntergeladen oder Daten sind fehlerhaft. </Description>
     <Actions>Motor-Kalibrierungsdaten auf Safety Controller (SC) herunterladen. </Actions>
   </Message>
   <Message number="270" eDefine="SYS_ERR_SYS_PAN_MOD_ACCESS_ERR">
     <Title>Zugriffsfehler</Title>
-    <Description>Bedienfeldmodul-Zugriffsfehler.<p /></Description>
+    <Description>Bedienfeldmodul-Zugriffsfehler.</Description>
     <Actions>E/A-Konfigurationsdateien überprüfen.</Actions>
   </Message>
   <Message number="280" eDefine="SYS_ERR_SYS_CONFLICT_SIGNAL">
     <Title>Symbolkonflikt</Title>
-    <Description>Das in der E/A-Konfiguration definierte Signal <arg format="%s" ordinal="1" /><p />hat einen Konflikt mit einem anderen <p />Programmsymbol desselben Namens.<p />Deshalb wird das Signal keiner <p />Programmvariablen zugeordnet.<p /></Description>
-    <Actions>Das Signal in der <p />E/A-Konfiguration umbenennen.</Actions>
+    <Description>Das in der E/A-Konfiguration definierte Signal %shat einen Konflikt mit einem anderen Programmsymbol desselben Namens.Deshalb wird das Signal keiner Programmvariablen zugeordnet.</Description>
+    <Actions>Das Signal in der E/A-Konfiguration umbenennen.</Actions>
   </Message>
   <Message number="281" eDefine="SYS_ERR_SYS_IO_CFG_ERR">
     <Title>E/A-Konfigurationsfehler</Title>
     <Description>
-      <arg format="%s" ordinal="1" />
-      <arg format="%s" ordinal="2" /> mit Signal-<p />name <arg format="%s" ordinal="3" /> hat falschen Signal-<p />typ. <arg format="%s" ordinal="4" /> gefunden, <arg format="%s" ordinal="5" /> erwartet. <p /></Description>
-    <Actions>Konfiguration ändern und <p />System neu starten.</Actions>
+      %s
+      %s mit Signal-name %s hat falschen Signal-typ. %s gefunden, %s erwartet. </Description>
+    <Actions>Konfiguration ändern und System neu starten.</Actions>
   </Message>
   <Message number="282" eDefine="SYS_ERR_SYS_TX_INDEX_EXIST">
     <Title>Ressource und Index existieren</Title>
-    <Description>Ressource <arg format="%s" ordinal="1" /><p />Index <arg format="%d" ordinal="2" />. <p /></Description>
+    <Description>Ressource %sIndex %d2. </Description>
   </Message>
   <Message number="283" eDefine="SYS_ERR_SYS_TX_NO_MEM">
     <Title>Textdatenbank ist voll</Title>
-    <Description>Ressource <arg format="%s" ordinal="1" /><p />Index <arg format="%d" ordinal="2" /><p /></Description>
+    <Description>Ressource %sIndex %d2</Description>
   </Message>
   <Message number="284" eDefine="SYS_ERR_SYS_IO_CFG_SYSIN_ERR">
     <Title>Falscher Signaltyp für Systemeingang</Title>
-    <Description>Systemeingang <arg format="%s" ordinal="1" /> ist mit einem E/A-Signal des falschen<p />Typs konfiguriert.<p />Das E/A-Signal <arg format="%s" ordinal="2" /> hat den Typ <arg format="%s" ordinal="3" />, aber dieser Systemeingang<p />verlangt ein E/A-Signal des Typs <arg format="%s" ordinal="4" />. </Description>
-    <Actions>Konfiguration für den angegebenen Systemeingang ändern.<p /></Actions>
+    <Description>Systemeingang %s ist mit einem E/A-Signal des falschenTyps konfiguriert.Das E/A-Signal %s hat den Typ %s, aber dieser Systemeingangverlangt ein E/A-Signal des Typs %s. </Description>
+    <Actions>Konfiguration für den angegebenen Systemeingang ändern.</Actions>
   </Message>
   <Message number="285" eDefine="SYS_ERR_SYS_IO_CFG_SYSOUT_ERR">
     <Title>Falscher Signaltyp für Systemausgang</Title>
-    <Description>Systemausgang <arg format="%s" ordinal="1" /> ist mit einem E/A-Signal des falschen <p />Typs konfiguriert.<p />Das E/A-Signal <arg format="%s" ordinal="2" /> hat den Typ <arg format="%s" ordinal="3" />, aber dieser Systemausgang <p />verlangt ein E/A-Signal des Typs <arg format="%s" ordinal="4" />. <p /></Description>
+    <Description>Systemausgang %s ist mit einem E/A-Signal des falschen Typs konfiguriert.Das E/A-Signal %s hat den Typ %s, aber dieser Systemausgang verlangt ein E/A-Signal des Typs %s. </Description>
     <Actions>Konfiguration für den angegebenen Systemausgang ändern.</Actions>
   </Message>
   <Message number="286" eDefine="SYS_ERR_SYS_IO_CONFLICT_SYSOUT_ERR">
     <Title>Kein eindeutiges E/A-Signal für Systemausgang</Title>
-    <Description>Für jeden Systemausgang muss ein eindeutiges E/A-Signal konfiguriert sein.<p />Dasselbe E/A-Signal kann nicht für mehrere Systemausgänge konfiguriert werden.<p /><p />Systemausgang: <arg format="%s" ordinal="1" /><p />Signalname: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Für jeden Systemausgang muss ein eindeutiges E/A-Signal konfiguriert sein.Dasselbe E/A-Signal kann nicht für mehrere Systemausgänge konfiguriert werden.Systemausgang: %sSignalname: %s</Description>
     <Actions>
-      <p />
+      
     </Actions>
   </Message>
   <Message number="287" eDefine="SYS_ERR_SYS_IO_CONFLICT_SYSIN_ERR">
     <Title>Kein eindeutiges E/A-Signal für System Input</Title>
-    <Description>Für jedes System Input muss ein eindeutiges E/A-Signal konfiguriert sein.<p />Die Konfiguration desselben E/A-Signals kann nicht für mehrere System Inputs verwendet werden. <p /><p />System Input: <arg format="%s" ordinal="1" /><p />Signalname: <arg format="%s" ordinal="2" /></Description>
+    <Description>Für jedes System Input muss ein eindeutiges E/A-Signal konfiguriert sein.Die Konfiguration desselben E/A-Signals kann nicht für mehrere System Inputs verwendet werden. System Input: %sSignalname: %s</Description>
   </Message>
   <Message number="288" eDefine="SYS_ERR_SYS_IO_UNKNOWN_SYSOUT_ERR">
     <Title>Unbekannter Systemausgangstyp</Title>
-    <Description>Der konfigurierte Systemausgangstyp ist im System unbekannt.<p />Unbekannter Systemausgang: <arg format="%s" ordinal="1" /></Description>
+    <Description>Der konfigurierte Systemausgangstyp ist im System unbekannt.Unbekannter Systemausgang: %s</Description>
     <Actions>Prüfen, ob der Systemausgangsname korrekt geschrieben ist.</Actions>
   </Message>
   <Message number="289" eDefine="SYS_ERR_SYS_IO_UNKNOWN_SYSIN_ERR">
     <Title>Unbekannter Systemeingangstyp</Title>
-    <Description>Der konfigurierte Systemeingangstyp ist im System unbekannt.<p />Unbekannter Systemeingang: <arg format="%s" ordinal="1" /></Description>
+    <Description>Der konfigurierte Systemeingangstyp ist im System unbekannt.Unbekannter Systemeingang: %s</Description>
     <Actions>Prüfen, ob der Systemeingangsname korrekt geschrieben ist.</Actions>
   </Message>
   <Message number="290" eDefine="SYS_ERR_SYS_IO_ARG_TASK_SYSOUT_ERR">
     <Title>Unbekannter Name mech. Einheit für Systemausgang</Title>
-    <Description>Ein Systemausgang ist mit dem Namen einer mechanischen Einheit konfiguriert, die im System unbekannt ist.<p />Systemausgang: <arg format="%s" ordinal="1" /><p />Name der mechanischen Einheit: <arg format="%s" ordinal="2" /></Description>
-    <Actions>Der angegebene Name der mechanischen Einheit muss für die Benutzung durch Systemausgänge konfiguriert sein.<p />Prüfen, ob der Name der mechanischen Einheit korrekt geschrieben ist.<p /></Actions>
+    <Description>Ein Systemausgang ist mit dem Namen einer mechanischen Einheit konfiguriert, die im System unbekannt ist.Systemausgang: %sName der mechanischen Einheit: %s</Description>
+    <Actions>Der angegebene Name der mechanischen Einheit muss für die Benutzung durch Systemausgänge konfiguriert sein.Prüfen, ob der Name der mechanischen Einheit korrekt geschrieben ist.</Actions>
   </Message>
   <Message number="291" eDefine="SYS_ERR_SYS_IO_UNKNOWN_RESTR_TYPE_ERR">
     <Title>Unbekannter Typ von Systemeingangsbeschränkung</Title>
-    <Description>Der konfigurierte Typ der Systemeingangsbeschränkung ist im System unbekannt.<p />Unbekannte Systemeingangsbeschränkung: <arg format="%s" ordinal="1" /></Description>
+    <Description>Der konfigurierte Typ der Systemeingangsbeschränkung ist im System unbekannt.Unbekannte Systemeingangsbeschränkung: %s</Description>
     <Actions>Prüfen, ob der Name der Systemeingangsbeschränkung korrekt geschrieben ist.</Actions>
   </Message>
   <Message number="292" eDefine="SYS_ERR_SYS_IO_UNKNOWN_RESTR_ERR">
     <Title>Unbekannte Systemeingangsbeschränkung</Title>
-    <Description>Die konfigurierte Systemeingangsbeschränkung ist im System unbekannt.<p />Typ der Systemeingangsbeschränkung: <arg format="%s" ordinal="1" /><p />Unbekannte Systemeingangsbeschränkung: <arg format="%s" ordinal="2" /></Description>
+    <Description>Die konfigurierte Systemeingangsbeschränkung ist im System unbekannt.Typ der Systemeingangsbeschränkung: %sUnbekannte Systemeingangsbeschränkung: %s</Description>
     <Actions>Prüfen, ob der Name der Systemeingangsbeschränkung korrekt geschrieben ist.</Actions>
   </Message>
   <Message number="293" eDefine="SYS_ERR_SYS_IO_SYSIN_RESTRICTED_ERR">
     <Title>Die angeforderte Aktion ist begrenzt</Title>
-    <Description>Die angeforderte <arg format="%s" ordinal="1" /> ist durch den mit dem E/A-Signal <arg format="%s" ordinal="3" /> gesetzten Systemeingang <arg format="%s" ordinal="2" /> begrenzt.</Description>
+    <Description>Die angeforderte %s ist durch den mit dem E/A-Signal %s gesetzten Systemeingang %s begrenzt.</Description>
     <Consequences>Die angeforderte Aktion findet nicht statt. </Consequences>
-    <Causes>Systemeingang <arg format="%s" ordinal="5" /> wird aus einer Reihe von Gründen eventuell von externer Ausrüstung, z. B. SPS, gesetzt.</Causes>
+    <Causes>Systemeingang %s wird aus einer Reihe von Gründen eventuell von externer Ausrüstung, z. B. SPS, gesetzt.</Causes>
     <Actions>1) Ermitteln, warum der Systemeingang gesetzt wurde, und gegebenenfalls die Ursache korrigieren.</Actions>
   </Message>
   <Message number="294" eDefine="SYS_ERR_SYS_IO_FAILURE_READ_IO">
-    <Title>Aktion <arg format="%s" ordinal="1" /> kann nicht ausgeführt werden.</Title>
+    <Title>Aktion %s kann nicht ausgeführt werden.</Title>
     <Description>Die erforderliche Aktion ist nicht ausführbar, da die E/A-Einheit nicht reagiert.</Description>
     <Consequences>Es kann nicht festgestellt werden, ob für die Aktion Beschränkungen festgelegt sind.</Consequences>
     <Causes>Die erforderliche Aktion wird erst ausgeführt, wenn die E/A-Einheit wieder aktiviert ist.</Causes>
@@ -190,221 +190,221 @@
   </Message>
   <Message number="295" eDefine="SYS_ERR_SYS_IO_CFG_SYSOUT_ERR_SAF">
     <Title>Signal nicht als Systemausgang verwendbar</Title>
-    <Description>Der Systemausgang <arg format="%s" ordinal="1" /> ist mit einem E/A-Signal der falschen Kategorie konfiguriert. Das E/A-Signal <arg format="%s" ordinal="2" /> hat die Kategorie "Sicherheit" und kann nicht als Systemausgang benutzt werden.</Description>
+    <Description>Der Systemausgang %s ist mit einem E/A-Signal der falschen Kategorie konfiguriert. Das E/A-Signal %s hat die Kategorie "Sicherheit" und kann nicht als Systemausgang benutzt werden.</Description>
     <Actions>Anderes Signal wählen oder Signal auf andere Kategorie festlegen.</Actions>
   </Message>
   <Message number="296" eDefine="SYS_ERR_SYS_IO_ARG_TASK_SYSIN_ERR">
     <Title>Falscher Taskname konfiguriert</Title>
-    <Description>Falscher Taskname <arg format="%s" ordinal="1" /> für Systemausgang <arg format="%s" ordinal="2" /> konfiguriert.</Description>
+    <Description>Falscher Taskname %s für Systemausgang %s konfiguriert.</Description>
     <Consequences>Das digitale Ausgangssignal wird nicht mit dem angegebenen Ereignis verbunden.</Consequences>
     <Actions>Konfiguration ändern und das System neu starten.</Actions>
   </Message>
   <Message number="297" eDefine="SYS_ERR_SYS_IO_SYSHALT">
     <Title>Kommunikationsfehler am Systemausgang</Title>
-    <Description>Wert des E/A-Signals <arg format="%s" ordinal="1" />, verbunden mit dem Systemausgang <arg format="%s" ordinal="2" />, kann nicht festgelegt werden.</Description>
+    <Description>Wert des E/A-Signals %s, verbunden mit dem Systemausgang %s, kann nicht festgelegt werden.</Description>
     <Consequences>Das System geht in den Zustand SYS HALT</Consequences>
     <Causes>- Die Verbindung zur E/A-Einheit ging eventuell verloren.</Causes>
   </Message>
   <Message number="298" eDefine="SYS_ERR_SYS_IO_ARG_MECUNT_SYSIN_ERR">
     <Title>Unbekannter Name mechanischer Einheit für Systemeingang </Title>
-    <Description>Ein Systemeingang ist mit dem Namen einer mechanischen Einheit konfiguriert, die im System unbekannt ist.<p />Systemeingang:  <arg format="%s" ordinal="1" /><p />Name der mechanischen Einheit: <arg format="%s" ordinal="2" /></Description>
-    <Actions>Der angegebene Name der mechanischen Einheit muss für die Benutzung durch Systemeingänge konfiguriert sein.<p />Sicherstellen, dass der Name der mechanischen Einheit korrekt geschrieben ist.</Actions>
+    <Description>Ein Systemeingang ist mit dem Namen einer mechanischen Einheit konfiguriert, die im System unbekannt ist.Systemeingang:  %sName der mechanischen Einheit: %s</Description>
+    <Actions>Der angegebene Name der mechanischen Einheit muss für die Benutzung durch Systemeingänge konfiguriert sein.Sicherstellen, dass der Name der mechanischen Einheit korrekt geschrieben ist.</Actions>
   </Message>
   <Message number="307" eDefine="SYS_ERR_SYS_ACTIVE_MOTOR_FAN1">
     <Title>Fehlfunktion Motorlüftung Achse 1</Title>
-    <Description>Der Lüfter des Motors von Achse 1 am Roboter, der mit Drive Module <arg format="%d" ordinal="1" /> verbunden ist, funktioniert nicht korrekt.</Description>
+    <Description>Der Lüfter des Motors von Achse 1 am Roboter, der mit Drive Module %d1 verbunden ist, funktioniert nicht korrekt.</Description>
     <Consequences>Die Bedeutung dieses Zustands wird vollständig im Handbuch zur Fehlerbehebung IRC5 beschrieben.</Consequences>
-    <Causes>- Das Anschlusskabel des Lüfters ist eventuell beschädigt oder nicht korrekt an den Motor oder die Schützeinheit angeschlossen. <p />- Der Lüfter oder die Stromversorgung des Drive Module kann fehlerhaft sein.</Causes>
-    <Actions>1) Sicherstellen, dass das Lüfterkabel korrekt angeschlossen ist.<p />2) Sicherstellen, dass die Lüfter arbeiten und der Luftstrom nicht behindert ist. <p />3) Sicherstellen, dass die Ausgangsspannung des Netzteils am Drive Module innerhalb des zulässigen Bereichs liegt (siehe Produkthandbuch). Gegebenenfalls fehlerhafte Einheit austauschen.<p /><p /></Actions>
+    <Causes>- Das Anschlusskabel des Lüfters ist eventuell beschädigt oder nicht korrekt an den Motor oder die Schützeinheit angeschlossen. - Der Lüfter oder die Stromversorgung des Drive Module kann fehlerhaft sein.</Causes>
+    <Actions>1) Sicherstellen, dass das Lüfterkabel korrekt angeschlossen ist.2) Sicherstellen, dass die Lüfter arbeiten und der Luftstrom nicht behindert ist. 3) Sicherstellen, dass die Ausgangsspannung des Netzteils am Drive Module innerhalb des zulässigen Bereichs liegt (siehe Produkthandbuch). Gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
   </Message>
   <Message number="308" eDefine="SYS_ERR_SYS_ACTIVE_MOTOR_FAN2">
     <Title>Fehlfunktion Motorlüftung Achse 2</Title>
-    <Description>Der Lüfter des Motors von Achse 2 am Roboter, der mit Drive Module <arg format="%d" ordinal="1" /> verbunden ist, funktioniert nicht korrekt.</Description>
+    <Description>Der Lüfter des Motors von Achse 2 am Roboter, der mit Drive Module %d1 verbunden ist, funktioniert nicht korrekt.</Description>
     <Consequences>Die Bedeutung dieses Zustands wird vollständig im Handbuch zur Fehlerbehebung IRC5 beschrieben.</Consequences>
-    <Causes>- Das Anschlusskabel des Lüfters ist eventuell beschädigt oder nicht korrekt an den Motor oder die Schützeinheit angeschlossen. <p />- Der Lüfter oder die Stromversorgung des Drive Module kann fehlerhaft sein.</Causes>
-    <Actions>1) Sicherstellen, dass das Lüfterkabel korrekt angeschlossen ist.<p />2) Sicherstellen, dass die Lüfter arbeiten und der Luftstrom nicht behindert ist. <p />3) Sicherstellen, dass die Ausgangsspannung des Netzteils am Drive Module innerhalb des zulässigen Bereichs liegt (siehe Produkthandbuch). Gegebenenfalls fehlerhafte Einheit austauschen.<p /><p /></Actions>
+    <Causes>- Das Anschlusskabel des Lüfters ist eventuell beschädigt oder nicht korrekt an den Motor oder die Schützeinheit angeschlossen. - Der Lüfter oder die Stromversorgung des Drive Module kann fehlerhaft sein.</Causes>
+    <Actions>1) Sicherstellen, dass das Lüfterkabel korrekt angeschlossen ist.2) Sicherstellen, dass die Lüfter arbeiten und der Luftstrom nicht behindert ist. 3) Sicherstellen, dass die Ausgangsspannung des Netzteils am Drive Module innerhalb des zulässigen Bereichs liegt (siehe Produkthandbuch). Gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
   </Message>
   <Message number="309" eDefine="SYS_ERR_SYS_ACTIVE_MOTOR_FAN3">
     <Title>Fehlfunktion Motorlüftung Achse 3</Title>
-    <Description>Der Lüfter des Motors von Achse 3 am Roboter, der mit Drive Module <arg format="%d" ordinal="1" /> verbunden ist, funktioniert nicht korrekt.</Description>
+    <Description>Der Lüfter des Motors von Achse 3 am Roboter, der mit Drive Module %d1 verbunden ist, funktioniert nicht korrekt.</Description>
     <Consequences>Die Bedeutung dieses Zustands wird vollständig im Handbuch zur Fehlerbehebung IRC5 beschrieben.</Consequences>
-    <Causes>- Das Anschlusskabel des Lüfters ist eventuell beschädigt oder nicht korrekt an den Motor oder die Schützeinheit angeschlossen. <p />- Der Lüfter oder die Stromversorgung des Drive Module kann fehlerhaft sein.</Causes>
-    <Actions>1) Sicherstellen, dass das Lüfterkabel korrekt angeschlossen ist.<p />2) Sicherstellen, dass die Lüfter arbeiten und der Luftstrom nicht behindert ist. <p />3) Sicherstellen, dass die Ausgangsspannung des Netzteils am Drive Module innerhalb des zulässigen Bereichs liegt (siehe Produkthandbuch). Gegebenenfalls fehlerhafte Einheit austauschen.<p /><p /></Actions>
+    <Causes>- Das Anschlusskabel des Lüfters ist eventuell beschädigt oder nicht korrekt an den Motor oder die Schützeinheit angeschlossen. - Der Lüfter oder die Stromversorgung des Drive Module kann fehlerhaft sein.</Causes>
+    <Actions>1) Sicherstellen, dass das Lüfterkabel korrekt angeschlossen ist.2) Sicherstellen, dass die Lüfter arbeiten und der Luftstrom nicht behindert ist. 3) Sicherstellen, dass die Ausgangsspannung des Netzteils am Drive Module innerhalb des zulässigen Bereichs liegt (siehe Produkthandbuch). Gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
   </Message>
   <Message number="310" eDefine="SYS_ERR_SYS_PSC_COMM_ERR">
-    <Title>Kommunikation mit SC <arg format="%d" ordinal="1" /> fehlgeschlagen </Title>
-    <Description>Bei Kommunikation mit der Sicherheitssteuerung (SC) <arg format="%d" ordinal="1" /> ist ein Fehler aufgetreten.</Description>
-    <Actions>- Verkabelung der Sicherheitssteuerung überprüfen.<p />- Zustand der Sicherheitssteuerung  überprüfen.<p /><p />Nach Ausführen der empfohlenen Maßnahmen Warmstart der Steuerung durchführen. </Actions>
+    <Title>Kommunikation mit SC %d1 fehlgeschlagen </Title>
+    <Description>Bei Kommunikation mit der Sicherheitssteuerung (SC) %d1 ist ein Fehler aufgetreten.</Description>
+    <Actions>- Verkabelung der Sicherheitssteuerung überprüfen.- Zustand der Sicherheitssteuerung  überprüfen.Nach Ausführen der empfohlenen Maßnahmen Warmstart der Steuerung durchführen. </Actions>
   </Message>
   <Message number="311" eDefine="SYS_ERR_SYS_OPEN_ENABLE1">
     <Title>Sicherheitskreis 1 geöffnet </Title>
     <Description>Der Sicherheitskreis 1, der das Sicherheitssystem überwacht, wurde geöffnet.</Description>
     <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Eventuell liegt ein interner Fehler des Sicherheitssystems vor oder die interne Überwachung hat einen Fehler festgestellt.</Causes>
-    <Actions>1) Alle Verbindungen mit dem Sicherheitssystem überprüfen.<p />2) Gegebenenfalls defekte Karte austauschen.</Actions>
+    <Actions>1) Alle Verbindungen mit dem Sicherheitssystem überprüfen.2) Gegebenenfalls defekte Karte austauschen.</Actions>
   </Message>
   <Message number="312" eDefine="SYS_ERR_SYS_OPEN_ENABLE2">
     <Title>Sicherheitskreis 2 geöffnet </Title>
     <Description>Der Sicherheitsschaltkreis 2, der den Achscomputer überwacht, wurde geöffnet.</Description>
     <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Möglicherweise liegt ein Verbindungsproblem zwischen Hauptcomputer und Achscomputer vor.</Causes>
-    <Actions>1) Alle Verbindungen zum Achscomputer prüfen.<p />2) Verkabelung des Sicherheitssystems prüfen.<p /></Actions>
+    <Actions>1) Alle Verbindungen zum Achscomputer prüfen.2) Verkabelung des Sicherheitssystems prüfen.</Actions>
   </Message>
   <Message number="313" eDefine="SYS_ERR_SYS_ENABLE1_SUPERV">
     <Title>Überwachungsfehler Sicherheitskreis 1</Title>
     <Description>Sicherheitskreis 1 wurde unterbrochen. Dieser Schaltkreis überwacht die Funktion des Sicherheitssystems und des Hauptcomputers.</Description>
     <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Ein Fehler, wahrscheinlich ein Softwarefehler, wurde von einer Einheit erkannt, die der Sicherheitskreis 1 überwacht.</Causes>
-    <Actions>1) Neustart durch Betätigen von MOTOREN EIN versuchen. Wenn Neustart NICHT MÖGLICH ist, deutet dies auf einen Hardwarefehler im Sicherheitssystem oder im Achscomputer hin. Wenn Neustart MÖGLICH ist, deutet dies auf einen Softwarefehler hin. In diesem Fall Kontakt zur zuständigen ABB-Vertretung aufnehmen. <p />2) Fehlerhafte Einheit durch Prüfen der LEDs ermitteln. Die LEDs werden im Handbuch zur Fehlerbehebung beschrieben. Fehlerhafte Einheit austauschen.</Actions>
+    <Actions>1) Neustart durch Betätigen von MOTOREN EIN versuchen. Wenn Neustart NICHT MÖGLICH ist, deutet dies auf einen Hardwarefehler im Sicherheitssystem oder im Achscomputer hin. Wenn Neustart MÖGLICH ist, deutet dies auf einen Softwarefehler hin. In diesem Fall Kontakt zur zuständigen ABB-Vertretung aufnehmen. 2) Fehlerhafte Einheit durch Prüfen der LEDs ermitteln. Die LEDs werden im Handbuch zur Fehlerbehebung beschrieben. Fehlerhafte Einheit austauschen.</Actions>
   </Message>
   <Message number="314" eDefine="SYS_ERR_SYS_ENABLE2_DRV1_SUPERV">
     <Title>Überwachungsfehler Sicherheitskreis 2</Title>
     <Description>Der Sicherheitskreis 2 zu Antriebsmodul 1 wurde unterbrochen. Dieser Schaltkreis überwacht z. B. die Funktion des Sicherheitssystems und des Achscomputers.</Description>
     <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Ein Fehler, wahrscheinlich ein Softwarefehler, wurde von einer Einheit erkannt, die der Sicherheitskreis 2 überwacht.</Causes>
-    <Actions>1) Neustart durch Betätigen von MOTOREN EIN versuchen. Wenn Neustart NICHT MÖGLICH ist, deutet dies auf einen Hardwarefehler im Sicherheitssystem oder im Achscomputer hin. Wenn Neustart MÖGLICH ist, deutet dies auf einen Softwarefehler hin. In diesem Fall Kontakt zur zuständigen ABB-Vertretung aufnehmen. <p />2) Fehlerhafte Einheit durch Prüfen der LEDs ermitteln. Die LEDs werden im Handbuch zur Fehlerbehebung beschrieben. Fehlerhafte Einheit austauschen.</Actions>
+    <Actions>1) Neustart durch Betätigen von MOTOREN EIN versuchen. Wenn Neustart NICHT MÖGLICH ist, deutet dies auf einen Hardwarefehler im Sicherheitssystem oder im Achscomputer hin. Wenn Neustart MÖGLICH ist, deutet dies auf einen Softwarefehler hin. In diesem Fall Kontakt zur zuständigen ABB-Vertretung aufnehmen. 2) Fehlerhafte Einheit durch Prüfen der LEDs ermitteln. Die LEDs werden im Handbuch zur Fehlerbehebung beschrieben. Fehlerhafte Einheit austauschen.</Actions>
   </Message>
   <Message number="315" eDefine="SYS_ERR_SYS_ENABLE2_DRV2_SUPERV">
     <Title>Überwachungsfehler Sicherheitskreis 2</Title>
-    <Description>Der Sicherheitskreis 2 zu Antriebsmodul 2 wurde unterbrochen. Dieser Schaltkreis überwacht z. B. die Funktion des Sicherheitssystems und des Achscomputers.<p /></Description>
+    <Description>Der Sicherheitskreis 2 zu Antriebsmodul 2 wurde unterbrochen. Dieser Schaltkreis überwacht z. B. die Funktion des Sicherheitssystems und des Achscomputers.</Description>
     <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Ein Fehler, wahrscheinlich ein Softwarefehler, wurde von einer Einheit erkannt, die der Sicherheitskreis 2 überwacht.</Causes>
-    <Actions>1) Neustart durch Betätigen von MOTOREN EIN versuchen. Wenn Neustart NICHT MÖGLICH ist, deutet dies auf einen Hardwarefehler im Sicherheitssystem oder im Achscomputer hin. Wenn Neustart MÖGLICH ist, deutet dies auf einen Softwarefehler hin. In diesem Fall Kontakt zur zuständigen ABB-Vertretung aufnehmen. <p />2) Fehlerhafte Einheit durch Prüfen der LEDs ermitteln. Die LEDs werden im Handbuch zur Fehlerbehebung beschrieben. Fehlerhafte Einheit austauschen.</Actions>
+    <Actions>1) Neustart durch Betätigen von MOTOREN EIN versuchen. Wenn Neustart NICHT MÖGLICH ist, deutet dies auf einen Hardwarefehler im Sicherheitssystem oder im Achscomputer hin. Wenn Neustart MÖGLICH ist, deutet dies auf einen Softwarefehler hin. In diesem Fall Kontakt zur zuständigen ABB-Vertretung aufnehmen. 2) Fehlerhafte Einheit durch Prüfen der LEDs ermitteln. Die LEDs werden im Handbuch zur Fehlerbehebung beschrieben. Fehlerhafte Einheit austauschen.</Actions>
   </Message>
   <Message number="316" eDefine="SYS_ERR_SYS_ENABLE2_DRV3_SUPERV">
     <Title>Überwachungsfehler Sicherheitskreis 2</Title>
-    <Description>Der Sicherheitskreis 2 zu Antriebsmodul 3 wurde unterbrochen. Dieser Schaltkreis überwacht z. B. die Funktion des Sicherheitssystems und des Achscomputers.<p /></Description>
+    <Description>Der Sicherheitskreis 2 zu Antriebsmodul 3 wurde unterbrochen. Dieser Schaltkreis überwacht z. B. die Funktion des Sicherheitssystems und des Achscomputers.</Description>
     <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Ein Fehler, wahrscheinlich ein Softwarefehler, wurde von einer Einheit erkannt, die der Sicherheitskreis 2 überwacht.</Causes>
-    <Actions>1) Neustart durch Betätigen von MOTOREN EIN versuchen. Wenn Neustart NICHT MÖGLICH ist, deutet dies auf einen Hardwarefehler im Sicherheitssystem oder im Achscomputer hin. Wenn Neustart MÖGLICH ist, deutet dies auf einen Softwarefehler hin. In diesem Fall Kontakt zur zuständigen ABB-Vertretung aufnehmen. <p />2) Fehlerhafte Einheit durch Prüfen der LEDs ermitteln. Die LEDs werden im Handbuch zur Fehlerbehebung beschrieben. Fehlerhafte Einheit austauschen.</Actions>
+    <Actions>1) Neustart durch Betätigen von MOTOREN EIN versuchen. Wenn Neustart NICHT MÖGLICH ist, deutet dies auf einen Hardwarefehler im Sicherheitssystem oder im Achscomputer hin. Wenn Neustart MÖGLICH ist, deutet dies auf einen Softwarefehler hin. In diesem Fall Kontakt zur zuständigen ABB-Vertretung aufnehmen. 2) Fehlerhafte Einheit durch Prüfen der LEDs ermitteln. Die LEDs werden im Handbuch zur Fehlerbehebung beschrieben. Fehlerhafte Einheit austauschen.</Actions>
   </Message>
   <Message number="317" eDefine="SYS_ERR_SYS_ENABLE2_DRV4_SUPERV">
     <Title>Überwachungsfehler Sicherheitskreis 2</Title>
     <Description>Der Sicherheitskreis 2 zu Antriebsmodul 4 wurde unterbrochen. Dieser Schaltkreis überwacht z. B. die Funktion des Sicherheitssystems und des Achscomputers.</Description>
     <Consequences>Das System geht in den Zustand SYS HALT.</Consequences>
     <Causes>Ein Fehler, wahrscheinlich ein Softwarefehler, wurde von einer Einheit erkannt, die der Sicherheitskreis 2 überwacht.</Causes>
-    <Actions>1) Neustart durch Betätigen von MOTOREN EIN versuchen. Wenn Neustart NICHT MÖGLICH ist, deutet dies auf einen Hardwarefehler im Sicherheitssystem oder im Achscomputer hin. Wenn Neustart MÖGLICH ist, deutet dies auf einen Softwarefehler hin. In diesem Fall Kontakt zur zuständigen ABB-Vertretung aufnehmen. <p />2) Fehlerhafte Einheit durch Prüfen der LEDs ermitteln. Die LEDs werden im Handbuch zur Fehlerbehebung beschrieben. Fehlerhafte Einheit austauschen.</Actions>
+    <Actions>1) Neustart durch Betätigen von MOTOREN EIN versuchen. Wenn Neustart NICHT MÖGLICH ist, deutet dies auf einen Hardwarefehler im Sicherheitssystem oder im Achscomputer hin. Wenn Neustart MÖGLICH ist, deutet dies auf einen Softwarefehler hin. In diesem Fall Kontakt zur zuständigen ABB-Vertretung aufnehmen. 2) Fehlerhafte Einheit durch Prüfen der LEDs ermitteln. Die LEDs werden im Handbuch zur Fehlerbehebung beschrieben. Fehlerhafte Einheit austauschen.</Actions>
   </Message>
   <Message number="321" eDefine="SYS_ERR_SYS_NOT_A_NUMBER">
     <Title>Not-a-Number</Title>
-    <Description>Not-a-Number gefunden in Task <arg format="%s" ordinal="1" />. <p />An einem Symbol vom Typ '<arg format="%s" ordinal="2" />' wurde eine undefinierte Zahl gefunden.</Description>
-    <Consequences>Die undefinierte Zahl wurde durch '<arg format="%s" ordinal="3" />' ersetzt.</Consequences>
+    <Description>Not-a-Number gefunden in Task %s. An einem Symbol vom Typ '%s' wurde eine undefinierte Zahl gefunden.</Description>
+    <Consequences>Die undefinierte Zahl wurde durch '%s' ersetzt.</Consequences>
   </Message>
   <Message number="322" eDefine="SYS_ERR_SYS_POSITIVE_INFINITY">
     <Title>Positiver Wertüberlauf</Title>
-    <Description>Positiver Wertüberlauf gefunden in Task <arg format="%s" ordinal="1" />. <p />In einem Symbol vom Typ '<arg format="%s" ordinal="2" />' wurde ein positiver Wertüberlauf festgestellt.</Description>
-    <Consequences>Der positive Wertüberlauf wurde durch '<arg format="%s" ordinal="3" />' ersetzt.</Consequences>
+    <Description>Positiver Wertüberlauf gefunden in Task %s. In einem Symbol vom Typ '%s' wurde ein positiver Wertüberlauf festgestellt.</Description>
+    <Consequences>Der positive Wertüberlauf wurde durch '%s' ersetzt.</Consequences>
   </Message>
   <Message number="323" eDefine="SYS_ERR_SYS_NEGATIVE_INFINITY">
     <Title>Negativer Wertüberlauf</Title>
-    <Description>Negativer Wertüberlauf gefunden in Task <arg format="%s" ordinal="1" />. <p />In einem Symbol vom Typ '<arg format="%s" ordinal="2" />' wurde ein negativer Wertüberlauf festgestellt.</Description>
-    <Consequences>Der negative Wertüberlauf wurde durch '<arg format="%s" ordinal="3" />' ersetzt.</Consequences>
+    <Description>Negativer Wertüberlauf gefunden in Task %s. In einem Symbol vom Typ '%s' wurde ein negativer Wertüberlauf festgestellt.</Description>
+    <Consequences>Der negative Wertüberlauf wurde durch '%s' ersetzt.</Consequences>
   </Message>
   <Message number="324" eDefine="SYS_ERR_SYS_IO_ERR_ARG_MODE">
     <Title>Falsches Argument für System-E/A-Signal</Title>
-    <Description>Auf Signal <arg format="%s" ordinal="2" /> gesetztes <arg format="%s" ordinal="1" /> hat falsches Argument.</Description>
+    <Description>Auf Signal %s gesetztes %s hat falsches Argument.</Description>
     <Consequences>
-      <arg format="%s" ordinal="1" /> kann nicht verwendet werden.</Consequences>
+      %s kann nicht verwendet werden.</Consequences>
     <Causes>Wahrscheinlich wurde die Konfiguration nicht in einem ordnungsgemäßen Konfigurationseditor bearbeitet.</Causes>
     <Actions>Das System-E/A-Signal muss neu konfiguriert werden, möglichst mit dem Konfigurationseditor in RobotStudio oder auf dem FlexPendant.</Actions>
   </Message>
   <Message number="325" eDefine="SYS_ERR_SYS_SAFEMOVE_DEACT">
-    <Title>SC <arg format="%d" ordinal="1" />-Sicherheitsüberwachung nicht aktiviert</Title>
+    <Title>SC %d1-Sicherheitsüberwachung nicht aktiviert</Title>
     <Description>Safety Controller (SC) enthält keine Benutzerkonfiguration, d. h. Sicherheitsüberwachung ist deaktiviert.</Description>
     <Consequences>SC kann die Roboterbewegung nicht stoppen.</Consequences>
-    <Causes>SC enthält keine Benutzerkonfiguration oder kein SC ist an das Antriebsmodul <arg format="%d" ordinal="1" /> angeschlossen. 
+    <Causes>SC enthält keine Benutzerkonfiguration oder kein SC ist an das Antriebsmodul %d1 angeschlossen. 
 </Causes>
     <Actions>Neue Benutzerkonfiguration auf SC laden. Die Konfiguration durch einen Warmstart und Eingabe des PIN-Codes aktivieren.</Actions>
   </Message>
   <Message number="326" eDefine="SYS_ERR_SYS_IO_ERR_NEG_ARG">
     <Title>Falsches Argument für System-E/A-Signal</Title>
-    <Description>Auf Signal <arg format="%s" ordinal="2" /> gesetztes <arg format="%s" ordinal="1" /> hat falsches Argument. Die Verzögerung darf kein negativer Wert sein.</Description>
+    <Description>Auf Signal %s gesetztes %s hat falsches Argument. Die Verzögerung darf kein negativer Wert sein.</Description>
     <Consequences>
-      <arg format="%s" ordinal="1" /> kann nicht verwendet werden.</Consequences>
+      %s kann nicht verwendet werden.</Consequences>
     <Actions>Das System-E/A-Signal muss neu konfiguriert werden. </Actions>
   </Message>
   <Message number="350" eDefine="SYS_ERR_SYS_TASK_NAME_NOT_VALID">
     <Title>Ungültiger Taskname</Title>
-    <Description>Der Taskname <arg format="%s" ordinal="1" /> kann nicht als Name einer Task verwendet werden. Er wird bereits als installiertes Symbol oder als reservierter Begriff im System verwendet oder er ist zu lang (max. 16 Zeichen).</Description>
+    <Description>Der Taskname %s kann nicht als Name einer Task verwendet werden. Er wird bereits als installiertes Symbol oder als reservierter Begriff im System verwendet oder er ist zu lang (max. 16 Zeichen).</Description>
     <Consequences>Die Task wird nicht im System installiert.</Consequences>
     <Actions>Konfiguration des Tasknamens ändern und Steuerung neu starten.</Actions>
   </Message>
   <Message number="351" eDefine="SYS_ERR_SYS_MAX_NO_OF_TASK_EXCEEDED">
     <Title>Max. Anzahl an Tasks überschritten</Title>
-    <Description>Die maximale Anzahl an Tasks, <arg format="%s" ordinal="1" />, des Konfigurationstyps <arg format="%s" ordinal="2" /> wurde überschritten.</Description>
+    <Description>Die maximale Anzahl an Tasks, %s, des Konfigurationstyps %s wurde überschritten.</Description>
     <Consequences>Nicht alle konfigurierten Tasks werden installiert.</Consequences>
     <Actions>Konfiguration ändern und das System neu starten.</Actions>
   </Message>
   <Message number="352" eDefine="SYS_ERR_SYS_MOTION_PLANER_NAME">
     <Title>Kein gültiger Name für Bewegungsplanung</Title>
-    <Description>Der Name der Bewegungsplanung für die mechanische Einheitengruppe <arg format="%s" ordinal="1" /> in <arg format="%s" ordinal="2" /> ist nicht korrekt.<p />Mögliche Fehlerursache:<p />1. Leerer Name.<p />2. Nicht in der Bewegungskonfiguration vorhanden.<p />3. Wird bereits von anderer mechanischer Einheitengruppe verwendet.</Description>
+    <Description>Der Name der Bewegungsplanung für die mechanische Einheitengruppe %s in %s ist nicht korrekt.Mögliche Fehlerursache:1. Leerer Name.2. Nicht in der Bewegungskonfiguration vorhanden.3. Wird bereits von anderer mechanischer Einheitengruppe verwendet.</Description>
     <Consequences>Das System kann nicht verwendet werden.</Consequences>
     <Actions>Konfiguration ändern und die Steuerung neu starten.</Actions>
   </Message>
   <Message number="353" eDefine="SYS_ERR_SYS_MECHANICAL_UNIT_NAME">
     <Title>Mechanische Einheit nicht gefunden</Title>
-    <Description>Die mechanische Einheit <arg format="%s" ordinal="1" /> in <arg format="%s" ordinal="2" /> wurde in der Liste der konfigurierten mechanischen Einheiten nicht gefunden.</Description>
+    <Description>Die mechanische Einheit %s in %s wurde in der Liste der konfigurierten mechanischen Einheiten nicht gefunden.</Description>
     <Consequences>Es sind keine RAPID-Instruktionen ausführbar, die mechanische Einheiten verwenden.</Consequences>
     <Causes>Die Einheit ist wahrscheinlich nicht in der Bewegungskonfiguration vorhanden.</Causes>
     <Actions>Konfiguration ändern und die Steuerung neu starten.</Actions>
   </Message>
   <Message number="354" eDefine="SYS_ERR_SYS_UNDEFINED_ARG_NAME">
     <Title>Das Argument ist undefiniert</Title>
-    <Description>Das konfigurierte Argument <arg format="%s" ordinal="1" /> für Task <arg format="%s" ordinal="2" /> hat keinen gültigen Typ.</Description>
+    <Description>Das konfigurierte Argument %s für Task %s hat keinen gültigen Typ.</Description>
     <Consequences>Das Verhalten der Task ist undefiniert.</Consequences>
     <Actions>Konfiguration ändern und die Steuerung neu starten.</Actions>
   </Message>
   <Message number="355" eDefine="SYS_ERR_SYS_MEC_UNIT_GROUP_NAME">
     <Title>Name der mech. Einheitengruppe nicht korrekt</Title>
-    <Description>Der konfigurierte Name von <arg format="%s" ordinal="1" /> in Task <arg format="%s" ordinal="2" /> ist nicht korrekt.<p />Mögliche Ursache:<p />1. Das Argument wird nicht in der Konfiguration benutzt.<p />2. Der konfigurierte Name ist kein Mitglied der mechanischen Einheitengruppe.<p />3. Der konfigurierte Name wird bereits von einer anderen Task verwendet.</Description>
+    <Description>Der konfigurierte Name von %s in Task %s ist nicht korrekt.Mögliche Ursache:1. Das Argument wird nicht in der Konfiguration benutzt.2. Der konfigurierte Name ist kein Mitglied der mechanischen Einheitengruppe.3. Der konfigurierte Name wird bereits von einer anderen Task verwendet.</Description>
     <Consequences>Die Task wird nicht installiert oder es ist nicht möglich RAPID-Bewegungsinstruktionen auszuführen.</Consequences>
     <Actions>Konfiguration ändern und die Steuerung neu starten.</Actions>
   </Message>
   <Message number="356" eDefine="SYS_ERR_SYS_MAX_NO_OF_MOTION_TASK">
     <Title>Max. Anzahl an Bewegungstasks überschritten</Title>
-    <Description>Nur <arg format="%s" ordinal="1" /> Tasks dürfen mechanische Einheiten steuern, d. h. RAPID-Bewegungsinstruktionen abarbeiten.</Description>
+    <Description>Nur %s Tasks dürfen mechanische Einheiten steuern, d. h. RAPID-Bewegungsinstruktionen abarbeiten.</Description>
     <Actions>Konfiguration ändern und die Steuerung neu starten.</Actions>
   </Message>
   <Message number="357" eDefine="SYS_ERR_SYS_NO_CONFIG_MOTION_TASK">
     <Title>Keine Bewegungstask konfiguriert</Title>
     <Description>Es ist keine Task konfiguriert, um mechanische Einheiten zu steuern, d. h. RAPID-Bewegungsinstruktionen abzuarbeiten.</Description>
     <Consequences>Es können keine RAPID-Bewegungsinstruktionen abgearbeitet werden.</Consequences>
-    <Actions>Konfiguration so ändern, dass sie eine Task zur Steuerung mechanischer Einheiten enthält.<p />Steuerung neu starten.</Actions>
+    <Actions>Konfiguration so ändern, dass sie eine Task zur Steuerung mechanischer Einheiten enthält.Steuerung neu starten.</Actions>
   </Message>
   <Message number="358" eDefine="SYS_ERR_SYS_NO_MEC_UNIT_GROUP">
-    <Title>Keine Mitglieder von <arg format="%s" ordinal="1" /> konfiguriert</Title>
+    <Title>Keine Mitglieder von %s konfiguriert</Title>
     <Description>Der Konfigurationstyp ist in einem Multi-Roboter-System erforderlich.</Description>
     <Consequences>Es können keine RAPID-Bewegungsinstruktionen abgearbeitet werden.</Consequences>
     <Actions>Konfiguration ändern und die Steuerung neu starten.</Actions>
   </Message>
   <Message number="359" eDefine="SYS_ERR_SYS_MEC_UNIT_GROUP">
-    <Title>Cfg-Typ <arg format="%s" ordinal="1" /> ist konfiguriert</Title>
+    <Title>Cfg-Typ %s ist konfiguriert</Title>
     <Description>In einem System mit aktuellen Optionen wurde der Typ gefunden, aber nicht erwartet.</Description>
-    <Actions>Prüfen, ob die korrekte Konfigurationsdatei geladen ist, oder alle Instanzen des Typs entfernen.<p />Steuerung neu starten.</Actions>
+    <Actions>Prüfen, ob die korrekte Konfigurationsdatei geladen ist, oder alle Instanzen des Typs entfernen.Steuerung neu starten.</Actions>
   </Message>
   <Message number="360" eDefine="SYS_ERR_SYS_UNDEFINED_SHELF_NAME">
-    <Title>Unbekanntes Ereignis in cfg-Typ <arg format="%s" ordinal="1" /></Title>
-    <Description>Das Ereignis <arg format="%s" ordinal="2" /> ist kein Systemereignis.</Description>
+    <Title>Unbekanntes Ereignis in cfg-Typ %s</Title>
+    <Description>Das Ereignis %s ist kein Systemereignis.</Description>
     <Actions>Konfiguration ändern und das System neu starten.</Actions>
   </Message>
   <Message number="361" eDefine="SYS_ERR_SYS_ONLY_SHARED_MOD">
     <Title>Nur gemeinsam benutzte Module in gemeinsam benutzter Task</Title>
-    <Description>Das Modul <arg format="%s" ordinal="1" /> ist nicht für gemeinsame Nutzung konfiguriert und kann nicht in die gemeinsame Task geladen werden.</Description>
+    <Description>Das Modul %s ist nicht für gemeinsame Nutzung konfiguriert und kann nicht in die gemeinsame Task geladen werden.</Description>
     <Actions>Konfiguration ändern und das System neu starten.</Actions>
   </Message>
   <Message number="362" eDefine="SYS_ERR_SYS_NOT_DEFINED_TASK_NMAE">
     <Title>Kein definierter Taskname</Title>
-    <Description>Die Task <arg format="%s" ordinal="1" /> in cfg-Typ <arg format="%s" ordinal="2" /> ist nicht im System konfiguriert.</Description>
+    <Description>Die Task %s in cfg-Typ %s ist nicht im System konfiguriert.</Description>
     <Actions>Konfiguration ändern und das System neu starten.</Actions>
   </Message>
   <Message number="363" eDefine="SYS_ERR_SYS_SYSMOD_NO_SYSMOD">
     <Title>Modul ist kein Systemmodul</Title>
-    <Description>Das Modul <arg format="%s" ordinal="1" />, das aus der Datei <arg format="%s" ordinal="2" /> geladen wurde, ist kein Systemmodul.</Description>
-    <Actions>Dateisuffix ändern oder dem Modul ein Modulattribut hinzufügen.<p />Modul erneut laden oder System neu starten.</Actions>
+    <Description>Das Modul %s, das aus der Datei %s geladen wurde, ist kein Systemmodul.</Description>
+    <Actions>Dateisuffix ändern oder dem Modul ein Modulattribut hinzufügen.Modul erneut laden oder System neu starten.</Actions>
   </Message>
   <Message number="364" eDefine="SYS_ERR_SYS_MAX_NO_OF_GROUP_EXCEEDED">
     <Title>Max. Anzahl mech. Einheitengruppen überschritten</Title>
-    <Description>Die maximale Anzahl an mechanischen Einheitengruppen, <arg format="%s" ordinal="1" />, des Konfigurationstyps <arg format="%s" ordinal="2" /> wurde überschritten.</Description>
+    <Description>Die maximale Anzahl an mechanischen Einheitengruppen, %s, des Konfigurationstyps %s wurde überschritten.</Description>
     <Consequences>Überzählige Instanzen werden ignoriert.</Consequences>
     <Actions>Konfiguration ändern und die Steuerung neu starten.</Actions>
   </Message>

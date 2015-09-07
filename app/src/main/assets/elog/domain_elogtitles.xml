@@ -129,7 +129,7 @@
     <Title domain="4" number="137">Syntaxfehler</Title>
     <Title domain="4" number="138">Syntaxfehler </Title>
     <Title domain="4" number="139">Syntaxfehler </Title>
-    <Title domain="4" number="140">Numerischer Wert für Symbol <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> außerhalb Bereich</Title>
+    <Title domain="4" number="140">Numerischer Wert für Symbol %s" xmlns="urn:abb-robotics-elog-text außerhalb Bereich</Title>
     <Title domain="4" number="141">Zeichenfolge zu lang</Title>
     <Title domain="4" number="142">Textbezeichner außerhalb des zulässigen Bereichs</Title>
     <Title domain="4" number="143">Aggregat außerhalb des zulässigen Bereichs</Title>
@@ -241,7 +241,7 @@
     <Title domain="4" number="332">Typenfehler</Title>
     <Title domain="4" number="351">Speicherzuteilungsfehler</Title>
     <Title domain="4" number="352">Speicherzuteilungsfehler</Title>
-    <Title domain="4" number="353">Mechanische Einheit <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> fehlt</Title>
+    <Title domain="4" number="353">Mechanische Einheit %s" xmlns="urn:abb-robotics-elog-text fehlt</Title>
     <Title domain="4" number="354">Kopie eines dynamisch geladenen Moduls wurde gespeichert. </Title>
     <Title domain="4" number="355">Eine Stop/QStop-Ereignisroutine wurde gestoppt</Title>
     <Title domain="4" number="357">Fehlende Fehlerbehandlung</Title>
@@ -621,7 +621,7 @@
     <Title domain="4" number="1495">PZ-Bewegen - Fehler </Title>
     <Title domain="4" number="1496">PZ-Bewegen - Fehler </Title>
     <Title domain="4" number="1497">PZ-Bewegen - Benachrichtigung </Title>
-    <Title domain="4" number="1498">Kein def. Anwender-Koordinatensystem in mechanischer Einheit <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />! </Title>
+    <Title domain="4" number="1498">Kein def. Anwender-Koordinatensystem in mechanischer Einheit %s" xmlns="urn:abb-robotics-elog-text! </Title>
     <Title domain="4" number="1499">Synchronisierter Modus</Title>
     <Title domain="4" number="1500">Unabhängiger Modus</Title>
     <Title domain="4" number="1501">Unzulässige ID</Title>
@@ -741,10 +741,10 @@
     <Title domain="4" number="1620">Socket-Fehler </Title>
     <Title domain="4" number="1621">StorePath-Fehler </Title>
     <Title domain="4" number="1622">Unerwartete Instruktion </Title>
-    <Title domain="4" number="1623">Fehlerhafte Verwendung von <arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /></Title>
-    <Title domain="4" number="1625">Unerwartete <arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /></Title>
-    <Title domain="4" number="1626">Unerwartet: <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> \<arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /></Title>
-    <Title domain="4" number="1627">Fehlerhafte Verwendung von <arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="4" number="1623">Fehlerhafte Verwendung von %s" xmlns="urn:abb-robotics-elog-text</Title>
+    <Title domain="4" number="1625">Unerwartete %s" xmlns="urn:abb-robotics-elog-text</Title>
+    <Title domain="4" number="1626">Unerwartet: %s" xmlns="urn:abb-robotics-elog-text \%s" xmlns="urn:abb-robotics-elog-text</Title>
+    <Title domain="4" number="1627">Fehlerhafte Verwendung von %s" xmlns="urn:abb-robotics-elog-text</Title>
     <Title domain="4" number="1630">Unsichere Synchronisierung</Title>
     <Title domain="4" number="1631">Instruktionsfehler</Title>
     <Title domain="4" number="1632">Argument existiert nicht</Title>
@@ -779,7 +779,7 @@
     <Title domain="4" number="1663">Instanz konnte nicht erstellt werden</Title>
     <Title domain="4" number="1664">Der Typname ist für diese Assembly ungültig</Title>
     <Title domain="4" number="1665">
-      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> stimmt nicht mit Assembly überein</Title>
+      %s" xmlns="urn:abb-robotics-elog-text stimmt nicht mit Assembly überein</Title>
     <Title domain="4" number="1666">Schwerer UIShow-Fehler</Title>
     <Title domain="4" number="1667">Schwerwiegender UI-Fehler</Title>
     <Title domain="4" number="1670">Gesamtes Datenfeld als Argument nicht zulässig</Title>
@@ -811,7 +811,7 @@
     <Title domain="4" number="1699">RMQ-Fehler - Max. Größe Meldung überschritten</Title>
     <Title domain="4" number="1700">RMQ-Fehler – Interrupt-Setup fehlgeschlagen</Title>
     <Title domain="4" number="1701">RMQ-Fehler - Keine erfassbare Meldung vorhanden</Title>
-    <Title domain="4" number="1702">RMQ-Fehler - <arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /> ungültig</Title>
+    <Title domain="4" number="1702">RMQ-Fehler - %s" xmlns="urn:abb-robotics-elog-text ungültig</Title>
     <Title domain="4" number="1703">RMQ-Fehler - Daten konnten nicht kopiert werden</Title>
     <Title domain="4" number="1704">RMQ-Fehler - Warteschlange voll</Title>
     <Title domain="4" number="1705">RMQ-Fehler - Höchstdauer überschritten</Title>
@@ -862,11 +862,11 @@
     <Title domain="4" number="1758">Datenfeld zu klein</Title>
     <Title domain="4" number="1759">Signal überschreitet max. Anzahl zulässiger Bits</Title>
     <Title domain="4" number="1760">
-      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> wenn im synchronisierten Modus</Title>
+      %s" xmlns="urn:abb-robotics-elog-text wenn im synchronisierten Modus</Title>
     <Title domain="4" number="1761">Wert nicht im Sollbereich</Title>
     <Title domain="4" number="1762">Der Zeichenfolgewert des Arguments ist ungültig</Title>
     <Title domain="4" number="1763">Zeichenfolgenwert des Arguments ist zu hoch</Title>
-    <Title domain="4" number="1764">Falsche Kombination in <arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="4" number="1764">Falsche Kombination in %s" xmlns="urn:abb-robotics-elog-text</Title>
     <Title domain="4" number="1765">Argumentwert ist zu hoch</Title>
     <Title domain="4" number="1766">Die Präzision geht dabei verloren</Title>
     <Title domain="4" number="1767">Instruktionsfehler</Title>
@@ -1049,13 +1049,13 @@
     <Title domain="3" number="7081">Spül-Timer sind unterschiedlich</Title>
     <Title domain="3" number="7082">Abweichung zwischen PIB- und MIB-Ausgang</Title>
     <Title domain="3" number="7083">Störimpuls im Spülsystem</Title>
-    <Title domain="3" number="7090">Temperatur zu hoch, Sensor <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="3" number="7090">Temperatur zu hoch, Sensor %d1" xmlns="urn:abb-robotics-elog-text</Title>
     <Title domain="3" number="7094">Verbindungsaktivierungsfehler</Title>
     <Title domain="3" number="7095">Fehler Bremsenstrom</Title>
     <Title domain="3" number="7096">Fehler Bremsenstrom</Title>
     <Title domain="3" number="7097">Bremsen-Kurzschlussfehler</Title>
     <Title domain="3" number="7098">Offene Bremsschaltung – Fehler</Title>
-    <Title domain="3" number="7099">Temperatur zu hoch, Sensor <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="3" number="7099">Temperatur zu hoch, Sensor %d1" xmlns="urn:abb-robotics-elog-text</Title>
     <Title domain="3" number="7100">Flashdisk-Fehler an E/A-Knoten</Title>
     <Title domain="3" number="7101">Bremsenfehler</Title>
     <Title domain="3" number="7102">Fehlerhafter 24-V-COOL-Pegel</Title>
@@ -1103,11 +1103,11 @@
     <Title domain="3" number="7241">Hochspannungsverriegelungskreis-Konflikt von MIB</Title>
     <Title domain="3" number="7242">Betriebskreiskonflikt von SIB</Title>
     <Title domain="3" number="7243">Bremskreiskonflikt von SIB</Title>
-    <Title domain="3" number="7244">Betriebskreiskonflikt von MIB <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
-    <Title domain="3" number="7245">Bremskreiskonflikt von MIB <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="3" number="7244">Betriebskreiskonflikt von MIB %d1" xmlns="urn:abb-robotics-elog-text</Title>
+    <Title domain="3" number="7245">Bremskreiskonflikt von MIB %d1" xmlns="urn:abb-robotics-elog-text</Title>
     <Title domain="3" number="7246">Not-Aus-Relais Konflikt</Title>
-    <Title domain="3" number="7247">Lüfter <arg format="%i" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> Fehlfunktion</Title>
-    <Title domain="3" number="7248">Lüfter <arg format="%i" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> Fehlfunktion</Title>
+    <Title domain="3" number="7247">Lüfter %i1" xmlns="urn:abb-robotics-elog-text Fehlfunktion</Title>
+    <Title domain="3" number="7248">Lüfter %i1" xmlns="urn:abb-robotics-elog-text Fehlfunktion</Title>
     <Title domain="3" number="7249">Störimpuls in Not-Aus-Kreisen</Title>
     <Title domain="3" number="7250">Störimpuls in Automatik-Halt-Kreis</Title>
     <Title domain="3" number="7251">Störimpuls in Verzögerter-Halt-Kreis</Title>
@@ -1405,15 +1405,15 @@
     <Title domain="7" number="1398">Kommunikationsfehler von bosv24</Title>
     <Title domain="7" number="1399">Kommunikationsfehler von bosv24</Title>
     <Title domain="7" number="1400">Kommunikationsfehler von bosv24</Title>
-    <Title domain="7" number="1401"> Keine Option für den &lt;<arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />&gt; Feldbus-Adapter vorhanden </Title>
-    <Title domain="7" number="1402"> Doppelte Adresse an <arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /> E/A-Bus </Title>
+    <Title domain="7" number="1401"> Keine Option für den &lt;%s" xmlns="urn:abb-robotics-elog-text&gt; Feldbus-Adapter vorhanden </Title>
+    <Title domain="7" number="1402"> Doppelte Adresse an %s" xmlns="urn:abb-robotics-elog-text E/A-Bus </Title>
     <Title domain="7" number="1403">Ungültige Intervallzeit</Title>
     <Title domain="7" number="1404">Ungültige Eingangs-/Ausgangsgröße</Title>
     <Title domain="7" number="1405">Doppelte E/A-Einheitenzuordnung</Title>
     <Title domain="7" number="1406">Kommunikation für DeviceNet-E/A-Bus aufgebaut</Title>
     <Title domain="7" number="1407">Leitungsschnittstelle nicht gefunden</Title>
     <Title domain="7" number="1408">Portnummer der Leitung außerhalb des Gültigkeitsbereichs</Title>
-    <Title domain="7" number="1409"><arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> kann kein Port hinzugefügt werden </Title>
+    <Title domain="7" number="1409">%s" xmlns="urn:abb-robotics-elog-text kann kein Port hinzugefügt werden </Title>
     <Title domain="7" number="1410">Option CIP route nicht installiert</Title>
     <Title domain="7" number="1411">Keine Routenressourcen mehr vorhanden</Title>
     <Title domain="7" number="1412">DeviceNet-E/A-Bus verfügt wieder über Bus-Netzspannung</Title>
@@ -1438,7 +1438,7 @@
     <Title domain="7" number="1451">Zusätzlicher Ethernet-Port nicht installiert</Title>
     <Title domain="7" number="1452">Zu viele EtherNet/IP E/A-Busse konfiguriert</Title>
     <Title domain="7" number="1453">Falsche Identität für EtherNet/IP E/A-Einheit</Title>
-    <Title domain="7" number="1454"> Die <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />-Adresse fehlt </Title>
+    <Title domain="7" number="1454"> Die %s" xmlns="urn:abb-robotics-elog-text-Adresse fehlt </Title>
     <Title domain="7" number="1455">EtherNet/IP-Verbindungstyp unbekannt</Title>
     <Title domain="7" number="1457">EtherNet/IP-Adresse des Gateways nicht zulässig</Title>
     <Title domain="7" number="1458">Standard Gateway-Adresse konnte nicht geändert werden</Title>
@@ -1462,9 +1462,9 @@
     <Title domain="7" number="1482">Profinet-E/A-Bus-Konfiguration verändert</Title>
     <Title domain="7" number="1483">Profinet-Identifikationsanforderung empfangen</Title>
     <Title domain="7" number="1485">Unzulässige Subnet-Maske</Title>
-    <Title domain="7" number="1486"> Unzulässige Adresse für &lt;<arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" />&gt; E/A-Bus </Title>
-    <Title domain="7" number="1487"> Unzulässige IP-Adresse für &lt;<arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" />&gt; E/A-Bus </Title>
-    <Title domain="7" number="1488"> Unzulässige Gateway-Adresse für &lt;<arg format="%s" ordinal="3" xmlns="urn:abb-robotics-elog-text" />&gt; E/A-Bus </Title>
+    <Title domain="7" number="1486"> Unzulässige Adresse für &lt;%s" xmlns="urn:abb-robotics-elog-text&gt; E/A-Bus </Title>
+    <Title domain="7" number="1487"> Unzulässige IP-Adresse für &lt;%s" xmlns="urn:abb-robotics-elog-text&gt; E/A-Bus </Title>
+    <Title domain="7" number="1488"> Unzulässige Gateway-Adresse für &lt;%s" xmlns="urn:abb-robotics-elog-text&gt; E/A-Bus </Title>
     <Title domain="7" number="1489">Warnung zu Konfiguration von internem Profinet-Slave </Title>
     <Title domain="7" number="1490">Warnung zu Konfiguration von Profinet-E/A-Einheit</Title>
     <Title domain="7" number="1491">Konfiguration von Profinet-E/A-Einheit fehlt</Title>
@@ -1514,49 +1514,49 @@
     <Title domain="7" number="1537">Ungültige Konfigurationsdaten für EtherNet/IP E/A-Einheit</Title>
     <Title domain="7" number="1538">Adresse des EtherNet/IP E/A-Bus muss auf PC vorhanden sein</Title>
     <Title domain="11" number="4800">
-      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+      %s" xmlns="urn:abb-robotics-elog-text
     </Title>
     <Title domain="11" number="4801">
-      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+      %s" xmlns="urn:abb-robotics-elog-text
     </Title>
     <Title domain="11" number="4802">
-      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+      %s" xmlns="urn:abb-robotics-elog-text
     </Title>
     <Title domain="11" number="4803">
-      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+      %s" xmlns="urn:abb-robotics-elog-text
     </Title>
     <Title domain="11" number="4804">
-      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+      %s" xmlns="urn:abb-robotics-elog-text
     </Title>
     <Title domain="11" number="4805">
-      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+      %s" xmlns="urn:abb-robotics-elog-text
     </Title>
     <Title domain="11" number="4806">
-      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+      %s" xmlns="urn:abb-robotics-elog-text
     </Title>
     <Title domain="11" number="4807">
-      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+      %s" xmlns="urn:abb-robotics-elog-text
     </Title>
     <Title domain="11" number="4808">
-      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+      %s" xmlns="urn:abb-robotics-elog-text
     </Title>
     <Title domain="11" number="4809">
-      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+      %s" xmlns="urn:abb-robotics-elog-text
     </Title>
     <Title domain="11" number="4810">
-      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+      %s" xmlns="urn:abb-robotics-elog-text
     </Title>
     <Title domain="11" number="4811">
-      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+      %s" xmlns="urn:abb-robotics-elog-text
     </Title>
     <Title domain="11" number="4812">
-      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+      %s" xmlns="urn:abb-robotics-elog-text
     </Title>
     <Title domain="11" number="4813">
-      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+      %s" xmlns="urn:abb-robotics-elog-text
     </Title>
     <Title domain="11" number="4814">
-      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+      %s" xmlns="urn:abb-robotics-elog-text
     </Title>
     <Title domain="5" number="21">Achspositionsfehler</Title>
     <Title domain="5" number="22">Gleichrichterspannung zu gering</Title>
@@ -1620,7 +1620,7 @@
     <Title domain="5" number="163">Positionsanpassung</Title>
     <Title domain="5" number="164">Deaktivierung nicht möglich</Title>
     <Title domain="5" number="167">Warnung: Neue Synchronisierung</Title>
-    <Title domain="5" number="168">Neue Synchronisierung auf <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="5" number="168">Neue Synchronisierung auf %s" xmlns="urn:abb-robotics-elog-text</Title>
     <Title domain="5" number="172">MoveJ unzulässig</Title>
     <Title domain="5" number="173">Feinpunkt erforderlich</Title>
     <Title domain="5" number="174">WObj nicht verbunden</Title>
@@ -1934,20 +1934,20 @@
     <Title domain="1" number="76">FTP-Server in Betrieb</Title>
     <Title domain="1" number="77">FTP-Server außer Betrieb</Title>
     <Title domain="1" number="80">Aktualisierte RAPID-Datei gefunden</Title>
-    <Title domain="1" number="81">Hintergrundtask <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="81">Hintergrundtask %s" xmlns="urn:abb-robotics-elog-text</Title>
     <Title domain="1" number="82">RAPID-Tasküberwachung</Title>
     <Title domain="1" number="83">RAPID-Tasküberwachung</Title>
     <Title domain="1" number="84">RAPID-Tasküberwachung</Title>
     <Title domain="1" number="85">RAPID-Tasküberwachung</Title>
     <Title domain="1" number="86">Roboterspülung OK</Title>
-    <Title domain="1" number="87">Spülstatus: <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="87">Spülstatus: %s" xmlns="urn:abb-robotics-elog-text</Title>
     <Title domain="1" number="90">P-Start ausgeführt</Title>
     <Title domain="1" number="91">Neustart nicht möglich</Title>
     <Title domain="1" number="92">(Neu-) Start nicht möglich</Title>
     <Title domain="1" number="93">(Neu-) Start nicht möglich</Title>
     <Title domain="1" number="95">Mindestens eine Task in Taskauswahl nicht markiert</Title>
     <Title domain="1" number="96">
-      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> nicht aktiv</Title>
+      %s" xmlns="urn:abb-robotics-elog-text nicht aktiv</Title>
     <Title domain="1" number="97">Neustart nicht möglich</Title>
     <Title domain="1" number="98">Neustart nicht möglich</Title>
     <Title domain="1" number="99">Programmstart abgewiesen</Title>
@@ -1978,13 +1978,13 @@
     <Title domain="1" number="155">Programm neu gestartet</Title>
     <Title domain="1" number="156">Programm neu gestartet</Title>
     <Title domain="1" number="157">Programm neu gestartet</Title>
-    <Title domain="1" number="170">Hintergrundtask <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
-    <Title domain="1" number="171">Hintergrundtask <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
-    <Title domain="1" number="172">Hintergrundtask <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
-    <Title domain="1" number="173">Hintergrundtask <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
-    <Title domain="1" number="174">Hintergrundtask <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
-    <Title domain="1" number="175">Hintergrundtask <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
-    <Title domain="1" number="176">Hintergrundtask <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="170">Hintergrundtask %s" xmlns="urn:abb-robotics-elog-text</Title>
+    <Title domain="1" number="171">Hintergrundtask %s" xmlns="urn:abb-robotics-elog-text</Title>
+    <Title domain="1" number="172">Hintergrundtask %s" xmlns="urn:abb-robotics-elog-text</Title>
+    <Title domain="1" number="173">Hintergrundtask %s" xmlns="urn:abb-robotics-elog-text</Title>
+    <Title domain="1" number="174">Hintergrundtask %s" xmlns="urn:abb-robotics-elog-text</Title>
+    <Title domain="1" number="175">Hintergrundtask %s" xmlns="urn:abb-robotics-elog-text</Title>
+    <Title domain="1" number="176">Hintergrundtask %s" xmlns="urn:abb-robotics-elog-text</Title>
     <Title domain="1" number="177">Task wird nicht gestartet</Title>
     <Title domain="1" number="178">Abarbeitungsfehler statische/semistatische Task </Title>
     <Title domain="1" number="185">Task konnte nicht für Start vorbereitet werden</Title>
@@ -2025,8 +2025,8 @@
     <Title domain="1" number="353">Task wurde neu installiert</Title>
     <Title domain="1" number="354">Restore wegen verlorener Systemdaten abgebrochen</Title>
     <Title domain="1" number="355">Wiederherstellungsfehler</Title>
-    <Title domain="1" number="400">Anwender <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> angemeldet</Title>
-    <Title domain="1" number="401">Anwender <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> abgemeldet</Title>
+    <Title domain="1" number="400">Anwender %s" xmlns="urn:abb-robotics-elog-text angemeldet</Title>
+    <Title domain="1" number="401">Anwender %s" xmlns="urn:abb-robotics-elog-text abgemeldet</Title>
     <Title domain="1" number="420">Neue unsichere Bewegungsbahn</Title>
     <Title domain="1" number="421">Geplante Bahn nicht abgebrochen</Title>
     <Title domain="1" number="1020">Backup-Fehler</Title>
@@ -2346,14 +2346,14 @@
     <Title domain="2" number="258">Hohe Motortemperatur, DRV4</Title>
     <Title domain="2" number="259">Hohe Temperatur externes Gerät, DRV4</Title>
     <Title domain="2" number="260">Statuskonflikt Betriebssteuerung, DRV1</Title>
-    <Title domain="2" number="262">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> nicht gefunden </Title>
-    <Title domain="2" number="263">Kommunikationsfehler bei SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
-    <Title domain="2" number="264">Option für SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> nicht vorhanden </Title>
+    <Title domain="2" number="262">SC %d1" xmlns="urn:abb-robotics-elog-text nicht gefunden </Title>
+    <Title domain="2" number="263">Kommunikationsfehler bei SC %d1" xmlns="urn:abb-robotics-elog-text</Title>
+    <Title domain="2" number="264">Option für SC %d1" xmlns="urn:abb-robotics-elog-text nicht vorhanden </Title>
     <Title domain="2" number="265">SC-Softstopp-Fehler</Title>
-    <Title domain="2" number="266">PIN-Code-Anforderung für SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
-    <Title domain="2" number="267">Initialisierung bei SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> fehlgeschlagen </Title>
-    <Title domain="2" number="268">Falscher Typ der SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
-    <Title domain="2" number="269">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> Fehler in Motorkalibrierungsdaten </Title>
+    <Title domain="2" number="266">PIN-Code-Anforderung für SC %d1" xmlns="urn:abb-robotics-elog-text</Title>
+    <Title domain="2" number="267">Initialisierung bei SC %d1" xmlns="urn:abb-robotics-elog-text fehlgeschlagen </Title>
+    <Title domain="2" number="268">Falscher Typ der SC %d1" xmlns="urn:abb-robotics-elog-text</Title>
+    <Title domain="2" number="269">SC %d1" xmlns="urn:abb-robotics-elog-text Fehler in Motorkalibrierungsdaten </Title>
     <Title domain="2" number="270">Zugriffsfehler</Title>
     <Title domain="2" number="280">Symbolkonflikt</Title>
     <Title domain="2" number="281">E/A-Konfigurationsfehler</Title>
@@ -2369,7 +2369,7 @@
     <Title domain="2" number="291">Unbekannter Typ von Systemeingangsbeschränkung</Title>
     <Title domain="2" number="292">Unbekannte Systemeingangsbeschränkung</Title>
     <Title domain="2" number="293">Die angeforderte Aktion ist begrenzt</Title>
-    <Title domain="2" number="294">Aktion <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> kann nicht ausgeführt werden.</Title>
+    <Title domain="2" number="294">Aktion %s" xmlns="urn:abb-robotics-elog-text kann nicht ausgeführt werden.</Title>
     <Title domain="2" number="295">Signal nicht als Systemausgang verwendbar</Title>
     <Title domain="2" number="296">Falscher Taskname konfiguriert</Title>
     <Title domain="2" number="297">Kommunikationsfehler am Systemausgang</Title>
@@ -2377,7 +2377,7 @@
     <Title domain="2" number="307">Fehlfunktion Motorlüftung Achse 1</Title>
     <Title domain="2" number="308">Fehlfunktion Motorlüftung Achse 2</Title>
     <Title domain="2" number="309">Fehlfunktion Motorlüftung Achse 3</Title>
-    <Title domain="2" number="310">Kommunikation mit SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> fehlgeschlagen </Title>
+    <Title domain="2" number="310">Kommunikation mit SC %d1" xmlns="urn:abb-robotics-elog-text fehlgeschlagen </Title>
     <Title domain="2" number="311">Sicherheitskreis 1 geöffnet </Title>
     <Title domain="2" number="312">Sicherheitskreis 2 geöffnet </Title>
     <Title domain="2" number="313">Überwachungsfehler Sicherheitskreis 1</Title>
@@ -2389,7 +2389,7 @@
     <Title domain="2" number="322">Positiver Wertüberlauf</Title>
     <Title domain="2" number="323">Negativer Wertüberlauf</Title>
     <Title domain="2" number="324">Falsches Argument für System-E/A-Signal</Title>
-    <Title domain="2" number="325">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" />-Sicherheitsüberwachung nicht aktiviert</Title>
+    <Title domain="2" number="325">SC %d1" xmlns="urn:abb-robotics-elog-text-Sicherheitsüberwachung nicht aktiviert</Title>
     <Title domain="2" number="326">Falsches Argument für System-E/A-Signal</Title>
     <Title domain="2" number="350">Ungültiger Taskname</Title>
     <Title domain="2" number="351">Max. Anzahl an Tasks überschritten</Title>
@@ -2399,9 +2399,9 @@
     <Title domain="2" number="355">Name der mech. Einheitengruppe nicht korrekt</Title>
     <Title domain="2" number="356">Max. Anzahl an Bewegungstasks überschritten</Title>
     <Title domain="2" number="357">Keine Bewegungstask konfiguriert</Title>
-    <Title domain="2" number="358">Keine Mitglieder von <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> konfiguriert</Title>
-    <Title domain="2" number="359">Cfg-Typ <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> ist konfiguriert</Title>
-    <Title domain="2" number="360">Unbekanntes Ereignis in cfg-Typ <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="2" number="358">Keine Mitglieder von %s" xmlns="urn:abb-robotics-elog-text konfiguriert</Title>
+    <Title domain="2" number="359">Cfg-Typ %s" xmlns="urn:abb-robotics-elog-text ist konfiguriert</Title>
+    <Title domain="2" number="360">Unbekanntes Ereignis in cfg-Typ %s" xmlns="urn:abb-robotics-elog-text</Title>
     <Title domain="2" number="361">Nur gemeinsam benutzte Module in gemeinsam benutzter Task</Title>
     <Title domain="2" number="362">Kein definierter Taskname</Title>
     <Title domain="2" number="363">Modul ist kein Systemmodul</Title>
@@ -2439,51 +2439,51 @@
     <Title domain="2" number="443">Mehrere Firmware-Upgrade-Neustarts</Title>
     <Title domain="2" number="444">Die SD-Speicherkarte wurde entfernt</Title>
     <Title domain="2" number="445">Der Adapter von USB auf seriell wurde entfernt</Title>
-    <Title domain="2" number="450">CBC-Geschwindigkeit von SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> überschritten </Title>
-    <Title domain="2" number="451">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> nicht synchronisiert </Title>
-    <Title domain="2" number="452">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> synchronisiert </Title>
-    <Title domain="2" number="453">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - falsche Synch.- Position </Title>
-    <Title domain="2" number="454">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Servo Lag-Limit überschritten </Title>
-    <Title domain="2" number="455">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - falscher Positionswert </Title>
-    <Title domain="2" number="456">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Timeout für Referenzdaten </Title>
-    <Title domain="2" number="457">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> Sicherheitskonfiguration geändert </Title>
-    <Title domain="2" number="458">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - interner Fehler </Title>
-    <Title domain="2" number="459">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - E/A-Fehler </Title>
-    <Title domain="2" number="460">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Sicherheitskonfiguration nicht gefunden </Title>
-    <Title domain="2" number="461">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Roboterkonfiguration nicht gefunden </Title>
-    <Title domain="2" number="462">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Kalibrierungsoffset nicht gefunden </Title>
-    <Title domain="2" number="463">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Sicherheitskonfiguration geladen </Title>
-    <Title domain="2" number="464">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - OSR-Grenze überschritten </Title>
-    <Title domain="2" number="465">SAS-Geschwindigkeit von SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> überschritten </Title>
-    <Title domain="2" number="466">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - E/A-Fehler </Title>
-    <Title domain="2" number="467">STS-Geschwindigkeit von SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> überschritten </Title>
-    <Title domain="2" number="468">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - STZ-Überschreitung </Title>
-    <Title domain="2" number="469">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - SAR-Überschreitung </Title>
-    <Title domain="2" number="470">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Synchronisierungsvorwarnung </Title>
-    <Title domain="2" number="471">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Synchronisierungs-Timeout </Title>
-    <Title domain="2" number="472">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - neue Sicherheitskonfiguration </Title>
-    <Title domain="2" number="473">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Wertekonflikt </Title>
-    <Title domain="2" number="474">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - E/A-Versorgungsfehler </Title>
-    <Title domain="2" number="475">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Synchronisierung abgelehnt </Title>
-    <Title domain="2" number="476">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> deaktiviert </Title>
-    <Title domain="2" number="477">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - SMB-Kommunikationsfehler </Title>
-    <Title domain="2" number="478">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Fehler bei Netzstromversorgung </Title>
-    <Title domain="2" number="479">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - externe Achse fehlt </Title>
-    <Title domain="2" number="480">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> SST-Überschreitung </Title>
-    <Title domain="2" number="481">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - OVR aktiv </Title>
-    <Title domain="2" number="482">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - OVR-Timeout </Title>
-    <Title domain="2" number="483">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - CBC bald erforderlich </Title>
-    <Title domain="2" number="484">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> CBC muss durchgeführt werden </Title>
-    <Title domain="2" number="485">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Bremsdrehmoment zu gering </Title>
-    <Title domain="2" number="486">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> CBC unterbrochen oder fehlerhaft </Title>
-    <Title domain="2" number="487">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - unsynchronisierte Geschwindigkeit überschritten </Title>
-    <Title domain="2" number="488">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Zeitlimit für unsynch. Zustand abgelaufen </Title>
-    <Title domain="2" number="489">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> wurde deaktiviert </Title>
-    <Title domain="2" number="490">OVR-Geschwindigkeit von SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> überschritten </Title>
-    <Title domain="2" number="491">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - Override während Start aktiv </Title>
-    <Title domain="2" number="492">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> SST-Überschreitung bei Bremsentest</Title>
-    <Title domain="2" number="493">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - SBR ausgelöst </Title>
-    <Title domain="2" number="494">SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> - fehlerhafter Werkzeugwechsel </Title>
+    <Title domain="2" number="450">CBC-Geschwindigkeit von SC %d1" xmlns="urn:abb-robotics-elog-text überschritten </Title>
+    <Title domain="2" number="451">SC %d1" xmlns="urn:abb-robotics-elog-text nicht synchronisiert </Title>
+    <Title domain="2" number="452">SC %d1" xmlns="urn:abb-robotics-elog-text synchronisiert </Title>
+    <Title domain="2" number="453">SC %d1" xmlns="urn:abb-robotics-elog-text - falsche Synch.- Position </Title>
+    <Title domain="2" number="454">SC %d1" xmlns="urn:abb-robotics-elog-text - Servo Lag-Limit überschritten </Title>
+    <Title domain="2" number="455">SC %d1" xmlns="urn:abb-robotics-elog-text - falscher Positionswert </Title>
+    <Title domain="2" number="456">SC %d1" xmlns="urn:abb-robotics-elog-text - Timeout für Referenzdaten </Title>
+    <Title domain="2" number="457">SC %d1" xmlns="urn:abb-robotics-elog-text Sicherheitskonfiguration geändert </Title>
+    <Title domain="2" number="458">SC %d1" xmlns="urn:abb-robotics-elog-text - interner Fehler </Title>
+    <Title domain="2" number="459">SC %d1" xmlns="urn:abb-robotics-elog-text - E/A-Fehler </Title>
+    <Title domain="2" number="460">SC %d1" xmlns="urn:abb-robotics-elog-text - Sicherheitskonfiguration nicht gefunden </Title>
+    <Title domain="2" number="461">SC %d1" xmlns="urn:abb-robotics-elog-text - Roboterkonfiguration nicht gefunden </Title>
+    <Title domain="2" number="462">SC %d1" xmlns="urn:abb-robotics-elog-text - Kalibrierungsoffset nicht gefunden </Title>
+    <Title domain="2" number="463">SC %d1" xmlns="urn:abb-robotics-elog-text - Sicherheitskonfiguration geladen </Title>
+    <Title domain="2" number="464">SC %d1" xmlns="urn:abb-robotics-elog-text - OSR-Grenze überschritten </Title>
+    <Title domain="2" number="465">SAS-Geschwindigkeit von SC %d1" xmlns="urn:abb-robotics-elog-text überschritten </Title>
+    <Title domain="2" number="466">SC %d1" xmlns="urn:abb-robotics-elog-text - E/A-Fehler </Title>
+    <Title domain="2" number="467">STS-Geschwindigkeit von SC %d1" xmlns="urn:abb-robotics-elog-text überschritten </Title>
+    <Title domain="2" number="468">SC %d1" xmlns="urn:abb-robotics-elog-text - STZ-Überschreitung </Title>
+    <Title domain="2" number="469">SC %d1" xmlns="urn:abb-robotics-elog-text - SAR-Überschreitung </Title>
+    <Title domain="2" number="470">SC %d1" xmlns="urn:abb-robotics-elog-text - Synchronisierungsvorwarnung </Title>
+    <Title domain="2" number="471">SC %d1" xmlns="urn:abb-robotics-elog-text - Synchronisierungs-Timeout </Title>
+    <Title domain="2" number="472">SC %d1" xmlns="urn:abb-robotics-elog-text - neue Sicherheitskonfiguration </Title>
+    <Title domain="2" number="473">SC %d1" xmlns="urn:abb-robotics-elog-text - Wertekonflikt </Title>
+    <Title domain="2" number="474">SC %d1" xmlns="urn:abb-robotics-elog-text - E/A-Versorgungsfehler </Title>
+    <Title domain="2" number="475">SC %d1" xmlns="urn:abb-robotics-elog-text - Synchronisierung abgelehnt </Title>
+    <Title domain="2" number="476">SC %d1" xmlns="urn:abb-robotics-elog-text deaktiviert </Title>
+    <Title domain="2" number="477">SC %d1" xmlns="urn:abb-robotics-elog-text - SMB-Kommunikationsfehler </Title>
+    <Title domain="2" number="478">SC %d1" xmlns="urn:abb-robotics-elog-text - Fehler bei Netzstromversorgung </Title>
+    <Title domain="2" number="479">SC %d1" xmlns="urn:abb-robotics-elog-text - externe Achse fehlt </Title>
+    <Title domain="2" number="480">SC %d1" xmlns="urn:abb-robotics-elog-text SST-Überschreitung </Title>
+    <Title domain="2" number="481">SC %d1" xmlns="urn:abb-robotics-elog-text - OVR aktiv </Title>
+    <Title domain="2" number="482">SC %d1" xmlns="urn:abb-robotics-elog-text - OVR-Timeout </Title>
+    <Title domain="2" number="483">SC %d1" xmlns="urn:abb-robotics-elog-text - CBC bald erforderlich </Title>
+    <Title domain="2" number="484">SC %d1" xmlns="urn:abb-robotics-elog-text CBC muss durchgeführt werden </Title>
+    <Title domain="2" number="485">SC %d1" xmlns="urn:abb-robotics-elog-text - Bremsdrehmoment zu gering </Title>
+    <Title domain="2" number="486">SC %d1" xmlns="urn:abb-robotics-elog-text CBC unterbrochen oder fehlerhaft </Title>
+    <Title domain="2" number="487">SC %d1" xmlns="urn:abb-robotics-elog-text - unsynchronisierte Geschwindigkeit überschritten </Title>
+    <Title domain="2" number="488">SC %d1" xmlns="urn:abb-robotics-elog-text - Zeitlimit für unsynch. Zustand abgelaufen </Title>
+    <Title domain="2" number="489">SC %d1" xmlns="urn:abb-robotics-elog-text wurde deaktiviert </Title>
+    <Title domain="2" number="490">OVR-Geschwindigkeit von SC %d1" xmlns="urn:abb-robotics-elog-text überschritten </Title>
+    <Title domain="2" number="491">SC %d1" xmlns="urn:abb-robotics-elog-text - Override während Start aktiv </Title>
+    <Title domain="2" number="492">SC %d1" xmlns="urn:abb-robotics-elog-text SST-Überschreitung bei Bremsentest</Title>
+    <Title domain="2" number="493">SC %d1" xmlns="urn:abb-robotics-elog-text - SBR ausgelöst </Title>
+    <Title domain="2" number="494">SC %d1" xmlns="urn:abb-robotics-elog-text - fehlerhafter Werkzeugwechsel </Title>
     <Title domain="2" number="501">Not-Aus-Kreis Bedienfeld offen</Title>
     <Title domain="2" number="502">Not-Aus-Kreis FlexPendant offen</Title>
     <Title domain="2" number="503">Not-Aus ext. Kat. 0 offen</Title>
@@ -2548,12 +2548,12 @@
     <Title domain="2" number="635">Zu viele Kameras verbunden</Title>
     <Title domain="2" number="636">Doppelter Kameraname</Title>
     <Title domain="8" number="1">
-            <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+            %s" xmlns="urn:abb-robotics-elog-text
         </Title>
     <Title domain="8" number="2">
-            <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+            %s" xmlns="urn:abb-robotics-elog-text
         </Title>
     <Title domain="8" number="3">
-            <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+            %s" xmlns="urn:abb-robotics-elog-text
         </Title>
 </ExtractTitles>

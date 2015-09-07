@@ -2,256 +2,256 @@
 <Domain xmlns="urn:abb-robotics-elog-text" elogDomain="ARL" domainNo="4" lang="de" elogTextVersion="1.0" min="775" max="1414">
   <Message number="775" eDefine="SYS_ERR_ARL_CNV_WAITDIST">
     <Title>Förderer-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Andere <arg format="%s" ordinal="2" />-Instruktion wartet auf eine Strecke zum Objekt.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sAndere %s-Instruktion wartet auf eine Strecke zum Objekt.Programmreferenz: %s</Description>
   </Message>
   <Message number="776" eDefine="SYS_ERR_ARL_CNV_WAITOBJ">
     <Title>Förderer-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Andere <arg format="%s" ordinal="2" />-Instruktion wartet auf das Objekt.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sAndere %s-Instruktion wartet auf das Objekt.Programmreferenz: %s</Description>
   </Message>
   <Message number="777" eDefine="SYS_ERR_ARL_CNV_CONNECTED">
     <Title>Förderer-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Instruktion <arg format="%s" ordinal="2" /> wurde bereits verbunden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sDie Instruktion %s wurde bereits verbunden.Programmreferenz: %s</Description>
+    <Actions>Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="778" eDefine="SYS_ERR_ARL_NEWERRNO_FAILED">
     <Title>Wertfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Buchung der neuen Fehlernummer <arg format="%s" ordinal="2" /> fehlgeschlagen. Anfangswert muss -1 oder der vorherige Wert sein.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sBuchung der neuen Fehlernummer %s fehlgeschlagen. Anfangswert muss -1 oder der vorherige Wert sein.Programmreferenz: %s</Description>
     <Actions>Anfangswert der neuen errnum-Variablen prüfen.</Actions>
   </Message>
   <Message number="779" eDefine="SYS_ERR_ARL_ERRNO_LOCAL">
     <Title>Fehlernummer lokal</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die RAPID-Anwender-Fehlernummer <arg format="%s" ordinal="2" /> darf in Routine nicht als lokal deklariert werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sDie RAPID-Anwender-Fehlernummer %s darf in Routine nicht als lokal deklariert werden.Programmreferenz: %s</Description>
     <Actions>errnum-Deklaration prüfen.</Actions>
   </Message>
   <Message number="780" eDefine="SYS_ERR_ARL_DATAOBJ_MISSING">
     <Title>Datenobjekt-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Kein gültiges Datenobjekt für Argument <arg format="%s" ordinal="2" /> der Instruktion <arg format="%s" ordinal="3" /> vorhanden. <p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Description>Task: %sKein gültiges Datenobjekt für Argument %s der Instruktion %s vorhanden. Programmreferenz: %s</Description>
     <Actions>Prüfen, ob richtiges Datenobjekt vorhanden ist.</Actions>
   </Message>
   <Message number="781" eDefine="SYS_ERR_ARL_FILE_INCORR">
     <Title>Dateifehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Parameter <arg format="%s" ordinal="2" /> entspricht keiner geladenen Textdatei.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sDer Parameter %s entspricht keiner geladenen Textdatei.Programmreferenz: %s</Description>
     <Actions>Prüfen, ob die Textdatei (richtig) installiert ist.</Actions>
   </Message>
   <Message number="782" eDefine="SYS_ERR_ARL_NOP_WRITE">
     <Title>Modusfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Datei oder serieller Kanal nicht zum Schreiben geöffnet.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sDatei oder serieller Kanal nicht zum Schreiben geöffnet.Programmreferenz: %s</Description>
     <Actions>Prüfen, wie die Datei oder der serielle Kanal geöffnet wurde.</Actions>
   </Message>
   <Message number="783" eDefine="SYS_ERR_ARL_NOP_CHAR">
     <Title>Modusfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Datei oder serieller Kanal ist nicht im zeichenorientierten Modus geöffnet.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sDatei oder serieller Kanal ist nicht im zeichenorientierten Modus geöffnet.Programmreferenz: %s</Description>
     <Actions>Prüfen, wie die Datei oder der serielle Kanal geöffnet wurde.</Actions>
   </Message>
   <Message number="784" eDefine="SYS_ERR_ARL_NOP_BIN">
     <Title>Modusfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Datei oder serieller Kanal ist nicht im binären Modus geöffnet.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sDatei oder serieller Kanal ist nicht im binären Modus geöffnet.Programmreferenz: %s</Description>
     <Actions>Prüfen, wie die Datei oder der serielle Kanal geöffnet wurde.</Actions>
   </Message>
   <Message number="785" eDefine="SYS_ERR_ARL_NOP_READ">
     <Title>Modusfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Datei oder serieller Kanal nicht zum Lesen geöffnet.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sDatei oder serieller Kanal nicht zum Lesen geöffnet.Programmreferenz: %s</Description>
     <Actions>Prüfen, wie die Datei oder der serielle Kanal geöffnet wurde.</Actions>
   </Message>
   <Message number="786" eDefine="SYS_ERR_ARL_INCONS_VAL">
     <Title>Lesefehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Ein oder mehr Byte wurde(n) nicht korrekt gelesen. Der Wert der gelesenen Daten ist möglicherweise inkonsistent.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sEin oder mehr Byte wurde(n) nicht korrekt gelesen. Der Wert der gelesenen Daten ist möglicherweise inkonsistent.Programmreferenz: %s</Description>
     <Consequences>Die Meldungsdaten sind nicht verwendbar, weil die Prüfsumme der empfangenen Meldung nicht mit dem beim Versenden berechneten Wert übereinstimmt.</Consequences>
-    <Causes>Möglicher Grund:<p />- Kommunikationsproblem<p />- Unterschiedlicher WriteAnyBin - ReadAnyBin-Softwareversion zwischen dem gesendeten WriteAnyBin und dem erhaltenen ReadAnyBin</Causes>
-    <Actions>Fehlerbehebung bei Kommunikationsproblem: <arg format="%s" ordinal="3" /></Actions>
+    <Causes>Möglicher Grund:- Kommunikationsproblem- Unterschiedlicher WriteAnyBin - ReadAnyBin-Softwareversion zwischen dem gesendeten WriteAnyBin und dem erhaltenen ReadAnyBin</Causes>
+    <Actions>Fehlerbehebung bei Kommunikationsproblem: %s</Actions>
   </Message>
   <Message number="787" eDefine="SYS_ERR_ARL_USER_FRAME">
     <Title>Anwender-Koordinatensystem-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Nicht möglich, koordiniertes Anwender-Koordinatensystem zu beziehen.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sNicht möglich, koordiniertes Anwender-Koordinatensystem zu beziehen.Programmreferenz: %s</Description>
   </Message>
   <Message number="788" eDefine="SYS_ERR_ARL_AXIS_INIT">
     <Title>Achsenfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Einzelachse nicht korrekt initialisiert.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sEinzelachse nicht korrekt initialisiert.Programmreferenz: %s</Description>
   </Message>
   <Message number="789" eDefine="SYS_ERR_ARL_FILEPATH_TOOLNG">
     <Title>Begrenzungsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />String-Länge des Arguments für den Dateipfad ist zu lang.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Causes>Maximal zulässige String-Länge für den kompletten Systemdateipfad beträgt <arg format="%s" ordinal="3" /> Zeichen.<p /></Causes>
+    <Description>Task: %sString-Länge des Arguments für den Dateipfad ist zu lang.Programmreferenz: %s</Description>
+    <Causes>Maximal zulässige String-Länge für den kompletten Systemdateipfad beträgt %s Zeichen.</Causes>
     <Actions>Pfadlänge verkürzen.</Actions>
   </Message>
   <Message number="790" eDefine="SYS_ERR_ARL_STRTOOLNG_ROL">
     <Title>Wertfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />RAPID-String ist zu lang.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sRAPID-String ist zu lang.Programmreferenz: %s</Description>
     <Causes>String-Wert überschreitet die maximal erlaubte Länge.</Causes>
-    <Actions>Programm so ändern, dass es kürzere Strings benutzt.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+    <Actions>Programm so ändern, dass es kürzere Strings benutzt.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="791" eDefine="SYS_ERR_ARL_IOENOSPC_ROL">
     <Title>E/A-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Kein Platz mehr auf der Einheit (Dateiname <arg format="%s" ordinal="2" />).  <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sKein Platz mehr auf der Einheit (Dateiname %s).  Programmreferenz: %s</Description>
+    <Actions>Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="792" eDefine="SYS_ERR_ARL_IOERRNO_ROL">
     <Title>E/A-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Datei-Öffnen-/Zugriffsfehler für Pfad <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>- Berechtigung prüfen, Datei schreibgeschützt?<p />- Prüfen, ob die Datei bzw. das Verzeichnis existiert.<p />- Prüfen, ob auf dem Gerät noch Speicherplatz vorhanden ist.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sDatei-Öffnen-/Zugriffsfehler für Pfad %s. Programmreferenz: %s</Description>
+    <Actions>- Berechtigung prüfen, Datei schreibgeschützt?- Prüfen, ob die Datei bzw. das Verzeichnis existiert.- Prüfen, ob auf dem Gerät noch Speicherplatz vorhanden ist.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="793" eDefine="SYS_ERR_ARL_TXDATA_MISSING">
     <Title>Fehler bei Installation der Texttabelle</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Kein falscher Textressourcenname oder keine falsche Indexnummer in der Textdatei.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sKein falscher Textressourcenname oder keine falsche Indexnummer in der Textdatei.Programmreferenz: %s</Description>
     <Consequences>Der Inhalt einiger Texttabellen wurde eventuell zerstört.</Consequences>
     <Actions>Fehler korrigieren, Kaltstart durchführen und erneut versuchen.</Actions>
   </Message>
   <Message number="794" eDefine="SYS_ERR_ARL_TXINDEX_EXIST">
     <Title>Fehler bei Installation der Texttabelle</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der in der Textressource angegebene Index existiert bereits im System.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Causes>- Fehler in der Indexnummerierung.<p />- Die Datei wurde zweimal installiert.</Causes>
+    <Description>Task: %sDer in der Textressource angegebene Index existiert bereits im System.Programmreferenz: %s</Description>
+    <Causes>- Fehler in der Indexnummerierung.- Die Datei wurde zweimal installiert.</Causes>
     <Actions>Bei Fehler im Index: Fehler korrigieren, Kaltstart durchführen und erneut versuchen.</Actions>
   </Message>
   <Message number="795" eDefine="SYS_ERR_ARL_TXMEMFULL">
     <Title>Fehler bei Installation der Texttabelle</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Systemspeicher für Texttabellen ist voll.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sSystemspeicher für Texttabellen ist voll.Programmreferenz: %s</Description>
     <Actions>Anzahl anwenderdefinierter Textstrings verringern, die von RAPID installiert wurden. Kaltstart durchführen und erneut versuchen.</Actions>
   </Message>
   <Message number="796" eDefine="SYS_ERR_ARL_CABQUE_FULL">
     <Title>Überlastfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Das System ist überlastet, sodass der eigentliche Auftrag nicht rechtzeitig fertig gestellt werden kann. <p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions> Auslastung des Hauptcomputers verringern und dazu z. B. wie folgt vorgehen: <p /> - WaitTime in die RAPID-Schleife hinzufügen <p /> - die Filterzeit der E/A-Signale erhöhen <p /> - zyklische Interrupts vermeiden</Actions>
+    <Description>Task: %sDas System ist überlastet, sodass der eigentliche Auftrag nicht rechtzeitig fertig gestellt werden kann. Programmreferenz: %s</Description>
+    <Actions> Auslastung des Hauptcomputers verringern und dazu z. B. wie folgt vorgehen:  - WaitTime in die RAPID-Schleife hinzufügen  - die Filterzeit der E/A-Signale erhöhen  - zyklische Interrupts vermeiden</Actions>
   </Message>
   <Message number="797" eDefine="SYS_ERR_ARL_IO_CON_LOST_NOT_TRIGG">
     <Title>E/A-Fehler</Title>
-    <Description>Zugriff auf E/A-Signal <arg format="%s" ordinal="1" /> in Einheit <arg format="%s" ordinal="2" /> nicht möglich. <p /></Description>
+    <Description>Zugriff auf E/A-Signal %s in Einheit %s nicht möglich. </Description>
     <Causes>Verbindung mit E/A-Einheit unterbrochen.</Causes>
     <Actions>Verbindung mit E/A-Einheit wiederaufbauen.</Actions>
   </Message>
   <Message number="798" eDefine="SYS_ERR_ARL_SYSTEM_RLEXE">
     <Title>Systemzugriffsfehler</Title>
     <Description>
-      <arg format="%s" ordinal="1" />
-      <p />
+      %s
+      
     </Description>
   </Message>
   <Message number="799" eDefine="SYS_ERR_ARL_SIG_NOT_DEF">
     <Title>Abarbeitungsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />TestSignRead verwendet Kanal ohne definiertes Signal.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sTestSignRead verwendet Kanal ohne definiertes Signal.Programmreferenz: %s</Description>
     <Actions>Signal für den Kanal mit TestSignDefine definieren.</Actions>
   </Message>
   <Message number="800" eDefine="SYS_ERR_ARL_TOOL">
     <Title>Werkzeugfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Komponente robhold im Werkzeug hat nicht den korrekten Wert.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Wert von robhold ändern.<p />Wenn der Roboter das Werkzeug hält, muss der Wert TRUE sein. Wenn der Roboter das Werkzeug nicht hält, d. h. wenn er ein stationäres Werkzeug ist, muss der Wert FALSE sein.</Actions>
+    <Description>Task: %sDie Komponente robhold im Werkzeug hat nicht den korrekten Wert.Programmreferenz: %s</Description>
+    <Actions>Wert von robhold ändern.Wenn der Roboter das Werkzeug hält, muss der Wert TRUE sein. Wenn der Roboter das Werkzeug nicht hält, d. h. wenn er ein stationäres Werkzeug ist, muss der Wert FALSE sein.</Actions>
   </Message>
   <Message number="801" eDefine="SYS_ERR_ARL_CALC_TOOL_FRAME">
     <Title>Berechnungsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Werkzeug-Koordinatensystem kann nicht berechnet werden. <p />Programmreferenz: <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Description>Task: %sDas Werkzeug-Koordinatensystem kann nicht berechnet werden. Programmreferenz: %s</Description>
     <Causes>Das Werkzeug-Koordinatensystem kann nicht mit den gewählten Näherungspunkten berechnet werden.</Causes>
     <Actions>Neue Näherungspunkte wählen, die so genau wie möglich sind. </Actions>
   </Message>
   <Message number="802" eDefine="SYS_ERR_ARL_SDB_FULL">
     <Title>Abarbeitungsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Abonnement nicht möglich.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sAbonnement nicht möglich.Programmreferenz: %s</Description>
     <Causes>Kein Speicher übrig für weiteres Abonnement dieser Variablen.</Causes>
     <Actions>Zum Fortsetzen muss der PZ auf das Hauptprogramm gesetzt werden.</Actions>
   </Message>
   <Message number="803" eDefine="SYS_ERR_ARL_TOO_LONG_ERR_MESS">
     <Title>Fehlermeldung zu lang</Title>
-    <Description>Folgende Fehlermeldung war zu lang und wurde abgeschnitten.<p />D. h. Sie können nicht die ganze Meldung lesen.<p /></Description>
+    <Description>Folgende Fehlermeldung war zu lang und wurde abgeschnitten.D. h. Sie können nicht die ganze Meldung lesen.</Description>
   </Message>
   <Message number="804" eDefine="SYS_ERR_ARL_NO_FOLLOW">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Argument 'type' in stoppointdata kann in den Instruktionen MoveJ, MoveAbsJ und MoveExtJ nicht followtime sein.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sDas Argument 'type' in stoppointdata kann in den Instruktionen MoveJ, MoveAbsJ und MoveExtJ nicht followtime sein.Programmreferenz: %s</Description>
     <Actions>'type' zu inpos oder stoptime ändern.</Actions>
   </Message>
   <Message number="805" eDefine="SYS_ERR_ARL_MOCGENINSTR">
     <Title>Bewegungsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Fehler von MocGenInstr.<p />Siehe Ursache in früherer Meldung.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sFehler von MocGenInstr.Siehe Ursache in früherer Meldung.Programmreferenz: %s</Description>
   </Message>
   <Message number="806" eDefine="SYS_ERR_ARL_IOFGENINSTR">
     <Title>IOF-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Fehler von IofGenInstr.<p />Siehe Ursache in früherer Meldung.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sFehler von IofGenInstr.Siehe Ursache in früherer Meldung.Programmreferenz: %s</Description>
   </Message>
   <Message number="807" eDefine="SYS_ERR_ARL_FILEEXIST">
     <Title>Dateifehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Datei <arg format="%s" ordinal="2" /> existiert bereits.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Zum Umbenennen oder Kopieren:<p />Dateiname ändern oder bestehende Datei entfernen.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sDie Datei %s existiert bereits.Programmreferenz: %s</Description>
+    <Actions>Zum Umbenennen oder Kopieren:Dateiname ändern oder bestehende Datei entfernen.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="811" eDefine="SYS_ERR_ARL_MSG_NOUNIT">
     <Title>Kein Kontakt mit Einheit</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Kein Kontakt mit der Einheit.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Causes>- eventuell wurde die Einheit deaktiviert (IODisable "UNIT1", 1;).<p />- Keine Stromversorgung zur Einheit.</Causes>
+    <Description>Task: %sKein Kontakt mit der Einheit.Programmreferenz: %s</Description>
+    <Causes>- eventuell wurde die Einheit deaktiviert (IODisable "UNIT1", 1;).- Keine Stromversorgung zur Einheit.</Causes>
   </Message>
   <Message number="812" eDefine="SYS_ERR_ARL_NOT_ALLOWED_MODE">
     <Title>Abarbeitungsfehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Dieses Programm darf nicht im Abarbeitungsmodus ohne Bewegung ausgeführt werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sDieses Programm darf nicht im Abarbeitungsmodus ohne Bewegung ausgeführt werden.Programmreferenz: %s</Description>
     <Actions>Modus ändern. </Actions>
   </Message>
   <Message number="813" eDefine="SYS_ERR_ARL_MECUNIT_NOCONTROL">
     <Title>Abarbeitungsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Task darf die Instruktion <arg format="%s" ordinal="2" /> nicht ausführen. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sDie Task darf die Instruktion %s nicht ausführen. Programmreferenz: %s</Description>
     <Causes>Die Task ist nicht zum Steuern mechanischer Einheiten konfiguriert.</Causes>
     <Actions>Konfiguration ändern oder die Instruktion entfernen.</Actions>
   </Message>
   <Message number="814" eDefine="SYS_ERR_ARL_REGAIN_REJECTED">
     <Title>Abarbeitungsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />StartMove konnte Wiederanfahrstrecke nicht erhalten.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sStartMove konnte Wiederanfahrstrecke nicht erhalten.Programmreferenz: %s</Description>
     <Causes>Anwendungsfehler.</Causes>
-    <Actions>Bahn neu starten.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /><p /></Actions>
+    <Actions>Bahn neu starten.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="815" eDefine="SYS_ERR_ARL_INDXXX_AXNO">
     <Title>Achsennummer nicht vorhanden</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unbekannte Achsennummer für die mechanische Einheit <arg format="%s" ordinal="2" /><p />Programmreferenz: <arg format="%s" ordinal="3" /></Description>
+    <Description>Task: %sUnbekannte Achsennummer für die mechanische Einheit %sProgrammreferenz: %s</Description>
     <Actions>Wert für das Argument - Axis - prüfen.</Actions>
   </Message>
   <Message number="816" eDefine="SYS_ERR_ARL_ROLGENINSTR">
     <Title>RolGenInstr-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Fehler von Instruktion RolGenInstr.<p />Ursache siehe vorheriger Benutzer oder vorherige interne Fehlermeldung.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p />Fehlerbehebung: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sFehler von Instruktion RolGenInstr.Ursache siehe vorheriger Benutzer oder vorherige interne Fehlermeldung.Programmreferenz: %sFehlerbehebung: %s</Description>
   </Message>
   <Message number="1000" eDefine="SYS_ERR_ARL_ITMSRC_EXISTS">
     <Title>Auswahlliste vorhanden</Title>
-    <Description>Auswahlliste <arg format="%s" ordinal="1" /> existiert bereits. Zwei Auswahllisten dürfen nicht denselben Namen haben.<p /></Description>
+    <Description>Auswahlliste %s existiert bereits. Zwei Auswahllisten dürfen nicht denselben Namen haben.</Description>
   </Message>
   <Message number="1001" eDefine="SYS_ERR_ARL_ITMSRC_NO_NAME">
     <Title>Kein gültiger Name</Title>
     <Description>
-      <arg format="%s" ordinal="1" /> oder <arg format="%s" ordinal="2" /> wählen.<p /></Description>
+      %s oder %s wählen.</Description>
   </Message>
   <Message number="1002" eDefine="SYS_ERR_ARL_ITMSRC_BUFF_SIZE_EXCEEDED">
     <Title>Puffergröße überschritten</Title>
-    <Description>Schwerer interner Fehler für Auswahlliste <arg format="%s" ordinal="1" />. Warmstart oder Kaltstart versuchen. Diesen Fehler bitte melden.<p /></Description>
+    <Description>Schwerer interner Fehler für Auswahlliste %s. Warmstart oder Kaltstart versuchen. Diesen Fehler bitte melden.</Description>
   </Message>
   <Message number="1003" eDefine="SYS_ERR_ARL_ITMSRC_OBJ_UNDEF">
     <Title>Auswahlliste nicht definiert</Title>
-    <Description>Das Auswahllisten-Objekt wurde nicht definiert.<p /></Description>
+    <Description>Das Auswahllisten-Objekt wurde nicht definiert.</Description>
   </Message>
   <Message number="1004" eDefine="SYS_ERR_ARL_ITMSRC_INTERNAL_ERROR">
     <Title>Itmsrc - interner Fehler</Title>
-    <Description>Interner Fehler für Auswahlliste <arg format="%s" ordinal="1" />. <p />Fehlertyp: <arg format="%s" ordinal="2" />. <p /></Description>
+    <Description>Interner Fehler für Auswahlliste %s. Fehlertyp: %s. </Description>
   </Message>
   <Message number="1005" eDefine="SYS_ERR_ARL_ITMSRC_FLUSH_FIRST">
     <Title>Auswahlliste zuerst löschen</Title>
-    <Description>Auswahlliste <arg format="%s" ordinal="1" /> muss vor ihrer Verwendung gelöscht werden.<p /></Description>
+    <Description>Auswahlliste %s muss vor ihrer Verwendung gelöscht werden.</Description>
   </Message>
   <Message number="1006" eDefine="SYS_ERR_ARL_ITMSRC_ACK_FIRST">
     <Title>Auswahlziel erst bestätigen</Title>
-    <Description>Das Auswahlziel muss vor erneutem Abarbeiten der Instruktion GetItmTgt(s) bestätigt werden.<p />Fehler in Auswahlliste <arg format="%s" ordinal="1" />. <p /></Description>
+    <Description>Das Auswahlziel muss vor erneutem Abarbeiten der Instruktion GetItmTgt(s) bestätigt werden.Fehler in Auswahlliste %s. </Description>
   </Message>
   <Message number="1007" eDefine="SYS_ERR_ARL_ITMSRC_ITMTGT_BUFF_FULL">
     <Title>Puffer Auswahlziel voll</Title>
-    <Description>Auswahlzielpuffer voll für Auswahlliste <arg format="%s" ordinal="1" />.<p /></Description>
+    <Description>Auswahlzielpuffer voll für Auswahlliste %s.</Description>
   </Message>
   <Message number="1008" eDefine="SYS_ERR_ARL_ITMSRC_CNV_EIO_INIT">
     <Title>Förderer-E/A-Init-Fehler</Title>
-    <Description>Fehler in der Initialisierung des E/A-Signals für die Auswahlliste <arg format="%s" ordinal="1" />, für Förderer<p /><arg format="%s" ordinal="2" />. E/A-Signalname <arg format="%s" ordinal="3" />. <p /></Description>
+    <Description>Fehler in der Initialisierung des E/A-Signals für die Auswahlliste %s, für Förderer%s. E/A-Signalname %s. </Description>
   </Message>
   <Message number="1009" eDefine="SYS_ERR_ARL_ITMSRC_CNV_DOES_NOT_EXIST">
     <Title>Förderer existiert nicht</Title>
-    <Description>Fehler in Auswahlliste <arg format="%s" ordinal="1" />. Der Förderer <arg format="%s" ordinal="2" /> existiert nicht.<p /></Description>
+    <Description>Fehler in Auswahlliste %s. Der Förderer %s existiert nicht.</Description>
   </Message>
   <Message number="1010" eDefine="SYS_ERR_ARL_ITMSRC_CNV_NO_NAME">
     <Title>Kein Förderername angegeben</Title>
-    <Description>Fehler in Auswahlliste <arg format="%s" ordinal="1" />. Kein Förderername angegeben.<p /></Description>
+    <Description>Fehler in Auswahlliste %s. Kein Förderername angegeben.</Description>
   </Message>
   <Message number="1011" eDefine="SYS_ERR_ARL_ITMSRC_CNV_LIMITS">
     <Title>Förderergrenzen-Fehler</Title>
-    <Description>Fehler in Auswahlliste <arg format="%s" ordinal="1" />, Förderer <arg format="%s" ordinal="2" />. Grenzen wurden falsch angegeben.<p /></Description>
+    <Description>Fehler in Auswahlliste %s, Förderer %s. Grenzen wurden falsch angegeben.</Description>
   </Message>
   <Message number="1012" eDefine="SYS_ERR_ARL_ITMSRC_CNV_DEFINED_TOO_LATE">
     <Title>Fördererdaten zu spät definiert</Title>
-    <Description>Fehler in Auswahlliste <arg format="%s" ordinal="1" />, Förderer <arg format="%s" ordinal="2" />. Die Instruktion ItmSrcCnvDat muss vor der Instruktion ItmSrcFlush aufgerufen werden.<p /></Description>
+    <Description>Fehler in Auswahlliste %s, Förderer %s. Die Instruktion ItmSrcCnvDat muss vor der Instruktion ItmSrcFlush aufgerufen werden.</Description>
   </Message>
   <Message number="1050" eDefine="SYS_ERR_ARL_CNV_ACTIV_PROF_ERROR">
     <Title>Profil nicht aktiviert</Title>
@@ -276,181 +276,181 @@
   </Message>
   <Message number="1100" eDefine="SYS_ERR_ARL_CORR_NOFREE">
     <Title>Zu viele Korrekturen</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Max. 5 Korrekturdeskriptoren dürfen verbunden werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Anzahl verbundener Deskriptoren prüfen.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /><p /></Actions>
+    <Description>Task: %sMax. 5 Korrekturdeskriptoren dürfen verbunden werden.Programmreferenz: %s</Description>
+    <Actions>Anzahl verbundener Deskriptoren prüfen.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1101" eDefine="SYS_ERR_ARL_CORR_NOTCONN">
     <Title>Korrektur nicht verbunden</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Auf Korrekturdeskriptor kann nicht geschrieben werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Prüfen, ob der aktuelle Korrekturdeskriptor verbunden ist.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+    <Description>Task: %sAuf Korrekturdeskriptor kann nicht geschrieben werden.Programmreferenz: %s</Description>
+    <Actions>Prüfen, ob der aktuelle Korrekturdeskriptor verbunden ist.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1102" eDefine="SYS_ERR_ARL_CORR_NOOBJECT">
     <Title>Keine Korrekturen verbunden</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Korrektur nicht lesbar.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sKorrektur nicht lesbar.Programmreferenz: %s</Description>
     <Causes>Kein Korrekturdeskriptor verbunden.</Causes>
-    <Actions>Prüfen, ob ein Korrekturgenerator verbunden ist.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /><p /></Actions>
+    <Actions>Prüfen, ob ein Korrekturgenerator verbunden ist.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1200" eDefine="SYS_ERR_ARL_OPEN_SGUN">
     <Title>Servowerkzeug öffnen - Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Nicht möglich, Servozange im Motoren-Aus-Zustand zu aktivieren.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>MOTOREN EIN betätigen und erneut versuchen.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+    <Description>Task: %sNicht möglich, Servozange im Motoren-Aus-Zustand zu aktivieren.Programmreferenz: %s</Description>
+    <Actions>MOTOREN EIN betätigen und erneut versuchen.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1201" eDefine="SYS_ERR_ARL_CLOSE_SGUN">
     <Title>Servowerkzeug schließen - Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Nicht möglich, Servozange im Motoren-Aus-Zustand zu schließen.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>MOTOREN EIN betätigen und erneut versuchen.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+    <Description>Task: %sNicht möglich, Servozange im Motoren-Aus-Zustand zu schließen.Programmreferenz: %s</Description>
+    <Actions>MOTOREN EIN betätigen und erneut versuchen.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1202" eDefine="SYS_ERR_ARL_CALIB_SGUN">
     <Title>Servowerkzeug-Kalibrierungsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Nicht möglich, Servozange im Motoren-Aus-Zustand zu kalibrieren.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>MOTOREN EIN betätigen und erneut versuchen.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+    <Description>Task: %sNicht möglich, Servozange im Motoren-Aus-Zustand zu kalibrieren.Programmreferenz: %s</Description>
+    <Actions>MOTOREN EIN betätigen und erneut versuchen.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1203" eDefine="SYS_ERR_ARL_NO_SGUN">
     <Title>Servowerkzeug-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Servowerkzeug <arg format="%s" ordinal="2" /> existiert nicht.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Name der mechanischen Einheit prüfen.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sServowerkzeug %s existiert nicht.Programmreferenz: %s</Description>
+    <Actions>Name der mechanischen Einheit prüfen.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1204" eDefine="SYS_ERR_ARL_SGUN_ESTOP_BGTASK">
     <Title>Servowerkzeug-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Not-Aus bei Abarbeiten der Instruktion in Hintergrundtask.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Nach Rücksetzen von Not-Aus erneut versuchen.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+    <Description>Task: %sNot-Aus bei Abarbeiten der Instruktion in Hintergrundtask.Programmreferenz: %s</Description>
+    <Actions>Nach Rücksetzen von Not-Aus erneut versuchen.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1205" eDefine="SYS_ERR_ARL_SGUN_NOT_OPEN">
     <Title>Servowerkzeug-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Servozange schließen nicht möglich. Zange ist nicht offen.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Nach Öffnen der Zange erneut versuchen.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+    <Description>Task: %sServozange schließen nicht möglich. Zange ist nicht offen.Programmreferenz: %s</Description>
+    <Actions>Nach Öffnen der Zange erneut versuchen.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1206" eDefine="SYS_ERR_ARL_SGUN_NEG_VAL">
     <Title>Servowerkzeug-Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Wert von Parameter 'PrePos' muss positiv sein.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Parameterwert ändern.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+    <Description>Task: %sWert von Parameter 'PrePos' muss positiv sein.Programmreferenz: %s</Description>
+    <Actions>Parameterwert ändern.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1207" eDefine="SYS_ERR_ARL_SGUN_NOT_INIT">
     <Title>Servowerkzeug-Initialisierungsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Position für Servowerkzeug <arg format="%s" ordinal="2" /> ist nicht initialisiert.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Parameterwert ändern oder Werkzeugwechsel-Kalibrierung.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sPosition für Servowerkzeug %s ist nicht initialisiert.Programmreferenz: %s</Description>
+    <Actions>Parameterwert ändern oder Werkzeugwechsel-Kalibrierung.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1208" eDefine="SYS_ERR_ARL_SGUN_NOT_SYNCH">
     <Title>Servowerkzeug-Synchronisierungsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Elektroden für Servowerkzeug <arg format="%s" ordinal="2" /> sind nicht synchronisiert.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Mit ManServiceCalib synchronisieren oder Werkzeugwechsel-Kalibrierung ausführen.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sDie Elektroden für Servowerkzeug %s sind nicht synchronisiert.Programmreferenz: %s</Description>
+    <Actions>Mit ManServiceCalib synchronisieren oder Werkzeugwechsel-Kalibrierung ausführen.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1209" eDefine="SYS_ERR_ARL_SGUN_NOT_ACTIVE">
     <Title>Servowerkzeug-Aktivierungsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Servowerkzeug <arg format="%s" ordinal="2" /> ist nicht aktiviert.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Mit ActUnit aktivieren.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sServowerkzeug %s ist nicht aktiviert.Programmreferenz: %s</Description>
+    <Actions>Mit ActUnit aktivieren.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1210" eDefine="SYS_ERR_ARL_SGUN_MOTORS_OFF">
     <Title>Servowerkzeug-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Abarbeiten der Instruktion im MOTOREN AUS-Zustand für Servowerkzeug <arg format="%.16s" ordinal="2" /> nicht möglich. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>MOTOREN EIN betätigen und erneut versuchen.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sAbarbeiten der Instruktion im MOTOREN AUS-Zustand für Servowerkzeug %.16s2 nicht möglich. Programmreferenz: %s</Description>
+    <Actions>MOTOREN EIN betätigen und erneut versuchen.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1211" eDefine="SYS_ERR_ARL_RECAL_SGUN">
     <Title>Servowerkzeug-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Neukalibrierung der Zange <arg format="%s" ordinal="2" /> nicht möglich. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Werte prüfen und erneut versuchen.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sNeukalibrierung der Zange %s nicht möglich. Programmreferenz: %s</Description>
+    <Actions>Werte prüfen und erneut versuchen.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1212" eDefine="SYS_ERR_ARL_SGUN_NOT_CLOSED">
     <Title>Fehler Servowerkzeug</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Kraft kann nicht geändert werden. Die Zange ist nicht geschlossen. <p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Nach Schließen der Zange erneut versuchen. <p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+    <Description>Task: %sKraft kann nicht geändert werden. Die Zange ist nicht geschlossen. Programmreferenz: %s</Description>
+    <Actions>Nach Schließen der Zange erneut versuchen. Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1300" eDefine="SYS_ERR_ARL_JOINT_NO_OOR">
     <Title>Argumentfehler</Title>
-    <Description>Das Argument 'Joint' muss zwischen 1 und <arg format="%s" ordinal="1" /> sein. <p /></Description>
+    <Description>Das Argument 'Joint' muss zwischen 1 und %s sein. </Description>
     <Actions>Wert prüfen und ändern.</Actions>
   </Message>
   <Message number="1301" eDefine="SYS_ERR_ARL_TYPE_GET_OOR">
     <Title>Argumentfehler</Title>
-    <Description>Das Argument 'Type' entspricht keinem Servicewert.<p /></Description>
+    <Description>Das Argument 'Type' entspricht keinem Servicewert.</Description>
   </Message>
   <Message number="1302" eDefine="SYS_ERR_ARL_TYPE_ZERO_OOR">
     <Title>Argumentfehler</Title>
-    <Description>Das Argument 'Type' entspricht keinem Servicewert.<p /></Description>
+    <Description>Das Argument 'Type' entspricht keinem Servicewert.</Description>
   </Message>
   <Message number="1303" eDefine="SYS_ERR_ARL_ROBOT_NO_OOR">
     <Title>Argumentfehler</Title>
-    <Description>Das Argument 'Robot' muss zwischen 1 und <arg format="%s" ordinal="1" /> sein. <p /></Description>
+    <Description>Das Argument 'Robot' muss zwischen 1 und %s sein. </Description>
     <Actions>Wert prüfen und ändern.</Actions>
   </Message>
   <Message number="1304" eDefine="SYS_ERR_ARL_TYPE_LEVEL_OOR">
     <Title>Argumentfehler</Title>
-    <Description>Das Argument 'Level' entspricht keinem Servicelevel.<p /></Description>
+    <Description>Das Argument 'Level' entspricht keinem Servicelevel.</Description>
   </Message>
   <Message number="1400" eDefine="SYS_ERR_ARL_INPAR_AXNOVAL">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Falsche Achsennummer.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Wert prüfen und ändern.<p />Start drücken, um fortzufahren.<p /></Actions>
+    <Description>Task: %sFalsche Achsennummer.Programmreferenz: %s</Description>
+    <Actions>Wert prüfen und ändern.Start drücken, um fortzufahren.</Actions>
   </Message>
   <Message number="1401" eDefine="SYS_ERR_ARL_IO_CON_LOST_NTRG_UNKN">
     <Title>E/A-Fehler</Title>
-    <Description>Zugriff auf E/A-Signal nicht möglich.<p />Signal und Einheit unbekannt.</Description>
-    <Causes>Verbindung mit E/A-Modul unterbrochen.<p /></Causes>
+    <Description>Zugriff auf E/A-Signal nicht möglich.Signal und Einheit unbekannt.</Description>
+    <Causes>Verbindung mit E/A-Modul unterbrochen.</Causes>
     <Actions>Verbindung mit E/A-Modul wieder aufbauen.</Actions>
   </Message>
   <Message number="1402" eDefine="SYS_ERR_ARL_ILLARGVAL_SP_AXSTR">
     <Title>Wertfehler</Title>
-    <Description>Task: <arg format="%16s" ordinal="1" /><p />Unzulässiger Argumentwert für Parameter 'Axis' oder 'Strength'.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %16s1Unzulässiger Argumentwert für Parameter 'Axis' oder 'Strength'.Programmreferenz: %s</Description>
     <Actions>Wert prüfen und ändern.</Actions>
   </Message>
   <Message number="1403" eDefine="SYS_ERR_ARL_ILLARGVAL_SP_TYPE">
     <Title>Wertfehler</Title>
-    <Description>Task: <arg format="%16s" ordinal="1" /><p />Unzulässiger Argumentwert für Parameter 'Speed Priority Type'.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %16s1Unzulässiger Argumentwert für Parameter 'Speed Priority Type'.Programmreferenz: %s</Description>
   </Message>
   <Message number="1404" eDefine="SYS_ERR_ARL_INPAR_MSUP_ONOFF">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument 'On' oder 'Off' fehlt.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sArgument 'On' oder 'Off' fehlt.Programmreferenz: %s</Description>
     <Actions>RAPID-Programm prüfen. Einer der Schalter 'On' oder 'Off' muss angegeben werden.</Actions>
   </Message>
   <Message number="1405" eDefine="SYS_ERR_ARL_INPAR_MSUP_ILLTV">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument 'TuneValue' nicht gemeinsam mit Argument 'Off' zulässig.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sArgument 'TuneValue' nicht gemeinsam mit Argument 'Off' zulässig.Programmreferenz: %s</Description>
     <Actions>RAPID-Programm prüfen und ändern.</Actions>
   </Message>
   <Message number="1406" eDefine="SYS_ERR_ARL_INPAR_TS_ADST">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Dieser TuneType ist nur gültig für Option 'Advanced Shape Tuning'.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sDieser TuneType ist nur gültig für Option 'Advanced Shape Tuning'.Programmreferenz: %s</Description>
     <Actions>TuneType ändern oder Option installieren.</Actions>
   </Message>
   <Message number="1407" eDefine="SYS_ERR_ARL_INPAR_RDONLY">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Symbol <arg format="%s" ordinal="2" /> ist schreibgeschützt.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sSymbol %s ist schreibgeschützt.Programmreferenz: %s</Description>
+    <Actions>Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1408" eDefine="SYS_ERR_ARL_INPAR_SYMNOTFND">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Symbol <arg format="%s" ordinal="2" /> wurde nicht gefunden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sDas Symbol %s wurde nicht gefunden.Programmreferenz: %s</Description>
+    <Actions>Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1409" eDefine="SYS_ERR_ARL_INPAR_AMBSYM">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Mehrdeutiges Symbol <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sMehrdeutiges Symbol %s. Programmreferenz: %s</Description>
     <Actions>RAPID-Programm prüfen und ändern.</Actions>
   </Message>
   <Message number="1410" eDefine="SYS_ERR_ARL_INPAR_SYMSRC">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Fehler bei Suche nach Symbol <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sFehler bei Suche nach Symbol %s. Programmreferenz: %s</Description>
+    <Actions>Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1411" eDefine="SYS_ERR_ARL_INPAR_UNKMOD">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unbekannter Modulname <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sUnbekannter Modulname %s. Programmreferenz: %s</Description>
     <Causes>Das Modul existiert nicht.</Causes>
     <Actions>RAPID-Programm prüfen und ändern.</Actions>
   </Message>
   <Message number="1412" eDefine="SYS_ERR_ARL_INPAR_AMBMOD">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Mehrdeutiges Modul <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sMehrdeutiges Modul %s. Programmreferenz: %s</Description>
     <Actions>RAPID-Programm prüfen und ändern.</Actions>
   </Message>
   <Message number="1413" eDefine="SYS_ERR_ARL_INPAR_AMBRTN">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Mehrdeutiger Routinenname <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sMehrdeutiger Routinenname %s. Programmreferenz: %s</Description>
     <Actions>RAPID-Programm prüfen und ändern.</Actions>
   </Message>
   <Message number="1414" eDefine="SYS_ERR_ARL_INPAR_UNKRTN">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unbekannter Routinenname <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sUnbekannter Routinenname %s. Programmreferenz: %s</Description>
     <Causes>Die Routine existiert nicht.</Causes>
     <Actions>RAPID-Programm prüfen und ändern.</Actions>
   </Message>

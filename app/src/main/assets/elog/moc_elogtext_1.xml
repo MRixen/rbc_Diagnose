@@ -2,411 +2,411 @@
 <Domain xmlns="urn:abb-robotics-elog-text" elogDomain="MOC" domainNo="5" lang="de" elogTextVersion="1.0" min="21" max="193">
   <Message number="21" eDefine="SYS_ERR_MOC_POS_SUPERVISION">
     <Title>Achspositionsfehler</Title>
-    <Description>Aktuelle Position von Achse <arg format="%s" ordinal="1" /> ist zu weit entfernt von der angeforderten Position.<p /></Description>
+    <Description>Aktuelle Position von Achse %s ist zu weit entfernt von der angeforderten Position.</Description>
     <Actions>Abstimmungsparameter, externe Kräfte oder Hardware prüfen.</Actions>
   </Message>
   <Message number="22" eDefine="SYS_ERR_MOC_RECTIFIED_MAINS_MISSING">
     <Title>Gleichrichterspannung zu gering</Title>
-    <Description>Die Antriebseinheiten können keine Gleichstromanschlussspannung erkennen oder die Spannung ist zu gering.<p /><p />Dies ist möglich, wenn die Verteilerschiene des Gleichstromanschlusses nicht korrekt eingesetzt ist oder die Hauptschütze nicht ordentlich schließen.</Description>
-    <Actions>Sicherstellen, dass die Gleichstromverteilerschiene korrekt zwischen Antriebseinheit und Gleichrichter eingesetzt ist. <p /><p />Prüfen, ob die Motoren-Ein-Schütze geschlossen sind und an der mit dem Gleichrichter verbundenen Seite Spannung vorhanden ist.</Actions>
+    <Description>Die Antriebseinheiten können keine Gleichstromanschlussspannung erkennen oder die Spannung ist zu gering.Dies ist möglich, wenn die Verteilerschiene des Gleichstromanschlusses nicht korrekt eingesetzt ist oder die Hauptschütze nicht ordentlich schließen.</Description>
+    <Actions>Sicherstellen, dass die Gleichstromverteilerschiene korrekt zwischen Antriebseinheit und Gleichrichter eingesetzt ist. Prüfen, ob die Motoren-Ein-Schütze geschlossen sind und an der mit dem Gleichrichter verbundenen Seite Spannung vorhanden ist.</Actions>
   </Message>
   <Message number="24" eDefine="SYS_ERR_MOC_SEGMENT_EXPECTED">
     <Title>Zonenbahn-Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Zonenbahn aus einem der folgenden Gründe als Stopppunkt abgearbeitet:<p />- Zeitverzögerung<p />- Zu eng programmierte Punkte<p />- Hohe CPU-Auslastung des Systems<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Anzahl der Instruktionen zwischen aufeinander folgenden Bewegungsinstruktionen verringern.<p />Geschwindigkeit reduzieren, größerer Abstand zwischen Positionen, /CONC-Option.<p />ipol_prefetch_time vergrößern.</Actions>
+    <Description>Task: %sZonenbahn aus einem der folgenden Gründe als Stopppunkt abgearbeitet:- Zeitverzögerung- Zu eng programmierte Punkte- Hohe CPU-Auslastung des SystemsProgrammreferenz: %s</Description>
+    <Actions>Anzahl der Instruktionen zwischen aufeinander folgenden Bewegungsinstruktionen verringern.Geschwindigkeit reduzieren, größerer Abstand zwischen Positionen, /CONC-Option.ipol_prefetch_time vergrößern.</Actions>
   </Message>
   <Message number="25" eDefine="SYS_ERR_MOC_ROBOT_MOVED">
     <Title>Neustart unterbrochen</Title>
-    <Description>Aktuelle Position ist zu weit von Bahn entfernt.<p /></Description>
+    <Description>Aktuelle Position ist zu weit von Bahn entfernt.</Description>
     <Actions>Neustart mit Rückfahren wiederholen.</Actions>
   </Message>
   <Message number="26" eDefine="SYS_ERR_MOC_SINGULARITY">
     <Title>Nahe an Singularität</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Roboter zu nahe an Singularität.<p />Programmref. <arg format="%s" ordinal="2" /><p />(Interner Code: <arg format="%d" ordinal="3" />) <p /></Description>
+    <Description>Task: %sRoboter zu nahe an Singularität.Programmref. %s(Interner Code: %d3) </Description>
     <Actions>Bahn weiter von Singularität entfernen oder achsweise Interpolation verwenden.</Actions>
   </Message>
   <Message number="27" eDefine="SYS_ERR_MOC_WORK_AREA_AXIS">
     <Title>Achse außerhalb des zulässigen Bereichs</Title>
-    <Description>Position für <arg format="%s" ordinal="2" /> Achse <arg format="%s" ordinal="1" /> ist außerhalb des Arbeitsbereichs.<p /></Description>
+    <Description>Position für %s Achse %s ist außerhalb des Arbeitsbereichs.</Description>
     <Actions>Achse mithilfe des Steuerknüppels in ihren Arbeitsbereich bewegen.</Actions>
   </Message>
   <Message number="28" eDefine="SYS_ERR_MOC_JOG_DIRECTION_AXIS">
     <Title>Bewegung in falsche Richtung</Title>
-    <Description>Position für <arg format="%s" ordinal="2" /> Achse <arg format="%s" ordinal="1" /> ist außerhalb des Arbeitsbereichs.<p /></Description>
+    <Description>Position für %s Achse %s ist außerhalb des Arbeitsbereichs.</Description>
     <Actions>Achse mithilfe des Steuerknüppels in entgegengesetzte Richtung bewegen.</Actions>
   </Message>
   <Message number="31" eDefine="SYS_ERR_MOC_CONFIG_STATE_ERROR">
     <Title>Befehl nicht zulässig</Title>
-    <Description>Systemparameter in MOTOREN-EIN-Zustand nicht änderbar.<p /></Description>
+    <Description>Systemparameter in MOTOREN-EIN-Zustand nicht änderbar.</Description>
     <Actions>In MOTOREN-AUS-Zustand wechseln.</Actions>
   </Message>
   <Message number="32" eDefine="SYS_ERR_MOC_CALIBRATE_STATE_ERROR">
     <Title>Befehl nicht zulässig</Title>
-    <Description>Kalibrierung wurde im MOTOREN-EIN-Zustand versucht.<p /></Description>
+    <Description>Kalibrierung wurde im MOTOREN-EIN-Zustand versucht.</Description>
     <Actions>In MOTOREN-AUS-Zustand wechseln.</Actions>
   </Message>
   <Message number="33" eDefine="SYS_ERR_MOC_COMMUTATE_STATE_ERROR">
     <Title>Befehl nicht zulässig</Title>
-    <Description>Kommutierung der Motoren wurde im MOTOREN-EIN-Zustand versucht.<p /></Description>
+    <Description>Kommutierung der Motoren wurde im MOTOREN-EIN-Zustand versucht.</Description>
     <Actions>In MOTOREN-AUS-Zustand wechseln.</Actions>
   </Message>
   <Message number="35" eDefine="SYS_ERR_MOC_SYNCHRONIZE_STATE_ERROR">
     <Title>Befehl nicht zulässig</Title>
-    <Description>Synchronisierung wurde im MOTOREN-EIN-Zustand versucht.<p /></Description>
+    <Description>Synchronisierung wurde im MOTOREN-EIN-Zustand versucht.</Description>
     <Actions>In MOTOREN-AUS-Zustand wechseln.</Actions>
   </Message>
   <Message number="36" eDefine="SYS_ERR_MOC_NO_RECOVER">
     <Title>Korrektes Anfahren nicht möglich</Title>
-    <Description>Stopp erfolgte wegen einer zu großen Anzahl nahe an Verschleifzonen liegender Punkte. Beim Neustart bewegt sich der Roboter an einen späteren Punkt im Programm.<p /></Description>
+    <Description>Stopp erfolgte wegen einer zu großen Anzahl nahe an Verschleifzonen liegender Punkte. Beim Neustart bewegt sich der Roboter an einen späteren Punkt im Programm.</Description>
     <Actions>Die Anzahl der nahen Punkte reduzieren, Abstand zwischen ihnen erhöhen oder Geschwindigkeit verringern.</Actions>
   </Message>
   <Message number="37" eDefine="SYS_ERR_MOC_RUN_ON_IGNORED">
     <Title>MOTOREN-EIN-Befehl ignoriert</Title>
-    <Description>MOTOREN-EIN-Befehl ignoriert, da vorheriger Stopp noch nicht bestätigt war.<p /></Description>
+    <Description>MOTOREN-EIN-Befehl ignoriert, da vorheriger Stopp noch nicht bestätigt war.</Description>
     <Actions>MOTOREN EIN wiederholen.</Actions>
   </Message>
   <Message number="41" eDefine="SYS_ERR_MOC_DECBUF_INTERPOLATE">
     <Title>Roboter in einer Singularität</Title>
-    <Description>Der Roboter ist zu nahe an einer Singularität.<p /></Description>
-    <Actions>Bei der Programmabarbeitung die Instruktion SingArea oder Achsinterpolation verwenden.<p />Manuelle Bewegung achsweise durchführen.</Actions>
+    <Description>Der Roboter ist zu nahe an einer Singularität.</Description>
+    <Actions>Bei der Programmabarbeitung die Instruktion SingArea oder Achsinterpolation verwenden.Manuelle Bewegung achsweise durchführen.</Actions>
   </Message>
   <Message number="42" eDefine="SYS_ERR_MOC_DECBUF_RECOMPUTE">
     <Title>Bahn konnte nicht erzeugt werden</Title>
     <Description>Die Bahn konnte nicht erzeugt werden.</Description>
-    <Actions>- Abstand zwischen zu nahen Punkten erhöhen.<p />- Geschwindigkeit verringern.<p />- Beschleunigung ändern.</Actions>
+    <Actions>- Abstand zwischen zu nahen Punkten erhöhen.- Geschwindigkeit verringern.- Beschleunigung ändern.</Actions>
   </Message>
   <Message number="50" eDefine="SYS_ERR_MOC_POSE_OUTSIDE_REACH">
     <Title>Position außer Reichweite</Title>
-    <Description>Position für <arg format="%s" ordinal="2" /> Achse <arg format="%s" ordinal="1" /> ist außerhalb des Arbeitsbereichs. <p /><p />Achse 1-6: Nummer der Achse, die den Fehler verursacht.<p />Achse 23: Eine Kombination der Achsen 2 und 3 verursacht den Fehler.</Description>
+    <Description>Position für %s Achse %s ist außerhalb des Arbeitsbereichs. Achse 1-6: Nummer der Achse, die den Fehler verursacht.Achse 23: Eine Kombination der Achsen 2 und 3 verursacht den Fehler.</Description>
     <Causes>Mögliche Ursache: ConfL_Off wird verwendet und Bewegung ist zu groß (mehr als 90 Grad für eine Achse).</Causes>
-    <Actions>- Werkobjekt oder Arbeitsbereich prüfen.<p />- Achse in Achskoordinaten bewegen.<p />- Parameter für Bewegungskonfiguration prüfen.<p />- Zwischenpunkte bei großen Bewegungen einfügen.</Actions>
+    <Actions>- Werkobjekt oder Arbeitsbereich prüfen.- Achse in Achskoordinaten bewegen.- Parameter für Bewegungskonfiguration prüfen.- Zwischenpunkte bei großen Bewegungen einfügen.</Actions>
   </Message>
   <Message number="52" eDefine="SYS_ERR_MOC_SPEED_SUPERVISION">
     <Title>Achsgeschwindigkeitsfehler </Title>
-    <Description>Geschwindigkeit der Achse <arg format="%s" ordinal="1" /> ist wegen Systemfehler oder Kollision im Vergleich zur angeforderten Geschwindigkeit falsch.<p /></Description>
-    <Actions>Abstimmungsparameter, externe Kräfte und Hardware prüfen.<p />Programmierte Geschwindigkeit verringern.</Actions>
+    <Description>Geschwindigkeit der Achse %s ist wegen Systemfehler oder Kollision im Vergleich zur angeforderten Geschwindigkeit falsch.</Description>
+    <Actions>Abstimmungsparameter, externe Kräfte und Hardware prüfen.Programmierte Geschwindigkeit verringern.</Actions>
   </Message>
   <Message number="53" eDefine="SYS_ERR_MOC_COUNTER_SUPERVISION">
     <Title>Zu große Umdrehungszählerdifferenz</Title>
-    <Description>Zu große Umdrehungszählerdifferenz für Achse <arg format="%s" ordinal="1" />. Das System hat eine zu große Differenz zwischen dem aktuellen Wert des Umdrehungszählers an der seriellen Messbaugruppe und dem vom System erwarteten Wert festgestellt.</Description>
+    <Description>Zu große Umdrehungszählerdifferenz für Achse %s. Das System hat eine zu große Differenz zwischen dem aktuellen Wert des Umdrehungszählers an der seriellen Messbaugruppe und dem vom System erwarteten Wert festgestellt.</Description>
     <Consequences>Der Roboter ist nicht kalibriert und kann manuell bewegt werden, aber kein Automatikbetrieb ist möglich.</Consequences>
     <Causes>Position des Roboterarms wurde eventuell manuell geändert während die Stromversorgung abgeschaltet war. Serielle Messbaugruppe, Resolver oder Kabel können auch fehlerhaft sein.</Causes>
-    <Actions>1) Umdrehungszähler aktualisieren.<p />2) Resolver und Kabel prüfen.<p />3) Serielle Messbaugruppe auf Fehler überprüfen. Gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
+    <Actions>1) Umdrehungszähler aktualisieren.2) Resolver und Kabel prüfen.3) Serielle Messbaugruppe auf Fehler überprüfen. Gegebenenfalls fehlerhafte Einheit austauschen.</Actions>
   </Message>
   <Message number="55" eDefine="SYS_ERR_MOC_LOAD_SUPERVISION">
     <Title>Achsenlast zu hoch</Title>
-    <Description>Aktuelles Drehmoment an Achse <arg format="%s" ordinal="1" /> zu hoch. Mögliche Ursache: falsche Lastdaten, zu hohe Beschleunigung, große externe Kräfte, niedrige Temperatur oder Hardwarefehler.<p /></Description>
-    <Actions>- Lastdaten prüfen.<p />- Beschleunigung oder Geschwindigkeit verringern.<p />- Hardware prüfen.</Actions>
+    <Description>Aktuelles Drehmoment an Achse %s zu hoch. Mögliche Ursache: falsche Lastdaten, zu hohe Beschleunigung, große externe Kräfte, niedrige Temperatur oder Hardwarefehler.</Description>
+    <Actions>- Lastdaten prüfen.- Beschleunigung oder Geschwindigkeit verringern.- Hardware prüfen.</Actions>
   </Message>
   <Message number="56" eDefine="SYS_ERR_MOC_JAM_SUPERVISION">
     <Title>Achskollision</Title>
-    <Description>Aktuelles Drehmoment von Achse <arg format="%s" ordinal="1" /> ist größer als angefordert bei niedriger oder null Geschwindigkeit. Mögliche Ursache: Kollision (festgefahrener Arm) oder Hardwarefehler.<p /></Description>
-    <Actions>Prüfen, ob Arm festgefahren ist.<p />Hardware prüfen.<p />Auf andere Meldungen des Hardware-Ereignisprotokolls prüfen.</Actions>
+    <Description>Aktuelles Drehmoment von Achse %s ist größer als angefordert bei niedriger oder null Geschwindigkeit. Mögliche Ursache: Kollision (festgefahrener Arm) oder Hardwarefehler.</Description>
+    <Actions>Prüfen, ob Arm festgefahren ist.Hardware prüfen.Auf andere Meldungen des Hardware-Ereignisprotokolls prüfen.</Actions>
   </Message>
   <Message number="57" eDefine="SYS_ERR_MOC_POWER_UP_POSITION_ERROR">
     <Title>Achse nicht synchron</Title>
-    <Description>Position von Achse <arg format="%s" ordinal="1" /> nach Abschalten/Netzausfall ist zu weit von der vorherigen Position entfernt.<p /></Description>
+    <Description>Position von Achse %s nach Abschalten/Netzausfall ist zu weit von der vorherigen Position entfernt.</Description>
     <Actions>Umdrehungszähler aktualisieren.</Actions>
   </Message>
   <Message number="58" eDefine="SYS_ERR_MOC_WEAVE_POSE_DEFINITION">
     <Title>Werkzeug-Koordinatensystem-Fehler</Title>
-    <Description>Z-Richtung des Werkzeug-Koordinatensystems ist beinahe parallel zur Bahnrichtung.<p /></Description>
+    <Description>Z-Richtung des Werkzeug-Koordinatensystems ist beinahe parallel zur Bahnrichtung.</Description>
     <Actions>Werkzeug-Koordinatensystem so ändern, dass mindestens 3 Grad Abweichung zwischen Z-Richtung und Bahnrichtung bestehen.</Actions>
   </Message>
   <Message number="60" eDefine="SYS_ERR_MOC_TARGET_OBJ_TO_MI">
     <Title>Falsches Werkzeug</Title>
-    <Description>Die Definition des stationären Werkzeugs ist ungültig.<p /></Description>
+    <Description>Die Definition des stationären Werkzeugs ist ungültig.</Description>
     <Actions>Werkzeug und Objektdaten prüfen.</Actions>
   </Message>
   <Message number="63" eDefine="SYS_ERR_MOC_CIRCLE_COLLAPSED">
     <Title>Kreisbogen unbestimmt</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Punkte falsch platziert. Ursache <arg format="%d" ordinal="3" />:<p />1. Endpunkt zu nahe an Startpunkt.<p />2. Kreispunkt zu nahe an Startpunkt.<p />3. Kreispunkt zu nahe an Endpunkt.<p />4. Ungewisse Orientierung.<p />5. Kreisbogen zu groß (&gt; 240 Grad).<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sPunkte falsch platziert. Ursache %d3:1. Endpunkt zu nahe an Startpunkt.2. Kreispunkt zu nahe an Startpunkt.3. Kreispunkt zu nahe an Endpunkt.4. Ungewisse Orientierung.5. Kreisbogen zu groß (&gt; 240 Grad).Programmreferenz: %s</Description>
     <Actions>Punkte des Kreises und Endpunkt der vorhergehenden Bewegungsinstruktion überprüfen. Die Punkte des Kreises können durch schrittweise Abarbeitung des Kreises im Einrichtbetrieb überprüft werden.</Actions>
   </Message>
   <Message number="65" eDefine="SYS_ERR_MOC_TRANSFORM_ERROR">
     <Title>Kinematikfehler</Title>
-    <Description>Ziel der Bewegung liegt außerhalb der Reichweite des Roboters oder zu nahe an einer Singularität. Roboter <arg format="%s" ordinal="1" />. <p /></Description>
+    <Description>Ziel der Bewegung liegt außerhalb der Reichweite des Roboters oder zu nahe an einer Singularität. Roboter %s. </Description>
     <Actions>Zielposition ändern.</Actions>
   </Message>
   <Message number="66" eDefine="SYS_ERR_MOC_ROBOT_NOT_ACTIVE">
     <Title>Roboter nicht aktiv</Title>
-    <Description>Versuch, Bewegung zu koordinieren oder Position zu berechnen bei deaktiviertem Roboter <arg format="%s" ordinal="1" />. <p /></Description>
+    <Description>Versuch, Bewegung zu koordinieren oder Position zu berechnen bei deaktiviertem Roboter %s. </Description>
     <Actions>Roboter über Taste 'Bewegungseinheit', dann Bewegungsfenster oder Programm aktivieren. Werkobjekt und Programm prüfen.</Actions>
   </Message>
   <Message number="67" eDefine="SYS_ERR_MOC_SINGLE_NOT_ACTIVE">
     <Title>Einheit nicht aktiv</Title>
-    <Description>Versuch, Bewegung zu koordinieren oder Position zu berechnen bei deaktivierter Einheit <arg format="%s" ordinal="1" />. <p /></Description>
+    <Description>Versuch, Bewegung zu koordinieren oder Position zu berechnen bei deaktivierter Einheit %s. </Description>
     <Actions>Einheit über Taste 'Bewegungseinheit', dann Bewegungsfenster oder Programm aktivieren. Werkobjekt und Programm prüfen.</Actions>
   </Message>
   <Message number="76" eDefine="SYS_ERR_MOC_QUATERNION_UNNORMALIZED">
     <Title>Orientierung unzulässig</Title>
-    <Description>Orientierung ist nicht korrekt definiert.<p /></Description>
+    <Description>Orientierung ist nicht korrekt definiert.</Description>
     <Actions>Präzise Normalisierung der Quaternion-Elemente durchführen.</Actions>
   </Message>
   <Message number="78" eDefine="SYS_ERR_MOC_NO_EVENT_OBJECT">
     <Title>Zu dichte Positionsfolge</Title>
-    <Description>Zu viele nahe beieinander liegende Positionen.<p /></Description>
+    <Description>Zu viele nahe beieinander liegende Positionen.</Description>
     <Actions>Abstand zwischen den aufeinander folgenden Positionen vergrößern.</Actions>
   </Message>
   <Message number="79" eDefine="SYS_ERR_MOC_WRIST_WEAVE_DEFINITION">
     <Title>Handgelenkpendel nicht verwendbar</Title>
-    <Description>Handgelenkpendeln ist nicht möglich.<p /></Description>
+    <Description>Handgelenkpendeln ist nicht möglich.</Description>
     <Actions>Kleinere Pendelamplitude oder längeren TCP verwenden.</Actions>
   </Message>
   <Message number="80" eDefine="SYS_ERR_MOC_CONFIG_POSE_INCOMPATIBLE">
     <Title>Position nicht kompatibel</Title>
-    <Description>Die gewünschte Position ist mit der gegebenen Roboterkonfiguration nicht erreichbar. Roboter <arg format="%s" ordinal="1" />. <p /></Description>
+    <Description>Die gewünschte Position ist mit der gegebenen Roboterkonfiguration nicht erreichbar. Roboter %s. </Description>
     <Actions>Roboterposition im Programm ändern.</Actions>
   </Message>
   <Message number="82" eDefine="SYS_ERR_MOC_SERVO_TASK_UNDERRUN">
     <Title>Verzögerungsgrenze</Title>
-    <Description>Bahnberechnung für mechanische Einheiten in Bewegungsplanung <arg format="%s" ordinal="1" /> überschreitet internes Zeitlimit. Die Bewegungstask wurde nicht innerhalb des Zeitlimits ausgeführt.</Description>
+    <Description>Bahnberechnung für mechanische Einheiten in Bewegungsplanung %s überschreitet internes Zeitlimit. Die Bewegungstask wurde nicht innerhalb des Zeitlimits ausgeführt.</Description>
     <Causes>Die CPU-Last ist zu hoch. Kann beispielsweise durch zu häufige E/A-Kommunikation verursacht werden.</Causes>
-    <Actions>1. Systemparameter High Interpolation Priority für betreffende Bewegungsplanung setzen.<p />2. CPU-Last durch eine oder mehrere der folgenden Aktionen verringern: <p />- Geschwindigkeit verringern<p />- AccSet ändern<p />- Singularität vermeiden (SingArea\Wrist). <p />- Bahnauflösung für betroffene Bewegungsplanung mit Systemparameter oder (für kritische Bewegungen) mit der RAPID-Instruktion PathResol erhöhen.</Actions>
+    <Actions>1. Systemparameter High Interpolation Priority für betreffende Bewegungsplanung setzen.2. CPU-Last durch eine oder mehrere der folgenden Aktionen verringern: - Geschwindigkeit verringern- AccSet ändern- Singularität vermeiden (SingArea\Wrist). - Bahnauflösung für betroffene Bewegungsplanung mit Systemparameter oder (für kritische Bewegungen) mit der RAPID-Instruktion PathResol erhöhen.</Actions>
   </Message>
   <Message number="85" eDefine="SYS_ERR_MOC_USER_FRAME_ERROR">
     <Title>Zu viele Anwender-Koordinatensysteme</Title>
-    <Description>Für mechanische Einheit <arg format="%s" ordinal="1" /> wurde mehr als ein Anwender-Koordinatensystem definiert.<p /></Description>
+    <Description>Für mechanische Einheit %s wurde mehr als ein Anwender-Koordinatensystem definiert.</Description>
     <Actions>Ein Anwender-Koordinatensystem entfernen oder eine weitere mechanische Einheit definieren.</Actions>
   </Message>
   <Message number="86" eDefine="SYS_ERR_MOC_JOINT_4_UNCERTAIN">
     <Title>Singularitätsproblem</Title>
-    <Description>Zu nahe an Handgelenksingularität in Bezug auf numerische Auflösung für Achse 4 des <arg format="%s" ordinal="1" />. <p /></Description>
+    <Description>Zu nahe an Handgelenksingularität in Bezug auf numerische Auflösung für Achse 4 des %s. </Description>
     <Actions>Zielposition um einige Inkremente ändern.</Actions>
   </Message>
   <Message number="87" eDefine="SYS_ERR_MOC_JOINT_6_UNCERTAIN">
     <Title>Singularitätsproblem</Title>
-    <Description>Zu nahe an Handgelenksingularität in Bezug auf numerische Auflösung für Achse 6 des <arg format="%s" ordinal="1" />. <p /></Description>
+    <Description>Zu nahe an Handgelenksingularität in Bezug auf numerische Auflösung für Achse 6 des %s. </Description>
     <Actions>Zielposition um einige Inkremente ändern.</Actions>
   </Message>
   <Message number="88" eDefine="SYS_ERR_MOC_NO_PATH">
     <Title>Neustart nicht möglich</Title>
-    <Description>Neustart auf der Bahn wegen früherem Fehler nicht möglich.<p /></Description>
+    <Description>Neustart auf der Bahn wegen früherem Fehler nicht möglich.</Description>
     <Actions>Programmzeiger versetzen, um Bahn zu löschen und neue Bewegung zu starten.</Actions>
   </Message>
   <Message number="89" eDefine="SYS_ERR_MOC_WEAVE_WARNING">
     <Title>Pendeln geändert</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Angefordertes Pendeln nicht möglich. Ursache:<p />- Hohe Pendelfrequenz<p />- Unerlaubter Wechsel der Pendelmethode<p />- SingArea/Wrist wird mit Handgelenkpendeln benutzt<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Pendelamplitude oder -zeit vergrößern.<p />Nicht zwischen Arm- und Handgelenkpendeln wechseln.<p />SingArea/Off mit Handgelenkpendeln benutzen.</Actions>
+    <Description>Task: %sAngefordertes Pendeln nicht möglich. Ursache:- Hohe Pendelfrequenz- Unerlaubter Wechsel der Pendelmethode- SingArea/Wrist wird mit Handgelenkpendeln benutztProgrammreferenz: %s</Description>
+    <Actions>Pendelamplitude oder -zeit vergrößern.Nicht zwischen Arm- und Handgelenkpendeln wechseln.SingArea/Off mit Handgelenkpendeln benutzen.</Actions>
   </Message>
   <Message number="91" eDefine="SYS_ERR_MOC_ACTIVATION">
     <Title>Neustart nicht möglich</Title>
-    <Description>Neustart nicht mehr möglich. Durch Änderung des Einheitenstatus wurde Programmneustart unmöglich.<p /></Description>
+    <Description>Neustart nicht mehr möglich. Durch Änderung des Einheitenstatus wurde Programmneustart unmöglich.</Description>
     <Actions>Programmzeiger versetzen, um neue Bewegung zu starten.</Actions>
   </Message>
   <Message number="92" eDefine="SYS_ERR_MOC_DSP_REPLY_MESSAGE">
     <Title>Achscomputer-Reaktion</Title>
-    <Description>Falsche Reaktion von Achscomputer.<p /></Description>
-    <Actions>Parameter der Bewegungskonfiguration prüfen.<p />Achscomputer-Hardware prüfen.</Actions>
+    <Description>Falsche Reaktion von Achscomputer.</Description>
+    <Actions>Parameter der Bewegungskonfiguration prüfen.Achscomputer-Hardware prüfen.</Actions>
   </Message>
   <Message number="94" eDefine="SYS_ERR_MOC_SERVO_TUNE_CTRLMA">
     <Title>TuneServo nicht möglich</Title>
-    <Description>Abstimmung der angegebenen Achse ist nicht vorgesehen.<p /></Description>
+    <Description>Abstimmung der angegebenen Achse ist nicht vorgesehen.</Description>
     <Actions>Sicherstellen, dass ein Parameter und/oder eine Achse gewählt ist, die mit TuneServo verwendet werden kann.</Actions>
   </Message>
   <Message number="96" eDefine="SYS_ERR_MOC_SERVO_TUNE_NOT_ALLOWED">
     <Title>TuneServo nicht zulässig</Title>
-    <Description>Abstimmung der angegebenen Achse ist nicht erlaubt.<p /></Description>
+    <Description>Abstimmung der angegebenen Achse ist nicht erlaubt.</Description>
     <Actions>Sicherstellen, dass ein Parameter und/oder eine Achse gewählt ist, die mit TuneServo verwendet werden kann.</Actions>
   </Message>
   <Message number="132" eDefine="SYS_ERR_MOC_COMMUTATION_ERROR">
     <Title>Kommutierung fehlgeschlagen</Title>
-    <Description>Kommutierung fehlgeschlagen für Achse <arg format="%s" ordinal="1" />. <p /></Description>
-    <Actions>- Neue Kommutierung durchführen.<p />- System neu starten.</Actions>
+    <Description>Kommutierung fehlgeschlagen für Achse %s. </Description>
+    <Actions>- Neue Kommutierung durchführen.- System neu starten.</Actions>
   </Message>
   <Message number="133" eDefine="SYS_ERR_MOC_TEST_SIGNAL_ERROR">
     <Title>Prüfsignalfehler</Title>
-    <Description>Keine Prüfsignale verfügbar für Roboter <arg format="%s" ordinal="1" />. <p /></Description>
+    <Description>Keine Prüfsignale verfügbar für Roboter %s. </Description>
     <Actions>Sicherstellen, dass korrekte Prüfsignale definiert sind.</Actions>
   </Message>
   <Message number="134" eDefine="SYS_ERR_MOC_SENSOR_CORRECTION_VECTOR_YZ">
     <Title>Korrekturvektor-Warnung</Title>
-    <Description>Berechnung des Sensorkorrekturvektors wegen früherem Fehler fehlgeschlagen.<p /></Description>
+    <Description>Berechnung des Sensorkorrekturvektors wegen früherem Fehler fehlgeschlagen.</Description>
     <Actions />
   </Message>
   <Message number="135" eDefine="SYS_ERR_MOC_SOFT_SERVO_CTRLMA">
     <Title>SoftAct nicht möglich</Title>
-    <Description>Softservo kann nicht aktiviert werden.<p /></Description>
+    <Description>Softservo kann nicht aktiviert werden.</Description>
     <Actions>Sicherstellen, dass eine Achse gewählt ist, die mit SoftAct verwendet werden kann.</Actions>
   </Message>
   <Message number="138" eDefine="SYS_ERR_MOC_WORK_AREA_CP">
     <Title>Grenze für Prüfpunkt des Arms</Title>
-    <Description>Der Roboter <arg format="%s" ordinal="1" /> hat die Grenze für einen Prüfpunkt des Arms erreicht.<p /></Description>
+    <Description>Der Roboter %s hat die Grenze für einen Prüfpunkt des Arms erreicht.</Description>
     <Actions>Entsprechende Achse mithilfe des Steuerknüppels wieder in den Arbeitsbereich bewegen.</Actions>
   </Message>
   <Message number="139" eDefine="SYS_ERR_MOC_JOG_DIRECTION_CP">
     <Title>Grenze für Prüfpunkt des Arms</Title>
-    <Description>Bewegung wurde in falsche Richtung ausgeführt, als Prüfpunkt des Arms außerhalb des Arbeitsbereichs für Roboter <arg format="%s" ordinal="1" /> war. <p /></Description>
+    <Description>Bewegung wurde in falsche Richtung ausgeführt, als Prüfpunkt des Arms außerhalb des Arbeitsbereichs für Roboter %s war. </Description>
     <Actions>Achse mithilfe des Steuerknüppels in entgegengesetzte Richtung bewegen.</Actions>
   </Message>
   <Message number="140" eDefine="SYS_ERR_MOC_DYNIRB_STAT_TORQUE_EXCEEDED">
     <Title>Nutzlast zu groß</Title>
-    <Description>Statische Drehmomentgrenze wurde wegen schwerer Nutzlast an Achse <arg format="%s" ordinal="1" /> überschritten. <p /></Description>
+    <Description>Statische Drehmomentgrenze wurde wegen schwerer Nutzlast an Achse %s überschritten. </Description>
     <Actions>Nutzlast für Arm und/oder Handgelenk prüfen und reduzieren. Arbeitsbereich der Achse reduzieren, um statisches Drehmoment aufgrund der Schwerkraft zu verringern.</Actions>
   </Message>
   <Message number="142" eDefine="SYS_ERR_MOC_CONFIG_FAILED">
     <Title>Bewegungskonfiguration</Title>
-    <Description>Konfiguration des Manipulators fehlgeschlagen.<p /><arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Die Parameterwerte ändern unter Systemparameter: Motion. Wenn Konflikt zwischen INT/EXT-Parametern, d. h. falsche MOC.cfg geladen. <p />I-Start des Systems mit korrekten Parametern durchführen.</Actions>
+    <Description>Konfiguration des Manipulators fehlgeschlagen.%s%s</Description>
+    <Actions>Die Parameterwerte ändern unter Systemparameter: Motion. Wenn Konflikt zwischen INT/EXT-Parametern, d. h. falsche MOC.cfg geladen. I-Start des Systems mit korrekten Parametern durchführen.</Actions>
   </Message>
   <Message number="143" eDefine="SYS_ERR_MOC_TARGET_BAD_MASTER_CNF">
     <Title>Roboterachsenkonfiguration</Title>
-    <Description>Aktuelle Konfiguration ist nicht mit der angeforderten Konfiguration identisch und/oder Bewegung einer Roboterachse ist größer als 90 Grad. Roboter <arg format="%s" ordinal="2" />, Achse <arg format="%s" ordinal="1" />.<p /></Description>
-    <Actions>SingArea_Wrist, ConfL_Off verwenden, Position ändern oder Zwischenpunkt einfügen.<p /><p />Fortsetzung im Automatikbetrieb ist nur möglich, wenn Konfiguration korrigiert wird. Um Bewegung zur Position zu ermöglichen, in Einrichtbetrieb wechseln und Start wiederholen.</Actions>
+    <Description>Aktuelle Konfiguration ist nicht mit der angeforderten Konfiguration identisch und/oder Bewegung einer Roboterachse ist größer als 90 Grad. Roboter %s, Achse %s.</Description>
+    <Actions>SingArea_Wrist, ConfL_Off verwenden, Position ändern oder Zwischenpunkt einfügen.Fortsetzung im Automatikbetrieb ist nur möglich, wenn Konfiguration korrigiert wird. Um Bewegung zur Position zu ermöglichen, in Einrichtbetrieb wechseln und Start wiederholen.</Actions>
   </Message>
   <Message number="144" eDefine="SYS_ERR_MOC_CALIB_BAD_DISPL_RESULT">
     <Title>Verschiebungs-Koordinatensystem unbestimmt</Title>
-    <Description>Kalibrierung des Verschiebungs-Koordinatensystems unbestimmt für Roboter <arg format="%s" ordinal="1" /> wegen:<p />- falscher TCP.<p />- ungenauer Referenzpunkte.<p />- schlecht gewählter Referenzpunkte.<p /></Description>
-    <Actions>Wenn geschätzter Fehler inakzeptabel:<p />- Sicherstellen, dass TCP korrekt ist.<p />- Mehr als 3 Referenzpunkte verwenden.<p />- Roboter sorgfältig auf Referenzpunkte positionieren.</Actions>
+    <Description>Kalibrierung des Verschiebungs-Koordinatensystems unbestimmt für Roboter %s wegen:- falscher TCP.- ungenauer Referenzpunkte.- schlecht gewählter Referenzpunkte.</Description>
+    <Actions>Wenn geschätzter Fehler inakzeptabel:- Sicherstellen, dass TCP korrekt ist.- Mehr als 3 Referenzpunkte verwenden.- Roboter sorgfältig auf Referenzpunkte positionieren.</Actions>
   </Message>
   <Message number="145" eDefine="SYS_ERR_MOC_VALID_ROB_JOINTS_NOT_FOUND">
     <Title>Kinematische Beschränkung</Title>
-    <Description>Kinematische Beschränkung für Roboter <arg format="%s" ordinal="1" />, keine Lösung gefunden.<p />- Langes Segment.<p />- Position nahe Singulariät.<p />- Achse 1, 2 oder 3 außerhalb Bereich.<p />- Position außer Reichweite.<p /></Description>
-    <Actions>- Zwischenpunkt einfügen, um Segmentlänge zu reduzieren.<p />- MoveAbsJ verwenden.<p />- Arbeitsbereich prüfen.</Actions>
+    <Description>Kinematische Beschränkung für Roboter %s, keine Lösung gefunden.- Langes Segment.- Position nahe Singulariät.- Achse 1, 2 oder 3 außerhalb Bereich.- Position außer Reichweite.</Description>
+    <Actions>- Zwischenpunkt einfügen, um Segmentlänge zu reduzieren.- MoveAbsJ verwenden.- Arbeitsbereich prüfen.</Actions>
   </Message>
   <Message number="147" eDefine="SYS_ERR_MOC_RE_CREATE_ERROR">
     <Title>Netzfehler - Neustart fehlgeschlagen</Title>
-    <Description>Wiederherstellung der Bahn fehlgeschlagen.<p /></Description>
+    <Description>Wiederherstellung der Bahn fehlgeschlagen.</Description>
     <Actions>Programmzeiger versetzen, um neue Bewegung zu starten.</Actions>
   </Message>
   <Message number="153" eDefine="SYS_ERR_MOC_COMMAND_NOT_ALLOWED_IF_HOLD">
     <Title>Befehl nicht zulässig </Title>
-    <Description>Task: <arg format="%s" ordinal="3" /><p />Erteilte(r) Instruktion oder Befehl nicht zulässig, da das Roboterprogramm in einem Haltzustand abgearbeitet wurde.<p />(Interner Code: <arg format="%d" ordinal="2" /><arg format="%s" ordinal="1" />)<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Description>Task: %sErteilte(r) Instruktion oder Befehl nicht zulässig, da das Roboterprogramm in einem Haltzustand abgearbeitet wurde.(Interner Code: %d2%s)Programmreferenz: %s</Description>
     <Actions>Programm ändern oder Abarbeitung anhalten, bevor die Anweisung erteilt wird. </Actions>
   </Message>
   <Message number="156" eDefine="SYS_ERR_MOC_INDEPENDENT_ERROR">
     <Title>Keine unabhängige Achse</Title>
-    <Description>Achse <arg format="%s" ordinal="1" /> ist nicht als unabhängige Achse konfiguriert.<p /></Description>
+    <Description>Achse %s ist nicht als unabhängige Achse konfiguriert.</Description>
     <Actions>Programm ändern oder Achse als unabhängig konfigurieren.</Actions>
   </Message>
   <Message number="157" eDefine="SYS_ERR_MOC_SENSOR_CORRECTION_VECTOR_X">
     <Title>Korrekturvektor-Warnung</Title>
-    <Description>Berechnung des Sensorkorrekturvektors X wegen früherem Fehler fehlgeschlagen.<p /></Description>
+    <Description>Berechnung des Sensorkorrekturvektors X wegen früherem Fehler fehlgeschlagen.</Description>
     <Actions />
   </Message>
   <Message number="158" eDefine="SYS_ERR_MOC_MISSING_EXTPOS_IPM_PROCESS">
     <Title>Sensorprozess fehlt</Title>
-    <Description>Sensorprozess fehlt bei Initialisierung. Angegebener Sensorprozess <arg format="%s" ordinal="1" /> konnte nicht gefunden oder initialisiert werden.<p /></Description>
-    <Actions>Prozessname in Motion- und Process-Konfigurationsdateien prüfen.<p /></Actions>
+    <Description>Sensorprozess fehlt bei Initialisierung. Angegebener Sensorprozess %s konnte nicht gefunden oder initialisiert werden.</Description>
+    <Actions>Prozessname in Motion- und Process-Konfigurationsdateien prüfen.</Actions>
   </Message>
   <Message number="159" eDefine="SYS_ERR_MOC_SINGLE_HAS_NO_IPM_PROCESS">
     <Title>Kein externer Prozess</Title>
-    <Description>Versuch, Bewegung zu koordinieren oder Position von Single <arg format="%s" ordinal="1" /> ohne externen Prozess zu berechnen.<p /></Description>
+    <Description>Versuch, Bewegung zu koordinieren oder Position von Single %s ohne externen Prozess zu berechnen.</Description>
     <Actions>Prozessname in Motion- und Process-Konfigurationsdateien prüfen.</Actions>
   </Message>
   <Message number="160" eDefine="SYS_ERR_MOC_WORK_AREA_INDEPENDENT_AXIS">
     <Title>Position nicht erreichbar</Title>
-    <Description>Programmierte Position der unabhängigen Achse <arg format="%s" ordinal="1" /> ist außerhalb des Arbeitsbereichs und daher nicht erreichbar.<p /></Description>
-    <Actions>- Position ändern.<p />- Arbeitsbereichsgrenzen der Achse prüfen.<p />- Benutztes Werkobjekt prüfen.</Actions>
+    <Description>Programmierte Position der unabhängigen Achse %s ist außerhalb des Arbeitsbereichs und daher nicht erreichbar.</Description>
+    <Actions>- Position ändern.- Arbeitsbereichsgrenzen der Achse prüfen.- Benutztes Werkobjekt prüfen.</Actions>
   </Message>
   <Message number="163" eDefine="SYS_ERR_MOC_EXTPOS_MAX_ADJUST_DELTA_OFFSET">
     <Title>Positionsanpassung</Title>
-    <Description>Externe Positionsanpassung zu groß. Geschwindigkeit von TCP, Orientierung oder externer Position überschreitet zulässige Roboterleistung.<p /></Description>
-    <Actions>- Programmierte TCP- und Orientierungsgeschwindigkeit reduzieren.<p />- Bahn ändern.<p />- WaitWObj näher zu Sync.<p />- Abarbeitung in AUTOMATIK.</Actions>
+    <Description>Externe Positionsanpassung zu groß. Geschwindigkeit von TCP, Orientierung oder externer Position überschreitet zulässige Roboterleistung.</Description>
+    <Actions>- Programmierte TCP- und Orientierungsgeschwindigkeit reduzieren.- Bahn ändern.- WaitWObj näher zu Sync.- Abarbeitung in AUTOMATIK.</Actions>
   </Message>
   <Message number="164" eDefine="SYS_ERR_MOC_INDEPENDENT_DEACTIVATION_ERROR">
     <Title>Deaktivierung nicht möglich</Title>
-    <Description>Deaktivierung der mechanischen Einheit im unabhängigen Modus nicht möglich.<p /></Description>
+    <Description>Deaktivierung der mechanischen Einheit im unabhängigen Modus nicht möglich.</Description>
     <Actions>Sicherstellen, dass unabhängiger Modus nicht verwendet wird, und Deaktivierung erneut versuchen.</Actions>
   </Message>
   <Message number="167" eDefine="SYS_ERR_MOC_CONVEY_NEW_SYNC_SIGNAL">
     <Title>Warnung: Neue Synchronisierung</Title>
-    <Description>Warnung: Sync-Signal für neues Objekt ist eingegangen, während der Förderer aktiv ist und das Programm ausgeführt wird.<p /></Description>
+    <Description>Warnung: Sync-Signal für neues Objekt ist eingegangen, während der Förderer aktiv ist und das Programm ausgeführt wird.</Description>
     <Actions />
   </Message>
   <Message number="168" eDefine="SYS_ERR_MOC_CONVEY_NEW_SYNC_WHILE_TRACKING">
-    <Title>Neue Synchronisierung auf <arg format="%s" ordinal="1" /></Title>
-    <Description>Sync-Signal für neues Objekt, während der Förderer dem vorherigen Objekt folgte. Es können nicht zwei Objekte gleichzeitig verfolgt werden.<p /></Description>
+    <Title>Neue Synchronisierung auf %s</Title>
+    <Description>Sync-Signal für neues Objekt, während der Förderer dem vorherigen Objekt folgte. Es können nicht zwei Objekte gleichzeitig verfolgt werden.</Description>
     <Actions>Geschwindigkeit des Förderers verringern. Programmierte Geschwindigkeit erhöhen.</Actions>
   </Message>
   <Message number="172" eDefine="SYS_ERR_MOC_MOVJ_NOT_ALLOWED_WITH_PRXPOS">
     <Title>MoveJ unzulässig</Title>
-    <Description>MoveJ unzulässig, wenn Werkobjekt mit externer mechanischer Einheit koordiniert wird.<p /></Description>
+    <Description>MoveJ unzulässig, wenn Werkobjekt mit externer mechanischer Einheit koordiniert wird.</Description>
     <Actions>Interpolationsmodus oder Werkobjekt ändern.</Actions>
   </Message>
   <Message number="173" eDefine="SYS_ERR_MOC_USE_FINEP_WITH_TOOL_CHANGE">
     <Title>Feinpunkt erforderlich</Title>
-    <Description>Feinpunkt verwenden bei Änderung von Werkzeug- oder Werkobjektkoordination, wenn das Werkobjekt mit einer externen mechanischen Einheit koordiniert wird.<p /></Description>
+    <Description>Feinpunkt verwenden bei Änderung von Werkzeug- oder Werkobjektkoordination, wenn das Werkobjekt mit einer externen mechanischen Einheit koordiniert wird.</Description>
     <Actions>Feinpunkt erstellen und dann das Werkzeug ändern.</Actions>
   </Message>
   <Message number="174" eDefine="SYS_ERR_MOC_CONVEY_WOBJECT_NOT_CONNECTED">
     <Title>WObj nicht verbunden</Title>
-    <Description>Das Werkobjekt ist nicht verbunden mit Förderer <arg format="%s" ordinal="1" />. Roboter-TCP kann nicht mit Werkobjekt koordiniert werden. Objekt kann losgelassen werden wegen Zeitsynchronisierungsfehler am Fördererknoten.<p /></Description>
-    <Actions>Auf fehlende WaitWObj-Instruktion prüfen.<p />Prüfen, ob DropWObj vor Ende der Koordination auftritt.<p />Zeitfehler bei Synchronisierung prüfen (siehe Status am Fördererknoten).</Actions>
+    <Description>Das Werkobjekt ist nicht verbunden mit Förderer %s. Roboter-TCP kann nicht mit Werkobjekt koordiniert werden. Objekt kann losgelassen werden wegen Zeitsynchronisierungsfehler am Fördererknoten.</Description>
+    <Actions>Auf fehlende WaitWObj-Instruktion prüfen.Prüfen, ob DropWObj vor Ende der Koordination auftritt.Zeitfehler bei Synchronisierung prüfen (siehe Status am Fördererknoten).</Actions>
   </Message>
   <Message number="175" eDefine="SYS_ERR_MOC_CONVEY_CONVEYOR_MOVES">
     <Title>Förderer bewegt sich</Title>
-    <Description>Förderer <arg format="%s" ordinal="1" /> bewegt sich im Modus 'prohibited' beim Versuch, Roboter-TCP mit Förderer-Werkobjekt zu koordinieren.<p /></Description>
+    <Description>Förderer %s bewegt sich im Modus 'prohibited' beim Versuch, Roboter-TCP mit Förderer-Werkobjekt zu koordinieren.</Description>
     <Actions>Wenn sich der Förderer bei manuell reduzierter Geschwindigkeit oder schrittweiser Abarbeitung im Automatikmodus bewegt, kann der Förderer nicht koordiniert werden.</Actions>
   </Message>
   <Message number="176" eDefine="SYS_ERR_MOC_CONVEY_NOT_ACTIVATED">
     <Title>Förderer nicht aktiv</Title>
-    <Description>Förderer <arg format="%s" ordinal="1" /> war nicht aktiv beim Versuch, Roboter-TCP mit Förderer-Werkobjekt zu koordinieren.<p /></Description>
+    <Description>Förderer %s war nicht aktiv beim Versuch, Roboter-TCP mit Förderer-Werkobjekt zu koordinieren.</Description>
     <Actions>Sicherstellen, dass mechanische Einheit des Förderers aktiv ist. Auf Feinpunkt für letzte koordinierte Bewegung vor DeactUnit prüfen.</Actions>
   </Message>
   <Message number="177" eDefine="SYS_ERR_MOC_CONVEY_RESTART_CONVEYOR_MOVES">
     <Title>Neustart nicht möglich</Title>
-    <Description>Förderer <arg format="%s" ordinal="1" /> bewegt sich beim Versuch, das Programm nach Stopp oder schrittweiser Programmabarbeitung neu zu starten.<p /></Description>
+    <Description>Förderer %s bewegt sich beim Versuch, das Programm nach Stopp oder schrittweiser Programmabarbeitung neu zu starten.</Description>
     <Actions>Sicherstellen, dass der Förderer im Stillstand ist. Programmzeiger versetzen, um neue Bewegung zu starten.</Actions>
   </Message>
   <Message number="178" eDefine="SYS_ERR_MOC_MICRO_SAMPLE_TORQUE_HIGH">
     <Title>Keine optimale Bewegung</Title>
-    <Description>Erforderliches Drehmoment zu hoch. Manuelle Anpassung von Beschleunigung oder Geschwindigkeit ist nötig.<p /></Description>
+    <Description>Erforderliches Drehmoment zu hoch. Manuelle Anpassung von Beschleunigung oder Geschwindigkeit ist nötig.</Description>
     <Actions>Beschleunigung in dieser Bewegung verringern (AccSet 50 100), dann wiederherstellen (AccSet 100 100). Leistung optimieren durch Suche nach maximal möglicher Beschleunigung 50-99. Alternativ Geschwindigkeit verringern.</Actions>
   </Message>
   <Message number="181" eDefine="SYS_ERR_MOC_WORK_AREA_COUPLED_AXES">
     <Title>Außerhalb des verbundenen Bereichs</Title>
-    <Description>Achsen <arg format="%s" ordinal="1" /> und <arg format="%s" ordinal="2" /> sind außerhalb des verbundenen Bereichs.<p /></Description>
+    <Description>Achsen %s und %s sind außerhalb des verbundenen Bereichs.</Description>
     <Actions>Achsen mithilfe des Steuerknüppels in ihren verbundenen Arbeitsbereich bewegen.</Actions>
   </Message>
   <Message number="182" eDefine="SYS_ERR_MOC_JOG_DIRECTION_COUPLED_AXES">
     <Title>Bewegung in falsche Richtung</Title>
-    <Description>Achsen <arg format="%s" ordinal="1" /> und <arg format="%s" ordinal="2" /> sind außerhalb des verbundenen Bereichs.<p /></Description>
+    <Description>Achsen %s und %s sind außerhalb des verbundenen Bereichs.</Description>
     <Actions>Achsen mithilfe des Steuerknüppels in ihren verbundenen Arbeitsbereich bewegen.</Actions>
   </Message>
   <Message number="183" eDefine="SYS_ERR_MOC_WORK_AREA_WZONE">
     <Title>Roboter außerhalb des Arbeitsbereichs</Title>
-    <Description>Von Roboter erreichte Weltzone <arg format="%s" ordinal="1" />, <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Von Roboter erreichte Weltzone %s, %s</Description>
     <Actions>Ursache für Weltzone prüfen. Falls erforderlich, Roboter mit Steuerknüppel aus der Weltzone bewegen.</Actions>
   </Message>
   <Message number="184" eDefine="SYS_ERR_MOC_SENSOR_CORRECTION_VECTOR_123_Y">
     <Title>Korrekturvektor-Warnung</Title>
-    <Description>Berechnung des Sensorkorrekturvektors wegen früherem Fehler fehlgeschlagen.<p /></Description>
+    <Description>Berechnung des Sensorkorrekturvektors wegen früherem Fehler fehlgeschlagen.</Description>
     <Actions />
   </Message>
   <Message number="185" eDefine="SYS_ERR_MOC_SENSOR_CORRECTION_VECTOR_456_Y">
     <Title>Korrekturvektor-Warnung</Title>
-    <Description>Berechnung des Sensorkorrekturvektors wegen früherem Fehler fehlgeschlagen.<p /></Description>
+    <Description>Berechnung des Sensorkorrekturvektors wegen früherem Fehler fehlgeschlagen.</Description>
     <Actions />
   </Message>
   <Message number="188" eDefine="SYS_ERR_MOC_RAPID_WEAVE_TORQUE_HIGH">
     <Title>Keine optimale Bewegung</Title>
-    <Description>Erforderliches Drehmoment zu hoch. Manuelle Anpassung von Pendelfrequenz oder -amplitude ist nötig.<p /></Description>
+    <Description>Erforderliches Drehmoment zu hoch. Manuelle Anpassung von Pendelfrequenz oder -amplitude ist nötig.</Description>
     <Actions>Pendelfrequenz oder -amplitude in dieser Bewegung reduzieren. Alternativ Geschwindigkeit verringern.</Actions>
   </Message>
   <Message number="189" eDefine="SYS_ERR_MOC_RELAY_SIGNAL_MISSING">
     <Title>Relaissignal nicht gefunden</Title>
-    <Description>Das Signal <arg format="%s" ordinal="1" /> für Relais <arg format="%s" ordinal="2" /> wurde in der E/A-Konfiguration nicht gefunden. Die mechanische Einheit, die dieses Relais benutzt, wird ignoriert.<p /></Description>
+    <Description>Das Signal %s für Relais %s wurde in der E/A-Konfiguration nicht gefunden. Die mechanische Einheit, die dieses Relais benutzt, wird ignoriert.</Description>
     <Actions>E/A-Signaldefinitionen sowie Systemparameterdefinitionen prüfen in Parametergruppe Motion, Typ: Relais.</Actions>
   </Message>
   <Message number="190" eDefine="SYS_ERR_MOC_GEN_SCAN_JOINT_ERROR">
     <Title>Permanenter Interpolator-Sperrfehler</Title>
-    <Description>Gefundene Anzahl aktiver Achsen entspricht nicht der erwarteten Anzahl.<p /></Description>
+    <Description>Gefundene Anzahl aktiver Achsen entspricht nicht der erwarteten Anzahl.</Description>
     <Actions>Konfiguration der Einheit prüfen, die allgemeine Kinematik verwendet.</Actions>
   </Message>
   <Message number="191" eDefine="SYS_ERR_MOC_TCP_SPEED_SIGNAL_ERROR">
     <Title>Zu viele TCP-Geschwindigkeiten</Title>
-    <Description>Die Anzahl der TCP-Geschwindigkeiten in einem Segment ist zu groß. Maximale Anzahl an TCP-Geschwindigkeiten ist <arg format="%d" ordinal="1" />. <p /></Description>
+    <Description>Die Anzahl der TCP-Geschwindigkeiten in einem Segment ist zu groß. Maximale Anzahl an TCP-Geschwindigkeiten ist %d1. </Description>
     <Actions>Prüfen, ob für ein Segment zu viele TCP-Geschwindigkeiten eingestellt sind oder ob eine Reihe von Segmenten steigende Verzögerung (DipLag) hat.</Actions>
   </Message>
   <Message number="192" eDefine="SYS_ERR_MOC_JOG_MODE_ERROR">
     <Title>Bewegungsfehler</Title>
-    <Description>Manuelle Bewegung zu früh nach Programmstopp begonnen.<p /></Description>
+    <Description>Manuelle Bewegung zu früh nach Programmstopp begonnen.</Description>
     <Actions>Erneut versuchen, den Roboter zu bewegen.</Actions>
   </Message>
   <Message number="193" eDefine="SYS_ERR_MOC_POWER_UP_SPEED_ERROR">
     <Title>Achse nicht synchron</Title>
-    <Description>Geschwindigkeit von Achse <arg format="%s" ordinal="1" /> vor Abschalten/Netzausfall war zu hoch.<p /></Description>
+    <Description>Geschwindigkeit von Achse %s vor Abschalten/Netzausfall war zu hoch.</Description>
     <Actions>Umdrehungszähler aktualisieren.</Actions>
   </Message>
 </Domain>

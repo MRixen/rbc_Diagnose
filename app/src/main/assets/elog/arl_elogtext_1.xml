@@ -2,107 +2,107 @@
 <Domain xmlns="urn:abb-robotics-elog-text" elogDomain="ARL" domainNo="4" lang="de" elogTextVersion="1.0" min="1" max="96">
   <Message number="1" eDefine="SYS_ERR_ARL_ARGDUPOPT">
     <Title>Argumentfehler</Title>
-    <Description>Optionales Argument <arg format="%.16s" ordinal="1" /> mehrmals im selben Routineaufruf vorhanden.</Description>
+    <Description>Optionales Argument %.16s1 mehrmals im selben Routineaufruf vorhanden.</Description>
     <Actions>1) Sicherstellen, dass der optionale Parameter im selben Routinenaufruf nur einmal angegeben ist.</Actions>
   </Message>
   <Message number="2" eDefine="SYS_ERR_ARL_ARGEXCVAL">
     <Title>Argumentfehler</Title>
-    <Description>Argument <arg format="%.16s" ordinal="1" /> für mehr als einen Parameter angegeben.</Description>
-    <Actions>Die Parameterliste, aus der dieser Parameter gewählt wurde, enthält Parameter, die sich gegenseitig ausschließen.<p />1) Sicherstellen, dass das Argument nur für einen Parameter benutzt wird.</Actions>
+    <Description>Argument %.16s1 für mehr als einen Parameter angegeben.</Description>
+    <Actions>Die Parameterliste, aus der dieser Parameter gewählt wurde, enthält Parameter, die sich gegenseitig ausschließen.1) Sicherstellen, dass das Argument nur für einen Parameter benutzt wird.</Actions>
   </Message>
   <Message number="3" eDefine="SYS_ERR_ARL_ARGEXPRQA">
     <Title>Argumentfehler</Title>
-    <Description>Argument für erforderlichen Parameter <arg format="%.16s" ordinal="1" /> erwartet, aber optionales Argument <arg format="%.16s" ordinal="2" /> gefunden.</Description>
+    <Description>Argument für erforderlichen Parameter %.16s1 erwartet, aber optionales Argument %.16s2 gefunden.</Description>
     <Actions>1) Sicherstellen, dass alle Argumente in derselben Reihenfolge wie die Parameter für die aufgerufene Routine angegeben sind.</Actions>
   </Message>
   <Message number="4" eDefine="SYS_ERR_ARL_ARGNOTREF">
     <Title>Argumentfehler</Title>
-    <Description>Argument für REF-Parameter <arg format="%.16s" ordinal="1" /> ist kein Datenverweis.</Description>
+    <Description>Argument für REF-Parameter %.16s1 ist kein Datenverweis.</Description>
     <Actions>1) Sicherstellen, dass das Argument ein Daten- oder Parameterverweis ist.</Actions>
   </Message>
   <Message number="5" eDefine="SYS_ERR_ARL_ARGNOTVP">
     <Title>Argumentfehler</Title>
-    <Description>Argument für 'INOUT'-Parameter <arg format="%.16s" ordinal="1" /> ist kein Verweis auf eine Variable oder Persistente oder ist schreibgeschützt.</Description>
-    <Actions>1) Sicherstellen, dass das Argument eine Variable, eine Persistente oder ein Verweis auf eine Persistente und NICHT schreibgeschützt ist.<p />2) Keine () um das Argument verwenden.</Actions>
+    <Description>Argument für 'INOUT'-Parameter %.16s1 ist kein Verweis auf eine Variable oder Persistente oder ist schreibgeschützt.</Description>
+    <Actions>1) Sicherstellen, dass das Argument eine Variable, eine Persistente oder ein Verweis auf eine Persistente und NICHT schreibgeschützt ist.2) Keine () um das Argument verwenden.</Actions>
   </Message>
   <Message number="6" eDefine="SYS_ERR_ARL_ARGOPAVAL">
     <Title>Argumentfehler</Title>
-    <Description>Für Parameter <arg format="%.16s" ordinal="1" /> fehlt ein optionaler Argumentwert.</Description>
-    <Actions>Nur 'switch'-Parameter können durch einen Namen angegeben werden. Allen anderen optionalen Parametern muss ein Wert zugewiesen werden.<p />1) Sicherstellen, dass der Parameter einen Wert besitzt.</Actions>
+    <Description>Für Parameter %.16s1 fehlt ein optionaler Argumentwert.</Description>
+    <Actions>Nur 'switch'-Parameter können durch einen Namen angegeben werden. Allen anderen optionalen Parametern muss ein Wert zugewiesen werden.1) Sicherstellen, dass der Parameter einen Wert besitzt.</Actions>
   </Message>
   <Message number="7" eDefine="SYS_ERR_ARL_ARGOPAW">
     <Title>Argumentfehler</Title>
-    <Description>Optionales Argument <arg format="%.16s" ordinal="1" /> an falscher Stelle in der Argumentliste.</Description>
+    <Description>Optionales Argument %.16s1 an falscher Stelle in der Argumentliste.</Description>
     <Actions>1) Sicherstellen, dass alle Argumente in derselben Reihenfolge wie die Parameter für die aufgerufene Routine angegeben sind.</Actions>
   </Message>
   <Message number="8" eDefine="SYS_ERR_ARL_ARGREFOPP">
     <Title>Argumentfehler</Title>
-    <Description>Verweis auf optionalen Parameter <arg format="%.16s" ordinal="1" /> fehlt.</Description>
-    <Actions>Jeder optionale Parameter muss ein Verweisargument haben, das mit einem führenden umgekehrten Schrägstrich (\) angegeben wird.<p />1) Erforderliches Argument in ein optionales ändern.</Actions>
+    <Description>Verweis auf optionalen Parameter %.16s1 fehlt.</Description>
+    <Actions>Jeder optionale Parameter muss ein Verweisargument haben, das mit einem führenden umgekehrten Schrägstrich (\) angegeben wird.1) Erforderliches Argument in ein optionales ändern.</Actions>
   </Message>
   <Message number="9" eDefine="SYS_ERR_ARL_ARGREFRQC">
     <Title>Argumentfehler</Title>
-    <Description>Verweis auf erforderlichen Parameter <arg format="%.16s" ordinal="1" /> fehlt in einem bedingten Argument.</Description>
-    <Actions>Jeder bedingte Wert für einen optionalen Parameter muss auf einen optionalen Parameter in der aufrufenden Routine verweisen. <p />1) Bedingten Wert ändern.</Actions>
+    <Description>Verweis auf erforderlichen Parameter %.16s1 fehlt in einem bedingten Argument.</Description>
+    <Actions>Jeder bedingte Wert für einen optionalen Parameter muss auf einen optionalen Parameter in der aufrufenden Routine verweisen. 1) Bedingten Wert ändern.</Actions>
   </Message>
   <Message number="10" eDefine="SYS_ERR_ARL_ARGREFRQP">
     <Title>Argumentfehler</Title>
-    <Description>Verweis auf erforderlichen Parameter <arg format="%.16s" ordinal="1" /> fehlt in einem optionalen Argument.</Description>
-    <Actions>Jeder erforderliche Parameter muss ein Verweisargument haben, das mit einem führenden umgekehrten Schrägstrich (\) angegeben wird.<p />1) Optionales Argument in ein erforderliches ändern.</Actions>
+    <Description>Verweis auf erforderlichen Parameter %.16s1 fehlt in einem optionalen Argument.</Description>
+    <Actions>Jeder erforderliche Parameter muss ein Verweisargument haben, das mit einem führenden umgekehrten Schrägstrich (\) angegeben wird.1) Optionales Argument in ein erforderliches ändern.</Actions>
   </Message>
   <Message number="11" eDefine="SYS_ERR_ARL_ARGRQAW">
     <Title>Argumentfehler</Title>
-    <Description>Erforderliches Argument <arg format="%.16s" ordinal="1" /> an falscher Stelle in der Argumentliste.</Description>
+    <Description>Erforderliches Argument %.16s1 an falscher Stelle in der Argumentliste.</Description>
     <Actions>Sicherstellen, dass alle Argumente in derselben Reihenfolge wie die Parameter für die aufgerufene Routine angegeben sind.</Actions>
   </Message>
   <Message number="12" eDefine="SYS_ERR_ARL_ARGSWTVAL">
     <Title>Argumentfehler</Title>
-    <Description>'switch'-Argument <arg format="%.16s" ordinal="1" /> hat einen Wert.
+    <Description>'switch'-Argument %.16s1 hat einen Wert.
 </Description>
     <Causes>Einem Argument, das einem 'switch'-Parameter entspricht, darf kein Wert zugewiesen werden.</Causes>
     <Actions>1) Wert entfernen.</Actions>
   </Message>
   <Message number="13" eDefine="SYS_ERR_ARL_ARGTFA">
     <Title>Argumentfehler</Title>
-    <Description>Aufruf der Routine <arg format="%.16s" ordinal="1" /> hat zu wenige Argumente.</Description>
-    <Actions>Ein Routinenaufruf muss Werte für alle erforderlichen Parameter der aufgerufenen Routine liefern. Anzahl der Argumente in Argumentliste und Anzahl der Parameter in Parameterliste muss gleich sein.<p />1) Weitere Argumente passend zur Parameterliste hinzufügen.</Actions>
+    <Description>Aufruf der Routine %.16s1 hat zu wenige Argumente.</Description>
+    <Actions>Ein Routinenaufruf muss Werte für alle erforderlichen Parameter der aufgerufenen Routine liefern. Anzahl der Argumente in Argumentliste und Anzahl der Parameter in Parameterliste muss gleich sein.1) Weitere Argumente passend zur Parameterliste hinzufügen.</Actions>
   </Message>
   <Message number="14" eDefine="SYS_ERR_ARL_ARGTMA">
     <Title>Argumentfehler</Title>
-    <Description>Aufruf der Routine <arg format="%.16s" ordinal="1" /> hat zu viele Argumente.</Description>
-    <Actions>Keine Argumente dürfen über die in der Parameterliste der aufgerufenen Routine hinaus angegeben werden. Anzahl der Argumente in Argumentliste und Anzahl der Parameter in Parameterliste muss gleich sein.<p />1) Überzählige Argumente aus Argumentliste entfernen.</Actions>
+    <Description>Aufruf der Routine %.16s1 hat zu viele Argumente.</Description>
+    <Actions>Keine Argumente dürfen über die in der Parameterliste der aufgerufenen Routine hinaus angegeben werden. Anzahl der Argumente in Argumentliste und Anzahl der Parameter in Parameterliste muss gleich sein.1) Überzählige Argumente aus Argumentliste entfernen.</Actions>
   </Message>
   <Message number="15" eDefine="SYS_ERR_ARL_ARRDIMPOS">
     <Title>Datendeklarationsfehler</Title>
-    <Description>Anzahl an Datenfelddimensionen ist <arg format="%i" ordinal="1" />, darf aber nur 1, 2 oder 3 sein.</Description>
+    <Description>Anzahl an Datenfelddimensionen ist %i1, darf aber nur 1, 2 oder 3 sein.</Description>
     <Actions>1) Den Dimensionsausdruck ändern.</Actions>
   </Message>
   <Message number="16" eDefine="SYS_ERR_ARL_ARRTMD">
     <Title>Datendeklarationsfehler</Title>
     <Description> Zu viele Dimensionen in Datenfelddefinition. </Description>
-    <Actions>Ein Datenfeld kann höchstens 3 Dimensionen haben. <p />Programm so ändern, dass maximal 3 Dimensionen benötigt werden. </Actions>
+    <Actions>Ein Datenfeld kann höchstens 3 Dimensionen haben. Programm so ändern, dass maximal 3 Dimensionen benötigt werden. </Actions>
   </Message>
   <Message number="17" eDefine="SYS_ERR_ARL_DATNOTARR">
     <Title>Typenfehler</Title>
-    <Description>Indizierte Daten <arg format="%.18s" ordinal="1" />, <arg format="%.18s" ordinal="2" /> sind nicht vom Typ Datenfeld. </Description>
-    <Actions>Nur Daten, die als Datenfelder deklariert wurden, können indiziert werden.<p />1) Index oder Indizes entfernen.<p />2) Daten als Datenfeld deklarieren.</Actions>
+    <Description>Indizierte Daten %.18s1, %.18s2 sind nicht vom Typ Datenfeld. </Description>
+    <Actions>Nur Daten, die als Datenfelder deklariert wurden, können indiziert werden.1) Index oder Indizes entfernen.2) Daten als Datenfeld deklarieren.</Actions>
   </Message>
   <Message number="18" eDefine="SYS_ERR_ARL_DATNOTREC">
     <Title>Typenfehler</Title>
-    <Description>Daten <arg format="%.18s" ordinal="1" />, <arg format="%.18s" ordinal="2" /> sind nicht vom Typ Datensatz.</Description>
-    <Actions>Komponenten sind nur für Daten des Typs Datensatz verfügbar.<p />1) Typ und Name der Daten prüfen, auf die verwiesen wird.</Actions>
+    <Description>Daten %.18s1, %.18s2 sind nicht vom Typ Datensatz.</Description>
+    <Actions>Komponenten sind nur für Daten des Typs Datensatz verfügbar.1) Typ und Name der Daten prüfen, auf die verwiesen wird.</Actions>
   </Message>
   <Message number="19" eDefine="SYS_ERR_ARL_ERRSDB">
     <Title>Begrenzungsfehler</Title>
-    <Description>Task <arg format="%s" ordinal="1" />: Fehler beim Erstellen der persistenten Variablen <arg format="%s" ordinal="4" />. <p />Der Fehler ist aufgetreten, als die persistente Variable in die Datenbank eingefügt wurde.<p />Programmreferenz: <arg format="%s" ordinal="2" /></Description>
+    <Description>Task %s: Fehler beim Erstellen der persistenten Variablen %s. Der Fehler ist aufgetreten, als die persistente Variable in die Datenbank eingefügt wurde.Programmreferenz: %s</Description>
     <Consequences>Die erstellte persistente Variable kann nicht in einem RAPID-Programm verwendet werden.</Consequences>
     <Causes>Der Programmspeicher ist voll oder fragmentiert.</Causes>
-    <Actions>Prüfen, ob umfangreiche Datenstrukturen in kleinere Blöcke aufgeteilt werden können.<p />Durch die Verwendung installierter Module kann Programmspeicher eingespart werden.</Actions>
+    <Actions>Prüfen, ob umfangreiche Datenstrukturen in kleinere Blöcke aufgeteilt werden können.Durch die Verwendung installierter Module kann Programmspeicher eingespart werden.</Actions>
   </Message>
   <Message number="20" eDefine="SYS_ERR_ARL_EXPNOTCON">
     <Title>Datendeklarationsfehler</Title>
-    <Description>Ausdruck <arg format="%.16s" ordinal="1" /> ist kein konstanter Ausdruck.</Description>
-    <Actions>Jeder Ausdruck in einer Datendeklaration muss ein konstanter Ausdruck sein.<p /> 1) Sicherstellen, dass kein Ausdruck Verweise auf Variablen oder Persistenten oder Funktionsaufrufe enthält.</Actions>
+    <Description>Ausdruck %.16s1 ist kein konstanter Ausdruck.</Description>
+    <Actions>Jeder Ausdruck in einer Datendeklaration muss ein konstanter Ausdruck sein. 1) Sicherstellen, dass kein Ausdruck Verweise auf Variablen oder Persistenten oder Funktionsaufrufe enthält.</Actions>
   </Message>
   <Message number="21" eDefine="SYS_ERR_ARL_FUNRETEXP">
     <Title>Instruktionsfehler</Title>
@@ -112,79 +112,79 @@
   </Message>
   <Message number="22" eDefine="SYS_ERR_ARL_ICTMULOPS">
     <Title>Typenfehler</Title>
-    <Description>Unzulässige Kombination von Operandentypen <arg format="%.18s" ordinal="1" /> und <arg format="%.18s" ordinal="2" /> für Operator '*'.</Description>
-    <Actions>Zulässige Kombinationen von Operandentypen: 'num'*'num', 'num'*'pos', 'pos'*'num', 'pos'*'pos' und 'orient'*'orient'. <p />1) Operandentypen prüfen.</Actions>
+    <Description>Unzulässige Kombination von Operandentypen %.18s1 und %.18s2 für Operator '*'.</Description>
+    <Actions>Zulässige Kombinationen von Operandentypen: 'num'*'num', 'num'*'pos', 'pos'*'num', 'pos'*'pos' und 'orient'*'orient'. 1) Operandentypen prüfen.</Actions>
   </Message>
   <Message number="23" eDefine="SYS_ERR_ARL_ILLGOTO">
     <Title>Instruktionsfehler</Title>
     <Description>Programmablauf kann nicht an diese Stelle des Programms wechseln.</Description>
-    <Actions>Ein Sprung in eine Programmablaufinstruktion ist nicht möglich. <p />1) Marke und GOTO-Instruktion müssen sich in der gleichen oder einer übergeordneten Ebene in der Instruktionsliste befinden.</Actions>
+    <Actions>Ein Sprung in eine Programmablaufinstruktion ist nicht möglich. 1) Marke und GOTO-Instruktion müssen sich in der gleichen oder einer übergeordneten Ebene in der Instruktionsliste befinden.</Actions>
   </Message>
   <Message number="24" eDefine="SYS_ERR_ARL_ILTADDLOP">
     <Title>Typenfehler</Title>
-    <Description>Unzulässiger Typ <arg format="%.18s" ordinal="1" /> für linken Operanden von binärem '+'- oder '-'-Operator.
+    <Description>Unzulässiger Typ %.18s1 für linken Operanden von binärem '+'- oder '-'-Operator.
     </Description>
-    <Actions>Zulässige Typen für die Operanden des binären '+'-Operators sind 'num', 'pos' und 'string', für den binären '-'-Operator 'num' und 'pos'. <p />1) Operandentypen prüfen.</Actions>
+    <Actions>Zulässige Typen für die Operanden des binären '+'-Operators sind 'num', 'pos' und 'string', für den binären '-'-Operator 'num' und 'pos'. 1) Operandentypen prüfen.</Actions>
   </Message>
   <Message number="25" eDefine="SYS_ERR_ARL_ILTADDOP">
     <Title>Typenfehler</Title>
-    <Description>Unzulässiger Typ <arg format="%.18s" ordinal="1" /> für Operanden von unärem '+'- oder '-'-Operator.</Description>
-    <Actions>Zulässige Typen für die Operanden der '+'- und '-'-Operatoren sind 'num' und 'pos'. <p />1) Operandentypen prüfen.</Actions>
+    <Description>Unzulässiger Typ %.18s1 für Operanden von unärem '+'- oder '-'-Operator.</Description>
+    <Actions>Zulässige Typen für die Operanden der '+'- und '-'-Operatoren sind 'num' und 'pos'. 1) Operandentypen prüfen.</Actions>
   </Message>
   <Message number="26" eDefine="SYS_ERR_ARL_ILTADDROP">
     <Title>Typenfehler</Title>
-    <Description>Unzulässiger Typ <arg format="%.18s" ordinal="1" /> für rechten Operanden von binärem '+'- oder '-'-Operator</Description>
-    <Actions>Zulässige Typen für die Operanden des binären '+'-Operators sind 'num', 'pos' und 'string', für den binären '-'-Operator 'num' und 'pos'. <p />1) Operandentypen prüfen.</Actions>
+    <Description>Unzulässiger Typ %.18s1 für rechten Operanden von binärem '+'- oder '-'-Operator</Description>
+    <Actions>Zulässige Typen für die Operanden des binären '+'-Operators sind 'num', 'pos' und 'string', für den binären '-'-Operator 'num' und 'pos'. 1) Operandentypen prüfen.</Actions>
   </Message>
   <Message number="27" eDefine="SYS_ERR_ARL_ILTDIVLOP">
     <Title>Typenfehler</Title>
-    <Description>Unzulässiger Typ <arg format="%.18s" ordinal="1" /> für linken Operanden von Operator '/', 'DIV' oder 'MOD'.</Description>
-    <Actions>Zulässiger Operandentyp für die Operatoren '/', 'DIV' oder 'MOD' ist 'num'. <p />1) Operandentypen prüfen.</Actions>
+    <Description>Unzulässiger Typ %.18s1 für linken Operanden von Operator '/', 'DIV' oder 'MOD'.</Description>
+    <Actions>Zulässiger Operandentyp für die Operatoren '/', 'DIV' oder 'MOD' ist 'num'. 1) Operandentypen prüfen.</Actions>
   </Message>
   <Message number="28" eDefine="SYS_ERR_ARL_ILTDIVROP">
     <Title>Typenfehler</Title>
-    <Description>Unzulässiger Typ <arg format="%.18s" ordinal="1" /> für rechten Operanden von Operator '/', 'DIV' oder 'MOD'.</Description>
-    <Actions>Zulässiger Operandentyp für die Operatoren '/', 'DIV' oder 'MOD' ist 'num'. <p />1) Operandentypen prüfen.</Actions>
+    <Description>Unzulässiger Typ %.18s1 für rechten Operanden von Operator '/', 'DIV' oder 'MOD'.</Description>
+    <Actions>Zulässiger Operandentyp für die Operatoren '/', 'DIV' oder 'MOD' ist 'num'. 1) Operandentypen prüfen.</Actions>
   </Message>
   <Message number="29" eDefine="SYS_ERR_ARL_ILTLTLOP">
     <Title>Typenfehler</Title>
-    <Description>Unzulässiger Typ <arg format="%.18s" ordinal="1" />  für linken Operanden von Operator '&lt;', '&lt;=', '&gt;' oder '&gt;='.</Description>
-    <Actions>Zulässiger Operandentyp für die Operatoren '&lt;', '&lt;=', '&gt;' oder '&gt;=' ist 'num'. <p />1) Operandentypen prüfen.</Actions>
+    <Description>Unzulässiger Typ %.18s1  für linken Operanden von Operator '&lt;', '&lt;=', '&gt;' oder '&gt;='.</Description>
+    <Actions>Zulässiger Operandentyp für die Operatoren '&lt;', '&lt;=', '&gt;' oder '&gt;=' ist 'num'. 1) Operandentypen prüfen.</Actions>
   </Message>
   <Message number="30" eDefine="SYS_ERR_ARL_ILTLTROP">
     <Title>Typenfehler</Title>
-    <Description>Unzulässiger Typ <arg format="%.18s" ordinal="1" /> für rechten Operanden von Operator '&lt;', '&lt;=', '&gt;' oder '&gt;='.</Description>
-    <Actions>Zulässiger Operandentyp für die Operatoren '&lt;', '&lt;=', '&gt;' oder '&gt;=' ist 'num'. <p />1) Operandentypen prüfen.</Actions>
+    <Description>Unzulässiger Typ %.18s1 für rechten Operanden von Operator '&lt;', '&lt;=', '&gt;' oder '&gt;='.</Description>
+    <Actions>Zulässiger Operandentyp für die Operatoren '&lt;', '&lt;=', '&gt;' oder '&gt;=' ist 'num'. 1) Operandentypen prüfen.</Actions>
   </Message>
   <Message number="31" eDefine="SYS_ERR_ARL_ILTMULLOP">
     <Title>Typenfehler</Title>
-    <Description>Unzulässiger Typ <arg format="%.18s" ordinal="1" /> für linken Operanden des Operators '*'.</Description>
-    <Actions>Zulässige Typen für die Operanden des Operators '*' sind 'num', 'pos' und 'orient'. <p />1) Operandentypen prüfen.</Actions>
+    <Description>Unzulässiger Typ %.18s1 für linken Operanden des Operators '*'.</Description>
+    <Actions>Zulässige Typen für die Operanden des Operators '*' sind 'num', 'pos' und 'orient'. 1) Operandentypen prüfen.</Actions>
   </Message>
   <Message number="32" eDefine="SYS_ERR_ARL_ILTMULROP">
     <Title>Typenfehler</Title>
-    <Description>Unzulässiger Typ <arg format="%.18s" ordinal="1" /> für rechten Operanden des Operators '*'.</Description>
-    <Actions>Zulässige Typen für die Operanden des Operators '*' sind 'num', 'pos' und 'orient'. <p />1) Operandentypen prüfen.</Actions>
+    <Description>Unzulässiger Typ %.18s1 für rechten Operanden des Operators '*'.</Description>
+    <Actions>Zulässige Typen für die Operanden des Operators '*' sind 'num', 'pos' und 'orient'. 1) Operandentypen prüfen.</Actions>
   </Message>
   <Message number="33" eDefine="SYS_ERR_ARL_ILTNOTOP">
     <Title>Typenfehler</Title>
-    <Description>Unzulässiger Typ <arg format="%.18s" ordinal="1" /> für den Operanden des Operators 'NOT'.</Description>
-    <Actions>Zulässiger Operandentyp für den Operatoren 'NOT' ist 'bool'. <p />1) Operandentypen prüfen.</Actions>
+    <Description>Unzulässiger Typ %.18s1 für den Operanden des Operators 'NOT'.</Description>
+    <Actions>Zulässiger Operandentyp für den Operatoren 'NOT' ist 'bool'. 1) Operandentypen prüfen.</Actions>
   </Message>
   <Message number="34" eDefine="SYS_ERR_ARL_ILTORLOP">
     <Title>Typenfehler</Title>
-    <Description>Unzulässiger Typ <arg format="%.18s" ordinal="1" /> für linken Operanden von Operator .</Description>
-    <Actions>Zulässiger Operandentyp für die Operatoren 'OR', 'XOR' oder 'AND' ist 'bool'. <p />1) Operandentypen prüfen.</Actions>
+    <Description>Unzulässiger Typ %.18s1 für linken Operanden von Operator .</Description>
+    <Actions>Zulässiger Operandentyp für die Operatoren 'OR', 'XOR' oder 'AND' ist 'bool'. 1) Operandentypen prüfen.</Actions>
   </Message>
   <Message number="35" eDefine="SYS_ERR_ARL_ILTORROP">
     <Title>Typenfehler</Title>
-    <Description>Unzulässiger Typ <arg format="%.18s" ordinal="1" /> für rechten Operanden von Operator 'OR', 'XOR' oder 'AND'.
+    <Description>Unzulässiger Typ %.18s1 für rechten Operanden von Operator 'OR', 'XOR' oder 'AND'.
 </Description>
-    <Actions>Zulässiger Operandentyp für die Operatoren 'OR', 'XOR' oder 'AND' ist 'bool'.<p /> 1) Operandentypen prüfen.</Actions>
+    <Actions>Zulässiger Operandentyp für die Operatoren 'OR', 'XOR' oder 'AND' ist 'bool'. 1) Operandentypen prüfen.</Actions>
   </Message>
   <Message number="36" eDefine="SYS_ERR_ARL_INCNIND">
     <Title>Typenfehler</Title>
-    <Description>Falsche Anzahl an Indizes in Indexliste für Datenfeld <arg format="%.18s" ordinal="1" /> mit <arg format="%i" ordinal="2" /> Dimension(en).
+    <Description>Falsche Anzahl an Indizes in Indexliste für Datenfeld %.18s1 mit %i2 Dimension(en).
     </Description>
     <Actions>1) Anzahl der Indizes in der Indexliste muss der Anzahl der Dimensionen des indizierten Datenfelds entsprechen.    </Actions>
   </Message>
@@ -200,67 +200,67 @@
   </Message>
   <Message number="39" eDefine="SYS_ERR_ARL_NAMAMBCON">
     <Title>Ungültiger Name</Title>
-    <Description>Konstantenname <arg format="%.16s" ordinal="1" /> mehrdeutig. </Description>
+    <Description>Konstantenname %.16s1 mehrdeutig. </Description>
     <Actions>Namen für Routinendaten müssen innerhalbder Routine eindeutig sein. Namen fürProgrammdaten müssen innerhalb desModuls eindeutig sein. Die Daten umbenennen oder den Namen ändern, der den Konflikt verursacht. </Actions>
   </Message>
   <Message number="40" eDefine="SYS_ERR_ARL_NAMAMBGC">
     <Title>Ungültiger Name</Title>
-    <Description>Name der globalen Konstanten <arg format="%.16s" ordinal="1" /> mehrdeutig. </Description>
+    <Description>Name der globalen Konstanten %.16s1 mehrdeutig. </Description>
     <Actions>Die Namen von globalen Daten müssenunter allen globalen Typen, Daten, globalen Routinen und Modulen im ganzen Programm eindeutig sein. Die Daten umbenennen oderden Namen ändern, der den Konflikt verursacht. </Actions>
   </Message>
   <Message number="41" eDefine="SYS_ERR_ARL_NAMAMBGP">
     <Title>Ungültiger Name</Title>
-    <Description>Name der globalen Persistenten <arg format="%.16s" ordinal="1" /> mehrdeutig. </Description>
+    <Description>Name der globalen Persistenten %.16s1 mehrdeutig. </Description>
     <Actions>Die Namen von globalen Daten müssenunter allen globalen Typen, Daten, globalen Routinen und Modulen im ganzen Programm eindeutig sein. Die Daten umbenennen oderden Namen ändern, der den Konflikt verursacht. </Actions>
   </Message>
   <Message number="42" eDefine="SYS_ERR_ARL_NAMAMBGR">
     <Title>Ungültiger Name</Title>
-    <Description>Name der globalen Routine <arg format="%.16s" ordinal="1" /> mehrdeutig. </Description>
+    <Description>Name der globalen Routine %.16s1 mehrdeutig. </Description>
     <Actions>Die Namen von globalen Routinen müssenunter allen globalen Typen, Daten, globalenRoutinen und Modulen im ganzenProgramm eindeutig sein. Die Routine umbenennen oderden Namen ändern, der den Konflikt verursacht. </Actions>
   </Message>
   <Message number="43" eDefine="SYS_ERR_ARL_NAMAMBGV">
     <Title>Ungültiger Name</Title>
-    <Description>Name der globalen Variablen <arg format="%.16s" ordinal="1" /> mehrdeutig. </Description>
+    <Description>Name der globalen Variablen %.16s1 mehrdeutig. </Description>
     <Actions>Die Namen von globalen Daten müssenunter allen globalen Typen, Daten, globalen Routinen und Modulen im ganzen Programm eindeutig sein. Die Daten umbenennen oderden Namen ändern, der den Konflikt verursacht. </Actions>
   </Message>
   <Message number="44" eDefine="SYS_ERR_ARL_NAMAMBLAB">
     <Title>Ungültiger Name</Title>
-    <Description>Markenname <arg format="%.16s" ordinal="1" /> mehrdeutig. </Description>
+    <Description>Markenname %.16s1 mehrdeutig. </Description>
     <Actions>Namen für Marken müssen innerhalbder Routine eindeutig sein. Die Marke umbenennen oderden Namen ändern, der den Konflikt verursacht. </Actions>
   </Message>
   <Message number="45" eDefine="SYS_ERR_ARL_NAMAMBMOD">
     <Title>Ungültiger Name</Title>
-    <Description>Modulname <arg format="%.16s" ordinal="1" /> mehrdeutig. </Description>
+    <Description>Modulname %.16s1 mehrdeutig. </Description>
     <Actions>Die Namen von Modulen müssenunter allen globalen Typen, globalen Daten, globalenRoutinen und Modulen im ganzenProgramm eindeutig sein. Das Modul umbenennen oderden Namen ändern, der den Konflikt verursacht. </Actions>
   </Message>
   <Message number="46" eDefine="SYS_ERR_ARL_NAMAMBPAR">
     <Title>Ungültiger Name</Title>
-    <Description>Parametername <arg format="%.16s" ordinal="1" /> mehrdeutig. </Description>
+    <Description>Parametername %.16s1 mehrdeutig. </Description>
     <Actions>Namen für Parameter müssen innerhalbder Routine eindeutig sein. Den Parameterumbenennen oder den Namen ändern,der den Konflikt verursacht. </Actions>
   </Message>
   <Message number="47" eDefine="SYS_ERR_ARL_NAMAMBPER">
     <Title>Ungültiger Name</Title>
-    <Description>Persistentenname <arg format="%.16s" ordinal="1" /> mehrdeutig. </Description>
+    <Description>Persistentenname %.16s1 mehrdeutig. </Description>
     <Actions>Namen für Programmdaten müssen innerhalb desModuls eindeutig sein. Die Daten umbenennen oderden Namen ändern, der den Konflikt verursacht. </Actions>
   </Message>
   <Message number="48" eDefine="SYS_ERR_ARL_NAMAMBRTN">
     <Title>Ungültiger Name</Title>
-    <Description>Routinenname <arg format="%.16s" ordinal="1" /> mehrdeutig. </Description>
+    <Description>Routinenname %.16s1 mehrdeutig. </Description>
     <Actions>Namen für Routinen müssen innerhalbdes Moduls eindeutig sein. Die Routine umbenennen oderden Namen ändern, der den Konflikt verursacht. </Actions>
   </Message>
   <Message number="49" eDefine="SYS_ERR_ARL_NAMAMBVAR">
     <Title>Ungültiger Name</Title>
-    <Description>Variablenname <arg format="%.16s" ordinal="1" /> mehrdeutig. </Description>
+    <Description>Variablenname %.16s1 mehrdeutig. </Description>
     <Actions>Namen für Routinendaten müssen innerhalbder Routine eindeutig sein. Namen fürProgrammdaten müssen innerhalb desModuls eindeutig sein. Die Daten umbenennen oder den Namen ändern, der den Konflikt verursacht. </Actions>
   </Message>
   <Message number="50" eDefine="SYS_ERR_ARL_NETADDOPS">
     <Title>Typenfehler</Title>
-    <Description>Operandentypen <arg format="%.18s" ordinal="1" /> und <arg format="%.18s" ordinal="2" /> für binären Operator '+' oder '-' sind nicht gleich. </Description>
+    <Description>Operandentypen %.18s1 und %.18s2 für binären Operator '+' oder '-' sind nicht gleich. </Description>
     <Actions>Die beiden Operanden der Operatoren '+' und '-'müssen denselben Typ haben. Operandentypenprüfen. </Actions>
   </Message>
   <Message number="51" eDefine="SYS_ERR_ARL_NETEQOPS">
     <Title>Typenfehler</Title>
-    <Description>Operandentypen <arg format="%.18s" ordinal="1" /> und <arg format="%.18s" ordinal="2" /> für Operator für '=' oder '&lt;&gt;' sind nicht gleich. </Description>
+    <Description>Operandentypen %.18s1 und %.18s2 für Operator für '=' oder '&lt;&gt;' sind nicht gleich. </Description>
     <Actions>Die beiden Operanden der Operatoren '=' und '&lt;&gt;' müssen denselben Typ haben. Operandentypenprüfen. </Actions>
   </Message>
   <Message number="52" eDefine="SYS_ERR_ARL_NOTRETEXP">
@@ -270,27 +270,27 @@
   </Message>
   <Message number="54" eDefine="SYS_ERR_ARL_NSDARRAGG">
     <Title>Typenfehler</Title>
-    <Description>Unterschiedliche Dimension von Datenfeldtyp (<arg format="%i" ordinal="1" />) und Aggregat (<arg format="%i" ordinal="2" />).</Description>
+    <Description>Unterschiedliche Dimension von Datenfeldtyp (%i1) und Aggregat (%i2).</Description>
     <Actions>Anzahl der Ausdrücke im Aggregat mussmit der Anzahl der Dimensionen desDatenfelds identisch sein. </Actions>
   </Message>
   <Message number="55" eDefine="SYS_ERR_ARL_NVTATGT">
     <Title>Typenfehler</Title>
-    <Description>Typ des Zuweisungsziels <arg format="%.18s" ordinal="1" /> ist nicht vom Typ 'value' oder 'semi-value'. </Description>
+    <Description>Typ des Zuweisungsziels %.18s1 ist nicht vom Typ 'value' oder 'semi-value'. </Description>
     <Actions>Der Typ der Daten, denen ein Wert zugewiesenwerden soll, muss den Typ 'value' oder 'semi-value'haben. Daten des Typs 'non-value' können nurvon speziellen typspezifischvordefinierten Instruktionen oder Funktionen gesetzt werden. </Actions>
   </Message>
   <Message number="56" eDefine="SYS_ERR_ARL_NVTEQLOP">
     <Title>Typenfehler</Title>
-    <Description>Typ <arg format="%.18s" ordinal="1" /> für linken Operanden von Operator "=" oder "&lt;&gt;" nicht vom Typ "value" oder "semi-value".</Description>
+    <Description>Typ %.18s1 für linken Operanden von Operator "=" oder "&lt;&gt;" nicht vom Typ "value" oder "semi-value".</Description>
     <Actions>Die Operatoren "='" und "&lt;&gt;" dürfen nur auf Ausdrücke vom Typ "value" oder "semi-value" angewendet werden. Für Vergleiche sind spezielle typspezifisch vordefinierte Funktionen erforderlich.</Actions>
   </Message>
   <Message number="57" eDefine="SYS_ERR_ARL_NVTEQROP">
     <Title>Typenfehler</Title>
-    <Description>Typ <arg format="%.18s" ordinal="1" /> für rechten Operanden von Operator "=" oder "&lt;&gt;" nicht vom Typ "value" oder "semi-value".</Description>
+    <Description>Typ %.18s1 für rechten Operanden von Operator "=" oder "&lt;&gt;" nicht vom Typ "value" oder "semi-value".</Description>
     <Actions>Die Operatoren "='" und "&lt;&gt;" dürfen nur auf Ausdrücke vom Typ "value" oder "semi-value" angewendet werden. Für Vergleiche sind spezielle typspezifisch vordefinierte Funktionen erforderlich.</Actions>
   </Message>
   <Message number="58" eDefine="SYS_ERR_ARL_NVTTSTEXP">
     <Title>Typenfehler</Title>
-    <Description>Typ des TEST-Ausdrucks <arg format="%.18s" ordinal="1" /> ist nicht vom Typ'value' oder 'semi-value'.</Description>
+    <Description>Typ des TEST-Ausdrucks %.18s1 ist nicht vom Typ'value' oder 'semi-value'.</Description>
     <Actions>Die TEST-Instruktion darf nur einemAusdruck des Typs 'value' oder 'semi-value'zugewiesen werden. Für Vergleiche sind spezielletypspezifisch vordefinierte Funktionenerforderlich. </Actions>
   </Message>
   <Message number="59" eDefine="SYS_ERR_ARL_PHRCONVAL">
@@ -335,141 +335,141 @@
   </Message>
   <Message number="67" eDefine="SYS_ERR_ARL_RECAGGTFC">
     <Title>Typenfehler</Title>
-    <Description>Zu wenige Komponenten in Datensatzaggregat des Typs <arg format="%.18s" ordinal="1" />.</Description>
+    <Description>Zu wenige Komponenten in Datensatzaggregat des Typs %.18s1.</Description>
     <Actions>Anzahl der Ausdrücke im Aggregat muss mit Anzahl der Komponenten im Datensatztyp übereinstimmen. </Actions>
   </Message>
   <Message number="68" eDefine="SYS_ERR_ARL_RECAGGTMC">
     <Title>Typenfehler</Title>
-    <Description>Zu viele Komponenten in Datensatzaggregat des Typs <arg format="%.18s" ordinal="1" />.</Description>
+    <Description>Zu viele Komponenten in Datensatzaggregat des Typs %.18s1.</Description>
     <Actions>Anzahl der Ausdrücke im Aggregat muss mit Anzahl der Komponenten im Datensatztyp übereinstimmen. </Actions>
   </Message>
   <Message number="69" eDefine="SYS_ERR_ARL_REFAMBDAT">
     <Title>Referenzfehler</Title>
-    <Description>Datenverweis <arg format="%.16s" ordinal="1" /> ist mehrdeutig. </Description>
+    <Description>Datenverweis %.16s1 ist mehrdeutig. </Description>
     <Actions>Mindestens ein anderes Objekt mit demselben Namen wie die Referenzdaten ist von dieser Programmposition aus sichtbar. Alle Objektnamen müssen die Benennungsregeln der Eindeutigkeit erfüllen. </Actions>
   </Message>
   <Message number="70" eDefine="SYS_ERR_ARL_REFAMBFUN">
     <Title>Referenzfehler </Title>
-    <Description>Funktionsverweis <arg format="%.16s" ordinal="1" /> ist mehrdeutig. </Description>
+    <Description>Funktionsverweis %.16s1 ist mehrdeutig. </Description>
     <Actions>Von dieser Programmposition aus ist mindestens ein anderes Objekt mit demselben Namen wie die angegebene Funktion sichtbar. Alle Objektnamen müssen die Benennungsregeln bezüglich Eindeutigkeit erfüllen. </Actions>
   </Message>
   <Message number="71" eDefine="SYS_ERR_ARL_REFAMBLAB">
     <Title>Referenzfehler</Title>
-    <Description>Markenverweis <arg format="%.16s" ordinal="1" /> ist mehrdeutig. </Description>
+    <Description>Markenverweis %.16s1 ist mehrdeutig. </Description>
     <Actions>Mindestens ein anderes Objekt mit demselben Namen wie die Referenzmarke ist von dieser Programmposition aus sichtbar. Alle Objektnamen müssen die Benennungsregeln der Eindeutigkeit erfüllen. </Actions>
   </Message>
   <Message number="72" eDefine="SYS_ERR_ARL_REFAMBPRC">
     <Title>Referenzfehler</Title>
-    <Description>Prozedurenverweis <arg format="%.16s" ordinal="1" /> ist mehrdeutig. </Description>
+    <Description>Prozedurenverweis %.16s1 ist mehrdeutig. </Description>
     <Actions>Mindestens ein anderes Objekt mit demselben Namen wie die Referenzprozedur ist von dieser Programmposition aus sichtbar. Alle Objektnamen müssen die Benennungsregeln der Eindeutigkeit erfüllen. </Actions>
   </Message>
   <Message number="73" eDefine="SYS_ERR_ARL_REFAMBTRP">
     <Title>Referenzfehler</Title>
-    <Description>Interruptverweis <arg format="%.16s" ordinal="1" /> ist mehrdeutig.<p /></Description>
+    <Description>Interruptverweis %.16s1 ist mehrdeutig.</Description>
     <Actions>Mindestens ein anderes Objekt mit demselben Namen wie der Referenz-Interrupt ist von dieser Programmposition aus sichtbar. Alle Objektnamen müssen die Benennungsregeln der Eindeutigkeit erfüllen. </Actions>
   </Message>
   <Message number="74" eDefine="SYS_ERR_ARL_REFNOTDAT">
     <Title>Referenzfehler</Title>
     <Description>
-      <arg format="%.16s" ordinal="1" /> nicht vollständiger Datenverweis.<p /></Description>
+      %.16s1 nicht vollständiger Datenverweis.</Description>
     <Actions>Der angegebene Name identifiziert ein von Daten abweichendes Objekt. Prüfen, ob die gewünschten Daten durch ein anderes Objekt mit demselben Namen verdeckt sind. </Actions>
   </Message>
   <Message number="75" eDefine="SYS_ERR_ARL_REFNOTFUN">
     <Title>Referenzfehler</Title>
     <Description>
-      <arg format="%.16s" ordinal="1" /> kein Funktionsverweis.<p /></Description>
+      %.16s1 kein Funktionsverweis.</Description>
     <Actions>Der angegebene Name identifiziert ein von einer Funktion abweichendes Objekt. Prüfen, ob die gewünschte Funktion durch ein anderes Objekt mit demselben Namen verdeckt ist. </Actions>
   </Message>
   <Message number="76" eDefine="SYS_ERR_ARL_REFNOTLAB">
     <Title>Referenzfehler</Title>
     <Description>
-      <arg format="%.16s" ordinal="1" />kein Markenverweis.<p /></Description>
+      %.16s1kein Markenverweis.</Description>
     <Actions>Der angegebene Name identifiziert ein von einer Marke abweichendes Objekt. Prüfen, ob die gewünschte Marke durch ein anderes Objekt mit demselben Namen verdeckt ist. </Actions>
   </Message>
   <Message number="77" eDefine="SYS_ERR_ARL_REFNOTOPC">
     <Title>Referenzfehler</Title>
     <Description>
-      <arg format="%.16s" ordinal="1" /> kein Verweis auf optionalen Parameter in bedingtem Argumentwert.<p /></Description>
-    <Actions>Der angegebene Name identifiziert ein von einem optionalen Parameter abweichendes Objekt. Den Namen so ändern, dass er auf einen optionalen<p />Parameter verweist. </Actions>
+      %.16s1 kein Verweis auf optionalen Parameter in bedingtem Argumentwert.</Description>
+    <Actions>Der angegebene Name identifiziert ein von einem optionalen Parameter abweichendes Objekt. Den Namen so ändern, dass er auf einen optionalenParameter verweist. </Actions>
   </Message>
   <Message number="78" eDefine="SYS_ERR_ARL_REFNOTOPP">
     <Title>Referenzfehler</Title>
     <Description>
-      <arg format="%.16s" ordinal="1" /> kein Verweis auf optionalen Parameter.<p /></Description>
-    <Actions>Der angegebene Name identifiziert ein von einem optionalen Parameter abweichendes Objekt. Den Namen so ändern, dass er auf einen optionalen<p />Parameter verweist. </Actions>
+      %.16s1 kein Verweis auf optionalen Parameter.</Description>
+    <Actions>Der angegebene Name identifiziert ein von einem optionalen Parameter abweichendes Objekt. Den Namen so ändern, dass er auf einen optionalenParameter verweist. </Actions>
   </Message>
   <Message number="79" eDefine="SYS_ERR_ARL_REFNOTPRC">
     <Title>Referenzfehler</Title>
-    <Description>Task <arg format="%.16s" ordinal="1" />: <arg format="%.16s" ordinal="2" /> ist kein Verweis auf eine Prozedur.<p /></Description>
+    <Description>Task %.16s1: %.16s2 ist kein Verweis auf eine Prozedur.</Description>
     <Actions>Der angegebene Name identifiziert ein von einer Prozedur abweichendes Objekt. Prüfen, ob die gewünschte Prozedur durch ein anderes Objekt mit demselben Namen verdeckt ist.</Actions>
   </Message>
   <Message number="80" eDefine="SYS_ERR_ARL_REFNOTRQP">
     <Title>Referenzfehler</Title>
     <Description>
-      <arg format="%.16s" ordinal="1" /> kein Verweis auf erforderlichen Parameter.<p /></Description>
+      %.16s1 kein Verweis auf erforderlichen Parameter.</Description>
     <Actions>Der angegebene Name identifiziert ein von einem erforderlichen Parameter abweichendes Objekt. Den Namen so ändern, dass er auf einen erforderlichen Parameter verweist. </Actions>
   </Message>
   <Message number="81" eDefine="SYS_ERR_ARL_REFNOTTRP">
     <Title>Referenzfehler</Title>
     <Description>
-      <arg format="%.16s" ordinal="1" /> kein Verweis auf einen Interrupt.<p /></Description>
+      %.16s1 kein Verweis auf einen Interrupt.</Description>
     <Actions>Der angegebene Name identifiziert ein von einem Interrupt abweichendes Objekt. Prüfen, ob der gewünschte Interrupt durch ein anderes Objekt mit demselben Namen verdeckt ist. </Actions>
   </Message>
   <Message number="82" eDefine="SYS_ERR_ARL_REFNOTTYP">
     <Title>Referenzfehler</Title>
     <Description>
-      <arg format="%.16s" ordinal="1" /> kein Typenname.<p /></Description>
+      %.16s1 kein Typenname.</Description>
     <Actions>Der angegebene Name identifiziert ein von einem Typ abweichendes Objekt. Prüfen, ob der gewünschte Typ durch ein anderes Objekt mit demselben Namen verdeckt ist. </Actions>
   </Message>
   <Message number="83" eDefine="SYS_ERR_ARL_REFNOTVT">
     <Title>Typenfehler</Title>
     <Description>
-      <arg format="%.16s" ordinal="1" /> nicht vom Typ 'value'.<p /></Description>
-    <Actions>Nur Variablen ohne Anfangswert und 'VAR'-Modusparameter können den Typ<p />'semi-value' oder 'non-value' haben. </Actions>
+      %.16s1 nicht vom Typ 'value'.</Description>
+    <Actions>Nur Variablen ohne Anfangswert und 'VAR'-Modusparameter können den Typ'semi-value' oder 'non-value' haben. </Actions>
   </Message>
   <Message number="86" eDefine="SYS_ERR_ARL_REFUNKLAB">
     <Title>Referenzfehler</Title>
-    <Description>Verweis auf unbekannte Marke <arg format="%.16s" ordinal="1" />.<p /></Description>
+    <Description>Verweis auf unbekannte Marke %.16s1.</Description>
     <Actions>Die Routine enthält keine Marke (oder ein anderes Objekt) mit dem angegebenen Namen. </Actions>
   </Message>
   <Message number="87" eDefine="SYS_ERR_ARL_REFUNKOPP">
     <Title>Referenzfehler</Title>
-    <Description>Verweis auf unbekannten optionalen Parameter <arg format="%.16s" ordinal="1" />.<p /></Description>
+    <Description>Verweis auf unbekannten optionalen Parameter %.16s1.</Description>
     <Actions>Die aufgerufene Routine enthält keinen optionalen Parameter (oder ein anderes Objekt) mit dem angegebenen Namen. </Actions>
   </Message>
   <Message number="89" eDefine="SYS_ERR_ARL_REFUNKRCP">
     <Title>Referenzfehler</Title>
-    <Description>Verweis auf unbekannte Datensatzkomponente <arg format="%.16s" ordinal="1" />.<p /></Description>
+    <Description>Verweis auf unbekannte Datensatzkomponente %.16s1.</Description>
     <Actions>Der Datensatztyp enthält keine Datensatzkomponente mit dem angegebenen Namen. </Actions>
   </Message>
   <Message number="90" eDefine="SYS_ERR_ARL_REFUNKRQP">
     <Title>Referenzfehler</Title>
-    <Description>Verweis auf unbekannten erforderlichen Parameter <arg format="%.16s" ordinal="1" />.<p /></Description>
+    <Description>Verweis auf unbekannten erforderlichen Parameter %.16s1.</Description>
     <Actions>Die aufgerufene Routine enthält keinen erforderlichen Parameter (oder ein anderes Objekt) mit dem angegebenen Namen. </Actions>
   </Message>
   <Message number="92" eDefine="SYS_ERR_ARL_REFUNKTYP">
     <Title>Referenzfehler</Title>
-    <Description>Unbekannter Typenname <arg format="%.16s" ordinal="1" />.<p /><p /></Description>
+    <Description>Unbekannter Typenname %.16s1.</Description>
     <Actions>Kein Datentyp (oder ein anderes Objekt) mit dem angegebenen Namen ist von dieser Programmposition aus sichtbar. </Actions>
   </Message>
   <Message number="93" eDefine="SYS_ERR_ARL_ROATGT">
     <Title>Instruktionsfehler</Title>
-    <Description>Zuweisungsziel ist schreibgeschützt.<p /></Description>
+    <Description>Zuweisungsziel ist schreibgeschützt.</Description>
     <Actions>Die Daten, denen ein Wert zugewiesen werden soll, dürfen keine Konstante, Variable oder Persistente des Typs 'Nur lesen' sein. </Actions>
   </Message>
   <Message number="94" eDefine="SYS_ERR_ARL_RTNPER">
     <Title>Datendeklarationsfehler</Title>
-    <Description>Persistentendeklaration in Routine unzulässig.<p /></Description>
+    <Description>Persistentendeklaration in Routine unzulässig.</Description>
     <Actions>Persistenten dürfen nur auf Modulebene deklariert werden. Persistentendeklaration aus der Routine verlagern. </Actions>
   </Message>
   <Message number="95" eDefine="SYS_ERR_ARL_RTNRSEEXP">
     <Title>Instruktionsfehler</Title>
-    <Description>RAISE mit Ausdruck nur in Fehlerbehandlung erlaubt.<p /></Description>
+    <Description>RAISE mit Ausdruck nur in Fehlerbehandlung erlaubt.</Description>
     <Actions>Der RAISE-Instruktion einen Ausdruck für Fehlernummer hinzufügen. </Actions>
   </Message>
   <Message number="96" eDefine="SYS_ERR_ARL_RTNRTY">
     <Title>Instruktionsfehler</Title>
-    <Description>RETRY nur in Fehlerbehandlung erlaubt.<p /></Description>
+    <Description>RETRY nur in Fehlerbehandlung erlaubt.</Description>
     <Actions>Die Instruktion RETRY darf nur in Fehlerbehandlungen benutzt werden. Instruktion entfernen. </Actions>
   </Message>
 </Domain>

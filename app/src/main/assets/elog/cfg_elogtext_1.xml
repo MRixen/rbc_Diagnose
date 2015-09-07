@@ -4,81 +4,81 @@
     <Title>Zu wenig Speicher für Konfiguration (cfg)</Title>
     <Description>Der Speicher in der cfg-Datenbank reicht für diesen Vorgang nicht aus.</Description>
     <Consequences>Die Konfigurationsdatei wird nicht installiert.</Consequences>
-    <Actions>1) Versuchen Sie folgende Option: bestehende Parameter vor dem Laden der Konfigurationsdatei löschen. Das löscht alle vorhergehenden Konfigurationseinstellungen für die Domäne.<p />2) Konfigurationsdatenbank vergrößern.</Actions>
+    <Actions>1) Versuchen Sie folgende Option: bestehende Parameter vor dem Laden der Konfigurationsdatei löschen. Das löscht alle vorhergehenden Konfigurationseinstellungen für die Domäne.2) Konfigurationsdatenbank vergrößern.</Actions>
   </Message>
   <Message number="2" eDefine="SYS_ERR_CFG_WRITE_PROT">
     <Title>Instanz kann nicht gespeichert werden</Title>
-    <Description>Instanz in Zeile <arg format="%d" ordinal="1" /> von Datei <arg format="%s" ordinal="2" /> kann nicht überschrieben werden. <p /></Description>
+    <Description>Instanz in Zeile %d1 von Datei %s kann nicht überschrieben werden. </Description>
     <Consequences>Die Instanz ist eventuell schreibgeschützt und die Konfiguration in der Datei wird nicht installiert.</Consequences>
     <Causes>- </Causes>
     <Actions>Sie sind nicht berechtigt, die Instanz zu ändern.</Actions>
   </Message>
   <Message number="3" eDefine="SYS_ERR_CFG_VERSION">
     <Title>Falsche cfg-Dateiversion</Title>
-    <Description>Die cfg-Dateiversion ist falsch. Diese Version der RobotWare ist zum Lesen der <arg format="%s" ordinal="1" />.cfg Dateien mit Version <arg format="%s" ordinal="2" /> gedacht.</Description>
+    <Description>Die cfg-Dateiversion ist falsch. Diese Version der RobotWare ist zum Lesen der %s.cfg Dateien mit Version %s gedacht.</Description>
     <Consequences>Die Konfigurationsdatei ist möglicherweise nicht richtig installiert.</Consequences>
     <Causes>-</Causes>
     <Actions>1) Migrieren oder bearbeiten Sie die Konfigurationsdatei, und aktualisieren Sie die Version in der Kopfzeile der Datei.</Actions>
   </Message>
   <Message number="4" eDefine="SYS_ERR_CFG_LINE_ERR">
     <Title>Zeile zu lang</Title>
-    <Description>Zeile <arg format="%d" ordinal="1" /> in Datei <arg format="%s" ordinal="2" /> enthält <arg format="%s" ordinal="3" /> mehr Zeichen als die erlaubten <arg format="%d" ordinal="4" />. <p /></Description>
+    <Description>Zeile %d1 in Datei %s enthält %s mehr Zeichen als die erlaubten %d4. </Description>
     <Consequences>Die Konfiguration in der Datei wird nicht installiert.</Consequences>
     <Actions>1) Konfigurationsdatei überarbeiten und die Zeichenanzahl reduzieren, z. B. durch aufteilen der Instanz auf mehrere Zeilen. Beenden Sie dazu jede Zeile außer der letzten mit einem umgekehrten Schrägstrich '\'.</Actions>
   </Message>
   <Message number="5" eDefine="SYS_ERR_CFG_ATTR_ERR">
     <Title>Attributwert außerhalb des zulässigen Bereichs</Title>
-    <Description>Attribut <arg format="%s" ordinal="3" /> in Zeile <arg format="%d" ordinal="1" /> in Datei <arg format="%s" ordinal="2" /> liegt außerhalb des zulässigen Bereichs. Der zulässige Bereich ist &lt; <arg format="%s" ordinal="4" />&gt; - &lt; <arg format="%s" ordinal="5" />&gt;.<p /></Description>
+    <Description>Attribut %s in Zeile %d1 in Datei %s liegt außerhalb des zulässigen Bereichs. Der zulässige Bereich ist &lt; %s&gt; - &lt; %s&gt;.</Description>
     <Consequences>Die Konfiguration in der Datei wird nicht installiert.</Consequences>
     <Causes>-</Causes>
     <Actions>1) Konfigurationsdatei überarbeiten und den Wert des Attributs so ändern, dass er im zulässigen Bereich liegt.</Actions>
   </Message>
   <Message number="6" eDefine="SYS_ERR_CFG_DUB_NAME">
     <Title>Instanzname belegt</Title>
-    <Description>Instanz in Zeile <arg format="%d" ordinal="1" /> in Datei <arg format="%s" ordinal="2" /> ist bereits belegt.</Description>
+    <Description>Instanz in Zeile %d1 in Datei %s ist bereits belegt.</Description>
     <Consequences>Die Konfiguration in der Datei wird nicht installiert.</Consequences>
-    <Actions>1) Konfigurationsdatei überarbeiten und Name der Instanz ändern, um sie der Datei hinzuzufügen<p /><p />ODER<p /><p />2) Im Ersetzen-Modus die Instanz überschreiben, die diesen Namen zuvor verwendet hat. Dieser lässt sich beim Laden der Konfigurationsdatei mit RobotStudio wählen (siehe RobotStudio-Handbuch).</Actions>
+    <Actions>1) Konfigurationsdatei überarbeiten und Name der Instanz ändern, um sie der Datei hinzuzufügenODER2) Im Ersetzen-Modus die Instanz überschreiben, die diesen Namen zuvor verwendet hat. Dieser lässt sich beim Laden der Konfigurationsdatei mit RobotStudio wählen (siehe RobotStudio-Handbuch).</Actions>
   </Message>
   <Message number="7" eDefine="SYS_ERR_CFG_ILLEGAL_ELEMENT">
     <Title>Unbekannter Typ/Attribut in cfg-Datei</Title>
-    <Description>Typ/Attribut an Position <arg format="%d" ordinal="1" /> in Zeile <arg format="%d" ordinal="2" /> von Datei <arg format="%s" ordinal="3" /> nicht erkannt.</Description>
+    <Description>Typ/Attribut an Position %d1 in Zeile %d2 von Datei %s nicht erkannt.</Description>
     <Consequences>Die Konfiguration in der Datei wird nicht installiert.</Consequences>
     <Causes>Der Konfigurationstyp ist eventuell nicht installiert, unzulässiges/falsch geschriebenes Attribut oder Name zu lang.</Causes>
     <Actions>1) Konfigurationsdatei erneut bearbeiten.</Actions>
   </Message>
   <Message number="8" eDefine="SYS_ERR_CFG_MISSING_ATTR">
     <Title>Obligatorisches Attribut fehlt in cfg-Datei</Title>
-    <Description>Fehlendes obligatorisches Attribut <arg format="%s" ordinal="1" /> in Zeile <arg format="%d" ordinal="2" /> von Datei <arg format="%s" ordinal="3" />. </Description>
+    <Description>Fehlendes obligatorisches Attribut %s in Zeile %d2 von Datei %s. </Description>
     <Consequences>Die Konfiguration in der Datei wird nicht installiert.</Consequences>
     <Causes>Fehlendes/falsch geschriebenes Attribut.</Causes>
     <Actions>1) Konfigurationsdatei erneut bearbeiten.</Actions>
   </Message>
   <Message number="9" eDefine="SYS_ERR_CFG_NO_NAME">
     <Title>Fehlender Instanzenname in cfg-Datei</Title>
-    <Description>Fehlender Instanzenname in Zeile <arg format="%d" ordinal="1" /> in Datei <arg format="%s" ordinal="2" />. </Description>
+    <Description>Fehlender Instanzenname in Zeile %d1 in Datei %s. </Description>
     <Consequences>Die Konfiguration in der Datei wird nicht installiert.</Consequences>
     <Causes>- </Causes>
     <Actions>1) Konfigurationsdatei erneut bearbeiten.</Actions>
   </Message>
   <Message number="10" eDefine="SYS_ERR_CFG_STRING_ERR">
     <Title>Konfigurationsattribut außerhalb des Bereichs</Title>
-    <Description>Zeile <arg format="%d" ordinal="1" /> in Datei <arg format="%s" ordinal="2" /> enthält das Konfigurationsattribut <arg format="%s" ordinal="3" />, das außerhalb des zulässigen Bereichs liegt. Die max. zulässige Länge beträgt <arg format="%s" ordinal="4" /> Zeichen.</Description>
+    <Description>Zeile %d1 in Datei %s enthält das Konfigurationsattribut %s, das außerhalb des zulässigen Bereichs liegt. Die max. zulässige Länge beträgt %s Zeichen.</Description>
     <Consequences>Die Konfiguration in der Datei wird nicht installiert.</Consequences>
     <Causes>- </Causes>
     <Actions>1) Konfigurationsdatei überarbeiten und Wert des Attributs so ändern, dass es im zulässigen Bereich liegt.</Actions>
   </Message>
   <Message number="11" eDefine="SYS_ERR_CFG_VERSION_STRING">
     <Title>Unzulässige Versionszeichenfolge</Title>
-    <Description>Die Versionszeichenfolge in Konfigurationsdatei <arg format="%s" ordinal="1" /> hat ein unzulässiges Format.</Description>
+    <Description>Die Versionszeichenfolge in Konfigurationsdatei %s hat ein unzulässiges Format.</Description>
     <Consequences>Die Konfiguration in der Datei wird nicht installiert.</Consequences>
-    <Causes>Die Konfigurationsdatei wurde für eine andere Systemversion/Revision erstellt.<p />Die Versionszeichenfolge in der Konfigurationsdatei ist falsch geschrieben/fehlt.<p />Die Konfigurationsdatei ist beschädigt.</Causes>
-    <Actions>1) Konfigurationsdatei überarbeiten und Versionszeichenfolge gemäß diesem Schema ändern:<p /> "Domäne":"cfg-Domänenversion":"Version":"Überarbeitung"::.</Actions>
+    <Causes>Die Konfigurationsdatei wurde für eine andere Systemversion/Revision erstellt.Die Versionszeichenfolge in der Konfigurationsdatei ist falsch geschrieben/fehlt.Die Konfigurationsdatei ist beschädigt.</Causes>
+    <Actions>1) Konfigurationsdatei überarbeiten und Versionszeichenfolge gemäß diesem Schema ändern: "Domäne":"cfg-Domänenversion":"Version":"Überarbeitung"::.</Actions>
   </Message>
   <Message number="12" eDefine="SYS_ERR_CFG_DOMAIN_ERR">
     <Title>Unzulässiger Domänenname</Title>
-    <Description>Der Domänenname <arg format="%s" ordinal="2" /> in Konfigurationsdatei <arg format="%s" ordinal="1" /> ist unzulässig.</Description>
+    <Description>Der Domänenname %s in Konfigurationsdatei %s ist unzulässig.</Description>
     <Consequences>Die Konfiguration in der Datei wird nicht installiert.</Consequences>
-    <Causes>Der Domänenname ist eventuell falsch geschrieben oder die Domäne ist im System nicht installiert.<p /></Causes>
+    <Causes>Der Domänenname ist eventuell falsch geschrieben oder die Domäne ist im System nicht installiert.</Causes>
     <Actions>1) Konfigurationsdatei überarbeiten und den Domänennamen ändern.</Actions>
   </Message>
 </Domain>

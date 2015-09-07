@@ -9,37 +9,37 @@
   </Message>
   <Message number="11" eDefine="SYS_ERR_SYS_MSTATE_EMSTOP">
     <Title>Not-Aus-Zustand</Title>
-    <Description>Rücksetzen des Not-Aus erforderlich.<p /></Description>
-    <Actions>Zuerst NOT-AUS-Taste freigeben,<p />dann MOTOREN-EIN-Taste betätigen.</Actions>
+    <Description>Rücksetzen des Not-Aus erforderlich.</Description>
+    <Actions>Zuerst NOT-AUS-Taste freigeben,dann MOTOREN-EIN-Taste betätigen.</Actions>
   </Message>
   <Message number="12" eDefine="SYS_ERR_SYS_MSTATE_SYSFAIL">
     <Title>Systemfehler</Title>
-    <Description>Schwerer, nicht behebbarer Systemfehler.<p />Warmstart erforderlich.<p /></Description>
-    <Actions>Hauptschalter aus- und einschalten, wenn der Warmstart-Befehl ignoriert<p />wird oder nicht möglich ist.</Actions>
+    <Description>Schwerer, nicht behebbarer Systemfehler.Warmstart erforderlich.</Description>
+    <Actions>Hauptschalter aus- und einschalten, wenn der Warmstart-Befehl ignoriertwird oder nicht möglich ist.</Actions>
   </Message>
   <Message number="25" eDefine="SYS_ERR_SYS_STOP_TIMEOUT">
     <Title>Stop-Anweisung Timeout</Title>
-    <Description>Die Stop-Anweisung wurde als <p />erzwungener Sicherheitsstopp ausgeführt,<p />da innerhalb der erwarteten Zeit keine <p />Bestätigung empfangen wurde.<p /></Description>
+    <Description>Die Stop-Anweisung wurde als erzwungener Sicherheitsstopp ausgeführt,da innerhalb der erwarteten Zeit keine Bestätigung empfangen wurde.</Description>
     <Actions />
   </Message>
   <Message number="30" eDefine="SYS_ERR_SYS_MECSTA_NOT_COMM">
     <Title>Achse nicht kommutiert</Title>
-    <Description>Eine oder mehrere Achsen der internen<p />Treiberstufe sind nicht kommutiert.<p /></Description>
+    <Description>Eine oder mehrere Achsen der internenTreiberstufe sind nicht kommutiert.</Description>
   </Message>
   <Message number="31" eDefine="SYS_ERR_SYS_MECSTA_NOT_CALIB">
     <Title>Achse nicht kalibriert</Title>
-    <Description>Eine oder mehrere Achsen mit absolutem/<p />relativem Messsystem sind nicht kalibriert.<p /></Description>
-    <Actions>Prüfen, welche Achsen nicht<p />kalibriert sind, und Achse(n) kalibrieren.</Actions>
+    <Description>Eine oder mehrere Achsen mit absolutem/relativem Messsystem sind nicht kalibriert.</Description>
+    <Actions>Prüfen, welche Achsen nichtkalibriert sind, und Achse(n) kalibrieren.</Actions>
   </Message>
   <Message number="32" eDefine="SYS_ERR_SYS_MECSTA_NOT_A_SYNC">
     <Title>Umdr.-Zähler nicht aktualisiert</Title>
-    <Description>Der Umdrehungszähler ist nicht aktualisiert.<p />Eine oder mehrere Achsen des absoluten Messsystems sind nicht synchronisiert.<p /></Description>
+    <Description>Der Umdrehungszähler ist nicht aktualisiert.Eine oder mehrere Achsen des absoluten Messsystems sind nicht synchronisiert.</Description>
     <Actions>Achsen in Kalibrierstellung bringen und die Umdrehungszähler aktualisieren.</Actions>
   </Message>
   <Message number="33" eDefine="SYS_ERR_SYS_MECSTA_NOT_S_SYNC">
     <Title>Achse nicht synchronisiert</Title>
-    <Description>Eine oder mehrere Achsen mit relativem<p />Messsystem sind nicht synchronisiert.<p /></Description>
-    <Actions>MOTOREN EIN, dann alle mechanischen<p />Einheiten in der Liste synchronisieren.</Actions>
+    <Description>Eine oder mehrere Achsen mit relativemMesssystem sind nicht synchronisiert.</Description>
+    <Actions>MOTOREN EIN, dann alle mechanischenEinheiten in der Liste synchronisieren.</Actions>
   </Message>
   <Message number="34" eDefine="SYS_ERR_SYS_MECSTA_NOT_SMB">
     <Title>SMB-Speicher nicht OK</Title>
@@ -52,7 +52,7 @@
     <Title>Befehl nicht zulässig</Title>
     <Description>Der Befehl ist nur zulässig, wenn der Client die Ressource (Programm/Bewegung) steuert.</Description>
     <Consequences>Das System bleibt im gleichen Zustand und die angeforderte Aktion wird nicht ausgeführt.</Consequences>
-    <Actions>1. Prüfen, ob der Client die Steuerung besitzt, indem "Schreibzugriff" in RobotStudio geprüft wird. <p />2. Prüfen, ob der richtige Client die Steuerung besitzt.</Actions>
+    <Actions>1. Prüfen, ob der Client die Steuerung besitzt, indem "Schreibzugriff" in RobotStudio geprüft wird. 2. Prüfen, ob der richtige Client die Steuerung besitzt.</Actions>
   </Message>
   <Message number="54" eDefine="SYS_ERR_SYS_REJECT_PGM">
     <Title>Befehl nicht zulässig</Title>
@@ -98,13 +98,13 @@
   </Message>
   <Message number="66" eDefine="SYS_ERR_SYS_REJECT_OPMODE_MANFS">
     <Title>Unzulässiger Befehl</Title>
-    <Description>Die Systemeingangsaktion <arg format="%s" ordinal="1" /> ist im Einrichtbetrieb 100% nicht zulässig.</Description>
+    <Description>Die Systemeingangsaktion %s ist im Einrichtbetrieb 100% nicht zulässig.</Description>
     <Consequences>Das System bleibt im gleichen Zustand und die angeforderte Aktion wird nicht ausgeführt.</Consequences>
     <Actions>1) Sicherstellen, dass das System NICHT im Einrichtbetrieb 100% ist. </Actions>
   </Message>
   <Message number="67" eDefine="SYS_ERR_SYS_REJECT_OPMODE_MANFS_CH">
     <Title>Unzulässiger Befehl</Title>
-    <Description>Die Systemeingangsaktion <arg format="%s" ordinal="1" /> ist beim Wechsel in den Einrichtbetrieb 100% nicht zulässig.</Description>
+    <Description>Die Systemeingangsaktion %s ist beim Wechsel in den Einrichtbetrieb 100% nicht zulässig.</Description>
     <Consequences>Das System bleibt im gleichen Zustand und die angeforderte Aktion wird nicht ausgeführt.</Consequences>
     <Actions>1) Sicherstellen, dass das System NICHT in Einrichtbetrieb 100% wechselt. </Actions>
   </Message>
@@ -146,15 +146,15 @@
   </Message>
   <Message number="76" eDefine="SYS_ERR_SYS_REJ_CABSTA_SYSFAIL">
     <Title>Befehl nicht zulässig</Title>
-    <Description>Der Befehl ist bei Systemfehler nicht zulässig.<p /></Description>
+    <Description>Der Befehl ist bei Systemfehler nicht zulässig.</Description>
     <Consequences>Schwerer, nicht behebbarer Systemfehler. Warmstart erforderlich.</Consequences>
-    <Actions>1) Sicherstellen, dass das System NICHT im Not-Aus-Zustand ist.<p /> 2) Neustart ausführen (siehe Bedienerhandbuch, IRC5).<p /> 3) Wenn Neustart nicht möglich, Hauptschalter AUS- und wieder EINSCHALTEN.</Actions>
+    <Actions>1) Sicherstellen, dass das System NICHT im Not-Aus-Zustand ist. 2) Neustart ausführen (siehe Bedienerhandbuch, IRC5). 3) Wenn Neustart nicht möglich, Hauptschalter AUS- und wieder EINSCHALTEN.</Actions>
   </Message>
   <Message number="80" eDefine="SYS_ERR_SYS_REJ_MECSTA_N_COMM">
     <Title>Befehl nicht zulässig</Title>
     <Description>Der Befehl ist nicht zulässig, wenn Achse nicht kommutiert wurde.</Description>
     <Consequences>Das System bleibt im selben Zustand, und die angeforderte Aktion wird nicht ausgeführt.</Consequences>
-    <Actions>1) Achse kommutieren (siehe Handbuch für zusätzliche Achsen).<p /> 2) Ermitteln, von wem und warum die Aktion angefordert wurde, und ggf. die Ursache korrigieren.</Actions>
+    <Actions>1) Achse kommutieren (siehe Handbuch für zusätzliche Achsen). 2) Ermitteln, von wem und warum die Aktion angefordert wurde, und ggf. die Ursache korrigieren.</Actions>
   </Message>
   <Message number="81" eDefine="SYS_ERR_SYS_REJ_MECSTA_N_CALIB">
     <Title>Befehl nicht zulässig</Title>
@@ -185,18 +185,18 @@
     <Description>Die Geschwindigkeit konnte nicht auf 100 % gesetzt werden, als Automatikbetrieb angefordert wurde.</Description>
     <Consequences>System kann nicht in Automatikbetrieb wechseln.</Consequences>
     <Causes>Geschwindigkeit konnte nicht auf 100 % gesetzt werden.</Causes>
-    <Actions>1) Zurück in Einrichtbetrieb wechseln.<p />2a) Geschwindigkeit im QuickSet-Menü einstellen <p />2b) oder Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen, wenn das System beim Wechseln in Automatikbetrieb im Test-Modus sein soll. <p />3) Zurück in Automatikbetrieb wechseln und bestätigen. <p /></Actions>
+    <Actions>1) Zurück in Einrichtbetrieb wechseln.2a) Geschwindigkeit im QuickSet-Menü einstellen 2b) oder Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen, wenn das System beim Wechseln in Automatikbetrieb im Test-Modus sein soll. 3) Zurück in Automatikbetrieb wechseln und bestätigen. </Actions>
   </Message>
   <Message number="89" eDefine="SYS_ERR_SYS_NOT_ORIG_MAIN">
     <Title>Automatikbetrieb abgelehnt</Title>
     <Description>Die Aufrufsequenz wurde zu Beginn in einer anderen Routine als main geändert und konnte beim Anfordern des Automatikbetriebs nicht auf main zurückgesetzt werden</Description>
     <Consequences>System kann nicht in Automatikbetrieb wechseln.</Consequences>
     <Causes>Programmzeiger konnte nicht auf main gesetzt werden.</Causes>
-    <Actions>1) Zurück in Einrichtbetrieb wechseln. <p />2a) PZ auf main setzen. <p />2b) Oder, wenn das Programm immer bei der neuen Routine beginnen soll, den Systemparameter "Main entry" (Domain Controller, Type Task) in den Namen der neuen Routine ändern. <p />2c) Oder Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen, wenn das System beim Wechseln in Automatikbetrieb im Test-Modus sein soll. <p />3) Zurück in Automatikbetrieb wechseln und bestätigen. <p /></Actions>
+    <Actions>1) Zurück in Einrichtbetrieb wechseln. 2a) PZ auf main setzen. 2b) Oder, wenn das Programm immer bei der neuen Routine beginnen soll, den Systemparameter "Main entry" (Domain Controller, Type Task) in den Namen der neuen Routine ändern. 2c) Oder Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen, wenn das System beim Wechseln in Automatikbetrieb im Test-Modus sein soll. 3) Zurück in Automatikbetrieb wechseln und bestätigen. </Actions>
   </Message>
   <Message number="92" eDefine="SYS_ERR_SYS_REJ_SYSIO_ERROR">
     <Title>Befehl nicht zulässig</Title>
-    <Description>Unzulässig im Zustand<p />System-E/A-Start blockiert.<p /><p /></Description>
+    <Description>Unzulässig im ZustandSystem-E/A-Start blockiert.</Description>
     <Actions />
   </Message>
   <Message number="93" eDefine="SYS_ERR_SYS_TASK_PANEL_STATE_OFF">
@@ -204,57 +204,57 @@
     <Description>Eine oder mehrere NORMAL-Tasks waren deaktiviert und konnten beim Anfordern des Automatikbetriebs nicht aktiviert werden.</Description>
     <Consequences>System kann nicht in Automatikbetrieb wechseln.</Consequences>
     <Causes>Das Taskauswahlfeld kann im synchronisierten Block nicht zurückgesetzt werden.</Causes>
-    <Actions>1. Zurück in Einrichtbetrieb wechseln. <p />2a. PZ auf main setzen. <p />2b. Oder synchronisierten Block verlassen. <p />2c. Oder Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen, wenn das System beim Wechseln in Automatikbetrieb im Debug-Modus sein soll. <p />3. Zurück in Automatikbetrieb wechseln und bestätigen. <p /></Actions>
+    <Actions>1. Zurück in Einrichtbetrieb wechseln. 2a. PZ auf main setzen. 2b. Oder synchronisierten Block verlassen. 2c. Oder Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen, wenn das System beim Wechseln in Automatikbetrieb im Debug-Modus sein soll. 3. Zurück in Automatikbetrieb wechseln und bestätigen. </Actions>
   </Message>
   <Message number="94" eDefine="SYS_ERR_SYS_NO_LOAD_NAME">
     <Title>Lastname nicht gefunden</Title>
-    <Description>Lastname <arg format="%s" ordinal="1" /> nicht gefunden.</Description>
+    <Description>Lastname %s nicht gefunden.</Description>
     <Consequences>Bewegung ohne korrekt definierte Last nicht möglich.</Consequences>
     <Causes>Das Modul mit der Lastdefinition wurde evtl. gelöscht.</Causes>
-    <Actions>Modul mit Lastdefinition laden.<p />Andere Last wählen.</Actions>
+    <Actions>Modul mit Lastdefinition laden.Andere Last wählen.</Actions>
   </Message>
   <Message number="95" eDefine="SYS_ERR_SYS_NO_TOOL_NAME">
     <Title>Werkzeugname nicht gefunden</Title>
-    <Description>Werkzeugname <arg format="%s" ordinal="1" /> nicht gefunden.</Description>
+    <Description>Werkzeugname %s nicht gefunden.</Description>
     <Consequences>Bewegung ohne korrekt definiertes Werkzeug nicht möglich.</Consequences>
     <Causes>Das Modul mit der Werkzeugdefinition wurde evtl. gelöscht.</Causes>
-    <Actions>Modul mit Werkzeugdefinition laden.<p />Anderes Werkzeug wählen.</Actions>
+    <Actions>Modul mit Werkzeugdefinition laden.Anderes Werkzeug wählen.</Actions>
   </Message>
   <Message number="96" eDefine="SYS_ERR_SYS_NO_WOBJ_NAME">
     <Title>Werkobjektname nicht gefunden</Title>
-    <Description>Werkobjektname <arg format="%s" ordinal="1" /> nicht gefunden.</Description>
+    <Description>Werkobjektname %s nicht gefunden.</Description>
     <Consequences>Bewegung ohne korrekt definiertes Werkobjekt nicht möglich.</Consequences>
     <Causes>Das Modul mit der Werkobjektdefinition wurde evtl. gelöscht.</Causes>
-    <Actions>Modul mit Werkobjektdefinition laden.<p />Anderes Werkobjekt wählen.</Actions>
+    <Actions>Modul mit Werkobjektdefinition laden.Anderes Werkobjekt wählen.</Actions>
   </Message>
   <Message number="97" eDefine="SYS_ERR_SYS_LOCAL_PERS_LOAD">
     <Title>Schrittweise Bewegung unzulässig mit LOCAL PERS Last</Title>
-    <Description>Objekt <arg format="%s" ordinal="1" /> hat den Typ LOCAL PERS und kann nicht schrittweise bewegt werden. </Description>
+    <Description>Objekt %s hat den Typ LOCAL PERS und kann nicht schrittweise bewegt werden. </Description>
     <Actions>Last ändern.</Actions>
   </Message>
   <Message number="98" eDefine="SYS_ERR_SYS_LOCAL_PERS_TOOL">
     <Title>Schrittweise Bewegung unzulässig mit LOCAL PERS Tool</Title>
-    <Description>Objekt <arg format="%s" ordinal="1" /> hat den Typ LOCAL PERS und kann nicht schrittweise bewegt werden. </Description>
+    <Description>Objekt %s hat den Typ LOCAL PERS und kann nicht schrittweise bewegt werden. </Description>
     <Actions>Werkzeug ändern.</Actions>
   </Message>
   <Message number="99" eDefine="SYS_ERR_SYS_LOCAL_PERS_WOBJ">
     <Title>Schrittweise Bewegung unzulässig mit LOCAL PERS Werkobjekt</Title>
-    <Description>Objekt <arg format="%s" ordinal="1" /> hat den Typ LOCAL PERS und kann nicht schrittweise bewegt werden. </Description>
+    <Description>Objekt %s hat den Typ LOCAL PERS und kann nicht schrittweise bewegt werden. </Description>
     <Actions>Werkobjekt ändern.</Actions>
   </Message>
   <Message number="101" eDefine="SYS_ERR_SYS_MASTCL_LOC_HIA">
     <Title>PG-Steuerung (Programm)</Title>
-    <Description>Programmierfenster des Programmiergeräts <p />ist aktiv und steuert den <p />Programmserver.<p /></Description>
-    <Actions>In Produktionsfenster wechseln und <p />den Befehl erneut ausführen.</Actions>
+    <Description>Programmierfenster des Programmiergeräts ist aktiv und steuert den Programmserver.</Description>
+    <Actions>In Produktionsfenster wechseln und den Befehl erneut ausführen.</Actions>
   </Message>
   <Message number="103" eDefine="SYS_ERR_SYS_TASK_PANEL_CHANGE">
     <Title> Steuerung mit Aktualisierung Taskauswahlfeld ausgelastet</Title>
-    <Description>Das Taskauswahlfeld wird aktualisiert.<p />Der angeforderte Befehl kann nicht ausgeführt werden.<p /><p /></Description>
+    <Description>Das Taskauswahlfeld wird aktualisiert.Der angeforderte Befehl kann nicht ausgeführt werden.</Description>
     <Actions>Befehl erneut erteilen oder Warmstart ausführen und Befehl erneut erteilen. </Actions>
   </Message>
   <Message number="104" eDefine="SYS_ERR_SYS_PATH_TOO_LONG">
     <Title>Der Systempfad ist zu lang</Title>
-    <Description>Der Systempfad ist zu lang.<p />Das System kann nicht auf sichere Weise agieren.<p /></Description>
+    <Description>Der Systempfad ist zu lang.Das System kann nicht auf sichere Weise agieren.</Description>
     <Consequences>Das System wechselt in den Status "Systemfehler".</Consequences>
     <Actions>Das System an einen Speicherort mit kürzerem Dateipfad verschieben. </Actions>
   </Message>
@@ -266,14 +266,14 @@
   </Message>
   <Message number="106" eDefine="SYS_ERR_SYS_BACKUP_PATH">
     <Title>Backup-Pfad</Title>
-    <Description>In der Konfiguration für den Systemeingang "Backup" liegen Fehler im Backup-Pfad oder dem Backup-Namen vor. Das Verzeichnis für das Backup kann nicht erstellt werden. <p />Backup-Pfad: <arg format="%s" ordinal="1" /><p />Backup-Name: <arg format="%s" ordinal="2" /></Description>
+    <Description>In der Konfiguration für den Systemeingang "Backup" liegen Fehler im Backup-Pfad oder dem Backup-Namen vor. Das Verzeichnis für das Backup kann nicht erstellt werden. Backup-Pfad: %sBackup-Name: %s</Description>
     <Consequences>Der Befehl "Backup" vom Systemeingangssignal wird zurückgewiesen. </Consequences>
     <Actions>Prüfen, ob der konfigurierte Pfad und Name für den Systemeingang "Backup" korrekt sind.</Actions>
   </Message>
   <Message number="111" eDefine="SYS_ERR_SYS_MASTCL_INT_HIA">
     <Title>PG-Steuerung (Programm)</Title>
-    <Description>Programmierfenster des Programmiergeräts <p />ist aktiv und steuert den <p />Programmserver.<p /></Description>
-    <Actions>In Produktionsfenster wechseln und <p />den Befehl erneut ausführen.</Actions>
+    <Description>Programmierfenster des Programmiergeräts ist aktiv und steuert den Programmserver.</Description>
+    <Actions>In Produktionsfenster wechseln und den Befehl erneut ausführen.</Actions>
   </Message>
   <Message number="120" eDefine="SYS_ERR_SYS_MASTCL_REM_SYSEVT">
     <Title>System-E/A-Steuerung</Title>
@@ -282,21 +282,21 @@
   </Message>
   <Message number="126" eDefine="SYS_ERR_SYS_LOAD_NAME_CHANGED">
     <Title>Lastdaten wurden geändert</Title>
-    <Description>Die aktive Last <arg format="%s" ordinal="3" /> wurde entfernt und durch <arg format="%s" ordinal="4" /> ersetzt. Die Lastdaten befanden sich in Task: <arg format="%s" ordinal="1" /> verbunden mit mechanischer Einheit <arg format="%s" ordinal="2" />. </Description>
+    <Description>Die aktive Last %s wurde entfernt und durch %s ersetzt. Die Lastdaten befanden sich in Task: %s verbunden mit mechanischer Einheit %s. </Description>
     <Consequences>Die Lastdefinition für manuelles Bewegen ist eventuell nicht korrekt. </Consequences>
     <Causes>Die Lastdaten wurden entfernt. Das Modul mit der ursprünglichen Werkzeugdefinition wurde eventuell gelöscht. </Causes>
     <Actions>Falls die alte Definition benötigt wird, das Programm oder Modul mit den originalen Lastdaten suchen und laden. </Actions>
   </Message>
   <Message number="127" eDefine="SYS_ERR_SYS_TOOL_NAME_CHANGED">
     <Title>Werkzeugdaten wurden geändert</Title>
-    <Description>Das aktive Werkzeug <arg format="%s" ordinal="3" /> wurde entfernt und durch <arg format="%s" ordinal="4" /> ersetzt. Die Werkzeugdaten befanden sich in Task: <arg format="%s" ordinal="1" /> verbunden mit mechanischer Einheit <arg format="%s" ordinal="2" />. </Description>
+    <Description>Das aktive Werkzeug %s wurde entfernt und durch %s ersetzt. Die Werkzeugdaten befanden sich in Task: %s verbunden mit mechanischer Einheit %s. </Description>
     <Consequences>Die Werkzeugdefinition für manuelles Bewegen ist eventuell nicht korrekt. </Consequences>
     <Causes>Die Werkzeugdaten wurden entfernt. Das Modul mit der ursprünglichen Werkzeugdefinition wurde eventuell gelöscht. </Causes>
     <Actions>Falls die alte Definition benötigt wird, das Programm oder Modul mit den originalen Werkzeugdaten suchen und laden.</Actions>
   </Message>
   <Message number="128" eDefine="SYS_ERR_SYS_WOBJ_NAME_CHANGED">
     <Title>Werkobjektdaten wurden geändert</Title>
-    <Description>Das aktive Werkobjekt <arg format="%s" ordinal="3" /> wurde entfernt und durch <arg format="%s" ordinal="4" /> ersetzt. Die Werkobjektdaten befanden sich in Task: <arg format="%s" ordinal="1" /> verbunden mit mechanischer Einheit <arg format="%s" ordinal="2" />. </Description>
+    <Description>Das aktive Werkobjekt %s wurde entfernt und durch %s ersetzt. Die Werkobjektdaten befanden sich in Task: %s verbunden mit mechanischer Einheit %s. </Description>
     <Consequences>Die Werkobjektdefinition für manuelles Bewegen ist eventuell nicht korrekt. </Consequences>
     <Causes>Die Werkobjektdaten wurden entfernt. Das Modul mit der ursprünglichen Werkzeugdefinition wurde eventuell gelöscht. </Causes>
     <Actions>Falls die alte Definition benötigt wird, das Programm oder Modul mit den originalen Werkobjektdaten suchen und laden.</Actions>
@@ -306,66 +306,66 @@
     <Description>Bei einem Warmstart wird das "Active Task Menu" im Automatikmodus wiederhergestellt.</Description>
     <Consequences>Wenn die Markierung einer oder mehrerer Tasks entfernt wurde, werden sie nach dem Warmstart im Automatikmodus wieder markiert.</Consequences>
     <Causes>Ein Warmstart wurde durchgeführt.</Causes>
-    <Actions>1. In Einrichtbetrieb wechseln. <p />2. Die Markierung der nicht gewünschten Tasks aufheben.<p />3. Wieder in Automatikmodus wechseln.</Actions>
+    <Actions>1. In Einrichtbetrieb wechseln. 2. Die Markierung der nicht gewünschten Tasks aufheben.3. Wieder in Automatikmodus wechseln.</Actions>
   </Message>
   <Message number="131" eDefine="SYS_ERR_SYS_BLOCKED_SIGNALS">
     <Title>Automatikbetrieb abgelehnt</Title>
     <Description>Ein oder mehrere logische E/A-Signale waren blockiert und konnten nicht freigegeben werden, als Automatikbetrieb angefordert wurde.</Description>
     <Consequences>System kann nicht in Automatikbetrieb wechseln.</Consequences>
     <Causes>Blockierte E/A-Signale konnten nicht freigegeben werden.</Causes>
-    <Actions>1. Zurück in Einrichtbetrieb wechseln. <p />2a. Im Ereignisprotokoll E/A-Fehler suchen. <p />2b. Oder Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen, wenn das System beim Wechseln in Automatikbetrieb im Debug-Modus sein soll. <p />3. Zurück in Automatikbetrieb wechseln und bestätigen. <p /></Actions>
+    <Actions>1. Zurück in Einrichtbetrieb wechseln. 2a. Im Ereignisprotokoll E/A-Fehler suchen. 2b. Oder Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen, wenn das System beim Wechseln in Automatikbetrieb im Debug-Modus sein soll. 3. Zurück in Automatikbetrieb wechseln und bestätigen. </Actions>
   </Message>
   <Message number="132" eDefine="SYS_ERR_SYS_BLOCKED_SIGNALS_RESET">
     <Title>Blockierte E/A-Signale</Title>
     <Description>Ein oder mehrere logische E/A-Signale waren beim Starten im Automatikbetrieb blockiert.</Description>
     <Consequences>Blockierte Signale werden freigegeben.</Consequences>
-    <Causes>System ist beim Warmstart in Automatikbetrieb gewechselt. <p />Systemparameter AllDebugSettings ist auf YES gesetzt. </Causes>
-    <Actions>Keine. System hat Test-Einstellungen automatisch zurückgesetzt. <p /><p />Zum Zurücksetzen der Test-Einstellungen in Automatikbetrieb: <p />1) In Einrichtbetrieb wechseln.<p />2) Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen. <p />3) In Automatikbetrieb wechseln und bestätigen. <p />4) Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter. <p /></Actions>
+    <Causes>System ist beim Warmstart in Automatikbetrieb gewechselt. Systemparameter AllDebugSettings ist auf YES gesetzt. </Causes>
+    <Actions>Keine. System hat Test-Einstellungen automatisch zurückgesetzt. Zum Zurücksetzen der Test-Einstellungen in Automatikbetrieb: 1) In Einrichtbetrieb wechseln.2) Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen. 3) In Automatikbetrieb wechseln und bestätigen. 4) Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter. </Actions>
   </Message>
   <Message number="133" eDefine="SYS_ERR_SYS_BLOCKED_SIGNALS_KEEP">
     <Title>Debug-Einstellungen in Automatikbetrieb</Title>
     <Description>Ein oder mehrere logische E/A-Signale waren beim Starten im Automatikbetrieb blockiert.</Description>
-    <Consequences>Blockierte E/A-Signale bleiben blockiert. <p />System ist im Automatikbetrieb nicht im Produktionsmodus. </Consequences>
-    <Actions>Für Produktionsmodus: <p />1. In Automatikbetrieb wechseln. <p />2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf YES setzen. <p />3. Zurück in Automatikbetrieb wechseln und bestätigen. <p />4. Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter. <p /></Actions>
+    <Consequences>Blockierte E/A-Signale bleiben blockiert. System ist im Automatikbetrieb nicht im Produktionsmodus. </Consequences>
+    <Actions>Für Produktionsmodus: 1. In Automatikbetrieb wechseln. 2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf YES setzen. 3. Zurück in Automatikbetrieb wechseln und bestätigen. 4. Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter. </Actions>
   </Message>
   <Message number="134" eDefine="SYS_ERR_SYS_NOT_ORIG_MAIN_RESET">
     <Title>Aufrufsequenz</Title>
     <Description>Die Aufrufsequenz wurde so geändert, dass sie in einer anderen als der main Routine beginnt.</Description>
     <Consequences>Programmzeiger wird auf Routine main zurückgesetzt.</Consequences>
-    <Causes>System ist beim Warmstart in Automatikbetrieb gewechselt. <p />Systemparameter AllDebugSettings ist auf YES gesetzt. </Causes>
-    <Actions>Für Debugmodus im Automatikbetrieb: <p />1) In Einrichtbetrieb wechseln.<p />2) Systemparameter AllDebugSettings/Reset auf NO setzen. <p />3) In Automatikbetrieb wechseln und bestätigen. <p />4) Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter.</Actions>
+    <Causes>System ist beim Warmstart in Automatikbetrieb gewechselt. Systemparameter AllDebugSettings ist auf YES gesetzt. </Causes>
+    <Actions>Für Debugmodus im Automatikbetrieb: 1) In Einrichtbetrieb wechseln.2) Systemparameter AllDebugSettings/Reset auf NO setzen. 3) In Automatikbetrieb wechseln und bestätigen. 4) Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter.</Actions>
   </Message>
   <Message number="135" eDefine="SYS_ERR_SYS_NOT_ORIG_MAIN_KEEP">
     <Title>Debug-Einstellungen in Automatikbetrieb</Title>
     <Description>Die Aufrufsequenz wurde so geändert, dass sie in einer anderen als der Routine main beginnt.</Description>
-    <Consequences>Programmzeiger wird nicht auf main gesetzt. <p />System ist im Automatikbetrieb nicht im Produktionsmodus. <p /></Consequences>
-    <Actions>Für Produktionsmodus: <p />1. In Automatikbetrieb wechseln. <p />2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf YES setzen. <p />3. Zurück in Automatikbetrieb wechseln und bestätigen. <p />4. Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter. <p /></Actions>
+    <Consequences>Programmzeiger wird nicht auf main gesetzt. System ist im Automatikbetrieb nicht im Produktionsmodus. </Consequences>
+    <Actions>Für Produktionsmodus: 1. In Automatikbetrieb wechseln. 2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf YES setzen. 3. Zurück in Automatikbetrieb wechseln und bestätigen. 4. Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter. </Actions>
   </Message>
   <Message number="136" eDefine="SYS_ERR_SYS_SPEED_OVERRIDE_RESET">
     <Title>Reduzierte Geschwindigkeit</Title>
     <Description>Während des Startens im Automatikbetrieb wurde das System mit reduzierter Geschwindigkeit ausgeführt.</Description>
     <Consequences>Geschwindigkeit wird auf 100 % gesetzt.</Consequences>
     <Causes>System ist beim Warmstart in Automatikbetrieb gewechselt.</Causes>
-    <Actions>Keine. System hat Test-Einstellungen automatisch zurückgesetzt. <p /><p />Zum Zurücksetzen der Test-Einstellungen in Automatikbetrieb: <p />1) In Einrichtbetrieb wechseln.<p />2) Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen. <p />3) In Automatikbetrieb wechseln und bestätigen. <p />4) Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter.</Actions>
+    <Actions>Keine. System hat Test-Einstellungen automatisch zurückgesetzt. Zum Zurücksetzen der Test-Einstellungen in Automatikbetrieb: 1) In Einrichtbetrieb wechseln.2) Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen. 3) In Automatikbetrieb wechseln und bestätigen. 4) Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter.</Actions>
   </Message>
   <Message number="137" eDefine="SYS_ERR_SYS_SPEED_OVERRIDE_KEEP">
     <Title>Debug-Einstellungen in Automatikbetrieb</Title>
     <Description>Während des Startens im Automatikbetrieb wurde das System mit reduzierter Geschwindigkeit ausgeführt.</Description>
-    <Consequences>Geschwindigkeit bleibt unverändert. <p />System ist im Automatikbetrieb nicht im Produktionsmodus. <p /></Consequences>
-    <Actions>Für Produktionsmodus: <p />1. In Automatikbetrieb wechseln. <p />2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf YES setzen. <p />3. Zurück in Automatikbetrieb wechseln und bestätigen. <p />4. Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter. <p /></Actions>
+    <Consequences>Geschwindigkeit bleibt unverändert. System ist im Automatikbetrieb nicht im Produktionsmodus. </Consequences>
+    <Actions>Für Produktionsmodus: 1. In Automatikbetrieb wechseln. 2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf YES setzen. 3. Zurück in Automatikbetrieb wechseln und bestätigen. 4. Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter. </Actions>
   </Message>
   <Message number="138" eDefine="SYS_ERR_SYS_TASK_PANEL_STATE_OFF_RESET">
     <Title>Deaktivierte Tasks</Title>
     <Description>Während des Startens im Automatikbetrieb wurden ein oder mehrere NORMAL-Tasks deaktiviert.</Description>
     <Consequences>Alle deaktivierten NORMAL-Tasks werden aktiviert.</Consequences>
-    <Causes>System wurde während des Warmstarts in Automatikbetrieb versetzt.<p />Systemparameter AllDebugSettings wird auf YES gesetzt. <p /></Causes>
-    <Actions>Keine. System hat Test-Einstellungen automatisch zurückgesetzt. <p /><p />Um Test-Einstellungen in Automatikbetrieb beizubehalten: <p />1) In Einrichtbetrieb wechseln.<p />2) Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen. <p />3) In Automatikbetrieb wechseln und bestätigen. <p />4) Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter.</Actions>
+    <Causes>System wurde während des Warmstarts in Automatikbetrieb versetzt.Systemparameter AllDebugSettings wird auf YES gesetzt. </Causes>
+    <Actions>Keine. System hat Test-Einstellungen automatisch zurückgesetzt. Um Test-Einstellungen in Automatikbetrieb beizubehalten: 1) In Einrichtbetrieb wechseln.2) Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf NO setzen. 3) In Automatikbetrieb wechseln und bestätigen. 4) Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter.</Actions>
   </Message>
   <Message number="139" eDefine="SYS_ERR_SYS_TASK_PANEL_STATE_OFF_KEEP">
     <Title>Debug-Einstellungen in Automatikbetrieb</Title>
     <Description>Während des Startens im Automatikbetrieb wurden ein oder mehrere NORMAL-Tasks deaktiviert.</Description>
-    <Consequences>Deaktivierte Tasks bleiben deaktiviert. <p />System ist im Automatikbetrieb nicht im Produktionsmodus. <p /></Consequences>
-    <Actions>Für Produktionsmodus: <p />1. In Automatikbetrieb wechseln. <p />2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf YES setzen. <p />3. Zurück in Automatikbetrieb wechseln und bestätigen. <p />4. Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter. <p /></Actions>
+    <Consequences>Deaktivierte Tasks bleiben deaktiviert. System ist im Automatikbetrieb nicht im Produktionsmodus. </Consequences>
+    <Actions>Für Produktionsmodus: 1. In Automatikbetrieb wechseln. 2. Systemparameter Controller/Auto Condition Reset/AllDebugSettings/Reset auf YES setzen. 3. Zurück in Automatikbetrieb wechseln und bestätigen. 4. Weitere Informationen finden Sie im Technischen Referenzhandbuch - Systemparameter. </Actions>
   </Message>
   <Message number="140" eDefine="SYS_ERR_SYS_REJ_MOTORS_ON">
     <Title>Motoren-EIN unzulässig</Title>
@@ -379,55 +379,55 @@
     <Title>Start unzulässig</Title>
     <Description>Start/Neustart des Programms über System-E/A nicht zulässig.</Description>
     <Consequences>Programm kann nicht gestartet werden.</Consequences>
-    <Causes>- Roboter befindet sich außerhalb des Wiederanfahrbereichs.<p />- Das Programm wurde gerade abgearbeitet.<p />- Ein in Ausführung befindlicher Backup-Vorgang.</Causes>
-    <Actions>- Roboter manuell in Wiederanfahrbereich bewegen oder Programmzeiger verschieben.<p />- Programm vor Aktivierung des Systemeingang "Start" beenden.</Actions>
+    <Causes>- Roboter befindet sich außerhalb des Wiederanfahrbereichs.- Das Programm wurde gerade abgearbeitet.- Ein in Ausführung befindlicher Backup-Vorgang.</Causes>
+    <Actions>- Roboter manuell in Wiederanfahrbereich bewegen oder Programmzeiger verschieben.- Programm vor Aktivierung des Systemeingang "Start" beenden.</Actions>
   </Message>
   <Message number="143" eDefine="SYS_ERR_SYS_REJ_START_MAIN">
     <Title>Start von "main" unzulässig</Title>
-    <Description>Start des Programms von "main" über System-E/A nicht zulässig.<p /></Description>
+    <Description>Start des Programms von "main" über System-E/A nicht zulässig.</Description>
     <Consequences>Programm kann nicht gestartet werden.</Consequences>
-    <Causes>- Das Programm wurde gerade abgearbeitet.<p />- Ein in Ausführung befindlicher Backup-Vorgang.</Causes>
+    <Causes>- Das Programm wurde gerade abgearbeitet.- Ein in Ausführung befindlicher Backup-Vorgang.</Causes>
     <Actions>Programm vor Aktivierung des Systemeingang "Start at main" stoppen.</Actions>
   </Message>
   <Message number="144" eDefine="SYS_ERR_SYS_REJ_STOP">
     <Title>Stopp unzulässig</Title>
-    <Description>Stopp des Programms über System-E/A nicht zulässig.<p /></Description>
+    <Description>Stopp des Programms über System-E/A nicht zulässig.</Description>
     <Actions />
   </Message>
   <Message number="145" eDefine="SYS_ERR_SYS_REJ_STOP_CYCLE">
     <Title>Stoppzyklus unzulässig</Title>
-    <Description>Stopp des Programms nach Zyklus über System-E/A nicht zulässig.<p /></Description>
+    <Description>Stopp des Programms nach Zyklus über System-E/A nicht zulässig.</Description>
     <Actions />
   </Message>
   <Message number="146" eDefine="SYS_ERR_SYS_REJ_MANINT">
     <Title>Manueller Interrupt abgelehnt</Title>
-    <Description>Manuelle Unterbrechung des Programms über System-E/A nicht zulässig.<p /></Description>
+    <Description>Manuelle Unterbrechung des Programms über System-E/A nicht zulässig.</Description>
     <Consequences>Die manuelle Unterbrechung wird nicht ausgeführt.</Consequences>
-    <Causes>- Das Programm wurde gerade abgearbeitet.<p />- Ein in Ausführung befindlicher Backup-Vorgang.</Causes>
+    <Causes>- Das Programm wurde gerade abgearbeitet.- Ein in Ausführung befindlicher Backup-Vorgang.</Causes>
     <Actions>Programm vor Aktivierung des Systemeingang "Interrupt" stoppen.</Actions>
   </Message>
   <Message number="147" eDefine="SYS_ERR_SYS_REJ_LOADSTART">
     <Title>Laden und Starten unzulässig</Title>
-    <Description>Laden und Starten des Programms über System-E/A nicht zulässig.<p /></Description>
+    <Description>Laden und Starten des Programms über System-E/A nicht zulässig.</Description>
     <Consequences>Programm kann nicht gestartet werden.</Consequences>
-    <Causes>- Falsche Argumente für den Systemeingang "Load and Start".<p />- Das Modul wurde geladen, doch der Programmzeiger wurde vom System nicht gesetzt.<p />- Das Programm wurde gerade abgearbeitet.<p />- Ein in Ausführung befindlicher Backup-Vorgang.</Causes>
-    <Actions>Folgendes prüfen:<p />- Ordnungsgemäße Argumente für den Systemeingang "Load and Start".<p />- Name der zu ladenden Programmdatei (einschließlich Massenspeicher) definiert und korrekt.<p />- Name der Task, in die das Programm geladen werden soll, definiert und korrekt.<p />- Programm vor Aktivierung des Systemeingang "Load and Start" stoppen.</Actions>
+    <Causes>- Falsche Argumente für den Systemeingang "Load and Start".- Das Modul wurde geladen, doch der Programmzeiger wurde vom System nicht gesetzt.- Das Programm wurde gerade abgearbeitet.- Ein in Ausführung befindlicher Backup-Vorgang.</Causes>
+    <Actions>Folgendes prüfen:- Ordnungsgemäße Argumente für den Systemeingang "Load and Start".- Name der zu ladenden Programmdatei (einschließlich Massenspeicher) definiert und korrekt.- Name der Task, in die das Programm geladen werden soll, definiert und korrekt.- Programm vor Aktivierung des Systemeingang "Load and Start" stoppen.</Actions>
   </Message>
   <Message number="148" eDefine="SYS_ERR_SYS_REJ_EMSTRECONF">
     <Title>Bestätigung abgelehnt</Title>
-    <Description>Bestätigung für Rücksetzen des Not-Aus über System-E/A wurde abgelehnt.<p /></Description>
+    <Description>Bestätigung für Rücksetzen des Not-Aus über System-E/A wurde abgelehnt.</Description>
     <Actions />
   </Message>
   <Message number="149" eDefine="SYS_ERR_SYS_REJ_PRG_EXECERR">
     <Title>Rücksetzen von Fehler unzulässig</Title>
-    <Description>Rücksetzen des Fehlers bei Programmabarbeitung über System-E/A wurde abgelehnt.<p /></Description>
+    <Description>Rücksetzen des Fehlers bei Programmabarbeitung über System-E/A wurde abgelehnt.</Description>
     <Actions />
   </Message>
   <Message number="150" eDefine="SYS_ERR_SYS_REJ_LOAD">
     <Title>Ladefehler</Title>
     <Description>Programm konnte nicht über System-E/A geladen werden.</Description>
     <Consequences>Programm kann nicht gestartet werden.</Consequences>
-    <Causes>- Falsche Argumente für den Systemeingang "Load".<p />- Das Modul wurde geladen, doch der Programmzeiger wurde vom System nicht gesetzt.<p />- Das Programm wurde gerade abgearbeitet.<p />- Ein in Ausführung befindlicher Backup-Vorgang.<p /></Causes>
-    <Actions>Prüfen Sie Folgendes:<p />- Ordnungsgemäße Argumente für den Systemeingang "Load".<p />- Name der zu ladenden Programmdatei (einschließlich Massenspeicher) definiert und korrekt.<p />- Name der Task, in die das Programm geladen werden soll, definiert und korrekt.<p />- Programm vor Aktivierung des Systemeingang "Load" stoppen.</Actions>
+    <Causes>- Falsche Argumente für den Systemeingang "Load".- Das Modul wurde geladen, doch der Programmzeiger wurde vom System nicht gesetzt.- Das Programm wurde gerade abgearbeitet.- Ein in Ausführung befindlicher Backup-Vorgang.</Causes>
+    <Actions>Prüfen Sie Folgendes:- Ordnungsgemäße Argumente für den Systemeingang "Load".- Name der zu ladenden Programmdatei (einschließlich Massenspeicher) definiert und korrekt.- Name der Task, in die das Programm geladen werden soll, definiert und korrekt.- Programm vor Aktivierung des Systemeingang "Load" stoppen.</Actions>
   </Message>
 </Domain>

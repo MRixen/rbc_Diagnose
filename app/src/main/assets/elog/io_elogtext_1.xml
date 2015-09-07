@@ -2,110 +2,110 @@
 <Domain xmlns="urn:abb-robotics-elog-text" elogDomain="EIO" domainNo="7" lang="de" elogTextVersion="1.0" min="1001" max="1231">
   <Message number="1001" eDefine="SYS_EIO_UNT_ADDR_DUPLICATED">
     <Title>Doppelte Adresse</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; und E/A-Einheit &lt;<arg format="%s" ordinal="2" />&gt; wurden dieselbe Adresse zugewiesen.<p /><p />Mit demselben E/A-Bus verbundene Einheiten müssen eindeutige Adressen aufweisen.<p /><p />Diese E/A-Einheit wurde abgelehnt. </Description>
-    <Actions>1. Sicherstellen, dass die Adressen korrekt sind.<p />2. Prüfen, ob die E/A-Einheiten mit dem korrekten E/A-Bus verbunden sind. </Actions>
+    <Description>Die E/A-Konfiguration ist ungültig.E/A-Einheit &lt;%s&gt; und E/A-Einheit &lt;%s&gt; wurden dieselbe Adresse zugewiesen.Mit demselben E/A-Bus verbundene Einheiten müssen eindeutige Adressen aufweisen.Diese E/A-Einheit wurde abgelehnt. </Description>
+    <Actions>1. Sicherstellen, dass die Adressen korrekt sind.2. Prüfen, ob die E/A-Einheiten mit dem korrekten E/A-Bus verbunden sind. </Actions>
   </Message>
   <Message number="1002" eDefine="SYS_EIO_UNT_DRV_INVALID">
     <Title>Einheitentyp undefiniert</Title>
-    <Description>Die E/A-Konfiguration für E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig. </Description>
+    <Description>Die E/A-Konfiguration für E/A-Einheit &lt;%s&gt; ist ungültig. </Description>
     <Consequences>Dieser Einheitentyp wurde zurückgewiesen, und keine Funktionen auf der Basis dieses Einheitentyps funktionieren.</Consequences>
-    <Causes>Der Einheitentyp &lt;<arg format="%s" ordinal="2" />&gt; ist unbekannt. Alle I/O-Einheiten müssen auf einen bestehenden, definierten Einheitentyp verweisen. </Causes>
-    <Actions>1. Sicherstellen, dass der Einheitentyp definiert ist. <p />2. Sicherstellen, dass der Einheitentyp korrekt geschrieben ist. </Actions>
+    <Causes>Der Einheitentyp &lt;%s&gt; ist unbekannt. Alle I/O-Einheiten müssen auf einen bestehenden, definierten Einheitentyp verweisen. </Causes>
+    <Actions>1. Sicherstellen, dass der Einheitentyp definiert ist. 2. Sicherstellen, dass der Einheitentyp korrekt geschrieben ist. </Actions>
   </Message>
   <Message number="1003" eDefine="SYS_EIO_SIG_UNIT_INVALID">
     <Title>E/A-Einheit undefiniert:</Title>
-    <Description>Die E/A-Konfiguration für E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig. </Description>
+    <Description>Die E/A-Konfiguration für E/A-Signal &lt;%s&gt; ist ungültig. </Description>
     <Consequences>Das E/A-Signal wurde zurückgewiesen, und keine Funktionen auf der Basis dieses Signals funktionieren.</Consequences>
-    <Causes>Die E/A-Einheit &lt;<arg format="%s" ordinal="2" />&gt; ist unbekannt. Alle E/A-Signale müssen sich auf eine vorhandene/definierte E/A-Einheit beziehen. </Causes>
-    <Actions>1. Sicherstellen, dass die E/A-Einheit definiert ist. <p />2. Sicherstellen, dass die E/A-Einheit korrekt geschrieben ist. </Actions>
+    <Causes>Die E/A-Einheit &lt;%s&gt; ist unbekannt. Alle E/A-Signale müssen sich auf eine vorhandene/definierte E/A-Einheit beziehen. </Causes>
+    <Actions>1. Sicherstellen, dass die E/A-Einheit definiert ist. 2. Sicherstellen, dass die E/A-Einheit korrekt geschrieben ist. </Actions>
   </Message>
   <Message number="1005" eDefine="SYS_EIO_SIG_PAS_FILTER">
     <Title>Ungültige Filterzeit</Title>
-    <Description>Die E/A-Konfiguration für E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Die passive Filterzeit sollte entweder 0 ms sein oder sich im Bereich [<arg format="%d" ordinal="2" />, <arg format="%d" ordinal="3" />] ms befinden.<p /><p />Das E/A-Signal wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für E/A-Signal &lt;%s&gt; ist ungültig.Die passive Filterzeit sollte entweder 0 ms sein oder sich im Bereich [%d2, %d3] ms befinden.Das E/A-Signal wurde abgelehnt. </Description>
     <Actions>Die passive Filterzeit für das E/A-Signal korrigieren.</Actions>
   </Message>
   <Message number="1006" eDefine="SYS_EIO_SIG_ACT_FILTER">
     <Title>Ungültige Filterzeit</Title>
-    <Description>Die E/A-Konfiguration für E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Die aktive Filterzeit sollte entweder 0 ms sein oder sich im Bereich [<arg format="%d" ordinal="2" />, <arg format="%d" ordinal="3" />] ms befinden.<p /><p />Das E/A-Signal wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für E/A-Signal &lt;%s&gt; ist ungültig.Die aktive Filterzeit sollte entweder 0 ms sein oder sich im Bereich [%d2, %d3] ms befinden.Das E/A-Signal wurde abgelehnt. </Description>
     <Actions>Die aktive Filterzeit für das E/A-Signal korrigieren.</Actions>
   </Message>
   <Message number="1007" eDefine="SYS_EIO_SIG_LOG_MAXMIN">
     <Title>Logische Werte außerhalb des Gültigkeitsbereichs</Title>
-    <Description>Die E/A-Konfiguration für E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Der logische Minimalwert muss niedriger sein als der logische Maximalwert.<p /><p />Das E/A-Signal wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für E/A-Signal &lt;%s&gt; ist ungültig.Der logische Minimalwert muss niedriger sein als der logische Maximalwert.Das E/A-Signal wurde abgelehnt. </Description>
     <Actions>Korrigieren der logischen Werte für das E/A-Signal, damit der Minimalwert kleiner ist als der Maximalwert.</Actions>
   </Message>
   <Message number="1008" eDefine="SYS_EIO_SIG_PHY_MAXMIN">
     <Title>Physische Werte außerhalb des Gültigkeitsbereichs</Title>
-    <Description>Die E/A-Konfiguration für E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Der physische Minimalwert muss niedriger sein als der physische Maximalwert.<p /><p />Das E/A-Signal wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für E/A-Signal &lt;%s&gt; ist ungültig.Der physische Minimalwert muss niedriger sein als der physische Maximalwert.Das E/A-Signal wurde abgelehnt. </Description>
     <Actions>Korrigieren der physischen Werte für das E/A-Signal, damit der Minimalwert kleiner ist als der Maximalwert.</Actions>
   </Message>
   <Message number="1017" eDefine="SYS_EIO_CRS_ACT_MISSING">
     <Title>Querverbindung ohne E/A-Signal</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p /><p />Der Parameter &lt;Actor <arg format="%d" ordinal="1" />&gt; einer Querverbindung wurde ausgelassen.<p /><p />Regeln:<p />1. Alle Querverbindungen müssen mindestens ein Hauptsignal angeben,<p />   d. h. Parameter &lt;Actor I/O Signal 1&gt; muss immer angegeben werden.<p />2. Für jeden angegebenen Operator muss ein E/A-Signal folgen, d. h., <p />   wenn Parameter &lt;Operator 2&gt; angegeben wird, muss auch &lt;Actor 3&gt; <p />   angegeben werden.<p /><p />Diese Querverbindung wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Der Parameter &lt;Actor %d1&gt; einer Querverbindung wurde ausgelassen.Regeln:1. Alle Querverbindungen müssen mindestens ein Hauptsignal angeben,   d. h. Parameter &lt;Actor I/O Signal 1&gt; muss immer angegeben werden.2. Für jeden angegebenen Operator muss ein E/A-Signal folgen, d. h.,    wenn Parameter &lt;Operator 2&gt; angegeben wird, muss auch &lt;Actor 3&gt;    angegeben werden.Diese Querverbindung wurde abgelehnt. </Description>
     <Actions>Korrigieren der Querverbindung, damit die erforderlichen E/A-Signale angegeben sind.</Actions>
   </Message>
   <Message number="1019" eDefine="SYS_EIO_CRS_ACT_UNDEF">
     <Title>E/A-Signal undefiniert</Title>
     <Description>Die E/A-Konfiguration einer Querverbindung ist ungültig.</Description>
     <Consequences>Die Querverbindung wurde abgelehnt, und keine davon abhängigen Funktionen werden funktionieren.</Consequences>
-    <Causes> Der Parameter &lt;Actor <arg format="%d" ordinal="1" />&gt; einer Querverbindung beinhaltet einen Bezug zu einem undefinierten E/A-Signal &lt;<arg format="%s" ordinal="2" />&gt;. </Causes>
-    <Actions>1. Sicherstellen, dass das E/A-Signal definiert ist. <p />2. Sicherstellen, dass der E/A-Signalname korrekt geschrieben ist. </Actions>
+    <Causes> Der Parameter &lt;Actor %d1&gt; einer Querverbindung beinhaltet einen Bezug zu einem undefinierten E/A-Signal &lt;%s&gt;. </Causes>
+    <Actions>1. Sicherstellen, dass das E/A-Signal definiert ist. 2. Sicherstellen, dass der E/A-Signalname korrekt geschrieben ist. </Actions>
   </Message>
   <Message number="1020" eDefine="SYS_EIO_CRS_RES_MISSING">
     <Title>Querverbindung ohne resultierendes E/A-Signal</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p /><p />Der Parameter &lt;Resultant I/O signal&gt; einer Querverbindung wurde ausgelassen.<p />Alle Querverbindungen müssen ein resultierendes E/A-Signal angeben. <p /><p />Diese Querverbindung wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Der Parameter &lt;Resultant I/O signal&gt; einer Querverbindung wurde ausgelassen.Alle Querverbindungen müssen ein resultierendes E/A-Signal angeben. Diese Querverbindung wurde abgelehnt. </Description>
     <Actions>Querverbindung korrigieren, damit ein resultierendes E/A-Signal pro Querverbindung vorhanden ist.</Actions>
   </Message>
   <Message number="1021" eDefine="SYS_EIO_CRS_RES_DUPLICATE">
     <Title>Doppelte Querverbindungsergebnisse</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p /><p />Verschiedene Querverbindungen haben das gleiche resultierende E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt;.<p />Mehr als eine Querverbindung zu haben, die in der Einstellung des gleichen Signals resultiert, kann unvorhersehbare Verhaltensweisen verursachen, da sich die Reihenfolge der Berechnung nicht steuern lässt.<p /><p />Die vollständige Querverbindungskonfiguration wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Verschiedene Querverbindungen haben das gleiche resultierende E/A-Signal &lt;%s&gt;.Mehr als eine Querverbindung zu haben, die in der Einstellung des gleichen Signals resultiert, kann unvorhersehbare Verhaltensweisen verursachen, da sich die Reihenfolge der Berechnung nicht steuern lässt.Die vollständige Querverbindungskonfiguration wurde abgelehnt. </Description>
     <Actions>Sicherstellen, dass das E/A-Signal nicht als Ergebnis verschiedener Querverbindungen angegeben wird.</Actions>
   </Message>
   <Message number="1037" eDefine="SYS_EIO_CRS_FEEDBACK">
     <Title>Geschlossene Kette in Querverbindung</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p /><p />Das E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; ist Teil einer geschlossenen Querverbindungskette (d. h. bildet eine kreisförmige Abhängigkeit, die nicht berechnet werden kann).<p /><p />Die vollständige Querverbindungskonfiguration wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Das E/A-Signal &lt;%s&gt; ist Teil einer geschlossenen Querverbindungskette (d. h. bildet eine kreisförmige Abhängigkeit, die nicht berechnet werden kann).Die vollständige Querverbindungskonfiguration wurde abgelehnt. </Description>
     <Actions>Konfiguration für die Querverbindungen korrigieren, bei denen das obige E/A-Signal ein Teil davon ist.</Actions>
   </Message>
   <Message number="1038" eDefine="SYS_EIO_CRS_INDX">
     <Title>Maximale Tiefe der Querverbindung überschritten</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p /><p />Das E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; ist Teil einer Querverbindungskette, die zu tief ist.<p />Die maximale Tiefe einer Querverbindungskette ist &lt;<arg format="%d" ordinal="2" />&gt;.<p /><p />Die vollständige Querverbindungskonfiguration wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Das E/A-Signal &lt;%s&gt; ist Teil einer Querverbindungskette, die zu tief ist.Die maximale Tiefe einer Querverbindungskette ist &lt;%d2&gt;.Die vollständige Querverbindungskonfiguration wurde abgelehnt. </Description>
     <Actions>Machen Sie die Querverbindung weniger tief.</Actions>
   </Message>
   <Message number="1045" eDefine="SYS_EIO_SIG_FILTER_ERR">
     <Title>Ungültige Filterzeitspezifikation</Title>
-    <Description>Die E/A-Konfiguration für das E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Für diesen Typ von E/A-Signal kann keine Filterzeit angegeben werden.<p /><p />Das E/A-Signal wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für das E/A-Signal &lt;%s&gt; ist ungültig.Für diesen Typ von E/A-Signal kann keine Filterzeit angegeben werden.Das E/A-Signal wurde abgelehnt. </Description>
     <Actions>Filterzeit auf 0 stellen oder die Anweisung entfernen.</Actions>
   </Message>
   <Message number="1049" eDefine="SYS_EIO_SIG_INVERT_ERR">
     <Title>Analog-E/A-Signal invertiert</Title>
-    <Description>Die E/A-Konfiguration für das E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Analog-E/A-Signale dürfen nicht invertiert werden.<p /><p />Nur Digital- und Gruppen-E/A-Signale können invertiert werden.<p /><p />Dieses E/A-Signal wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für das E/A-Signal &lt;%s&gt; ist ungültig.Analog-E/A-Signale dürfen nicht invertiert werden.Nur Digital- und Gruppen-E/A-Signale können invertiert werden.Dieses E/A-Signal wurde abgelehnt. </Description>
     <Actions>Invertierung für das E/A-Signal entfernen (oder Signaltyp ändern).</Actions>
   </Message>
   <Message number="1050" eDefine="SYS_EIO_CRS_ACT_NOT_DIG">
     <Title>Querverbindung mit nicht-digitalem E/A-Signal</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p /><p />Der Parameter &lt;Actor <arg format="%d" ordinal="1" />&gt; einer Querverbindung bezieht sich auf ein E/A-Signal &lt;<arg format="%s" ordinal="2" />&gt;, das nicht digital ist.<p />Nur Digital-E/A-Signale können quer verbunden werden.<p /><p />Diese Querverbindung wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Der Parameter &lt;Actor %d1&gt; einer Querverbindung bezieht sich auf ein E/A-Signal &lt;%s&gt;, das nicht digital ist.Nur Digital-E/A-Signale können quer verbunden werden.Diese Querverbindung wurde abgelehnt. </Description>
     <Actions>Das nicht-digitale E/A-Signal aus der Querverbindung entfernen.</Actions>
   </Message>
   <Message number="1052" eDefine="SYS_EIO_CRS_TABLE_ERR">
     <Title>Maximale Anzahl an Querverbindungen überschritten</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Die maximale Anzahl an Querverbindungen, <arg format="%d" ordinal="1" />, in dem E/A-System wurde überschritten.<p /><p />Nicht alle Querverbindungen wurden akzeptiert. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Die maximale Anzahl an Querverbindungen, %d1, in dem E/A-System wurde überschritten.Nicht alle Querverbindungen wurden akzeptiert. </Description>
     <Actions>Konfiguration des E/A-Systems so ändern (durch Verringern der Anzahl an Querverbindungen), dass das Maximum nicht überschritten wird.</Actions>
   </Message>
   <Message number="1054" eDefine="SYS_EIO_SIG_SIGNALTYPE_INVALID">
     <Title>Ungültiger Signaltyp</Title>
-    <Description>Die E/A-Konfiguration des E/A-Signals &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Der angegebene Signaltyp &lt;<arg format="%s" ordinal="2" />&gt; ist ungültig/unbekannt.<p /><p />Gültige Signaltypen sind:<p />- DI (Digitaler Eingang)<p />- DO (Digitaler Ausgang)<p />- AI (Analoger Eingang)<p />- AO (Analoger Ausgang)<p />- GI (Gruppen-Eingang)<p />- GO (Gruppen-Ausgang)<p /><p />Dieses E/A-Signal wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration des E/A-Signals &lt;%s&gt; ist ungültig.Der angegebene Signaltyp &lt;%s&gt; ist ungültig/unbekannt.Gültige Signaltypen sind:- DI (Digitaler Eingang)- DO (Digitaler Ausgang)- AI (Analoger Eingang)- AO (Analoger Ausgang)- GI (Gruppen-Eingang)- GO (Gruppen-Ausgang)Dieses E/A-Signal wurde abgelehnt. </Description>
     <Actions>Den Signaltyp des E/A-Signals korrigieren</Actions>
   </Message>
   <Message number="1058" eDefine="SYS_EIO_UNT_CONTACT_LOST">
     <Title>Keine Kommunikation mit E/A-Einheit</Title>
-    <Description>Die zuvor funktionierende Kommunikation mit der E/A-Einheit <arg format="%s" ordinal="1" /> mit der Adresse <arg format="%s" ordinal="3" /> am E/A-Bus <arg format="%s" ordinal="2" /> wurde verloren. </Description>
+    <Description>Die zuvor funktionierende Kommunikation mit der E/A-Einheit %s mit der Adresse %s am E/A-Bus %s wurde verloren. </Description>
     <Consequences>Zugriff auf die E/A-Einheit (bzw. die E/A-Signale darauf) ist nicht möglich, da sie derzeit nicht mit der Steuerung kommuniziert.</Consequences>
     <Causes>Die E/A-Einheit wurde eventuell vom System getrennt.</Causes>
-    <Actions>1. Sicherstellen, dass das Buskabel mit der Steuerung verbunden ist. <p />2. Sicherstellen, dass die E/A-Einheit korrekt mit Strom versorgt wird. <p />3. Sicherstellen, dass die Verkabelung zur E/A-Einheit korrekt angeschlossen ist. </Actions>
+    <Actions>1. Sicherstellen, dass das Buskabel mit der Steuerung verbunden ist. 2. Sicherstellen, dass die E/A-Einheit korrekt mit Strom versorgt wird. 3. Sicherstellen, dass die Verkabelung zur E/A-Einheit korrekt angeschlossen ist. </Actions>
   </Message>
   <Message number="1072" eDefine="SYS_EIO_NO_SAVE">
     <Title>Gespeicherte Signalwerte nicht lesbar</Title>
-    <Description>Gespeicherter Signalwert für E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; kann nicht gelesen werden, da er nicht gespeichert ist. </Description>
+    <Description>Gespeicherter Signalwert für E/A-Signal &lt;%s&gt; kann nicht gelesen werden, da er nicht gespeichert ist. </Description>
     <Actions>Konfiguration des E/A-Signals durch Einstellung der Speicherattribute ändern.</Actions>
   </Message>
   <Message number="1076" eDefine="SYS_EIO_TRPRTP1_TIMEOUT">
@@ -125,94 +125,94 @@
   </Message>
   <Message number="1080" eDefine="SYS_EIO_DRV_TABLE_ERR">
     <Title>Maximale Anzahl der Einheitentypen überschritten</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Die maximale Anzahl <arg format="%d" ordinal="1" /> an Einheitentypen im E/A-System wurde überschritten. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Die maximale Anzahl %d1 an Einheitentypen im E/A-System wurde überschritten. </Description>
     <Actions>Konfiguration des E/A-Systems so ändern (durch Verringern der Anzahl an Einheitentypen), dass das Maximum nicht überschritten wird.</Actions>
   </Message>
   <Message number="1081" eDefine="SYS_EIO_PHS_TABLE_ERR">
     <Title>Maximale Anzahl physischer E/A-Signale überschritten</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Die maximale Anzahl <arg format="%d" ordinal="1" /> physischer E/A-Signale (Bit-mappings) in dem E/A-System wurde überschritten. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Die maximale Anzahl %d1 physischer E/A-Signale (Bit-mappings) in dem E/A-System wurde überschritten. </Description>
     <Actions>Konfiguration des E/A-Systems so ändern (durch Verringern der Anzahl physischer E/A-Signale), dass das Maximum nicht überschritten wird.</Actions>
   </Message>
   <Message number="1082" eDefine="SYS_EIO_SIG_TABLE_ERR">
     <Title>Maximale Anzahl der Benutzer-E/A-Signale überschritten</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Die maximale Anzahl <arg format="%d" ordinal="1" /> der Benutzer-E/A-Signale im E/A-System wurde überschritten. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Die maximale Anzahl %d1 der Benutzer-E/A-Signale im E/A-System wurde überschritten. </Description>
     <Actions>Konfiguration des E/A-Systems so ändern (durch Verringern der Anzahl E/A-Signale), dass das Maximum nicht überschritten wird. </Actions>
   </Message>
   <Message number="1083" eDefine="SYS_EIO_SYM_TABLE_ERR">
     <Title>Max. Anzahl an Symbolen überschritten</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Die maximale Anzahl <arg format="%d" ordinal="1" /> der Symbole im E/A-System wurde überschritten.<p /><p />Die Anzahl der Symbole ist die Summe aller benannter Konfigurationsinstanzen:<p />- E/A-Busse<p />- Arten der Einheiten<p />- E/A-Einheiten<p />- E/A-Signale<p />- Befehlsarten<p />- Befehle<p />- E/A-Zugriffsebenen<p />- CIP-Routen </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Die maximale Anzahl %d1 der Symbole im E/A-System wurde überschritten.Die Anzahl der Symbole ist die Summe aller benannter Konfigurationsinstanzen:- E/A-Busse- Arten der Einheiten- E/A-Einheiten- E/A-Signale- Befehlsarten- Befehle- E/A-Zugriffsebenen- CIP-Routen </Description>
     <Actions>Konfiguration des E/A-Systems so ändern (durch Verringern der Symbolanzahl), dass das Maximum nicht überschritten wird.</Actions>
   </Message>
   <Message number="1084" eDefine="SYS_EIO_TRG_TABLE_ERR">
     <Title>Maximale Anzahl abonnierter E/A-Signale überschritten</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Die maximale Anzahl <arg format="%d" ordinal="1" /> abonnierter E/A-Signale im E/A-System wurde überschritten. </Description>
-    <Actions>Konfiguration des E/A-Systems so ändern (durch Verringern der Abonnementzahl), dass das Maximum nicht überschritten wird.<p /></Actions>
+    <Description>Die E/A-Konfiguration ist ungültig.Die maximale Anzahl %d1 abonnierter E/A-Signale im E/A-System wurde überschritten. </Description>
+    <Actions>Konfiguration des E/A-Systems so ändern (durch Verringern der Abonnementzahl), dass das Maximum nicht überschritten wird.</Actions>
   </Message>
   <Message number="1085" eDefine="SYS_EIO_UNT_TABLE_ERR">
     <Title>Maximale Anzahl der E/A-Einheiten überschritten</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Die maximale Anzahl <arg format="%d" ordinal="1" /> an E/A-Einheiten im E/A-System wurde überschritten. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Die maximale Anzahl %d1 an E/A-Einheiten im E/A-System wurde überschritten. </Description>
     <Actions>Konfiguration des E/A-Systems so ändern (durch Verringern der Anzahl von E/A-Einheiten), dass das Maximum nicht überschritten wird. </Actions>
   </Message>
   <Message number="1097" eDefine="SYS_EIO_SIG_STORE_ERR">
     <Title>Eingangs-E/A-Signal gespeichert</Title>
-    <Description>Die E/A-Konfiguration für das E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Eingangs-E/A-Signale dürfen nicht gespeichert werden.<p /><p />Nur Ausgangs-E/A-Signale können gespeichert werden.<p /><p />Dieses E/A-Signal wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für das E/A-Signal &lt;%s&gt; ist ungültig.Eingangs-E/A-Signale dürfen nicht gespeichert werden.Nur Ausgangs-E/A-Signale können gespeichert werden.Dieses E/A-Signal wurde abgelehnt. </Description>
     <Actions>Speicherung für das E/A-Signal entfernen (oder Signaltyp ändern).</Actions>
   </Message>
   <Message number="1098" eDefine="SYS_EIO_NFS_DOWN">
     <Title>NFS-Server verloren</Title>
-    <Description>Kontakt mit NFS-Server &lt;<arg format="%s" ordinal="1" />&gt; ging verloren. </Description>
-    <Actions>1. NFS-Server.<p />2. Netzwerkverbindung.<p />3. NFS-Client. </Actions>
+    <Description>Kontakt mit NFS-Server &lt;%s&gt; ging verloren. </Description>
+    <Actions>1. NFS-Server.2. Netzwerkverbindung.3. NFS-Client. </Actions>
   </Message>
   <Message number="1099" eDefine="SYS_EIO_NFS_TRUST_DOWN">
     <Title>Trusted NFS-Server verloren</Title>
-    <Description>Kontakt mit einem Trusted NFS-Server &lt;<arg format="%s" ordinal="1" />&gt; ging verloren. </Description>
-    <Actions>1. NFS-Server.<p />2. Netzwerkverbindung.<p />3. NFS-Client. </Actions>
+    <Description>Kontakt mit einem Trusted NFS-Server &lt;%s&gt; ging verloren. </Description>
+    <Actions>1. NFS-Server.2. Netzwerkverbindung.3. NFS-Client. </Actions>
   </Message>
   <Message number="1100" eDefine="SYS_EIO_BUS_TABLE_ERR">
     <Title>Maximale Anzahl der E/A-Busse überschritten</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Die maximale Anzahl <arg format="%d" ordinal="1" /> E/A-Busse im E/A-System wurde überschritten. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Die maximale Anzahl %d1 E/A-Busse im E/A-System wurde überschritten. </Description>
     <Actions>Konfiguration des E/A-Systems so ändern (durch Verringern der Anzahl E/A-Busse), dass das Maximum nicht überschritten wird.</Actions>
   </Message>
   <Message number="1101" eDefine="SYS_EIO_UNT_BUS_INVALID">
     <Title>E/A-Signal undefiniert</Title>
-    <Description>Die E/A-Konfiguration für E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Der E/A-Bus &lt;<arg format="%s" ordinal="2" />&gt; kann nicht im System gefunden werden. Eine E/A-Einheit muss sich auf einen definierten E/A-Bus beziehen.<p /><p />Installierte E/A-Busse sind:<arg format="%s" ordinal="3" /><arg format="%s" ordinal="4" /><arg format="%s" ordinal="5" /></Description>
+    <Description>Die E/A-Konfiguration für E/A-Einheit &lt;%s&gt; ist ungültig.Der E/A-Bus &lt;%s&gt; kann nicht im System gefunden werden. Eine E/A-Einheit muss sich auf einen definierten E/A-Bus beziehen.Installierte E/A-Busse sind:%s%s%s</Description>
     <Consequences>Die E/A-Einheit wurde zurückgewiesen, und keine Funktionen auf der Basis dieser Einheit funktionieren.</Consequences>
-    <Actions>1. Sicherstellen, dass der E/A-Bus definiert ist <p />2. Sicherstellen, dass der E/A-Bus-Name korrekt geschrieben ist </Actions>
+    <Actions>1. Sicherstellen, dass der E/A-Bus definiert ist 2. Sicherstellen, dass der E/A-Bus-Name korrekt geschrieben ist </Actions>
   </Message>
   <Message number="1114" eDefine="SYS_EIO_INVALID_IP">
     <Title>Ungültige IP-Adresse</Title>
-    <Description>Die IP-Adresse &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig. </Description>
+    <Description>Die IP-Adresse &lt;%s&gt; ist ungültig. </Description>
     <Actions>Kommunikationskonfiguration prüfen</Actions>
   </Message>
   <Message number="1115" eDefine="SYS_EIO_INVALID_SUBMASK">
     <Title>Ungültige Subnet-Maske</Title>
-    <Description>Die Subnet-Maske &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig. </Description>
+    <Description>Die Subnet-Maske &lt;%s&gt; ist ungültig. </Description>
     <Actions>Kommunikationskonfiguration prüfen</Actions>
   </Message>
   <Message number="1116" eDefine="SYS_EIO_UNT_DISABLE_INVALID">
     <Title>Deaktivierte E/A-Einheit mit Einheit-Trustlevel &lt;Required (0)&gt;</Title>
-    <Description>Die E/A-Konfiguration der E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />E/A-Einheiten mit Einheiten-Trustlevel „Required 0“ dürfen nicht deaktiviert werden.<p /><p /></Description>
+    <Description>Die E/A-Konfiguration der E/A-Einheit &lt;%s&gt; ist ungültig.E/A-Einheiten mit Einheiten-Trustlevel „Required 0“ dürfen nicht deaktiviert werden.</Description>
     <Consequences>Die E/A-Einheit wurde zurückgewiesen, und keine Funktionen auf der Basis dieser Einheit funktionieren.</Consequences>
     <Actions>Konfiguration der E/A-Einheit korrigieren, entweder durch ihre Aktivierung oder durch Änderung des Einheiten-Trustlevels.</Actions>
   </Message>
   <Message number="1122" eDefine="SYS_EIO_ILLEGAL_IP_ADDRESS">
     <Title>Falsche IP-Adresse</Title>
-    <Description>Die Adresse &lt;<arg format="%s" ordinal="1" />&gt; in Protokoll &lt;<arg format="%s" ordinal="2" />&gt; ist keine gültige IP-Adresse. </Description>
+    <Description>Die Adresse &lt;%s&gt; in Protokoll &lt;%s&gt; ist keine gültige IP-Adresse. </Description>
     <Actions>Adresse korrigieren</Actions>
   </Message>
   <Message number="1123" eDefine="SYS_EIO_NO_MATCHING_TRANSPORT">
     <Title>Kein Übertragungsprotokoll</Title>
-    <Description>Das Übertragungsprotokoll &lt;<arg format="%s" ordinal="1" />&gt;, das für Anwendungsprotokoll &lt;<arg format="%s" ordinal="2" />&gt; angegeben wurde, konnte nicht gefunden werden. </Description>
+    <Description>Das Übertragungsprotokoll &lt;%s&gt;, das für Anwendungsprotokoll &lt;%s&gt; angegeben wurde, konnte nicht gefunden werden. </Description>
     <Actions>Übertragungsprotokoll ändern</Actions>
   </Message>
   <Message number="1125" eDefine="SYS_EIO_PERMISSION_DENIED">
     <Title>Installationserlaubnis verweigert</Title>
-    <Description>Erlaubnis zur Installation des Verzeichnisses &lt;<arg format="%s" ordinal="1" />&gt; auf dem Server &lt;<arg format="%s" ordinal="2" />&gt; wurde verweigert. </Description>
+    <Description>Erlaubnis zur Installation des Verzeichnisses &lt;%s&gt; auf dem Server &lt;%s&gt; wurde verweigert. </Description>
     <Actions>Anwender- oder Gruppen-ID ändern</Actions>
   </Message>
   <Message number="1126" eDefine="SYS_EIO_NO_SUCH_DEVICE">
     <Title>Verzeichnis nicht exportiert</Title>
-    <Description>Installationsverzeichnis &lt;<arg format="%s" ordinal="1" />&gt; als &lt;<arg format="%s" ordinal="2" />&gt; fehlgeschlagen, da es nicht auf den Servercomputer &lt;<arg format="%s" ordinal="3" />&gt; exportiert wurde.<p />Protokoll: &lt;<arg format="%s" ordinal="4" />&gt;. </Description>
+    <Description>Installationsverzeichnis &lt;%s&gt; als &lt;%s&gt; fehlgeschlagen, da es nicht auf den Servercomputer &lt;%s&gt; exportiert wurde.Protokoll: &lt;%s&gt;. </Description>
     <Actions>Verzeichnis auf den Servercomputer exportieren</Actions>
   </Message>
   <Message number="1128" eDefine="SYS_EIO_NFS_NOT_INSTALLED">
@@ -222,52 +222,52 @@
   </Message>
   <Message number="1129" eDefine="SYS_EIO_MAX_DEVICES">
     <Title>Zu viele Remote-Datenträger</Title>
-    <Description>Die maximale Anzahl installierter Remote-Datenträger wurde überschritten.<p />Die maximale Anzahl ist <arg format="%d" ordinal="1" />. </Description>
+    <Description>Die maximale Anzahl installierter Remote-Datenträger wurde überschritten.Die maximale Anzahl ist %d1. </Description>
     <Actions>Anzahl der installierten Remote-Datenträger reduzieren</Actions>
   </Message>
   <Message number="1130" eDefine="SYS_EIO_MAX_SERVERS">
     <Title>Zu viele Remote-Server</Title>
-    <Description>Die maximale Anzahl Server für installierte Remote-Datenträger wurde überschritten.<p />Die maximale Anzahl ist <arg format="%d" ordinal="1" />. </Description>
+    <Description>Die maximale Anzahl Server für installierte Remote-Datenträger wurde überschritten.Die maximale Anzahl ist %d1. </Description>
     <Actions>1. Anzahl an Servern verringern</Actions>
   </Message>
   <Message number="1131" eDefine="SYS_EIO_COULD_NOT_MOUNT">
     <Title>Konnte Verzeichnis nicht installieren </Title>
-    <Description>Die Installation des Verzeichnisses &lt;<arg format="%s" ordinal="1" />&gt; auf dem Computer &lt;<arg format="%s" ordinal="2" />&gt; ist fehlgeschlagen.<p />Protokoll: &lt;<arg format="%s" ordinal="3" />&gt;. </Description>
+    <Description>Die Installation des Verzeichnisses &lt;%s&gt; auf dem Computer &lt;%s&gt; ist fehlgeschlagen.Protokoll: &lt;%s&gt;. </Description>
     <Actions>Servereinrichtung prüfen</Actions>
   </Message>
   <Message number="1141" eDefine="SYS_EIO_SIG_DEF_RANGE_ERR">
     <Title>Standardwert für E/A-Signal außerhalb Bereich</Title>
-    <Description>Die E/A-Konfiguration für das E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Der Standardwert ist außerhalb des Bereichs.<p /><p />Dieses E/A-Signal wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für das E/A-Signal &lt;%s&gt; ist ungültig.Der Standardwert ist außerhalb des Bereichs.Dieses E/A-Signal wurde abgelehnt. </Description>
     <Actions>Standardwert für E/A-Signal ändern</Actions>
   </Message>
   <Message number="1156" eDefine="SYS_EIO_IPC_QFULL">
     <Title>IPC-Queue voll</Title>
-    <Description>Die IPC-Queue (Interprocess communication) &lt;<arg format="%s" ordinal="1" />&gt; war beim Senden an Interrupt-Routine voll.<p /></Description>
+    <Description>Die IPC-Queue (Interprocess communication) &lt;%s&gt; war beim Senden an Interrupt-Routine voll.</Description>
     <Actions>System neu starten.</Actions>
   </Message>
   <Message number="1158" eDefine="SYS_EIO_UNT_ADDR_INVALID">
     <Title>Adresse außerhalb des zulässigen Bereichs</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Die Adresse der E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig (außerhalb des zulässigen Bereichs).<p /><p />Diese E/A-Einheit wurde abgelehnt. </Description>
-    <Actions>1. Adresse ändern.<p />2. Adress-Syntax prüfen. </Actions>
+    <Description>Die E/A-Konfiguration ist ungültig.Die Adresse der E/A-Einheit &lt;%s&gt; ist ungültig (außerhalb des zulässigen Bereichs).Diese E/A-Einheit wurde abgelehnt. </Description>
+    <Actions>1. Adresse ändern.2. Adress-Syntax prüfen. </Actions>
   </Message>
   <Message number="1163" eDefine="SYS_EIO_UNT_PROTECTED">
     <Title>E/A-Signal an interner E/A-Einheit</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Das benutzerdefinierte E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; darf nicht mit der internen E/A-Einheit &lt;<arg format="%s" ordinal="2" />&gt;verbunden werden.<p /><p />Benutzerdefinierte E/A-Signale dürfen nicht mit internen E/A-Einheiten verbunden werden.<p /><p />Dieses E/A-Signal wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Das benutzerdefinierte E/A-Signal &lt;%s&gt; darf nicht mit der internen E/A-Einheit &lt;%s&gt;verbunden werden.Benutzerdefinierte E/A-Signale dürfen nicht mit internen E/A-Einheiten verbunden werden.Dieses E/A-Signal wurde abgelehnt. </Description>
     <Actions>E/A-Signal mit einer anderen E/A-Einheit verbinden</Actions>
   </Message>
   <Message number="1164" eDefine="SYS_EIO_SIG_PROTECTED">
     <Title>Internes E/A-Signal in Querverbindung</Title>
-    <Description>Die E/A-Konfiguration enthält eine ungültige Querverbindung.<p />Das &lt;Actor <arg format="%d" ordinal="1" /><arg format="%s" ordinal="2" />&gt; ist ein benutzerdefiniertes E/A-Signal, wohingegen das resultierende E/A-Signal &lt;<arg format="%s" ordinal="3" />&gt; ein internes E/A-Signal ist.<p /><p />Es ist nicht erlaubt, Querverbindungen zu definieren, bei denen benutzerdefinierte E/A-Signale interne E/A-Signale beeinflussen. </Description>
+    <Description>Die E/A-Konfiguration enthält eine ungültige Querverbindung.Das &lt;Actor %d1%s&gt; ist ein benutzerdefiniertes E/A-Signal, wohingegen das resultierende E/A-Signal &lt;%s&gt; ein internes E/A-Signal ist.Es ist nicht erlaubt, Querverbindungen zu definieren, bei denen benutzerdefinierte E/A-Signale interne E/A-Signale beeinflussen. </Description>
     <Actions>Querverbindung korrigieren, damit keine internen E/A-Signale im resultierenden Ausdruck vorhanden sind.</Actions>
   </Message>
   <Message number="1165" eDefine="SYS_EIO_FTP_DOWN">
     <Title>FTP-Server außer Betrieb</Title>
-    <Description>Die Verbindung zum Non-Trusted FTP-Server wurde unterbrochen.<p />IP-Adresse: &lt;<arg format="%s" ordinal="1" />&gt;. </Description>
+    <Description>Die Verbindung zum Non-Trusted FTP-Server wurde unterbrochen.IP-Adresse: &lt;%s&gt;. </Description>
     <Actions>Kabel und FTP-Server-Einstellungen prüfen</Actions>
   </Message>
   <Message number="1166" eDefine="SYS_EIO_FTP_TRUST_DOWN">
     <Title>FTP-Server außer Betrieb</Title>
-    <Description>Die Verbindung zum einem Trusted FTP-Server wurde unterbrochen.<p />IP-Adresse: &lt;<arg format="%s" ordinal="1" />&gt;. </Description>
+    <Description>Die Verbindung zum einem Trusted FTP-Server wurde unterbrochen.IP-Adresse: &lt;%s&gt;. </Description>
     <Actions>Kabel und FTP-Server-Einstellungen prüfen</Actions>
   </Message>
   <Message number="1167" eDefine="SYS_EIO_FTP_TRANS_TCPIP">
@@ -282,86 +282,86 @@
   </Message>
   <Message number="1182" eDefine="SYS_EIO_CRS_RES_UNDEF">
     <Title>E/A-Signal undefiniert</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p /><p />Der Parameter &lt;Resultant I/O signal&gt; einer Querverbindung beinhaltet einen Bezug zu einem undefinierten E/A-Signal &lt;<arg format="%d" ordinal="1" />&gt;.<p /><p />Diese Querverbindung wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Der Parameter &lt;Resultant I/O signal&gt; einer Querverbindung beinhaltet einen Bezug zu einem undefinierten E/A-Signal &lt;%d1&gt;.Diese Querverbindung wurde abgelehnt. </Description>
     <Actions>Querverbindung korrigieren, damit das resultierende E/A-Signal sich auf ein vorhandenes E/A-Signal bezieht.</Actions>
   </Message>
   <Message number="1183" eDefine="SYS_EIO_CRS_OPR_INVALID">
     <Title>Querverbindung mit ungültigem Operator</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p /><p />Der Parameter &lt;Operator <arg format="%d" ordinal="1" />&gt; einer Querverbindung enthält einen ungültigen/unbekannten Operator &lt;<arg format="%s" ordinal="2" />&gt;.<p /><p />Gültige Werte für logische Operatoren sind:<p />- AND<p />- OR<p /><p />Diese Querverbindung wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Der Parameter &lt;Operator %d1&gt; einer Querverbindung enthält einen ungültigen/unbekannten Operator &lt;%s&gt;.Gültige Werte für logische Operatoren sind:- AND- ORDiese Querverbindung wurde abgelehnt. </Description>
     <Actions>Operator korrigieren</Actions>
   </Message>
   <Message number="1185" eDefine="SYS_EIO_DUPLICATED_NAME">
     <Title>Doppelter Name</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Der Bezeichner &lt;<arg format="%s" ordinal="1" />&gt; wurde bereits als Name für eine andere Konfigurationsinstanz verwendet.<p /><p />Die folgenden Konfigurationsinstanzen benötigen einen eindeutigen Namen:<p />- E/A-Busse<p />- Arten der Einheiten<p />- E/A-Einheiten<p />- E/A-Signale<p />- Befehlsarten<p />- Befehle<p />- E/A-Zugriffsebenen<p />- CIP-Routen<p /><p />Diese Konfigurationsinstanz wurde abgelehnt. </Description>
-    <Actions>1. Eine Konfigurationsinstanz in den Systemparametern umbenennen.<p />2. Neustart des Systems durchführen. </Actions>
+    <Description>Die E/A-Konfiguration ist ungültig.Der Bezeichner &lt;%s&gt; wurde bereits als Name für eine andere Konfigurationsinstanz verwendet.Die folgenden Konfigurationsinstanzen benötigen einen eindeutigen Namen:- E/A-Busse- Arten der Einheiten- E/A-Einheiten- E/A-Signale- Befehlsarten- Befehle- E/A-Zugriffsebenen- CIP-RoutenDiese Konfigurationsinstanz wurde abgelehnt. </Description>
+    <Actions>1. Eine Konfigurationsinstanz in den Systemparametern umbenennen.2. Neustart des Systems durchführen. </Actions>
   </Message>
   <Message number="1193" eDefine="SYS_EIO_MAPPING_OUTSIDE_DATA_AREA">
     <Title>Ungültige physische E/A-Zuordnung</Title>
-    <Description>E/A-Zuordnungsfehler bei E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt;.<p />Die E/A-Einheit verwendet eine Eingangsgröße von &lt;<arg format="%d" ordinal="2" /> Bits, die Steuerung kann maximal <arg format="%s" ordinal="3" />&gt; Bits bearbeiten.<p />Die E/A-Einheit verwendet eine Ausgangsgröße von &lt;<arg format="%d" ordinal="4" /> Bits, die Steuerung kann maximal <arg format="%s" ordinal="5" />&gt; Bits bearbeiten.<p />. </Description>
+    <Description>E/A-Zuordnungsfehler bei E/A-Einheit &lt;%s&gt;.Die E/A-Einheit verwendet eine Eingangsgröße von &lt;%d2 Bits, die Steuerung kann maximal %s&gt; Bits bearbeiten.Die E/A-Einheit verwendet eine Ausgangsgröße von &lt;%d4 Bits, die Steuerung kann maximal %s&gt; Bits bearbeiten.. </Description>
     <Actions>Konfiguration der physischen E/A-Einheit prüfen.</Actions>
   </Message>
   <Message number="1196" eDefine="SYS_EIO_SIG_PHS_ENCODING_INVALID">
     <Title>Ungültiger Verschlüsselungstyp</Title>
-    <Description>Die E/A-Konfiguration für das E/A-Signal &lt;<arg format="%s" ordinal="1" />&gt; ist ungültig.<p />Der Verschlüsselungstyp &lt;<arg format="%s" ordinal="2" />&gt; ist nicht für den Signaltyp &lt;<arg format="%d" ordinal="3" />&gt; gültig. <p /><p />Gültige Verschlüsselungstypen sind: <p />- UNSIGNED<p />- TWO_COMP<p /><p />Dieses Signal wurde abgelehnt. </Description>
+    <Description>Die E/A-Konfiguration für das E/A-Signal &lt;%s&gt; ist ungültig.Der Verschlüsselungstyp &lt;%s&gt; ist nicht für den Signaltyp &lt;%d3&gt; gültig. Gültige Verschlüsselungstypen sind: - UNSIGNED- TWO_COMPDieses Signal wurde abgelehnt. </Description>
     <Actions>Den Verschlüsselungstyp des E/A-Signals korrigieren</Actions>
   </Message>
   <Message number="1201" eDefine="SYS_EIO_BUS_UNKNOWN">
     <Title>Unbekannter E/A-Bus</Title>
-    <Description>Die E/A-Konfiguration ist ungültig.<p />Der E/A-Bus &lt;<arg format="%s" ordinal="1" />&gt; kann im System nicht gefunden werden.<p /><p />Installierte E/A-Busse sind:<arg format="%s" ordinal="2" /><arg format="%s" ordinal="3" /><arg format="%s" ordinal="4" /><arg format="%s" ordinal="5" /></Description>
+    <Description>Die E/A-Konfiguration ist ungültig.Der E/A-Bus &lt;%s&gt; kann im System nicht gefunden werden.Installierte E/A-Busse sind:%s%s%s%s</Description>
     <Consequences>Dieser E/A-Bus wurde abgelehnt, und keine Funktionen auf der Basis dieses Busses funktionieren.</Consequences>
-    <Actions>1. Sicherstellen, dass das System mit dem gewünschten E/A-Bus konfiguriert <p />   wurde. <p />2. Sicherstellen, dass die verwendete E/A-Bus-Option installiert ist. <p />3. Konfiguration des E/A-Busses überprüfen </Actions>
+    <Actions>1. Sicherstellen, dass das System mit dem gewünschten E/A-Bus konfiguriert    wurde. 2. Sicherstellen, dass die verwendete E/A-Bus-Option installiert ist. 3. Konfiguration des E/A-Busses überprüfen </Actions>
   </Message>
   <Message number="1205" eDefine="SYS_EIO_COULD_NOT_MOUNT_FTP">
     <Title>Konnte Verzeichnis nicht installieren</Title>
-    <Description>Die Installation des Verzeichnisses &lt;<arg format="%s" ordinal="1" />&gt; auf dem Computer &lt;<arg format="%s" ordinal="2" />&gt; ist fehlgeschlagen.<p />Protokoll: &lt;<arg format="%s" ordinal="3" />&gt;. </Description>
-    <Actions>1. FTP-Servereinstellung prüfen.<p />2. FTP-Client-Konfiguration prüfen. <p />3. Prüfen der Kommunikationshardware, Verkabelung. </Actions>
+    <Description>Die Installation des Verzeichnisses &lt;%s&gt; auf dem Computer &lt;%s&gt; ist fehlgeschlagen.Protokoll: &lt;%s&gt;. </Description>
+    <Actions>1. FTP-Servereinstellung prüfen.2. FTP-Client-Konfiguration prüfen. 3. Prüfen der Kommunikationshardware, Verkabelung. </Actions>
   </Message>
   <Message number="1220" eDefine="SYS_EIO_PBUS_NO_OPT">
     <Title>Keine Profibus-Option installiert</Title>
     <Description>Eine Profibus-DP-Master-Karte wurde eingebaut, aber keine Profibus-Option installiert.</Description>
     <Consequences>Keine Kommunikation im Profibus möglich Folgefehler können durch die Konfiguration von Profibus entstehen, wenn keine entsprechende Option installiert wurde.</Consequences>
     <Causes>Eventuell wurde versucht, die Profibus-Funktionalität hinzuzufügen, ohne die Option korrekt zu installieren.</Causes>
-    <Actions>1. Wenn die Profibus-Option erforderlich ist: neues System mit dieser Option konfigurieren und das System installieren. <p />2) Wenn die Profibus-Option nicht erforderlich ist: neues System ohne diese Option konfigurieren und das System installieren. </Actions>
+    <Actions>1. Wenn die Profibus-Option erforderlich ist: neues System mit dieser Option konfigurieren und das System installieren. 2) Wenn die Profibus-Option nicht erforderlich ist: neues System ohne diese Option konfigurieren und das System installieren. </Actions>
   </Message>
   <Message number="1221" eDefine="SYS_EIO_PBUS_NO_FWFILE_FOUND">
     <Title>Profibus-Firmwaredatei nicht gefunden</Title>
-    <Description>Die Profibus-Firmware-Datei &lt;<arg format="%s" ordinal="1" />&gt; wurde nicht gefunden oder ist nicht lesbar.<p />Eventuell ist die Kartenfirmware veraltet. </Description>
-    <Actions>System neu installieren.<p /></Actions>
+    <Description>Die Profibus-Firmware-Datei &lt;%s&gt; wurde nicht gefunden oder ist nicht lesbar.Eventuell ist die Kartenfirmware veraltet. </Description>
+    <Actions>System neu installieren.</Actions>
   </Message>
   <Message number="1222" eDefine="SYS_EIO_PBUS_NO_BINCFG_FOUND">
     <Title>Profibus-Konfigurationsdatei nicht gefunden</Title>
-    <Description>Binäre Profibus-Konfigurationsdatei wurde nicht gefunden.<p />- Datei: &lt;<arg format="%s" ordinal="1" />&gt;<p />- Pfad: &lt;<arg format="%s" ordinal="2" />&gt;. </Description>
-    <Actions>1. Sicherstellen, dass Datei vorhanden ist.<p />2. Pfad in der E/A-Konfiguration ändern. </Actions>
+    <Description>Binäre Profibus-Konfigurationsdatei wurde nicht gefunden.- Datei: &lt;%s&gt;- Pfad: &lt;%s&gt;. </Description>
+    <Actions>1. Sicherstellen, dass Datei vorhanden ist.2. Pfad in der E/A-Konfiguration ändern. </Actions>
   </Message>
   <Message number="1223" eDefine="SYS_EIO_PBUS_BINCFG_PARSE_ERR">
     <Title>Profibus-Dateianalyse-Fehler</Title>
-    <Description>Binäre Profibus-Konfigurationsdatei ist beschädigt (Interner Fehler <arg format="%s" ordinal="1" />)<p />- Datei: &lt;<arg format="%s" ordinal="2" />&gt;<p />- Pfad: &lt;<arg format="%s" ordinal="3" />&gt;. </Description>
+    <Description>Binäre Profibus-Konfigurationsdatei ist beschädigt (Interner Fehler %s)- Datei: &lt;%s&gt;- Pfad: &lt;%s&gt;. </Description>
     <Actions>Mithilfe des externen Profibus-Konfigurationstools binäre Konfigurationsdatei erneut erstellen und herunterladen.</Actions>
   </Message>
   <Message number="1224" eDefine="SYS_EIO_PBUS_CHANNEL_FLASHED">
     <Title>Profibus-Kanal per Reflash aktualisiert</Title>
-    <Description>Die Kanalfirmware <arg format="%s" ordinal="1" /> der Profibus-Karte wurde aktualisiert von &lt;<arg format="%s" ordinal="2" />&gt; auf &lt;<arg format="%s" ordinal="3" />&gt;. </Description>
+    <Description>Die Kanalfirmware %s der Profibus-Karte wurde aktualisiert von &lt;%s&gt; auf &lt;%s&gt;. </Description>
   </Message>
   <Message number="1228" eDefine="SYS_EIO_PBUS_BINCFG_MISMATCH">
     <Title>Fehler in Profibus Binärkonfiguration</Title>
-    <Description>Die Konfigurationsdaten in der Binärdatei werden vom Slave bei Adresse &lt;<arg format="%i" ordinal="1" />&gt; nicht akzeptiert. </Description>
+    <Description>Die Konfigurationsdaten in der Binärdatei werden vom Slave bei Adresse &lt;%i1&gt; nicht akzeptiert. </Description>
     <Actions>Angleichen der Konfigurationsdaten in der Binärdatei an die Slave-Konfiguration und System neu starten.</Actions>
   </Message>
   <Message number="1229" eDefine="SYS_EIO_PBUS_BINPRM_MISMATCH">
     <Title>Fehler in Profibus Binärparameter</Title>
-    <Description>Die Parameterdaten in der Binärdatei werden von Slave bei Adresse &lt;<arg format="%i" ordinal="1" />&gt; nicht akzeptiert. </Description>
+    <Description>Die Parameterdaten in der Binärdatei werden von Slave bei Adresse &lt;%i1&gt; nicht akzeptiert. </Description>
     <Actions>Angleichen der Parameterdaten in der Binärdatei an die Slave-Parameter und System neu starten.</Actions>
   </Message>
   <Message number="1230" eDefine="SYS_EIO_PBUS_BINARYFILE_MISMATCH">
     <Title>E/A-Einheit Konfigurationsfehler</Title>
-    <Description>E/A-EInheit &lt;<arg format="%s" ordinal="1" />&gt; ist mit Systemparametern konfiguriert, fehlt aber in Profibus-Binärdatei oder ist inkorrekt. </Description>
-    <Actions>1. Systemparameter prüfen/ändern.<p />2. Profibus-Binärdatei prüfen/ändern. </Actions>
+    <Description>E/A-EInheit &lt;%s&gt; ist mit Systemparametern konfiguriert, fehlt aber in Profibus-Binärdatei oder ist inkorrekt. </Description>
+    <Actions>1. Systemparameter prüfen/ändern.2. Profibus-Binärdatei prüfen/ändern. </Actions>
   </Message>
   <Message number="1231" eDefine="SYS_EIO_PBUS_WRONG_UNIT">
     <Title>Falsche Profibus-E/A-Einheit angeschlossen</Title>
-    <Description>Profibus E/A-Einheit &lt;<arg format="%s" ordinal="1" />&gt; bei Adresse &lt;<arg format="%d" ordinal="2" />&gt; besitzt die falsche Identitätsnummer. Berichtete Identitätsnummer lautet <arg format="%s" ordinal="3" />. Erwartete Identitätsnummer lautet <arg format="%s" ordinal="4" />. </Description>
+    <Description>Profibus E/A-Einheit &lt;%s&gt; bei Adresse &lt;%d2&gt; besitzt die falsche Identitätsnummer. Berichtete Identitätsnummer lautet %s. Erwartete Identitätsnummer lautet %s. </Description>
     <Consequences>Das System kann die E/A-Einheit nicht aktivieren, und es ist keine Kommunikation über den Profibus möglich.</Consequences>
-    <Causes>- Die E/A-Einheit bei Adresse &lt;<arg format="%d" ordinal="5" />&gt; ist gegebenenfalls der falsche Typ von E/A-Einheit. <p />- Die Konfiguration ist unter Umständen falsch, d. h. eine falsche Binär-Konfigurationsdatei und in manchen Fällen falsche Systemparameter. </Causes>
-    <Actions>1. Sicherstellen, dass die Systemparameter korrekt sind. <p />2. Sicherstellen, dass die Profibus-Binärdatei korrekt ist. <p />3. E/A-Einheit ersetzen. </Actions>
+    <Causes>- Die E/A-Einheit bei Adresse &lt;%d5&gt; ist gegebenenfalls der falsche Typ von E/A-Einheit. - Die Konfiguration ist unter Umständen falsch, d. h. eine falsche Binär-Konfigurationsdatei und in manchen Fällen falsche Systemparameter. </Causes>
+    <Actions>1. Sicherstellen, dass die Systemparameter korrekt sind. 2. Sicherstellen, dass die Profibus-Binärdatei korrekt ist. 3. E/A-Einheit ersetzen. </Actions>
   </Message>
 </Domain>

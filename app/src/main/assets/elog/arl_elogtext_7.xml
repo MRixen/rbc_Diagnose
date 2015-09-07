@@ -2,470 +2,470 @@
 <Domain xmlns="urn:abb-robotics-elog-text" elogDomain="ARL" domainNo="4" lang="de" elogTextVersion="1.0" min="1415" max="1513">
   <Message number="1415" eDefine="SYS_ERR_ARL_INPAR_MODEXIST">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Modulname <arg format="%s" ordinal="2" /> existiert nicht.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>RAPID-Programm prüfen und ändern.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sDer Modulname %s existiert nicht.Programmreferenz: %s</Description>
+    <Actions>RAPID-Programm prüfen und ändern.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1416" eDefine="SYS_ERR_ARL_INPAR_NOMOD">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Das Symbol <arg format="%s" ordinal="2" /> ist kein Modul. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>RAPID-Programm prüfen und ändern.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sDas Symbol %s ist kein Modul. Programmreferenz: %s</Description>
+    <Actions>RAPID-Programm prüfen und ändern.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1417" eDefine="SYS_ERR_ARL_SYS_CDATE">
     <Title>Systemzugriffsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Datum kann nicht konvertiert werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sDatum kann nicht konvertiert werden.Programmreferenz: %s</Description>
     <Actions>Warmstart durchführen und erneut versuchen.</Actions>
   </Message>
   <Message number="1419" eDefine="SYS_ERR_ARL_INPAR_CFGDATA">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> muss 'num', 'bool' oder 'string' sein.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %s%s muss 'num', 'bool' oder 'string' sein.Programmreferenz: %s</Description>
     <Actions>RAPID-Programm prüfen und ändern.</Actions>
   </Message>
   <Message number="1420" eDefine="SYS_ERR_ARL_INPAR_ILLTYP">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argumenttyp von <arg format="%s" ordinal="2" /> ist nicht kompatibel mit cfg-Typ. Erwartet: <arg format="%s" ordinal="3" />. <p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
-    <Actions>Fehlerbehebung: <arg format="%s" ordinal="5" /></Actions>
+    <Description>Task: %sArgumenttyp von %s ist nicht kompatibel mit cfg-Typ. Erwartet: %s. Programmreferenz: %s</Description>
+    <Actions>Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1421" eDefine="SYS_ERR_ARL_INPAR_UNKDOM">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unbekannte cfg-Domäne in Argument <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>RAPID-Programm prüfen und ändern.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sUnbekannte cfg-Domäne in Argument %s. Programmreferenz: %s</Description>
+    <Actions>RAPID-Programm prüfen und ändern.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1422" eDefine="SYS_ERR_ARL_INPAR_UNKTYPE">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unbekannter cfg-Typ in Argument <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>RAPID-Programm prüfen und ändern.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sUnbekannter cfg-Typ in Argument %s. Programmreferenz: %s</Description>
+    <Actions>RAPID-Programm prüfen und ändern.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1423" eDefine="SYS_ERR_ARL_INPAR_UNKINST">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unbekannte cfg-Instanz in Argument <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>RAPID-Programm prüfen und ändern.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sUnbekannte cfg-Instanz in Argument %s. Programmreferenz: %s</Description>
+    <Actions>RAPID-Programm prüfen und ändern.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1424" eDefine="SYS_ERR_ARL_INPAR_UNKATTR">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unbekanntes cfg-Attribut in Argument <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>RAPID-Programm prüfen und ändern.<p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sUnbekanntes cfg-Attribut in Argument %s. Programmreferenz: %s</Description>
+    <Actions>RAPID-Programm prüfen und ändern.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1425" eDefine="SYS_ERR_ARL_INPAR_PATH">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Pfad '<arg format="%s" ordinal="5" />' im Argument <arg format="%s" ordinal="2" /> ist falsch.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Pfad prüfen und ändern. <p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sDer Pfad '%s' im Argument %s ist falsch.Programmreferenz: %s</Description>
+    <Actions>Pfad prüfen und ändern. Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1426" eDefine="SYS_ERR_ARL_IO_CON_LOST_UNKNAME">
     <Title>E/A-Fehler</Title>
-    <Description>Zugriff auf E/A-Signal nicht möglich. Signal und Einheit unbekannt.<p /><p /><p /></Description>
+    <Description>Zugriff auf E/A-Signal nicht möglich. Signal und Einheit unbekannt.</Description>
     <Consequences>Neustart nicht möglich.</Consequences>
-    <Causes>Verbindung mit E/A-Modul unterbrochen.<p /></Causes>
+    <Causes>Verbindung mit E/A-Modul unterbrochen.</Causes>
     <Actions>Verbindung mit E/A-Modul wieder aufbauen. Um neuen Programmstart zu ermöglichen, PZ an eine sichere Neustart-Position verlagern.</Actions>
   </Message>
   <Message number="1427" eDefine="SYS_ERR_ARL_ARG_NEGDELAY">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Verzögerungszeit muss positiv sein.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sDie Verzögerungszeit muss positiv sein.Programmreferenz: %s</Description>
     <Actions>Wert von delaytime ändern.</Actions>
   </Message>
   <Message number="1428" eDefine="SYS_ERR_ARL_AXIS_INI_SENS">
     <Title>Achsenfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Einzelachse nicht korrekt initialisiert. Der Sensor ist nicht aktiviert.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sEinzelachse nicht korrekt initialisiert. Der Sensor ist nicht aktiviert.Programmreferenz: %s</Description>
   </Message>
   <Message number="1429" eDefine="SYS_ERR_ARL_AXIS_INI_SENSPRC">
     <Title>Achsenfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Einzelachse nicht korrekt initialisiert.<p />Der Sensorprozess wurde nicht korrekt initialisiert.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sEinzelachse nicht korrekt initialisiert.Der Sensorprozess wurde nicht korrekt initialisiert.Programmreferenz: %s</Description>
   </Message>
   <Message number="1430" eDefine="SYS_ERR_ARL_ORI_UNNORMAL">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Orientierungdefinitionsfehler in <arg format="%s" ordinal="2" />.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Orientierung prüfen.<p />Alle verwendeten Orientierungen müssen normalisiert werden, d. h. die Summe der Quadrate der Quaternion-Elemente muss gleich 1 sein.</Actions>
+    <Description>Task: %sOrientierungdefinitionsfehler in %s.Programmreferenz: %s</Description>
+    <Actions>Orientierung prüfen.Alle verwendeten Orientierungen müssen normalisiert werden, d. h. die Summe der Quadrate der Quaternion-Elemente muss gleich 1 sein.</Actions>
   </Message>
   <Message number="1431" eDefine="SYS_ERR_ARL_SYS_LOGSRVINS">
     <Title>Systemzugriffsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unbekannte LOGSRV-Instanz.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sUnbekannte LOGSRV-Instanz.Programmreferenz: %s</Description>
     <Actions>Warmstart durchführen und erneut versuchen.</Actions>
   </Message>
   <Message number="1432" eDefine="SYS_ERR_ARL_SYS_SETTSIG">
     <Title>Systemzugriffsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Testsignale können nicht gesetzt werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sTestsignale können nicht gesetzt werden.Programmreferenz: %s</Description>
     <Actions>Warmstart durchführen und erneut versuchen.</Actions>
   </Message>
   <Message number="1433" eDefine="SYS_ERR_ARL_INPAR_UNKMU">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unbekannte mechanische Einheit.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Prüfen, ob mechanische Einheit im System vorhanden ist.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+    <Description>Task: %sUnbekannte mechanische Einheit.Programmreferenz: %s</Description>
+    <Actions>Prüfen, ob mechanische Einheit im System vorhanden ist.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1434" eDefine="SYS_ERR_ARL_INPAR_AXVAL">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument 'Axis' außerhalb des zulässigen Bereichs.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Wert des Achsen-Arguments prüfen und ändern.<p />Fehlerbehebung: <arg format="%s" ordinal="3" /></Actions>
+    <Description>Task: %sArgument 'Axis' außerhalb des zulässigen Bereichs.Programmreferenz: %s</Description>
+    <Actions>Wert des Achsen-Arguments prüfen und ändern.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1435" eDefine="SYS_ERR_ARL_INPAR_CHVAL">
     <Title>Parameterfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument 'Channel' außerhalb des zulässigen Bereichs.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sArgument 'Channel' außerhalb des zulässigen Bereichs.Programmreferenz: %s</Description>
     <Actions>Wert von Argument 'Channel' prüfen und ändern.</Actions>
   </Message>
   <Message number="1437" eDefine="SYS_ERR_ARL_SYS_RESETTSIG">
     <Title>Systemzugriffsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Testsignale können nicht zurückgesetzt werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sTestsignale können nicht zurückgesetzt werden.Programmreferenz: %s</Description>
     <Actions>Warmstart durchführen und erneut versuchen.</Actions>
   </Message>
   <Message number="1438" eDefine="SYS_ERR_ARL_MASS_UNDEF_ZERO">
     <Title>Undefinierte Last</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />WARNUNG!<p />Argument <arg format="%s" ordinal="2" /> hat undefinierte Last (Masse=0).<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Description>Task: %sWARNUNG!Argument %s hat undefinierte Last (Masse=0).Programmreferenz: %s</Description>
     <Consequences>DIE KORREKTE LAST MUSS DEFINIERT SEIN, um mechanische Schäden am Roboter zu vermeiden.</Consequences>
     <Actions>Vor Programmierung oder schrittweiser Bewegung tatsächliche Last oder Greiflast definieren. Eine gute Bewegungsleistung erfordert eine korrekt definierte Last.</Actions>
   </Message>
   <Message number="1439" eDefine="SYS_ERR_ARL_COG_UNDEF_ZERO">
     <Title>Undefinierte Last</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />WARNUNG!<p />Argument <arg format="%s" ordinal="2" /> hat undefinierten Lastschwerpunkt. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sWARNUNG!Argument %s hat undefinierten Lastschwerpunkt. Programmreferenz: %s</Description>
     <Consequences>DIE KORREKTE LAST MUSS DEFINIERT SEIN, um mechanische Schäden am Roboter zu vermeiden.</Consequences>
     <Actions>Vor einer Programmbewegung oder einer manuellen Bewegung den tatsächlichen Schwerpunkt der Last oder der Greiflast definieren (cog.x, cog.y und cog.z dürfen nicht gleichzeitig 0 mm sein). Die Last kann auch mit der Serviceroutine LoadIdentify ermittelt werden.</Actions>
   </Message>
   <Message number="1440" eDefine="SYS_ERR_ARL_SWITCH_DEF">
     <Title>Argument fehlt</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Ein switch-Parameter muss definiert werden.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sEin switch-Parameter muss definiert werden.Programmreferenz: %s</Description>
     <Consequences>Aufgerufene RAPID-Routine konnte nicht abgearbeitet werden.</Consequences>
     <Actions>Ein Argument des Datentyps switch muss angegeben werden.</Actions>
   </Message>
   <Message number="1441" eDefine="SYS_ERR_ARL_MODACTIVE">
     <Title>UnLoad-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Mit Pfad <arg format="%s" ordinal="2" /> geladenes Modul ist aktiv und kann daher nicht gelöscht werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Causes>Die Instruktion UnLoad oder WaitLoad wird in dem Modul ausgeführt, das auch entfernt werden soll.<p /><p />Die Instruktion UnLoad oder WaitLoad befindet sich in einer Trap-Routine, die früher als erwartet ausgeführt wurde.<p /><p />Wenn die Instruktion CONNECT in der Trap-Routine eines Moduls enthalten ist, muss IDelete in der Trap ausgeführt werden, bevor das Modul gelöscht werden kann.</Causes>
-    <Actions>Sicherstellen, dass das Modul keine Routinen oder Daten enthält, die noch aktiv sind, z. B. CONNECT.<p /><p />Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sMit Pfad %s geladenes Modul ist aktiv und kann daher nicht gelöscht werden.Programmreferenz: %s</Description>
+    <Causes>Die Instruktion UnLoad oder WaitLoad wird in dem Modul ausgeführt, das auch entfernt werden soll.Die Instruktion UnLoad oder WaitLoad befindet sich in einer Trap-Routine, die früher als erwartet ausgeführt wurde.Wenn die Instruktion CONNECT in der Trap-Routine eines Moduls enthalten ist, muss IDelete in der Trap ausgeführt werden, bevor das Modul gelöscht werden kann.</Causes>
+    <Actions>Sicherstellen, dass das Modul keine Routinen oder Daten enthält, die noch aktiv sind, z. B. CONNECT.Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1442" eDefine="SYS_ERR_ARL_ARGREF_NOTPERS">
     <Title>Referenzfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Der Verweis in Argument <arg format="%s" ordinal="2" /> ist keine vollständige persistente Variable.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Datensatzkomponente oder Datenfeldelement nicht in Argument <arg format="%s" ordinal="4" /> verwendbar.<p />Nur vollständige persistente Variablen sind für Tool, WObj oder Load<p />in einer Bewegungsinstruktion möglich.</Actions>
+    <Description>Task: %sDer Verweis in Argument %s ist keine vollständige persistente Variable.Programmreferenz: %s</Description>
+    <Actions>Datensatzkomponente oder Datenfeldelement nicht in Argument %s verwendbar.Nur vollständige persistente Variablen sind für Tool, WObj oder Loadin einer Bewegungsinstruktion möglich.</Actions>
   </Message>
   <Message number="1443" eDefine="SYS_ERR_ARL_TOOL_MASS_NEG">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument Tool hat negative Werkzeuglast.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sArgument Tool hat negative Werkzeuglast.Programmreferenz: %s</Description>
     <Actions>Korrekte Last des Werkzeugs definieren, bevor es für schrittweise Bewegung oder im Programm benutzt wird. Die Last des Werkzeugs kann auch mit der Serviceroutine LoadIdentify identifiziert werden.</Actions>
   </Message>
   <Message number="1444" eDefine="SYS_ERR_ARL_TOOL_INERT_NEG">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument 'Tool' hat mindestens eine Komponente des Trägheitsmoments mit negativem Wert.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sArgument 'Tool' hat mindestens eine Komponente des Trägheitsmoments mit negativem Wert.Programmreferenz: %s</Description>
     <Actions>Alle Komponenten des Trägheitsmoments (ix, iy oder iz) auf positive Werte setzen.</Actions>
   </Message>
   <Message number="1445" eDefine="SYS_ERR_ARL_MISS_WOBJ_STATTCP">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Kein WObj angegeben für Bewegung mit stationärem TCP.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Argument '\WObj' für aktuelles Werkobjekt hinzufügen.<p />Wenn keine Bewegung mit stationärem TCP, Komponente 'robhold' in Argument 'Tool' zu TRUE ändern (Roboter hält Werkzeug).</Actions>
+    <Description>Task: %sKein WObj angegeben für Bewegung mit stationärem TCP.Programmreferenz: %s</Description>
+    <Actions>Argument '\WObj' für aktuelles Werkobjekt hinzufügen.Wenn keine Bewegung mit stationärem TCP, Komponente 'robhold' in Argument 'Tool' zu TRUE ändern (Roboter hält Werkzeug).</Actions>
   </Message>
   <Message number="1446" eDefine="SYS_ERR_ARL_ROBHOLD_ERR">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Undefiniert, ob der Roboter das Werkzeug oder das Werkobjekt hält. <p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sUndefiniert, ob der Roboter das Werkzeug oder das Werkobjekt hält. Programmreferenz: %s</Description>
     <Consequences>Die Programmabarbeitung wird sofort angehalten.</Consequences>
     <Causes>Konflikt bei Komponente robhold im Werkzeug und Werkobjekt.</Causes>
     <Actions>Prüfen, ob Konflikt zwischen Argument 'Tool' und Argument '\WObj' für Datenkomponente robhold besteht. </Actions>
   </Message>
   <Message number="1447" eDefine="SYS_ERR_ARL_DATACOMP_NEG">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> hat mindestens eine Datenkomponente mit negativem Wert.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Alle Datenkomponenten in Argument <arg format="%s" ordinal="4" /> auf positive Werte setzen.</Actions>
+    <Description>Task: %sArgument %s hat mindestens eine Datenkomponente mit negativem Wert.Programmreferenz: %s</Description>
+    <Actions>Alle Datenkomponenten in Argument %s auf positive Werte setzen.</Actions>
   </Message>
   <Message number="1448" eDefine="SYS_ERR_ARL_ARG_NEGVAL">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> darf keinen negativen Wert haben.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Argument <arg format="%s" ordinal="4" /> auf positiven Wert setzen.</Actions>
+    <Description>Task: %sArgument %s darf keinen negativen Wert haben.Programmreferenz: %s</Description>
+    <Actions>Argument %s auf positiven Wert setzen.</Actions>
   </Message>
   <Message number="1449" eDefine="SYS_ERR_ARL_ILLEGVAL">
     <Title>Wertfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unzulässiger Wert in Argument <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sUnzulässiger Wert in Argument %s. Programmreferenz: %s</Description>
     <Actions>RAPID-Programm prüfen.</Actions>
   </Message>
   <Message number="1450" eDefine="SYS_ERR_ARL_MUNOTFND">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument '\WObj' gibt einen mechanischen Einheitennamen an, der nicht<p />aktiviert oder im System unbekannt ist.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sArgument '\WObj' gibt einen mechanischen Einheitennamen an, der nichtaktiviert oder im System unbekannt ist.Programmreferenz: %s</Description>
     <Actions>Der Name der mechanischen Einheit, der in \WObj definiert ist, muss mit dem Namen übereinstimmen, der früher in den Systemparametern definiert wurde, und muss aktiviert sein.</Actions>
   </Message>
   <Message number="1451" eDefine="SYS_ERR_ARL_ARG_INTNO_ILL">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> enthält eine unzulässige Interruptnummer.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Causes>Eingang-Interruptnummer ist unzulässig, da sie nicht durch Instruktion CONNECT zugeteilt wurde.<p /></Causes>
+    <Description>Task: %sArgument %s enthält eine unzulässige Interruptnummer.Programmreferenz: %s</Description>
+    <Causes>Eingang-Interruptnummer ist unzulässig, da sie nicht durch Instruktion CONNECT zugeteilt wurde.</Causes>
     <Actions>Instruktion CONNECT verwenden, um einer Interrupt-Routine eine Interruptnummer zuzuteilen und sie mit ihr zu verbinden.</Actions>
   </Message>
   <Message number="1452" eDefine="SYS_ERR_ARL_ARG_INTNO_INUSE">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> enthält eine Interruptnummer, die bereits für andere Zwecke benutzt wird.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sArgument %s enthält eine Interruptnummer, die bereits für andere Zwecke benutzt wird.Programmreferenz: %s</Description>
     <Actions>Wegen Wiederverwendung einer Interrupt-Variablen im Programm muss es mit der Instruktion IDelete abgebrochen werden.</Actions>
   </Message>
   <Message number="1453" eDefine="SYS_ERR_ARL_ILLEGTYP">
     <Title>Typfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unzulässiger Datentyp von Argument <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sUnzulässiger Datentyp von Argument %s. Programmreferenz: %s</Description>
     <Actions>RAPID-Programm prüfen.</Actions>
   </Message>
   <Message number="1454" eDefine="SYS_ERR_ARL_REF_TRIGG_UNDEF">
     <Title>Referenzfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Triggerparameter Nr. <arg format="%s" ordinal="2" /> verweist auf undefinierte Triggerdaten.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sTriggerparameter Nr. %s verweist auf undefinierte Triggerdaten.Programmreferenz: %s</Description>
     <Actions>Triggerdaten durch Abarbeiten der Instruktion TriggIO, TriggInt, TriggEquip, TriggSpeed oder TriggCheckIO definieren, bevor TriggL, TriggC, TriggJ, CapL oder CapC abgearbeitet wird.</Actions>
   </Message>
   <Message number="1455" eDefine="SYS_ERR_ARL_SYS_OS_TIME">
     <Title>Systemzugriffsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Abruf der Betriebssystemzeit fehlgeschlagen.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sAbruf der Betriebssystemzeit fehlgeschlagen.Programmreferenz: %s</Description>
     <Actions>Warmstart durchführen und erneut versuchen.</Actions>
   </Message>
   <Message number="1456" eDefine="SYS_ERR_ARL_ARG_OUTOFRANGE">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> liegt nicht innerhalb des zulässigen Bereichs.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Wert muss im Bereich <arg format="%s" ordinal="4" /> liegen.</Actions>
+    <Description>Task: %sArgument %s liegt nicht innerhalb des zulässigen Bereichs.Programmreferenz: %s</Description>
+    <Actions>Wert muss im Bereich %s liegen.</Actions>
   </Message>
   <Message number="1457" eDefine="SYS_ERR_ARL_ARG_OPTARGMISS">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Optionales Argument fehlt. <p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Eines der optionalen Argumente <arg format="%s" ordinal="3" /> oder <arg format="%s" ordinal="4" /> hinzufügen. </Actions>
+    <Description>Task: %sOptionales Argument fehlt. Programmreferenz: %s</Description>
+    <Actions>Eines der optionalen Argumente %s oder %s hinzufügen. </Actions>
   </Message>
   <Message number="1458" eDefine="SYS_ERR_ARL_LIM_AXORTV">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> oder <arg format="%s" ordinal="3" /> liegt nicht innerhalb des zulässigen Bereichs.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Description>Task: %sArgument %s oder %s liegt nicht innerhalb des zulässigen Bereichs.Programmreferenz: %s</Description>
     <Actions>Wert des Arguments prüfen und ändern.</Actions>
   </Message>
   <Message number="1459" eDefine="SYS_ERR_ARL_LIM_TUNEDATA">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> liegt nicht innerhalb des zulässigen Bereichs.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sArgument %s liegt nicht innerhalb des zulässigen Bereichs.Programmreferenz: %s</Description>
     <Actions>Wert des Arguments prüfen und ändern.</Actions>
   </Message>
   <Message number="1460" eDefine="SYS_ERR_ARL_LIM_AXSOFTRMP">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> oder <arg format="%s" ordinal="3" /> oder <arg format="%s" ordinal="4" /> liegt nicht innerhalb des zulässigen Bereichs.<p />Programmreferenz: <arg format="%s" ordinal="5" /><p /></Description>
+    <Description>Task: %sArgument %s oder %s oder %s liegt nicht innerhalb des zulässigen Bereichs.Programmreferenz: %s</Description>
     <Actions>Argument prüfen und ändern.</Actions>
   </Message>
   <Message number="1461" eDefine="SYS_ERR_ARL_ILL_INDEX">
     <Title>Wertfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unzulässiger Wert in Argument <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sUnzulässiger Wert in Argument %s. Programmreferenz: %s</Description>
     <Actions>Index muss Ganzzahl im Bereich von 1 bis 1024 sein.</Actions>
   </Message>
   <Message number="1462" eDefine="SYS_ERR_ARL_ILL_INTX">
     <Title>Wertfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unzulässiger Wert in Argument für Parameter <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sUnzulässiger Wert in Argument für Parameter %s. Programmreferenz: %s</Description>
     <Actions>Wert muss Ganzzahl im korrekten Bereich sein.</Actions>
   </Message>
   <Message number="1463" eDefine="SYS_ERR_ARL_SWITCH_MISSED">
     <Title>Argumentschalter fehlt</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Ein Argument fehlt.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sEin Argument fehlt.Programmreferenz: %s</Description>
     <Actions>Einer der switch-Parameter '\Hex1', '\Long4', '\Float4' oder '\ASCII' muss definiert werden.</Actions>
   </Message>
   <Message number="1464" eDefine="SYS_ERR_ARL_INDEX_TO_HIGH">
     <Title>Index zu hoch</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unzulässiger Wert in Argument <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sUnzulässiger Wert in Argument %s. Programmreferenz: %s</Description>
     <Actions>RAPID-Programm prüfen.</Actions>
   </Message>
   <Message number="1465" eDefine="SYS_ERR_ARL_EMPTY_STRING">
     <Title>Die Zeichenfolge ist leer</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unzulässiger Wert in Argument <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sUnzulässiger Wert in Argument %s. Programmreferenz: %s</Description>
     <Actions>Argument prüfen und nicht leeren String verwenden.</Actions>
   </Message>
   <Message number="1466" eDefine="SYS_ERR_ARL_EQ_VAR">
     <Title>Die Variablen sind gleich</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Argumente 'FromRawData' und 'ToRawData' sind gleich.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sDie Argumente 'FromRawData' und 'ToRawData' sind gleich.Programmreferenz: %s</Description>
     <Actions>RAPID-Programm prüfen und ändern.</Actions>
   </Message>
   <Message number="1467" eDefine="SYS_ERR_ARL_ILL_BYTE">
     <Title>Wertfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unzulässiger Wert in Argument <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sUnzulässiger Wert in Argument %s. Programmreferenz: %s</Description>
     <Actions>Wert prüfen und ändern. Er muss eine Ganzzahl im Bereich von 0 bis 255 sein.</Actions>
   </Message>
   <Message number="1468" eDefine="SYS_ERR_ARL_ILL_NOOFBYTES">
     <Title>Wertfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unzulässiger Wert in Argument <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sUnzulässiger Wert in Argument %s. Programmreferenz: %s</Description>
     <Actions>Wert prüfen und ändern. NoOfBytes muss eine Ganzzahl im Bereich von 1 bis 1024 sein und darf nicht größer als RawData-Länge sein.</Actions>
   </Message>
   <Message number="1469" eDefine="SYS_ERR_ARL_ILL_LENGTH">
     <Title>Wertfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unzulässiger Wert in Argument <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sUnzulässiger Wert in Argument %s. Programmreferenz: %s</Description>
     <Actions>Wert prüfen. NoOfBytes darf nicht größer als RawData-Länge sein.</Actions>
   </Message>
   <Message number="1470" eDefine="SYS_ERR_ARL_LIM_AXORLEV">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> oder <arg format="%s" ordinal="3" /> liegt nicht innerhalb des zulässigen Bereichs.<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Description>Task: %sArgument %s oder %s liegt nicht innerhalb des zulässigen Bereichs.Programmreferenz: %s</Description>
     <Actions>Wert des Arguments prüfen und ändern.</Actions>
   </Message>
   <Message number="1471" eDefine="SYS_ERR_ARL_TRUSTLEVEL">
     <Title>Instruktionsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Einheit <arg format="%s" ordinal="2" /> darf nicht deaktiviert werden. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sEinheit %s darf nicht deaktiviert werden. Programmreferenz: %s</Description>
+    <Actions>Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1472" eDefine="SYS_ERR_ARL_NOSUB">
     <Title>Instruktionsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Kein Client, z. B. Programmiergerät, behandelt die Instruktion. <p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Fehlerbehebung: <arg format="%s" ordinal="3" /><p /></Actions>
+    <Description>Task: %sKein Client, z. B. Programmiergerät, behandelt die Instruktion. Programmreferenz: %s</Description>
+    <Actions>Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1473" eDefine="SYS_ERR_ARL_NOCLIENT">
     <Title>Systemzugriffsfehler</Title>
-    <Description>Es konnten keine Daten über SCWrite an externen Computer gesendet werden.<p />Senden der Variablen <arg format="%s" ordinal="1" /> fehlgeschlagen.<p /></Description>
+    <Description>Es konnten keine Daten über SCWrite an externen Computer gesendet werden.Senden der Variablen %s fehlgeschlagen.</Description>
   </Message>
   <Message number="1474" eDefine="SYS_ERR_ARL_ILL_VALUE">
     <Title>Wertfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Unzulässiger Wert in Argument <arg format="%s" ordinal="2" />.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Wert prüfen: <arg format="%s" ordinal="5" /><p /><arg format="%s" ordinal="4" /> muss eine positive Ganzzahl sein. </Actions>
+    <Description>Task: %sUnzulässiger Wert in Argument %s.Programmreferenz: %s</Description>
+    <Actions>Wert prüfen: %s%s muss eine positive Ganzzahl sein. </Actions>
   </Message>
   <Message number="1475" eDefine="SYS_ERR_ARL_ILL_TASKLIST">
     <Title>Falsche Größe der Taskliste</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Taskliste enthält eine falsche Anzahl an Elementen. Sie darf nicht weniger als 1 oder mehr als <arg format="%s" ordinal="2" /> enthalten. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sDie Taskliste enthält eine falsche Anzahl an Elementen. Sie darf nicht weniger als 1 oder mehr als %s enthalten. Programmreferenz: %s</Description>
     <Actions>Anzahl der Argumente in der Taskliste prüfen und ändern.</Actions>
   </Message>
   <Message number="1476" eDefine="SYS_ERR_ARL_ILL_TASK">
     <Title>Nichtkonsistente Taskliste</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> in der Taskliste ist keine der Tasks, die im System konfiguriert sind (max. <arg format="%s" ordinal="3" /> Tasks können konfiguriert werden).<p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Description>Task: %s%s in der Taskliste ist keine der Tasks, die im System konfiguriert sind (max. %s Tasks können konfiguriert werden).Programmreferenz: %s</Description>
     <Actions>Task dem System (in Parameter - Controller) hinzufügen oder aus der Taskliste entfernen.</Actions>
   </Message>
   <Message number="1477" eDefine="SYS_ERR_ARL_WST_TIMEOUT">
     <Title>Timeout</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Eingestellte Zeit in Argument <arg format="%s" ordinal="2" /> in Instruktion WaitSyncTask ist abgelaufen.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
-    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sEingestellte Zeit in Argument %s in Instruktion WaitSyncTask ist abgelaufen.Programmreferenz: %s</Description>
+    <Actions>Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1483" eDefine="SYS_ERR_ARL_SYNCID">
     <Title>Argumentfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Wert der ID ist negativ oder keine Ganzzahl.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sWert der ID ist negativ oder keine Ganzzahl.Programmreferenz: %s</Description>
     <Actions>Wert der optionalen Argument-ID prüfen. Der Wert muss eine nicht-negative Ganzzahl sein.</Actions>
   </Message>
   <Message number="1484" eDefine="SYS_ERR_ARL_SMON_TIMEOUT">
     <Title>Timeout</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Eingestellte Zeit in Argument <arg format="%s" ordinal="2" /> in Instruktion SyncMoveOn ist abgelaufen.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
-    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sEingestellte Zeit in Argument %s in Instruktion SyncMoveOn ist abgelaufen.Programmreferenz: %s</Description>
+    <Actions>Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1486" eDefine="SYS_ERR_ARL_TCPROB_NOTDEF">
     <Title>Instruktionsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> ist nur verfügbar, wenn ein TCP-Roboter in der Programmtask definiert ist.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>- Konfiguration prüfen.<p />- Die Instruktion muss entfernt werden, wenn die Task keinen TCP-Roboter haben soll.</Actions>
+    <Description>Task: %sInstruktion %s ist nur verfügbar, wenn ein TCP-Roboter in der Programmtask definiert ist.Programmreferenz: %s</Description>
+    <Actions>- Konfiguration prüfen.- Die Instruktion muss entfernt werden, wenn die Task keinen TCP-Roboter haben soll.</Actions>
   </Message>
   <Message number="1487" eDefine="SYS_ERR_ARL_TCPROB_NOTACT">
     <Title>Instruktionsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> funktioniert nur, wenn ein TCP-Roboter aktiv ist.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sInstruktion %s funktioniert nur, wenn ein TCP-Roboter aktiv ist.Programmreferenz: %s</Description>
     <Actions>TCP-Roboter in der Task aktivieren.</Actions>
   </Message>
   <Message number="1488" eDefine="SYS_ERR_ARL_ROB_AXIS_VAL">
     <Title>Wertfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Kein aktiver TCP-Roboter in der Programmtask definiert.<p /><arg format="%s" ordinal="2" /> Einer oder mehrere eingegebene Roboterachswerte sind nicht gleich 9E9.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sKein aktiver TCP-Roboter in der Programmtask definiert.%s Einer oder mehrere eingegebene Roboterachswerte sind nicht gleich 9E9.Programmreferenz: %s</Description>
     <Actions>Wert der Roboterachse zu 9E9 ändern.</Actions>
   </Message>
   <Message number="1489" eDefine="SYS_ERR_ARL_MOV_ROB_AXIS_VAL">
     <Title>Wertfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Roboterachse <arg format="%s" ordinal="2" /> ist unbeweglich und muss daher nicht überwacht werden.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Wert der Achse zu <arg format="%s" ordinal="4" /> 9E9 ändern.</Actions>
+    <Description>Task: %sDie Roboterachse %s ist unbeweglich und muss daher nicht überwacht werden.Programmreferenz: %s</Description>
+    <Actions>Wert der Achse zu %s 9E9 ändern.</Actions>
   </Message>
   <Message number="1490" eDefine="SYS_ERR_ARL_SMOFF_TIMEOUT">
     <Title>Timeout</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Eingestellte Zeit in Argument <arg format="%s" ordinal="2" /> in Instruktion SyncMoveOff ist abgelaufen.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /><p /></Description>
-    <Actions>Fehlerbehebung: <arg format="%s" ordinal="4" /></Actions>
+    <Description>Task: %sEingestellte Zeit in Argument %s in Instruktion SyncMoveOff ist abgelaufen.Programmreferenz: %s</Description>
+    <Actions>Fehlerbehebung: %s</Actions>
   </Message>
   <Message number="1491" eDefine="SYS_ERR_ARL_TCPROB_DEF">
     <Title>Instruktionsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> ist nicht verfügbar, wenn ein TCP-Roboter in der Programmtask definiert ist.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>- Konfiguration prüfen.<p />- Die Instruktion muss entfernt werden, wenn die Task einen TCP-Roboter haben soll.</Actions>
+    <Description>Task: %sInstruktion %s ist nicht verfügbar, wenn ein TCP-Roboter in der Programmtask definiert ist.Programmreferenz: %s</Description>
+    <Actions>- Konfiguration prüfen.- Die Instruktion muss entfernt werden, wenn die Task einen TCP-Roboter haben soll.</Actions>
   </Message>
   <Message number="1492" eDefine="SYS_ERR_ARL_MECUNT_NOTACT">
     <Title>Instruktionsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> funktioniert nur, wenn die mechanische Einheit aktiv ist.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sInstruktion %s funktioniert nur, wenn die mechanische Einheit aktiv ist.Programmreferenz: %s</Description>
     <Actions>Mechanische Einheit in der Task aktivieren.</Actions>
   </Message>
   <Message number="1493" eDefine="SYS_ERR_ARL_NO_TCPROB">
     <Title>Abarbeitungsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Kein TCP-Roboter in der Programmtask verfügbar.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sKein TCP-Roboter in der Programmtask verfügbar.Programmreferenz: %s</Description>
     <Actions>Um die Instruktion ausführen zu können, muss ein TCP-Roboter in der Task verfügbar sein.</Actions>
   </Message>
   <Message number="1494" eDefine="SYS_ERR_ARL_TASK_MECUNIT">
     <Title>Instruktionsfehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Task steuert nicht die mechanische Einheit <arg format="%s" ordinal="2" />. <p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
-    <Actions>Konfiguration prüfen.<p /></Actions>
+    <Description>Task: %sDie Task steuert nicht die mechanische Einheit %s. Programmreferenz: %s</Description>
+    <Actions>Konfiguration prüfen.</Actions>
   </Message>
   <Message number="1495" eDefine="SYS_ERR_ARL_MOVE_PP_SYNC_ON">
     <Title>PZ-Bewegen - Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Umschalten von unabhängigem in synchronisierten Modus nicht fertig.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Consequences>Neustart der aktuellen Instruktion ist blockiert.<p />System kann sich im synchronisierten oder noch im unabhängigen Bewegungsmodus befinden.<p /></Consequences>
+    <Description>Task: %sUmschalten von unabhängigem in synchronisierten Modus nicht fertig.Programmreferenz: %s</Description>
+    <Consequences>Neustart der aktuellen Instruktion ist blockiert.System kann sich im synchronisierten oder noch im unabhängigen Bewegungsmodus befinden.</Consequences>
     <Causes>Programmhalt, während eine aktive Instruktion vorhanden ist. Dann erfolgte ein PZ-Bewegen innerhalb des Programms. </Causes>
     <Actions>PZ ändern, um das Programm erneut zu starten. PZ muss in allen Programmtasks bewegt werden. Für einen klar definierten Status des Systems sollte PZ auf "main" gesetzt werden. </Actions>
   </Message>
   <Message number="1496" eDefine="SYS_ERR_ARL_MOVE_PP_SYNC_OFF">
     <Title>PZ-Bewegen - Fehler </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Umschalten von synchronisiertem in unabhängigen Modus nicht fertig.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Consequences>Neustart der aktuellen Instruktion ist blockiert.<p />System kann sich im synchronisierten oder noch im unabhängigen Bewegungsmodus befinden. </Consequences>
+    <Description>Task: %sUmschalten von synchronisiertem in unabhängigen Modus nicht fertig.Programmreferenz: %s</Description>
+    <Consequences>Neustart der aktuellen Instruktion ist blockiert.System kann sich im synchronisierten oder noch im unabhängigen Bewegungsmodus befinden. </Consequences>
     <Causes>Programmhalt, während eine aktive Instruktion vorhanden ist. Dann erfolgte ein "PZ-Bewegen" innerhalb des Programms. </Causes>
     <Actions>PZ ändern, um das Programm erneut zu starten. PZ muss in allen Programmtasks bewegt werden. Für einen klar definierten Status des Systems sollte PZ auf "main" gesetzt werden. </Actions>
   </Message>
   <Message number="1497" eDefine="SYS_ERR_ARL_MOVE_PP_WAITSYNC">
     <Title>PZ-Bewegen - Benachrichtigung </Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruktion <arg format="%s" ordinal="2" /> war in dieser Task aktiv. Ändern des PZ im Programm, kann in einigen Fällen gefährlich sein.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sInstruktion %s war in dieser Task aktiv. Ändern des PZ im Programm, kann in einigen Fällen gefährlich sein.Programmreferenz: %s</Description>
     <Consequences>Ändern des PZ im RAPID-Programm kann unsychronierte RAPID-Tasks oder/und Kollisionen zwischen Robotern verursachen. </Consequences>
-    <Causes>PZ-Bewegen in RAPID-Programm, während eine aktive <arg format="%s" ordinal="4" /> Instruktion vorhanden ist. </Causes>
+    <Causes>PZ-Bewegen in RAPID-Programm, während eine aktive %s Instruktion vorhanden ist. </Causes>
     <Actions>PZ an geeignete Position in dieser Programmtask bewegen.</Actions>
   </Message>
   <Message number="1498" eDefine="SYS_ERR_ARL_MECH_USERFRAME_NOT_FOUND">
-    <Title>Kein def. Anwender-Koordinatensystem in mechanischer Einheit <arg format="%s" ordinal="1" />! </Title>
-    <Description>Das Werkobjekt <arg format="%s" ordinal="2" /> enthält eine koordinierte mechanische Einheit ohne definiertes Anwender-Koordinatensystem.</Description>
+    <Title>Kein def. Anwender-Koordinatensystem in mechanischer Einheit %s! </Title>
+    <Description>Das Werkobjekt %s enthält eine koordinierte mechanische Einheit ohne definiertes Anwender-Koordinatensystem.</Description>
     <Actions>Mechanische Einheit des Werkobjekts prüfen.</Actions>
   </Message>
   <Message number="1499" eDefine="SYS_ERR_ARL_SYNC_MODE">
     <Title>Synchronisierter Modus</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />System ist in synchronisiertem Modus. Instruktion muss eine ID haben.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sSystem ist in synchronisiertem Modus. Instruktion muss eine ID haben.Programmreferenz: %s</Description>
     <Actions>Schalter \ID mit Kennnummer zur Instruktion hinzufügen.</Actions>
   </Message>
   <Message number="1500" eDefine="SYS_ERR_ARL_IND_MODE">
     <Title>Unabhängiger Modus</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />System ist im unabhängigen Modus. Instruktion darf keine ID haben.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sSystem ist im unabhängigen Modus. Instruktion darf keine ID haben.Programmreferenz: %s</Description>
     <Causes>Die Instruktion -SyncMoveOn- wurde zuvor nicht ausgeführt.</Causes>
-    <Actions>Die Instruktion -SyncMoveOn- vorher ausgeführen.<p />Schalter \ID aus Instruktion entfernen.</Actions>
+    <Actions>Die Instruktion -SyncMoveOn- vorher ausgeführen.Schalter \ID aus Instruktion entfernen.</Actions>
   </Message>
   <Message number="1501" eDefine="SYS_ERR_ARL_ILL_ID">
     <Title>Unzulässige ID</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />ErrorId hat falschen Wert. Es muss eine Ganzzahl im Intervall <arg format="%s" ordinal="2" /> - <arg format="%s" ordinal="3" /> sein. <p />Programmreferenz: <arg format="%s" ordinal="4" /><p /></Description>
+    <Description>Task: %sErrorId hat falschen Wert. Es muss eine Ganzzahl im Intervall %s - %s sein. Programmreferenz: %s</Description>
     <Actions>Wert ändern.</Actions>
   </Message>
   <Message number="1502" eDefine="SYS_ERR_ARL_ILL_DOM">
     <Title>Unzulässige Domäne</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Domäne <arg format="%s" ordinal="2" /> nicht verwendbar.<p />Programmreferenz: <arg format="%s" ordinal="3" /><p /></Description>
+    <Description>Task: %sDomäne %s nicht verwendbar.Programmreferenz: %s</Description>
     <Actions>Andere ELOG-Domäne wählen.</Actions>
   </Message>
   <Message number="1503" eDefine="SYS_ERR_ARL_ILL_TYPE">
     <Title>Unzulässiger Fehlertyp</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Fehlertyp TYPE_ALL nicht verwendbar.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sFehlertyp TYPE_ALL nicht verwendbar.Programmreferenz: %s</Description>
     <Actions>Anderen Fehlertyp verwenden.</Actions>
   </Message>
   <Message number="1504" eDefine="SYS_ERR_ARL_NO_MECUNIT">
     <Title>Keine mechanische Einheit angegeben.</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Dem System wurde kein TCP und der Instruktion keine mechanische Einheit hinzugefügt.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /><p /></Description>
-    <Actions>Der Instruktion eine mechanische Einheit hinzufügen, die in der Task vorhanden ist. <p /></Actions>
+    <Description>Task: %sDem System wurde kein TCP und der Instruktion keine mechanische Einheit hinzugefügt.Programmreferenz: %s</Description>
+    <Actions>Der Instruktion eine mechanische Einheit hinzufügen, die in der Task vorhanden ist. </Actions>
   </Message>
   <Message number="1505" eDefine="SYS_ERR_ARL_MECUNIT_NOT_IN_TASK">
     <Title>Mechanische Einheit nicht in Task</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die mechanische Einheit existiert nicht in der Task.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sDie mechanische Einheit existiert nicht in der Task.Programmreferenz: %s</Description>
     <Actions>Der Instruktion eine andere mechanische Einheit hinzufügen.</Actions>
   </Message>
   <Message number="1506" eDefine="SYS_ERR_ARL_READ_NO_TCP">
     <Title>Task liest keinen TCP-Roboter</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Die Lesetask liest keinen TCP-Roboter.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sDie Lesetask liest keinen TCP-Roboter.Programmreferenz: %s</Description>
     <Actions>Konfiguration ändern oder der Instruktion eine mechanische Einheit hinzufügen, die in der Task vorhanden ist.</Actions>
   </Message>
   <Message number="1507" eDefine="SYS_ERR_ARL_READ_ILL_MECH">
     <Title>Task liest andere mechanische Einheit</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Von Task gelesene mechanische Einheit nicht in Instruktion angegeben.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sVon Task gelesene mechanische Einheit nicht in Instruktion angegeben.Programmreferenz: %s</Description>
     <Actions>Mechanische Einheit in der Instruktion ändern.</Actions>
   </Message>
   <Message number="1508" eDefine="SYS_ERR_ARL_ILL_LOADID">
     <Title>Last-ID-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Lastidentifikation ist für diesen Robotertyp nicht verfügbar.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sLastidentifikation ist für diesen Robotertyp nicht verfügbar.Programmreferenz: %s</Description>
     <Actions>Nächste Ereignisprotokollmeldung auf nächste erforderliche Benutzeraktion überprüfen.</Actions>
   </Message>
   <Message number="1509" eDefine="SYS_ERR_ARL_ILL_POS">
     <Title>Last-ID-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Ungültige Position für Lastidentifikation.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Position des Roboters ändern.<p />Nächste Ereignisprotokollmeldung auf nächste erforderliche Benutzeraktion überprüfen.<p /></Actions>
+    <Description>Task: %sUngültige Position für Lastidentifikation.Programmreferenz: %s</Description>
+    <Actions>Position des Roboters ändern.Nächste Ereignisprotokollmeldung auf nächste erforderliche Benutzeraktion überprüfen.</Actions>
   </Message>
   <Message number="1510" eDefine="SYS_ERR_ARL_NO_USE_TOOL0">
     <Title>Last-ID-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Identifikation (oder Verwendung) von tool0 unzulässig.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Werkzeug, das identifiziert werden soll, im Bewegen-Fenster aktivieren.<p />Nächste Ereignisprotokollmeldung auf nächste erforderliche Benutzeraktion überprüfen.</Actions>
+    <Description>Task: %sIdentifikation (oder Verwendung) von tool0 unzulässig.Programmreferenz: %s</Description>
+    <Actions>Werkzeug, das identifiziert werden soll, im Bewegen-Fenster aktivieren.Nächste Ereignisprotokollmeldung auf nächste erforderliche Benutzeraktion überprüfen.</Actions>
   </Message>
   <Message number="1511" eDefine="SYS_ERR_ARL_NO_ID_LOAD0">
     <Title>Last-ID-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Identifikation von load0 unzulässig.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Andere Last zur Identifikation verwenden.<p />Nächste Ereignisprotokollmeldung auf nächste erforderliche Benutzeraktion überprüfen.<p /></Actions>
+    <Description>Task: %sIdentifikation von load0 unzulässig.Programmreferenz: %s</Description>
+    <Actions>Andere Last zur Identifikation verwenden.Nächste Ereignisprotokollmeldung auf nächste erforderliche Benutzeraktion überprüfen.</Actions>
   </Message>
   <Message number="1512" eDefine="SYS_ERR_ARL_INT_ERROR">
     <Title>Interner Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Messung &gt; 2 Achsen zur gleichen Zeit.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
+    <Description>Task: %sMessung &gt; 2 Achsen zur gleichen Zeit.Programmreferenz: %s</Description>
     <Actions>Nächste Ereignisprotokollmeldung auf nächste erforderliche Benutzeraktion überprüfen.</Actions>
   </Message>
   <Message number="1513" eDefine="SYS_ERR_ARL_ILL_PAYLOAD">
     <Title>Last-ID-Fehler</Title>
-    <Description>Task: <arg format="%s" ordinal="1" /><p />Wahl der Nutzlast außerhalb der Grenzen.<p />Programmreferenz: <arg format="%s" ordinal="2" /><p /></Description>
-    <Actions>Nutzlast im System wählen.<p />Start drücken, um fortzufahren.</Actions>
+    <Description>Task: %sWahl der Nutzlast außerhalb der Grenzen.Programmreferenz: %s</Description>
+    <Actions>Nutzlast im System wählen.Start drücken, um fortzufahren.</Actions>
   </Message>
 </Domain>

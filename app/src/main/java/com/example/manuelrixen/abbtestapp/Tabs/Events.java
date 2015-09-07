@@ -62,7 +62,7 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
         customDialog = new CustomDialog(getActivity());
 
         // For testing
-//        String[] tempMessage = new String[] {"1","0","1"};
+//        String[] tempMessage = new String[] {"1","0","2","X","","","",""};
 //        new XMLParsing().execute(tempMessage);
 
 
@@ -100,18 +100,20 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
     }
 
     private void showEvent(String msgType, String eventMessage, boolean normal) {
-        // Split event message to get the motors state (first entry) the event domain (second entry) and the event number (third entry)
+        // Split event message to get the robot state (first entry) the event domain (second entry) and the event number (third entry)
+        // TODO Insert parameters for xml strings (from str1 to str5)
         String[] tempMessage = eventMessage.split("_");
 
         // TODO Add code to show warning messages, info messages, etc. in textview (not in dialog)
         // TODO Switch automatically to event tab when a dialog message appear
-        if (msgType.equals("e") && tempMessage[0].equals("1")){
+        if (msgType.equals("e") && tempMessage[0].equals("0")){
             // Show dialog, when the motors in off state
-            Log.d("showEvent", "tempMessage[0]: " + tempMessage[0]);
+            Log.d("xmlParser", "motors off");
             new XMLParsing().execute(tempMessage);
         }
         else if (msgType.equals("e") &&  tempMessage[0].equals("0")) {
-            // Show event messages in text view (only warnings and infos)
+            Log.d("xmlParser", "motors on");
+            // TODO Show event messages in text view (only warnings and infos)
             // eventViewer.setText(msgTemp + "\n" + eventViewer.getText());
         }
     }
@@ -124,7 +126,7 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
 
         @Override
         protected String[] doInBackground(String... eventMessages) {
-            String[] eventDescription = new String[] {"", "", ""};
+            String[] eventDescription = new String[] {"", "", "", "", ""}; // Title, Description, Actions, Consequences, Causes
             String filename = "";
             try {
                 // Choose between the .xml files
@@ -176,8 +178,8 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
                         break;
                     default:
                         // For testing
-//                        filename = "xmldata/testxml.xml";
-                        filename = "";
+                        filename = "elog/opr_elogtext_1.xml";
+//                        filename = "";
                 }
                 InputStream in_s = getActivity().getAssets().open(filename);
                 xmlParser.setInput(in_s, null);
@@ -200,15 +202,28 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
                             // TODO Add Consequences as attribute, etc.
                             // TODO Add possiblity to insert the arguments inside xml-string
                             if(messageEntryFound && name.equals("Title")) eventDescription[0] = xmlParser.nextText();
-                            if(messageEntryFound && name.equals("Description")) eventDescription[1] = xmlParser.nextText();
-//                            if(messageEntryFound && name.equals("Actions")) eventDescription[2] = xmlParser.nextText();
+                            if(messageEntryFound && name.equals("Description")){
+                                eventDescription[1] = xmlParser.nextText();
+                                eventDescription[1] = String.format(eventDescription[1], eventMessages[3], eventMessages[4], eventMessages[5], eventMessages[6], eventMessages[7]);
+                            }
+                            if(messageEntryFound && name.equals("Actions")){
+                                eventDescription[2] = xmlParser.nextText();
+                                eventDescription[2] = String.format(eventDescription[2], eventMessages[3], eventMessages[4], eventMessages[5], eventMessages[6], eventMessages[7]);
+                            }
+                            if(messageEntryFound && name.equals("Consequences")){
+                                eventDescription[3] = xmlParser.nextText();
+                                eventDescription[3] = String.format(eventDescription[3], eventMessages[3], eventMessages[4], eventMessages[5], eventMessages[6], eventMessages[7]);
+                            }
+                            if(messageEntryFound && name.equals("Causes")){
+                                eventDescription[4] = xmlParser.nextText();
+                                eventDescription[4] = String.format(eventDescription[4], eventMessages[3], eventMessages[4], eventMessages[5], eventMessages[6], eventMessages[7]);
+                            }
                             break;
 
                         case XmlPullParser.END_TAG:
                             name = xmlParser.getName();
                             if(name.equals("Message") && messageEntryFound){
                                 messageReadOk = true;
-                                Log.d("xmlParser", "messageReadOk");
                             }
                            break;
                     }
