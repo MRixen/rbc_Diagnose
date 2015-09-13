@@ -133,29 +133,6 @@ public class NetClient {
                                 normalMessage = false;
                                 return msgArray;
                             }
-
-
-
-
-
-
-
-
-
-
-
-
-//                            if (!msgTemp.equals(";") && !msgTemp.equals(":"))
-//                                msgString = msgString + String.valueOf(Character.toChars(incomingMessage));
-//                            else if (msgTemp.equals(";")) {
-//                                msgArray[0] = msgString;
-//                                msgString = "";
-//                                return msgArray;
-//                            } else if (msgTemp.equals(":")) {
-//                                incomingMessage = in.read();
-//                                // TODO Read number from 9 with two values like 10,11,12, etc.
-//                                msgArray[1] = String.valueOf(Character.toChars(incomingMessage));
-//                            }
                         }
                         else return new String[] {" ", " "};
 
