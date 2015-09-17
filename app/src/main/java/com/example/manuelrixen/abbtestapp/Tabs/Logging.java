@@ -17,6 +17,7 @@ import android.view.MotionEvent;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.manuelrixen.abbtestapp.BaseClass;
@@ -24,20 +25,42 @@ import com.example.manuelrixen.abbtestapp.Drawing.CycleTimeDrawThread;
 import com.example.manuelrixen.abbtestapp.R;
 import com.example.manuelrixen.abbtestapp.Socket.Receiver;
 
-public class Logging extends Fragment implements Receiver.FirstEventListener, Receiver.SecondEventListener  {
+public class Logging extends Fragment implements Receiver.FirstEventListener, Receiver.SecondEventListener, View.OnClickListener {
 
     private TextView loggingViewer;
+    private Button clearButton;
+    private int logCounter = 0;
+    private int MAX_LOG_COUNTER = 100;
+    private String[] logData = new String[MAX_LOG_COUNTER];
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_section_3, container, false);
 
+        clearButton = (Button) rootView.findViewById(R.id.buttonClear);
+        clearButton.setOnClickListener(this);
         loggingViewer = (TextView) rootView.findViewById(R.id.loggingTextField);
         loggingViewer.setMovementMethod(new ScrollingMovementMethod());
 
         return rootView;
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putStringArray("loggingViewer", logData);
+        outState.putInt("logCounter", logCounter);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onViewStateRestored(Bundle savedInstanceState) {
+        if (savedInstanceState != null) {
+            logCounter = savedInstanceState.getInt("logCounter");
+            logData = savedInstanceState.getStringArray("logData");
+            for (int i=0;i<=logData.length;i++) loggingViewer.setText(logData[i] + "\n" + loggingViewer.getText());
+        }
+        super.onViewStateRestored(savedInstanceState);
+    }
 
     public Receiver.FirstEventListener getFirstEventListener() {
         return this;
@@ -70,6 +93,21 @@ public class Logging extends Fragment implements Receiver.FirstEventListener, Re
     }
 
     private void showMessage(String msgType, String msg, boolean normal) {
-        if (msgType.equals("l")) loggingViewer.setText(msg + "\n" + loggingViewer.getText());
+        if (msgType.equals("l")){
+            logData[logCounter] = msg;
+            loggingViewer.setText(logData[logCounter] + "\n" + loggingViewer.getText());
+            if (logCounter <= MAX_LOG_COUNTER - 1) logCounter += 1;
+            else logCounter = 0;
+        }
     }
+
+    @Override
+    public void onClick(View v) {
+        // Handle click event when clear button is pressed
+        if (loggingViewer != null){
+            loggingViewer.setText("");
+            logCounter = 0;
+        }
+    }
+
 }

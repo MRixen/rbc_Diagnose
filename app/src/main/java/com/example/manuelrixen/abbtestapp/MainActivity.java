@@ -74,6 +74,7 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
         events = new Events();
 
         initTabs();
+        events.setInitOk();
 
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         wl = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "My Tag");
@@ -135,7 +136,7 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
         Log.d("tab_position: ", String.valueOf(tab.getPosition()));
         switch (tab.getPosition()){
             case 3:
-                events.setInitOk();
+//                events.setInitOk();
                 break;
         }
         mViewPager.setCurrentItem(tab.getPosition());
@@ -143,12 +144,10 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
 
     @Override
     public void onTabUnselected(android.app.ActionBar.Tab tab, FragmentTransaction ft) {
-
     }
 
     @Override
     public void onTabReselected(android.app.ActionBar.Tab tab, FragmentTransaction ft) {
-
     }
 
     private void initTabs() {

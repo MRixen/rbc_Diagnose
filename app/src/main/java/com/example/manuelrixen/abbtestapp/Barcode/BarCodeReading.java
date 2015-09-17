@@ -79,10 +79,13 @@ public class BarCodeReading extends FragmentActivity {
             if (ipData[i].length() <= 3) state[0] = true;
             else state[0] = false;
         }
-        // Check port format
-        // TODO Check int (invalid int exception)
-        if ((Integer.parseInt(portTemp) <= 8888) && (Integer.parseInt(portTemp) >= 1025))
-            state[1] = true;
+        // TODO Check port format
+        try {
+            if ((Integer.parseInt(portTemp) <= 4999) && (Integer.parseInt(portTemp) >= 1025)) state[1] = true;
+        }
+        catch(NumberFormatException e){
+            state[1] = false;
+        }
 
         if ((state[0] && state[1])) {
             return new String[]{ipTemp, portTemp};

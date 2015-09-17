@@ -1,5 +1,6 @@
 package com.example.manuelrixen.abbtestapp.Tabs;
 
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,16 +12,20 @@ import android.widget.TextView;
 import com.example.manuelrixen.abbtestapp.R;
 import com.example.manuelrixen.abbtestapp.Socket.Receiver;
 
+import java.util.ArrayList;
+
 /**
  * Created by Manuel.Rixen on 23.08.2015.
  */
-public class MachineData extends android.support.v4.app.Fragment implements Receiver.FirstEventListener {
+public class MachineData extends Fragment implements Receiver.FirstEventListener {
 
     protected int MAX_TABLE_ENTRIES = 12;
     private TextView[] textViews = new TextView[MAX_TABLE_ENTRIES];
     private TableRow[] tableRows = new TableRow[MAX_TABLE_ENTRIES];
 
     private TextView textview;
+    private String[] machineData = new String[MAX_TABLE_ENTRIES];
+    private int mDataCounter = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -42,6 +47,22 @@ public class MachineData extends android.support.v4.app.Fragment implements Rece
         return rootView;
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        Log.d("MachineData", "onSaveInstanceState");
+        outState.putStringArray("machineData", machineData);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onViewStateRestored(Bundle savedInstanceState) {
+        if (savedInstanceState != null) {
+            Log.d("MachineData", "onViewStateRestored");
+            machineData = savedInstanceState.getStringArray("machineData");
+            for (int i=0;i<=machineData.length;i++) textViews[i].setText(machineData[i]);
+        }
+        super.onViewStateRestored(savedInstanceState);
+    }
 
     public Receiver.FirstEventListener getFirstEventListener() {
         return this;
@@ -55,11 +76,13 @@ public class MachineData extends android.support.v4.app.Fragment implements Rece
     @Override
     public void onEvent1(boolean normal, String data1, String data2) {
         try {
+            Log.d("machineData", "onEvent1_ok");
+            machineData[Integer.parseInt(data2)] = data1;
+//            textViews[Integer.parseInt(data2)].setText(data1);
             textViews[Integer.parseInt(data2)].setText(data1);
-            Log.d("data2", data2);
         }
         catch(NumberFormatException e){
-
+            Log.d("machineData", "onEvent1_not_ok");
         }
     }
 }

@@ -2,8 +2,12 @@ package com.example.manuelrixen.abbtestapp;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
 import android.os.Handler;
+import android.os.PersistableBundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -15,7 +19,10 @@ import android.widget.TextView;
  * Created by Manuel.Rixen on 27.08.2015.
  */
 public class BaseClass extends FragmentActivity {
-    public static Handler sendToNode = null, sendToDataAcquisition = null, sendToVisualization = null;
+    public static Handler sendToVisualization = null;
+
+
+
 
     public int calcDimDP(String dimType, int dimDp, Context context){
 
@@ -37,6 +44,8 @@ public class BaseClass extends FragmentActivity {
         if (dimType.equals("height")) return Math.round(factorHeight*dimDp);
         else return 0;
     }
+
+
 
     public int calcDimPercentage(String dimType, int dimPercentage, Context context){
 

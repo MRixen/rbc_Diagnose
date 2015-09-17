@@ -16,6 +16,7 @@ import android.view.MotionEvent;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.manuelrixen.abbtestapp.BaseClass;
@@ -23,24 +24,39 @@ import com.example.manuelrixen.abbtestapp.Drawing.CycleTimeDrawThread;
 import com.example.manuelrixen.abbtestapp.R;
 import com.example.manuelrixen.abbtestapp.Socket.Receiver;
 
-public class CycleTime extends Fragment implements Receiver.FirstEventListener, Receiver.SecondEventListener, View.OnTouchListener {
+public class CycleTime extends Fragment implements Receiver.FirstEventListener, Receiver.SecondEventListener, View.OnTouchListener, View.OnClickListener {
 
     private TextView cycleTimeViewer;
     private CycleTimeDrawThread cycleTimeDrawThread;
     private BaseClass baseClass = new BaseClass();
     private boolean dialogIsActive = false;
     private boolean firstStart = true;
+    private Button clearButton;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_section_2, container, false);
 
+        clearButton = (Button) rootView.findViewById(R.id.buttonClear);
+        clearButton.setOnClickListener(this);
         rootView.setOnTouchListener(this);
         cycleTimeViewer = (TextView) rootView.findViewById(R.id.cycleTimeTextField);
 
         cycleTimeDrawThread = new CycleTimeDrawThread(getActivity());
 
         return rootView;
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        // TODO Save average cycle time, etc. (but not the actual!)
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onViewStateRestored(Bundle savedInstanceState) {
+        // TODO Load average cycle time, etc. (but not the actual!)
+        super.onViewStateRestored(savedInstanceState);
     }
 
 
@@ -133,5 +149,21 @@ public class CycleTime extends Fragment implements Receiver.FirstEventListener, 
     public boolean onTouch(View v, MotionEvent event) {
         //setDialog(getActivity());
         return false;
+    }
+
+    @Override
+    public void onClick(View v) {
+        // Handle click event when clear button is pressed
+        if (cycleTimeViewer != null){
+            cycleTimeViewer.setText("");
+        }
+    }
+
+    public void saveData() {
+
+    }
+
+    public void loadData() {
+
     }
 }

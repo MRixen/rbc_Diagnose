@@ -4,20 +4,20 @@ package com.example.manuelrixen.abbtestapp.Tabs;
  * Created by Manuel.Rixen on 23.08.2015.
  */
 
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
-import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import com.example.manuelrixen.abbtestapp.BaseClass;
 import com.example.manuelrixen.abbtestapp.CustomDialog;
 import com.example.manuelrixen.abbtestapp.R;
 import com.example.manuelrixen.abbtestapp.Socket.Receiver;
@@ -30,12 +30,14 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
-public class Events extends Fragment implements Receiver.FirstEventListener, Receiver.SecondEventListener, AdapterView.OnItemClickListener {
+public class Events extends Fragment implements Receiver.FirstEventListener, Receiver.SecondEventListener, AdapterView.OnItemClickListener, View.OnClickListener {
 
     private ListView eventViewer;
-    private BaseClass baseClass = new BaseClass();
+//    private BaseClassTab baseClassTab = new BaseClassTab();
     private boolean firstStart = true;
     private XmlPullParserFactory xmlFactoryObject;
     private XmlPullParser xmlParser;
@@ -43,17 +45,24 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
 
     private boolean firstRun = true;
     private boolean initOk = false;
-    private List<String> eventList;
-    private String[] eventData = new String[] {"","","","","","","",""};
+    private ArrayList<String> eventList;
+    private String[] eventData = new String[]{"", "", "", "", "", "", "", ""};
     private ArrayAdapter<String> arrayAdapter;
     private int listCounter = 0;
     private int MAX_LIST_COUNTER = 100;
     private String[] listViewEntryData = new String[MAX_LIST_COUNTER];
+    private Button clearButton;
+    private SharedPreferences sharedPreferences;
+    private HashSet<String> eventSet;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_section_4, container, false);
 
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+
+        clearButton = (Button) rootView.findViewById(R.id.buttonClear);
+        clearButton.setOnClickListener(this);
         eventViewer = (ListView) rootView.findViewById(R.id.eventListView);
         eventViewer.setOnItemClickListener(this);
         eventList = new ArrayList<String>();
@@ -72,12 +81,31 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
             e.printStackTrace();
             Log.d("xml_parser", "error1");
         }
-        customDialog = new CustomDialog(getActivity());
+//        customDialog = new CustomDialog(getActivity());
+
 
         // For testing
 //         showEvent("e", "0_0_2_X_ _ _ _ ", true);
 
         return rootView;
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putStringArray("listViewEntryData", listViewEntryData);
+        outState.putStringArrayList("eventList", eventList);
+        outState.putInt("listCounter", listCounter);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onViewStateRestored(Bundle savedInstanceState) {
+        if (savedInstanceState != null) {
+            eventList = savedInstanceState.getStringArrayList("eventList");
+            listViewEntryData = savedInstanceState.getStringArray("listViewEntryData");
+            listCounter = savedInstanceState.getInt("listCounter");
+        }
+        super.onViewStateRestored(savedInstanceState);
     }
 
     public Receiver.FirstEventListener getFirstEventListener() {
@@ -87,66 +115,84 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
     @Override
     public void onError1() {
         Log.d("Console", "onError1");
-        eventList.clear();
-        setEventList("Cant connect to server.");
+        if (eventList != null) {
+            eventList.clear();
+            setEventList("Cant connect to server.");
+        }
     }
 
     @Override
     public void onEvent1(boolean normal, String msg, String msgType) {
         if(initOk){
+            Log.d("onEvent", "inside");
             showEvent(msgType, msg, true);
         }
     }
 
     @Override
     public void onEvent2(boolean normal, String msg, String msgType) {
-        if(initOk){
-            showEvent(msgType, msg, true);
-        }
+//        if(initOk){
+//            showEvent(msgType, msg, true);
+//        }
     }
 
     private void setEventList(String eventText){
-        eventList.add(listCounter, eventText);
-        arrayAdapter.notifyDataSetChanged();
-        if (listCounter<=MAX_LIST_COUNTER-1) listCounter += 1;
-        else listCounter = 0;
+        if (eventList != null) {
+            eventList.add(listCounter, eventText);
+            arrayAdapter.notifyDataSetChanged();
+            if (listCounter <= MAX_LIST_COUNTER - 1) listCounter += 1;
+            else listCounter = 0;
+        }
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         arrayAdapter.getItem(position);
+        Log.d("onItemClick", "position: " + position);
+        Log.d("onItemClick", "listViewEntryData: " + listViewEntryData[position]);
         // Show dialog with the complete event info
         if (listViewEntryData[position] != null) showEvent("e", listViewEntryData[position], false);
     }
 
     @Override
     public void onError2() {
-        Log.d("Console", "onError2");
-        eventList.clear();
-        setEventList("Cant connect to server.");
+//        Log.d("Console", "onError2");
+//        if (eventList != null){
+//            eventList.clear();
+//            setEventList("Cant connect to server.");
+//        }
     }
 
     private void showEvent(String msgType, String eventMessage, boolean saveEvent) {
         // Split event message to get the robot state (first entry) the event domain (second entry) and the event number (third entry)
         // Save events in array
-        if (saveEvent) listViewEntryData[listCounter] = eventMessage;
-        String[] tempMessage = eventMessage.split("_");
+        if (msgType.equals("e")){
+            if (saveEvent) listViewEntryData[listCounter] = eventMessage;
+            String[] tempMessage = eventMessage.split(":");
 
-        // TODO Switch automatically to event tab when a dialog message appear
-
-        new XMLParsing(saveEvent).execute(tempMessage);
-        // Show dialog, when the motor is in off state
-        if ((msgType.equals("e") && tempMessage[0].equals("0")) || !saveEvent) customDialog.showDialog(eventData);
+            // TODO Switch automatically to event tab when a dialog message appear
+            new XMLParsing(saveEvent).execute(tempMessage);
+        }
     }
 
     public void setInitOk() {
         this.initOk = true;
+        this.customDialog = new CustomDialog(getActivity());
+    }
+
+    @Override
+    public void onClick(View v) {
+        // Handle click event when clear button is pressed
+        if (eventList != null){
+            eventList.clear();
+            arrayAdapter.notifyDataSetChanged();
+            listCounter = 0;
+        }
     }
 
     private class XMLParsing extends AsyncTask<String, Void, String[]> {
-
-
         private final boolean addEvents;
+        private String[] eventMessages;
 
         public XMLParsing(boolean addEvents){
             this.addEvents = addEvents;
@@ -154,6 +200,7 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
 
         @Override
         protected String[] doInBackground(String... eventMessages) {
+            this.eventMessages = eventMessages;
             String[] eventDescription = new String[] {"", "", "", "", ""}; // Title, Description, Actions, Consequences, Causes
             String filename = "";
             try {
@@ -274,9 +321,9 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
         }
 
         protected void onPostExecute(String[] result) {
-            // TODO Make it possible to show dialog when someone click on the list entry
             if (addEvents) setEventList(result[0]); // Save event to list and show header in list view
-            eventData = result;
+            // Show dialog, when the motor is in off state
+            if ((eventMessages[0].equals("0")) || !addEvents) customDialog.showDialog(result);
             Log.d("showEvent", "onPostExecute");
 
             // For testing

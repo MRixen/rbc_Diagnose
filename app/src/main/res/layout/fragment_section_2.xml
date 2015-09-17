@@ -27,6 +27,14 @@
             android:layout_alignBottom="@+id/cycleTimeHeader"
             android:layout_toRightOf="@+id/cycleTimeHeader"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonClear"
+            android:text="Clear"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+
     </RelativeLayout>
 
 </FrameLayout>
