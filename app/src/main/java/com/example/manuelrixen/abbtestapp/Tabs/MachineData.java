@@ -1,5 +1,6 @@
 package com.example.manuelrixen.abbtestapp.Tabs;
 
+import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
@@ -71,6 +72,18 @@ public class MachineData extends Fragment implements Receiver.FirstEventListener
     @Override
     public void onError1() {
         Log.d("MachineData", "onError1");
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        Log.d("onAttach", "inside machine");
+        super.onAttach(activity);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        Log.d("onDetach", "inside machine");
     }
 
     @Override

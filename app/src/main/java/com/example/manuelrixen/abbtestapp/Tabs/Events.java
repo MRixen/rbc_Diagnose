@@ -4,6 +4,7 @@ package com.example.manuelrixen.abbtestapp.Tabs;
  * Created by Manuel.Rixen on 23.08.2015.
  */
 
+import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -81,7 +82,7 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
             e.printStackTrace();
             Log.d("xml_parser", "error1");
         }
-//        customDialog = new CustomDialog(getActivity());
+        customDialog = new CustomDialog(getActivity());
 
 
         // For testing
@@ -123,7 +124,7 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
 
     @Override
     public void onEvent1(boolean normal, String msg, String msgType) {
-        if(initOk){
+        if(isAdded()){
             Log.d("onEvent", "inside");
             showEvent(msgType, msg, true);
         }
@@ -175,9 +176,10 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
         }
     }
 
-    public void setInitOk() {
-        this.initOk = true;
-        this.customDialog = new CustomDialog(getActivity());
+    @Override
+    public void onAttach(Activity activity) {
+        Log.d("onAttach", "inside events");
+        super.onAttach(activity);
     }
 
     @Override

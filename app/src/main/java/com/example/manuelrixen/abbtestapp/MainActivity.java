@@ -74,7 +74,6 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
         events = new Events();
 
         initTabs();
-        events.setInitOk();
 
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         wl = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "My Tag");
@@ -133,12 +132,6 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
     @Override
     public void onTabSelected(android.app.ActionBar.Tab tab, FragmentTransaction ft) {
         // When the given tab is selected, switch to the corresponding page in the ViewPager.
-        Log.d("tab_position: ", String.valueOf(tab.getPosition()));
-        switch (tab.getPosition()){
-            case 3:
-//                events.setInitOk();
-                break;
-        }
         mViewPager.setCurrentItem(tab.getPosition());
     }
 
@@ -206,13 +199,13 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
         public Fragment getItem(int i) {
             switch (i) {
                 case 0:
-                    return machineData;
+                    return events;
                 case 1:
                     return cycleTime;
                 case 2:
                     return logging;
                 case 3:
-                    return events;
+                    return machineData;
                 default:
                     return null;
             }
@@ -229,13 +222,13 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
             Locale l = Locale.getDefault();
             switch (position) {
                 case 0:
-                    return getString(R.string.title_section1).toUpperCase(l);
+                    return getString(R.string.title_section4).toUpperCase(l);
                 case 1:
                     return getString(R.string.title_section2).toUpperCase(l);
                 case 2:
                     return getString(R.string.title_section3).toUpperCase(l);
                 case 3:
-                    return getString(R.string.title_section4).toUpperCase(l);
+                    return getString(R.string.title_section1).toUpperCase(l);
             }
             return null;
         }
