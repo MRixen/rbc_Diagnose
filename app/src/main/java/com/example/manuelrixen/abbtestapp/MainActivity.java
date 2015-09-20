@@ -1,6 +1,7 @@
 package com.example.manuelrixen.abbtestapp;
 
 import android.app.FragmentTransaction;
+import android.app.TabActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.PowerManager;
@@ -12,6 +13,7 @@ import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TabHost;
 
 
 import com.example.manuelrixen.abbtestapp.Barcode.BarCodeReading;
@@ -25,32 +27,19 @@ import java.util.Locale;
 
 import static android.os.Process.myPid;
 
+// Add tabs to action bar
 
-public class MainActivity extends BaseClass implements android.app.ActionBar.TabListener {
+public class MainActivity extends TabActivity implements android.app.ActionBar.TabListener {
 
     private static final int MAX_TABS_COUNT = 4;
     private PowerManager.WakeLock wl;
-    private Receiver[] receiver = new Receiver[3];
-    private Thread[] rThread = new Thread[3];
-
-    /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide fragments for each of the
-     * three primary sections of the app. We use a {@link android.support.v4.app.FragmentPagerAdapter}
-     * derivative, which will keep every loaded fragment in memory. If this becomes too memory
-     * intensive, it may be best to switch to a {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     */
-    AppSectionsPagerAdapter mAppSectionsPagerAdapter;
-
-    /**
-     * The {@link android.support.v4.view.ViewPager} that will display the three primary sections of the app, one at a
-     * time.
-     */
-    ViewPager mViewPager;
     private boolean firstRun = true;
     private CycleTime cycleTime;
     private MachineData machineData;
     private Logging logging;
     private Events events;
+    private TabHost tabHost;
+    private BaseData baseData;
 
 
     @Override
@@ -68,12 +57,11 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
 //        }
         setContentView(R.layout.activity_main);
 
-        cycleTime = new CycleTime();
-        machineData = new MachineData();
-        logging = new Logging();
-        events = new Events();
+        baseData = new BaseData(this);
 
-        initTabs();
+        // create the TabHost that will contain the Tabs
+        tabHost = getTabHost();
+
 
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         wl = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "My Tag");
@@ -132,7 +120,7 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
     @Override
     public void onTabSelected(android.app.ActionBar.Tab tab, FragmentTransaction ft) {
         // When the given tab is selected, switch to the corresponding page in the ViewPager.
-        mViewPager.setCurrentItem(tab.getPosition());
+//        mViewPager.setCurrentItem(tab.getPosition());
     }
 
     @Override
@@ -144,95 +132,46 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
     }
 
     private void initTabs() {
-        // Create the adapter that will return a fragment for each of the three primary sections
-        // of the app.
-        mAppSectionsPagerAdapter = new AppSectionsPagerAdapter(getSupportFragmentManager());
 
-        // Set up the action bar.
-        final android.app.ActionBar actionBar = getActionBar();
+        TabHost.TabSpec tab1 = tabHost.newTabSpec("Events");
+        TabHost.TabSpec tab2 = tabHost.newTabSpec("Logging");
+        TabHost.TabSpec tab3 = tabHost.newTabSpec("CycleTime");
+        TabHost.TabSpec tab4 = tabHost.newTabSpec("MachineData");
 
-        // Specify that the Home/Up button should not be enabled, since there is no hierarchical
-        // parent.
-        actionBar.setHomeButtonEnabled(false);
 
-        // Specify that we will be displaying tabs in the action bar.
-        actionBar.setNavigationMode(android.app.ActionBar.NAVIGATION_MODE_TABS);
+        tab1.setIndicator("Events");
+        Intent eventIntent = new Intent(this, Events.class);
+        eventIntent.putExtra("baseData", baseData);
+        tab1.setContent(eventIntent);
 
-        // Set up the ViewPager, attaching the adapter and setting up a listener for when the
-        // user swipes between sections.
-        mViewPager = (ViewPager) findViewById(R.id.pager);
-        mViewPager.setAdapter(mAppSectionsPagerAdapter);
-        mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
-            @Override
-            public void onPageSelected(int position) {
-                // When swiping between different app sections, select the corresponding tab.
-                // We can also use ActionBar.Tab#select() to do this if we have a reference to the
-                // Tab.
-                actionBar.setSelectedNavigationItem(position);
-            }
-        });
+        tab2.setIndicator("Logging");
+        Intent loggingIntent = new Intent(this, Logging.class);
+        loggingIntent.putExtra("baseData", baseData);
+        tab2.setContent(loggingIntent);
 
-        // For each of the sections in the app, add a tab to the action bar.
-        for (int i = 0; i < mAppSectionsPagerAdapter.getCount(); i++) {
-            // Create a tab with text corresponding to the page title defined by the adapter.
-            // Also specify this Activity object, which implements the TabListener interface, as the
-            // listener for when this tab is selected.
-            actionBar.addTab(
-                    actionBar.newTab()
-                            .setText(mAppSectionsPagerAdapter.getPageTitle(i))
-                            .setTabListener(this));
-        }
 
+        tab3.setIndicator("Cycle Time");
+        Intent cycleTimeIntent = new Intent(this, CycleTime.class);
+        cycleTimeIntent.putExtra("baseData", baseData);
+        tab3.setContent(cycleTimeIntent);
+
+        tab4.setIndicator("Machine Data");
+        Intent machineDataIntent = new Intent(this, MachineData.class);
+        machineDataIntent.putExtra("baseData", baseData);
+        tab4.setContent(machineDataIntent);
+
+        /** Add the tabs  to the TabHost to display. */
+        tabHost.addTab(tab1);
+        tabHost.addTab(tab2);
+        tabHost.addTab(tab3);
+        tabHost.addTab(tab4);
+        // Load all tabs
+        tabHost.setCurrentTabByTag("Events");
+        tabHost.setCurrentTabByTag("Logging");
+        tabHost.setCurrentTabByTag("CycleTime");
+        tabHost.setCurrentTabByTag("MachineData");
     }
 
-    /**
-     * A {@link android.support.v4.app.FragmentPagerAdapter} that returns a fragment corresponding to one of the primary
-     * sections of the app.
-     */
-    public class AppSectionsPagerAdapter extends FragmentPagerAdapter {
-
-        public AppSectionsPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int i) {
-            switch (i) {
-                case 0:
-                    return events;
-                case 1:
-                    return cycleTime;
-                case 2:
-                    return logging;
-                case 3:
-                    return machineData;
-                default:
-                    return null;
-            }
-
-        }
-
-        @Override
-        public int getCount() {
-            return MAX_TABS_COUNT;
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            Locale l = Locale.getDefault();
-            switch (position) {
-                case 0:
-                    return getString(R.string.title_section4).toUpperCase(l);
-                case 1:
-                    return getString(R.string.title_section2).toUpperCase(l);
-                case 2:
-                    return getString(R.string.title_section3).toUpperCase(l);
-                case 3:
-                    return getString(R.string.title_section1).toUpperCase(l);
-            }
-            return null;
-        }
-    }
 
     private void startBarcodeScanner() {
         Intent barCodeReader = new Intent(this, BarCodeReading.class);
@@ -246,21 +185,13 @@ public class MainActivity extends BaseClass implements android.app.ActionBar.Tab
             String ip = iData.getString("ip");
             String port = iData.getString("port");
 
-            startReceiver(0, false, ip, port, cycleTime, machineData, logging, events);
+            baseData.startReceiver(ip, port);
+            initTabs();
         }
         if(resultCode == RESULT_CANCELED){
             finish();
         }
     }
 
-    private void startReceiver(int number, boolean normalView, String ip, String port, CycleTime cycleTime, MachineData machineData, Logging logging, Events events) {
-        receiver[number] = new Receiver(this, ip, port, normalView, number, cycleTime, machineData, logging, events);
-        rThread[number] = new Thread(receiver[number]);
-        rThread[number].start();
-        try {
-            Thread.sleep(50);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
+
 }

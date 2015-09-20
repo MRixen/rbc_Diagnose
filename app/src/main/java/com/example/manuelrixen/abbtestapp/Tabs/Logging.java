@@ -4,46 +4,41 @@ package com.example.manuelrixen.abbtestapp.Tabs;
  * Created by Manuel.Rixen on 23.08.2015.
  */
 
-import android.app.Dialog;
-import android.content.Context;
-import android.content.res.Resources;
+import android.app.Activity;
 import android.os.Bundle;
-import android.os.Message;
-import android.support.v4.app.Fragment;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.MotionEvent;
-import android.view.SurfaceView;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.manuelrixen.abbtestapp.BaseClass;
-import com.example.manuelrixen.abbtestapp.Drawing.CycleTimeDrawThread;
+import com.example.manuelrixen.abbtestapp.BaseData;
 import com.example.manuelrixen.abbtestapp.R;
 import com.example.manuelrixen.abbtestapp.Socket.Receiver;
 
-public class Logging extends Fragment implements Receiver.FirstEventListener, Receiver.SecondEventListener, View.OnClickListener {
+public class Logging extends Activity implements Receiver.EventListener, View.OnClickListener {
 
     private TextView loggingViewer;
-    private Button clearButton;
     private int logCounter = 0;
     private int MAX_LOG_COUNTER = 100;
     private String[] logData = new String[MAX_LOG_COUNTER];
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_section_3, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_section_3);
 
-        clearButton = (Button) rootView.findViewById(R.id.buttonClear);
+        Button clearButton = (Button) findViewById(R.id.buttonClear);
         clearButton.setOnClickListener(this);
-        loggingViewer = (TextView) rootView.findViewById(R.id.loggingTextField);
+        loggingViewer = (TextView) findViewById(R.id.loggingTextField);
         loggingViewer.setMovementMethod(new ScrollingMovementMethod());
 
-        return rootView;
+        Bundle bundle = getIntent().getExtras();
+        BaseData baseData = (BaseData)bundle.getSerializable("baseData");
+        Receiver receiver = baseData.getReceiver();
+        receiver.registerListener(this);
     }
+
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
@@ -53,46 +48,27 @@ public class Logging extends Fragment implements Receiver.FirstEventListener, Re
     }
 
     @Override
-    public void onViewStateRestored(Bundle savedInstanceState) {
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
         if (savedInstanceState != null) {
             logCounter = savedInstanceState.getInt("logCounter");
             logData = savedInstanceState.getStringArray("logData");
             for (int i=0;i<=logData.length;i++) loggingViewer.setText(logData[i] + "\n" + loggingViewer.getText());
         }
-        super.onViewStateRestored(savedInstanceState);
-    }
-
-    public Receiver.FirstEventListener getFirstEventListener() {
-        return this;
-    }
-
-    public Receiver.SecondEventListener getSecondEventListener() {
-        return this;
     }
 
     @Override
-    public void onError1() {
+    public void onError() {
         Log.d("Console", "onError1");
         loggingViewer.setText("Cant connect to server.");
     }
 
     @Override
-    public void onEvent1(boolean normal, String msg, String msgType) {
-        showMessage(msgType, msg, normal);
+    public void onEvent(String msg, String msgType) {
+        showMessage(msgType, msg);
     }
 
-    @Override
-    public void onError2() {
-        Log.d("Console", "onError2");
-        loggingViewer.setText("Cant connect to server.");
-    }
-
-    @Override
-    public void onEvent2(boolean normal, String msg, String msgType) {
-        showMessage(msgType, msg, normal);
-    }
-
-    private void showMessage(String msgType, String msg, boolean normal) {
+    private void showMessage(String msgType, String msg) {
         if (msgType.equals("l")){
             logData[logCounter] = msg;
             loggingViewer.setText(logData[logCounter] + "\n" + loggingViewer.getText());
@@ -109,5 +85,4 @@ public class Logging extends Fragment implements Receiver.FirstEventListener, Re
             logCounter = 0;
         }
     }
-
 }

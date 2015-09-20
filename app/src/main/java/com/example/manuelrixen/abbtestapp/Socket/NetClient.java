@@ -44,8 +44,6 @@ public class NetClient {
         try {
             if (socket == null) {
                 socket = new Socket(this.host, this.port);
-                //socket3 = new Socket(this.host, this.port);
-                //out = new PrintWriter(socket3.getOutputStream(), true);
                 in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 return true;
             }

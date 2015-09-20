@@ -31,5 +31,42 @@
                 android:value=".MainActivity"/>
         </activity>
 
+        <activity
+            android:name=".Tabs.Logging"
+            android:screenOrientation="landscape"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+
+        <activity
+            android:name=".Tabs.Events"
+            android:screenOrientation="landscape"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+
+        <activity
+            android:name=".Tabs.CycleTime"
+            android:screenOrientation="landscape"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+
+        <activity
+            android:name=".Tabs.MachineData"
+            android:screenOrientation="landscape"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+
+
     </application>
 </manifest>

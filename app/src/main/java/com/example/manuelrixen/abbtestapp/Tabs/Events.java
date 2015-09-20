@@ -9,16 +9,14 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.example.manuelrixen.abbtestapp.BaseData;
 import com.example.manuelrixen.abbtestapp.CustomDialog;
 import com.example.manuelrixen.abbtestapp.R;
 import com.example.manuelrixen.abbtestapp.Socket.Receiver;
@@ -31,14 +29,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
 
-public class Events extends Fragment implements Receiver.FirstEventListener, Receiver.SecondEventListener, AdapterView.OnItemClickListener, View.OnClickListener {
+public class Events extends Activity implements Receiver.EventListener, AdapterView.OnItemClickListener, View.OnClickListener {
 
     private ListView eventViewer;
-//    private BaseClassTab baseClassTab = new BaseClassTab();
     private boolean firstStart = true;
     private XmlPullParserFactory xmlFactoryObject;
     private XmlPullParser xmlParser;
@@ -56,19 +51,20 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
     private SharedPreferences sharedPreferences;
     private HashSet<String> eventSet;
 
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_section_4, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_section_4);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
-
-        clearButton = (Button) rootView.findViewById(R.id.buttonClear);
+        clearButton = (Button) findViewById(R.id.buttonClear);
         clearButton.setOnClickListener(this);
-        eventViewer = (ListView) rootView.findViewById(R.id.eventListView);
+        eventViewer = (ListView) findViewById(R.id.eventListView);
         eventViewer.setOnItemClickListener(this);
         eventList = new ArrayList<String>();
         arrayAdapter = new ArrayAdapter<String>(
-                getActivity(),
+                this,
                 android.R.layout.simple_list_item_1,
                 eventList);
         eventViewer.setAdapter(arrayAdapter);
@@ -82,13 +78,15 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
             e.printStackTrace();
             Log.d("xml_parser", "error1");
         }
-        customDialog = new CustomDialog(getActivity());
+        customDialog = new CustomDialog(this);
 
+        Bundle bundle = getIntent().getExtras();
+        BaseData baseData = (BaseData)bundle.getSerializable("baseData");
+        Receiver receiver = baseData.getReceiver();
+        receiver.registerListener(this);
 
         // For testing
 //         showEvent("e", "0_0_2_X_ _ _ _ ", true);
-
-        return rootView;
     }
 
     @Override
@@ -100,21 +98,18 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
     }
 
     @Override
-    public void onViewStateRestored(Bundle savedInstanceState) {
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
         if (savedInstanceState != null) {
             eventList = savedInstanceState.getStringArrayList("eventList");
             listViewEntryData = savedInstanceState.getStringArray("listViewEntryData");
             listCounter = savedInstanceState.getInt("listCounter");
         }
-        super.onViewStateRestored(savedInstanceState);
     }
 
-    public Receiver.FirstEventListener getFirstEventListener() {
-        return this;
-    }
 
     @Override
-    public void onError1() {
+    public void onError() {
         Log.d("Console", "onError1");
         if (eventList != null) {
             eventList.clear();
@@ -123,22 +118,13 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
     }
 
     @Override
-    public void onEvent1(boolean normal, String msg, String msgType) {
-        if(isAdded()){
-            Log.d("onEvent", "inside");
+    public void onEvent(String msg, String msgType) {
             showEvent(msgType, msg, true);
-        }
-    }
-
-    @Override
-    public void onEvent2(boolean normal, String msg, String msgType) {
-//        if(initOk){
-//            showEvent(msgType, msg, true);
-//        }
     }
 
     private void setEventList(String eventText){
         if (eventList != null) {
+            // TODO Show the newest event at first
             eventList.add(listCounter, eventText);
             arrayAdapter.notifyDataSetChanged();
             if (listCounter <= MAX_LIST_COUNTER - 1) listCounter += 1;
@@ -155,14 +141,6 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
         if (listViewEntryData[position] != null) showEvent("e", listViewEntryData[position], false);
     }
 
-    @Override
-    public void onError2() {
-//        Log.d("Console", "onError2");
-//        if (eventList != null){
-//            eventList.clear();
-//            setEventList("Cant connect to server.");
-//        }
-    }
 
     private void showEvent(String msgType, String eventMessage, boolean saveEvent) {
         // Split event message to get the robot state (first entry) the event domain (second entry) and the event number (third entry)
@@ -171,15 +149,8 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
             if (saveEvent) listViewEntryData[listCounter] = eventMessage;
             String[] tempMessage = eventMessage.split(":");
 
-            // TODO Switch automatically to event tab when a dialog message appear
             new XMLParsing(saveEvent).execute(tempMessage);
         }
-    }
-
-    @Override
-    public void onAttach(Activity activity) {
-        Log.d("onAttach", "inside events");
-        super.onAttach(activity);
     }
 
     @Override
@@ -258,7 +229,7 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
 //                        filename = "elog/opr_elogtext_1.xml";
                         filename = "";
                 }
-                InputStream in_s = getActivity().getAssets().open(filename);
+                InputStream in_s = getAssets().open(filename);
                 xmlParser.setInput(in_s, null);
                 String name = " ";
                 boolean messageEntryFound = false;
@@ -333,4 +304,6 @@ public class Events extends Fragment implements Receiver.FirstEventListener, Rec
         }
 
     }
+
+
 }

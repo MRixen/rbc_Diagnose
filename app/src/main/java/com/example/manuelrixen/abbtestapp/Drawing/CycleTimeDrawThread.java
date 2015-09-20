@@ -11,12 +11,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.TextView;
 
-import com.example.manuelrixen.abbtestapp.BaseClass;
+import com.example.manuelrixen.abbtestapp.BaseData;
 import com.example.manuelrixen.abbtestapp.R;
 
 import java.util.Arrays;
@@ -38,7 +39,6 @@ public class CycleTimeDrawThread extends android.view.SurfaceView implements Run
     private Canvas canvas;
     Paint graphPaint, axisPaint, bgPaint, pointPaint, linePaint;
     private int dialogWidth, dialogHeight;
-    private BaseClass baseClass = new BaseClass();
     private int[] xAxis;
     private int[] yAxis;
     private int lineStroke = 2;
@@ -69,15 +69,15 @@ public class CycleTimeDrawThread extends android.view.SurfaceView implements Run
 //                baseClass.calcDimDP("width", borderOffset+lineLengthX, context),
 //                baseClass.calcDimDP("height", lineLengthY+borderOffset, context)};
 
-        yAxis = new int[] {baseClass.calcDimDP("width", borderOffset, context),
-                baseClass.calcDimDP("height", borderOffset, context),
-                 baseClass.calcDimDP("width", borderOffset+ lineStroke, context),
-                 baseClass.calcDimDP("width", lineLengthY+borderOffset, context)};
+        yAxis = new int[] {calcDimDP("width", borderOffset, context),
+                calcDimDP("height", borderOffset, context),
+                 calcDimDP("width", borderOffset+ lineStroke, context),
+                 calcDimDP("width", lineLengthY+borderOffset, context)};
 
-        xAxis = new int[] {baseClass.calcDimDP("width", borderOffset, context),
-                baseClass.calcDimDP("height", lineLengthY+borderOffset, context),
-                baseClass.calcDimDP("width", borderOffset+lineLengthX, context),
-                baseClass.calcDimDP("height", lineLengthY+borderOffset, context)};
+        xAxis = new int[] {calcDimDP("width", borderOffset, context),
+                calcDimDP("height", lineLengthY+borderOffset, context),
+                calcDimDP("width", borderOffset+lineLengthX, context),
+                calcDimDP("height", lineLengthY+borderOffset, context)};
     }
 
     public void init() {
@@ -109,7 +109,7 @@ public class CycleTimeDrawThread extends android.view.SurfaceView implements Run
             // Blocks drawThread until all operations are finished
             drawThread.join();
         }catch(Exception e){
-            Log.d("CycleTimeDrawThread:init(): ", String.valueOf(e));
+            Log.d("CycleTimeDrawT:init(): ", String.valueOf(e));
         }
         drawThread = null;
     }
@@ -162,7 +162,7 @@ public class CycleTimeDrawThread extends android.view.SurfaceView implements Run
         }
 
         // Handler to receive and visualize sensor data
-        BaseClass.sendToVisualization = new Handler() {
+        BaseData.sendToVisualization = new Handler() {
             public void handleMessage(Message msg) {
                 Bundle bundle = msg.getData();
 
@@ -183,6 +183,27 @@ public class CycleTimeDrawThread extends android.view.SurfaceView implements Run
             }
         };
         Looper.loop();
+    }
+
+    public int calcDimDP(String dimType, int dimDp, Context context){
+
+        // Calculate display size
+        DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
+
+        int pxWidth = displayMetrics.widthPixels;
+        int pxHeight = displayMetrics.heightPixels;
+        float dpWidth = pxWidth / displayMetrics.density;
+        float dpHeight = pxHeight / displayMetrics.density;
+
+        // Factor dp to px
+        float factorHeight = (pxHeight / dpHeight);
+        float factorWidth = (pxWidth / dpWidth);
+        Log.d("factorHeight", String.valueOf(factorHeight));
+        Log.d("factorWidth", String.valueOf(factorWidth));
+
+        if (dimType.equals("width")) return Math.round(factorWidth*dimDp);
+        if (dimType.equals("height")) return Math.round(factorHeight*dimDp);
+        else return 0;
     }
 
     public void drawLayout(boolean showBackground, float yData) {

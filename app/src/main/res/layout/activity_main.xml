@@ -1,45 +1,26 @@
-<android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/pager"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" />
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--android:layout_width="match_parent" android:layout_height="match_parent">-->
-    <!--<TextView-->
-        <!--android:layout_width="fill_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/cycleTimeTextField"-->
-        <!--android:textSize="18dp"-->
-        <!--android:textStyle="bold"-->
-        <!--android:gravity="left"-->
-        <!--android:layout_marginTop="50dp"-->
-        <!--android:layout_alignParentRight="true"-->
-        <!--android:layout_alignParentEnd="true" />-->
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@android:id/tabhost">
 
-    <!--<ScrollView-->
-        <!--android:layout_width="fill_parent"-->
-        <!--android:layout_height="fill_parent"-->
-        <!--android:layout_below="@+id/cycleTimeTextField"-->
-        <!--android:layout_marginTop="20dp"-->
-        <!--android:id="@+id/scrollView">-->
-        <!--<TextView-->
-            <!--android:layout_width="fill_parent"-->
-            <!--android:layout_height="fill_parent"-->
-            <!--android:id="@+id/loggingTextField"-->
-            <!--android:textSize="18dp"-->
-            <!--android:layout_alignParentBottom="true"-->
-            <!--android:maxLines="5"/>-->
+    <LinearLayout
+        android:id="@+id/LinearLayout01"
+        android:orientation="vertical"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent">
 
-    <!--</ScrollView>-->
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent">
+        </TabWidget>
 
-    <!--<Button-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="New Button"-->
-        <!--android:id="@+id/button"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_alignParentLeft="true"-->
-        <!--android:layout_alignParentStart="true"-->
-        <!--android:onClick="buttonStopClient"/>-->
-<!--</RelativeLayout>-->
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent">
+        </FrameLayout>
 
+    </LinearLayout>
+
+</TabHost>
