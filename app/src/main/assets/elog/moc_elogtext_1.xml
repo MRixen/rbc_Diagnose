@@ -12,7 +12,7 @@
   </Message>
   <Message number="24" eDefine="SYS_ERR_MOC_SEGMENT_EXPECTED">
     <Title>Zonenbahn-Fehler </Title>
-    <Description>Task: %sZonenbahn aus einem der folgenden Gründe als Stopppunkt abgearbeitet:- Zeitverzögerung- Zu eng programmierte Punkte- Hohe CPU-Auslastung des SystemsProgrammreferenz: %s</Description>
+    <Description>Task:: %s Zonenbahn aus einem der folgenden Gründe als Stopppunkt abgearbeitet::- Zeitverzögerung- Zu eng programmierte Punkte- Hohe CPU-Auslastung des SystemsProgrammreferenz:: %s</Description>
     <Actions>Anzahl der Instruktionen zwischen aufeinander folgenden Bewegungsinstruktionen verringern.Geschwindigkeit reduzieren, größerer Abstand zwischen Positionen, /CONC-Option.ipol_prefetch_time vergrößern.</Actions>
   </Message>
   <Message number="25" eDefine="SYS_ERR_MOC_ROBOT_MOVED">
@@ -22,7 +22,7 @@
   </Message>
   <Message number="26" eDefine="SYS_ERR_MOC_SINGULARITY">
     <Title>Nahe an Singularität</Title>
-    <Description>Task: %sRoboter zu nahe an Singularität.Programmref. %s(Interner Code: %d3) </Description>
+    <Description>Task:: %sRoboter zu nahe an Singularität.Programmref. %s(Interner Code:: %d3) </Description>
     <Actions>Bahn weiter von Singularität entfernen oder achsweise Interpolation verwenden.</Actions>
   </Message>
   <Message number="27" eDefine="SYS_ERR_MOC_WORK_AREA_AXIS">
@@ -77,8 +77,8 @@
   </Message>
   <Message number="50" eDefine="SYS_ERR_MOC_POSE_OUTSIDE_REACH">
     <Title>Position außer Reichweite</Title>
-    <Description>Position für %s Achse %s ist außerhalb des Arbeitsbereichs. Achse 1-6: Nummer der Achse, die den Fehler verursacht.Achse 23: Eine Kombination der Achsen 2 und 3 verursacht den Fehler.</Description>
-    <Causes>Mögliche Ursache: ConfL_Off wird verwendet und Bewegung ist zu groß (mehr als 90 Grad für eine Achse).</Causes>
+    <Description>Position für %s Achse %s ist außerhalb des Arbeitsbereichs. Achse 1-6:: Nummer der Achse, die den Fehler verursacht.Achse 23:: Eine Kombination der Achsen 2 und 3 verursacht den Fehler.</Description>
+    <Causes>Mögliche Ursache:: ConfL_Off wird verwendet und Bewegung ist zu groß (mehr als 90 Grad für eine Achse).</Causes>
     <Actions>- Werkobjekt oder Arbeitsbereich prüfen.- Achse in Achskoordinaten bewegen.- Parameter für Bewegungskonfiguration prüfen.- Zwischenpunkte bei großen Bewegungen einfügen.</Actions>
   </Message>
   <Message number="52" eDefine="SYS_ERR_MOC_SPEED_SUPERVISION">
@@ -95,12 +95,12 @@
   </Message>
   <Message number="55" eDefine="SYS_ERR_MOC_LOAD_SUPERVISION">
     <Title>Achsenlast zu hoch</Title>
-    <Description>Aktuelles Drehmoment an Achse %s zu hoch. Mögliche Ursache: falsche Lastdaten, zu hohe Beschleunigung, große externe Kräfte, niedrige Temperatur oder Hardwarefehler.</Description>
+    <Description>Aktuelles Drehmoment an Achse %s zu hoch. Mögliche Ursache:: falsche Lastdaten, zu hohe Beschleunigung, große externe Kräfte, niedrige Temperatur oder Hardwarefehler.</Description>
     <Actions>- Lastdaten prüfen.- Beschleunigung oder Geschwindigkeit verringern.- Hardware prüfen.</Actions>
   </Message>
   <Message number="56" eDefine="SYS_ERR_MOC_JAM_SUPERVISION">
     <Title>Achskollision</Title>
-    <Description>Aktuelles Drehmoment von Achse %s ist größer als angefordert bei niedriger oder null Geschwindigkeit. Mögliche Ursache: Kollision (festgefahrener Arm) oder Hardwarefehler.</Description>
+    <Description>Aktuelles Drehmoment von Achse %s ist größer als angefordert bei niedriger oder null Geschwindigkeit. Mögliche Ursache:: Kollision (festgefahrener Arm) oder Hardwarefehler.</Description>
     <Actions>Prüfen, ob Arm festgefahren ist.Hardware prüfen.Auf andere Meldungen des Hardware-Ereignisprotokolls prüfen.</Actions>
   </Message>
   <Message number="57" eDefine="SYS_ERR_MOC_POWER_UP_POSITION_ERROR">
@@ -120,7 +120,7 @@
   </Message>
   <Message number="63" eDefine="SYS_ERR_MOC_CIRCLE_COLLAPSED">
     <Title>Kreisbogen unbestimmt</Title>
-    <Description>Task: %sPunkte falsch platziert. Ursache %d3:1. Endpunkt zu nahe an Startpunkt.2. Kreispunkt zu nahe an Startpunkt.3. Kreispunkt zu nahe an Endpunkt.4. Ungewisse Orientierung.5. Kreisbogen zu groß (&gt; 240 Grad).Programmreferenz: %s</Description>
+    <Description>Task:: %sPunkte falsch platziert. Ursache %d3::1. Endpunkt zu nahe an Startpunkt.2. Kreispunkt zu nahe an Startpunkt.3. Kreispunkt zu nahe an Endpunkt.4. Ungewisse Orientierung.5. Kreisbogen zu groß (&gt; 240 Grad).Programmreferenz:: %s</Description>
     <Actions>Punkte des Kreises und Endpunkt der vorhergehenden Bewegungsinstruktion überprüfen. Die Punkte des Kreises können durch schrittweise Abarbeitung des Kreises im Einrichtbetrieb überprüft werden.</Actions>
   </Message>
   <Message number="65" eDefine="SYS_ERR_MOC_TRANSFORM_ERROR">
@@ -162,7 +162,7 @@
     <Title>Verzögerungsgrenze</Title>
     <Description>Bahnberechnung für mechanische Einheiten in Bewegungsplanung %s überschreitet internes Zeitlimit. Die Bewegungstask wurde nicht innerhalb des Zeitlimits ausgeführt.</Description>
     <Causes>Die CPU-Last ist zu hoch. Kann beispielsweise durch zu häufige E/A-Kommunikation verursacht werden.</Causes>
-    <Actions>1. Systemparameter High Interpolation Priority für betreffende Bewegungsplanung setzen.2. CPU-Last durch eine oder mehrere der folgenden Aktionen verringern: - Geschwindigkeit verringern- AccSet ändern- Singularität vermeiden (SingArea\Wrist). - Bahnauflösung für betroffene Bewegungsplanung mit Systemparameter oder (für kritische Bewegungen) mit der RAPID-Instruktion PathResol erhöhen.</Actions>
+    <Actions>1. Systemparameter High Interpolation Priority für betreffende Bewegungsplanung setzen.2. CPU-Last durch eine oder mehrere der folgenden Aktionen verringern:: - Geschwindigkeit verringern- AccSet ändern- Singularität vermeiden (SingArea\Wrist). - Bahnauflösung für betroffene Bewegungsplanung mit Systemparameter oder (für kritische Bewegungen) mit der RAPID-Instruktion PathResol erhöhen.</Actions>
   </Message>
   <Message number="85" eDefine="SYS_ERR_MOC_USER_FRAME_ERROR">
     <Title>Zu viele Anwender-Koordinatensysteme</Title>
@@ -186,7 +186,7 @@
   </Message>
   <Message number="89" eDefine="SYS_ERR_MOC_WEAVE_WARNING">
     <Title>Pendeln geändert</Title>
-    <Description>Task: %sAngefordertes Pendeln nicht möglich. Ursache:- Hohe Pendelfrequenz- Unerlaubter Wechsel der Pendelmethode- SingArea/Wrist wird mit Handgelenkpendeln benutztProgrammreferenz: %s</Description>
+    <Description>Task:: %sAngefordertes Pendeln nicht möglich. Ursache::- Hohe Pendelfrequenz- Unerlaubter Wechsel der Pendelmethode- SingArea/Wrist wird mit Handgelenkpendeln benutztProgrammreferenz:: %s</Description>
     <Actions>Pendelamplitude oder -zeit vergrößern.Nicht zwischen Arm- und Handgelenkpendeln wechseln.SingArea/Off mit Handgelenkpendeln benutzen.</Actions>
   </Message>
   <Message number="91" eDefine="SYS_ERR_MOC_ACTIVATION">
@@ -247,7 +247,7 @@
   <Message number="142" eDefine="SYS_ERR_MOC_CONFIG_FAILED">
     <Title>Bewegungskonfiguration</Title>
     <Description>Konfiguration des Manipulators fehlgeschlagen.%s%s</Description>
-    <Actions>Die Parameterwerte ändern unter Systemparameter: Motion. Wenn Konflikt zwischen INT/EXT-Parametern, d. h. falsche MOC.cfg geladen. I-Start des Systems mit korrekten Parametern durchführen.</Actions>
+    <Actions>Die Parameterwerte ändern unter Systemparameter:: Motion. Wenn Konflikt zwischen INT/EXT-Parametern, d. h. falsche MOC.cfg geladen. I-Start des Systems mit korrekten Parametern durchführen.</Actions>
   </Message>
   <Message number="143" eDefine="SYS_ERR_MOC_TARGET_BAD_MASTER_CNF">
     <Title>Roboterachsenkonfiguration</Title>
@@ -256,8 +256,8 @@
   </Message>
   <Message number="144" eDefine="SYS_ERR_MOC_CALIB_BAD_DISPL_RESULT">
     <Title>Verschiebungs-Koordinatensystem unbestimmt</Title>
-    <Description>Kalibrierung des Verschiebungs-Koordinatensystems unbestimmt für Roboter %s wegen:- falscher TCP.- ungenauer Referenzpunkte.- schlecht gewählter Referenzpunkte.</Description>
-    <Actions>Wenn geschätzter Fehler inakzeptabel:- Sicherstellen, dass TCP korrekt ist.- Mehr als 3 Referenzpunkte verwenden.- Roboter sorgfältig auf Referenzpunkte positionieren.</Actions>
+    <Description>Kalibrierung des Verschiebungs-Koordinatensystems unbestimmt für Roboter %s wegen::- falscher TCP.- ungenauer Referenzpunkte.- schlecht gewählter Referenzpunkte.</Description>
+    <Actions>Wenn geschätzter Fehler inakzeptabel::- Sicherstellen, dass TCP korrekt ist.- Mehr als 3 Referenzpunkte verwenden.- Roboter sorgfältig auf Referenzpunkte positionieren.</Actions>
   </Message>
   <Message number="145" eDefine="SYS_ERR_MOC_VALID_ROB_JOINTS_NOT_FOUND">
     <Title>Kinematische Beschränkung</Title>
@@ -271,7 +271,7 @@
   </Message>
   <Message number="153" eDefine="SYS_ERR_MOC_COMMAND_NOT_ALLOWED_IF_HOLD">
     <Title>Befehl nicht zulässig </Title>
-    <Description>Task: %sErteilte(r) Instruktion oder Befehl nicht zulässig, da das Roboterprogramm in einem Haltzustand abgearbeitet wurde.(Interner Code: %d2%s)Programmreferenz: %s</Description>
+    <Description>Task:: %sErteilte(r) Instruktion oder Befehl nicht zulässig, da das Roboterprogramm in einem Haltzustand abgearbeitet wurde.(Interner Code:: %d2%s)Programmreferenz:: %s</Description>
     <Actions>Programm ändern oder Abarbeitung anhalten, bevor die Anweisung erteilt wird. </Actions>
   </Message>
   <Message number="156" eDefine="SYS_ERR_MOC_INDEPENDENT_ERROR">
@@ -310,8 +310,8 @@
     <Actions>Sicherstellen, dass unabhängiger Modus nicht verwendet wird, und Deaktivierung erneut versuchen.</Actions>
   </Message>
   <Message number="167" eDefine="SYS_ERR_MOC_CONVEY_NEW_SYNC_SIGNAL">
-    <Title>Warnung: Neue Synchronisierung</Title>
-    <Description>Warnung: Sync-Signal für neues Objekt ist eingegangen, während der Förderer aktiv ist und das Programm ausgeführt wird.</Description>
+    <Title>Warnung:: Neue Synchronisierung</Title>
+    <Description>Warnung:: Sync-Signal für neues Objekt ist eingegangen, während der Förderer aktiv ist und das Programm ausgeführt wird.</Description>
     <Actions />
   </Message>
   <Message number="168" eDefine="SYS_ERR_MOC_CONVEY_NEW_SYNC_WHILE_TRACKING">
@@ -387,7 +387,7 @@
   <Message number="189" eDefine="SYS_ERR_MOC_RELAY_SIGNAL_MISSING">
     <Title>Relaissignal nicht gefunden</Title>
     <Description>Das Signal %s für Relais %s wurde in der E/A-Konfiguration nicht gefunden. Die mechanische Einheit, die dieses Relais benutzt, wird ignoriert.</Description>
-    <Actions>E/A-Signaldefinitionen sowie Systemparameterdefinitionen prüfen in Parametergruppe Motion, Typ: Relais.</Actions>
+    <Actions>E/A-Signaldefinitionen sowie Systemparameterdefinitionen prüfen in Parametergruppe Motion, Typ:: Relais.</Actions>
   </Message>
   <Message number="190" eDefine="SYS_ERR_MOC_GEN_SCAN_JOINT_ERROR">
     <Title>Permanenter Interpolator-Sperrfehler</Title>

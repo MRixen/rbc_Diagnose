@@ -29,7 +29,6 @@ public class Receiver implements Runnable {
 
     public Receiver(Context context, String ip, String port) {
         this.context = context;
-        this.eventListener = eventListener;
         if (nc == null) nc = new NetClient(ip, Integer.parseInt(port));
     }
 
@@ -43,6 +42,8 @@ public class Receiver implements Runnable {
             while (isRunning) {
                 data = nc.receiveDataFromServer();
                 if ((data[0] != null) && (data[1] != null)) {
+                    Log.d("data[0]", data[0]);
+                    Log.d("data[1]", data[1]);
                     activity.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {

@@ -5,9 +5,11 @@ package com.example.manuelrixen.abbtestapp.Tabs;
  */
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
@@ -52,6 +54,7 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
     private HashSet<String> eventSet;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,6 +82,7 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
             Log.d("xml_parser", "error1");
         }
         customDialog = new CustomDialog(this);
+
 
         Bundle bundle = getIntent().getExtras();
         BaseData baseData = (BaseData)bundle.getSerializable("baseData");
@@ -124,8 +128,7 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
 
     private void setEventList(String eventText){
         if (eventList != null) {
-            // TODO Show the newest event at first
-            eventList.add(listCounter, eventText);
+            eventList.add(0, eventText);
             arrayAdapter.notifyDataSetChanged();
             if (listCounter <= MAX_LIST_COUNTER - 1) listCounter += 1;
             else listCounter = 0;
@@ -135,8 +138,10 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         arrayAdapter.getItem(position);
-        Log.d("onItemClick", "position: " + position);
-        Log.d("onItemClick", "listViewEntryData: " + listViewEntryData[position]);
+        // Calc position because its different order
+        position = (position+arrayAdapter.getCount())-(2*position)-1;
+        Log.d("position", String.valueOf(position));
+        Log.d("arrayAdapter.getCount", String.valueOf(arrayAdapter.getCount()));
         // Show dialog with the complete event info
         if (listViewEntryData[position] != null) showEvent("e", listViewEntryData[position], false);
     }
@@ -149,7 +154,7 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
             if (saveEvent) listViewEntryData[listCounter] = eventMessage;
             String[] tempMessage = eventMessage.split(":");
 
-            new XMLParsing(saveEvent).execute(tempMessage);
+            new XMLParsing(saveEvent, this).execute(tempMessage);
         }
     }
 
@@ -166,9 +171,11 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
     private class XMLParsing extends AsyncTask<String, Void, String[]> {
         private final boolean addEvents;
         private String[] eventMessages;
+        private Vibrator vibrator;
 
-        public XMLParsing(boolean addEvents){
+        public XMLParsing(boolean addEvents, Context context){
             this.addEvents = addEvents;
+            this.vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
         }
 
         @Override
@@ -177,14 +184,14 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
             String[] eventDescription = new String[] {"", "", "", "", ""}; // Title, Description, Actions, Consequences, Causes
             String filename = "";
             try {
+                Log.d("showEvent", "eventMessages[2]: " + eventMessages[2]);
+                Log.d("showEvent", "eventMessages[1]: " + eventMessages[1]);
                 // Choose between the .xml files
                 switch (Integer.parseInt(eventMessages[1])){
                     case 1:
                         if (Integer.parseInt(eventMessages[2]) <= 175) filename = "elog/"+"opr_"+"elogtext_"+1+".xml";
                         if ((Integer.parseInt(eventMessages[2]) > 175) && (Integer.parseInt(eventMessages[2]) <= 1231)) filename = "elog/"+"opr_"+"elogtext_"+2+".xml";
                         if (Integer.parseInt(eventMessages[2]) > 1231) filename = "elog/"+"opr_"+"elogtext_"+3+".xml";
-                        Log.d("showEvent", "filename: " + filename);
-                        Log.d("showEvent", "eventMessages[2]: " + eventMessages[2]);
                         break;
                     case 2:
                         if (Integer.parseInt(eventMessages[2]) <= 150) filename = "elog/"+"sys_"+"elogtext_"+1+".xml";
@@ -295,10 +302,13 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
 
         protected void onPostExecute(String[] result) {
             if (addEvents) setEventList(result[0]); // Save event to list and show header in list view
-            // Show dialog, when the motor is in off state
-            if ((eventMessages[0].equals("0")) || !addEvents) customDialog.showDialog(result);
-            Log.d("showEvent", "onPostExecute");
 
+            // Show dialog, when the motor is in off state
+            if ((eventMessages[0].equals("0")) || !addEvents){
+                customDialog.showDialog(result);
+                if (addEvents) vibrator.vibrate(200);
+            }
+            Log.d("showEvent", "onPostExecute");
             // For testing
             //customDialog.showDialog(eventData);
         }

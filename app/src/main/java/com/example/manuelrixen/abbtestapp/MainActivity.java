@@ -4,6 +4,7 @@ import android.app.FragmentTransaction;
 import android.app.TabActivity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.PowerManager;
 import android.os.Bundle;
 import android.support.v4.app.*;
@@ -13,6 +14,8 @@ import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.WindowManager;
 import android.widget.TabHost;
 
 
@@ -41,20 +44,13 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
     private TabHost tabHost;
     private BaseData baseData;
 
+    // TODO Check why zonenbahn-fehler isnt shown as event
+    // TODO Add different pictures to dialog (warning, info, error)
+    // TODO Change order of list entries
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        if (Build.VERSION.SDK_INT < 16) {
-//            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-//                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
-//        }
-//        else {
-//            View decorView = getWindow().getDecorView();
-//            // Hide the status bar.
-//            int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-//            decorView.setSystemUiVisibility(uiOptions);
-//        }
         setContentView(R.layout.activity_main);
 
         baseData = new BaseData(this);
