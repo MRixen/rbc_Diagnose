@@ -11,19 +11,35 @@ android:orientation="vertical"
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/cycleTimeHeader"
+            android:id="@+id/cycleTimeActualHeader"
             android:textSize="24sp"
-            android:layout_marginLeft="160dp"
-            android:layout_marginTop="90dp"
-            android:text="Cycle time [s]: "/>
+            android:layout_marginTop="15dp"
+            android:text="Actual [s]: "/>
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/cycleTimeTextField"
+            android:id="@+id/cycleTimeTextField_actual"
             android:textSize="24sp"
-            android:layout_alignBottom="@+id/cycleTimeHeader"
-            android:layout_toRightOf="@+id/cycleTimeHeader"/>
+            android:layout_alignBottom="@+id/cycleTimeActualHeader"
+            android:layout_toRightOf="@+id/cycleTimeActualHeader"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cycleTimeMeanHeader"
+        android:layout_below="@id/cycleTimeTextField_actual"
+        android:textSize="24sp"
+        android:layout_marginTop="15dp"
+        android:text="Mean [s]: "/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cycleTimeTextField_mean"
+        android:textSize="24sp"
+        android:layout_alignBottom="@+id/cycleTimeMeanHeader"
+        android:layout_toRightOf="@+id/cycleTimeMeanHeader"/>
 
         <Button
             android:layout_width="wrap_content"

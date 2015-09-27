@@ -21,13 +21,14 @@ import com.example.manuelrixen.abbtestapp.Socket.Receiver;
 
 public class CycleTime extends Activity implements Receiver.EventListener, View.OnTouchListener, View.OnClickListener {
 
-    private TextView cycleTimeViewer;
+    private TextView cycleTimeViewer_actual, cycleTimeViewer_mean;
     private CycleTimeDrawThread cycleTimeDrawThread;
     private boolean dialogIsActive = false;
     private boolean firstStart = true;
     private Button clearButton;
     private RelativeLayout actLayout;
-
+    private float[] actualTimeData = new float[20];
+    private float[] meanTimeData = new float[20];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +40,8 @@ public class CycleTime extends Activity implements Receiver.EventListener, View.
 
         clearButton.setOnClickListener(this);
         actLayout.setOnTouchListener(this);
-        cycleTimeViewer = (TextView) findViewById(R.id.cycleTimeTextField);
+        cycleTimeViewer_actual = (TextView) findViewById(R.id.cycleTimeTextField_actual);
+        cycleTimeViewer_mean = (TextView) findViewById(R.id.cycleTimeTextField_mean);
 
         cycleTimeDrawThread = new CycleTimeDrawThread(this);
 
@@ -73,15 +75,34 @@ public class CycleTime extends Activity implements Receiver.EventListener, View.
 
 
     private void showMessage(String msgType, String msg) {
-        if (msgType.equals("c")){
-            String msgTemp = msg.replace(",", ".");
-            cycleTimeViewer.setText(msgTemp);
+        if (msgType.equals("c1")){
+            String msgTemp = msg.replace(".", ",");
+            cycleTimeViewer_actual.setText(msgTemp);
             try {
                 if (dialogIsActive) sendDataToNode(Float.parseFloat(msgTemp), "cycleTimeData");
             }
             catch(NullPointerException e){
                 Log.d("Console:showMessage", String.valueOf(e));
             }
+        }
+        if (msgType.equals("c2")){
+            String msgTemp = msg.replace(".", ",");
+            cycleTimeViewer_mean.setText(msgTemp);
+        }
+        if (msgType.equals("c3")){
+            String[] actualTimeDataTemp = msg.split("_");
+            // TODO: Show mean and actual cycle time as graph
+            for (int i=0;i<=actualTimeDataTemp.length-1;i++){
+                actualTimeData[i] = Float.parseFloat(actualTimeDataTemp[i].replace(",", "."));
+            }
+            Log.d("Actual time: ", msg);
+        }
+        if (msgType.equals("c4")){
+            String[] meanTimeDataTemp = msg.split("_");
+            for (int i=0;i<=meanTimeDataTemp.length-1;i++){
+                meanTimeData[i] = Float.parseFloat(meanTimeDataTemp[i].replace(",", "."));
+            }
+            Log.d("Mean time: ", msg);
         }
     }
 
@@ -103,9 +124,8 @@ public class CycleTime extends Activity implements Receiver.EventListener, View.
     @Override
     public void onClick(View v) {
         // Handle click event when clear button is pressed
-        if (cycleTimeViewer != null){
-            cycleTimeViewer.setText("");
-        }
+            cycleTimeViewer_actual.setText("");
+            cycleTimeViewer_mean.setText("");
     }
 
 }

@@ -306,7 +306,7 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
             // Show dialog, when the motor is in off state
             if ((eventMessages[0].equals("0")) || !addEvents){
                 customDialog.showDialog(result);
-                if (addEvents) vibrator.vibrate(200);
+                if (addEvents) vibrator.vibrate(800);
             }
             Log.d("showEvent", "onPostExecute");
             // For testing
