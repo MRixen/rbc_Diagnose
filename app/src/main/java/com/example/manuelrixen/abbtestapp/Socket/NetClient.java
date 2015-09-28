@@ -1,6 +1,7 @@
 package com.example.manuelrixen.abbtestapp.Socket;
 
 import android.util.Log;
+import android.util.TimingLogger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -38,6 +39,7 @@ public class NetClient {
     public NetClient(String host, int port) {
         this.host = host;
         this.port = port;
+
     }
 
     public boolean connectWithServer() {

@@ -15,6 +15,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.manuelrixen.abbtestapp.BaseData;
+import com.example.manuelrixen.abbtestapp.CustomEventDialog;
+import com.example.manuelrixen.abbtestapp.CustomGraphDialog;
 import com.example.manuelrixen.abbtestapp.Drawing.CycleTimeDrawThread;
 import com.example.manuelrixen.abbtestapp.R;
 import com.example.manuelrixen.abbtestapp.Socket.Receiver;
@@ -22,13 +24,13 @@ import com.example.manuelrixen.abbtestapp.Socket.Receiver;
 public class CycleTime extends Activity implements Receiver.EventListener, View.OnTouchListener, View.OnClickListener {
 
     private TextView cycleTimeViewer_actual, cycleTimeViewer_mean;
-    private CycleTimeDrawThread cycleTimeDrawThread;
     private boolean dialogIsActive = false;
     private boolean firstStart = true;
     private Button clearButton;
     private RelativeLayout actLayout;
-    private float[] actualTimeData = new float[20];
-    private float[] meanTimeData = new float[20];
+    private float[] actualTimeData = new float[16];
+    private float[] meanTimeData = new float[16];
+    private CustomGraphDialog customGraphDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,11 +41,12 @@ public class CycleTime extends Activity implements Receiver.EventListener, View.
         actLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
 
         clearButton.setOnClickListener(this);
-        actLayout.setOnTouchListener(this);
         cycleTimeViewer_actual = (TextView) findViewById(R.id.cycleTimeTextField_actual);
+        cycleTimeViewer_actual.setOnTouchListener(this);
         cycleTimeViewer_mean = (TextView) findViewById(R.id.cycleTimeTextField_mean);
+        cycleTimeViewer_mean.setOnTouchListener(this);
 
-        cycleTimeDrawThread = new CycleTimeDrawThread(this);
+        customGraphDialog = new CustomGraphDialog(this);
 
         Bundle bundle = getIntent().getExtras();
         BaseData baseData = (BaseData)bundle.getSerializable("baseData");
@@ -78,12 +81,6 @@ public class CycleTime extends Activity implements Receiver.EventListener, View.
         if (msgType.equals("c1")){
             String msgTemp = msg.replace(".", ",");
             cycleTimeViewer_actual.setText(msgTemp);
-            try {
-                if (dialogIsActive) sendDataToNode(Float.parseFloat(msgTemp), "cycleTimeData");
-            }
-            catch(NullPointerException e){
-                Log.d("Console:showMessage", String.valueOf(e));
-            }
         }
         if (msgType.equals("c2")){
             String msgTemp = msg.replace(".", ",");
@@ -94,6 +91,14 @@ public class CycleTime extends Activity implements Receiver.EventListener, View.
             // TODO: Show mean and actual cycle time as graph
             for (int i=0;i<=actualTimeDataTemp.length-1;i++){
                 actualTimeData[i] = Float.parseFloat(actualTimeDataTemp[i].replace(",", "."));
+            }
+            try {
+                if (customGraphDialog.getDialogState()) {
+                    sendDataToNode(actualTimeData, "cycleTimeData");
+                }
+            }
+            catch(NullPointerException e){
+                Log.d("Console:showMessage", String.valueOf(e));
             }
             Log.d("Actual time: ", msg);
         }
@@ -106,18 +111,18 @@ public class CycleTime extends Activity implements Receiver.EventListener, View.
         }
     }
 
-    private void sendDataToNode(float data, String name) {
+    private void sendDataToNode(float[] data, String name) {
         Bundle bundle = new Bundle();
         Message msg1 = new Message();
 
-        bundle.putFloat(name, data);
+        bundle.putFloatArray(name, data);
         msg1.setData(bundle);
         if (BaseData.sendToVisualization != null) BaseData.sendToVisualization.sendMessage(msg1);
     }
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        //setDialog(getActivity());
+        customGraphDialog.showDialog();
         return false;
     }
 

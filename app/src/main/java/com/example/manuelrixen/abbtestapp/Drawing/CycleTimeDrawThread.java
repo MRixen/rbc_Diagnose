@@ -152,25 +152,25 @@ public class CycleTimeDrawThread extends android.view.SurfaceView implements Run
         Looper.prepare();
         threadHandler = new Handler();
 
-        try {
-            canvas = surfaceHolder.lockCanvas();
-            drawLayout(true, 0);
-            surfaceHolder.unlockCanvasAndPost(canvas);
-        }
-        catch(Exception e){
-            Log.e("@GlobalLayout#run: ", "Exception: " + e);
-        }
+//        try {
+//            canvas = surfaceHolder.lockCanvas();
+//            drawLayout(true, 0);
+//            surfaceHolder.unlockCanvasAndPost(canvas);
+//        }
+//        catch(Exception e){
+//            Log.e("@GlobalLayout#run: ", "Exception: " + e);
+//        }
 
         // Handler to receive and visualize sensor data
         BaseData.sendToVisualization = new Handler() {
             public void handleMessage(Message msg) {
                 Bundle bundle = msg.getData();
 
-                float data;
+                float[] data;
 
                 if (bundle != null) {
                     if(bundle.containsKey("cycleTimeData")) {
-                        data = bundle.getFloat("cycleTimeData");
+                        data = bundle.getFloatArray("cycleTimeData");
                             try {
                                 canvas = surfaceHolder.lockCanvas();
                                 drawLayout(false, data);
@@ -206,23 +206,11 @@ public class CycleTimeDrawThread extends android.view.SurfaceView implements Run
         else return 0;
     }
 
-    public void drawLayout(boolean showBackground, float yData) {
-        Paint paint = new Paint();
-        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
-        canvas.drawPaint(paint);
-        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC));
-
-        // Save y data in array
-        if (cntr < MAX_X_VALUES-1){
-            pointData[cntr] = yData;
-            cntr += 1;
-        }
-        else{
-            for (int i=0;i<=MAX_X_VALUES-1;i++) {
-                if (i>=1) pointData[i-1] = pointData[i];
-            }
-            pointData[9] = yData;
-        }
+    public void drawLayout(boolean showBackground, float[] yData) {
+//        Paint paint = new Paint();
+//        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
+//        canvas.drawPaint(paint);
+//        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC));
 
         // Draw axis
         canvas.drawLine(yAxis[0], yAxis[1], yAxis[0], yAxis[3], axisPaint);
@@ -231,8 +219,8 @@ public class CycleTimeDrawThread extends android.view.SurfaceView implements Run
         canvas.drawLine(borderOffset, ((MAX_CYCLE_TIME*scaleYaxis)+borderOffset), xAxis[2]+borderOffset, ((MAX_CYCLE_TIME*scaleYaxis)+borderOffset), graphPaint);
 
         for (int i=0;i<=MAX_X_VALUES-1;i++){
-            if (pointData[i] != 0) canvas.drawPoint(((i*scaleXaxis)+borderOffset+(pointStroke/2)), ((pointData[i]*scaleYaxis)+borderOffset+(pointStroke/2)), pointPaint);
-            if (i<pointData.length-1 && pointData[i] != 0) canvas.drawLine(((i*scaleXaxis)+borderOffset+(pointStroke/2)), ((pointData[i]*scaleYaxis)+borderOffset+(pointStroke/2)), (((i+1)*scaleXaxis)+borderOffset+(pointStroke/2)), ((pointData[i+1]*scaleYaxis)+borderOffset+(pointStroke/2)), linePaint);
+            if (yData[i] != 0) canvas.drawPoint(((i*scaleXaxis)+borderOffset+(pointStroke/2)), ((yData[i]*scaleYaxis)+borderOffset+(pointStroke/2)), pointPaint);
+            if (i<yData.length-1 && yData[i] != 0) canvas.drawLine(((i*scaleXaxis)+borderOffset+(pointStroke/2)), ((yData[i]*scaleYaxis)+borderOffset+(pointStroke/2)), (((i+1)*scaleXaxis)+borderOffset+(pointStroke/2)), ((pointData[i+1]*scaleYaxis)+borderOffset+(pointStroke/2)), linePaint);
         }
 
         // Draw cycle time data
@@ -242,16 +230,17 @@ public class CycleTimeDrawThread extends android.view.SurfaceView implements Run
 //        }
 
         // Get min / max values of cycle data
-        final float[] pointDataTemp = pointData;
+        final float[] pointDataTemp = yData;
         Arrays.sort(pointDataTemp);
+        Log.d("pointDataTemp", String.valueOf(pointDataTemp[0]));
 
         // Show min / max values of cycle time
         activity.runOnUiThread(new Runnable() {
 
             @Override
             public void run() {
-                minValue.setText("Min.:" + String.valueOf(pointDataTemp[0]));
-                maxValue.setText("Max.:" + String.valueOf(pointDataTemp[pointDataTemp.length - 1]));
+                minValue.setText("Min.: " + String.valueOf(pointDataTemp[0]));
+                maxValue.setText("Max.: " + String.valueOf(pointDataTemp[pointDataTemp.length - 1]));
             }
         });
 

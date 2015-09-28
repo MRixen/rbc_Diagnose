@@ -19,7 +19,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.manuelrixen.abbtestapp.BaseData;
-import com.example.manuelrixen.abbtestapp.CustomDialog;
+import com.example.manuelrixen.abbtestapp.CustomEventDialog;
 import com.example.manuelrixen.abbtestapp.R;
 import com.example.manuelrixen.abbtestapp.Socket.Receiver;
 
@@ -39,7 +39,7 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
     private boolean firstStart = true;
     private XmlPullParserFactory xmlFactoryObject;
     private XmlPullParser xmlParser;
-    private CustomDialog customDialog;
+    private CustomEventDialog customEventDialog;
 
     private boolean firstRun = true;
     private boolean initOk = false;
@@ -81,7 +81,7 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
             e.printStackTrace();
             Log.d("xml_parser", "error1");
         }
-        customDialog = new CustomDialog(this);
+        customEventDialog = new CustomEventDialog(this);
 
 
         Bundle bundle = getIntent().getExtras();
@@ -305,7 +305,7 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
 
             // Show dialog, when the motor is in off state
             if ((eventMessages[0].equals("0")) || !addEvents){
-                customDialog.showDialog(result);
+                customEventDialog.showDialog(result);
                 if (addEvents) vibrator.vibrate(800);
             }
             Log.d("showEvent", "onPostExecute");

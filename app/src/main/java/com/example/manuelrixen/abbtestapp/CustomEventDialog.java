@@ -11,11 +11,11 @@ import android.widget.TextView;
 /**
  * Created by Manuel.Rixen on 05.09.2015.
  */
-public class CustomDialog extends Dialog{
+public class CustomEventDialog extends Dialog{
 
     private TextView descriptionText, actionText, header, consequencesText, causesText;
 
-    public CustomDialog(Context context) {
+    public CustomEventDialog(Context context) {
         super(context);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.dialog_events);
@@ -51,6 +51,7 @@ public class CustomDialog extends Dialog{
     }
 
     public void showDialog(String[] dialogMessages) {
+        // TODO: Set different images for events
         header.setText(dialogMessages[0]);
         descriptionText.setText(dialogMessages[1]);
         actionText.setText(dialogMessages[2]);
