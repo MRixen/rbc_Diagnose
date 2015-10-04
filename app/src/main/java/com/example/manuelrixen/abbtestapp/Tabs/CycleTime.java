@@ -15,9 +15,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.manuelrixen.abbtestapp.BaseData;
-import com.example.manuelrixen.abbtestapp.CustomEventDialog;
 import com.example.manuelrixen.abbtestapp.CustomGraphDialog;
-import com.example.manuelrixen.abbtestapp.Drawing.CycleTimeDrawThread;
 import com.example.manuelrixen.abbtestapp.R;
 import com.example.manuelrixen.abbtestapp.Socket.Receiver;
 
@@ -32,10 +30,13 @@ public class CycleTime extends Activity implements Receiver.EventListener, View.
     private float[] meanTimeData = new float[16];
     private CustomGraphDialog customGraphDialog;
 
+    private BaseData baseData;
+    private Receiver receiver;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_section_2);
+        setContentView(R.layout.fragment_section_cycletime);
 
         clearButton = (Button) findViewById(R.id.buttonClear);
         actLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
@@ -49,9 +50,7 @@ public class CycleTime extends Activity implements Receiver.EventListener, View.
         customGraphDialog = new CustomGraphDialog(this);
 
         Bundle bundle = getIntent().getExtras();
-        BaseData baseData = (BaseData)bundle.getSerializable("baseData");
-        Receiver receiver = baseData.getReceiver();
-        receiver.registerListener(this);
+        baseData = (BaseData)bundle.getSerializable("baseData");
     }
 
     @Override
@@ -76,6 +75,17 @@ public class CycleTime extends Activity implements Receiver.EventListener, View.
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (receiver == null) {
+            try {
+                receiver = baseData.getReceiver();
+                receiver.registerListener(this);
+            }catch(NullPointerException e){}
+        }
+    }
+
 
     private void showMessage(String msgType, String msg) {
         if (msgType.equals("c1")){
@@ -94,7 +104,8 @@ public class CycleTime extends Activity implements Receiver.EventListener, View.
             }
             try {
                 if (customGraphDialog.getDialogState()) {
-                    sendDataToNode(actualTimeData, "cycleTimeData");
+                    Log.d("actualTimeData", String.valueOf(actualTimeData[0]));
+//                    sendDataToNode(actualTimeData, "cycleTimeData");
                 }
             }
             catch(NullPointerException e){

@@ -5,47 +5,38 @@ import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.SurfaceView;
+import android.view.View;
 import android.view.Window;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
-
-import com.example.manuelrixen.abbtestapp.Drawing.CycleTimeDrawThread;
 
 /**
  * Created by Manuel.Rixen on 05.09.2015.
  */
-public class CustomGraphDialog extends Dialog{
+public class CustomDecisionDialog extends Dialog{
 
-    private final TextView minCycleTimeText, maxCycleTimeText;
-    private SurfaceView surfaceView;
-    private CycleTimeDrawThread cycleTimeDrawThread;
-    private boolean dialogIsActive = false;
+    private EditText inputTextField;
+    private Button yesButton, noButton;
+    private TextView descriptionText;
+    private boolean result;
 
-    public CustomGraphDialog(Context context) {
+    public CustomDecisionDialog(Context context) {
         super(context);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.dialog_cycletimegraph);
+        setContentView(R.layout.dialog_decision);
 
         int dialogWidth = calcDimPercentage("width", 60, context);
         int dialogHeight = calcDimPercentage("height", 95, context);
 
         Window dialogWindow = this.getWindow();
+        dialogWindow.setBackgroundDrawable(new ColorDrawable(context.getResources().getColor(R.color.ModernWhite)));
         dialogWindow.setTitleColor(context.getResources().getColor(R.color.ModernWhite));
         dialogWindow.setLayout(dialogWidth, dialogHeight);
 
-        maxCycleTimeText = (TextView) this.findViewById(R.id.textFieldMaxCycleTime);
-        minCycleTimeText = (TextView) this.findViewById(R.id.textFieldMinCycleTime);
-        surfaceView = (SurfaceView) this.findViewById(R.id.surface_graph);
-
-//        cycleTimeDrawThread = new CycleTimeDrawThread(context);
-//        cycleTimeDrawThread.startDrawThread(surfaceView,dialogWidth,dialogHeight,minCycleTimeText,maxCycleTimeText);
-    }
-
-    @Override
-    public void onDetachedFromWindow() {
-        super.onDetachedFromWindow();
-        dialogIsActive = false;
-        Log.d("onDetachedFromWindow", "inside");
+        descriptionText = (TextView) this.findViewById(R.id.description);
+        yesButton = (Button) this.findViewById(R.id.yes_button);
+        noButton = (Button) this.findViewById(R.id.no_button);
     }
 
     public int calcDimPercentage(String dimType, int dimPercentage, Context context){
@@ -63,13 +54,24 @@ public class CustomGraphDialog extends Dialog{
         else return 0;
     }
 
-    public void showDialog() {
+    public boolean showDialog(String dialogHeader) {
+        result = false;
+        descriptionText.setText(dialogHeader);
+
+        yesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                result = true;
+            }
+        });
+        noButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                result = false;
+            }
+        });
         show();
-        dialogIsActive = true;
-    }
 
-    public boolean getDialogState(){
-
-        return dialogIsActive;
+        return result;
     }
 }

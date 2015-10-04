@@ -11,31 +11,13 @@ import java.net.Socket;
 
 public class NetClient {
 
-    /**
-     * Maximum size of buffer
-     */
-    public static final int BUFFER_SIZE = 2048;
     private Socket socket = null;
-    private Socket socket2 = null;
-    private Socket socket3 = null;
     private PrintWriter out = null;
     private BufferedReader in = null;
-    private BufferedReader in2 = null;
-
     private String host = null;
-    private String macAddress = null;
-    private int port = 8888;
-    private int cntr = 0;
-    private String msgString = "";
-    private String msgString2 = "";
-    private String command = "";
+    private int port;
 
 
-    /**
-     * Constructor with Host, Port and MAC Address
-     * @param host
-     * @param port
-     */
     public NetClient(String host, int port) {
         this.host = host;
         this.port = port;
@@ -80,9 +62,7 @@ public class NetClient {
 
     public String[] receiveDataFromServer() {
         String incomingMessage = "";
-        String message = "";
         String[] msgArray = new String[] {"",""};
-        boolean bTemp = false;
         boolean  commandMessage = false;
         boolean  normalMessage = false;
         boolean itsACommand = false;

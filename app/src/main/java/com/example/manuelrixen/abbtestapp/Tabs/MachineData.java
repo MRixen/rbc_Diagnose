@@ -10,8 +10,6 @@ import com.example.manuelrixen.abbtestapp.BaseData;
 import com.example.manuelrixen.abbtestapp.R;
 import com.example.manuelrixen.abbtestapp.Socket.Receiver;
 
-import java.io.Serializable;
-
 /**
  * Created by Manuel.Rixen on 23.08.2015.
  */
@@ -23,10 +21,13 @@ public class MachineData extends Activity implements Receiver.EventListener {
 
     private String[] machineData = new String[MAX_TABLE_ENTRIES];
 
+    private BaseData baseData;
+    private Receiver receiver;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_section_1);
+        setContentView(R.layout.fragment_section_machinedata);
 
         int[] textViewIds = new int[] {R.id.text_machine, R.id.text_project, R.id.text_build, R.id.text_fat,
                 R.id.text_sop, R.id.text_serial, R.id.text_version, R.id.text_rtype,
@@ -42,9 +43,18 @@ public class MachineData extends Activity implements Receiver.EventListener {
         }
 
         Bundle bundle = getIntent().getExtras();
-        BaseData baseData = (BaseData)bundle.getSerializable("baseData");
-        Receiver receiver = baseData.getReceiver();
-        receiver.registerListener(this);
+        baseData = (BaseData)bundle.getSerializable("baseData");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (receiver == null) {
+            try {
+                receiver = baseData.getReceiver();
+                receiver.registerListener(this);
+            }catch(NullPointerException e){}
+        }
     }
 
     @Override

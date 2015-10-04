@@ -22,11 +22,13 @@ public class Logging extends Activity implements Receiver.EventListener, View.On
     private int logCounter = 0;
     private int MAX_LOG_COUNTER = 100;
     private String[] logData = new String[MAX_LOG_COUNTER];
+    private BaseData baseData;
+    private Receiver receiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_section_3);
+        setContentView(R.layout.fragment_section_logging);
 
         Button clearButton = (Button) findViewById(R.id.buttonClear);
         clearButton.setOnClickListener(this);
@@ -34,11 +36,20 @@ public class Logging extends Activity implements Receiver.EventListener, View.On
         loggingViewer.setMovementMethod(new ScrollingMovementMethod());
 
         Bundle bundle = getIntent().getExtras();
-        BaseData baseData = (BaseData)bundle.getSerializable("baseData");
-        Receiver receiver = baseData.getReceiver();
-        receiver.registerListener(this);
+        baseData = (BaseData)bundle.getSerializable("baseData");
+
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (receiver == null) {
+            try {
+                receiver = baseData.getReceiver();
+                receiver.registerListener(this);
+            }catch(NullPointerException e){}
+        }
+    }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
@@ -71,6 +82,7 @@ public class Logging extends Activity implements Receiver.EventListener, View.On
     private void showMessage(String msgType, String msg) {
         if (msgType.equals("l")){
             logData[logCounter] = msg;
+            // TODO Prevent to show empty line and white spaces at first
             loggingViewer.setText(logData[logCounter] + "\n" + loggingViewer.getText());
             if (logCounter <= MAX_LOG_COUNTER - 1) logCounter += 1;
             else logCounter = 0;

@@ -29,7 +29,6 @@ import java.io.Serializable;
 public class BaseData implements Serializable{
     public static Handler sendToVisualization = null;
     private final Context context;
-    public Receiver.EventListener eventListener = null;
     private Receiver receiver;
 
     public BaseData(Context context){
@@ -40,14 +39,17 @@ public class BaseData implements Serializable{
         this.receiver = new Receiver(context, ip, port);
         Thread rThread = new Thread(receiver);
         rThread.start();
-        try {
-            Thread.sleep(50);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Thread.sleep(50);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
     }
 
     public Receiver getReceiver(){
         return this.receiver;
+    }
+    public void resetReceiver(){
+        this.receiver = null;
     }
 }

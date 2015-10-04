@@ -41,8 +41,6 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
     private XmlPullParser xmlParser;
     private CustomEventDialog customEventDialog;
 
-    private boolean firstRun = true;
-    private boolean initOk = false;
     private ArrayList<String> eventList;
     private String[] eventData = new String[]{"", "", "", "", "", "", "", ""};
     private ArrayAdapter<String> arrayAdapter;
@@ -51,14 +49,14 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
     private String[] listViewEntryData = new String[MAX_LIST_COUNTER];
     private Button clearButton;
     private SharedPreferences sharedPreferences;
-    private HashSet<String> eventSet;
-
+    private BaseData baseData;
+    private Receiver receiver;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_section_4);
+        setContentView(R.layout.fragment_section_events);
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
         clearButton = (Button) findViewById(R.id.buttonClear);
@@ -85,9 +83,8 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
 
 
         Bundle bundle = getIntent().getExtras();
-        BaseData baseData = (BaseData)bundle.getSerializable("baseData");
-        Receiver receiver = baseData.getReceiver();
-        receiver.registerListener(this);
+        baseData = (BaseData)bundle.getSerializable("baseData");
+
 
         // For testing
 //         showEvent("e", "0_0_2_X_ _ _ _ ", true);
@@ -111,6 +108,16 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (receiver == null) {
+            try {
+                receiver = baseData.getReceiver();
+                receiver.registerListener(this);
+            }catch(NullPointerException e){}
+        }
+    }
 
     @Override
     public void onError() {

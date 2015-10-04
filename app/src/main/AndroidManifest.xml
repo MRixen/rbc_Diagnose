@@ -68,6 +68,15 @@
                 android:value=".MainActivity"/>
         </activity>
 
+        <activity
+            android:name=".Tabs.EntryPoint"
+            android:screenOrientation="landscape"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+
 
     </application>
 </manifest>

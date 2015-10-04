@@ -24,7 +24,6 @@ public class Receiver implements Runnable {
     private NetClient nc;
     private String data[] = new String[]{"", ""};
     private Activity activity = new Activity();
-    private EventListener eventListener;
     private ArrayList<EventListener> listeners = new ArrayList<EventListener>();
 
     public Receiver(Context context, String ip, String port) {
