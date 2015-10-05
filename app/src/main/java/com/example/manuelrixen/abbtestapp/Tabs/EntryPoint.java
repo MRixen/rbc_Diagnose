@@ -23,6 +23,7 @@ import com.example.manuelrixen.abbtestapp.R;
 import com.example.manuelrixen.abbtestapp.Socket.Receiver;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class EntryPoint extends Activity implements View.OnClickListener, AdapterView.OnItemClickListener {
 
@@ -90,10 +91,9 @@ public class EntryPoint extends Activity implements View.OnClickListener, Adapte
             String port = iData.getString("port");
             // Save to list view and show dialog to set name for it
             if (eventListDescriptions != null && eventListData != null) {
-                String descriptionText = customInputDialog.showDialog("Bitte Beschreibung setzen.");
-                // TODO Get text from edit text field
-                Log.d("description: ", descriptionText);
-                eventListDescriptions.add(0, descriptionText);
+                // TODO Show options by long click on list view (rename, remove)
+                Calendar c = Calendar.getInstance();
+                eventListDescriptions.add(0,  c.getTime().toString()+";"+ip+";"+port);
                 eventListData.add(0, ip+";"+port);
                 arrayAdapter.notifyDataSetChanged();
             }
@@ -112,9 +112,22 @@ public class EntryPoint extends Activity implements View.OnClickListener, Adapte
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         arrayAdapter.getItem(position);
-        boolean answer = customDecisionDialog.showDialog("Wollen Sie die Verbindung wirklich aufbauen?");
+        final boolean[] answer = {false};
+        View.OnClickListener yesButtonAnswer = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                answer[0] = true;
+            }
+        };
+        View.OnClickListener noButtonAnswer = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                answer[0] = false;
+            }
+        };
+        customDecisionDialog.showDialog("Wollen Sie die Verbindung wirklich aufbauen?", yesButtonAnswer, noButtonAnswer);
         // Set new connection from the list view
-        if (answer) {
+        if (answer[0]) {
             String[] connectionData = eventListData.get(position).split(";");
             try {
                 Receiver receiver = baseData.getReceiver();

@@ -54,24 +54,12 @@ public class CustomDecisionDialog extends Dialog{
         else return 0;
     }
 
-    public boolean showDialog(String dialogHeader) {
+    public void showDialog(String dialogHeader, View.OnClickListener yesButtonListener, View.OnClickListener noButtonListener) {
         result = false;
         descriptionText.setText(dialogHeader);
 
-        yesButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                result = true;
-            }
-        });
-        noButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                result = false;
-            }
-        });
+        yesButton.setOnClickListener(yesButtonListener);
+        noButton.setOnClickListener(noButtonListener);
         show();
-
-        return result;
     }
 }
