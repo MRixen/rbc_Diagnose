@@ -31,7 +31,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.HashSet;
 
 public class Events extends Activity implements Receiver.EventListener, AdapterView.OnItemClickListener, View.OnClickListener {
 
@@ -51,6 +50,8 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
     private SharedPreferences sharedPreferences;
     private BaseData baseData;
     private Receiver receiver;
+
+    // TODO Check why the vibrator not work by second stop
 
 
     @Override
@@ -147,8 +148,6 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
         arrayAdapter.getItem(position);
         // Calc position because its different order
         position = (position+arrayAdapter.getCount())-(2*position)-1;
-        Log.d("position", String.valueOf(position));
-        Log.d("arrayAdapter.getCount", String.valueOf(arrayAdapter.getCount()));
         // Show dialog with the complete event info
         if (listViewEntryData[position] != null) showEvent("e", listViewEntryData[position], false);
     }
@@ -188,11 +187,9 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
         @Override
         protected String[] doInBackground(String... eventMessages) {
             this.eventMessages = eventMessages;
-            String[] eventDescription = new String[] {"", "", "", "", ""}; // Title, Description, Actions, Consequences, Causes
+            String[] eventDescription = new String[] {"", "", "", "", "", ""}; // Title, Description, Actions, Consequences, Causes
             String filename = "";
             try {
-                Log.d("showEvent", "eventMessages[2]: " + eventMessages[2]);
-                Log.d("showEvent", "eventMessages[1]: " + eventMessages[1]);
                 // Choose between the .xml files
                 switch (Integer.parseInt(eventMessages[1])){
                     case 1:
@@ -264,19 +261,19 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
                             if(messageEntryFound && name.equals("Title")) eventDescription[0] = xmlParser.nextText();
                             if(messageEntryFound && name.equals("Description")){
                                 eventDescription[1] = xmlParser.nextText();
-                                eventDescription[1] = String.format(eventDescription[1], eventMessages[3], eventMessages[4], eventMessages[5], eventMessages[6], eventMessages[7]);
+                                eventDescription[1] = String.format(eventDescription[1], eventMessages[4], eventMessages[5], eventMessages[6], eventMessages[7], eventMessages[8]);
                             }
                             if(messageEntryFound && name.equals("Actions")){
                                 eventDescription[2] = xmlParser.nextText();
-                                eventDescription[2] = String.format(eventDescription[2], eventMessages[3], eventMessages[4], eventMessages[5], eventMessages[6], eventMessages[7]);
+                                eventDescription[2] = String.format(eventDescription[2], eventMessages[4], eventMessages[5], eventMessages[6], eventMessages[7], eventMessages[8]);
                             }
                             if(messageEntryFound && name.equals("Consequences")){
                                 eventDescription[3] = xmlParser.nextText();
-                                eventDescription[3] = String.format(eventDescription[3], eventMessages[3], eventMessages[4], eventMessages[5], eventMessages[6], eventMessages[7]);
+                                eventDescription[3] = String.format(eventDescription[3], eventMessages[4], eventMessages[5], eventMessages[6], eventMessages[7], eventMessages[8]);
                             }
                             if(messageEntryFound && name.equals("Causes")){
                                 eventDescription[4] = xmlParser.nextText();
-                                eventDescription[4] = String.format(eventDescription[4], eventMessages[3], eventMessages[4], eventMessages[5], eventMessages[6], eventMessages[7]);
+                                eventDescription[4] = String.format(eventDescription[4], eventMessages[4], eventMessages[5], eventMessages[6], eventMessages[7], eventMessages[8]);
                             }
                             break;
 
@@ -304,6 +301,8 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
                 e.printStackTrace();
                 Log.d("xml_parser4", String.valueOf(e));
             }
+            // Get error type to set the correct image (warning, error, etc.)
+            eventDescription[5] = eventMessages[3];
             return eventDescription;
         }
 
@@ -315,7 +314,8 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
                 customEventDialog.showDialog(result);
                 if (addEvents) vibrator.vibrate(800);
             }
-            Log.d("showEvent", "onPostExecute");
+            Log.d("onPostExecute1", eventMessages[0]);
+            Log.d("onPostExecute2", String.valueOf(addEvents));
             // For testing
             //customDialog.showDialog(eventData);
         }

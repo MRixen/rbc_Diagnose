@@ -2,23 +2,18 @@ package com.example.manuelrixen.abbtestapp;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.graphics.drawable.ColorDrawable;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.SurfaceView;
 import android.view.Window;
-import android.widget.TextView;
-
-import com.example.manuelrixen.abbtestapp.Drawing.CycleTimeDrawThread;
 
 /**
  * Created by Manuel.Rixen on 05.09.2015.
  */
 public class CustomGraphDialog extends Dialog{
 
-    private final TextView minCycleTimeText, maxCycleTimeText;
-    private SurfaceView surfaceView;
-    private CycleTimeDrawThread cycleTimeDrawThread;
+//    private final TextView minCycleTimeText, maxCycleTimeText;
+//    private SurfaceView surfaceView;
+//    private CycleTimeDrawThread cycleTimeDrawThread;
     private boolean dialogIsActive = false;
 
     public CustomGraphDialog(Context context) {
@@ -33,9 +28,21 @@ public class CustomGraphDialog extends Dialog{
         dialogWindow.setTitleColor(context.getResources().getColor(R.color.ModernWhite));
         dialogWindow.setLayout(dialogWidth, dialogHeight);
 
-        maxCycleTimeText = (TextView) this.findViewById(R.id.textFieldMaxCycleTime);
-        minCycleTimeText = (TextView) this.findViewById(R.id.textFieldMinCycleTime);
-        surfaceView = (SurfaceView) this.findViewById(R.id.surface_graph);
+        // TESTING
+//        GraphView graph = (GraphView) findViewById(R.id.graph);
+//        LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[] {
+//                new DataPoint(0, 1),
+//                new DataPoint(1, 5),
+//                new DataPoint(2, 3),
+//                new DataPoint(3, 2),
+//                new DataPoint(4, 6)
+//        });
+//        graph.addSeries(series);
+
+
+//        maxCycleTimeText = (TextView) this.findViewById(R.id.textFieldMaxCycleTime);
+//        minCycleTimeText = (TextView) this.findViewById(R.id.textFieldMinCycleTime);
+//        surfaceView = (SurfaceView) this.findViewById(R.id.surface_graph);
 
 //        cycleTimeDrawThread = new CycleTimeDrawThread(context);
 //        cycleTimeDrawThread.startDrawThread(surfaceView,dialogWidth,dialogHeight,minCycleTimeText,maxCycleTimeText);

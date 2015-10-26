@@ -4,30 +4,17 @@ import android.app.FragmentTransaction;
 import android.app.TabActivity;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
-import android.os.PowerManager;
 import android.os.Bundle;
-import android.support.v4.app.*;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.ViewPager;
-import android.util.Log;
+import android.os.PowerManager;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.WindowManager;
 import android.widget.TabHost;
 
-
 import com.example.manuelrixen.abbtestapp.Barcode.BarCodeReading;
-import com.example.manuelrixen.abbtestapp.Socket.Receiver;
 import com.example.manuelrixen.abbtestapp.Tabs.CycleTime;
-import com.example.manuelrixen.abbtestapp.Tabs.EntryPoint;
 import com.example.manuelrixen.abbtestapp.Tabs.Events;
 import com.example.manuelrixen.abbtestapp.Tabs.Logging;
 import com.example.manuelrixen.abbtestapp.Tabs.MachineData;
-
-import java.util.Locale;
 
 import static android.os.Process.myPid;
 
@@ -38,11 +25,12 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
     private PowerManager.WakeLock wl;
     private TabHost tabHost;
     private BaseData baseData;
+    private boolean firstRun = true;
 
     // TODO Check why zonenbahn-fehler isnt shown as event
-    // TODO Add different pictures to dialog (warning, info, error)
-    // TODO Change order of list entries
+    // TODO Ping at first to check that user is in the correct wlan connection
     // TODO Save last connection / Change entry point to: Choose between last connection and new connection
+    // TODO Solve performance issues
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +40,8 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
         baseData = new BaseData(this);
 
         // create the TabHost that will contain the Tabs
-        tabHost = getTabHost();
-        initTabs();
+        tabHost = (TabHost)findViewById(android.R.id.tabhost);//getTabHost();
+
 
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         wl = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "My Tag");
@@ -63,7 +51,10 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
     @Override
     protected void onResume() {
         super.onResume();
-
+        if (firstRun){
+            startBarcodeScanner();
+            firstRun = false;
+        }
     }
 
     @Override
@@ -72,6 +63,29 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
 //            for (int i = 0; i <= receiver.length-1; i++) {
 //                if(receiver[i] != null) receiver[i].stopRunRoutine();
 //            }
+    }
+
+    private void startBarcodeScanner() {
+        Intent barCodeReader = new Intent(this, BarCodeReading.class);
+        startActivityForResult(barCodeReader, 1);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(resultCode == RESULT_OK){
+            Bundle iData = data.getExtras();
+            String ip = iData.getString("ip");
+            String port = iData.getString("port");
+            try {
+//                Receiver receiver = baseData.getReceiver();
+//                receiver.stopRunRoutine();
+            }catch(NullPointerException e){}
+            initTabs();
+            baseData.startReceiver(ip, port);
+        }
+        if(resultCode == RESULT_CANCELED){
+//            finish();
+        }
     }
 
     @Override
@@ -122,17 +136,10 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
 
     private void initTabs() {
 
-        TabHost.TabSpec tab0 = tabHost.newTabSpec("Entry Point");
         TabHost.TabSpec tab1 = tabHost.newTabSpec("Events");
         TabHost.TabSpec tab2 = tabHost.newTabSpec("Logging");
         TabHost.TabSpec tab3 = tabHost.newTabSpec("CycleTime");
         TabHost.TabSpec tab4 = tabHost.newTabSpec("MachineData");
-
-
-        tab0.setIndicator("Entry Point");
-        Intent entryPointIntent = new Intent(this, EntryPoint.class);
-        entryPointIntent.putExtra("baseData", baseData);
-        tab0.setContent(entryPointIntent);
 
         tab1.setIndicator("Events");
         Intent eventIntent = new Intent(this, Events.class);
@@ -156,7 +163,7 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
         tab4.setContent(machineDataIntent);
 
         /** Add the tabs  to the TabHost to display. */
-        tabHost.addTab(tab0);
+
         tabHost.addTab(tab1);
         tabHost.addTab(tab2);
         tabHost.addTab(tab3);
@@ -167,6 +174,6 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
         tabHost.setCurrentTabByTag("Logging");
         tabHost.setCurrentTabByTag("CycleTime");
         tabHost.setCurrentTabByTag("MachineData");
-        tabHost.setCurrentTabByTag("Entry Point");
+
     }
 }

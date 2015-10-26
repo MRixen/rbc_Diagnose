@@ -15,7 +15,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.manuelrixen.abbtestapp.BaseData;
-import com.example.manuelrixen.abbtestapp.CustomGraphDialog;
 import com.example.manuelrixen.abbtestapp.R;
 import com.example.manuelrixen.abbtestapp.Socket.Receiver;
 
@@ -28,7 +27,7 @@ public class CycleTime extends Activity implements Receiver.EventListener, View.
     private RelativeLayout actLayout;
     private float[] actualTimeData = new float[16];
     private float[] meanTimeData = new float[16];
-    private CustomGraphDialog customGraphDialog;
+//    private CustomGraphDialog customGraphDialog;
 
     private BaseData baseData;
     private Receiver receiver;
@@ -47,7 +46,7 @@ public class CycleTime extends Activity implements Receiver.EventListener, View.
         cycleTimeViewer_mean = (TextView) findViewById(R.id.cycleTimeTextField_mean);
         cycleTimeViewer_mean.setOnTouchListener(this);
 
-        customGraphDialog = new CustomGraphDialog(this);
+//        customGraphDialog = new CustomGraphDialog(this);
 
         Bundle bundle = getIntent().getExtras();
         baseData = (BaseData)bundle.getSerializable("baseData");
@@ -103,10 +102,10 @@ public class CycleTime extends Activity implements Receiver.EventListener, View.
                 actualTimeData[i] = Float.parseFloat(actualTimeDataTemp[i].replace(",", "."));
             }
             try {
-                if (customGraphDialog.getDialogState()) {
-                    Log.d("actualTimeData", String.valueOf(actualTimeData[0]));
+//                if (customGraphDialog.getDialogState()) {
+//                    Log.d("actualTimeData", String.valueOf(actualTimeData[0]));
 //                    sendDataToNode(actualTimeData, "cycleTimeData");
-                }
+//                }
             }
             catch(NullPointerException e){
                 Log.d("Console:showMessage", String.valueOf(e));
@@ -133,7 +132,7 @@ public class CycleTime extends Activity implements Receiver.EventListener, View.
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        customGraphDialog.showDialog();
+//        customGraphDialog.showDialog();
         return false;
     }
 

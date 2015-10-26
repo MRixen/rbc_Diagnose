@@ -6,6 +6,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -13,6 +14,7 @@ import android.widget.TextView;
  */
 public class CustomEventDialog extends Dialog{
 
+    private final ImageView imageViewer;
     private TextView descriptionText, actionText, header, consequencesText, causesText;
 
     public CustomEventDialog(Context context) {
@@ -33,10 +35,11 @@ public class CustomEventDialog extends Dialog{
         actionText = (TextView) this.findViewById(R.id.actionText);
         consequencesText = (TextView) this.findViewById(R.id.consequencesText);
         causesText = (TextView) this.findViewById(R.id.causesText);
+        imageViewer = (ImageView) this.findViewById(R.id.icon);
     }
 
     public int calcDimPercentage(String dimType, int dimPercentage, Context context){
-
+        // TODO: Set dialog with optimal size...
         // Calculate display size
         DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
 
@@ -51,12 +54,23 @@ public class CustomEventDialog extends Dialog{
     }
 
     public void showDialog(String[] dialogMessages) {
-        // TODO: Set different images for events
         header.setText(dialogMessages[0]);
         descriptionText.setText(dialogMessages[1]);
         actionText.setText(dialogMessages[2]);
         consequencesText.setText(dialogMessages[3]);
         causesText.setText(dialogMessages[4]);
+        // Show different images for the error type
+        switch (dialogMessages[5]){
+            case "1":
+                imageViewer.setImageDrawable(getContext().getResources().getDrawable(R.drawable.info));
+                break;
+            case "2":
+                imageViewer.setImageDrawable(getContext().getResources().getDrawable(R.drawable.warning));
+                break;
+            case "3":
+                imageViewer.setImageDrawable(getContext().getResources().getDrawable(R.drawable.error));
+                break;
+        }
         show();
     }
 }

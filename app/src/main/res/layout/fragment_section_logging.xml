@@ -11,16 +11,15 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/scrollView">
-
-            <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/loggingTextField"
-            android:textSize="18sp"
-            android:maxLines="20"/>
         </ScrollView>
 
-        <Button
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loggingListView"
+        android:textSize="18sp"/>
+
+    <Button
             android:layout_width="@dimen/buttonSize"
             android:layout_height="wrap_content"
             android:id="@+id/buttonClear"

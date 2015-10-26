@@ -6,24 +6,28 @@ package com.example.manuelrixen.abbtestapp.Tabs;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.ListView;
 
 import com.example.manuelrixen.abbtestapp.BaseData;
 import com.example.manuelrixen.abbtestapp.R;
 import com.example.manuelrixen.abbtestapp.Socket.Receiver;
 
+import java.util.ArrayList;
+
 public class Logging extends Activity implements Receiver.EventListener, View.OnClickListener {
 
-    private TextView loggingViewer;
+    private ListView loggingViewer;
     private int logCounter = 0;
     private int MAX_LOG_COUNTER = 100;
-    private String[] logData = new String[MAX_LOG_COUNTER];
     private BaseData baseData;
     private Receiver receiver;
+    private ArrayList<String> loggingList;
+    private int MAX_LOG_AMOUNT = 10;
+    private ArrayAdapter<String> arrayAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +36,16 @@ public class Logging extends Activity implements Receiver.EventListener, View.On
 
         Button clearButton = (Button) findViewById(R.id.buttonClear);
         clearButton.setOnClickListener(this);
-        loggingViewer = (TextView) findViewById(R.id.loggingTextField);
-        loggingViewer.setMovementMethod(new ScrollingMovementMethod());
+        loggingViewer = (ListView) findViewById(R.id.loggingListView);
+        loggingList = new ArrayList<String>();
+        arrayAdapter = new ArrayAdapter<String>(
+                this,
+                android.R.layout.simple_list_item_1,
+                loggingList);
+        loggingViewer.setAdapter(arrayAdapter);
 
         Bundle bundle = getIntent().getExtras();
         baseData = (BaseData)bundle.getSerializable("baseData");
-
     }
 
     @Override
@@ -53,25 +61,21 @@ public class Logging extends Activity implements Receiver.EventListener, View.On
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
-        outState.putStringArray("loggingViewer", logData);
-        outState.putInt("logCounter", logCounter);
+        outState.putStringArrayList("loggingList", loggingList);
         super.onSaveInstanceState(outState);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        if (savedInstanceState != null) {
-            logCounter = savedInstanceState.getInt("logCounter");
-            logData = savedInstanceState.getStringArray("logData");
-            for (int i=0;i<=logData.length;i++) loggingViewer.setText(logData[i] + "\n" + loggingViewer.getText());
-        }
+        loggingList = savedInstanceState.getStringArrayList("loggingList");
     }
 
     @Override
     public void onError() {
         Log.d("Console", "onError1");
-        loggingViewer.setText("Cant connect to server.");
+        loggingList.clear();
+        // TODO Show error messages
     }
 
     @Override
@@ -81,9 +85,11 @@ public class Logging extends Activity implements Receiver.EventListener, View.On
 
     private void showMessage(String msgType, String msg) {
         if (msgType.equals("l")){
-            logData[logCounter] = msg;
-            // TODO Prevent to show empty line and white spaces at first
-            loggingViewer.setText(logData[logCounter] + "\n" + loggingViewer.getText());
+            if (loggingList.size() >= MAX_LOG_AMOUNT){
+                loggingList.remove(loggingList.size() - 1);
+            }
+            loggingList.add(0, msg);
+            arrayAdapter.notifyDataSetChanged();
             if (logCounter <= MAX_LOG_COUNTER - 1) logCounter += 1;
             else logCounter = 0;
         }
@@ -92,9 +98,7 @@ public class Logging extends Activity implements Receiver.EventListener, View.On
     @Override
     public void onClick(View v) {
         // Handle click event when clear button is pressed
-        if (loggingViewer != null){
-            loggingViewer.setText("");
-            logCounter = 0;
-        }
+        loggingList.clear();
+        arrayAdapter.notifyDataSetChanged();
     }
 }

@@ -24,6 +24,8 @@ public class MachineData extends Activity implements Receiver.EventListener {
     private BaseData baseData;
     private Receiver receiver;
 
+    // TODO Check every entry that it is send correctly (and shown in the table)
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -4,34 +4,39 @@
 
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" >
+<!--<com.jjoe64.graphview.GraphView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dip"-->
+        <!--android:id="@+id/graph" />-->
+        <!--<SurfaceView-->
+            <!--android:id="@+id/surface_graph"-->
+            <!--android:background="@color/ModernWhite"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_marginLeft="5dp"/>-->
 
-        <SurfaceView
-            android:id="@+id/surface_graph"
-            android:background="@color/ModernWhite"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"/>
+    <!--<TextView-->
+        <!--android:id="@+id/textFieldMaxCycleTime"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Max: "-->
+        <!--android:textStyle="bold"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginRight="100dp"-->
+        <!--android:layout_marginTop="200dp"/>-->
 
-    <TextView
-        android:id="@+id/textFieldMaxCycleTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Max: "
-        android:textStyle="bold"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="100dp"
-        android:layout_marginTop="200dp"/>
+    <!--<TextView-->
+        <!--android:id="@+id/textFieldMinCycleTime"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Min: "-->
+        <!--android:textStyle="bold"-->
+        <!--android:layout_alignLeft="@+id/textFieldMaxCycleTime"-->
+        <!--android:layout_below="@+id/textFieldMaxCycleTime"/>-->
 
-    <TextView
-        android:id="@+id/textFieldMinCycleTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Min: "
-        android:textStyle="bold"
-        android:layout_alignLeft="@+id/textFieldMaxCycleTime"
-        android:layout_below="@+id/textFieldMaxCycleTime"/>
+
 </RelativeLayout>
