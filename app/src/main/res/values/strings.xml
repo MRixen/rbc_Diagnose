@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Fast Diagnose</string>
+    <string name="app_name">Fast Diagnose ABB</string>
     <string name="action_settings">Settings</string>
     <string name="title_section1">Machine Data</string>
     <string name="title_section2">CycleTime</string>
@@ -19,5 +19,6 @@
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_barcodereading">DataGui</string>
     <string name="title_section4">Events</string>
+    <string name="title_activity_about">About</string>
 
 </resources>

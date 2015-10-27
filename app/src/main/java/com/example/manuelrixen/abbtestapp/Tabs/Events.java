@@ -86,7 +86,12 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
         Bundle bundle = getIntent().getExtras();
         baseData = (BaseData)bundle.getSerializable("baseData");
 
-
+        if (receiver == null) {
+            try {
+                receiver = baseData.getReceiver();
+                receiver.registerListener(this);
+            }catch(NullPointerException e){}
+        }
         // For testing
 //         showEvent("e", "0_0_2_X_ _ _ _ ", true);
     }
@@ -112,12 +117,7 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
     @Override
     protected void onResume() {
         super.onResume();
-        if (receiver == null) {
-            try {
-                receiver = baseData.getReceiver();
-                receiver.registerListener(this);
-            }catch(NullPointerException e){}
-        }
+
     }
 
     @Override

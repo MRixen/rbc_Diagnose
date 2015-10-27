@@ -46,17 +46,19 @@ public class MachineData extends Activity implements Receiver.EventListener {
 
         Bundle bundle = getIntent().getExtras();
         baseData = (BaseData)bundle.getSerializable("baseData");
-    }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
         if (receiver == null) {
             try {
                 receiver = baseData.getReceiver();
                 receiver.registerListener(this);
             }catch(NullPointerException e){}
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
     }
 
     @Override

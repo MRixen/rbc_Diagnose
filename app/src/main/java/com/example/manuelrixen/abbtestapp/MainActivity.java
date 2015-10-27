@@ -26,12 +26,12 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
     private TabHost tabHost;
     private BaseData baseData;
     private boolean firstRun = true;
+    private CustomAboutDialog customAboutDialog;
 
     // TODO Check why zonenbahn-fehler isnt shown as event
     // TODO Ping at first to check that user is in the correct wlan connection
     // TODO Save last connection / Change entry point to: Choose between last connection and new connection
     // TODO Solve performance issues
-    // TODO Load every tab at start
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +43,7 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
         // create the TabHost that will contain the Tabs
         tabHost = getTabHost();
 
+        customAboutDialog = new CustomAboutDialog(this);
 
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         wl = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "My Tag");
@@ -81,9 +82,9 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
 //                Receiver receiver = baseData.getReceiver();
 //                receiver.stopRunRoutine();
             }catch(NullPointerException e){}
-            initTabs();
-            baseData.startReceiver(ip, port);
 
+            baseData.startReceiver(ip, port);
+            initTabs();
         }
         if(resultCode == RESULT_CANCELED){
 //            finish();
@@ -114,9 +115,8 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()) {
-            case(R.id.popup_properties):
-//                Intent settingsIntent = new Intent(this, Settings.class);
-//                startActivity(settingsIntent);
+            case(R.id.popup_about):
+                customAboutDialog.show();
                 break;
         }
         return true;
@@ -171,9 +171,9 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
         tabHost.addTab(tab3);
         tabHost.addTab(tab4);
 
-//        tabHost.setCurrentTabByTag("Events");
-//        tabHost.setCurrentTabByTag("Logging");
-//        tabHost.setCurrentTabByTag("CycleTime");
+        tabHost.setCurrentTabByTag("Events");
+        tabHost.setCurrentTabByTag("Logging");
+        tabHost.setCurrentTabByTag("CycleTime");
         tabHost.setCurrentTabByTag("MachineData");
 
     }

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialogRootLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+
+    <TextView
+        android:id="@+id/authorHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Author:"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="M. Rixen"
+        android:layout_toRightOf="@id/authorHeader"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/helpHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Ref. projects:"
+        android:layout_below="@id/authorHeader"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/helpers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ZXing authors (QR-Code reader)"
+        android:layout_below="@id/authorHeader"
+        android:layout_toRightOf="@id/helpHeader"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+
+    <TextView
+        android:id="@+id/usageHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_below="@id/helpHeader"
+        android:text="Usage:"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/usage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Startup procedure (IBN)"
+        android:layout_below="@id/helpHeader"
+        android:layout_toRightOf="@id/usageHeader"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+</RelativeLayout>

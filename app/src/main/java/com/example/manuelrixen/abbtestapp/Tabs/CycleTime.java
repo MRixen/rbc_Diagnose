@@ -50,6 +50,13 @@ public class CycleTime extends Activity implements Receiver.EventListener, View.
 
         Bundle bundle = getIntent().getExtras();
         baseData = (BaseData)bundle.getSerializable("baseData");
+
+        if (receiver == null) {
+            try {
+                receiver = baseData.getReceiver();
+                receiver.registerListener(this);
+            }catch(NullPointerException e){}
+        }
     }
 
     @Override
@@ -77,12 +84,7 @@ public class CycleTime extends Activity implements Receiver.EventListener, View.
     @Override
     protected void onResume() {
         super.onResume();
-        if (receiver == null) {
-            try {
-                receiver = baseData.getReceiver();
-                receiver.registerListener(this);
-            }catch(NullPointerException e){}
-        }
+
     }
 
 
