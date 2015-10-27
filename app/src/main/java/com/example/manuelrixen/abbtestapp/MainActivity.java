@@ -31,6 +31,7 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
     // TODO Ping at first to check that user is in the correct wlan connection
     // TODO Save last connection / Change entry point to: Choose between last connection and new connection
     // TODO Solve performance issues
+    // TODO Load every tab at start
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,7 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
         baseData = new BaseData(this);
 
         // create the TabHost that will contain the Tabs
-        tabHost = (TabHost)findViewById(android.R.id.tabhost);//getTabHost();
+        tabHost = getTabHost();
 
 
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
@@ -82,6 +83,7 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
             }catch(NullPointerException e){}
             initTabs();
             baseData.startReceiver(ip, port);
+
         }
         if(resultCode == RESULT_CANCELED){
 //            finish();
@@ -168,11 +170,10 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
         tabHost.addTab(tab2);
         tabHost.addTab(tab3);
         tabHost.addTab(tab4);
-        // Load all tabs
 
-        tabHost.setCurrentTabByTag("Events");
-        tabHost.setCurrentTabByTag("Logging");
-        tabHost.setCurrentTabByTag("CycleTime");
+//        tabHost.setCurrentTabByTag("Events");
+//        tabHost.setCurrentTabByTag("Logging");
+//        tabHost.setCurrentTabByTag("CycleTime");
         tabHost.setCurrentTabByTag("MachineData");
 
     }

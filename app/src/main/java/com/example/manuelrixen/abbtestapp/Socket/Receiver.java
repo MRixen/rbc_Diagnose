@@ -5,11 +5,6 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.manuelrixen.abbtestapp.Tabs.CycleTime;
-import com.example.manuelrixen.abbtestapp.Tabs.Events;
-import com.example.manuelrixen.abbtestapp.Tabs.Logging;
-import com.example.manuelrixen.abbtestapp.Tabs.MachineData;
-
 import java.util.ArrayList;
 
 /*
@@ -41,14 +36,11 @@ public class Receiver implements Runnable {
             while (isRunning) {
                 data = nc.receiveDataFromServer();
                 if ((data[0] != null) && (data[1] != null)) {
-                    Log.d("data[0]", data[0]);
-                    Log.d("data[1]", data[1]);
                     activity.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             try {
                                 for (EventListener eventListener : listeners) eventListener.onEvent(data[0], data[1]);
-
                             } catch (NullPointerException e) {
                                 Log.d("Exception:run", String.valueOf(e));
                             }
