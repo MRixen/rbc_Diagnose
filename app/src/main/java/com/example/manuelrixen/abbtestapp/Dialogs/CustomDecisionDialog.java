@@ -1,4 +1,4 @@
-package com.example.manuelrixen.abbtestapp;
+package com.example.manuelrixen.abbtestapp.Dialogs;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -11,10 +11,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.manuelrixen.abbtestapp.R;
+
 /**
  * Created by Manuel.Rixen on 05.09.2015.
  */
-public class CustomDecisionDialog extends Dialog{
+public class CustomDecisionDialog extends Dialog {
 
     private EditText inputTextField;
     private Button yesButton, noButton;
@@ -39,7 +41,7 @@ public class CustomDecisionDialog extends Dialog{
         noButton = (Button) this.findViewById(R.id.no_button);
     }
 
-    public int calcDimPercentage(String dimType, int dimPercentage, Context context){
+    public int calcDimPercentage(String dimType, int dimPercentage, Context context) {
 
         // Calculate display size
         DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
@@ -49,8 +51,8 @@ public class CustomDecisionDialog extends Dialog{
         Log.d("pxWidth", String.valueOf(pxWidth));
         Log.d("pxHeight", String.valueOf(pxHeight));
 
-        if (dimType.equals("width")) return (pxWidth/100)*dimPercentage;
-        if (dimType.equals("height")) return (pxHeight/100)*dimPercentage;
+        if (dimType.equals("width")) return (pxWidth / 100) * dimPercentage;
+        if (dimType.equals("height")) return (pxHeight / 100) * dimPercentage;
         else return 0;
     }
 

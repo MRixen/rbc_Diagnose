@@ -6,11 +6,9 @@ package com.example.manuelrixen.abbtestapp.Tabs;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,7 +17,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.manuelrixen.abbtestapp.BaseData;
-import com.example.manuelrixen.abbtestapp.CustomEventDialog;
+import com.example.manuelrixen.abbtestapp.Dialogs.CustomEventDialog;
 import com.example.manuelrixen.abbtestapp.R;
 import com.example.manuelrixen.abbtestapp.Socket.Receiver;
 
@@ -34,57 +32,43 @@ import java.util.ArrayList;
 
 public class Events extends Activity implements Receiver.EventListener, AdapterView.OnItemClickListener, View.OnClickListener {
 
-    private ListView eventViewer;
-    private boolean firstStart = true;
-    private XmlPullParserFactory xmlFactoryObject;
     private XmlPullParser xmlParser;
     private CustomEventDialog customEventDialog;
 
     private ArrayList<String> eventList;
-    private String[] eventData = new String[]{"", "", "", "", "", "", "", ""};
     private ArrayAdapter<String> arrayAdapter;
     private int listCounter = 0;
     private int MAX_LIST_COUNTER = 100;
     private String[] listViewEntryData = new String[MAX_LIST_COUNTER];
-    private Button clearButton;
-    private SharedPreferences sharedPreferences;
-    private BaseData baseData;
     private Receiver receiver;
-
-    // TODO Check why the vibrator not work by second stop
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_section_events);
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-        clearButton = (Button) findViewById(R.id.buttonClear);
+        Button clearButton = (Button) findViewById(R.id.buttonClear);
         clearButton.setOnClickListener(this);
-        eventViewer = (ListView) findViewById(R.id.eventListView);
+        ListView eventViewer = (ListView) findViewById(R.id.eventListView);
         eventViewer.setOnItemClickListener(this);
-        eventList = new ArrayList<String>();
-        arrayAdapter = new ArrayAdapter<String>(
+        eventList = new ArrayList<>();
+        arrayAdapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_list_item_1,
                 eventList);
         eventViewer.setAdapter(arrayAdapter);
 
-
         try {
-            xmlFactoryObject = XmlPullParserFactory.newInstance();
+            XmlPullParserFactory xmlFactoryObject = XmlPullParserFactory.newInstance();
             xmlParser = xmlFactoryObject.newPullParser();
-            Log.d("xml_parser", "created");
         } catch (XmlPullParserException e) {
             e.printStackTrace();
-            Log.d("xml_parser", "error1");
         }
         customEventDialog = new CustomEventDialog(this);
 
 
         Bundle bundle = getIntent().getExtras();
-        baseData = (BaseData)bundle.getSerializable("baseData");
+        BaseData baseData = (BaseData) bundle.getSerializable("baseData");
 
         if (receiver == null) {
             try {
@@ -92,8 +76,6 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
                 receiver.registerListener(this);
             }catch(NullPointerException e){}
         }
-        // For testing
-//         showEvent("e", "0_0_2_X_ _ _ _ ", true);
     }
 
     @Override
@@ -117,12 +99,10 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
     @Override
     protected void onResume() {
         super.onResume();
-
     }
 
     @Override
     public void onError() {
-        Log.d("Console", "onError1");
         if (eventList != null) {
             eventList.clear();
             setEventList("Cant connect to server.");
@@ -159,7 +139,6 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
         if (msgType.equals("e")){
             if (saveEvent) listViewEntryData[listCounter] = eventMessage;
             String[] tempMessage = eventMessage.split(":");
-
             new XMLParsing(saveEvent, this).execute(tempMessage);
         }
     }
@@ -236,8 +215,6 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
                         if (Integer.parseInt(eventMessages[2]) > 1463) filename = "elog/"+"io_"+"elogtext_"+4+".xml";
                         break;
                     default:
-                        // For testing
-//                        filename = "elog/opr_elogtext_1.xml";
                         filename = "";
                 }
                 InputStream in_s = getAssets().open(filename);
@@ -290,16 +267,12 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
                 }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
-                Log.d("xml_parser1", String.valueOf(e));
             } catch (XmlPullParserException e) {
                 e.printStackTrace();
-                Log.d("xml_parser2", String.valueOf(e));
             } catch (IOException e) {
                 e.printStackTrace();
-                Log.d("xml_parser3", String.valueOf(e));
             } catch (NullPointerException e){
                 e.printStackTrace();
-                Log.d("xml_parser4", String.valueOf(e));
             }
             // Get error type to set the correct image (warning, error, etc.)
             eventDescription[5] = eventMessages[3];
@@ -315,12 +288,7 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
                 if (addEvents) vibrator.vibrate(800);
             }
             Log.d("onPostExecute1", eventMessages[0]);
-            Log.d("onPostExecute2", String.valueOf(addEvents));
-            // For testing
-            //customDialog.showDialog(eventData);
         }
 
     }
-
-
 }

@@ -5,8 +5,6 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PixelFormat;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffXfermode;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -23,7 +21,8 @@ import com.example.manuelrixen.abbtestapp.R;
 import java.util.Arrays;
 
 /*
- * This class set the events to send data on the topic with a specific frequency
+ * Not implemented yet
+ * With ths class it's possible to draw omething (like a graph for the cycle time)
  */
 public class CycleTimeDrawThread extends android.view.SurfaceView implements Runnable {
 

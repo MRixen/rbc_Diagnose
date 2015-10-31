@@ -1,44 +1,48 @@
 package com.example.manuelrixen.abbtestapp;
 
-import android.app.FragmentTransaction;
 import android.app.TabActivity;
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TabHost;
+import android.widget.Toast;
 
 import com.example.manuelrixen.abbtestapp.Barcode.BarCodeReading;
+import com.example.manuelrixen.abbtestapp.Dialogs.CustomAboutDialog;
 import com.example.manuelrixen.abbtestapp.Tabs.CycleTime;
 import com.example.manuelrixen.abbtestapp.Tabs.Events;
 import com.example.manuelrixen.abbtestapp.Tabs.Logging;
 import com.example.manuelrixen.abbtestapp.Tabs.MachineData;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import static android.os.Process.myPid;
 
-// Add tabs to action bar
+public class MainActivity extends TabActivity {
 
-public class MainActivity extends TabActivity implements android.app.ActionBar.TabListener {
-
+    private final long maxActivityShowTime = 3000;
     private PowerManager.WakeLock wl;
     private TabHost tabHost;
     private BaseData baseData;
     private boolean firstRun = true;
     private CustomAboutDialog customAboutDialog;
+    private NetworkInfo mWifi;
 
     // TODO Check why zonenbahn-fehler isnt shown as event
-    // TODO Ping at first to check that user is in the correct wlan connection
-    // TODO Save last connection / Change entry point to: Choose between last connection and new connection
-    // TODO Solve performance issues
+    // TODO Save last connection
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        baseData = new BaseData(this);
+        baseData = new BaseData(this, this);
 
         // create the TabHost that will contain the Tabs
         tabHost = getTabHost();
@@ -48,23 +52,34 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         wl = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "My Tag");
         wl.acquire();
+
+        ConnectivityManager connManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        mWifi = connManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        if (firstRun){
+        if (firstRun && mWifi.isConnected()) {
             startBarcodeScanner();
             firstRun = false;
+        }
+        super.onStart();
+        if (!mWifi.isConnected()) {
+            Toast.makeText(this, R.string.errMsgWlan, Toast.LENGTH_LONG).show();
+            Timer t = new Timer();
+            t.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    finish();
+                }
+            }, maxActivityShowTime);
         }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-//            for (int i = 0; i <= receiver.length-1; i++) {
-//                if(receiver[i] != null) receiver[i].stopRunRoutine();
-//            }
     }
 
     private void startBarcodeScanner() {
@@ -74,20 +89,16 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(resultCode == RESULT_OK){
+        if (resultCode == RESULT_OK) {
             Bundle iData = data.getExtras();
             String ip = iData.getString("ip");
             String port = iData.getString("port");
-            try {
-//                Receiver receiver = baseData.getReceiver();
-//                receiver.stopRunRoutine();
-            }catch(NullPointerException e){}
-
+            // Start receiver thread, to show something in the tabs
             baseData.startReceiver(ip, port);
             initTabs();
         }
-        if(resultCode == RESULT_CANCELED){
-//            finish();
+        if (resultCode == RESULT_CANCELED) {
+            finish();
         }
     }
 
@@ -100,44 +111,26 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        // Remove item from list
-        //if(titleName.equals(getResources().getString(R.string.title_activity_execute))) menu.removeItem(R.id.popup_properties);
         return super.onPrepareOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()) {
-            case(R.id.popup_about):
+        switch (item.getItemId()) {
+            case (R.id.popup_about):
                 customAboutDialog.show();
                 break;
         }
         return true;
     }
 
-    @Override
-    public void onTabSelected(android.app.ActionBar.Tab tab, FragmentTransaction ft) {
-        // When the given tab is selected, switch to the corresponding page in the ViewPager.
-//        mViewPager.setCurrentItem(tab.getPosition());
-    }
-
-    @Override
-    public void onTabUnselected(android.app.ActionBar.Tab tab, FragmentTransaction ft) {
-    }
-
-    @Override
-    public void onTabReselected(android.app.ActionBar.Tab tab, FragmentTransaction ft) {
-    }
-
     private void initTabs() {
-
         TabHost.TabSpec tab1 = tabHost.newTabSpec("Events");
         TabHost.TabSpec tab2 = tabHost.newTabSpec("Logging");
         TabHost.TabSpec tab3 = tabHost.newTabSpec("CycleTime");
@@ -165,16 +158,15 @@ public class MainActivity extends TabActivity implements android.app.ActionBar.T
         tab4.setContent(machineDataIntent);
 
         /** Add the tabs  to the TabHost to display. */
-
         tabHost.addTab(tab1);
         tabHost.addTab(tab2);
         tabHost.addTab(tab3);
         tabHost.addTab(tab4);
 
+        // Load every tab directly show information in all tabs
         tabHost.setCurrentTabByTag("Events");
         tabHost.setCurrentTabByTag("Logging");
         tabHost.setCurrentTabByTag("CycleTime");
         tabHost.setCurrentTabByTag("MachineData");
-
     }
 }

@@ -6,7 +6,6 @@ package com.example.manuelrixen.abbtestapp.Tabs;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -20,13 +19,9 @@ import java.util.ArrayList;
 
 public class Logging extends Activity implements Receiver.EventListener, View.OnClickListener {
 
-    private ListView loggingViewer;
     private int logCounter = 0;
-    private int MAX_LOG_COUNTER = 100;
-    private BaseData baseData;
     private Receiver receiver;
     private ArrayList<String> loggingList;
-    private int MAX_LOG_AMOUNT = 10;
     private ArrayAdapter<String> arrayAdapter;
 
     @Override
@@ -36,29 +31,29 @@ public class Logging extends Activity implements Receiver.EventListener, View.On
 
         Button clearButton = (Button) findViewById(R.id.buttonClear);
         clearButton.setOnClickListener(this);
-        loggingViewer = (ListView) findViewById(R.id.loggingListView);
-        loggingList = new ArrayList<String>();
-        arrayAdapter = new ArrayAdapter<String>(
+        ListView loggingViewer = (ListView) findViewById(R.id.loggingListView);
+        loggingList = new ArrayList<>();
+        arrayAdapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_list_item_1,
                 loggingList);
         loggingViewer.setAdapter(arrayAdapter);
 
         Bundle bundle = getIntent().getExtras();
-        baseData = (BaseData)bundle.getSerializable("baseData");
+        BaseData baseData = (BaseData) bundle.getSerializable("baseData");
 
         if (receiver == null) {
             try {
                 receiver = baseData.getReceiver();
                 receiver.registerListener(this);
-            }catch(NullPointerException e){}
+            } catch (NullPointerException e) {
+            }
         }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-
     }
 
     @Override
@@ -75,9 +70,7 @@ public class Logging extends Activity implements Receiver.EventListener, View.On
 
     @Override
     public void onError() {
-        Log.d("Console", "onError1");
         loggingList.clear();
-        // TODO Show error messages
     }
 
     @Override
@@ -86,12 +79,14 @@ public class Logging extends Activity implements Receiver.EventListener, View.On
     }
 
     private void showMessage(String msgType, String msg) {
-        if (msgType.equals("l")){
-            if (loggingList.size() >= MAX_LOG_AMOUNT){
+        if (msgType.equals("l")) {
+            int MAX_LOG_AMOUNT = 10;
+            if (loggingList.size() >= MAX_LOG_AMOUNT) {
                 loggingList.remove(loggingList.size() - 1);
             }
             loggingList.add(0, msg);
             arrayAdapter.notifyDataSetChanged();
+            int MAX_LOG_COUNTER = 100;
             if (logCounter <= MAX_LOG_COUNTER - 1) logCounter += 1;
             else logCounter = 0;
         }

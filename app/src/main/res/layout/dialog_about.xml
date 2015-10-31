@@ -58,7 +58,7 @@
         android:id="@+id/usage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Startup procedure (IBN)"
+        android:text="Startup procedure with ABB robots (IBN)"
         android:layout_below="@id/helpHeader"
         android:layout_toRightOf="@id/usageHeader"
         android:layout_marginTop="10dp"

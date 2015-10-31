@@ -1,4 +1,4 @@
-package com.example.manuelrixen.abbtestapp;
+package com.example.manuelrixen.abbtestapp.Dialogs;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -9,10 +9,12 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.manuelrixen.abbtestapp.R;
+
 /**
  * Created by Manuel.Rixen on 05.09.2015.
  */
-public class CustomEventDialog extends Dialog{
+public class CustomEventDialog extends Dialog {
 
     private final ImageView imageViewer;
     private TextView descriptionText, actionText, header, consequencesText, causesText;
@@ -38,7 +40,7 @@ public class CustomEventDialog extends Dialog{
         imageViewer = (ImageView) this.findViewById(R.id.icon);
     }
 
-    public int calcDimPercentage(String dimType, int dimPercentage, Context context){
+    public int calcDimPercentage(String dimType, int dimPercentage, Context context) {
         // TODO: Set dialog with optimal size...
         // Calculate display size
         DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
@@ -48,8 +50,8 @@ public class CustomEventDialog extends Dialog{
         Log.d("pxWidth", String.valueOf(pxWidth));
         Log.d("pxHeight", String.valueOf(pxHeight));
 
-        if (dimType.equals("width")) return (pxWidth/100)*dimPercentage;
-        if (dimType.equals("height")) return (pxHeight/100)*dimPercentage;
+        if (dimType.equals("width")) return (pxWidth / 100) * dimPercentage;
+        if (dimType.equals("height")) return (pxHeight / 100) * dimPercentage;
         else return 0;
     }
 
@@ -60,7 +62,7 @@ public class CustomEventDialog extends Dialog{
         consequencesText.setText(dialogMessages[3]);
         causesText.setText(dialogMessages[4]);
         // Show different images for the error type
-        switch (dialogMessages[5]){
+        switch (dialogMessages[5]) {
             case "1":
                 imageViewer.setImageDrawable(getContext().getResources().getDrawable(R.drawable.info));
                 break;

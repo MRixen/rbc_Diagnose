@@ -1,4 +1,4 @@
-package com.example.manuelrixen.abbtestapp;
+package com.example.manuelrixen.abbtestapp.Dialogs;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -6,12 +6,14 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Window;
 
+import com.example.manuelrixen.abbtestapp.R;
+
 /**
  * Created by Manuel.Rixen on 05.09.2015.
  */
-public class CustomGraphDialog extends Dialog{
+public class CustomGraphDialog extends Dialog {
 
-//    private final TextView minCycleTimeText, maxCycleTimeText;
+    //    private final TextView minCycleTimeText, maxCycleTimeText;
 //    private SurfaceView surfaceView;
 //    private CycleTimeDrawThread cycleTimeDrawThread;
     private boolean dialogIsActive = false;
@@ -55,7 +57,7 @@ public class CustomGraphDialog extends Dialog{
         Log.d("onDetachedFromWindow", "inside");
     }
 
-    public int calcDimPercentage(String dimType, int dimPercentage, Context context){
+    public int calcDimPercentage(String dimType, int dimPercentage, Context context) {
 
         // Calculate display size
         DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
@@ -65,8 +67,8 @@ public class CustomGraphDialog extends Dialog{
         Log.d("pxWidth", String.valueOf(pxWidth));
         Log.d("pxHeight", String.valueOf(pxHeight));
 
-        if (dimType.equals("width")) return (pxWidth/100)*dimPercentage;
-        if (dimType.equals("height")) return (pxHeight/100)*dimPercentage;
+        if (dimType.equals("width")) return (pxWidth / 100) * dimPercentage;
+        if (dimType.equals("height")) return (pxHeight / 100) * dimPercentage;
         else return 0;
     }
 
@@ -75,7 +77,7 @@ public class CustomGraphDialog extends Dialog{
         dialogIsActive = true;
     }
 
-    public boolean getDialogState(){
+    public boolean getDialogState() {
 
         return dialogIsActive;
     }
