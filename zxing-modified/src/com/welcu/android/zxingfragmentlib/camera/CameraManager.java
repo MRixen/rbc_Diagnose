@@ -287,6 +287,7 @@ public final class CameraManager {
         rect.top = rect.top * cameraResolution.y / screenResolution.y;
         rect.bottom = rect.bottom * cameraResolution.y / screenResolution.y;
       }
+
       framingRectInPreview = rect;
     }
 

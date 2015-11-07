@@ -21,6 +21,6 @@
     <string name="title_section4">Events</string>
     <string name="title_activity_about">About</string>
     <string name="errMsgWlan">Please connect to server via WLan</string>
-    <string name="connectionError">Can\'t connect to server. Check WLan connection</string>
+    <string name="connectionError">Can\'t connect to robot controller. Check WLan connection</string>
 
 </resources>

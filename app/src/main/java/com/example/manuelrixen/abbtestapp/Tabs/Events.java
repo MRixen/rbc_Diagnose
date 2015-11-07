@@ -6,6 +6,7 @@ package com.example.manuelrixen.abbtestapp.Tabs;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -141,6 +142,15 @@ public class Events extends Activity implements Receiver.EventListener, AdapterV
             String[] tempMessage = eventMessage.split(":");
             new XMLParsing(saveEvent, this).execute(tempMessage);
         }
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (customEventDialog.isShowing()){
+            customEventDialog.recreateDialog();
+        }
+        Log.d("config", "config");
     }
 
     @Override

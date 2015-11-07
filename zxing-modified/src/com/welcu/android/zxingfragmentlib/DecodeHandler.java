@@ -73,9 +73,8 @@ final class DecodeHandler extends Handler implements IConstants {
   private void decode(byte[] data, int width, int height) {
     long start = System.currentTimeMillis();
     Result rawResult = null;
-    
-    PlanarYUVLuminanceSource source = fragment.getCameraManager().buildLuminanceSource(data, width, height);
-//    PlanarYUVLuminanceSource source = fragment.getCameraManager().buildLuminanceSource(data, fragment.getView().getWidth(), fragment.getView().getHeight());
+
+    PlanarYUVLuminanceSource source = fragment.getCameraManager().buildLuminanceSource(data, fragment.getView().getWidth(), fragment.getView().getHeight());
     if (source != null) {
       BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
       try {

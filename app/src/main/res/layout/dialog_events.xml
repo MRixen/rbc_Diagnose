@@ -19,21 +19,22 @@
             android:src="@drawable/warning"/>
 
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/header"
             android:textColor="#000000"
+            android:text="lvgnsliguobiugviuvgbd"
             android:layout_marginBottom="5dp"
             android:layout_toRightOf="@+id/icon"
             android:textStyle="bold"
             android:textSize="18sp"/>
 
         <ScrollView
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_below="@+id/icon">
             <RelativeLayout
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="fill_parent">
             <TextView
                 android:layout_width="fill_parent"
@@ -44,16 +45,17 @@
                 android:textStyle="bold"
                 android:textSize="18sp"/>
             <TextView
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/descriptionText"
                 android:textColor="#000000"
+                android:text=""
                 android:layout_below="@+id/descriptionHeader"
                 android:layout_marginBottom="5dp"
                 android:textSize="18sp"/>
 
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/actionHeader"
             android:textColor="#000000"
@@ -62,7 +64,7 @@
             android:textStyle="bold"
             android:textSize="18sp"/>
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/actionText"
             android:layout_marginBottom="5dp"
@@ -71,7 +73,7 @@
             android:textSize="18sp"/>
 
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/consequencesHeader"
             android:textColor="#000000"
@@ -80,7 +82,7 @@
             android:textStyle="bold"
             android:textSize="18sp"/>
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/consequencesText"
             android:textColor="#000000"
@@ -88,7 +90,7 @@
             android:layout_below="@+id/consequencesHeader"
             android:textSize="18sp"/>
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/causesHeader"
             android:textColor="#000000"
@@ -97,7 +99,7 @@
             android:textStyle="bold"
             android:textSize="18sp"/>
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/causesText"
             android:textColor="#000000"

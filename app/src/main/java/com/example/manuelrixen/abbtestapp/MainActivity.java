@@ -3,6 +3,7 @@ package com.example.manuelrixen.abbtestapp;
 import android.app.TabActivity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -34,6 +35,7 @@ public class MainActivity extends TabActivity {
     private CustomAboutDialog customAboutDialog;
     private NetworkInfo mWifi;
 
+
     // TODO Check why zonenbahn-fehler isnt shown as event
     // TODO Save last connection
 
@@ -55,6 +57,7 @@ public class MainActivity extends TabActivity {
 
         ConnectivityManager connManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         mWifi = connManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+
     }
 
     @Override
@@ -124,10 +127,18 @@ public class MainActivity extends TabActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case (R.id.popup_about):
-                customAboutDialog.show();
+                customAboutDialog.showDialog();
                 break;
         }
         return true;
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (customAboutDialog.isShowing()){
+            customAboutDialog.showDialog();
+        }
     }
 
     private void initTabs() {

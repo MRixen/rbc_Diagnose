@@ -173,6 +173,10 @@ public class IntentIntegrator {
         this.activity = activity;
     }
 
+    public Activity getCurrentActivity(){
+        return this.activity;
+    }
+
     /**
      * @param fragment {@link Fragment} invoking the integration.
      *  {@link #startActivityForResult(Intent, int)} will be called on the {@link Fragment} instead

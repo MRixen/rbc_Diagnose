@@ -16,7 +16,7 @@
 
         <activity android:name=".MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="landscape">
+            android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -26,8 +26,8 @@
         <activity
             android:name=".Barcode.BarCodeReading"
             android:launchMode="singleTop"
-            android:screenOrientation="landscape"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity"/>
@@ -35,7 +35,6 @@
 
         <activity
             android:name=".Tabs.Logging"
-            android:screenOrientation="landscape"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -44,8 +43,8 @@
 
         <activity
             android:name=".Tabs.Events"
-            android:screenOrientation="landscape"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:configChanges="orientation|screenSize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity"/>
@@ -53,7 +52,6 @@
 
         <activity
             android:name=".Tabs.CycleTime"
-            android:screenOrientation="landscape"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -62,13 +60,10 @@
 
         <activity
             android:name=".Tabs.MachineData"
-            android:screenOrientation="landscape"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity"/>
         </activity>
-
-
     </application>
 </manifest>

@@ -72,7 +72,7 @@ public class Receiver implements Runnable {
                     t.schedule(new TimerTask() {
                         @Override
                         public void run() {
-                            activity.finish();
+//                            activity.finish();
                         }
                     }, maxActivityShowTime);
                 }
