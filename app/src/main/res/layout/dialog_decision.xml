@@ -10,11 +10,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"/>
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
 
     <Button
         android:id="@+id/yes_button"
@@ -22,12 +20,12 @@
         android:layout_height="wrap_content"
         android:text="Yes"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"/>
+        android:layout_alignParentLeft="true"/>
     <Button
         android:id="@+id/no_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="No"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"/>
+        android:layout_alignParentRight="true"/>
 </RelativeLayout>

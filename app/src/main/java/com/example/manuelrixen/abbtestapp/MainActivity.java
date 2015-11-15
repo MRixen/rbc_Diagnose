@@ -3,18 +3,23 @@ package com.example.manuelrixen.abbtestapp;
 import android.app.TabActivity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.PowerManager;
+import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TabHost;
 import android.widget.Toast;
 
 import com.example.manuelrixen.abbtestapp.Barcode.BarCodeReading;
 import com.example.manuelrixen.abbtestapp.Dialogs.CustomAboutDialog;
+import com.example.manuelrixen.abbtestapp.Dialogs.CustomDecisionDialog;
 import com.example.manuelrixen.abbtestapp.Tabs.CycleTime;
 import com.example.manuelrixen.abbtestapp.Tabs.Events;
 import com.example.manuelrixen.abbtestapp.Tabs.Logging;
@@ -31,9 +36,14 @@ public class MainActivity extends TabActivity {
     private PowerManager.WakeLock wl;
     private TabHost tabHost;
     private BaseData baseData;
-    private boolean firstRun = true;
+    private int alreadyShown = 0;
+    private boolean firstStart = true;
     private CustomAboutDialog customAboutDialog;
     private NetworkInfo mWifi;
+    private SharedPreferences sharedPreferences;
+    private CustomDecisionDialog customDecisionDialog;
+    private boolean useLastConnection = false;
+    private SharedPreferences.Editor editor;
 
 
     // TODO Check why zonenbahn-fehler isnt shown as event
@@ -45,6 +55,9 @@ public class MainActivity extends TabActivity {
         setContentView(R.layout.activity_main);
 
         baseData = new BaseData(this, this);
+
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        customDecisionDialog = new CustomDecisionDialog(this);
 
         // create the TabHost that will contain the Tabs
         tabHost = getTabHost();
@@ -63,11 +76,41 @@ public class MainActivity extends TabActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        if (firstRun && mWifi.isConnected()) {
-            startBarcodeScanner();
-            firstRun = false;
+        final String ip = sharedPreferences.getString("ip", "0");
+        final String port = sharedPreferences.getString("port", "0");
+        alreadyShown = sharedPreferences.getInt("alreadyShown", 0);
+        firstStart = sharedPreferences.getBoolean("firstStart", true);
+        if (alreadyShown <= 2) alreadyShown += 1;
+        Log.d("ip::", ip);
+        Log.d("port::", port);
+        Log.d("alreadyShown::", String.valueOf(alreadyShown));
+        if ( !(ip.equals("0")) && !(port.equals("0")) && (alreadyShown > 2)){
+            // Show user dialog to choose between last and new connection
+
+            customDecisionDialog.showDialog("Use last connection?", new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    useLastConnection = true;
+                    startReceiving(ip, port);
+                    customDecisionDialog.dismiss();
+                }
+            }, new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    alreadyShown = 1;
+                    useLastConnection = false;
+                    customDecisionDialog.dismiss();
+                    startBarcodeScanner();
+                }
+            });
         }
-        super.onStart();
+        else {
+            if (firstStart) {
+                startBarcodeScanner();
+                firstStart = false;
+            }
+        }
+
         if (!mWifi.isConnected()) {
             Toast.makeText(this, R.string.errMsgWlan, Toast.LENGTH_LONG).show();
             Timer t = new Timer();
@@ -83,6 +126,10 @@ public class MainActivity extends TabActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        editor = sharedPreferences.edit();
+        editor.putInt("alreadyShown", alreadyShown);
+        editor.putBoolean("firstStart", firstStart);
+        editor.apply();
     }
 
     private void startBarcodeScanner() {
@@ -96,13 +143,22 @@ public class MainActivity extends TabActivity {
             Bundle iData = data.getExtras();
             String ip = iData.getString("ip");
             String port = iData.getString("port");
+            // Save data for last connection
+            editor = sharedPreferences.edit();
+            editor.putString("ip", ip);
+            editor.putString("port", port);
+            editor.apply();
             // Start receiver thread, to show something in the tabs
-            baseData.startReceiver(ip, port);
-            initTabs();
+            startReceiving(ip, port);
         }
         if (resultCode == RESULT_CANCELED) {
             finish();
         }
+    }
+
+    private void startReceiving(String ip, String port) {
+        baseData.startReceiver(ip, port);
+        initTabs();
     }
 
     @Override
@@ -180,4 +236,5 @@ public class MainActivity extends TabActivity {
         tabHost.setCurrentTabByTag("CycleTime");
         tabHost.setCurrentTabByTag("MachineData");
     }
+
 }
