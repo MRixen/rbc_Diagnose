@@ -84,7 +84,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="FAT: "
+                android:text="Pre. Accept.: "
                 android:background="@drawable/cell_shape"
                 android:padding="5dp"/>
 
@@ -107,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/cell_shape"
                 android:padding="5dp"
-                android:text="SOP:" />
+                android:text="Fin. Accept.:" />
 
             <TextView
                 android:id="@+id/text_sop"

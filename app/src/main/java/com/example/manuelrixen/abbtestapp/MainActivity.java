@@ -36,7 +36,7 @@ public class MainActivity extends TabActivity {
     private PowerManager.WakeLock wl;
     private TabHost tabHost;
     private BaseData baseData;
-    private int alreadyShown = 0;
+    private boolean alreadyShown;
     private boolean firstStart = true;
     private CustomAboutDialog customAboutDialog;
     private NetworkInfo mWifi;
@@ -78,13 +78,13 @@ public class MainActivity extends TabActivity {
         super.onResume();
         final String ip = sharedPreferences.getString("ip", "0");
         final String port = sharedPreferences.getString("port", "0");
-        alreadyShown = sharedPreferences.getInt("alreadyShown", 0);
+        alreadyShown = sharedPreferences.getBoolean("alreadyShown", false);
         firstStart = sharedPreferences.getBoolean("firstStart", true);
-        if (alreadyShown <= 2) alreadyShown += 1;
-        Log.d("ip::", ip);
-        Log.d("port::", port);
-        Log.d("alreadyShown::", String.valueOf(alreadyShown));
-        if ( !(ip.equals("0")) && !(port.equals("0")) && (alreadyShown > 2)){
+        Log.d("A1 ip::", ip);
+        Log.d("A1 port::", port);
+        Log.d("alreadyShown::", String.valueOf(firstStart));
+        Log.d("firstStart::", String.valueOf(alreadyShown));
+        if ( !(ip.equals("0")) && !(port.equals("0")) && alreadyShown){
             // Show user dialog to choose between last and new connection
 
             customDecisionDialog.showDialog("Use last connection?", new View.OnClickListener() {
@@ -97,7 +97,6 @@ public class MainActivity extends TabActivity {
             }, new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    alreadyShown = 1;
                     useLastConnection = false;
                     customDecisionDialog.dismiss();
                     startBarcodeScanner();
@@ -127,8 +126,16 @@ public class MainActivity extends TabActivity {
     protected void onPause() {
         super.onPause();
         editor = sharedPreferences.edit();
-        editor.putInt("alreadyShown", alreadyShown);
+        editor.putBoolean("alreadyShown", true);
         editor.putBoolean("firstStart", firstStart);
+        editor.apply();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        editor = sharedPreferences.edit();
+        editor.putBoolean("alreadyShown", false);
         editor.apply();
     }
 
