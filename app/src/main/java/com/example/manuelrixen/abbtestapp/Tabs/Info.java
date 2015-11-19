@@ -13,7 +13,7 @@ import com.example.manuelrixen.abbtestapp.Socket.Receiver;
 /**
  * Created by Manuel.Rixen on 23.08.2015.
  */
-public class MachineData extends Activity implements Receiver.EventListener {
+public class Info extends Activity implements Receiver.EventListener {
 
     protected int MAX_TABLE_ENTRIES = 12;
     private TextView[] textViews = new TextView[MAX_TABLE_ENTRIES];
@@ -24,11 +24,13 @@ public class MachineData extends Activity implements Receiver.EventListener {
     private Receiver receiver;
 
     // TODO Check every entry that it is send correctly (and shown in the table)
+    //TODO: Make it possible that the size of MAX_TABLE_ENTRIES is variable (the size comes from abb controller)
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_section_machinedata);
+        setContentView(R.layout.fragment_section_info);
 
         int[] textViewIds = new int[]{R.id.text_machine, R.id.text_project, R.id.text_build, R.id.text_fat,
                 R.id.text_sop, R.id.text_serial, R.id.text_version, R.id.text_rtype,

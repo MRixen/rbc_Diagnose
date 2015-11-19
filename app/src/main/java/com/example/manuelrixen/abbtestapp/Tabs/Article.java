@@ -7,35 +7,59 @@ package com.example.manuelrixen.abbtestapp.Tabs;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Message;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.example.manuelrixen.abbtestapp.BaseData;
 import com.example.manuelrixen.abbtestapp.R;
 import com.example.manuelrixen.abbtestapp.Socket.Receiver;
 
-public class CycleTime extends Activity implements Receiver.EventListener, View.OnTouchListener, View.OnClickListener {
+public class Article extends Activity implements Receiver.EventListener, View.OnTouchListener, View.OnClickListener {
 
+    protected int MAX_ARTICLE_COUNTER = 5;
     private TextView cycleTimeViewer_actual, cycleTimeViewer_mean;
     private float[] actualTimeData = new float[16];
     private float[] meanTimeData = new float[16];
 
     private BaseData baseData;
     private Receiver receiver;
+    private String[] articleName = new String[MAX_ARTICLE_COUNTER];
+    private String[] articleCounter = new String[MAX_ARTICLE_COUNTER];
+    private TextView[] articleTextViews = new TextView[MAX_ARTICLE_COUNTER];
+    private TextView[] counterTextViews = new TextView[MAX_ARTICLE_COUNTER];
+    private TableRow[] tableRows = new TableRow[MAX_ARTICLE_COUNTER];
+
+    //TODO: Make it possible that the size of MAX_ARTICLE_COUNTER is variable (the size comes from abb controller)
+    //TODO: Add table for cycle time + article data
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_section_cycletime);
+        setContentView(R.layout.fragment_section_article);
+
+        int[] articleViewIds = new int[]{R.id.article1, R.id.article2, R.id.article3, R.id.article4, R.id.article5};
+        int[] counterViewIds = new int[]{R.id.counter1, R.id.counter2, R.id.counter3, R.id.counter4, R.id.counter5};
+
+        int[] tableRowIds = new int[]{R.id.tableRow4, R.id.tableRow5, R.id.tableRow6, R.id.tableRow7, R.id.tableRow8};
+
+        for (int i = 0; i <= articleViewIds.length - 1; i++) {
+            tableRows[i] = (TableRow) findViewById(tableRowIds[i]);
+            articleTextViews[i] = (TextView) tableRows[i].findViewById(articleViewIds[i]);
+            counterTextViews[i] = (TextView) tableRows[i].findViewById(counterViewIds[i]);
+        }
 
         Button clearButton = (Button) findViewById(R.id.buttonClear);
 
         clearButton.setOnClickListener(this);
-        cycleTimeViewer_actual = (TextView) findViewById(R.id.cycleTimeTextField_actual);
+
+        // Set cycle time text fields
+        cycleTimeViewer_actual = (TextView) findViewById(R.id.tableRow1).findViewById(R.id.cycleTimeTextField_actual);
         cycleTimeViewer_actual.setOnTouchListener(this);
-        cycleTimeViewer_mean = (TextView) findViewById(R.id.cycleTimeTextField_mean);
+        cycleTimeViewer_mean = (TextView) findViewById(R.id.tableRow2).findViewById(R.id.cycleTimeTextField_mean);
         cycleTimeViewer_mean.setOnTouchListener(this);
 
 //        customGraphDialog = new CustomGraphDialog(this);
@@ -89,6 +113,17 @@ public class CycleTime extends Activity implements Receiver.EventListener, View.
         if (msgType.equals("c2")) {
             String msgTemp = msg.replace(".", ",");
             cycleTimeViewer_mean.setText(msgTemp);
+        }
+        if (msgType.equals("a")) {
+            String[] tempMessage = msg.split(":");
+            if (!tempMessage[0].equals(" ")) articleName[Integer.parseInt(tempMessage[2])] = tempMessage[0];
+            articleCounter[Integer.parseInt(tempMessage[2])] = tempMessage[1];
+            if (!tempMessage[0].equals(" ")) articleTextViews[Integer.parseInt(tempMessage[2])].setText(tempMessage[0]);
+            counterTextViews[Integer.parseInt(tempMessage[2])].setText(tempMessage[1]);
+            Log.d("tempMessage[0]", tempMessage[0]);
+            Log.d("tempMessage[1]", tempMessage[1]);
+            Log.d("tempMessage[2]", tempMessage[2]);
+
         }
     }
 

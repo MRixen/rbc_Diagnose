@@ -35,7 +35,7 @@
         </activity>
 
         <activity
-            android:name=".Tabs.Logging"
+            android:name=".Tabs.Logs"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -52,7 +52,7 @@
         </activity>
 
         <activity
-            android:name=".Tabs.CycleTime"
+            android:name=".Tabs.Article"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -60,7 +60,7 @@
         </activity>
 
         <activity
-            android:name=".Tabs.MachineData"
+            android:name=".Tabs.Info"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

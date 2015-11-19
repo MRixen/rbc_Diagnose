@@ -20,10 +20,10 @@ import android.widget.Toast;
 import com.example.manuelrixen.abbtestapp.Barcode.BarCodeReading;
 import com.example.manuelrixen.abbtestapp.Dialogs.CustomAboutDialog;
 import com.example.manuelrixen.abbtestapp.Dialogs.CustomDecisionDialog;
-import com.example.manuelrixen.abbtestapp.Tabs.CycleTime;
+import com.example.manuelrixen.abbtestapp.Tabs.Article;
 import com.example.manuelrixen.abbtestapp.Tabs.Events;
-import com.example.manuelrixen.abbtestapp.Tabs.Logging;
-import com.example.manuelrixen.abbtestapp.Tabs.MachineData;
+import com.example.manuelrixen.abbtestapp.Tabs.Logs;
+import com.example.manuelrixen.abbtestapp.Tabs.Info;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -206,28 +206,28 @@ public class MainActivity extends TabActivity {
 
     private void initTabs() {
         TabHost.TabSpec tab1 = tabHost.newTabSpec("Events");
-        TabHost.TabSpec tab2 = tabHost.newTabSpec("Logging");
-        TabHost.TabSpec tab3 = tabHost.newTabSpec("CycleTime");
-        TabHost.TabSpec tab4 = tabHost.newTabSpec("MachineData");
+        TabHost.TabSpec tab2 = tabHost.newTabSpec("Logs");
+        TabHost.TabSpec tab3 = tabHost.newTabSpec("Article");
+        TabHost.TabSpec tab4 = tabHost.newTabSpec("Info");
 
         tab1.setIndicator("Events");
         Intent eventIntent = new Intent(this, Events.class);
         eventIntent.putExtra("baseData", baseData);
         tab1.setContent(eventIntent);
 
-        tab2.setIndicator("Logging");
-        Intent loggingIntent = new Intent(this, Logging.class);
+        tab2.setIndicator("Logs");
+        Intent loggingIntent = new Intent(this, Logs.class);
         loggingIntent.putExtra("baseData", baseData);
         tab2.setContent(loggingIntent);
 
 
-        tab3.setIndicator("Cycle Time");
-        Intent cycleTimeIntent = new Intent(this, CycleTime.class);
+        tab3.setIndicator("Article");
+        Intent cycleTimeIntent = new Intent(this, Article.class);
         cycleTimeIntent.putExtra("baseData", baseData);
         tab3.setContent(cycleTimeIntent);
 
-        tab4.setIndicator("Machine Data");
-        Intent machineDataIntent = new Intent(this, MachineData.class);
+        tab4.setIndicator("Info");
+        Intent machineDataIntent = new Intent(this, Info.class);
         machineDataIntent.putExtra("baseData", baseData);
         tab4.setContent(machineDataIntent);
 
@@ -239,9 +239,9 @@ public class MainActivity extends TabActivity {
 
         // Load every tab directly show information in all tabs
         tabHost.setCurrentTabByTag("Events");
-        tabHost.setCurrentTabByTag("Logging");
-        tabHost.setCurrentTabByTag("CycleTime");
-        tabHost.setCurrentTabByTag("MachineData");
+        tabHost.setCurrentTabByTag("Logs");
+        tabHost.setCurrentTabByTag("Article");
+        tabHost.setCurrentTabByTag("Info");
     }
 
 }

@@ -17,7 +17,7 @@ import com.example.manuelrixen.abbtestapp.Socket.Receiver;
 
 import java.util.ArrayList;
 
-public class Logging extends Activity implements Receiver.EventListener, View.OnClickListener {
+public class Logs extends Activity implements Receiver.EventListener, View.OnClickListener {
 
     private int logCounter = 0;
     private Receiver receiver;
@@ -27,7 +27,7 @@ public class Logging extends Activity implements Receiver.EventListener, View.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_section_logging);
+        setContentView(R.layout.fragment_section_logs);
 
         Button clearButton = (Button) findViewById(R.id.buttonClear);
         clearButton.setOnClickListener(this);
