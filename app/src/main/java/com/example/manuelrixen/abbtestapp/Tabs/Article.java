@@ -7,7 +7,6 @@ package com.example.manuelrixen.abbtestapp.Tabs;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Message;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -120,10 +119,6 @@ public class Article extends Activity implements Receiver.EventListener, View.On
             articleCounter[Integer.parseInt(tempMessage[2])] = tempMessage[1];
             if (!tempMessage[0].equals(" ")) articleTextViews[Integer.parseInt(tempMessage[2])].setText(tempMessage[0]);
             counterTextViews[Integer.parseInt(tempMessage[2])].setText(tempMessage[1]);
-            Log.d("tempMessage[0]", tempMessage[0]);
-            Log.d("tempMessage[1]", tempMessage[1]);
-            Log.d("tempMessage[2]", tempMessage[2]);
-
         }
     }
 
