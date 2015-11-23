@@ -15,7 +15,7 @@ import com.example.manuelrixen.abbtestapp.Socket.Receiver;
  */
 public class Info extends Activity implements Receiver.EventListener {
 
-    protected int MAX_TABLE_ENTRIES = 12;
+    protected int MAX_TABLE_ENTRIES = 14;
     private TextView[] textViews = new TextView[MAX_TABLE_ENTRIES];
     private TableRow[] tableRows = new TableRow[MAX_TABLE_ENTRIES];
 
@@ -34,11 +34,11 @@ public class Info extends Activity implements Receiver.EventListener {
 
         int[] textViewIds = new int[]{R.id.text_machine, R.id.text_project, R.id.text_build, R.id.text_fat,
                 R.id.text_sop, R.id.text_serial, R.id.text_version, R.id.text_rtype,
-                R.id.text_cid, R.id.text_lanip, R.id.text_clang, R.id.text_dutytime};
+                R.id.text_cid, R.id.text_lanip, R.id.text_clang, R.id.text_robspeed, R.id.text_override, R.id.text_dutytime};
 
         int[] tableRowIds = new int[]{R.id.tableRow1, R.id.tableRow2, R.id.tableRow3, R.id.tableRow4,
                 R.id.tableRow5, R.id.tableRow6, R.id.tableRow7, R.id.tableRow8,
-                R.id.tableRow9, R.id.tableRow10, R.id.tableRow11, R.id.tableRow12};
+                R.id.tableRow9, R.id.tableRow10, R.id.tableRow11, R.id.tableRow12, R.id.tableRow13, R.id.tableRow14};
 
         for (int i = 0; i <= textViewIds.length - 1; i++) {
             tableRows[i] = (TableRow) findViewById(tableRowIds[i]);

@@ -172,6 +172,7 @@ public class MainActivity extends TabActivity {
     protected void onDestroy() {
         super.onDestroy();
         wl.release();
+        baseData.getReceiver().stopRunRoutine();
         android.os.Process.killProcess(myPid());
     }
 
