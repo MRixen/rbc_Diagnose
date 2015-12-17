@@ -13,8 +13,6 @@ import java.util.TimerTask;
 
 public class Receiver implements Runnable {
 
-    // TODO Show user connection failure immediately
-
     private final Context context;
     private final String ip;
     private final String port;
@@ -49,6 +47,7 @@ public class Receiver implements Runnable {
                 data = nc.receiveDataFromServer();
 
                 if ((data[0] != null) && (data[1] != null)) {
+                    nc.sendDataWithString("1");
                     activity.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -60,6 +59,10 @@ public class Receiver implements Runnable {
                             }
                         }
                     });
+                }
+                else{
+                    // Get the same message again
+                    nc.sendDataWithString("0");
                 }
             }
             nc.disConnectWithServer();

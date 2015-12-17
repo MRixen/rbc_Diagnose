@@ -47,7 +47,6 @@ public class MainActivity extends TabActivity {
 
 
     // TODO Check why zonenbahn-fehler isnt shown as event
-    // TODO Save last connection
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +86,7 @@ public class MainActivity extends TabActivity {
         if ( !(ip.equals("0")) && !(port.equals("0")) && alreadyShown){
             // Show user dialog to choose between last and new connection
 
-            customDecisionDialog.showDialog("Use last connection?", new View.OnClickListener() {
+            customDecisionDialog.showDialog("Use last connection with ip: "+ip+" and port: "+port+"?", new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     useLastConnection = true;

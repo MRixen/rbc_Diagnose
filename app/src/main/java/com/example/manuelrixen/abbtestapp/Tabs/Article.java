@@ -32,8 +32,7 @@ public class Article extends Activity implements Receiver.EventListener, View.On
     private TextView[] counterTextViews = new TextView[MAX_ARTICLE_COUNTER];
     private TableRow[] tableRows = new TableRow[MAX_ARTICLE_COUNTER];
 
-    //TODO: Make it possible that the size of MAX_ARTICLE_COUNTER is variable (the size comes from abb controller)
-    //TODO: Add table for cycle time + article data
+    //TODO: Make it possible that the size of MAX_ARTICLE_COUNTER is variable (the size comes from abb controller
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

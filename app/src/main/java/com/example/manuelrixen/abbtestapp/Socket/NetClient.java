@@ -25,6 +25,7 @@ public class NetClient {
         try {
             if (socket == null) {
                 socket = new Socket(this.host, this.port);
+                out = new PrintWriter(socket.getOutputStream());
                 in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 socket.setSoTimeout(500);
                 return true;
@@ -41,6 +42,7 @@ public class NetClient {
             if (socket.isConnected()) {
                 try {
                     in.close();
+                    out.close();
                     socket.close();
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -51,7 +53,9 @@ public class NetClient {
 
     public void sendDataWithString(String message) {
         if (message != null) {
-            out.println(message);
+            //out.println(message);
+            out.write(message);
+            out.flush();
         }
     }
 
