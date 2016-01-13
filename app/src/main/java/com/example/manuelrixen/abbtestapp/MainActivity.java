@@ -10,20 +10,21 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TabHost;
 import android.widget.Toast;
 
 import com.example.manuelrixen.abbtestapp.Barcode.BarCodeReading;
 import com.example.manuelrixen.abbtestapp.Dialogs.CustomAboutDialog;
 import com.example.manuelrixen.abbtestapp.Dialogs.CustomDecisionDialog;
+import com.example.manuelrixen.abbtestapp.Dialogs.CustomInputDialog;
 import com.example.manuelrixen.abbtestapp.Tabs.Article;
 import com.example.manuelrixen.abbtestapp.Tabs.Events;
-import com.example.manuelrixen.abbtestapp.Tabs.Logs;
 import com.example.manuelrixen.abbtestapp.Tabs.Info;
+import com.example.manuelrixen.abbtestapp.Tabs.Logs;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -42,8 +43,11 @@ public class MainActivity extends TabActivity {
     private NetworkInfo mWifi;
     private SharedPreferences sharedPreferences;
     private CustomDecisionDialog customDecisionDialog;
+    private CustomInputDialog customInputDialog;
     private boolean useLastConnection = false;
     private SharedPreferences.Editor editor;
+    private boolean setConnectionDataManually = false;
+    private EditText ipField, portField;
 
 
     // TODO Check why zonenbahn-fehler isnt shown as event
@@ -57,6 +61,8 @@ public class MainActivity extends TabActivity {
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         customDecisionDialog = new CustomDecisionDialog(this);
+        customInputDialog = new CustomInputDialog(this, this);
+
 
         // create the TabHost that will contain the Tabs
         tabHost = getTabHost();
@@ -79,13 +85,8 @@ public class MainActivity extends TabActivity {
         final String port = sharedPreferences.getString("port", "0");
         alreadyShown = sharedPreferences.getBoolean("alreadyShown", false);
         firstStart = sharedPreferences.getBoolean("firstStart", true);
-        Log.d("A1 ip::", ip);
-        Log.d("A1 port::", port);
-        Log.d("alreadyShown::", String.valueOf(firstStart));
-        Log.d("firstStart::", String.valueOf(alreadyShown));
         if ( !(ip.equals("0")) && !(port.equals("0")) && alreadyShown){
-            // Show user dialog to choose between last and new connection
-
+            // Show user dialog to ask for manual input
             customDecisionDialog.showDialog("Use last connection with ip: "+ip+" and port: "+port+"?", new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -100,8 +101,17 @@ public class MainActivity extends TabActivity {
                     customDecisionDialog.dismiss();
                     startBarcodeScanner();
                 }
+            }, new View.OnClickListener(){
+
+                @Override
+                public void onClick(View v) {
+                    setConnectionDataManually = true;
+                    showDialogForManuallyInput();
+                    customDecisionDialog.dismiss();
+                }
             });
         }
+
         else {
             if (firstStart) {
                 startBarcodeScanner();
@@ -118,6 +128,36 @@ public class MainActivity extends TabActivity {
                     finish();
                 }
             }, maxActivityShowTime);
+        }
+    }
+
+    private void showDialogForManuallyInput(){
+        if (setConnectionDataManually){
+            // Show user dialog to choose between last and new connection
+            customInputDialog.showDialog("Set IP and PORT manually.", new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Take the manually input and set ip and port
+                    // TODO Check ip port formatting
+                    String ip = ipField.getText().toString();
+                    String port = portField.getText().toString();
+                    if (!(ip.equals("")) && !(port.equals(""))) {
+                        startReceiving(ipField.getText().toString(), portField.getText().toString());
+                        setConnectionDataManually = false;
+                        saveConnectionData(ip, port);
+                        customInputDialog.dismiss();
+                    } else {
+                        Toast.makeText(MainActivity.this, "Connection data not set", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }, new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Cancel manually input and show barcode reader
+                    customInputDialog.dismiss();
+                    startBarcodeScanner();
+                }
+            });
         }
     }
 
@@ -150,16 +190,20 @@ public class MainActivity extends TabActivity {
             String ip = iData.getString("ip");
             String port = iData.getString("port");
             // Save data for last connection
-            editor = sharedPreferences.edit();
-            editor.putString("ip", ip);
-            editor.putString("port", port);
-            editor.apply();
+            saveConnectionData(ip, port);
             // Start receiver thread, to show something in the tabs
             startReceiving(ip, port);
         }
         if (resultCode == RESULT_CANCELED) {
             finish();
         }
+    }
+
+    private void saveConnectionData(String ip, String port) {
+        editor = sharedPreferences.edit();
+        editor.putString("ip", ip);
+        editor.putString("port", port);
+        editor.apply();
     }
 
     private void startReceiving(String ip, String port) {
@@ -171,7 +215,7 @@ public class MainActivity extends TabActivity {
     protected void onDestroy() {
         super.onDestroy();
         wl.release();
-        baseData.getReceiver().stopRunRoutine();
+        if (baseData.getReceiver() != null) baseData.getReceiver().stopRunRoutine();
         android.os.Process.killProcess(myPid());
     }
 
@@ -242,6 +286,11 @@ public class MainActivity extends TabActivity {
         tabHost.setCurrentTabByTag("Logs");
         tabHost.setCurrentTabByTag("Article");
         tabHost.setCurrentTabByTag("Info");
+    }
+
+    public void setTextFields(EditText ipField, EditText portField){
+        this.ipField = ipField;
+        this.portField = portField;
     }
 
 }

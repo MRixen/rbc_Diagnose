@@ -21,11 +21,22 @@
         android:text="Yes"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"/>
+
     <Button
         android:id="@+id/no_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="No"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"/>
+        android:layout_toRightOf="@+id/yes_button"/>
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/no_button"
+        android:text="Cancel"
+        android:layout_alignParentBottom="true"/>
+
+
 </RelativeLayout>

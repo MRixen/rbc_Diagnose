@@ -22,7 +22,7 @@ public class CustomDecisionDialog extends Dialog {
 
     private Context context;
     private EditText inputTextField;
-    private Button yesButton, noButton;
+    private Button yesButton, noButton, cancelButton;
     private TextView descriptionText;
     private boolean result;
 
@@ -35,8 +35,8 @@ public class CustomDecisionDialog extends Dialog {
         descriptionText = (TextView) this.findViewById(R.id.description);
         yesButton = (Button) this.findViewById(R.id.yes_button);
         noButton = (Button) this.findViewById(R.id.no_button);
+        cancelButton = (Button) this.findViewById(R.id.cancel_button);
     }
-
 
     public int calcDimPercentageLandscape(String dimType, int dimPercentage, Context context) {
         // Calculate display size
@@ -63,7 +63,6 @@ public class CustomDecisionDialog extends Dialog {
         else return 0;
     }
 
-
     public String getRotation(Context context){
         final int rotation = ((WindowManager) context.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay().getOrientation();
         switch (rotation) {
@@ -78,7 +77,7 @@ public class CustomDecisionDialog extends Dialog {
         }
     }
 
-    public void showDialog(String dialogHeader, View.OnClickListener yesButtonListener, View.OnClickListener noButtonListener) {
+    public void showDialog(String dialogHeader, View.OnClickListener yesButtonListener, View.OnClickListener noButtonListener, View.OnClickListener cancelButtonListener) {
         int dialogWidth=0;
         int dialogHeight=0;
         if ((getRotation(context).equals("landscape")) || (getRotation(context).equals("reverse landscape"))) {
@@ -99,6 +98,7 @@ public class CustomDecisionDialog extends Dialog {
 
         yesButton.setOnClickListener(yesButtonListener);
         noButton.setOnClickListener(noButtonListener);
+        cancelButton.setOnClickListener(cancelButtonListener);
         this.show();
     }
 

@@ -10,24 +10,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"/>
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"/>
 
     <EditText
-        android:id="@+id/inputText"
-        android:layout_width="300dp"
+        android:id="@+id/editTextFieldIp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/description"/>
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:hint="IP-Address"
+        android:layout_below="@+id/description"/>
+
+    <EditText
+        android:id="@+id/editTextFieldPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:hint="Port"
+        android:layout_below="@+id/description"
+        android:layout_toRightOf="@+id/editTextFieldIp"/>
 
     <Button
-        android:id="@+id/ok_button"
+        android:id="@+id/yes_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ok"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"/>
+    <Button
+        android:id="@+id/no_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"/>
 
