@@ -22,6 +22,7 @@ public class Receiver implements Runnable {
     private Activity activity; // = new Activity();
     private ArrayList<EventListener> listeners = new ArrayList<>();
     private long maxActivityShowTime = 3000;
+    private String CLIENT_NAME = "Phone;";
 
     public Receiver(Context context, String ip, String port, Activity activity) {
         this.context = context;
@@ -43,11 +44,17 @@ public class Receiver implements Runnable {
                     Toast.makeText(context, "Connected to ip " + ip + " and port " + port, Toast.LENGTH_LONG).show();
                 }
             });
+            // Send client name to server
+            while(isRunning) {
+                nc.sendDataAsString(CLIENT_NAME);
+                data = nc.receiveDataFromServer();
+                if ((data[0] != null) && (data[1] != null))  isRunning = false;
+            }
+            isRunning = true;
             while (isRunning) {
                 data = nc.receiveDataFromServer();
-
                 if ((data[0] != null) && (data[1] != null)) {
-                    nc.sendDataWithString("1");
+                    nc.sendDataAsString("1");
                     activity.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -61,8 +68,8 @@ public class Receiver implements Runnable {
                     });
                 }
                 else{
-                    // Get the same message again
-                    nc.sendDataWithString("0");
+                    // Send same message again
+                    nc.sendDataAsString("0");
                 }
             }
             nc.disConnectWithServer();

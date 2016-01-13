@@ -1,5 +1,7 @@
 package com.example.manuelrixen.abbtestapp.Socket;
 
+import android.util.Log;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -51,7 +53,7 @@ public class NetClient {
         }
     }
 
-    public void sendDataWithString(String message) {
+    public void sendDataAsString(String message) {
         if (message != null) {
             //out.println(message);
             out.write(message);
@@ -70,6 +72,7 @@ public class NetClient {
             while (true) {
                 try {
                     // Read and convert message
+                    Log.d("incomingMessage: ", incomingMessage);
                     try {
                         incomingMessage = String.valueOf(Character.toChars(in.read()));
                     } catch (NumberFormatException e) {
