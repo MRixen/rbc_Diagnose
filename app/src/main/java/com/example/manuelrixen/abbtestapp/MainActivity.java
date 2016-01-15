@@ -97,14 +97,6 @@ public class MainActivity extends TabActivity {
             }, new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    useLastConnection = false;
-                    customDecisionDialog.dismiss();
-                    startBarcodeScanner();
-                }
-            }, new View.OnClickListener(){
-
-                @Override
-                public void onClick(View v) {
                     setConnectionDataManually = true;
                     showDialogForManuallyInput();
                     customDecisionDialog.dismiss();
@@ -154,6 +146,7 @@ public class MainActivity extends TabActivity {
                 @Override
                 public void onClick(View v) {
                     // Cancel manually input and show barcode reader
+                    useLastConnection = false;
                     customInputDialog.dismiss();
                     startBarcodeScanner();
                 }
