@@ -44,12 +44,12 @@ public class Receiver implements Runnable {
                     Toast.makeText(context, "Connected to ip " + ip + " and port " + port, Toast.LENGTH_LONG).show();
                 }
             });
-            // Send client name to server
-            while(isRunning) {
-                nc.sendDataAsString(CLIENT_NAME);
-                data = nc.receiveDataFromServer();
-                if ((data[0] != null) && (data[1] != null))  isRunning = false;
-            }
+            // Send client name to server (only in version 2)
+//            while(isRunning) {
+//                nc.sendDataAsString(CLIENT_NAME);
+//                data = nc.receiveDataFromServer();
+//                if ((data[0] != null) && (data[1] != null))  isRunning = false;
+//            }
             isRunning = true;
             while (isRunning) {
                 data = nc.receiveDataFromServer();

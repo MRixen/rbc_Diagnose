@@ -11,6 +11,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.example.manuelrixen.abbtestapp.R;
@@ -18,23 +20,27 @@ import com.example.manuelrixen.abbtestapp.R;
 /**
  * Created by Manuel.Rixen on 05.09.2015.
  */
-public class CustomDecisionDialog extends Dialog {
+public class CustomChooserDialog extends Dialog {
 
+    private final RadioGroup connectChooser;
+    private final TextView lastConnection;
     private Context context;
     private EditText inputTextField;
-    private Button yesButton, noButton;
+    private Button okButton, cancelButton;
     private TextView descriptionText;
     private boolean result;
 
-    public CustomDecisionDialog(Context context) {
+    public CustomChooserDialog(Context context) {
         super(context);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.dialog_decision);
+        setContentView(R.layout.dialog_chooser);
         this.context = context;
 
+        connectChooser = (RadioGroup) findViewById(R.id.radioGroup);
         descriptionText = (TextView) this.findViewById(R.id.description);
-        yesButton = (Button) this.findViewById(R.id.yes_button);
-        noButton = (Button) this.findViewById(R.id.no_button);
+        cancelButton = (Button) this.findViewById(R.id.cancel_button);
+        okButton = (Button) this.findViewById(R.id.ok_button);
+        lastConnection = (TextView) this.findViewById(R.id.lastConnection);
     }
 
     public int calcDimPercentageLandscape(String dimType, int dimPercentage, Context context) {
@@ -76,16 +82,16 @@ public class CustomDecisionDialog extends Dialog {
         }
     }
 
-    public void showDialog(String dialogHeader, View.OnClickListener yesButtonListener, View.OnClickListener noButtonListener) {
+    public void showDialog(String dialogHeader, String lastConnectionText, View.OnClickListener cancelButtonListener, View.OnClickListener okButtonListener) {
         int dialogWidth=0;
         int dialogHeight=0;
         if ((getRotation(context).equals("landscape")) || (getRotation(context).equals("reverse landscape"))) {
-            dialogWidth = calcDimPercentageLandscape("width", 70, context);
-            dialogHeight = calcDimPercentageLandscape("height", 30, context);
+            dialogWidth = calcDimPercentageLandscape("width", 90, context);
+            dialogHeight = calcDimPercentageLandscape("height", 90, context);
         }
         if (getRotation(context).equals("portrait")) {
-            dialogWidth = calcDimPercentagePortrait("width", 70, context);
-            dialogHeight = calcDimPercentagePortrait("height", 30, context);
+            dialogWidth = calcDimPercentagePortrait("width", 90, context);
+            dialogHeight = calcDimPercentagePortrait("height", 50, context);
         }
         Window dialogWindow = this.getWindow();
         dialogWindow.setBackgroundDrawable(new ColorDrawable(context.getResources().getColor(R.color.ModernWhite)));
@@ -94,14 +100,18 @@ public class CustomDecisionDialog extends Dialog {
 
         result = false;
         descriptionText.setText(dialogHeader);
+        lastConnection.setText(lastConnectionText);
 
-        yesButton.setOnClickListener(yesButtonListener);
-        noButton.setOnClickListener(noButtonListener);
+        cancelButton.setOnClickListener(cancelButtonListener);
+        okButton.setOnClickListener(okButtonListener);
+
         this.show();
     }
 
-    public void recreateDialog() {
-//        showDialog();
+    public String getConnectOption() {
+        int connectionOptionID = connectChooser.getCheckedRadioButtonId();
+        Button radioButton = (RadioButton) findViewById(connectionOptionID);
+        return radioButton.getText().toString();
     }
 
 }

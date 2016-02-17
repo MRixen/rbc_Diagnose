@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="18sp"
+        android:inputType="date"
         android:hint="IP-Address"
         android:layout_below="@+id/description"/>
 
@@ -28,6 +29,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="18sp"
+        android:inputType="date"
         android:hint="Port"
         android:layout_below="@+id/description"
         android:layout_toRightOf="@+id/editTextFieldIp"/>

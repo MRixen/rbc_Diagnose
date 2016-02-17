@@ -307,6 +307,27 @@
 
         </TableRow>
 
+        <TableRow
+            android:id="@+id/tableRow15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Payload [kg]:"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"/>
+
+            <TextView
+                android:id="@+id/text_payload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:padding="5dp"/>
+
+        </TableRow>
+
     </TableLayout>
     </ScrollView>
 </RelativeLayout>

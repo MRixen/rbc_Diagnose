@@ -86,7 +86,7 @@ public class CustomInputDialog extends Dialog {
             dialogHeight = calcDimPercentageLandscape("height", 30, context);
         }
         if (getRotation(context).equals("portrait")) {
-            dialogWidth = calcDimPercentagePortrait("width", 70, context);
+            dialogWidth = calcDimPercentagePortrait("width", 90, context);
             dialogHeight = calcDimPercentagePortrait("height", 30, context);
         }
         Window dialogWindow = this.getWindow();

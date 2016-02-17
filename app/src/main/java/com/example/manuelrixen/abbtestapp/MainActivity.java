@@ -1,5 +1,6 @@
 package com.example.manuelrixen.abbtestapp;
 
+import android.app.ActionBar;
 import android.app.TabActivity;
 import android.content.Context;
 import android.content.Intent;
@@ -15,10 +16,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TabHost;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.manuelrixen.abbtestapp.Barcode.BarCodeReading;
 import com.example.manuelrixen.abbtestapp.Dialogs.CustomAboutDialog;
+import com.example.manuelrixen.abbtestapp.Dialogs.CustomChooserDialog;
 import com.example.manuelrixen.abbtestapp.Dialogs.CustomDecisionDialog;
 import com.example.manuelrixen.abbtestapp.Dialogs.CustomInputDialog;
 import com.example.manuelrixen.abbtestapp.Tabs.Article;
@@ -43,25 +46,41 @@ public class MainActivity extends TabActivity {
     private NetworkInfo mWifi;
     private SharedPreferences sharedPreferences;
     private CustomDecisionDialog customDecisionDialog;
+    private CustomChooserDialog customChooserDialog;
     private CustomInputDialog customInputDialog;
     private boolean useLastConnection = false;
     private SharedPreferences.Editor editor;
     private boolean setConnectionDataManually = false;
     private EditText ipField, portField;
+    private TextView connectToField;
 
 
     // TODO Check why zonenbahn-fehler isnt shown as event
+    // TODO Change size of fields PORT and IP in dialog
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ActionBar actionBar = getActionBar();
+        // add the custom view to the action bar
+        actionBar.setCustomView(R.layout.custom_actionbar);
+
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM
+                | ActionBar.DISPLAY_SHOW_HOME);
+
+        connectToField = (TextView) actionBar.getCustomView().findViewById(R.id.connectTo);
+
         baseData = new BaseData(this, this);
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         customDecisionDialog = new CustomDecisionDialog(this);
         customInputDialog = new CustomInputDialog(this, this);
+        customChooserDialog = new CustomChooserDialog(this);
+        customChooserDialog.setCancelable(false);
+
+
 
 
         // create the TabHost that will contain the Tabs
@@ -81,38 +100,14 @@ public class MainActivity extends TabActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        final String ip = sharedPreferences.getString("ip", "0");
-        final String port = sharedPreferences.getString("port", "0");
+
         alreadyShown = sharedPreferences.getBoolean("alreadyShown", false);
         firstStart = sharedPreferences.getBoolean("firstStart", true);
-        if ( !(ip.equals("0")) && !(port.equals("0")) && alreadyShown){
-            // Show user dialog to ask for manual input
-            customDecisionDialog.showDialog("Use last connection with ip: "+ip+" and port: "+port+"?", new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    useLastConnection = true;
-                    startReceiving(ip, port);
-                    customDecisionDialog.dismiss();
-                }
-            }, new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    setConnectionDataManually = true;
-                    showDialogForManuallyInput();
-                    customDecisionDialog.dismiss();
-                }
-            });
-        }
 
-        else {
-            if (firstStart) {
-                startBarcodeScanner();
-                firstStart = false;
-            }
-        }
+        if(alreadyShown) showDialogChooser();
 
         if (!mWifi.isConnected()) {
-            Toast.makeText(this, R.string.errMsgWlan, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.errMsgWlan, Toast.LENGTH_SHORT).show();
             Timer t = new Timer();
             t.schedule(new TimerTask() {
                 @Override
@@ -121,6 +116,53 @@ public class MainActivity extends TabActivity {
                 }
             }, maxActivityShowTime);
         }
+    }
+
+    private void showDialogChooser() {
+        String lastConnectionText = " ";
+        final String ip = sharedPreferences.getString("ip", "0");
+        final String port = sharedPreferences.getString("port", "0");
+
+
+        if ( !(ip.equals("0")) && !(port.equals("0"))) lastConnectionText = "IP: "+ip+" PORT: "+port;
+        customChooserDialog.showDialog("Choose connection mode", lastConnectionText, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // When user press cancel then close application
+                customChooserDialog.dismiss();
+                finish();
+            }
+        }, new View.OnClickListener() {
+            // When user press ok...
+            @Override
+            public void onClick(View v) {
+                // Get the selected connection mode
+                String connectionOption = customChooserDialog.getConnectOption();
+                // Use last connection
+                if (connectionOption.equals(getResources().getString(R.string.connection_option_1))) {
+                    if (!(ip.equals("0")) && !(port.equals("0"))){
+                        customChooserDialog.dismiss();
+                        useLastConnection = true;
+                        connectToField.setText("IP: " + ip + "\n" + "Port: " + port);
+                        startReceiving(ip, port);
+                    }
+                    else Toast.makeText(MainActivity.this, R.string.errMsgNoLastConnection, Toast.LENGTH_SHORT).show();
+
+                }
+                // Manually input
+                if (connectionOption.equals(getString(R.string.connection_option_2))) {
+                    customChooserDialog.dismiss();
+                    setConnectionDataManually = true;
+                    showDialogForManuallyInput();
+                }
+                // QR code reader
+                if (connectionOption.equals(getString(R.string.connection_option_3))){
+                    customChooserDialog.dismiss();
+                    startBarcodeScanner();
+                }
+            }
+        });
+
     }
 
     private void showDialogForManuallyInput(){
@@ -137,6 +179,7 @@ public class MainActivity extends TabActivity {
                         startReceiving(ipField.getText().toString(), portField.getText().toString());
                         setConnectionDataManually = false;
                         saveConnectionData(ip, port);
+                        connectToField.setText("IP: " + ip + "\n" + "Port: " + port);
                         customInputDialog.dismiss();
                     } else {
                         Toast.makeText(MainActivity.this, "Connection data not set", Toast.LENGTH_SHORT).show();
@@ -148,7 +191,7 @@ public class MainActivity extends TabActivity {
                     // Cancel manually input and show barcode reader
                     useLastConnection = false;
                     customInputDialog.dismiss();
-                    startBarcodeScanner();
+                    showDialogChooser();
                 }
             });
         }
