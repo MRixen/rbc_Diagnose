@@ -13,41 +13,48 @@
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"/>
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
+    <TextView
+        android:id="@+id/spinner1_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:text="Connection mode"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/description"/>
+
+    <Spinner
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerVertical="true">
+        android:id="@+id/connectionModeSpinner"
+        android:layout_below="@id/spinner1_header">
+    </Spinner>
 
-        <RadioButton
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:text="@string/connection_option_1"
-            android:id="@+id/radioButton1" />
+    <TextView
+        android:id="@+id/lastConnection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="9sp"
+        android:text="Last connection: "
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/connectionModeSpinner"/>
 
-        <TextView
-            android:id="@+id/lastConnection"
-            android:layout_width="fill_parent"
-            android:layout_marginLeft="30dp"
-            android:layout_height="fill_parent"/>
+    <TextView
+        android:id="@+id/spinner2_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:text="Application mode"
+        android:layout_below="@id/lastConnection"/>
 
-        <RadioButton
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:text="@string/connection_option_2"
-            android:id="@+id/radioButton2" />
-
-        <RadioButton
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:text="@string/connection_option_3"
-            android:id="@+id/radioButton3" />
-    </RadioGroup>
-
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/applicationModeSpinner"
+        android:layout_below="@id/spinner2_header">
+    </Spinner>
 
     <Button
         android:id="@+id/ok_button"

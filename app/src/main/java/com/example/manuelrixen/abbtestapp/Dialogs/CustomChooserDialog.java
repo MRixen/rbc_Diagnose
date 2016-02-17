@@ -9,10 +9,10 @@ import android.view.Surface;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.manuelrixen.abbtestapp.R;
@@ -22,10 +22,10 @@ import com.example.manuelrixen.abbtestapp.R;
  */
 public class CustomChooserDialog extends Dialog {
 
-    private final RadioGroup connectChooser;
+    private Object CONNECTION_MODE;
+    private int APPLICATION_MODE;
     private final TextView lastConnection;
     private Context context;
-    private EditText inputTextField;
     private Button okButton, cancelButton;
     private TextView descriptionText;
     private boolean result;
@@ -36,12 +36,48 @@ public class CustomChooserDialog extends Dialog {
         setContentView(R.layout.dialog_chooser);
         this.context = context;
 
-        connectChooser = (RadioGroup) findViewById(R.id.radioGroup);
         descriptionText = (TextView) this.findViewById(R.id.description);
         cancelButton = (Button) this.findViewById(R.id.cancel_button);
         okButton = (Button) this.findViewById(R.id.ok_button);
         lastConnection = (TextView) this.findViewById(R.id.lastConnection);
+
+        // Get spinner for connection mode settings
+        Spinner spinner1 = (Spinner) this.findViewById(R.id.connectionModeSpinner);
+        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(
+                context, R.array.spinner_connection_mode_array, android.R.layout.simple_spinner_item);
+        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner1.setAdapter(adapter1);
+        spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                CONNECTION_MODE = parent.getItemAtPosition(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        // Get spinner for application mode settings
+        Spinner spinner2 = (Spinner) this.findViewById(R.id.applicationModeSpinner);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(
+                context, R.array.spinner_application_mode_array, android.R.layout.simple_spinner_item);
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner2.setAdapter(adapter2);
+        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                APPLICATION_MODE = position;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
+
 
     public int calcDimPercentageLandscape(String dimType, int dimPercentage, Context context) {
         // Calculate display size
@@ -108,10 +144,11 @@ public class CustomChooserDialog extends Dialog {
         this.show();
     }
 
-    public String getConnectOption() {
-        int connectionOptionID = connectChooser.getCheckedRadioButtonId();
-        Button radioButton = (RadioButton) findViewById(connectionOptionID);
-        return radioButton.getText().toString();
+    public String getConnectionMode() {
+        return CONNECTION_MODE.toString();
     }
 
+    public int getApplicationMode() {
+        return APPLICATION_MODE;
+    }
 }

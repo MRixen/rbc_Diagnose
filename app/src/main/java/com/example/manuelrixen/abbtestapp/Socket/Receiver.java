@@ -16,6 +16,7 @@ public class Receiver implements Runnable {
     private final Context context;
     private final String ip;
     private final String port;
+    private final int applicationMode;
     private boolean isRunning = true;
     private NetClient nc;
     private String data[] = new String[]{"", ""};
@@ -24,7 +25,8 @@ public class Receiver implements Runnable {
     private long maxActivityShowTime = 3000;
     private String CLIENT_NAME = "Phone;";
 
-    public Receiver(Context context, String ip, String port, Activity activity) {
+    public Receiver(Context context, String ip, String port, Activity activity, int applicationMode) {
+        this.applicationMode = applicationMode;
         this.context = context;
         this.activity = activity;
         this.ip = ip;
@@ -44,12 +46,15 @@ public class Receiver implements Runnable {
                     Toast.makeText(context, "Connected to ip " + ip + " and port " + port, Toast.LENGTH_LONG).show();
                 }
             });
-            // Send client name to server (only in version 2)
-//            while(isRunning) {
-//                nc.sendDataAsString(CLIENT_NAME);
-//                data = nc.receiveDataFromServer();
-//                if ((data[0] != null) && (data[1] != null))  isRunning = false;
-//            }
+
+            // Send client name only in application mode 2
+            if (applicationMode==1) {
+                while (isRunning) {
+                    nc.sendDataAsString(CLIENT_NAME);
+                    data = nc.receiveDataFromServer();
+                    if ((data[0] != null) && (data[1] != null)) isRunning = false;
+                }
+            }
             isRunning = true;
             while (isRunning) {
                 data = nc.receiveDataFromServer();

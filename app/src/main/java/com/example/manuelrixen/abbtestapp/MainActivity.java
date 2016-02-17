@@ -53,6 +53,7 @@ public class MainActivity extends TabActivity {
     private boolean setConnectionDataManually = false;
     private EditText ipField, portField;
     private TextView connectToField;
+    private int applicationMode;
 
 
     // TODO Check why zonenbahn-fehler isnt shown as event
@@ -79,8 +80,6 @@ public class MainActivity extends TabActivity {
         customInputDialog = new CustomInputDialog(this, this);
         customChooserDialog = new CustomChooserDialog(this);
         customChooserDialog.setCancelable(false);
-
-
 
 
         // create the TabHost that will contain the Tabs
@@ -124,8 +123,8 @@ public class MainActivity extends TabActivity {
         final String port = sharedPreferences.getString("port", "0");
 
 
-        if ( !(ip.equals("0")) && !(port.equals("0"))) lastConnectionText = "IP: "+ip+" PORT: "+port;
-        customChooserDialog.showDialog("Choose connection mode", lastConnectionText, new View.OnClickListener() {
+        if ( !(ip.equals("0")) && !(port.equals("0"))) lastConnectionText = "Last connection: " + "IP: "+ip+" PORT: "+port;
+        customChooserDialog.showDialog("Set Modes", lastConnectionText, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // When user press cancel then close application
@@ -136,8 +135,12 @@ public class MainActivity extends TabActivity {
             // When user press ok...
             @Override
             public void onClick(View v) {
-                // Get the selected connection mode
-                String connectionOption = customChooserDialog.getConnectOption();
+                // Get the selected connection and application mode
+                String connectionOption = customChooserDialog.getConnectionMode();
+
+                // Get application mode
+                applicationMode = customChooserDialog.getApplicationMode();
+
                 // Use last connection
                 if (connectionOption.equals(getResources().getString(R.string.connection_option_1))) {
                     if (!(ip.equals("0")) && !(port.equals("0"))){
@@ -243,7 +246,8 @@ public class MainActivity extends TabActivity {
     }
 
     private void startReceiving(String ip, String port) {
-        baseData.startReceiver(ip, port);
+        // Get application option id (standard is 0 --> Server: Abb controller)
+        baseData.startReceiver(ip, port, applicationMode);
         initTabs();
     }
 

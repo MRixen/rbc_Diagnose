@@ -4,4 +4,13 @@
         <item>@string/ip</item>
         <item>@string/port</item>
     </string-array>
+    <string-array name="spinner_connection_mode_array">
+        <item>Use last connection</item>
+        <item>Use manual input</item>
+        <item>Use qr code reader</item>
+    </string-array>
+    <string-array name="spinner_application_mode_array">
+        <item>Server: ABB controller</item>
+        <item>Server: Remote computer</item>
+    </string-array>
 </resources>

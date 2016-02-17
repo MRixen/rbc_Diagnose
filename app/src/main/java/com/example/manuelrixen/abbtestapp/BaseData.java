@@ -22,8 +22,8 @@ public class BaseData implements Serializable {
         this.activity = activity;
     }
 
-    public void startReceiver(String ip, String port) {
-        this.receiver = new Receiver(context, ip, port, activity);
+    public void startReceiver(String ip, String port, int applicationMode) {
+        this.receiver = new Receiver(context, ip, port, activity, applicationMode);
         Thread rThread = new Thread(receiver);
         rThread.start();
     }
