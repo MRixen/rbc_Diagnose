@@ -36,7 +36,7 @@ import static android.os.Process.myPid;
 
 public class MainActivity extends TabActivity {
 
-    private final long maxActivityShowTime = 3000;
+    private final long maxActivityShowTime = 10000; //3000;
     private PowerManager.WakeLock wl;
     private TabHost tabHost;
     private BaseData baseData;
